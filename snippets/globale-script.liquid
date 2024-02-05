@@ -1,0 +1,48 @@
+{% comment %}
+<!-- Global-e Script Start-->
+<script id="globaleScript">
+  (function () {
+    var reg = /showpro=(true|false)/i;
+    var showpro = ((reg.exec(document.location.search) || reg.exec(document.cookie) || [])[1] || '').toLowerCase();
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//gex.global-e.com/gempro/get/10000545' + (showpro ? '?showpro=' + showpro : '');
+    document.getElementsByTagName('head')[0].appendChild(s);
+
+    if (showpro) {
+      var cssElement = document.createElement('link');
+      cssElement.rel = 'stylesheet';
+      cssElement.id = 'GEPIStyles';
+      cssElement.href = '//gex.global-e.com/gempro/css/10000545?showpro=' + showpro;
+      document.cookie = 'showpro=' + showpro;
+      document.getElementsByTagName('head')[0].appendChild(cssElement);  
+    }
+
+    //GlobalE_Gem_Data cookie
+    var name = 'GlobalE_Gem_Data';
+    var value = JSON.stringify({ StoreCode : '{{ shop.permanent_domain | replace: '.myshopify.com', ''}}' });
+                                var days = 10;
+
+                                var date = new Date();
+                                date.setTime(date.getTime() + (days*24*60*60*1000));
+                                var expires = '; expires=' + date.toUTCString();
+                                document.cookie = name + ' = ' + (value || '')  + expires + '; path =/ ';
+                               })()
+</script>
+{% if customer.id  %}
+<input type="hidden" name="customer_id" id="customer_id" value="{{ customer.id }}_{{ customer.id | append: "!#Gl0b@lE-$3cr3t!)%1#" | sha1 }}">
+{% endif %}
+<script>
+  (function () {
+    setTimeout(function() {
+      if (typeof GEP == 'undefined') {
+        var toDisplay = document.querySelectorAll('[globale-product-price],[globale-order-details-price],[globale-order-list-price]');
+        toDisplay.forEach(function(i) {  i.style.visibility = 'visible'; });
+      } else {
+      }
+    }, 2000);
+  })()
+</script>
+<!-- Global-e Script End-->
+{% endcomment %}

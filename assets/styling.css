@@ -1,0 +1,12 @@
+.look-item {
+  background: #f1f1f1;
+  padding: 3rem;
+}
+
+.look-item + .look-item {
+  margin-top: 3rem;
+}
+
+.footer-block__details-content p{
+  margin:0;
+}

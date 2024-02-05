@@ -1,0 +1,254 @@
+<link rel="stylesheet" href="{{ 'complete-the-look.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{% render 'hs-defer-css' with filename: 'complete-the-look.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{%- capture swiper_options -%}
+{
+  "slidesPerView": 1,
+  "navigation": {
+    "nextEl": ".complete-the-look__button--next",
+    "prevEl": ".complete-the-look__button--prev"
+  }
+}
+{%- endcapture -%}
+{%- liquid
+  assign main_product_id = product.id
+  assign main_product = product 
+
+  if main_product.metafields.complete_the_look.look_1 != blank
+    assign look_one = main_product.metafields.complete_the_look.look_1
+  endif
+
+  if main_product.metafields.complete_the_look.look_2 != blank
+    assign look_two = main_product.metafields.complete_the_look.look_2
+  endif
+
+  if main_product.metafields.complete_the_look.look_3 != blank
+    assign look_three = main_product.metafields.complete_the_look.look_3
+  endif
+-%}
+
+{% if look_one or look_two or look_three %}
+<div class="color-{{ section.settings.color_scheme }} gradient page-width">
+  <complete-the-look class="product-recommendations  section-{{ section.id }}-padding isolate">
+    <h2 class="{{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">{{ section.settings.heading }}</h2>
+    <div class="complete-the-look__buttons flex">
+      <button class="complete-the-look__button complete-the-look__button--prev" aria-label="Previous">
+        {% render 'icon-caret' %}
+      </button>
+      <div class="complete-the-look__current-look">Look <span class="complete-the-look__current-look-value">1</span></div>
+      <button class="complete-the-look__button complete-the-look__button--next" aria-label="Next">
+        {% render 'icon-caret' %}
+      </button>
+    </div>
+    <div class="complete-the-look">
+        <div class="complete-the-look__grid">
+            <div class="complete-the-look__left">
+                <div class="swiper complete-the-look__swiper" data-json='{{- swiper_options -}}'>
+                    <div class="swiper-wrapper">
+                      {% if look_one %}
+                        <div class="swiper-slide">
+                          <div class="complete-the-look__slide">
+                            {%- liquid 
+                              for product in look_one.value
+                                render 'complete-the-look-item', card_product: product, media_aspect_ratio: 'adapt', lazy_load: true, main_product: main_product
+                              endfor 
+                            -%}
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if look_two %}
+                        <div class="swiper-slide">
+                          <div class="complete-the-look__slide">
+                            {%- liquid 
+                              for product in look_two.value
+                                render 'complete-the-look-item', card_product: product, media_aspect_ratio: 'adapt', lazy_load: true, main_product: main_product
+                              endfor 
+                            -%}
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if look_three %}
+                        <div class="swiper-slide">
+                          <div class="complete-the-look__slide">
+                            {%- liquid 
+                              for product in look_three.value
+                                render 'complete-the-look-item', card_product: product, media_aspect_ratio: 'adapt', lazy_load: true, main_product: main_product
+                              endfor 
+                            -%}
+                          </div>
+                        </div>
+                      {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="complete-the-look__right complete-the-look__main-item">
+              {%- render 'complete-the-look-item', card_product: main_product, media_aspect_ratio: 'adapt', lazy_load: true, main_product: main_product -%}
+            </div>
+        </div>
+    </div>
+  </complete-the-look>
+</div>
+{% elsif collections[look_one].products.size > 0 %}
+<div class="color-{{ section.settings.color_scheme }} gradient page-width">
+  <complete-the-look class="product-recommendations  section-{{ section.id }}-padding isolate">
+    <h2 class="{{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">{{ section.settings.heading }}</h2>
+    <div class="complete-the-look__buttons flex">
+      <button class="complete-the-look__button complete-the-look__button--prev" aria-label="Previous">
+        {% render 'icon-caret' %}
+      </button>
+      <div class="complete-the-look__current-look">Look <span class="complete-the-look__current-look-value">1</span></div>
+      <button class="complete-the-look__button complete-the-look__button--next" aria-label="Next">
+        {% render 'icon-caret' %}
+      </button>
+    </div>
+    <div class="complete-the-look">
+        <div class="complete-the-look__grid">
+            <div class="complete-the-look__left">
+                <div class="swiper complete-the-look__swiper" data-json='{{- swiper_options -}}'>
+                    <div class="swiper-wrapper">
+                      {% for i in (1..3) %}
+                        {%- liquid
+                          assign look_collection = product.handle | append: '-look-' | append: i
+                        -%}
+                        {%- if collections[look_collection].products != blank %}
+                        <div class="swiper-slide">
+                          <div class="complete-the-look__slide">
+                            {%- liquid 
+                                assign max = 4
+                                assign found = 0
+                                for product in collections[look_collection].products
+                                if product.id == main_product_id
+                                    continue
+                                endif
+                                if found == max
+                                    break
+                                endif
+                                assign found = found | plus: 1
+                                render 'complete-the-look-item', card_product: product, media_aspect_ratio: 'adapt', lazy_load: true, main_product: main_product
+                                endfor
+                            -%}
+                          </div>
+                        </div>
+                        {%- endif -%}
+                      {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="complete-the-look__right complete-the-look__main-item">
+                {%- render 'complete-the-look-item', card_product: main_product, media_aspect_ratio: 'adapt', lazy_load: true, main_product: main_product -%}
+            </div>
+        </div>
+    </div>
+  </complete-the-look>
+</div>
+
+
+{% endif %}
+
+<script defer src="{{ 'complete-the-look.min.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Complete The Look",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Complete the look",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Heading alignment"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product-recommendations.settings.header_mobile.content"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Complete the look"
+    }
+  ],
+  "templates": [
+    "product"
+  ]
+}
+{% endschema %}

@@ -1,0 +1,34 @@
+{%- render 'cart-drawer', section: section -%}
+
+{% schema %}
+  {
+    "name": "Cart Drawer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_accessories",
+        "label": "Enable accessories",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Accessory",
+        "type": "accessory",
+        "settings": [
+          {
+            "type": "text",
+            "id": "accessory_heading",
+            "label": "Heading",
+            "default": "Add extra canvas bags?"
+          },
+          {
+            "type": "product",
+            "id": "accessory_product",
+            "label": "Product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

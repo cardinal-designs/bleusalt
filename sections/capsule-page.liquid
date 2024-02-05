@@ -1,0 +1,206 @@
+{% render 'hs-defer-css' with filename: 'capsule.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% assign product_types = section.settings.collection.products | map: 'type' | uniq %}
+<capsule-page data-product-types='{{ product_types | json }}'>
+<div class="page-width page-width--narrow">
+  <h1 class="center capsule-title">{{ section.settings.title | default: page.title }}</h1>
+  <div class="grid flex align-center wrap">
+    <div class="one-half grid__item capsule-image small--one-whole">
+      {% if section.settings.image != blank %}
+      	{% render 'image-element', image: section.settings.image %}
+      {% endif %}
+    </div>
+    <div class="one-half grid__item capsule-highlights small--one-whole">
+      {%- assign total_price = 0 -%}
+      {% for product in section.settings.collection.products %}
+        {%- liquid
+        for variant in product.variants
+          if variant.title contains 'hide'
+            continue
+          elsif variant.title contains 'Hide' 
+            continue
+          elsif variant.title contains 'Sparkles'
+            continue
+          elsif variant.title contains 'sparkles'
+            continue
+          else
+            assign total_price = total_price | plus: variant.price  
+            break
+          endif
+        endfor
+        -%}
+        <div class="capsule-type">
+          <div>{{ product.type }}</div>
+          <div>{{ product.price | money_without_trailing_zeros }}</div>
+        </div>
+      {% endfor %}
+      
+      {%- liquid
+      assign discount_percentage = section.settings.discount_percentage | plus: 0
+      assign discounted_price = total_price | times: discount_percentage | divided_by: 100
+      -%}
+
+      
+      <div class="capsule-highlights__price">
+        <h4 data-total-price="{{ total_price | money_without_trailing_zeros }}" class="bundle-price">{{ total_price | minus: discounted_price | money_without_trailing_zeros }} <s>{{ total_price | money_without_trailing_zeros }}</s></h4>
+        <p>
+          <b>Save ~20% when you buy a wardrobe</b><br>
+          <small>No style substitutions</small>
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-width">
+  <div class="grid product-grid grid--2-col-tablet-down grid--3-col-desktop capsule-grid">
+    {% for product in section.settings.collection.products %}
+    {%- liquid 
+      assign extra_product = false
+      assign extra_variants = false
+      if product.metafields.bleu.additional_variants
+        assign extra_product = all_products[product.metafields.bleu.additional_variants]
+        assign extra_variants = extra_product.variants
+      endif
+    %}
+    <div class="grid__item capsule__item relative" data-index="{{ forloop.index0 }}" data-options='{{ product.options | json }}' data-json='{{ product.variants | json | escape }}' data-extra-variants='{{ extra_variants | json | escape }}'>
+      {% render 'image-element', image: product.featured_image %}
+      <div class="capsule__item--info">
+        <h4 class="capsule-item__title">{{ product.title }} <span class="capsule-item__selections"></span></h4>
+
+        {% assign total_options = product.options.size %}
+        {% assign options_with_values = product.options_with_values %}
+               
+        {% for option in options_with_values %}
+        <div data-total-options="{{ total_options }}" class="product-option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
+          <div class="product-option__label">{{ option.name }}</div>
+          <div class="flex flex-wrap">
+            {% for value in option.values %}
+            {% if value contains 'hide' or value contains 'Hide' or value contains 'Sparkles' or value contains 'sparkles' %}{% continue %}{% endif %}
+              {%- liquid
+                  if total_options == 1
+                    for variant in product.variants
+                     if variant.option1 == value
+                       assign available = variant.available
+                     endif
+                    endfor
+                  endif 
+                -%}
+            <div class="product-option__input {% if available == false and total_options == 1 %}soldout{% endif %}">
+              <input autocomplete="off" 
+                     type="radio" 
+                     name="{{ option.name | handle }}-{{ product.id }}" 
+                     value="{{ value }}" 
+                     id="inpt-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 }}" 
+                    {% if option.values.size == 1 %}checked="checked"{% endif %}
+                    
+                     {% if available == false and total_options == 1 %}disabled{% endif %}
+                    />
+              
+              <label for="inpt-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ value | handle | append: '.jpg' | file_img_url: '80x' }});" data-tooltip="{{ value }}"{% endif %}>
+                <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
+                  {{ value }}
+                </span>
+              </label>
+            </div>      
+            {% endfor %}
+            
+            {% if extra_product %}
+            {% for extra_option in extra_product.options_with_values %}
+			  {% if extra_option.name == option.name %}
+              {% for value in extra_option.values %}
+              <div class="product-option__input">
+                <input autocomplete="off" 
+                       type="radio" 
+                       name="{{ option.name | handle }}-{{ product.id }}" 
+                       value="{{ value }}" 
+                       id="ext-inpt-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 }}" />
+
+                <label for="ext-inpt-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 }}"
+                       {% if option.name == 'Color' %}
+                       style="background-image:url({{ value | handle | append: '.jpg' | file_img_url: '80x' }} );"
+                       {% endif %}
+                       >
+                  <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
+                    {{ value }}
+                  </span>
+                </label>
+              </div>
+              {% endfor %}
+              {% endif %}
+            {% endfor %}
+            {% endif %}
+           
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="center selection-review">
+    {% for product in section.settings.collection.products  %}
+    <div class="selection" data-index="{{ forloop.index0 }}">
+      <div class="selection__product-title">
+        {{ product.title }}
+      </div>
+      <small class="selection__variant">Select A Size</small>
+    </div>
+    {% endfor %}
+    <button type="submit" class="button button-primary capsule-submit" disabled>
+      Checkout - <span class="capsule-total">{{ total_price | minus: discounted_price | money_without_trailing_zeros }}</span>
+    </button>
+  </div>
+</div>
+</capsule-page>
+
+<script>
+    window.capsuleTotal = {{ total_price | minus: discounted_price | json }};
+    window.capsuleJSON = {{ section.settings.collection.products | json }};
+    window.productTypes = {{ product_types | json }};
+    window.bundleId = {{ page.handle | json }};
+</script>
+
+<script defer src="{{ 'capsule.min.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Capsule Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Top Image"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "discount_percentage",
+      "label": "Discount Percentage",
+      "info": "Dev has to update the script as well"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Product",
+      "type": "product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

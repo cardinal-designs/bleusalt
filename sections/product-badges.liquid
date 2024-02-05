@@ -1,0 +1,44 @@
+<style type="text/css">
+  {% for block in section.blocks %}
+    .badge--{{ block.settings.title | handle }} {
+      background-color: {{ block.settings.color_bg }};
+      border-color: {{ block.settings.color_bg }};
+      color: {{ block.settings.color_text }};
+    }
+  {% endfor %}
+</style>
+
+  
+{% schema %}
+{
+  "name": "Product badges",
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "For non-automated tags (Sale / Sold Out), add a product tag of badge:Best Sellers, badge:New Color, etc."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Badge title"
+        },
+        {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Badge background color"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Badge text color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+  

@@ -1,0 +1,566 @@
+{% comment %}
+    Renders cart drawer
+
+    Usage:
+    {% render 'cart-drawer' %}
+{% endcomment %}
+
+<script defer src="{{ 'cart.js' | asset_url }}"></script>
+
+<style>
+  .drawer {
+    visibility: hidden;
+  }
+</style>
+
+{%- liquid
+  assign first_item = true
+
+  for item in cart.items
+    if first_item == true
+      assign first_item = item
+    endif
+  endfor
+-%}
+
+<cart-drawer class="drawer">
+  <div id="CartDrawer" class="cart-drawer">
+    {%- liquid
+      comment
+        Figure out what color
+      endcomment
+
+      assign wear_with_url = false
+      assign item_color = false
+      assign product_colors = first_item.product.options_by_name['Color'].values
+
+      for option in first_item.options_with_values
+        if option.name == 'Color'
+          assign item_color = option.value
+        endif
+      endfor
+
+      assign top_bottom = ''
+
+      for tag in first_item.product.tags
+        if tag == 'womens tops'
+          assign top_bottom = ' AND tag:womens-bottoms OR tag:womens-scarf'
+        elsif tag == 'womens bottoms'
+          assign top_bottom = ' AND tag:womens-tops OR tag:womens-scarf'
+        elsif tag == 'mens tops'
+          assign top_bottom = ' AND tag:mens-bottoms OR tag:mens-accessories'
+        elsif tag == 'mens bottoms'
+          assign top_bottom = ' AND tag:mens-tops OR tag:mens-accessories'
+        endif
+      endfor
+
+      if product_colors contains item_color
+        assign wear_with_url = '/search?type=product&view=wear-with&q=variants.title:' | append: item_color | append: top_bottom
+      endif
+    -%}
+
+    <div class="wear-with wear-with__desktop color-inverse medium-down-hide">
+      <button type="button" class="close-overlay" onclick="this.closest('cart-drawer').close()">
+        <span class="visually-hidden">Close overlay</span>
+      </button>
+
+      <wear-with data-url="{{ wear_with_url }}" data-color="{{ item_color }}" data-product-id="{{ first_item.product.id }}">
+        {%- if wear_with_url -%}
+          <h4 class="h2 center">Wear With</h4>
+
+          <div class="wear-with__inner">
+            <svg class="wear-with__loading" aria-hidden="true" focusable="false"   width="30" height="30" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+            <div class="wear-with__swiper">
+              <div class="swiper-wrapper"></div>
+            </div>
+            <div class="swiper-prev">
+              <svg width="8" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M1.46 7 8 13.3l-.727.7L.732 7.7l-.005.005-.727-.7L7.273 0 8 .7z" fill="#FFF" fill-rule="evenodd"/></svg>
+            </div>
+            <div class="swiper-next">
+              <svg width="8" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M6.54 7 0 13.3l.727.7 6.541-6.3.005.005.727-.7L.727 0 0 .7z" fill="#FFF" fill-rule="evenodd"/></svg>
+            </div>
+          </div>
+        {%- endif -%}
+      </wear-with>
+    </div>
+
+    <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+
+    <div class="drawer__inner" role="dialog" aria-modal="true" aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1">
+      <div class="drawer__inner-empty" {%- if cart != empty -%}style="display: none;"{%- endif -%}>
+        <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
+          <div class="cart-drawer__empty-content">
+            <h2 class="cart__empty-text">
+              {{ 'sections.cart.empty' | t }}
+            </h2>
+
+            <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+
+            <a href="{{ routes.all_products_collection_url }}" class="button">
+              {{ 'general.continue_shopping' | t }}
+            </a>
+
+            {%- if shop.customer_accounts_enabled and customer == nil -%}
+              <p class="cart__login-title h3">
+                {{ 'sections.cart.login.title' | t }}
+              </p>
+
+              <p class="cart__login-paragraph">
+                {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+              </p>
+            {%- endif -%}
+          </div>
+        </div>
+
+        {%- if settings.cart_drawer_collection != blank -%}
+          <div class="cart-drawer__collection">
+            {% render 'card-collection',
+              card_collection: settings.cart_drawer_collection,
+              columns: 1
+            %}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {% if cart != empty %}
+        <div class="drawer__header">
+          <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+          <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+        </div>
+      {% endif %}
+
+      <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
+        <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
+          <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
+              <div class="drawer__cart-items-wrapper" {% if cart == empty %}style="display: none;"{% endif %}>
+                <table class="cart-items">
+                  <thead>
+                    <tr>
+                      <th id="CartDrawer-ColumnProductImage"><span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span></th>
+                      <th id="CartDrawer-ColumnProduct" class="caption-with-letter-spacing" scope="col">{{ 'sections.cart.headings.product' | t }}</th>
+                      <th id="CartDrawer-ColumnTotal" class="right caption-with-letter-spacing" scope="col">{{ 'sections.cart.headings.total' | t }}</th>
+                      <th id="CartDrawer-ColumnQuantity"><span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {%- for item in cart.items -%}
+                      {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
+                      {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
+                          <label for="drawer-quantity--{{ item.id }}"><span class="visually-hidden">Quantity</span></label>
+                          <input id="drawer-quantity--{{ item.id }}" type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
+                          {%- continue -%}
+                      {%- endif -%}
+                      {%- liquid
+                        assign is_bundle_item = false
+                        if item.properties['_bundle'] != blank
+                          assign is_bundle_item = true
+                        endif
+
+                        if current_bundle_items contains item.properties['bundle_id']
+                          continue
+                        endif
+                      -%}
+
+                      {% if is_bundle_item %}
+
+                        {% assign my_bundle_items = item.id %}
+                        <tr>
+                          <td colspan="2" data-current-bundle-items="{{ current_bundle_items }}">
+                            <div class="relative ajaxcart__row--bundle" data-properties='{{ item.properties | json }}' data-bundle-id="{{ item.properties['bundle_id'] }}">
+                              <div class="ajaxcart--bundle__images">
+                                {% assign cart_items_reverse = cart.items | reverse %}
+                                {% for bundle_item in cart_items_reverse %}
+
+                                {%- liquid
+                                  if bundle_item.properties['_bundle'] == blank
+                                    continue
+                                  endif
+                                  if bundle_item.properties['bundle_id'] != item.properties['bundle_id']
+                                    continue
+                                  endif
+                                  if current_bundle_items contains item.id
+                                    continue
+                                  endif
+                                -%}
+
+                                <div class="ajaxcart--bundle__image" data-id="">
+                                  {{ bundle_item | image_url: width: 250 | image_tag }}
+                                </div>
+
+                                {% capture update %}{{ bundle_item.id }}{% endcapture %}
+                                {% assign my_bundle_items = my_bundle_items | append: ',' | append: update %}
+                                {% endfor %}
+                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
+                                  <button class="bundle--cart-remove" type="button" >{%- render 'icon-remove' -%}</button>
+                                </bundle-remove>
+                              </div>
+                              <div class="bundle--cart-title">
+                                <span>Bundle</span>
+                                <span>{{ item.properties['_bundle_total'] | money_without_trailing_zeros }}</span>
+                              </div>
+                            </div>
+                            {% assign current_bundle_items = current_bundle_items | append: ',' | append: item.properties['bundle_id'] %}
+                          </td>
+                        </tr>
+                      {% else %}
+                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" >
+                        <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
+                          {% if item.image %}
+                            {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+                            <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
+                            <img class="cart-item__image"
+                              src="{{ item.image | image_url: width: 300 }}"
+                              alt="{{ item.image.alt | escape }}"
+                              loading="lazy"
+                              width="150"
+                              height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
+                            >
+                          {% endif %}
+                        </td>
+
+                        <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
+                          {%- if settings.show_vendor -%}
+                            <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                          {%- endif -%}
+
+                          <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
+
+                          {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+                            <dl>
+                              {%- if item.product.has_only_default_variant == false -%}
+                                {%- for option in item.options_with_values -%}
+                                  <div class="product-option">
+                                    <dt>{{ option.name }}: </dt>
+                                    <dd>{{ option.value }}</dd>
+                                  </div>
+                                {%- endfor -%}
+                              {%- endif -%}
+                            <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_properties" style="display:none !important;"></span>
+                            {%- liquid
+                              assign propertySize = item.properties.size
+                              if propertySize > 0
+                                for p in item.properties
+                                  assign first_character_in_key = p.first | truncate: 1, ''
+                                  unless p.last == blank or first_character_in_key == '_'
+                                    echo p.first | append: ':' | append: p.last | append: '<br>'
+                                  endunless
+                                endfor
+                              endif
+                            -%}
+                            </dl>
+
+                            <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                          {%- endif -%}
+
+                          {%- if item.original_price != item.final_price -%}
+                            <div class="cart-item__discounted-prices">
+                              <span class="visually-hidden">
+                                {{ 'products.product.price.regular_price' | t }}
+                              </span>
+                              <s class="cart-item__old-price product-option">
+                                {{- item.original_price | money_with_currency -}}
+                              </s>
+                              <span class="visually-hidden">
+                                {{ 'products.product.price.sale_price' | t }}
+                              </span>
+                              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span><strong class="cart-item__final-price product-option">
+                                {{ item.final_price | money_with_currency }}
+                              </strong>
+
+                            </div>
+                          {%- else -%}
+                           <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span> <div class="">
+                              {{ item.original_price | money_with_currency }}
+                            </div>
+
+
+                          {%- endif -%}
+
+                          <ul class="discounts list-unstyled" aria-label="{{ 'customer.order.discount' | t }}">
+                            {%- for discount in item.discounts -%}
+                              <li class="discounts__discount">
+                                {%- render 'icon-discount' -%}
+                                {{ discount.title }}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </td>
+
+                        <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
+                          <div class="loading-overlay hidden">
+                            <div class="loading-overlay__spinner">
+                              <svg aria-hidden="true" focusable="false"   class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="cart-item__price-wrapper">
+
+                            {%- if item.original_line_price != item.final_line_price -%}
+                              <div class="cart-item__discounted-prices">
+                                <span class="visually-hidden">
+                                  {{ 'products.product.price.regular_price' | t }}
+                                </span>
+                                <s class="cart-item__old-price price price--end">
+                                  {{ item.original_line_price | money_with_currency }}
+                                </s>
+                                <span class="visually-hidden">
+                                  {{ 'products.product.price.sale_price' | t }}
+                                </span>
+                               <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
+                                  {{ item.final_line_price | money_with_currency }}
+                                </span>
+
+
+                              </div>
+                            {%- else -%}
+                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
+                                {{ item.original_line_price | money_with_currency }}
+                              </span>
+
+
+                            {%- endif -%}
+
+                            {%- if item.variant.available and item.unit_price_measurement -%}
+                              <div class="unit-price caption">
+                                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                {{ item.variant.unit_price | money_without_trailing_zeros }}
+                                <span aria-hidden="true">/</span>
+                                <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                                {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                                  {{- item.variant.unit_price_measurement.reference_value -}}
+                                {%- endif -%}
+                                {{ item.variant.unit_price_measurement.reference_unit }}
+                              </div>
+                            {%- endif -%}
+                          </div>
+                        </td>
+
+                        <td class="cart-item__quantity" role="cell" headers="CartDrawer-ColumnQuantity">
+                          <div class="cart-item__quantity-wrapper">
+                            <quantity-input class="quantity">
+                              <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                                {% render 'icon-minus' %}
+                              </button>
+                              <input class="quantity__input"
+                                type="number"
+                                name="updates[]"
+                                value="{{ item.quantity }}"
+                                min="0"
+                                aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                                id="Drawer-quantity-{{ item.index | plus: 1 }}"
+                                data-index="{{ item.index | plus: 1 }}"
+                              >
+                              <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                                {% render 'icon-plus' %}
+                              </button>
+                            </quantity-input>
+
+                            <cart-remove-button id="CartDrawer-Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                              <button class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                                {% render 'icon-remove' %}
+                              </button>
+                            </cart-remove-button>
+                          </div>
+
+                          <div id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error" role="alert">
+                            <small class="cart-item__error-text"></small>
+                            <svg aria-hidden="true" focusable="false"   class="icon icon-error" viewBox="0 0 13 13">
+                              <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                              <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                              <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                              <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                            </svg>
+                          </div>
+                        </td>
+                      </tr>
+                    {% endif %}
+                    {%- endfor -%}
+                  </tbody>
+                </table>
+              </div>
+            <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
+            <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
+          </div>
+          <div id="CartDrawer-CartErrors" role="alert"></div>
+        </form>
+
+        {% if wear_with_url %}
+          <div class="wear-with wear-with__mobile color-background-2 medium-hide large-up-hide">
+            <wear-with data-url="{{ wear_with_url }}" data-product-id="{{ first_item.product.id }}">
+              <h4 class="h3 center">Wear With</h4>
+              <div class="wear-with__swiper">
+                <div class="swiper-wrapper"></div>
+              </div>
+            </wear-with>
+          </div>
+        {% endif %}
+      </cart-drawer-items>
+
+      <div class="drawer__footer">
+        {%- if section.settings.enable_accessories -%}
+          {%- for block in section.blocks -%}
+            {%- liquid
+              unless block.type == "accessory"
+                continue
+              endunless
+
+              assign accessory_in_cart = false
+
+              assign accessory_product = all_products[block.settings.accessory_product]
+
+              assign accessory_variant = accessory_product.first_available_variant
+
+              assign cart_variant_ids = cart.items | map: "id"
+
+              assign show_accessory = true
+
+              if cart_variant_ids contains accessory_variant.id
+                assign show_accessory = false
+              endif
+
+              assign accessory_heading = block.settings.accessory_heading
+            -%}
+
+            {%- if show_accessory -%}
+              <canvas-bag variant-id="{{ accessory_variant.id }}">
+                <span>{{ accessory_heading }} +{{ accessory_variant.price | money }} each</span>
+
+                <quantity-input class="quantity">
+                  <button class="quantity__button no-js-hidden" name="minus" type="button">
+                    <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: accessory_product.title | escape }}</span>
+                    {% render 'icon-minus' %}
+                  </button>
+                  <input class="quantity__input"
+                    type="number"
+                    name="updates[]"
+                    value="0"
+                    min="0"
+                    aria-label="{{ 'products.product.quantity.input_label' | t: product: 'Canvas bag' | escape }}"
+                    id="Drawer-quantity-{{ item.index | plus: 1 }}"
+                    data-index="{{ item.index | plus: 1 }}"
+                  >
+                  <button class="quantity__button no-js-hidden" name="plus" type="button">
+                    <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: accessory_product.title | escape }}</span>
+                    {% render 'icon-plus' %}
+                  </button>
+                </quantity-input>
+              </canvas-bag>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- if settings.show_cart_note -%}
+          <details id="Details-CartDrawer" class="cart-drawer__note-wrapper">
+            <summary class="cart-drawer__note-toggle">
+              <span class="summary__title">
+                <span>{{ 'sections.cart.note' | t }}</span>
+                <span class="gift-note__icon">
+                  {%- render 'icon-gift' -%}
+                </span>
+                {% render 'icon-caret' %}
+              </span>
+            </summary>
+            <cart-note class="cart__note field">
+              <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
+              <textarea id="CartDrawer-Note" class="text-area text-area--resize-vertical field__input" name="note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
+            </cart-note>
+          </details>
+        {%- endif -%}
+
+        <!-- Start blocks-->
+        <!-- Subtotals-->
+
+        <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
+          <div class="totals" role="status">
+            <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+            <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
+            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency | replace: '.00','' }}</p>
+          </div>
+
+          <div>
+            {%- if cart.cart_level_discount_applications.size > 0 -%}
+              <ul class="discounts list-unstyled" aria-label="{{ 'customer.order.discount' | t }}">
+                {%- for discount in cart.cart_level_discount_applications -%}
+                  <li class="discounts__discount discounts__discount--end">
+                    {%- render 'icon-discount' -%}
+                    {{ discount.title }}
+                    (-{{ discount.total_allocated_amount | money_without_trailing_zeros }})
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+
+          <small class="tax-note caption-large rte">
+            {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+              {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- elsif cart.taxes_included -%}
+              {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+            {%- elsif shop.shipping_policy.body != blank -%}
+              {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+            {%- else -%}
+              {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+            {%- endif -%}
+          </small>
+        </div>
+
+        <!-- CTAs -->
+
+        <div class="cart__ctas" {{ block.shopify_attributes }}>
+          <noscript>
+            <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
+              {{ 'sections.cart.update' | t }}
+            </button>
+          </noscript>
+
+          <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button" name="checkout" onClick="addTotal('{{ cart.total_price | money }}')" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
+            {{ 'sections.cart.checkout' | t }}
+          </button>
+        </div>
+        <p class="cart__safe-secure center">Safe &amp; Secure Checkout</p>
+      </div>
+    </div>
+  </div>
+</cart-drawer>
+
+<script defer src="{{ 'realift-cart.min.js' | asset_url }}"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return (msie > 0 || trident > 0);
+    }
+
+    if (!isIE()) return;
+
+    const cartSubmitInput = document.createElement('input');
+
+    cartSubmitInput.setAttribute('name', 'checkout');
+    cartSubmitInput.setAttribute('type', 'hidden');
+
+    document.querySelector('#cart').appendChild(cartSubmitInput);
+
+    document.querySelector('#checkout').addEventListener('click', function (event) {
+      document.querySelector('#cart').submit();
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('load', function () {
+    if (typeof BOLD === 'object' && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function') {
+      BOLD.common.eventEmitter.emit("BOLD_COMMON_cart_loaded");
+    }
+  });
+</script>
+

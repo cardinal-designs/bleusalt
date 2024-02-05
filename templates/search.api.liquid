@@ -1,0 +1,39 @@
+{% layout none %}
+<div id="other-colors--wrapper">
+{%- paginate search.results by 50 -%}
+<script type="application/json">
+    {{ search.results | json }}
+</script>
+{% for item in search.results %}
+<div class="other-colors">
+    {%- for option in item.options_with_values -%}
+        {% if option.name != "Color" %}{% continue %}{% endif %}
+        <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
+          <fieldset class="js product-form__input">
+            <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
+            {%- for value in option.values -%}
+              {%- liquid 
+                if option.name == 'Color'
+                  assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x'
+                endif
+              %}
+              <div class="product-form__radio-wrapper">
+                <input type="radio" id="extra-color-{{ option.position }}-{{ forloop.index0 }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      {% if option.selected_value == value %}checked{% endif %}
+                >
+                <label for="extra-color-{{ option.position }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ swatch_url }});"{% endif %}>
+                  <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
+                    {{ value }}
+                  </span>
+                </label>
+              </div>
+            {%- endfor -%}
+          </fieldset>
+        </div>
+      {%- endfor -%}
+</div>>
+{% endfor %}    
+{%- endpaginate -%}
+</div>

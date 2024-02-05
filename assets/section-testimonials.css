@@ -1,0 +1,85 @@
+/*================ Quote slider ================*/
+.quote {
+    padding: 1.5rem;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 750px) {
+    .quote {
+        padding: 3rem;
+    }
+}
+
+.quote-block {
+    position: relative;
+}
+
+
+.quotes-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 0px;
+    padding: 25px;
+    height: 100%;
+    background: #FDFDFD;
+}
+
+.quote-press__logo {
+    display: inline-block;
+    width: 200px;
+    height: 65px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.quote-text {
+    max-width: 333px;
+    margin: 0px auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+.quote-block + .quote-block {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 749px) {
+    
+
+    .quotes-wrapper {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 25px;
+
+    }
+}
+.quotes-slider__prev,
+.quotes-slider__next {
+    background: 0;
+    border: 0;
+}
+
+.quotes-slider__prev .icon-caret,
+.quotes-slider__next .icon-caret {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.quotes-slider__prev .icon-caret {
+    transform: rotate(90deg);
+}
+.quotes-slider__next .icon-caret {
+    transform: rotate(-90deg);
+}
+
+.quotes-slider__links {
+    display: none;
+}
+
+.quote-customer__stars h4 {
+    margin: 0
+}

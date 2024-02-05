@@ -1,0 +1,31 @@
+{% layout none %}
+{% paginate search.results by 24 %}
+<div class="overflow-scroll-x wear-with-results product-grid">
+{%- for item in search.results -%}
+    {%- liquid 
+      if item.title contains 'iii'
+        continue
+      endif
+      if item.tags contains 'hidden-search'
+        continue
+      endif 
+      if item.title contains 'Capsule' or item.type contains 'CAPSULE'
+        continue
+      endif
+      if item.title contains 'App Exclusive'
+        continue
+      endif
+    -%}
+    {% comment %}{% unless item.available %}{% continue %}{% endunless %}{% endcomment %}
+    {%- liquid 
+    assign lazy_load = false
+    if forloop.index > 2 
+        assign lazy_load = true
+    endif 
+    -%}
+    <div class="wear-with__item grid__item" data-id="{{ item.id }}" data-title="{{ item.title }}">
+      {%- render 'card-product', card_product: item, media_aspect_ratio: 'adapt', show_secondary_image: false, lazy_load: lazy_load, show_quick_add: true -%}
+    </div>
+{%- endfor -%}
+</div>
+{% endpaginate %}

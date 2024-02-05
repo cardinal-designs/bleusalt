@@ -1,0 +1,147 @@
+{% assign realift_collections = product.collections | map: "id" %}
+{% assign realift_collections_titles = product.collections | map: "title" %}
+{% assign realift_settings = '{"button_width":"1\/2","button_border_style":"solid","button_border_color":"#070707","button_border_width":4,"button_border_radius":"full","button_vertical_padding":"2","button_text_color":"#0b1c29","results_unit":"both","dropdown_background_color":"#f4f6fa","results_icons":false,"results_icons_background_color":"#518bf3","results_icons_body_color":"#ffffff","results_icons_feature_color":"#ff1280","results_measurement_color":"#25235a","button_text_get_measurements":"Virtual Tailor","button_text_see_measurements":"See Your Size","realfit_recommendations_text":"Your Recommended Size with Fit Preferences!","realfit_option_text_0":"Fitted","realfit_option_text_1":"True to Size","realfit_option_text_2":"Oversized"}' %}
+{% assign realift_config = '{"rule":"include","collections":[59793080355,59794096163,59794063395,59794227235,59794325539,59794423843],"realfit":{"rule":"include","collections":[59793080355,59794096163,59794063395,59794227235,59794325539,59794423843]}}' %}
+<style>
+    :root {
+        --feature-measurement-color: #25235A;
+        --dropdown-background-color: #F4F6FA;
+    }
+</style>
+<div x-cloak class="realift" x-ref="app" x-data="realift" x-show="status" data-product="{{ product.id }}"
+    data-variant="{{ product.selected_or_first_available_variant.id }}" data-settings="{{ realift_settings | escape }}"
+    data-config="{{ realift_config | escape }}" data-collections="{{ realift_collections | json | escape }}" data-collections-titles="{{ realift_collections_titles | json | escape }}">
+    <div class="buttons" x-show="available || realfitAvailable">
+        <button @click="initiate()"
+            class="realSize px-3 button button--secondary button--small w-fit flex items-center content-center" type="button" style="display: block; padding: 0px 10px; border-radius: 0px; max-height: 36px; min-height: 36px">
+            <span class="inline-block align-middle mr-3">
+                <img class="h-8" alt="Find your Size" width height :src="iconUrl('person_put_phone_animated')" />
+            </span>
+            <span x-show="loading" class="inline-block align-middle mr-3">
+                <img class="h-4" alt="Find your Size" width height :src="iconUrl('three-dots')" />
+            </span>
+            <span x-show="status != 'LOADING' && !loading">
+              <span style="font-size: 12px" x-text="hasRecommendations ? 'Your Size:' : 'Find your size'"></span>
+              <span x-if="hasRecommendations" class="font-bold" x-text="fitText(recommendations.option_1 || recommendations.relaxed)"></span>
+            </span>
+        </button>
+    </div>
+    <div x-show="open" x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95"
+        class="dropdown origin-top absolute mt-2 bg-white focus:outline-none" @click.outside="open = false">
+        <div class="p-5" style="max-width: 550px;">
+            <div x-show="status == 'INITIALIZED'">
+                <div x-show="!isMobile" class="text-center px-4">
+                    <h3>Get Your Size With A Quick Spin</h3>
+                    <p>With a quick spin, we will get your measurements and your perfect fit. Scan the QR code to use your mobile device for the best experience. Results will be shown on this device.</p>
+                    <div class="_grid grid-cols-3 gap-2">
+                      <div>
+                        <img alt="Get Your Size With A Quick Spin" style="max-height: 270px;" class="inline-block rounded-xl" :src="'{{ 'BleusaltPreviewScreen.gif' | asset_url }}'" />
+                      </div>
+                      <div class="flex flex items-center content-center justify-center col-span-2">
+                        <img alt="Get Your Size With Quick Spin" class="rounded-xl" :src="qrCode" />
+                      </div>
+                    </div>
+                </div>
+                <!-- <a @click="startSync()" class="text-sky-500 hover:text-sky-600" :href="url">Click here</a> to use your device. For the best experience, scan the QR code -->
+                <!-- below to use your mobile device. -->
+                <!-- <img :src="qrCode" /> -->
+            </div>
+            <div x-show="status == 'IN_USE'" class="text-center">
+                Waiting for measurements...
+            </div>
+            <div x-show="status == 'APP_CLOSED'" class="text-center">
+                Looks like you closed the app without getting measurements, <a @click="startSync()" :href="url">try again ?</a>
+                <br />
+                <img alt="Measuring Guide" class="inline-block rounded-xl" :src="qrCode" />
+            </div>
+            <div x-show="status == 'MEASUREMENTS_SENT'" class="measurements" style="zoom: 0.8;position: relative;">
+                <div @click="open = false" style="position: absolute; right: 0; font-size: 24px; cursor: pointer">X</div>
+                <div x-show="realfitAvailable" class="font-bold text-center text-2xl" x-text="settings.realfit_recommendations_text"></div>
+                <div x-show="realfitAvailable" class="bg-white p-4 text-center">
+                    <div x-show="hasRecommendations" class="flex divide-x-2 my-2 text-center">
+                        <div class="flex-1">
+                            <span class="text-xl" x-text="settings.realfit_option_text_0"></span>
+                            <br />
+                            <span class="font-bold text-xl" x-text="fitText(recommendations.option_0 || recommendations.slim)"></span>
+                        </div>
+                        <div class="shrink-0">
+                            <span class="text-2xl" x-text="settings.realfit_option_text_1"></span>
+                            <br />
+                            <span class="font-bold text-3xl" x-text="fitText(recommendations.option_1 || recommendations.relaxed)"></span>
+                        </div>
+                        <div class="flex-1">
+                            <span class="text-xl" x-text="settings.realfit_option_text_2"></span>
+                            <br />
+                            <span class="font-bold text-xl" x-text="fitText(recommendations.option_2 || recommendations.baggy)"></span>
+                        </div>
+                    </div>
+                    <div x-show="!hasRecommendations">
+                        <img alt="dot svg" class="h-6 inline-block" width height :src="iconUrl('three-dots')" />
+                    </div>
+                </div>
+                <div class="gap-2 _grid grid-cols-2" x-show="available">
+                    <div class="flex gap-2 col-span-2">
+                        <div class="grow">
+                            <span class="text-2xl font-bold">Your Measurements</span>
+                        </div>
+                        <div class="flex-none" x-show="settings.results_unit == 'both'">
+                            <div class="flex h-full items-end justify-end text-base">
+                                <label class="flex cursor-pointer items-center">
+                                    <!-- toggle -->
+                                    <div class="relative">
+                                        <!-- input -->
+                                        <input x-on:change.prevent="changeUnit()" type="checkbox" class="sr-only" />
+                                        <!-- line -->
+                                        <div class="block h-8 w-20 rounded-full">&nbsp;</div>
+                                        <!-- dot -->
+                                        <div style="font-size: 2rem;line-height: 2.5rem;" class="dot absolute left-1 top-1 h-6 w-9 rounded-full bg-white px-1 text-center transition"
+                                            x-text="unit"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <template x-for="(value, key) in measurements">
+                        <template x-if="MEASUREMENTS_KEYS.includes(key)">
+                            <div class="measurement">
+                                
+                                <div class="content">
+                                    <div class="label text-left" style="text-align: left;" x-text="MEASUREMENTS[key].label"></div>
+                                    <div class="value">
+                                        <span x-text="MEASUREMENTS[key].unit ? valueOnUnit(value, unit) : value"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+                <div class="flex gap-2 mt-2 sa">
+                    <div class="flex gap-2 items-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0C3.57803 0 0 3.57834 0 8C0 12.422 3.57834 16 8 16C12.422 16 16 12.4217 16 8C16 3.57803 12.4217 0 8 0ZM8 14.75C4.26897 14.75 1.25 11.7308 1.25 8C1.25 4.26897 4.26922 1.25 8 1.25C11.731 1.25 14.75 4.26922 14.75 8C14.75 11.731 11.7308 14.75 8 14.75Z" fill="#0D3662"/>
+                        <path d="M8 4.02734C7.65481 4.02734 7.375 4.30716 7.375 4.65234V8.67713C7.375 9.02231 7.65481 9.30213 8 9.30213C8.34519 9.30213 8.625 9.02231 8.625 8.67713V4.65234C8.625 4.30716 8.34519 4.02734 8 4.02734Z" fill="#0D3662"/>
+                        <path d="M8 11.7549C8.46599 11.7549 8.84375 11.3771 8.84375 10.9111C8.84375 10.4451 8.46599 10.0674 8 10.0674C7.53401 10.0674 7.15625 10.4451 7.15625 10.9111C7.15625 11.3771 7.53401 11.7549 8 11.7549Z" fill="#0D3662"/>
+                      </svg>        
+                      <p>   
+                        If your results seem inaccurate.
+                        <br />
+                        Try again with tighter clothing.
+                      </p>
+                    </div>
+                    <div>
+                      <button @click="initiate(true)"
+                        class="realSize px-3 button button--secondary button--small w-fit flex items-center content-center font-bold text-xl" type="button" style="padding: 0px 10px; width: 110px; line-height: 1.5rem">
+                        <span class="ttn">Try Again</span>
+                      </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% render 'hs-defer-css' with filename: 'realift.css', pages: 'collection,index,product' | split: ',', local: true %}
+<script src="{{ 'realift.min.js' | asset_url }}"></script>

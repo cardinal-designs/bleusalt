@@ -1,0 +1,152 @@
+{% if localization.available_countries.size > 1 %}
+  <style>
+    .geSwitcher {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .disclosure {
+      position: relative;
+    }
+
+    .disclosure__button {
+      background-color: transparent;
+      border: none;
+    }
+
+    .disclosure__button .icon {
+      width: 12px;
+      transition: 0.3s ease all;
+    }
+
+    .disclosure__button .icon {
+      transform: rotate(180deg);
+    }
+
+    .disclosure__button[aria-expanded="true"] .icon {
+      transform: rotate(180deg);
+    }
+
+    .CountryList {
+      position: absolute;
+      background-color: white;
+      padding: 20px;
+      max-height: 40vh;
+      overflow-y: scroll;
+      margin-left: -31px;
+      scrollbar-color: #e4e4e4;
+      scrollbar-width: thin;
+      width: -moz-max-content;
+      width: max-content;
+      max-width: 290px;
+      text-align: center;
+      bottom: 100%
+    }
+
+    .CountryList li {
+      display: block !important;
+    }
+
+    .CountryList li a {
+      text-decoration: none;
+      color: unset;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+
+    .CountryList li a:hover {
+      font-weight: 600;
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #ccc;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+    /* mobile nav */
+    .mobile-navigation .CountryList {
+      max-height: 30vh;
+      margin-left: -18px;
+    }
+    .mobile-navigation .disclosure__item {
+      width: 100% !important;
+      padding-left: 0;
+    }
+    .mobile-navigation .disclosure__button {
+      padding-left: 0;
+    }
+  </style>
+  <script>
+    class LocalizationForm extends HTMLElement {
+      constructor() {
+        super();
+        this.elements = {
+          input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
+          button: this.querySelector('button'),
+          panel: this.querySelector('ul')
+        };
+        this.elements.button.addEventListener('click', this.openSelector.bind(this));
+        this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+        this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+        this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+      }
+
+      hidePanel() {
+        this.elements.button.setAttribute('aria-expanded', 'false');
+        this.elements.panel.setAttribute('hidden', true);
+      }
+
+      onContainerKeyUp(event) {
+        if (event.code.toUpperCase() !== 'ESCAPE') 
+          return;
+        
+
+
+
+        this.hidePanel();
+        this.elements.button.focus();
+      }
+
+      onItemClick(event) {
+        event.preventDefault();
+        const form = this.querySelector('form');
+        this.elements.input.value = event.currentTarget.dataset.value;
+        if (form) 
+          form.submit();
+        
+
+
+
+      }
+
+      openSelector() {
+        this.elements.button.focus();
+        this.elements.panel.toggleAttribute('hidden');
+        this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+      }
+
+      closeSelector(event) {
+        const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+        if (event.relatedTarget === null || shouldClose) {
+          this.hidePanel();
+        }
+      }
+    }
+    customElements.define('localization-form', LocalizationForm);
+  </script>
+{% endif %}

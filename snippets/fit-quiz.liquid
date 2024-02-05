@@ -1,0 +1,38 @@
+{% render 'hs-defer-css' with filename: 'fit-quiz.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<fit-quiz>
+    <div class="fit-quiz__item">
+        <label for="fit-select">Do you like being loose or fitted?</label>
+        <div class="select">
+            <select id="fit-select" name="fit-select" class="select__select">
+                <option value="">Select your fit</option>
+                <option value="fitted">Fitted</option>
+                <option value="loose">Loose</option>
+            </select>
+            {%- render 'icon-caret' -%}
+        </div>
+    </div>
+    <div class="fit-quiz__item">
+        <label for="size-select">What size {{ product.type | downcase }} are you?</label>
+        <div class="select">
+            <select id="size-select" name="size-select" class="select__select">
+                <option value="">Select your size</option>
+                <option data-loose-value="0" value="00">XXS</option>
+                <option data-loose-value="1" value="0">XS</option>
+                <option data-loose-value="2" value="1">S</option>
+                <option data-loose-value="3" value="2">M</option>
+                <option data-loose-value="4" value="3">L</option>
+                <option data-loose-value="5" value="4">XL</option>
+                <option data-loose-value="6" value="5">1X</option>
+                <option data-loose-value="6" value="6">2X</option>
+            </select>
+            {%- render 'icon-caret' -%}
+        </div>
+    </div>
+    <div class="fit-quiz__item">
+        <button class="button button--primary" type="button" id="fit-quiz__submit">Find my size</button>
+    </div>
+    <h4 class="fit-quiz__results h0 center" style="display: none;"></h4>
+</fit-quiz>
+
+<script defer src="{{ 'fit-quiz.min.js' | asset_url }}"></script>

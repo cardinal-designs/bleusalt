@@ -1,0 +1,193 @@
+{% if request.design_mode and template contains 'swatch-colors' %}
+  <div class="page-width">
+  <div class="master-swatch-list flex wrap">
+
+  {% assign old_colors = linklists.colors.links | map: 'title' %}
+  {% assign not_set_up = '' %}
+  
+  {% for block in section.blocks %}
+    <div class="master-swatch  one-quarter" >
+      <div class="flex align-center">
+      
+      {% if block.settings.color_image != blank %}
+      <div class="master-swatch__color" style="background-image: url({{ block.settings.color_image | image_url: width: 60 }});">
+        <span class="visually-hidden">{{ block.settings.title }}</span>
+      </div>
+      {% elsif block.settings.color != blank %}
+      <div class="master-swatch__color" style="background-color: {{ block.settings.color }};">
+        <span class="visually-hidden">{{ block.settings.title }}</span>
+      </div>
+      {% endif %}
+      {% if block.settings.color == blank and block.settings.color_image == blank %}
+      <div class="master-swatch__color" style="background-image: url({{ block.settings.title | handle | append: '.jpg' | file_url }}) !important;">
+        <span class="visually-hidden">{{ block.settings.title }}</span>
+      </div>
+      {% endif %}
+      <span>{{ block.settings.title }}</span>
+      </div>
+      <a class="master-swatch__link link--fill-parent" href="{{ block. id }}" {{ block.shopify_attributes }}>
+        <span class="visually-hidden">Edit Color</span>
+      </a>
+    </div>
+    {% unless old_colors contains block.settings.title %}
+      {% assign not_set_up = not_set_up | append: ',' | append: block.settings.title %}
+    {% endunless %}
+  {% endfor %}
+  </div>
+  {% unless not_set_up == '' %}
+  <h5>Not Set Up</h5>
+  <ul class="not-set-up">
+    {% assign not_set_up = not_set_up | split: ',' %}
+    {% for color in not_set_up %}
+    <div>{{ color }}</div>
+    {% endfor %}
+  </ul>
+  {% endunless %}
+  <div class="json-output"></div>
+</div>
+  <style type="text/css">
+    .master-swatch {
+      padding: 10px;
+      font-size: 1.2rem;
+      position: relative;
+    }
+
+    .master-swatch__color {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      margin-right: 5px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: 1px solid rgba(var(--color-foreground),.25);
+    }
+  </style>
+  <script type="text/javascript">
+    const blocks = [];
+    {% for block in section.blocks %}
+      blocks.push({{ block.settings | json }});
+    {% endfor %}
+    blocks.sort(function(a,b) {
+      return a.title.localeCompare(b.title);
+    });
+    const jsonOutput = document.querySelector('.json-output');
+    jsonOutput.innerHTML = blocks;
+    const swatches = document.querySelectorAll('.master-swatch__link');
+    swatches.forEach((swatch) => {
+      swatch.addEventListener('click',function(e) {
+        console.log(e);
+        e.preventDefault();
+        swatch.dispatchEvent('shopify:block:select', e, swatch.getAttribute('href'));
+        e.preventDefault();
+      });
+    });
+  </script>
+{% endif %}
+
+{% assign color_list = section.blocks | map: 'settings' | map: 'title' | escape | join: '|' %}
+<script id="swatch-colors-script" type="text/javascript" data-json='{{ color_list }}'>
+  var theme = theme || {};
+  theme.swatchColors = [];
+  
+  theme.swatchJson = {
+    colors: []
+  };
+  
+  {% for block in section.blocks %}
+    {% assign handle = block.settings.title | handle %}
+    theme.swatchColors.push({{ handle | json }});
+    var swatchObject = {
+      title: {{ block.settings.title | json }},
+      core: {{ block.settings.core | json }},
+      color: {{ block.settings.color | default: false | json }},
+      colorImage: {{ block.settings.color_image | default: false | json }},
+      colorImageFile: {{ block.settings.color_image_file | default: false | json }}
+    };
+  theme.swatchJson.colors.push(swatchObject);
+  {% endfor %}
+</script>
+<style type="text/css">
+  {% for block in section.blocks %}
+  {% capture values %}
+  
+  {% if block.settings.color != blank %}
+  background-color: {{ block.settings.color }} !important;
+  {% endif %}
+  
+  {% if block.settings.color_image != blank %}
+  background-image: url({{ block.settings.color_image | image_url: width: 60 }}) !important;
+  {% endif %}
+  
+  {% if block.settings.color_image == blank and block.settings.color_image_file != blank %}
+  background-image: url({{ block.settings.color_image_file }}) !important;
+  {% endif %}
+  
+  {% if block.settings.color == blank and block.settings.color_image == blank and block.settings.color_image_file == blank %}
+  background-image: url({{ block.settings.title | handle | append: '.jpg' | file_img_url: '60x' }}) !important;
+  {% endif %}
+  {% endcapture %}
+  
+  [data-value="{{ block.settings.title }}"]:before {
+  {{ values }}
+  }
+  .quick-add__button[value="{{  block.settings.title }}"],
+  .facet-checkbox[data-value="{{ block.settings.title }}"],
+  .mobile-facets__label[data-value="{{ block.settings.title }}"],
+  .product-form__input input[value="{{ block.settings.title }}"] + label,
+  .list-menu__item[data-value="{{ block.settings.title | handle }}"] input + label,
+  .complete-the-look__option--color[value="{{ block.settings.title }}"] + label {
+  	{{ values }}
+  	width: 25px;
+    height: 25px;
+    padding: 0 !important;
+    white-space: nowrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  {% endfor %}
+</style>
+
+{% schema %}
+{
+  "name": "Swatch Colors",
+  "class": "hidden",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "color",
+      "name": "Color",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Color Name",
+          "info": "Color Group or Actual Color Name"
+        },
+        {
+          "type": "checkbox",
+          "id": "core",
+          "label": "Core Color?"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Solid Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "color_image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "color_image_file",
+          "label": "URL to swatch"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

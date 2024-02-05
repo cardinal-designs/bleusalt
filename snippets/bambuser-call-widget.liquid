@@ -1,0 +1,291 @@
+<script>
+// Reduces server calls if a product has a crazy number of images.
+const MAX_IMAGES_COUNT_ = 20;
+
+// Extracts product handle from the product URL
+const SHOPIFY_PRODUCT_URL_HANDLE_REGEX_ = /\/products\/(.[\w\d-+]+)/;
+
+// Sometimes image URLs miss the protocol at the beginning
+// E.g. '//cdn.shopify.com/s/files/.../image.jpg'
+const urlSanitizer_ = (url) => {
+if (typeof url === "string") {
+  if (url.startsWith("//")) return `https:${url}`;
+  else if (url.toLocaleLowerCase().startsWith("http")) return url;
+  else console.log(`Not a valid URL: ${url}`);
+} else console.log(`Not a valid URL: ${url}`);
+return null;
+};
+
+const currency = () => {
+let cart_currency = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("cart_currency"));
+return (cart_currency && cart_currency.split("=")[1]) || "USD";
+};
+
+// ====================================== Shopify Ajax API Helper methods ========================================
+const shopify = {};
+
+shopify.getProductByUrl = (url) => {
+const handle = SHOPIFY_PRODUCT_URL_HANDLE_REGEX_.exec(url);
+return fetch("/products/" + handle[1] + ".js", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+}).then((resp) => resp.json());
+};
+
+shopify.getProductByHandle = (handle) => {
+return fetch("/products/" + handle + ".js", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+}).then((resp) => resp.json());
+};
+
+shopify.getRelatedProducts = (productId) => {
+return fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=" + [productId] + "&limit=5")
+  .then(response => response.json());
+}
+
+shopify.getProduct = (ref) => {
+if (SHOPIFY_PRODUCT_URL_HANDLE_REGEX_.test(ref)) {
+  return shopify.getProductByUrl(ref)
+    .then((productObject) => {
+      return shopify.getRelatedProducts(productObject.id).then(result => {
+        productObject["relatedProducts"] = result.products
+        return productObject;
+      })
+    })
+} else {
+  return shopify.getProductByHandle(ref.split(":")[1])
+    .then((productObject) => {
+      return shopify.getRelatedProducts(productObject.id).then(result => {
+        productObject["relatedProducts"] = result.products
+        return productObject;
+      })
+    })
+}
+};
+
+shopify.predictiveSearch = (query) =>
+fetch("/search/suggest.json?q=" + query + "&resources[type]=product", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+}).then((res) => res.json());
+
+shopify.addToCart = (itemId) =>
+fetch("/cart/add.js", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    items: [{
+      quantity: 1,
+      id: itemId.split(":")[0],
+    }, ],
+  }),
+}).then((resp) => resp.json());
+
+shopify.updateItemInCart = (itemId, quantity) =>
+fetch("/cart/update.js", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    updates: {
+      [itemId.split(":")[0]]: quantity,
+    },
+  }),
+}).then((resp) => resp.json());
+
+shopify.getCartState = () =>
+fetch("/cart.js", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+}).then((resp) => resp.json());
+
+// ===================================== Bambuser OneToOneReady Handler ==========================================
+function onBambuserOneToOneReady() {
+// This method will be invoked when embed.js has loaded and Bambuser
+// One-to-One API is available.
+// Creating an instance directly will allow to detect connect links
+// that will automatically open the Live Meeting overlay on page load.
+let oneToOneEmbed = new BambuserOneToOneEmbed({
+  orgId: "byP8L3kSEjBW5gUHnVx8",
+  // queue: '[QUEUE_ID_HERE]', // if not specified, default queue configured from the dashboard will get applied
+  triggers: [
+    'smart', // activate the overlay widget
+    'connect-link' // activate the connect link - Unrelated to OLW, yet mandatory
+  ],
+  smartVariantOverride: 'Video', // force variant 'Video'. Other options are 'Avatar' and 'Side dock'
+  popupTimeoutSeconds: '5' // after how many seconds OLW appears on the first time page load (default = 60)
+});
+
+//------------------------------------ Provide Product Data ----------------------------------
+oneToOneEmbed.on("provide-product-data", (event) => {
+  event.products.forEach(({
+    ref,
+    id
+  }) => {
+    shopify.getProduct(ref).then((item) => {
+      oneToOneEmbed.updateProduct(id, (productFactory) =>
+        productFactory
+        .currency(currency())
+        .locale("en-US")
+        .product((detailFactory) =>
+          detailFactory
+          .name(item.title)
+          .description(item.description)
+          .sku(item.id + ":" + item.handle)
+          .attributes((attribute) => {
+            if (item.variants && item.variants.length > 1) {
+              return item.options.map((attr) =>
+                attribute(attr.name)
+                .name(attr.name)
+                .options((option) =>
+                  attr.values.map((optionName) =>
+                    option(optionName).name(optionName)
+                  )
+                )
+              );
+            } else {
+              return [];
+            }
+          })
+          .variations((variationFactory) => {
+             return item.variants.map((variation) =>
+                  variationFactory()
+                  // If there is more than one variation, append variation title to the item title
+                  .name(variation.title === "Default Title" ? item.title : (item.title + ` (${variation.title})`))
+                  .sku(variation.id + ":" + item.handle)
+                  .inStock(variation.available)
+                  .imageUrls([
+                    // Adding the featured image of the chosen variation 
+                    // (if existed) at the beginning of the images array
+                    ...(variation.featured_image ? [variation.featured_image.src] : []),
+                    // Adding product images
+                    ...item.images
+                    .slice(0, MAX_IMAGES_COUNT_ - 1)
+                    .map((url) => urlSanitizer_(url))
+                    .filter((url) => typeof url === "string")
+                    .filter((image) => image !== ((variation.featured_image !== null) ? variation.featured_image.src : null))
+                  ])
+                  .price((priceFactory) =>
+                    priceFactory
+                    .original(variation.compare_at_price / 100)
+                    .current(variation.price / 100)
+                  )
+                  .attributes((attribute) => {
+                    if (item.variants && item.variants.length > 1) {
+                    return item.options.map((attr) =>
+                      attribute(
+                        attr.name,
+                        variation["option" + attr.position]
+                      )
+                    )
+                  } else {
+                    return [];
+                  }})
+                  .relatedProducts((relatedProductFactory) =>
+                    item.relatedProducts.map((relatProd) =>
+                      relatedProductFactory()
+                      .title(relatProd.title)
+                      .sku(relatProd.id + ":" + relatProd.handle)
+                      .imageUrl(urlSanitizer_(relatProd.featured_image))
+                      .price(priceFactory =>
+                        priceFactory
+                        .original(relatProd.compare_at_price / 100)
+                        .current(relatProd.price / 100))
+                    )
+                  )
+                )
+            }
+
+          )
+        )
+      );
+    });
+  });
+});
+
+// --------------------------------- Cart Integrations --------------------------------------
+oneToOneEmbed.on("should-add-item-to-cart", (addedItem, callback) => {
+  shopify
+    .addToCart(addedItem.sku)
+    .then((res) => {
+      if (res.items) {
+        callback(true);
+        console.log("Item added succussfully!");
+      } else if (res.description && res.description.includes("sold out")) {
+        callback({
+          success: false,
+          reason: "out-of-stock"
+        });
+      } else callback(false);
+    })
+    .catch((error) => {
+      callback(false);
+      console.error("Add to cart error! ", error);
+    });
+});
+
+oneToOneEmbed.on("should-update-item-in-cart", (updatedItem, callback) => {
+  shopify
+    .updateItemInCart(updatedItem.sku, updatedItem.quantity)
+    .then((res) => {
+      if (res.items) {
+        callback(true);
+        console.log("Item updated succussfully!");
+      } else callback(false);
+    })
+    .catch((error) => {
+      callback(false);
+      console.error("Error on updating item! ", error);
+    });
+});
+
+oneToOneEmbed.on("goto-checkout", () => {
+  window.open(window.location.origin + '/cart', '_blank');
+});
+
+// --------------------------------- Provide Search Data -------------------------------------
+oneToOneEmbed.on("provide-search-data", (searchRequest, searchResponse) => {
+  const {
+    term,
+    page
+  } = searchRequest;
+  shopify.predictiveSearch(term).then((data) => {
+    if (data.status && data.status === 422) throw new Error(data.message);
+    searchResponse((response) => {
+      return response
+        .products((p) => {
+          const results = data.resources.results.products.map((prod) => {
+            return p()
+              .name(prod.title)
+              .imageUrl(prod.image)
+              .sku(prod.id + ":" + prod.handle)
+              .price((price) =>
+                price
+                .current(parseInt(prod.price))
+                .original(parseInt(prod.compare_at_price_max))
+              );
+          });
+          return results;
+        })
+        .currency(currency())
+        .locale("en-US");
+    });
+  });
+});
+}
+</script>
+<script async id="bambuser-one-to-one" src="https://one-to-one.bambuser.com/embed.js"></script>

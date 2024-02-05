@@ -1,0 +1,14 @@
+{%- liquid
+    if image_ratio == 'square'
+        assign ratio = 100
+    elsif image_ratio == 'portrait'
+        assign ratio = 125
+    elsif image_ratio != blank 
+        assign ratio = image_ratio
+    else
+        assign ratio =  1 | divided_by: image.aspect_ratio | times: 100
+    endif
+    -%}
+    <div style="padding-top:{{ ratio }}%;" class="media {% if class != blank %}{{ class }}{% endif %}">
+       <video loop autoplay playsinline muted src="{{ video_url }}">
+    </div>

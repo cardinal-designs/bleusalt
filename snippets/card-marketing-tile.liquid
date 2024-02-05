@@ -1,0 +1,31 @@
+<li class="grid__item marketing-tile marketing-tile-{{ block.settings.tile_size }} relative">
+    <div class="marketing-tile__inner relative">
+        {%- liquid 
+        if block.settings.tile_size == '2x'
+            assign media_size =  60.5
+        endif
+        if block.settings.image != blank and block.settings.media_type == 'image'
+          render 'image-element', image: block.settings.image, image_ratio: media_size
+        endif
+        if block.settings.video_url != blank and block.settings.media_type == 'video'
+            render 'video-element', video_url: block.settings.video_url, image_ratio: media_size
+        endif
+        -%}
+        <div class="marketing-tile__content">
+        {% if block.settings.title != blank %}
+        <h2 class="h3">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.paragraph != blank %}
+        <div class="rte">{{ block.settings.paragraph }}</div>
+        {% endif %}
+        {% if block.settings.button_text != blank %}
+        <button type="button" class="button button--primary">{{ block.settings.button_text }}</button>
+        {% endif %}
+        </div>
+    </div>
+    <a href="{{ block.settings.link }}" class="link--fill-parent">
+        <span class="visually-hidden">
+        Link to {{ block.settings.link }}
+        </span>
+    </a>
+</li>

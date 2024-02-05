@@ -1,0 +1,9 @@
+<quick-add>
+  {% if product.options_by_name['Size'].values.size > 1 %}
+    {% for value in product.options_by_name['Size'].values %}
+      <button type="button" value="{{ value }}" class="quick-add__button quick-add__button--size button--inline">{{ value }}</button>
+    {% endfor %}
+  {% else %}
+  <button type="button" value="{{ product.options[0] }}" class="quick-add__add-button button--inline">{{ 'products.product.add_to_cart' | t }}</button>
+  {% endif %}
+</quick-add>

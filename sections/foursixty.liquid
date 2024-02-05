@@ -1,0 +1,349 @@
+{% comment %}theme-check-disable RemoteAsset{% endcomment %}
+<div id="foursixty" class="section--{{ section.id }} {{ section.settings.width }}" style="text-align: {{ section.settings.text_align }};">
+    {% for block in section.blocks %}
+    {% case block.type %}
+    
+    {% when 'title' %}
+    <h2 class="foursixty-title normal-weight h1">{{ block.settings.title }}</h2>
+    
+    {% when 'paragraph' %}
+    <div class="foursixty-paragraph rte small--page-width">{{ block.settings.title }}</div>
+    
+    {% when 'feed' %}
+      
+    <div id="fs-feed--{{ section.id }}" class="foursixty-feed">
+    {% if block.settings.feed_type == 'slider' %}
+    <script id="fs--{{ section.id }}"
+              defer="defer"
+              src="//foursixty.com/media/scripts/fs.slider.v2.5.js"
+              {% if template contains "product" %}
+              class="fs-product-feed"
+              data-for-url="true"
+              data-url-related="true"
+              data-re-ignore="($|\?)"
+              {% endif %}
+              data-has-posts-selector="#foursixty"
+              data-track-conversion="true" 
+              data-cell-size="25%" 
+              data-feed-id="{{ block.settings.feed_id }}" 
+              data-theme="slider_v2_5" 
+              data-page-size="{{ block.settings.total_images }}" >
+      </script>
+    {% else %}
+      <script id="fs--{{ section.id }}"
+              class="fs-feed"
+              defer="defer"
+              src="//foursixty.com/media/scripts/fs.embed.v2.5.js" 
+              {% if template contains "product" %}
+              data-for-url="true"
+              data-url-related="true"
+              data-re-ignore="($|\?)"
+              {% endif %}
+              data-has-posts-selector="#foursixty"
+              data-defer-image-loading="true" 
+              data-feed-id="{{ block.settings.feed_id }}" 
+              data-theme="showcase_v2_5" 
+              data-page-size="{{ block.settings.total_images }}">
+      </script>
+      {% endif %}
+  
+  
+      <style type="text/css">
+        .section--{{ section.id }} .fs-timeline-entry {
+          margin: {{ block.settings.image_margin }}px !important;
+        }
+        .section--{{ section.id }} .fs-mobile .fs-entry-container {
+          width: 50% !important;
+          padding-top: 50% !important;
+        }
+        @media screen and (max-width: 749px) {
+          .section--{{ section.id }} .fs-mobile .fs-timeline-entry {
+            margin: 5px !important;
+          }
+        }
+        @media screen and (min-width: 990px) {
+          .section--{{ section.id }} .fs-entry-container {
+            width: {{ 100 | divided_by: block.settings.per_row }}% !important;
+            padding-top: {{ 100 | divided_by: block.settings.per_row }}% !important;
+          }
+        }
+        .fs-entry-date {
+          font-size: 14px;
+        }
+
+        {% if block.settings.big_first_image %}
+          {% assign desktop_max = block.settings.total_images | divided_by: block.settings.per_row %}
+        @media screen and (min-width: 750px) {
+          .section--{{ section.id }} .fs-entry-container:nth-child(1) {
+            width: {{ 100 | divided_by: block.settings.per_row | times: 2 }}% !important;
+            padding-top: {{ 100 | divided_by: block.settings.per_row | times: 2 }}% !important;
+          }
+          .section--{{ section.id }} .fs-entry-container:nth-child(n+{{ block.settings.total_images | minus: desktop_max }}) {
+            display: none;
+          }
+        }
+        {% endif %}
+
+
+      </style>
+
+      {% if block.settings.big_first_image %}
+        
+      {% endif %}
+    </div>
+    
+    {% when 'button' %}
+    <a href="{{ block.settings.link }}" class="foursixty-button button {{ block.settings.button_style }}">{{ block.settings.link_text }}</a>
+  
+    {% endcase %}
+    
+    {% endfor %}
+    
+  </div>
+  
+  
+  <style type="text/css">
+    .section--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      {% if section.settings.border_top %}
+      border-top: 1px solid var(--color-border);
+      {% endif %}
+    }
+    @media screen and (max-width: 749px) {
+      .section--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+      }
+  
+    }
+    {% assign margin = section.settings.margins | divided_by: 2 %}
+    .section--{{ section.id }} .foursixty-title,
+    .section--{{ section.id }} .foursixty-paragraph,
+    .section--{{ section.id }} .foursixty-feed {
+      margin: 0;
+      padding: {{ margin }}px 0;
+    }
+    .section--{{ section.id }} .foursixty-button {
+    margin-top: {{ margin }}px;
+    }
+    
+  </style>
+  <script>
+    document.addEventListener("shopify:section:load", event => {
+      console.log('foursixty');
+      let fsScript = document.getElementById("fs--{{ section.id }}");
+      var fsClone = document.createElement('script');
+      Array.from(fsScript.attributes).forEach(attribute => {
+        fsClone.setAttribute(attribute.nodeName === 'id' ? 'data-id' : attribute.nodeName,attribute.nodeValue);
+      });
+      document.getElementById('fs-feed--{{ section.id }}').appendChild(fsClone);
+      fsScript.remove();
+    });
+  </script>
+  
+{% schema %}
+{
+  "name": "Foursixty",
+  "class": "section--foursixty",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full Width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page Width"
+        }
+      ],
+      "default": "page-width",
+      "label": "Width"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margins",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Space Between Blocks",
+      "default": 50
+    },
+    {
+      "type": "checkbox",
+      "id": "border_top",
+      "label": "Show Top Border?",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text Align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Heading Text",
+          "default": "#FrankiesGirl",
+          "id": "title"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "richtext",
+          "label": "Paragraph Text",
+          "default": "<p>Tag #FrankiesGirl on Instagram for a chance to be featured on our gallery @frankiesbikinis</p>",
+          "id": "title"
+        }
+      ]
+    },
+    {
+      "type": "feed",
+      "name": "Foursixty Feed",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feed_id",
+          "label": "Feed ID",
+          "default": "frankiesbikinis"
+        },
+        {
+          "type": "number",
+          "id": "total_images",
+          "label": "# of Images",
+          "default": 4
+        },
+        {
+          "type": "checkbox",
+          "id": "big_first_image",
+          "label": "Enlarge first image?",
+          "default": false
+        },
+        {
+          "type": "number",
+          "id": "per_row",
+          "label": "Images Per Row",
+          "default": 5,
+          "info": "% value"
+        },
+        {
+          "type": "number",
+          "id": "image_margin",
+          "label": "Image Margin",
+          "default": 5
+        },
+        {
+          "type": "select",
+          "id": "feed_type",
+          "label": "Feed Type",
+          "options": [
+            {
+              "value": "slider",
+              "label": "Slider"
+            },
+            {
+              "value": "grid",
+              "label": "Grid"
+            }
+          ],
+          "default": "grid"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "url",
+          "label": "Link",
+          "id": "link"
+        },
+        {
+          "type": "text",
+          "label": "Link Text",
+          "id": "link_text"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button Style",
+          "default": "button--underline",
+          "options": [
+            {
+              "label": "Underlined Link",
+              "value": "button--underline"
+            },
+            {
+              "label": "Button",
+              "value": "button"
+            },
+            {
+              "label": "Secondary Button",
+              "value": "button--secondary"
+            },
+            {
+              "label": "Tertiary Button",
+              "value": "button--tertiary"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Foursixty"
+    }
+  ]
+}
+{% endschema %}
+  

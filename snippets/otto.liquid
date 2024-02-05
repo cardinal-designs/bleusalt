@@ -1,0 +1,70 @@
+{%- comment -%}Values{%- endcomment -%}
+{%- assign image_metafield = shop.metafields.otto-components[image].value -%}
+{%- assign alt = image_metafield.alt -%}
+{%- assign body_text = image_metafield.body_text -%}
+{%- assign button_text = image_metafield.button_text -%}
+{%- capture file_name -%}
+  {%- if image_metafield.file_name == null -%}
+    otto-{{ image }}.{{ image_metafield.extension }}
+  {%- else -%}
+    {{ image_metafield.file_name }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture file_src -%}{{ file_name | file_url }}{%- endcapture -%}
+{%- assign header_text = image_metafield.header_text -%}
+{%- assign link = image_metafield.link -%}
+{%- assign mobile_file_name = image_metafield.mobile_file_name -%}
+{%- assign subheader_text = image_metafield.subheader_text -%}
+
+{%- comment -%}Components{%- endcomment -%}
+{%- if component == blank -%}
+  {%- if link != blank -%}
+    <a href="{{ link }}">
+  {%- endif -%}
+    <img src="{{ file_name | file_url }}" alt="{{ alt }}" class="otto-image {%- if mobile_file_name != blank -%}otto-image--desktop{%- endif -%}">
+    {%- if mobile_file_name != blank -%}
+      <img src="{{ mobile_file_name | file_url }}" alt="{{ alt }}" class="otto-image otto-image--mobile">
+    {%-  endif -%}
+  {%- if link != blank -%}
+    </a>
+  {%- endif -%}
+
+  <style>
+    .otto-image {
+      display: block;
+      width: 100%;
+    }
+    .otto-image--desktop {
+      display: block;
+    }
+    .otto-image--mobile {
+      display: none;
+    }
+     @media all and (max-width: 1024px) {
+      .otto-image--desktop {
+        display: none;
+      }
+      .otto-image--mobile {
+        display: block;
+      }
+    }
+  </style>
+{%- elsif component == 'alt' -%}
+  {{ alt }}
+{%- elsif component == 'link' -%}
+  {{ link }}
+{%- elsif component == 'extension' -%}
+  {{ extension }}
+{%- elsif component == 'header_text' -%}
+  {{ header_text }}
+{%- elsif component == 'subheader_text' -%}
+  {{ subheader_text }}
+{%- elsif component == 'body_text' -%}
+  {{ body_text }}
+{%- elsif component == 'button_text' -%}
+  {{ button_text }}
+{%- elsif component == 'file_name' -%}
+  {{ file_name }}
+{%- elsif component == 'file_src' -%}
+  {{ file_src }}
+{%- endif -%}

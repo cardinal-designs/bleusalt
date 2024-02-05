@@ -1,0 +1,577 @@
+.realift .label {
+  font-size: 20px;
+}
+
+.realift .try-again {
+  width: 120px;
+}
+
+.realift .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.realift .absolute{
+    position: absolute;
+}
+.realift .relative{
+    position: relative;
+}
+.realift .right-0{
+    right: 0px;
+}
+.realift .left-1{
+    left: 4px;
+}
+.realift .top-1{
+    top: 4px;
+}
+.realift .col-span-2{
+    grid-column: span 2 / span 2;
+}
+.realift .my-2{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.realift .mr-3{
+    margin-right: 12px;
+}
+.realift .mt-2{
+    margin-top: 8px;
+}
+.realift .mt-3{
+    margin-top: 36px;
+}
+.realift .block{
+    display: block;
+}
+.realift .inline-block{
+    display: inline-block;
+}
+.realift .flex{
+    display: flex;
+}
+.realift .sa {
+  justify-content: space-around;
+}
+.realift .flex-1 {
+  flex: 1 1 0%;
+}
+.realift .shrink-0 {
+  flex-shrink: 0;
+}
+.realift .hidden{
+    display: none;
+}
+.realift .h-8{
+    height: 32px;
+}
+.realift .h-6{
+    height: 24px;
+}
+.realift .h-4{
+    height: 16px;
+}
+.realift .h-full{
+    height: 100%;
+}
+.realift .w-full{
+    width: 100%;
+}
+.realift .w-auto{
+    width: auto;
+}
+.realift .w-fit{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.realift .w-1\/2{
+    width: 50%;
+}
+.realift .w-3\/5{
+    width: 60%;
+}
+.realift .w-3\/4{
+    width: 75%;
+}
+.realift .w-4\/5{
+    width: 80%;
+}
+.realift .w-20{
+    width: 80px;
+}
+.realift .w-9{
+    width: 36px;
+}
+.realift .flex-none{
+    flex: none;
+}
+.realift .grow{
+    flex-grow: 1;
+}
+.realift .origin-top{
+    transform-origin: top;
+}
+.realift .scale-95{
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.realift .scale-100{
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.realift .transform{
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.realift .cursor-pointer{
+    cursor: pointer;
+}
+.realift .grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.realift .grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.realift .items-end{
+    align-items: flex-end;
+}
+.realift .items-center{
+    align-items: center;
+}
+.realift .justify-end{
+    justify-content: flex-end;
+}
+.realift .items-center {
+  align-items: center;
+}
+
+.realift .justify-center {
+  justify-content: center;
+}
+.realift .gap-4{
+    gap: 16px;
+}
+.realift .gap-2{
+    gap: 8px;
+}
+.realift .divide-x-2 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(2px * var(--tw-divide-x-reverse));
+    border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
+}
+.realift .rounded-none{
+    border-radius: 0px;
+}
+.realift .rounded-sm{
+    border-radius: 0.2px;
+}
+.realift .rounded{
+    border-radius: 4px;
+}
+.realift .rounded-md{
+    border-radius: 6px;
+}
+.realift .rounded-lg{
+    border-radius: 8px;
+}
+.realift .rounded-xl{
+    border-radius: 12px;
+}
+.realift .rounded-2xl{
+    border-radius: 16px;
+}
+.realift .rounded-3xl{
+    border-radius: 24px;
+}
+.realift .rounded-full{
+    border-radius: 9999px;
+}
+.realift .border-0{
+    border-width: 0px;
+}
+.realift .border-1{
+    border-width: 1px;
+}
+.realift .border-2{
+    border-width: 2px;
+}
+.realift .border-3{
+    border-width: 3px;
+}
+.realift .border-4{
+    border-width: 4px;
+}
+.realift .border-5{
+    border-width: 5px;
+}
+.realift .border-6{
+    border-width: 6px;
+}
+.realift .border-7{
+    border-width: 7px;
+}
+.realift .border-8{
+    border-width: 8px;
+}
+.realift .border-solid{
+    border-style: solid;
+}
+.realift .border-dashed{
+    border-style: dashed;
+}
+.realift .border-dotted{
+    border-style: dotted;
+}
+.realift .border-double{
+    border-style: double;
+}
+.realift .border-hidden{
+    border-style: hidden;
+}
+.realift .border-none{
+    border-style: none;
+}
+.realift .border-black{
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.realift .bg-white{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.realift .p-1{
+    padding: 4px;
+}
+.realift .p-1\.5{
+    padding: 6px;
+}
+.realift .p-2{
+    padding: 8px;
+}
+.realift .p-2\.5{
+    padding: 10px;
+}
+.realift .p-3{
+    padding: 12px;
+}
+.realift .p-3\.5{
+    padding: 14px;
+}
+.realift .p-4{
+    padding: 16px;
+}
+.realift .p-5{
+    padding: 20px;
+}
+.realift .p-6{
+    padding: 24px;
+}
+.realift .p-7{
+    padding: 28px;
+}
+.realift .p-8{
+    padding: 32px;
+}
+.realift .py-1{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.realift .py-1\.5{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.realift .py-2{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.realift .py-2\.5{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.realift .py-3{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.realift .py-3\.5{
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.realift .py-4{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.realift .py-5{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.realift .py-6{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.realift .py-7{
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+.realift .py-8{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.realift .px-1{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.realift .px-1\.5{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.realift .px-2{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.realift .px-2\.5{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.realift .px-3{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.realift .px-3\.5{
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.realift .px-4{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.realift .px-5{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.realift .px-6{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.realift .px-7{
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.realift .px-8{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.realift .text-center{
+    text-align: center;
+}
+.realift .ttn {
+  text-transform: none;
+  line-height: 16px;
+}
+.realift .align-middle{
+    vertical-align: middle;
+}
+.realift .text-sm{
+    font-size: 14px;
+    line-height: 20px;
+}
+.realift .text-lg{
+    font-size: 18px;
+    line-height: 28px;
+}
+.realift .text-xl{
+    font-size: 20px;
+    line-height: 24px;
+}
+.realift .text-2xl{
+    font-size: 24px;
+    line-height: 28px;
+}
+.realift .text-3xl{
+    font-size: 32px;
+    line-height: 36px;
+}
+.realift .text-base{
+    font-size: 24px;
+    line-height: 32px;
+}
+.realift .font-bold{
+    font-weight: 700;
+}
+.realift .text-sky-500{
+    --tw-text-opacity: 1;
+    color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+.realift .underline{
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
+.realift .opacity-0{
+    opacity: 0;
+}
+.realift .opacity-100{
+    opacity: 1;
+}
+.realift .transition{
+    transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+.realift .duration-100{
+    transition-duration: 100ms;
+}
+.realift .duration-75{
+    transition-duration: 75ms;
+}
+.realift .ease-out{
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.realift .ease-in{
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.realift [hidden] {
+    display: none;
+  }
+.realift{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.realift .buttons{
+    display: grid;
+}
+.realift .buttons button {
+      /** @apply rounded-2xl rounded-tr-none py-4 px-2 shadow-[0_0px_0px_0.1rem_#FF1280]; **/
+      /** @apply rounded-2xl rounded-tr-none py-4 px-2; **/
+      /**
+      @apply py-4 px-2;
+      **/
+      /**&:hover {
+        @apply shadow-[0_0px_0px_0.2rem_#FF1280];
+      }**/
+      /**
+      &.small {
+        @apply py-2;
+      }
+      **/
+    }
+.realift input:checked ~ .dot {
+    transform: translateX(100%);
+  }
+.realift input + div{
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+.realift input:checked + div{
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+.realift ._grid{
+    display: grid;
+}
+.realift .dropdown{
+    z-index: 10;
+    margin-left: -24px;
+    margin-right: -24px;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    zoom: 0.9;
+    background-color: var(--dropdown-background-color);
+}
+.realift .measurements{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.realift .measurements > div:not(.measurement){
+    flex-basis: 100%;
+}
+.realift .measurements .measurement{
+    display: flex;
+    border-radius: 12px;
+    border-top-right-radius: 0px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding: 16px;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.realift .measurements .measurement .icon{
+    display: grid;
+    height: 48px;
+    width: 48px;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+}
+.realift .measurements .measurement .icon img, .realift .measurements .measurement .icon svg{
+    height: 32px;
+    width: 32px;
+}
+.realift .measurements .measurement .content{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 8px;
+}
+.realift .measurements .measurement .content .label{
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+}
+.realift .measurements .measurement .content .value{
+    display: grid;
+    flex: none;
+    align-items: center;
+/*     padding-left: 24px; */
+}
+.realift .measurements .measurement .content .value span{
+/*     font-size: 24px;
+    line-height: 16px; */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+            color: var(--feature-measurement-color);
+            /** @apply shadow-[0_0px_0px_0.15rem_#FF1280]; **/
+            --tw-shadow: 0 0px 0px 0.15rem var(--feature-measurement-color);
+            --tw-shadow-colored: 0 0px 0px 0.15rem var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+              var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+[x-cloak] {
+  display: none !important;
+}
+.realift .hover\:text-sky-600:hover{
+    --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+.realift .focus\:outline-none:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .realift .buttons {
+    justify-items: center;
+  }
+}

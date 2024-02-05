@@ -1,0 +1,93 @@
+{% render 'hs-defer-css' with filename: 'styling.css', pages: 'collection,index,product' | split: ',', local: true %}
+<div class="page-width">
+  <div class="section-header center">
+    <h1>{{ page.title }}</h1>
+  </div>
+  <div class="looks">
+    {% for block in section.blocks %}
+    {%- liquid 
+      assign collection = collections[block.settings.collection]
+      if block.settings.title != blank
+        assign title = block.settings.title | escape
+      else
+        assign title = collection.title | escape
+      endif
+      assign total_price = 0
+    -%}
+    <div class="center look-item relative">
+      <h2 class="h2">{{ title }}</h2>
+      <div class="grid flex small--flex-wrap">
+        {% for product in collection.products %}
+        {% assign total_price = total_price | plus: product.price %}
+        <div class="look-product grid__item one-third small--one-whole" data-selected-variant="{{ product.selected_or_first_available_variant.id | json }}" data-json='{{ product | json | escape }}' data-images='{{ product.images | json | escape }}'>
+          <a href="{{ collection.url }}" title="Link to {{ collection.title }}">
+          <div class="look-product__image">
+            {% render 'image-element', image: product.featured_image %}
+          </div>
+        </a>
+          {% comment %} <a href="{{ collection.url }}" title="Link to {{ collection.title }}" class="link--fill-parent">
+            <span class="visually-hidden">Link to {{ collection.title }}</span>
+          </a> {% endcomment %}
+        </div>
+        {% endfor %}
+      </div>
+      <!-- <p>Save 20% on these items when you shop this look!</p> -->
+      <button class="button">Shop this Look</button>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.colorValues = [];
+</script>
+
+{% schema %}
+{
+  "name": "Bleusalt Styling",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "look",
+      "name": "Look",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "if blank, the collection name will be used"
+        },
+        {
+          "type": "range",
+          "id": "percentage",
+          "min": 5,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Percentage Off",
+          "default": 20
+        },
+        {
+          "id": "video_url",
+          "type": "video_url",
+          "label": "Video URL",
+          "accept": [
+            "youtube",
+            "vimeo"
+          ],
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "info": "Youtube URL",
+          "placeholder": "Video URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

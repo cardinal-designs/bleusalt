@@ -1,0 +1,17 @@
+{% layout none %}
+{% paginate collection.products by 24 %}
+<div class="overflow-scroll-x wear-with-results product-grid">
+{%- for item in collection.products -%}
+    {% comment %}{% unless item.available %}{% continue %}{% endunless %}{% endcomment %}
+    {%- liquid 
+    assign lazy_load = false
+    if forloop.index > 2 
+        assign lazy_load = true
+    endif 
+    -%}
+    <div class="wear-with__item grid__item" data-id="{{ item.id }}" data-title="{{ item.title }}">
+      {%- render 'card-product', card_product: item, media_aspect_ratio: 'adapt', show_secondary_image: false, lazy_load: lazy_load, show_quick_add: true -%}
+    </div>
+{%- endfor -%}
+</div>
+{% endpaginate %}

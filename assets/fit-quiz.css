@@ -1,0 +1,31 @@
+fit-quiz {
+    display: block;
+    padding-bottom: 2rem;
+}
+
+fit-quiz .field {
+    display: block;
+}
+
+.fit-quiz__item {
+    margin-top: 3rem;
+}
+
+#PopupModal-fit-quiz .product-popup-modal__content-info {
+    padding-right: 0;
+}
+#PopupModal-fit-quiz .product-popup-modal__content {
+    max-width: 40rem;
+    text-align: center;
+}
+
+.fit-quiz__results {
+    margin-top: 3rem;
+    display: none;
+    margin-bottom: 0;
+}
+
+.fit-quiz__select--error {
+    border: 1px solid #a22020;
+    box-shadow: 0 0 5px 0 rgba(162,32,32,0.5);
+}
