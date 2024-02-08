@@ -1436,3 +1436,13 @@ table[data-in-to-cm] td {
 .badge.badge--best-seller {
   border: 1px solid rgb(var(--color-foreground));
 }
+
+.product-collection-link {
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  display: block !important;
+}
+
+.product-collection-link {
+  margin: 0;
+}
