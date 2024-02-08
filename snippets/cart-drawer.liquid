@@ -310,20 +310,20 @@
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money_with_currency }}
+                                  {{ item.original_line_price | money_without_trailing_zeros}}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
-                               <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                                  {{ item.final_line_price | money_with_currency }}
+                               <span class="">
+                                  {{ item.final_line_price | money_without_trailing_zeros }}
                                 </span>
 
 
                               </div>
                             {%- else -%}
-                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                                {{ item.original_line_price | money_with_currency }}
+                              <span class="">
+                                {{ item.original_line_price | money_without_trailing_zeros }}
                               </span>
 
 
