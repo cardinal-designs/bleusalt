@@ -192,7 +192,7 @@
 
             <p class="product__text product__text--{{ text_identifier }}{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {%- liquid
-                if text_identifier == 'shippingcalculated'
+                if text_identifier == 'shippingcalculated' 
                   assign text = block.settings.text | replace: 'Shipping','<a class="link" href="/pages/shipping">Shipping</a>'
                 else
                   assign text = block.settings.text | escape
