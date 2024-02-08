@@ -501,7 +501,7 @@
               </ul>
             {%- endif -%}
           </div>
-
+          {% comment %}
           <small class="tax-note caption-large rte">
             {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
               {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -513,6 +513,7 @@
               {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
             {%- endif -%}
           </small>
+          {% endcomment %}
         </div>
 
         <!-- CTAs -->
