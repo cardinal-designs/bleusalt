@@ -210,6 +210,7 @@ class VariantSelects extends HTMLElement {
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
+    this.updateQuantityAvailability();
     this.removeErrorMessage();
 
     if (!this.currentVariant) {
@@ -494,6 +495,10 @@ class VariantSelects extends HTMLElement {
       pickUpAvailability.removeAttribute('available');
       pickUpAvailability.innerHTML = '';
     }
+  }
+
+  updateQuantityAvailability() {
+    console.log('ffff',this.currentVariant.quantity)
   }
 
   removeErrorMessage() {
