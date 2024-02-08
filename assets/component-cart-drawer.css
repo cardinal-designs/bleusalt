@@ -141,6 +141,7 @@ cart-drawer-items.is-empty + .drawer__footer {
 
 .drawer__footer > details + .cart-drawer__footer {
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 cart-drawer {
