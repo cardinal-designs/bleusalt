@@ -205,7 +205,9 @@
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1 class="h2">{{ product.title | escape }}</h1>
-             <p>{{ product.collections[0] }}</p>
+            <a href="{{ product.collections[0].handle }}">
+             <p>{{ product.collections[0].title }}</p>
+            </a>
             {% comment %}
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
