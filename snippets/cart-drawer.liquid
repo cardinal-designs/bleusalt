@@ -322,8 +322,8 @@
 
                               </div>
                             {%- else -%}
-                            fff <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                                {{ item.original_line_price | money_with_currency | money_without_trailing_zeros }}
+                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
+                                {{ item.original_line_price | money_without_trailing_zeros }}
                               </span>
 
 
