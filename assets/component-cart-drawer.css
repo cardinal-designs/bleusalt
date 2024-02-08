@@ -666,5 +666,7 @@ cart-note:after {
 }
 
 .cart-text {
-  
+  margin-bottom: 0;
+  padding: 0 1.5rem;
+  line-height: 1;
 }
