@@ -193,7 +193,7 @@
             <p class="product__text product__text--{{ text_identifier }}{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {%- liquid
                 if product.metafields.custom.sub_atc_text != blank
-                  assign text = product.metafields.custom.sub_atc_text
+                  assign text = product.metafields.custom.sub_atc_text.value
                 elsif text_identifier == 'shippingcalculated' 
                   assign text = block.settings.text | replace: 'Shipping','<a class="link" href="/pages/shipping">Shipping</a>'
                 else
@@ -205,7 +205,7 @@
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1 class="h2">{{ product.title | escape }}</h1>
-            {{ product.metafields.custom.breadcrumb_collection }}
+            {{ product.metafields.custom.breadcrumb_collection.value }}
             <a href="{{ product.collections[0] }}">
              <p>{{ product.collections[0].title }}</p>
             </a>
