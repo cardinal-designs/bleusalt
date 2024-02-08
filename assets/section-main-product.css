@@ -1432,3 +1432,7 @@ table[data-in-to-cm] td {
 #pdp-stylist-link:hover {
   background-color: #f8f8f8;
 }
+
+.badge.badge--best-seller {
+  border: 1px solid rgb(var(--color-foreground));
+}
