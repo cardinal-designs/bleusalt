@@ -205,11 +205,14 @@
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1 class="h2">{{ product.title | escape }}</h1>
+             <p>{{ product.collections[0] }}</p>
+            {% comment %}
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
                   {{ product.title | escape }}
                 </h2>
               </a>
+            {% endcomment %}
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
