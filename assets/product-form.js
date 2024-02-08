@@ -498,7 +498,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateQuantityAvailability() {
-    console.log('ffff',this.currentVariant.quantity)
+    console.log('ffff',this.currentVariant)
   }
 
   removeErrorMessage() {
