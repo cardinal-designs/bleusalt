@@ -171,14 +171,14 @@
          {% endif %}
        {% endfor %}
         <div class="pdp__badge">
-          {%- if card_product.available == false -%}
-            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
-          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+          {%- if product.available == false -%}
+            <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+          {%- elsif product.compare_at_price > product.price and product.available -%}
+            <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}
           {%- if badges != '' -%}
             {%- for badge in badges -%}
-              <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
+              <span id="Badge-{{ section_id }}-{{ product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
             {%- endfor -%}
           {%- endif -%}
         </div>
