@@ -303,27 +303,27 @@
                             </div>
                           </div>
                           <div class="cart-item__price-wrapper">
-
+{{  }}item.original_line_price}}
                             {%- if item.original_line_price != item.final_line_price -%}
                               <div class="cart-item__discounted-prices">
                                 <span class="visually-hidden">
-                                  a{{ 'products.product.price.regular_price' | t }}
+                                  {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  v{{ item.original_line_price | money_with_currency }}
+                                  {{ item.original_line_price | money_with_currency }}
                                 </s>
                                 <span class="visually-hidden">
-                                  d{{ 'products.product.price.sale_price' | t }}
+                                  {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                                 e {{ item.final_line_price | money_with_currency }}
+                                  {{ item.final_line_price | money_with_currency }}
                                 </span>
 
 
                               </div>
-                            {%- else -%}ff
+                            {%- else -%}
                              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                               h {{ item.original_line_price | money_with_currency }}
+                                {{ item.original_line_price | money_with_currency }}
                               </span>
 
 
