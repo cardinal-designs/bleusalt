@@ -256,6 +256,7 @@
                             </dl>
 
                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                            <p class="product-option">Qty: {{ item.quantity }}</p>
                           {%- endif -%}
 
                           {%- if item.original_price != item.final_price -%}
