@@ -206,7 +206,7 @@
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1 class="h2">{{ product.title | escape }}</h1>
             {% if product.metafields.custom.breadcrumb_collection != blank %}
-              <a class="product-collection-link" href="{{ product.metafields.custom.breadcrumb_collection.value.handle }}">
+              <a class="product-collection-link" href="/collections/{{ product.metafields.custom.breadcrumb_collection.value.handle }}">
                <p>{{ product.metafields.custom.breadcrumb_collection.value.title }}</p>
               </a>
             {% endif %}
