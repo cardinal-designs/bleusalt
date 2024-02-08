@@ -275,9 +275,11 @@
 
                             </div>
                           {%- else -%}
+                            {% comment %}
                            <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span> <div class="">
                               {{ item.original_price | money_with_currency }}
                             </div>
+                            {% endcomment %}
 
 
                           {%- endif -%}
