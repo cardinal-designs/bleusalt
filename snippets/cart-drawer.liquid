@@ -526,7 +526,7 @@
           </noscript>
 
           <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button" name="checkout" onClick="addTotal('{{ cart.total_price | money }}')" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
-            {{ 'sections.cart.checkout' | t }}
+            Continue
           </button>
         </div>
         <p class="cart__safe-secure center">Safe &amp; Secure Checkout</p>
