@@ -170,7 +170,7 @@
            {% endif %}
          {% endif %}
        {% endfor %}
-        <div class="card__badge {{ settings.badge_position }}">
+        <div class="pdp__badge">
           {%- if card_product.available == false -%}
             <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
