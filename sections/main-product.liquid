@@ -159,7 +159,29 @@
     </div>
     {%- assign product_form_id = 'product-form-' | append: section.id -%}
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
-      <div id="ProductInfo-{{ section.id }}" class="product__info-container small-page-width small-text-center{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
+      <div id="ProductInfo-{{ section.id }}" class="product__info-container small-page-width small-text-center{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">    
+       {% assign badges = '' %}
+       {% for tag in card_product.tags %}
+         {% if tag contains 'badge:' %}
+           {% if badges == '' %}
+             {% assign badges = tag | split: ':' | last %}
+           {% else %}
+             {% assign badges = badges | append: ',' | append: tag | split: ':' | last %}
+           {% endif %}
+         {% endif %}
+       {% endfor %}
+        <div class="card__badge {{ settings.badge_position }}">
+          {%- if card_product.available == false -%}
+            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+          {%- endif -%}
+          {%- if badges != '' -%}
+            {%- for badge in badges -%}
+              <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when '@app' -%}
