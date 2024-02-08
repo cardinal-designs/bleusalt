@@ -498,7 +498,11 @@ class VariantSelects extends HTMLElement {
   }
 
   updateQuantityAvailability() {
-    console.log('ffff',this.currentVariant)
+    if(this.currentVariant.inventory_quantity <= 10) {
+      document.getElementById('show-low-messaging').style.display = 'block';
+    } else {
+      document.getElementById('show-low-messaging').style.display = 'none';
+    }
   }
 
   removeErrorMessage() {
