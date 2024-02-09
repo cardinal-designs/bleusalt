@@ -666,7 +666,7 @@ cart-note:after {
   cursor: pointer;
 }
 
-.cart-text, .cart-freeshipping {
+.cart-text, .cart-freeshipping, .free-shipping__bar-container {
   margin-bottom: 0;
   padding: 0 1.5rem;
   line-height: 1;
