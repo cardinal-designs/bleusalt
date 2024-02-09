@@ -1200,6 +1200,11 @@
         "type": "text",
         "id": "cart_drawer_text",
         "label": "Cart Drawer Text"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Threshold"
       }
     ]
   },
