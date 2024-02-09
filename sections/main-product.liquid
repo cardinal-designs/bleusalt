@@ -513,7 +513,8 @@
                   <div class="klaviyo-bis__response alert" style="display: none;"></div>
                 </div>
                 {% endif %}
-              </product-form>   
+              </product-form>  
+            {{ product.selected_or_first_available_variant.inventory_quantity }}
               <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: block;{% else %}display: none;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
 
