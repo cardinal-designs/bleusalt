@@ -153,7 +153,7 @@
                     {% if shipping_percentage > 100 %}
                       {% assign shipping_percentage = 100 %}
                     {% endif %}
-                    <div> 
+                    <div class="cart-drawer-header-info"> 
                       {% if price_needed > 0 %}
                         <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
                       {% else %}
