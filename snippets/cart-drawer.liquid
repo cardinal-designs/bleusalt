@@ -150,7 +150,9 @@
                     {% assign current_total = cart.total_price | divided_by: 100 %}
                     {% assign price_needed = thresh | minus: current_total %}
 
-                   
+                   {{ thresh }}
+                   {{ current_total }}
+                   {{ price_needed }}
                     
                     {% assign shipping_percentage = current_total | divided_by: thresh | times: 100 | round %}
                     <div> 
