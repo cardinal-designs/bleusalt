@@ -148,7 +148,6 @@
                   <tbody>
                     {% assign thresh = settings.free_shipping_threshold | times: 100 %}
                     {% assign price_needed = thresh | minus: cart.total_price %}
-                    {{ price_needed }}
                     {% if price_needed > 0 %}
                       <p>{{ price_needed | money_without_trailing_zeros }} needed for free shipping.</p>
                     {% else %}
