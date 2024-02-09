@@ -666,19 +666,18 @@ cart-note:after {
   cursor: pointer;
 }
 
+.cart-drawer-header-info {
+  padding: 0 1.5rem;
+}
+
 .cart-text, .cart-freeshipping {
   margin-bottom: 0;
-  padding: 0 1.5rem;
   line-height: 1;
 }
 
 .cart-freeshipping {
   text-align: center;
   margin-bottom: 15px;
-}
-
-.free-shipping__bar-container {
-  margin: 0 1.5rem;
 }
 
 .free-shipping__container {
