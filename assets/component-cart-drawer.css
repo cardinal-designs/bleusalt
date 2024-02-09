@@ -682,6 +682,7 @@ cart-note:after {
   border-radius: 6px;
   background: white;
   position: relative;
+  border: 1px solid black;
 }
 
 .free-shipping__bar {
@@ -692,5 +693,5 @@ cart-note:after {
   right: 0;
   width: 0%;
   border-radius: 6px;
-  background-color: var(--orange);
+  background-color: black;
 }
