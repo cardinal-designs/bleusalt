@@ -146,6 +146,7 @@
                   </thead>
 
                   <tbody>
+                    {{ cart.total_price }}
                     {% if settings.cart_drawer_text != blank %}
                     <p class="cart-text">{{ settings.cart_drawer_text }}</p>
                     {% endif %}
