@@ -146,8 +146,6 @@
                   </thead>
 
                   <tbody>
-
-                    {{ cart.total_price  }}
                     {% assign thresh = settings.free_shipping_threshold | times: 100 %}
                     {% assign price_needed = thresh | minus: cart.total_price %}
                     {{ price_needed }}
