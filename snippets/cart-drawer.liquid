@@ -157,7 +157,7 @@
                     {% assign shipping_percentage = current_total | divided_by: thresh | times: 100 | round %}
                     <div> 
                       {% if price_needed > 0 %}
-                        <p class="cart-freeshipping">{{ price_needed | money_without_trailing_zeros }} needed for free shipping.</p>
+                        <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
                       {% else %}
                         <p class="cart-freeshipping">Free shipping enabled</p>
                       {% endif %}
