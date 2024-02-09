@@ -687,6 +687,7 @@ cart-note:after {
 
 .free-shipping__bar {
   position: absolute;
+  display: block;
   left: 0;
   top: 0;
   bottom: 0;
