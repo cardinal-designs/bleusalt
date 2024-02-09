@@ -146,8 +146,11 @@
                   </thead>
 
                   <tbody>
-                    {{ settings.free_shipping_threshold }}
-                    {{ cart.total_price | money_without_trailing_zeros }}
+
+                    {{ cart.total_price  }}
+                    {% assign thresh = settings.free_shipping_threshold | times: 100 %}
+                    {% assign price_needed = thresh | minus: cart.total_price %}
+                    {{ price_needed }}
                     {% if settings.cart_drawer_text != blank %}
                     <p class="cart-text">{{ settings.cart_drawer_text }}</p>
                     {% endif %}
