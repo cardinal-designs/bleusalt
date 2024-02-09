@@ -672,6 +672,11 @@ cart-note:after {
   line-height: 1;
 }
 
+.cart-freeshipping {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .free-shipping__bar-container {
   margin: 0 1.5rem;
 }
