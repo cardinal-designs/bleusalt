@@ -666,10 +666,14 @@ cart-note:after {
   cursor: pointer;
 }
 
-.cart-text, .cart-freeshipping, .free-shipping__bar-container {
+.cart-text, .cart-freeshipping {
   margin-bottom: 0;
   padding: 0 1.5rem;
   line-height: 1;
+}
+
+.free-shipping__bar-container {
+  margin: 0 1.5rem;
 }
 
 .free-shipping__container {
