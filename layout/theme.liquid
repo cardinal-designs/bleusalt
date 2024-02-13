@@ -381,7 +381,7 @@
               .then((response) => {
               return response.text();
               }).then((responseText) => {
-                const cartid = 'cart-drawer';
+                const cartid = 'CartDrawer';
                 const html = new DOMParser().parseFromString(responseText, 'text/html')  
                 const destination = document.querySelector('.cart-drawer');
                 const source = html.getElementById(cartid);			  
@@ -401,18 +401,19 @@
             // });	
           }
           
-          document.addEventListener('rebuy.add', function(event){
-            console.log('rebuy.add event', event.detail); 
-            let drawer = document.querySelector('cart-drawer');
-            Rebuy.init();
-            // drawer.refreshCart();
-            setTimeout(function (params) {
-              Rebuy.init();
-            },1000)
-          });
+          // document.addEventListener('rebuy.add', function(event){
+          //   console.log('rebuy.add event', event.detail); 
+          //   let drawer = document.querySelector('cart-drawer');
+          //   Rebuy.init();
+          //   // drawer.refreshCart();
+          //   setTimeout(function (params) {
+          //     Rebuy.init();
+          //   },1000)
+          // });
           
           document.addEventListener('rebuy:cart.add', (event) => { 
             console.log('rebuy:cart.add event', event.detail);
+            cartHtml();
             // const Cart = window.Rebuy.Cart;
 
             // Cart.fetchCart().then(function(cart) {
