@@ -378,6 +378,14 @@
           document.addEventListener('rebuy:cart.add', (event) => { 
             console.log('rebuy:cart.add event', event.detail);
             const Cart = window.Rebuy.Cart;
+
+            Rebuy.Cart.fetchCart().then(function(cart) {
+                console.log('Cart fetched successfully:', cart);
+            }).catch(function(error) {
+                console.error('Error fetching cart:', error);
+            });
+
+            
             // Cart.fetchReChargeCart(cart => console.log("cart", cart));
 
 
