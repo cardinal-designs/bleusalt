@@ -376,6 +376,31 @@
       <script>
         document.addEventListener("DOMContentLoaded", function() {
 
+          function cartHtml(){
+            fetch(window.location.pathname + '?sections=cart-drawer')
+              .then((response) => {
+              return response.text();
+              }).then((responseText) => {
+                const cartid = 'cart-drawer';
+                const html = new DOMParser().parseFromString(responseText, 'text/html')  
+                const destination = document.querySelector('.cart-drawer');
+                const source = html.getElementById(cartid);			  
+                if (source && destination) destination.innerHTML = source.innerHTML;	
+              }).catch(() => {
+              
+              });
+            
+            // fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
+            // .then((response) => response.text())
+            // .then((responseText) => {
+            //   const cartid = 'cart-drawer';
+            //   const html = new DOMParser().parseFromString(responseText, 'text/html')  
+            //   const destination = document.querySelector('.cart-drawer');
+            //   const source = html.getElementById(cartid);			  
+            //   if (source && destination) destination.innerHTML = source.innerHTML;	
+            // });	
+          }
+          
           document.addEventListener('rebuy.add', function(event){
             console.log('rebuy.add event', event.detail); 
             let drawer = document.querySelector('cart-drawer');
