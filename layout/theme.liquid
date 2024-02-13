@@ -373,5 +373,13 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
+      <script>
+        document.addEventListener("rebuy:cart.add", function() {
+          setTimeout(function () {
+            console.log('running on add to cart');
+            Rebuy.Cart.fetchCart();
+          }, 1000)
+        });
+      </script>
   </body>
   </html>
