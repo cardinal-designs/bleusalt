@@ -418,7 +418,15 @@
           
           document.addEventListener('rebuy:cart.add', (event) => { 
             console.log('rebuy:cart.add event', event.detail);
-            cartHtml();
+
+            let drawer = document.querySelector('cart-drawer');
+            drawer.refreshCart();
+            setTimeout(function (params) {
+              Rebuy.init();
+            },1000)
+            
+            // cartHtml();
+
             // const Cart = window.Rebuy.Cart;
 
             // Cart.fetchCart().then(function(cart) {
