@@ -377,6 +377,7 @@
         document.addEventListener("rebuy:cart.add", function() {
           setTimeout(function () {
             console.log('running on add to cart');
+            document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
             Rebuy.Cart.fetchCart();
           }, 1000)
         });
