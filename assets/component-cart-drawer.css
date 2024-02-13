@@ -706,3 +706,7 @@ cart-note:after {
   border-radius: 6px;
   background-color: rgb(var(--color-foreground));;
 }
+
+#rebuy-widget-134158 .rebuy-product-title {
+  color: #0D1C29;
+}
