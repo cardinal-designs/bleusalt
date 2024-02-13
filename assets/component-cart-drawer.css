@@ -717,6 +717,7 @@ cart-note:after {
 
 .drawer__footer .rebuy-widget * {
   color: #0d1c29 !important;
+  font-size: 15px;
 }
 
 .drawer__footer .rebuy-widget .rebuy-carousel__pagination .rebuy-carousel__page {
