@@ -717,3 +717,8 @@ cart-note:after {
   height: 6px;
   border-radius: 10px;
 }
+
+.rebuy-widget .powered-by-rebuy,
+.rebuy-recommended-products .powered-by-rebuy {
+  display: none;
+}
