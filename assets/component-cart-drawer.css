@@ -752,3 +752,7 @@ cart-note:after {
   display: flex;
   align-items: flex-start;
 }
+
+.rebuy-widget .rebuy-carousel__arrows .rebuy-carousel__arrow {
+  display: none;
+}
