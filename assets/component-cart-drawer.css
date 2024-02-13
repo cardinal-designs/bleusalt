@@ -728,7 +728,7 @@ cart-note:after {
   font-size: 24px;
 }
 
-.rebuy-widget .primary-button {
+.rebuy-widget .rebuy-button {
   border: 0;
   cursor: pointer;
   font-size: 14px;
