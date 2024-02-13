@@ -388,7 +388,7 @@
                 console.log("html", html)
                 const destination = document.querySelector('.cart-drawer');
                 console.log("destination", destination)
-                const source = html.querySelector('.cart-drawer');
+                const source = html.getElementById(cartid);
                 console.log("source", source)
                 if (source && destination) destination.innerHTML = source.innerHTML;	
               }).catch(() => {
