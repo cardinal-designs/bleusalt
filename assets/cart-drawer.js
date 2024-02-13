@@ -209,7 +209,6 @@ class CartDrawer extends HTMLElement {
   }
 
   refreshCart() {
-    this.enableLoading();
     fetch(window.location.pathname + '?sections=cart-drawer,cart-icon-bubble')
     .then((response) => {
       console.log("response", response)
@@ -219,11 +218,7 @@ class CartDrawer extends HTMLElement {
       document.getElementById('cart-drawer__content').innerHTML =  this.getSectionInnerHTML(parsedState['cart-drawer'], '#cart-drawer__content');
       document.getElementById('cart-icon-bubble').innerHTML =  this.getSectionInnerHTML(parsedState['cart-icon-bubble'], '.shopify-section');
 
-      this.disableLoading();
-      window.initilizeDrawerUpcellSlider();
-      window.initilizeDeluxeSlider();
     }).catch(() => {
-      this.disableLoading();
     });
   }
 
