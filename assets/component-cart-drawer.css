@@ -758,6 +758,7 @@ cart-note:after {
 }
 
 .drawer__footer .rebuy-widget .rebuy-button:hover {
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text),var(--border-opacity)),0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button),var(--alpha-button-background));
 }
 
 .drawer__footer .rebuy-widget .rebuy-button span {
