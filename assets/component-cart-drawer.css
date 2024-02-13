@@ -784,6 +784,10 @@ cart-note:after {
   margin: 15px 0 5px;
 }
 
+.drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-options select.select {
+  font: inherit;
+}
+
 .drawer__footer .rebuy-widget .rebuy-carousel__arrows .rebuy-carousel__arrow {
   display: none;
 }
