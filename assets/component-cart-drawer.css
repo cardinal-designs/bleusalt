@@ -762,6 +762,10 @@ cart-note:after {
   border: 2px solid rgba(var(--color-button),var(--alpha-button-background))
 }
 
+.drawer__footer .rebuy-widget .rebuy-button span {
+  color: rgb(var(--color-button-text)) !important;
+}
+
 .drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block {
   display: flex;
   align-items: flex-start;
