@@ -6,14 +6,6 @@ class CartDrawer extends HTMLElement {
     this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
     this.wearWithElements = document.querySelectorAll('wear-with');
-    window.addEventListener('handleRefresh', this.handleRefresh.bind(this));
-  }
-
-  handleRefresh (e){
-    this.refreshCart()
-    window.setTimeout(function() {
-		if(typeof Extend != 'undefined') window.dispatchEvent(Extend.CustomEvent('refreshAjaxCart'));
-    }, 500)
   }
 
   setHeaderCartIconAccessibility() {
@@ -214,19 +206,6 @@ class CartDrawer extends HTMLElement {
     })
     .catch(error => console.log(error));
     
-  }
-
-  refreshCart() {
-    fetch(window.location.pathname + '?sections=cart-drawer,cart-icon-bubble')
-    .then((response) => {
-      return response.text();
-    }).then((state) => {
-      const parsedState = JSON.parse(state);
-      document.getElementById('cart-drawer__content').innerHTML =  this.getSectionInnerHTML(parsedState['cart-drawer'], '#cart-drawer__content');
-      document.getElementById('cart-icon-bubble').innerHTML =  this.getSectionInnerHTML(parsedState['cart-icon-bubble'], '.shopify-section');
-
-    }).catch(() => {
-    });
   }
 
   getSectionInnerHTML(html, selector = '.shopify-section') {
