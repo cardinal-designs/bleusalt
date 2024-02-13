@@ -710,3 +710,9 @@ cart-note:after {
 #rebuy-widget-134158 .rebuy-product-title {
   color: #0D1C29;
 }
+
+.rebuy-widget .rebuy-carousel__pagination .rebuy-carousel__page {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+}
