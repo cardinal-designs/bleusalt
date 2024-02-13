@@ -789,6 +789,11 @@ cart-note:after {
   display: none;
 }
 
+.drawer__footer .rebuy-widget .rebuy-product-grid.large-carousel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .drawer__footer *:focus-visible {
   outline: none !important;
   box-shadow: unset;
