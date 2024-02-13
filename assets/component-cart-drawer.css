@@ -715,6 +715,10 @@ cart-note:after {
   margin-top: 0;
 }
 
+.drawer__footer .rebuy-widget * {
+  color: #0d1c29 !important;
+}
+
 .drawer__footer .rebuy-widget .rebuy-carousel__pagination .rebuy-carousel__page {
   width: 6px;
   height: 6px;
@@ -753,6 +757,6 @@ cart-note:after {
   align-items: flex-start;
 }
 
-.rebuy-widget .rebuy-carousel__arrows .rebuy-carousel__arrow {
+.drawer__footer .rebuy-widget .rebuy-carousel__arrows .rebuy-carousel__arrow {
   display: none;
 }
