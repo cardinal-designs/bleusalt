@@ -379,7 +379,8 @@
           document.addEventListener('rebuy.add', function(event){
             console.log('rebuy.add event', event.detail); 
             let drawer = document.querySelector('cart-drawer');
-            drawer.refreshCart();
+            Rebuy.init();
+            // drawer.refreshCart();
             setTimeout(function (params) {
               Rebuy.init();
             },1000)
