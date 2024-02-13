@@ -375,75 +375,9 @@
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
-
-          function cartHtml(){
-            fetch(window.location.pathname + '?sections=cart-drawer')
-              .then((response) => {
-                return response.text();
-              }).then((responseText) => {
-                const cartid = 'CartDrawer';
-                // const html = new DOMParser().parseFromString(responseText, 'text/html');
-                const html = JSON.parse(responseText);
-                
-                console.log("html", html)
-                const destination = document.querySelector('.cart-drawer');
-                console.log("destination", destination);
-                const source = html.getElementById(cartid);
-                console.log("source", source)
-                if (source && destination) destination.innerHTML = source.innerHTML;	
-              }).catch(() => {
-              
-              });
-            
-            // fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
-            // .then((response) => response.text())
-            // .then((responseText) => {
-            //   const cartid = 'cart-drawer';
-            //   const html = new DOMParser().parseFromString(responseText, 'text/html')  
-            //   const destination = document.querySelector('.cart-drawer');
-            //   const source = html.getElementById(cartid);			  
-            //   if (source && destination) destination.innerHTML = source.innerHTML;	
-            // });	
-          }
-          
-          // document.addEventListener('rebuy.add', function(event){
-          //   console.log('rebuy.add event', event.detail); 
-          //   let drawer = document.querySelector('cart-drawer');
-          //   Rebuy.init();
-          //   // drawer.refreshCart();
-          //   setTimeout(function (params) {
-          //     Rebuy.init();
-          //   },1000)
-          // });
-          
           document.addEventListener('rebuy:cart.add', (event) => { 
             console.log('rebuy:cart.add event', event.detail);
-
-            
-            setTimeout(function (params) {
-              console.log("cart-drawer")
-              Rebuy.init();
-            },1000)
-            
-            // cartHtml();
-
-            // const Cart = window.Rebuy.Cart;
-
-            // Cart.fetchCart().then(function(cart) {
-            //     console.log('Cart fetched successfully:', cart);
-            // }).catch(function(error) {
-            //     console.error('Error fetching cart:', error);
-            // });
-
-            
-            // Cart.fetchReChargeCart(cart => console.log("cart", cart));
-
-
-            // Rebuy.Cart.fetchCart();
-            // rebuy:cart
-            // const Cart = window.Rebuy.Cart;
-            // Cart.fetchCart();
-            // Cart.fetchReChargeCart(cart => console.log("cart", cart));
+            Rebuy.Cart.fetchCart()
           });
         });
       </script>
