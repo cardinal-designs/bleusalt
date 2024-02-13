@@ -740,11 +740,11 @@ cart-note:after {
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgb(var(--color-button-text)) !important;
+  color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button),var(--alpha-button-background)) !important;
+  background-color: rgba(var(--color-button),var(--alpha-button-background));
   padding: 8px 0px;
   display: flex;
   align-items: center;
