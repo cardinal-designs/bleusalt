@@ -744,3 +744,8 @@ cart-note:after {
   justify-content: center;
   line-height: 20px;
 }
+
+.rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block {
+  display: flex;
+  align-items: flex-start;
+}
