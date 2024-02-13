@@ -761,3 +761,8 @@ cart-note:after {
 .drawer__footer .rebuy-widget .rebuy-carousel__arrows .rebuy-carousel__arrow {
   display: none;
 }
+
+.drawer__footer *:focus-visible {
+  outline: none !important;
+  box-shadow: unset;
+}
