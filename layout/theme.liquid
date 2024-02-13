@@ -375,10 +375,10 @@
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
         function cartHtml(){
-          fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
+          fetch(window.Shopify.routes.root +'?section_id=CartDrawer')
           .then((response) => response.text())
           .then((responseText) => {
-            const cartid = 'cart-drawer';
+            const cartid = 'CartDrawer';
             const html = new DOMParser().parseFromString(responseText, 'text/html')  
             const destination = document.querySelector('.cart-drawer');
             const source = html.getElementById(cartid);			  
