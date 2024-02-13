@@ -219,7 +219,6 @@ class CartDrawer extends HTMLElement {
   refreshCart() {
     fetch(window.location.pathname + '?sections=cart-drawer,cart-icon-bubble')
     .then((response) => {
-      console.log("response", response)
       return response.text();
     }).then((state) => {
       const parsedState = JSON.parse(state);
