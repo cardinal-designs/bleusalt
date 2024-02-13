@@ -707,6 +707,8 @@ cart-note:after {
   background-color: rgb(var(--color-foreground));;
 }
 
+/* cart rebuy CSS */
+
 #rebuy-widget-134158 .rebuy-product-title {
   color: #0D1C29;
   font-size: 15px;
