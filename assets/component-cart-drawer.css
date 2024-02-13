@@ -751,6 +751,12 @@ cart-note:after {
   -webkit-appearance: none;
   appearance: none;
   background-color: rgba(var(--color-button),var(--alpha-button-background));
+  border-radius: 3px;
+  border: 2px solid transparent;
+}
+
+.drawer__footer .rebuy-widget .rebuy-button:hover {
+  border: 2px solid rgba(var(--color-button),var(--alpha-button-background))
 }
 
 .drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block {
