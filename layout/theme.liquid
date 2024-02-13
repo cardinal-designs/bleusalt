@@ -374,10 +374,21 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
+        function cartHtml(){
+          fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
+          .then((response) => response.text())
+          .then((responseText) => {
+            const cartid = 'cart-drawer';
+            const html = new DOMParser().parseFromString(responseText, 'text/html')  
+            const destination = document.querySelector('.cart-drawer');
+            const source = html.getElementById(cartid);			  
+            if (source && destination) destination.innerHTML = source.innerHTML;	
+          });
+        }
         document.addEventListener("rebuy:cart.add", function() {
           setTimeout(function () {
             console.log('running on add to cart');
-            Rebuy.Cart.fetchCart();
+            cartHtml();
           }, 1000)
         });
       </script>
