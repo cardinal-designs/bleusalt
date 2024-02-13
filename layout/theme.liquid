@@ -377,7 +377,9 @@
         document.addEventListener("DOMContentLoaded", function() {
           document.addEventListener('rebuy:cart.add', (event) => { 
             console.log('rebuy:cart.add event', event.detail);
-            window.Rebuy.Cart.fetchCart();
+            // window.Rebuy.Cart.fetchCart();
+            window.rebuy.Cart.fetchCart();
+            // rebuy:cart
             // const Cart = window.Rebuy.Cart;
             // Cart.fetchCart();
             // Cart.fetchReChargeCart(cart => console.log("cart", cart));
