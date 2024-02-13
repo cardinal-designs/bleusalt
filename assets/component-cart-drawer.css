@@ -754,6 +754,8 @@ cart-note:after {
   border-radius: 3px !important;
   border: 2px solid transparent;
   line-height: calc(1 + .2 / var(--font-body-scale));
+  min-width: calc(12rem + var(--buttons-border-width) * 2);
+  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
 }
 
 .drawer__footer .rebuy-widget .rebuy-button:hover {
