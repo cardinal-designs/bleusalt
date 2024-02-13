@@ -753,6 +753,7 @@ cart-note:after {
   background-color: rgba(var(--color-button),var(--alpha-button-background)) !important;
   border-radius: 3px !important;
   border: 2px solid transparent;
+  line-height: calc(1 + .2 / var(--font-body-scale));
 }
 
 .drawer__footer .rebuy-widget .rebuy-button:hover {
