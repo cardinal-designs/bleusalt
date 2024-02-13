@@ -379,10 +379,12 @@
           function cartHtml(){
             fetch(window.location.pathname + '?sections=cart-drawer')
               .then((response) => {
-              return response.text();
+                return response.text();
               }).then((responseText) => {
                 const cartid = 'CartDrawer';
-                const html = new DOMParser().parseFromString(responseText, 'text/html');
+                // const html = new DOMParser().parseFromString(responseText, 'text/html');
+                const html = JSON.parse(responseText);
+                
                 console.log("html", html)
                 const destination = document.querySelector('.cart-drawer');
                 console.log("destination", destination)
