@@ -726,3 +726,21 @@ cart-note:after {
 .rebuy-widget .primary-title {
   font-size: 24px;
 }
+
+.rebuy-widget .primary-button {
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(var(--color-button-text));
+  transition: box-shadow var(--duration-short) ease;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgba(var(--color-button),var(--alpha-button-background));
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+}
