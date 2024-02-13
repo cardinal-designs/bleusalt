@@ -382,7 +382,8 @@
               return response.text();
               }).then((responseText) => {
                 const cartid = 'CartDrawer';
-                const html = new DOMParser().parseFromString(responseText, 'text/html')  
+                const html = new DOMParser().parseFromString(responseText, 'text/html');
+                console.log("html", html)
                 const destination = document.querySelector('.cart-drawer');
                 const source = html.getElementById(cartid);			  
                 if (source && destination) destination.innerHTML = source.innerHTML;	
