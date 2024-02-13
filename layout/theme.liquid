@@ -375,11 +375,9 @@
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
-          
-          document.addEventListener("rebuy:cart.add", function() {
-            setTimeout(function () {
-              console.log('running on add to cart');
-            }, 1000)
+          document.addEventListener('rebuy:cart.add', (event) => { 
+            console.log('rebuy:cart.add event', event.detail); 
+            Cart.fetchReChargeCart(cart => console.log("cart", cart));
           });
         });
       </script>
