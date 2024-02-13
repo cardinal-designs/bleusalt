@@ -710,7 +710,7 @@ cart-note:after {
 /* cart rebuy CSS */
 
 .drawer__footer .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title {
-  color: #0D1C29;
+  color: #0d1c29 !important;
   font-size: 15px;
   margin-top: 0;
 }
