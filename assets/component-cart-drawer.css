@@ -759,6 +759,14 @@ cart-note:after {
   flex-wrap: wrap;
 }
 
+.drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-media {
+  width: 30%;
+}
+
+.drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-info {
+  width: 70%;
+}
+
 .drawer__footer .rebuy-widget .rebuy-carousel__arrows .rebuy-carousel__arrow {
   display: none;
 }
