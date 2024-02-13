@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("rebuy:cart.add", function() { Rebuy.Cart.fetchCart() });
+});
 var Shopify=Shopify||{};Shopify.money_format="${{amount}}",Shopify.formatMoney=function(a,o){"string"==typeof a&&(a=a.replace(".",""));var e="",t=/\{\{\s*(\w+)\s*\}\}/,o=o||this.money_format;function r(a,o){return void 0===a?o:a}function n(a,o,e,t){if(o=r(o,2),e=r(e,","),t=r(t,"."),isNaN(a)||null==a)return 0;a=(a=(a/100).toFixed(o)).split(".");return a[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g,"$1"+e)+(a[1]?t+a[1]:"")}switch(o.match(t)[1]){case"amount":e=n(a,2);break;case"amount_no_decimals":e=n(a,0);break;case"amount_with_comma_separator":e=n(a,2,".",",");break;case"amount_no_decimals_with_comma_separator":e=n(a,0,".",",")}return o.replace(t,e)};
 
 function getFocusableElements(container) {
