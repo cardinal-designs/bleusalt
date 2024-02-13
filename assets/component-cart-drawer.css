@@ -722,3 +722,7 @@ cart-note:after {
 .rebuy-recommended-products .powered-by-rebuy {
   display: none;
 }
+
+.rebuy-widget .primary-title {
+  font-size: 24px;
+}
