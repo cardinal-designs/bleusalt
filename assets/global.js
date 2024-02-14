@@ -1288,8 +1288,3 @@ document.addEventListener('call_widget_closed', (e) => {
   updateCart();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.addEventListener('rebuy:cart.add', (event) => {
-    updateCart();
-  });
-});
