@@ -378,6 +378,25 @@
           document.addEventListener('rebuy:cart.add', (event) => {
             updateCart();
           });
+
+          const targetNode = document.querySelector('div[data-rebuy-id="134158"]');
+          console.log("targetNode", targetNode)
+          const config = { childList: true };
+          
+          const callback = function(mutationsList, observer) {
+              for(let mutation of mutationsList) {
+                  if (mutation.type === 'childList') {
+                      if (targetNode.children.length > 0) {
+                          console.log('The target node has children.');
+                      } else {
+                          console.log('The target node has no children.');
+                      }
+                  }
+              }
+          };
+          
+          const observer = new MutationObserver(callback);
+          observer.observe(targetNode, config);
         });
       </script>
   </body>
