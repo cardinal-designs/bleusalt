@@ -733,6 +733,7 @@ cart-note:after {
 
 .drawer__footer .rebuy-widget .primary-title {
   font-size: 24px;
+  margin-bottom: 0;
 }
 
 .drawer__footer .rebuy-widget .rebuy-button {
