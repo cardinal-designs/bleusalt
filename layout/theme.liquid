@@ -432,7 +432,7 @@
           $(document).on('click', '.rebuy-button', function(){
             $(this).closest('.rebuy-product-wrapper').contents().unwrap();
             setTimeout(function(){
-              let text =  $(this).closest('.rebuy-product-block').find('.rebuy-product-info').text();
+              let text =  $(this).closest('.rebuy-product-block').text();
               console.log('text', text)
               $(this).closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
               console.log("hey it working")
