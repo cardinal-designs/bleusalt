@@ -425,7 +425,7 @@
           });
 
           $(document).on('click', '.rebuy-button', function(){
-            $('.rebuy-product-wrapper').contents().unwrap();
+            $(this).closest('.rebuy-product-wrapper').contents().unwrap();
             setTimeout(function(){
               addWrapperRebuy();
             }, 1000)
