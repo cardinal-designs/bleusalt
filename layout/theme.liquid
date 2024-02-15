@@ -427,6 +427,7 @@
           $(document).on('click', '.rebuy-button', function(){
             $(this).closest('.rebuy-product-wrapper').contents().unwrap();
             setTimeout(function(){
+              console.log("assa")
               addWrapperRebuy();
             }, 1000)
           })
