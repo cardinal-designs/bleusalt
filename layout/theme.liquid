@@ -374,56 +374,15 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
-        function checkSplideList() {
-          const targetNode = document.body;
-          
-          // Options for the observer (which mutations to observe)
-          const config = { childList: true, subtree: true };
-          
-          // Callback function to execute when mutations are observed
-          const callback = function(mutationsList, observer) {
-              for(const mutation of mutationsList) {
-                  // Check if the mutation added nodes with the class "splide__list"
-                  if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-                      for (const addedNode of mutation.addedNodes) {
-                          if (addedNode.nodeType === 1 && addedNode.classList.contains('splide__list')) {
-                              // Run your custom code here
-                              console.log("Element with class 'splide__list' exists. Run custom code.");
-                              // Example custom code:
-                              // yourCustomFunction();
-                              break;
-                          }
-                      }
-                  }
-              }
-          };
-          
-          // Create an observer instance linked to the callback function
-          const observer = new MutationObserver(callback);
-          
-          // Start observing the target node for configured mutations
-          observer.observe(targetNode, config);
-        }
         function addWrapperRebuy(){
-          // Select the target node
           const targetNode = document.body;
-          
-          // Options for the observer (which mutations to observe)
           const config = { attributes: true, childList: true, subtree: true };
-          
-          // Callback function to execute when mutations are observed
-
-          console.log("targetNode", targetNode)
           const callback = function(mutationsList, observer) {
               for(const mutation of mutationsList) {
-                  // Check if any of the added nodes contain the class "rebuy-product-block"
                   console.log("mutation")
                   if (mutation.type === 'childList') {
-                      console.log("mutation childList")
                       for (const addedNode of mutation.addedNodes) {
                           if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
-                              console.log("Class 'rebuy-product-block' exists in the document.");
-
                               $('.rebuy-product-block').each(function(){
                                 if (!$(this).find('.rebuy-product-wrapper').length) {
                                   $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
@@ -438,8 +397,6 @@
                   }
                   // Check if the attributes of any node are changed to have the class "rebuy-product-block"
                   else if (mutation.type === 'attributes' && mutation.target.classList.contains('rebuy-product-block')) {
-                      console.log("mutation attributes")
-                      console.log("Class 'rebuy-product-block' exists in the document 222.");
                       $('.rebuy-product-block').each(function(){
                         if (!$(this).find('.rebuy-product-wrapper').length) {
                           $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
@@ -452,46 +409,22 @@
               }
           };
           
-          // Create an observer instance linked to the callback function
           const observer = new MutationObserver(callback);
-          
-          // Start observing the target node for configured mutations
           observer.observe(targetNode, config);
         }
         document.addEventListener("DOMContentLoaded", function() {
-          checkSplideList();
-          document.addEventListener('rebuy:cart.init', (event) => { 
-            console.log('rebuy:cart.Init event', event.detail); 
-          });
-          document.addEventListener('rebuy:cart.refresh', (event) => { 
-            console.log('rebuy:cart.refresh event', event.detail); 
-          });
           document.addEventListener('rebuy:cart.add', (event) => {
             updateCart();
             addWrapperRebuy();
           });
 
           $(document).on('click', '.rebuy-button', function(){
-              var $this = $(this); // Store the value of 'this' in a variable
+              var $this = $(this);
               if($this.find('span').text().toLowerCase() == 'options'){
                 $this.closest('.rebuy-product-wrapper').contents().unwrap();
               }
               $this.closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
-              // setTimeout(function(){
-              //     $this.closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
-              // }, 1000)
           })
-
-          // $(document).on('click', '.rebuy-button', function(){
-          //   $(this).closest('.rebuy-product-wrapper').contents().unwrap();
-          //   setTimeout(function(){
-          //     let text =  $(this).closest('.rebuy-product-block').text();
-          //     console.log('text', text)
-          //     $(this).closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
-          //     console.log("hey it working")
-          //     addWrapperRebuy();
-          //   }, 1000)
-          // })
           addWrapperRebuy();
         });
       </script>
