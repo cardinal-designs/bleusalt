@@ -393,8 +393,11 @@
                       for (const addedNode of mutation.addedNodes) {
                           if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
                               console.log("Class 'rebuy-product-block' exists in the document.");
+
+                              $('.rebuy-product-block').each(function(){
+                                $(this).find('.rebuy-product-info, .rebuy-product-actions').wrapAll('<div class="wrapper"></div>');
+                              })
                               // Disconnect the observer if the class is found
-                              console.log('rtyuio', $(document).find('.rebuy-product-block').text())
                               observer.disconnect();
                               return;
                           }
