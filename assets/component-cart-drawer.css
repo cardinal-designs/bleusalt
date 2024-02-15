@@ -776,29 +776,16 @@ cart-note:after {
 }
 
 .drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-info {
+  width: 100%;
+}
+
+.drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-wrapper {
   width: 70%;
 }
 
 .drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-actions {
-  order: 2;
-  -webkit-flex: 1 1 auto;
-  -moz-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  margin: 0;
-  padding: 0 15px;
-  width: calc(70% - 120px);
-  text-align: left;
-  width: 70%;
+  width: 100%;
   margin: 15px 0 5px;
-}
-
-.drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-button {
-  padding: 1.5rem 3rem;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-options select.rebuy-select {
