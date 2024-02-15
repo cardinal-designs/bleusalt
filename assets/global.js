@@ -931,9 +931,9 @@ const updateCart = () => {
     if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
                   typeof BOLD.common.eventEmitter.emit === 'function'){
                 BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
- }
+     }
 
-
+    addWrapperRebuy();
   });
 }
 
