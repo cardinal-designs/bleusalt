@@ -473,7 +473,9 @@
 
           $(document).on('click', '.rebuy-button', function(){
               var $this = $(this); // Store the value of 'this' in a variable
-              $this.closest('.rebuy-product-wrapper').contents().unwrap();
+              if($this.find('span').text().toLowerCase() == 'options'){
+                $this.closest('.rebuy-product-wrapper').contents().unwrap();
+              }
               $this.closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
               // setTimeout(function(){
               //     $this.closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
