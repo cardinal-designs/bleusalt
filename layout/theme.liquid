@@ -374,6 +374,36 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
+        function checkSplideList() {
+          const targetNode = document.body;
+          
+          // Options for the observer (which mutations to observe)
+          const config = { childList: true, subtree: true };
+          
+          // Callback function to execute when mutations are observed
+          const callback = function(mutationsList, observer) {
+              for(const mutation of mutationsList) {
+                  // Check if the mutation added nodes with the class "splide__list"
+                  if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                      for (const addedNode of mutation.addedNodes) {
+                          if (addedNode.nodeType === 1 && addedNode.classList.contains('splide__list')) {
+                              // Run your custom code here
+                              console.log("Element with class 'splide__list' exists. Run custom code.");
+                              // Example custom code:
+                              // yourCustomFunction();
+                              break;
+                          }
+                      }
+                  }
+              }
+          };
+          
+          // Create an observer instance linked to the callback function
+          const observer = new MutationObserver(callback);
+          
+          // Start observing the target node for configured mutations
+          observer.observe(targetNode, config);
+        }
         function addWrapperRebuy(){
           // Select the target node
           const targetNode = document.body;
@@ -424,7 +454,7 @@
           observer.observe(targetNode, config);
         }
         document.addEventListener("DOMContentLoaded", function() {
-
+          checkSplideList();
           document.addEventListener('rebuy:cart.ready', (event) => { 
             console.log('rebuy:cart.ready event', event.detail); 
           });
