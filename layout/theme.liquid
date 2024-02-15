@@ -384,6 +384,7 @@
                           if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
                               $('.rebuy-product-block').each(function(){
                                 if (!$(this).find('.rebuy-product-wrapper').length) {
+                                  $(this).find('.rebuy-product-wrapper').contents().unwrap();
                                   $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
                                 }
                                 
@@ -398,6 +399,7 @@
                   else if (mutation.type === 'attributes' && mutation.target.classList.contains('rebuy-product-block')) {
                       $('.rebuy-product-block').each(function(){
                         if (!$(this).find('.rebuy-product-wrapper').length) {
+                          $(this).find('.rebuy-product-wrapper').contents().unwrap();
                           $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
                         }
                       })
