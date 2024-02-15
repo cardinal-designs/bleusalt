@@ -395,7 +395,7 @@
                               console.log("Class 'rebuy-product-block' exists in the document.");
 
                               $('.rebuy-product-block').each(function(){
-                                $(this).find('.rebuy-product-info, .rebuy-product-actions').wrapAll('<div class="wrapper"></div>');
+                                $(this).find('.rebuy-product-info, .rebuy-product-actions').wrapAll('<div class="rebuy-product-wrapper"></div>');
                               })
                               // Disconnect the observer if the class is found
                               observer.disconnect();
