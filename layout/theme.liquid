@@ -379,24 +379,37 @@
             updateCart();
           });
 
+          // Select the target node
           const targetNode = document.querySelector('div[data-rebuy-id="134158"]');
-          console.log("targetNode", targetNode)
-          const config = { childList: true };
           
-          const callback = function(mutationsList, observer) {
-              for(let mutation of mutationsList) {
+          // Function to handle mutations
+          const mutationCallback = function(mutationsList, observer) {
+              // Loop through each mutation
+              for(const mutation of mutationsList) {
+                  // Check if nodes were added
                   if (mutation.type === 'childList') {
-                      if (targetNode.children.length > 0) {
-                          console.log('The target node has children.');
-                      } else {
-                          console.log('The target node has no children.');
-                      }
+                      // Loop through added nodes
+                      mutation.addedNodes.forEach(node => {
+                          // Check if the added node has the rebuy-product-info class
+                          if (node.classList && node.classList.contains('rebuy-product-info')) {
+                              console.log('Found the rebuy-product-info element:', node);
+                          }
+                      });
                   }
               }
           };
           
-          const observer = new MutationObserver(callback);
-          observer.observe(targetNode, config);
+          // Options for the observer (which mutations to observe)
+          const observerOptions = { childList: true, subtree: true };
+          
+          // Create a new observer
+          const observer = new MutationObserver(mutationCallback);
+          
+          // Start observing the target node for mutations
+          observer.observe(targetNode, observerOptions);
+
+          
+
         });
       </script>
   </body>
