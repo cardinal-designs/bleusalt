@@ -412,10 +412,14 @@
           const config = { attributes: true, childList: true, subtree: true };
           
           // Callback function to execute when mutations are observed
+
+          console.log("targetNode", targetNode)
           const callback = function(mutationsList, observer) {
               for(const mutation of mutationsList) {
                   // Check if any of the added nodes contain the class "rebuy-product-block"
+                  console.log("mutation")
                   if (mutation.type === 'childList') {
+                      console.log("mutation childList")
                       for (const addedNode of mutation.addedNodes) {
                           if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
                               console.log("Class 'rebuy-product-block' exists in the document.");
@@ -434,6 +438,7 @@
                   }
                   // Check if the attributes of any node are changed to have the class "rebuy-product-block"
                   else if (mutation.type === 'attributes' && mutation.target.classList.contains('rebuy-product-block')) {
+                      console.log("mutation attributes")
                       console.log("Class 'rebuy-product-block' exists in the document 222.");
                       $('.rebuy-product-block').each(function(){
                         if (!$(this).find('.rebuy-product-wrapper').length) {
