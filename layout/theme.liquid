@@ -379,33 +379,32 @@
             updateCart();
           });
 
-          const targetNode = document.querySelector('div[data-rebuy-id="134158"]');
+          const targetNode = document.body;
 
-          // Function to handle mutations
-          const mutationCallback = function(mutationsList, observer) {
-              // Loop through each mutation
+          // Options for the observer (which mutations to observe)
+          const config = { attributes: true, childList: true, subtree: true };
+          
+          // Callback function to execute when mutations are observed
+          const callback = function(mutationsList, observer) {
               for(const mutation of mutationsList) {
-                  // Check if nodes were added
-                  if (mutation.type === 'childList') {
-                      // Loop through added nodes
-                      mutation.addedNodes.forEach(node => {
-                          // Check if the added node or any of its descendants have the rebuy-product-info class
-                          if (node.classList && node.querySelector('.rebuy-product-info')) {
-                              console.log('Found the rebuy-product-info element or its descendant:', node);
-                          }
-                      });
+                  if (mutation.type === 'attributes' || mutation.type === 'childList') {
+                      // Check if any elements with the class "rebuy-product-block" exist in the mutations
+                      const elements = document.getElementsByClassName("rebuy-product-block");
+                      if (elements.length > 0) {
+                          console.log("Class 'rebuy-product-block' exists in the document.");
+                          // You can disconnect the observer if you only need to detect it once
+                          observer.disconnect();
+                          break;
+                      }
                   }
               }
           };
           
-          // Options for the observer (which mutations to observe)
-          const observerOptions = { childList: true, subtree: true };
+          // Create an observer instance linked to the callback function
+          const observer = new MutationObserver(callback);
           
-          // Create a new observer
-          const observer = new MutationObserver(mutationCallback);
-          
-          // Start observing the target node for mutations
-          observer.observe(targetNode, observerOptions);
+          // Start observing the target node for configured mutations
+          observer.observe(targetNode, config);
 
           
 
