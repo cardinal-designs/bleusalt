@@ -933,6 +933,7 @@ const updateCart = () => {
                 BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
      }
 
+    console.log("hereegggg")
   });
 }
 
