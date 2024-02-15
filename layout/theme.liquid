@@ -374,11 +374,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
       <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          document.addEventListener('rebuy:cart.add', (event) => {
-            updateCart();
-          });
-
+        function addWrapperRebuy(){
           // Select the target node
           const targetNode = document.body;
           
@@ -421,10 +417,12 @@
           
           // Start observing the target node for configured mutations
           observer.observe(targetNode, config);
-
-
-          
-
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+          document.addEventListener('rebuy:cart.add', (event) => {
+            updateCart();
+          });
+          addWrapperRebuy();
         });
       </script>
   </body>
