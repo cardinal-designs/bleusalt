@@ -455,8 +455,8 @@
         }
         document.addEventListener("DOMContentLoaded", function() {
           checkSplideList();
-          document.addEventListener('rebuy:cart.show', (event) => { 
-            console.log('rebuy:cart.show event', event.detail); 
+          document.addEventListener('rebuy:cart.init', (event) => { 
+            console.log('rebuy:cart.Init event', event.detail); 
           });
           document.addEventListener('rebuy:cart.refresh', (event) => { 
             console.log('rebuy:cart.refresh event', event.detail); 
