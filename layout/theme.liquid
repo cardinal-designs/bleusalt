@@ -458,6 +458,9 @@
           document.addEventListener('rebuy:cart.ready', (event) => { 
             console.log('rebuy:cart.ready event', event.detail); 
           });
+          document.addEventListener('rebuy:cart.refresh', (event) => { 
+            console.log('rebuy:cart.refresh event', event.detail); 
+          });
           document.addEventListener('rebuy:cart.add', (event) => {
             updateCart();
             addWrapperRebuy();
