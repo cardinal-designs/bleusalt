@@ -5,7 +5,6 @@ const config = { childList: true };
 const callback = function(mutationsList, observer) {
     for(let mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            // Check if the target node has children
             if (targetNode.children.length > 0) {
                 console.log('The target node has children.');
             } else {
