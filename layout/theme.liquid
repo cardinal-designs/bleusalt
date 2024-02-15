@@ -432,8 +432,9 @@
           $(document).on('click', '.rebuy-button', function(){
             $(this).closest('.rebuy-product-wrapper').contents().unwrap();
             setTimeout(function(){
-              // $(this).closest('.rebuy-product-block').find()
-              addWrapperRebuy();
+              $(this).closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
+              console.log("hey it working")
+              // addWrapperRebuy();
             }, 1000)
           })
           addWrapperRebuy();
