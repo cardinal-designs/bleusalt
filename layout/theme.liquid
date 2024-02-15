@@ -424,6 +424,10 @@
           observer.observe(targetNode, config);
         }
         document.addEventListener("DOMContentLoaded", function() {
+
+          document.addEventListener('rebuy:cart.ready', (event) => { 
+            console.log('rebuy:cart.ready event', event.detail); 
+          });
           document.addEventListener('rebuy:cart.add', (event) => {
             updateCart();
             addWrapperRebuy();
