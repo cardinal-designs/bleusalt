@@ -379,7 +379,6 @@
           const config = { attributes: true, childList: true, subtree: true };
           const callback = function(mutationsList, observer) {
               for(const mutation of mutationsList) {
-                  console.log("mutation")
                   if (mutation.type === 'childList') {
                       for (const addedNode of mutation.addedNodes) {
                           if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
