@@ -379,25 +379,32 @@
             updateCart();
           });
 
+          // Select the target node
           const targetNode = document.body;
-
+          
           // Options for the observer (which mutations to observe)
           const config = { attributes: true, childList: true, subtree: true };
           
           // Callback function to execute when mutations are observed
           const callback = function(mutationsList, observer) {
               for(const mutation of mutationsList) {
-                  if (mutation.type === 'attributes' || mutation.type === 'childList') {
-                      // Check if any elements with the class "rebuy-product-block" exist in the mutations
-                      const elements = document.getElementsByClassName("rebuy-product-block");
-                      if (elements.length > 0) {
-                          console.log("Class 'rebuy-product-block' exists in the document.");
-                          // You can disconnect the observer if you only need to detect it once
-                          observer.disconnect();
-                          break;
-                      }else{
-                        console.log("Class 'rebuy-product-block' not exists in the document.");
+                  // Check if any of the added nodes contain the class "rebuy-product-block"
+                  if (mutation.type === 'childList') {
+                      for (const addedNode of mutation.addedNodes) {
+                          if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
+                              console.log("Class 'rebuy-product-block' exists in the document.");
+                              // Disconnect the observer if the class is found
+                              observer.disconnect();
+                              return;
+                          }
                       }
+                  }
+                  // Check if the attributes of any node are changed to have the class "rebuy-product-block"
+                  else if (mutation.type === 'attributes' && mutation.target.classList.contains('rebuy-product-block')) {
+                      console.log("Class 'rebuy-product-block' exists in the document.");
+                      // Disconnect the observer if the class is found
+                      observer.disconnect();
+                      return;
                   }
               }
           };
@@ -407,6 +414,7 @@
           
           // Start observing the target node for configured mutations
           observer.observe(targetNode, config);
+
 
           
 

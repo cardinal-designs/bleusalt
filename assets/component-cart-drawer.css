@@ -780,7 +780,18 @@ cart-note:after {
 }
 
 .drawer__footer .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-actions {
-  width: 100%;
+  order: 2;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  margin: 0;
+  padding: 0 15px;
+  width: calc(70% - 120px);
+  text-align: left;
+  width: 70%;
   margin: 15px 0 5px;
 }
 
