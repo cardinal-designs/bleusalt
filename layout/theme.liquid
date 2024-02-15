@@ -390,7 +390,7 @@
                   if (mutation.type === 'childList') {
                       // Loop through added nodes
                       mutation.addedNodes.forEach(node => {
-                          cconsole.log("node", node)
+                          console.log("node", node)
                           // Check if the added node has the rebuy-product-info class
                           if (node.classList && node.classList.contains('rebuy-product-info')) {
                               console.log('Found the rebuy-product-info element:', node);
