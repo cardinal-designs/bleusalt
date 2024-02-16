@@ -665,7 +665,7 @@ const otherColors = () => {
           }
         });
         newColors.forEach((color) => {
-          if (window.productJSON.handle === "the-turtleneck" or window.productJSON.handle === "the-perfect-t") return;
+          if (window.productJSON.handle === "the-turtleneck" || window.productJSON.handle === "the-perfect-t") return;
           const colorInput = doc.querySelector(`input[value="${color}"]`);
           const colorList = document.querySelector('.product-form__option[data-option="Color"] .product-form__input');
           const formId = document.querySelector('product-form form').getAttribute('id');
