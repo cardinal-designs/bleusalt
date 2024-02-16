@@ -632,7 +632,6 @@ const otherColors = () => {
   const productTitle = window.productJSON.title;
   const fetchUrl = `/search.json?q=title:${productTitle}&type=product&view=api`;
   const currentColorIndex = window.productJSON.options.indexOf('Color');
-  console.log(currentColorIndex)
   if (currentColorIndex === -1) {
     customElements.define('variant-selects', VariantSelects);
     customElements.define('variant-radios', VariantRadios);
@@ -666,7 +665,7 @@ const otherColors = () => {
           }
         });
         newColors.forEach((color) => {
-          if (window.productJSON.handle === "the-turtleneck") return;
+          if (window.productJSON.handle === "the-turtleneck" or window.productJSON.handle === "the-perfect-t") return;
           const colorInput = doc.querySelector(`input[value="${color}"]`);
           const colorList = document.querySelector('.product-form__option[data-option="Color"] .product-form__input');
           const formId = document.querySelector('product-form form').getAttribute('id');
@@ -687,7 +686,7 @@ const otherColors = () => {
 
 }
 
-// otherColors();
+otherColors();
 
 const foursixtyListener = () => {
   const foursixtyEl = document.querySelector('.foursixty-feed');
