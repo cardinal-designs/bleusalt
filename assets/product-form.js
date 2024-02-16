@@ -573,7 +573,6 @@ class VariantSelects extends HTMLElement {
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
-    console.log('TESTINGM')
     console.log('variantRadios');
   }
 
