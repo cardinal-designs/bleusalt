@@ -652,6 +652,7 @@ const otherColors = () => {
       }
       otherColors.forEach((product) => {
         const colorIndex = product.options.indexOf('Color');
+        if (window.productJSON.handle === "the-turtleneck" || window.productJSON.handle === "the-perfect-t") return;
         if(product.vendor === 'VIP' || product.vendor === 'CAPSULE') return true;
         product.variants.forEach((variant) => {
           if(variant.title.indexOf('hide') > -1) return true;
@@ -664,7 +665,7 @@ const otherColors = () => {
           }
         });
         newColors.forEach((color) => {
-          if (window.productJSON.handle === "the-turtleneck") return;
+          if (window.productJSON.handle === "the-turtleneck" || window.productJSON.handle === "the-perfect-t") return;
           const colorInput = doc.querySelector(`input[value="${color}"]`);
           const colorList = document.querySelector('.product-form__option[data-option="Color"] .product-form__input');
           const formId = document.querySelector('product-form form').getAttribute('id');
