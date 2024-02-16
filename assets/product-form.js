@@ -249,6 +249,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateOtherOptions(initial = false) {
+    console.log('first')
 
     const optionIndex = initial ? 0 : parseFloat(event.target.closest('.product-form__input--dropdown').getAttribute('data-option-index'));
 
