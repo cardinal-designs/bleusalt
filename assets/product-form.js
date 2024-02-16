@@ -652,6 +652,7 @@ const otherColors = () => {
       }
       otherColors.forEach((product) => {
         const colorIndex = product.options.indexOf('Color');
+        if (window.productJSON.handle === "the-turtleneck" || window.productJSON.handle === "the-perfect-t") return;
         if(product.vendor === 'VIP' || product.vendor === 'CAPSULE') return true;
         product.variants.forEach((variant) => {
           if(variant.title.indexOf('hide') > -1) return true;
