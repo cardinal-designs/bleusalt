@@ -720,6 +720,8 @@
   window.productJSON.variants.forEach(variant => {
     variant.url = "/products/{{ product.handle }}"
   });
+
+  console.log(window.productJSON)
 </script>
 
 {% if settings.enable_klaviyo_tracking %}
