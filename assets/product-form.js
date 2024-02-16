@@ -685,7 +685,7 @@ const otherColors = () => {
 
 }
 
-otherColors();
+// otherColors();
 
 const foursixtyListener = () => {
   const foursixtyEl = document.querySelector('.foursixty-feed');
