@@ -632,6 +632,7 @@ const otherColors = () => {
   const productTitle = window.productJSON.title;
   const fetchUrl = `/search.json?q=title:${productTitle}&type=product&view=api`;
   const currentColorIndex = window.productJSON.options.indexOf('Color');
+  console.log(currentColorIndex)
   if (currentColorIndex === -1) {
     customElements.define('variant-selects', VariantSelects);
     customElements.define('variant-radios', VariantRadios);
