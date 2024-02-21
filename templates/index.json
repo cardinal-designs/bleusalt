@@ -1,1 +1,556 @@
-{"sections":{"16597180576b9dbb68":{"type":"video-banner","blocks":{"0bf45662-70ff-46fa-be5b-aeadb4bbe3c8":{"type":"text","disabled":true,"settings":{"text":"Essentials made from the softest fibers on earth","text_style":"body"}},"b0641e0b-814c-49d9-97b2-7a1cdcc96d82":{"type":"heading","disabled":true,"settings":{"heading":"Essentials made from the softest fibers on earth","heading_size":"h1"}}},"block_order":["0bf45662-70ff-46fa-be5b-aeadb4bbe3c8","b0641e0b-814c-49d9-97b2-7a1cdcc96d82"],"settings":{"video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f6cd8ec0fa1847cb971499adc9921dd6.mp4","video_url_mobile":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6bfdbc5981574075aa2f1a1b8f54cb5f.mp4","description":"Bleusalt Lifestyle Video","image_overlay_opacity":0,"video_height":"56.25","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","video_height_mobile":"125","show_text_below":true}},"aca09b85-9cab-4e81-9e54-55887b34f7c3":{"type":"video","disabled":true,"settings":{"heading":"","heading_size":"h1","cover_image":"shopify:\/\/shop_images\/BleuMalibu_4_23.jpg","video":"shopify:\/\/files\/videos\/Bleu Lifestyle Anna 4-23 k-WEB.mp4","description":"A video of people wearing Bleusalt clothing in various locations","full_width":true,"color_scheme":"background-1","padding_top":0,"padding_bottom":0}},"acb3120d-e5c4-493b-a533-74ebd0e4a77e":{"type":"otto-image","disabled":true,"settings":{"image_name":"home-sale-announcement","image_width_desktop":100,"image_width_mobile":100,"image_margin_bottom":0,"show_content":false,"content_width":60,"content_background_color":"#ffffff","content_text_color":"#000000","content_horizontal_alignment":"center","content_vertical_alignment":"center","header_font_tag":"h1","header_font_size":2,"header_font_size_mobile":2,"subheader_font_tag":"h2","subheader_font_size":1,"subheader_font_size_mobile":1,"body_font_tag":"p","body_font_size":1,"body_font_size_mobile":1,"button_background_color":"#000000","button_background_hover_color":"#ffffff","button_text_color":"#ffffff","button_text_hover_color":"#000000"}},"d2140650-9af9-4246-8dce-94740740313a":{"type":"custom-liquid","disabled":true,"custom_css":[],"settings":{"custom_liquid":"<div class=\"center page-width\">\n<h1 class=\"h3\">Essentials made from the softest<br> fibers on earth<\/h1>\n<\/div>","color_scheme":"background-1","padding_top":16,"padding_bottom":0}},"16636186953571c8bf":{"type":"multicolumn","blocks":{"1663618695fc7e0630-0":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/womens-hero_b3f9c990-deb4-452a-a971-0a9a5ba20381.jpg","title":"Shop Womens","text":"","html":"","link_label":"","link":"shopify:\/\/collections\/womens-shop-all"}},"1663618695fc7e0630-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/wraps-hero_371d60ab-43b3-4d7a-8eff-55aed357f2e5.jpg","title":"Shop Wraps","text":"","html":"","link_label":"","link":"shopify:\/\/collections\/the-signature-bleusalt-wrap"}},"1663618695fc7e0630-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mens-hero_4e008c6a-ef76-4542-9f38-69512330e12e.jpg","title":"Shop Mens","text":"","html":"","link_label":"","link":"shopify:\/\/collections\/mens-collection"}}},"block_order":["1663618695fc7e0630-0","1663618695fc7e0630-1","1663618695fc7e0630-2"],"settings":{"title":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"btextimg":"three-cate","column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection":{"type":"featured-collection","blocks":{"49238d89-463e-419a-8643-42f4463ad2dd":{"type":"collection","settings":{"heading":"Womens","collection":"newest-products"}},"52b80eaf-ade8-4b4f-879d-5b4e2651e4a5":{"type":"collection","settings":{"heading":"Mens","collection":"mens-new-arrivals"}}},"block_order":["49238d89-463e-419a-8643-42f4463ad2dd","52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"],"settings":{"title":"Explore.","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"","products_to_show":8,"columns_desktop":3,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"portrait","show_secondary_image":false,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":28,"padding_bottom":36}},"1660227726ff0f6237":{"type":"foursixty","blocks":{"0bd959b1-a3c2-4f96-ad27-81efe57d1150":{"type":"title","settings":{"title":"Shop Our Instagram"}},"88d72792-7b35-451c-bf9a-b7f887cde26f":{"type":"paragraph","settings":{"title":"<p>Click the photos below to shop the look! <a href=\"https:\/\/www.instagram.com\/bleusalt\/\">@bleusalt<\/a><\/p>"}},"da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed":{"type":"feed","settings":{"feed_id":"bleusalt","total_images":10,"big_first_image":true,"per_row":5,"image_margin":4,"feed_type":"grid"}},"45d95e55-eabb-474a-81e3-9b60083b3f79":{"type":"button","settings":{"link":"shopify:\/\/pages\/shop-our-instagram","link_text":"Shop Our Instagram","button_style":"button--secondary"}}},"block_order":["0bd959b1-a3c2-4f96-ad27-81efe57d1150","88d72792-7b35-451c-bf9a-b7f887cde26f","da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed","45d95e55-eabb-474a-81e3-9b60083b3f79"],"settings":{"width":"page-width","padding_top":25,"padding_bottom":45,"margins":14,"border_top":true,"text_align":"center"}},"1660226720e02964f9":{"type":"rich-text","blocks":{"16602267200642e541-0":{"type":"heading","settings":{"heading":"<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth.<\/span><\/p>","heading_size":"h1"}},"16602267200642e541-1":{"type":"text","settings":{"text":"<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"}},"741ab444-8276-4e02-99e1-f5a96c4c2307":{"type":"caption","settings":{"caption":"[value-props]","text_style":"caption-with-letter-spacing","text_size":"medium"}}},"block_order":["16602267200642e541-0","16602267200642e541-1","741ab444-8276-4e02-99e1-f5a96c4c2307"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"home-learn-more","background_image":"shopify:\/\/shop_images\/sustainable-grunge.jpg","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":72,"padding_bottom":76}},"166022784081bd0071":{"type":"quotes","blocks":{"1660227840989441a3-0":{"type":"quote_press","settings":{"quote":"<p>This is how to create a styling WFH wardrobe in 2021.<\/p>","author":"Vogue","logo":"shopify:\/\/shop_images\/vogue_2x-8.png"}},"1660227840989441a3-1":{"type":"quote_press","settings":{"quote":"<p>What BAZAAR editors are shopping this week<\/p>","author":"Elle","logo":"shopify:\/\/shop_images\/elle.png"}},"b27eae8f-e3c9-46a0-83e9-9149a0c33109":{"type":"quote_press","settings":{"quote":"<p>28 Sustainable Brands That Will Completely Change the Way You Shop!<\/p>","author":"Pop Sugar","logo":"shopify:\/\/shop_images\/pop-sugar.png"}},"a4a3927e-7a35-47f0-aded-be8ced7e8657":{"type":"quote_press","settings":{"quote":"<p>I Gave Up Fast Fashion. Here’s What I’m Wearing Instead.<\/p>","author":"The Cut","logo":"shopify:\/\/shop_images\/the-cut_2x-8.png"}},"48b412b1-5560-4ade-98e9-f59f9f79abdd":{"type":"quote_press","settings":{"quote":"<p>Good Company: Bleusalt’s Environmentally Responsible Fashion<\/p>","author":"Barron's","logo":"shopify:\/\/shop_images\/barrons_2x-8.png"}}},"block_order":["1660227840989441a3-0","1660227840989441a3-1","b27eae8f-e3c9-46a0-83e9-9149a0c33109","a4a3927e-7a35-47f0-aded-be8ced7e8657","48b412b1-5560-4ade-98e9-f59f9f79abdd"],"settings":{"full_width":false,"hide_desktop":false,"hide_mobile":false,"color_background":"#f1f1f1","padding_top":60,"padding_bottom":60,"press_link":"","reviews_link":"","title":""}},"1659735210e064d864":{"type":"featured-collection","blocks":{"d7e9953b-29b9-40ef-a7dc-5e77cfd8426f":{"type":"collection","settings":{"heading":"Womens","collection":"womens-best-sellers"}},"e4d64483-b722-41bc-b780-ce75dc52abed":{"type":"collection","settings":{"heading":"Mens","collection":"mens-best-sellers"}}},"block_order":["d7e9953b-29b9-40ef-a7dc-5e77cfd8426f","e4d64483-b722-41bc-b780-ce75dc52abed"],"settings":{"title":"Must Haves","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"bottoms-skimpy","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"portrait","show_secondary_image":false,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"16637947412bca5d08":{"type":"quotes","blocks":{"16637947411f2692ac-2":{"type":"quote","settings":{"quote":"<p>“I made my first purchase so I got the one yard scarf, I am so pleased with it... actually, I love it! It's comfortable, it's soft and it looks great! My purchase experience was great and shipping was fast. Absolutely recommend!”<\/p>","author":""}},"9ce23cce-4719-4328-b639-f730f57cd3e7":{"type":"quote","settings":{"quote":"<p>\"Perfect comfort - perfect fit\"<\/p>","author":"Donna V."}},"58dfb1fb-5090-4fe2-95af-a4bcdaa6162e":{"type":"quote","settings":{"quote":"<p>I have 5 of these in different colors. I love them! I also have a few 1 yard and a few 3 yard wraps. They are so beautiful, chic and soft. Each elevates the look of my outfit<\/p>","author":"Patricia L."}},"0b32d508-6883-48ba-829a-45da3d66a768":{"type":"quote","settings":{"quote":"<p>\"I can't get enough of the 3 yard wrap! It's the most luxurious fabric I've ever worn and I've given up cashmere for it, why? Because it's a superior fabric and it's washable!\"<\/p>","author":""}},"47ff77ee-0aeb-4a50-b975-664f35a94a08":{"type":"quote","settings":{"quote":"<p>The fabric is like butter... even better in person! The fit is definitely oversized, but what I expected.<\/p>","author":""}}},"block_order":["16637947411f2692ac-2","9ce23cce-4719-4328-b639-f730f57cd3e7","58dfb1fb-5090-4fe2-95af-a4bcdaa6162e","0b32d508-6883-48ba-829a-45da3d66a768","47ff77ee-0aeb-4a50-b975-664f35a94a08"],"settings":{"full_width":false,"hide_desktop":false,"hide_mobile":false,"color_background":"#f1f1f1","padding_top":0,"padding_bottom":65,"press_link":"","reviews_link":"","title":""}},"5e04b2e1-4fa0-45bd-a4cb-77f983867ff6":{"type":"image-with-text","blocks":{"template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-heading-1":{"type":"heading","settings":{"heading":"VISIT US","heading_size":"h2"}},"template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-text-1":{"type":"text","settings":{"text":"<p>Meet us in store to try on our newest arrivals and shop exclusives in person.<\/p>","text_style":"body"}},"template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-button-1":{"type":"button","settings":{"button_label":"Find a Store","button_link":"shopify:\/\/pages\/visit-our-store"}}},"block_order":["template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-heading-1","template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-text-1","template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-button-1"],"custom_css":[".image-with-text__media-item {order: 1;}"],"settings":{"image":"shopify:\/\/shop_images\/bleusalt-malibu-store-interior.jpg","border_top":false,"page_width":"page-width","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"center","padding_top":36,"padding_bottom":36}},"05cdb46b-48ec-4c49-9ab7-410d5ce62045":{"type":"rich-text","blocks":{"template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1":{"type":"text","settings":{"text":"<p>At Bleusalt, we invite you to immerse yourself in a world of elevated luxury and elegance. Inspired by a lifestyle in and around the ocean, our brand encapsulates a blend of elegance and sophistication that echoes through every thread of our collection.<\/p><h2>Create a Capsule Wardrobe with Elevated Basics<\/h2><p>Elevate your look with Bleusalt's exclusive collection, designed to help you build a capsule wardrobe that exudes sophistication. Our brand embodies the essence of luxurious minimalism, focusing on a carefully-curated selection of versatile and timeless pieces.<\/p><h2>Women’s Clothing by Bleusalt<\/h2><p>Explore Bleusalt’s women’s clothing line for luxurious seasonless basics. Embrace versatile silhouettes and luxurious fabrics that redefine elevated everyday wear. Shop our collection of women’s clothing designed to elevate every look from the beach to the street or day to night. <\/p><h2>Men’s Clothing by Bleusalt<\/h2><p>Explore Bleusalt's men’s clothing line for a diverse array of versatile and sophisticated pieces tailored to the modern man. From impeccably designed classic tops to sleek and refined bottoms, each garment effortlessly strikes a harmonious balance between exceptional quality and timeless style.<\/p><h2>Unisex Clothing by Bleusalt<\/h2><p>Step into a world of refined unisex fashion with Bleusalt's distinctive collection. Our unisex clothing line transcends traditional boundaries, offering a range of impeccably crafted pieces that seamlessly exude quiet luxury. From elegant tops to versatile bottoms, each garment embodies the essence of refined living, celebrating a shared sophistication that speaks softly yet powerfully to all.<\/p><h2>Kids’ Clothing by Bleusalt<\/h2><p>Nurture the youngest members of your family's sense of style with Bleusalt's luxury kids’ clothing collection. Crafted with the same dedication to quality and refinement that defines our brand, our kids' line is the perfect introduction to the world of elevated elegance.<\/p><h2>Soft, Sustainable Clothing Rooted in Mindful Creation<\/h2><p>Our commitment to sustainability echoes through every thread. Each garment is proudly made in the USA from the softest fibers on Earth. This not only ensures a luxurious feel but also aligns with our dedication to environmentally-conscious practices.<\/p><h2>Shop Bleusalt<\/h2><p>Bleusalt is the perfect foundation for your style. Shop online or visit our flagship store in Malibu to experience Bleusalt firsthand.<br\/><\/p>"}}},"block_order":["template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1"],"disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":52}}},"order":["16597180576b9dbb68","aca09b85-9cab-4e81-9e54-55887b34f7c3","acb3120d-e5c4-493b-a533-74ebd0e4a77e","d2140650-9af9-4246-8dce-94740740313a","16636186953571c8bf","featured_collection","1660227726ff0f6237","1660226720e02964f9","166022784081bd0071","1659735210e064d864","16637947412bca5d08","5e04b2e1-4fa0-45bd-a4cb-77f983867ff6","05cdb46b-48ec-4c49-9ab7-410d5ce62045"]}
+{
+  "sections": {
+    "16597180576b9dbb68": {
+      "type": "video-banner",
+      "blocks": {
+        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Essentials made from the softest fibers on earth",
+            "text_style": "body"
+          }
+        },
+        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Essentials made from the softest fibers on earth",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8",
+        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82"
+      ],
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/63cbb9b6db7c4e76b1e427cb41d6fc59.mp4",
+        "video_url_mobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c82fbfa78360476482a53791fd670cf6.mp4",
+        "description": "Bleusalt Lifestyle Video",
+        "image_overlay_opacity": 0,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "125",
+        "show_text_below": true
+      }
+    },
+    "aca09b85-9cab-4e81-9e54-55887b34f7c3": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/BleuMalibu_4_23.jpg",
+        "video": "shopify:\/\/files\/videos\/Bleu Lifestyle Anna 4-23 k-WEB.mp4",
+        "description": "A video of people wearing Bleusalt clothing in various locations",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "acb3120d-e5c4-493b-a533-74ebd0e4a77e": {
+      "type": "otto-image",
+      "disabled": true,
+      "settings": {
+        "image_name": "home-sale-announcement",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "image_margin_bottom": 0,
+        "show_content": false,
+        "content_width": 60,
+        "content_background_color": "#ffffff",
+        "content_text_color": "#000000",
+        "content_horizontal_alignment": "center",
+        "content_vertical_alignment": "center",
+        "header_font_tag": "h1",
+        "header_font_size": 2,
+        "header_font_size_mobile": 2,
+        "subheader_font_tag": "h2",
+        "subheader_font_size": 1,
+        "subheader_font_size_mobile": 1,
+        "body_font_tag": "p",
+        "body_font_size": 1,
+        "body_font_size_mobile": 1,
+        "button_background_color": "#000000",
+        "button_background_hover_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_text_hover_color": "#000000"
+      }
+    },
+    "d2140650-9af9-4246-8dce-94740740313a": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"center page-width\">\n<h1 class=\"h3\">Essentials made from the softest<br> fibers on earth<\/h1>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "16636186953571c8bf": {
+      "type": "multicolumn",
+      "blocks": {
+        "1663618695fc7e0630-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/womens-hero_b3f9c990-deb4-452a-a971-0a9a5ba20381.jpg",
+            "title": "Shop Womens",
+            "text": "",
+            "html": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/womens-shop-all"
+          }
+        },
+        "1663618695fc7e0630-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wraps-hero_371d60ab-43b3-4d7a-8eff-55aed357f2e5.jpg",
+            "title": "Shop Wraps",
+            "text": "",
+            "html": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/the-signature-bleusalt-wrap"
+          }
+        },
+        "1663618695fc7e0630-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-hero_4e008c6a-ef76-4542-9f38-69512330e12e.jpg",
+            "title": "Shop Mens",
+            "text": "",
+            "html": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/mens-collection"
+          }
+        }
+      },
+      "block_order": [
+        "1663618695fc7e0630-0",
+        "1663618695fc7e0630-1",
+        "1663618695fc7e0630-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "btextimg": "three-cate",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "blocks": {
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
+          "type": "collection",
+          "settings": {
+            "heading": "Womens",
+            "collection": "newest-products"
+          }
+        },
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
+          "type": "collection",
+          "settings": {
+            "heading": "Mens",
+            "collection": "mens-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "49238d89-463e-419a-8643-42f4463ad2dd",
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
+      ],
+      "settings": {
+        "title": "Explore.",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "1660227726ff0f6237": {
+      "type": "foursixty",
+      "blocks": {
+        "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
+          "type": "title",
+          "settings": {
+            "title": "Shop Our Instagram"
+          }
+        },
+        "88d72792-7b35-451c-bf9a-b7f887cde26f": {
+          "type": "paragraph",
+          "settings": {
+            "title": "<p>Click the photos below to shop the look! <a href=\"https:\/\/www.instagram.com\/bleusalt\/\">@bleusalt<\/a><\/p>"
+          }
+        },
+        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed": {
+          "type": "feed",
+          "settings": {
+            "feed_id": "bleusalt",
+            "total_images": 10,
+            "big_first_image": true,
+            "per_row": 5,
+            "image_margin": 4,
+            "feed_type": "grid"
+          }
+        },
+        "45d95e55-eabb-474a-81e3-9b60083b3f79": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/pages\/shop-our-instagram",
+            "link_text": "Shop Our Instagram",
+            "button_style": "button--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
+        "88d72792-7b35-451c-bf9a-b7f887cde26f",
+        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
+        "45d95e55-eabb-474a-81e3-9b60083b3f79"
+      ],
+      "settings": {
+        "width": "page-width",
+        "padding_top": 25,
+        "padding_bottom": 45,
+        "margins": 14,
+        "border_top": true,
+        "text_align": "center"
+      }
+    },
+    "1660226720e02964f9": {
+      "type": "rich-text",
+      "blocks": {
+        "16602267200642e541-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth.<\/span><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "16602267200642e541-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"
+          }
+        },
+        "741ab444-8276-4e02-99e1-f5a96c4c2307": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "16602267200642e541-0",
+        "16602267200642e541-1",
+        "741ab444-8276-4e02-99e1-f5a96c4c2307"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "home-learn-more",
+        "background_image": "shopify:\/\/shop_images\/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
+    "166022784081bd0071": {
+      "type": "quotes",
+      "blocks": {
+        "1660227840989441a3-0": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>This is how to create a styling WFH wardrobe in 2021.<\/p>",
+            "author": "Vogue",
+            "logo": "shopify:\/\/shop_images\/vogue_2x-8.png"
+          }
+        },
+        "1660227840989441a3-1": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>What BAZAAR editors are shopping this week<\/p>",
+            "author": "Elle",
+            "logo": "shopify:\/\/shop_images\/elle.png"
+          }
+        },
+        "b27eae8f-e3c9-46a0-83e9-9149a0c33109": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>28 Sustainable Brands That Will Completely Change the Way You Shop!<\/p>",
+            "author": "Pop Sugar",
+            "logo": "shopify:\/\/shop_images\/pop-sugar.png"
+          }
+        },
+        "a4a3927e-7a35-47f0-aded-be8ced7e8657": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>I Gave Up Fast Fashion. Here’s What I’m Wearing Instead.<\/p>",
+            "author": "The Cut",
+            "logo": "shopify:\/\/shop_images\/the-cut_2x-8.png"
+          }
+        },
+        "48b412b1-5560-4ade-98e9-f59f9f79abdd": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>Good Company: Bleusalt’s Environmentally Responsible Fashion<\/p>",
+            "author": "Barron's",
+            "logo": "shopify:\/\/shop_images\/barrons_2x-8.png"
+          }
+        }
+      },
+      "block_order": [
+        "1660227840989441a3-0",
+        "1660227840989441a3-1",
+        "b27eae8f-e3c9-46a0-83e9-9149a0c33109",
+        "a4a3927e-7a35-47f0-aded-be8ced7e8657",
+        "48b412b1-5560-4ade-98e9-f59f9f79abdd"
+      ],
+      "settings": {
+        "full_width": false,
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "color_background": "#f1f1f1",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "press_link": "",
+        "reviews_link": "",
+        "title": ""
+      }
+    },
+    "1659735210e064d864": {
+      "type": "featured-collection",
+      "blocks": {
+        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f": {
+          "type": "collection",
+          "settings": {
+            "heading": "Womens",
+            "collection": "womens-best-sellers"
+          }
+        },
+        "e4d64483-b722-41bc-b780-ce75dc52abed": {
+          "type": "collection",
+          "settings": {
+            "heading": "Mens",
+            "collection": "mens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
+        "e4d64483-b722-41bc-b780-ce75dc52abed"
+      ],
+      "settings": {
+        "title": "Must Haves",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bottoms-skimpy",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16637947412bca5d08": {
+      "type": "quotes",
+      "blocks": {
+        "16637947411f2692ac-2": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>“I made my first purchase so I got the one yard scarf, I am so pleased with it... actually, I love it! It's comfortable, it's soft and it looks great! My purchase experience was great and shipping was fast. Absolutely recommend!”<\/p>",
+            "author": ""
+          }
+        },
+        "9ce23cce-4719-4328-b639-f730f57cd3e7": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>\"Perfect comfort - perfect fit\"<\/p>",
+            "author": "Donna V."
+          }
+        },
+        "58dfb1fb-5090-4fe2-95af-a4bcdaa6162e": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>I have 5 of these in different colors. I love them! I also have a few 1 yard and a few 3 yard wraps. They are so beautiful, chic and soft. Each elevates the look of my outfit<\/p>",
+            "author": "Patricia L."
+          }
+        },
+        "0b32d508-6883-48ba-829a-45da3d66a768": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>\"I can't get enough of the 3 yard wrap! It's the most luxurious fabric I've ever worn and I've given up cashmere for it, why? Because it's a superior fabric and it's washable!\"<\/p>",
+            "author": ""
+          }
+        },
+        "47ff77ee-0aeb-4a50-b975-664f35a94a08": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>The fabric is like butter... even better in person! The fit is definitely oversized, but what I expected.<\/p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "16637947411f2692ac-2",
+        "9ce23cce-4719-4328-b639-f730f57cd3e7",
+        "58dfb1fb-5090-4fe2-95af-a4bcdaa6162e",
+        "0b32d508-6883-48ba-829a-45da3d66a768",
+        "47ff77ee-0aeb-4a50-b975-664f35a94a08"
+      ],
+      "settings": {
+        "full_width": false,
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "color_background": "#f1f1f1",
+        "padding_top": 0,
+        "padding_bottom": 65,
+        "press_link": "",
+        "reviews_link": "",
+        "title": ""
+      }
+    },
+    "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "VISIT US",
+            "heading_size": "h2"
+          }
+        },
+        "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet us in store to try on our newest arrivals and shop exclusives in person.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find a Store",
+            "button_link": "shopify:\/\/pages\/visit-our-store"
+          }
+        }
+      },
+      "block_order": [
+        "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-heading-1",
+        "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-text-1",
+        "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-button-1"
+      ],
+      "custom_css": [
+        ".image-with-text__media-item {order: 1;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bleusalt-malibu-store-interior.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "05cdb46b-48ec-4c49-9ab7-410d5ce62045": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Bleusalt, we invite you to immerse yourself in a world of elevated luxury and elegance. Inspired by a lifestyle in and around the ocean, our brand encapsulates a blend of elegance and sophistication that echoes through every thread of our collection.<\/p><h2>Create a Capsule Wardrobe with Elevated Basics<\/h2><p>Elevate your look with Bleusalt's exclusive collection, designed to help you build a capsule wardrobe that exudes sophistication. Our brand embodies the essence of luxurious minimalism, focusing on a carefully-curated selection of versatile and timeless pieces.<\/p><h2>Women’s Clothing by Bleusalt<\/h2><p>Explore Bleusalt’s women’s clothing line for luxurious seasonless basics. Embrace versatile silhouettes and luxurious fabrics that redefine elevated everyday wear. Shop our collection of women’s clothing designed to elevate every look from the beach to the street or day to night. <\/p><h2>Men’s Clothing by Bleusalt<\/h2><p>Explore Bleusalt's men’s clothing line for a diverse array of versatile and sophisticated pieces tailored to the modern man. From impeccably designed classic tops to sleek and refined bottoms, each garment effortlessly strikes a harmonious balance between exceptional quality and timeless style.<\/p><h2>Unisex Clothing by Bleusalt<\/h2><p>Step into a world of refined unisex fashion with Bleusalt's distinctive collection. Our unisex clothing line transcends traditional boundaries, offering a range of impeccably crafted pieces that seamlessly exude quiet luxury. From elegant tops to versatile bottoms, each garment embodies the essence of refined living, celebrating a shared sophistication that speaks softly yet powerfully to all.<\/p><h2>Kids’ Clothing by Bleusalt<\/h2><p>Nurture the youngest members of your family's sense of style with Bleusalt's luxury kids’ clothing collection. Crafted with the same dedication to quality and refinement that defines our brand, our kids' line is the perfect introduction to the world of elevated elegance.<\/p><h2>Soft, Sustainable Clothing Rooted in Mindful Creation<\/h2><p>Our commitment to sustainability echoes through every thread. Each garment is proudly made in the USA from the softest fibers on Earth. This not only ensures a luxurious feel but also aligns with our dedication to environmentally-conscious practices.<\/p><h2>Shop Bleusalt<\/h2><p>Bleusalt is the perfect foundation for your style. Shop online or visit our flagship store in Malibu to experience Bleusalt firsthand.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "16597180576b9dbb68",
+    "aca09b85-9cab-4e81-9e54-55887b34f7c3",
+    "acb3120d-e5c4-493b-a533-74ebd0e4a77e",
+    "d2140650-9af9-4246-8dce-94740740313a",
+    "16636186953571c8bf",
+    "featured_collection",
+    "1660227726ff0f6237",
+    "1660226720e02964f9",
+    "166022784081bd0071",
+    "1659735210e064d864",
+    "16637947412bca5d08",
+    "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
+    "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
+  ]
+}
