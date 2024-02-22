@@ -77,6 +77,53 @@
         "padding_bottom": 36
       }
     },
+    "3cd1676e-1549-4475-a85d-e69123de47cd": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Bleusalt HQ",
+            "text": "<p>We welcome you to visit our flagship Bleusalt HQ in the Malibu Country Mart located at:<br\/><br\/>Location: <a href=\"https:\/\/goo.gl\/maps\/uv7UEfMUrpoLdvGJ9?coh=178571&entry=tt\" target=\"_blank\" title=\"https:\/\/goo.gl\/maps\/uv7UEfMUrpoLdvGJ9?coh=178571&entry=tt\">3835 Cross Creek Road #19, Malibu, California 90265<\/a><br\/>Store Hours: 10am - 6pm Daily<br\/>Phone: <a href=\"tel:13103174590\" title=\"tel:13103174590\">(310) 317-4590<\/a><\/p>",
+            "html": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Map\/Directions",
+            "text": "",
+            "html": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3306.3203403325156!2d-118.68979662349582!3d34.03565297316318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e81f95c03ff34d%3A0xfd70946a378306c9!2sBleusalt!5e0!3m2!1sen!2sus!4v1695691595449!5m2!1sen!2sus\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-1",
+        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Bleusalt in Malibu Store Information:",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "btextimg": "",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "67a72fd0-4f87-4acf-9bbf-ad6cf6ed7ff2": {
       "type": "rich-text",
       "blocks": {
@@ -107,52 +154,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "3cd1676e-1549-4475-a85d-e69123de47cd": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Bleusalt HQ",
-            "text": "<p>We welcome you to visit our flagship Bleusalt HQ in the Malibu Country Mart located at:<br\/><br\/>Location: <a href=\"https:\/\/goo.gl\/maps\/uv7UEfMUrpoLdvGJ9?coh=178571&entry=tt\" target=\"_blank\" title=\"https:\/\/goo.gl\/maps\/uv7UEfMUrpoLdvGJ9?coh=178571&entry=tt\">3835 Cross Creek Road #19, Malibu, California 90265<\/a><br\/>Store Hours: 10am - 6pm Daily<br\/>Phone: <a href=\"tel:13103174590\" title=\"tel:13103174590\">(310) 317-4590<\/a><\/p>",
-            "html": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Map\/Directions",
-            "text": "",
-            "html": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3306.3203403325156!2d-118.68979662349582!3d34.03565297316318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e81f95c03ff34d%3A0xfd70946a378306c9!2sBleusalt!5e0!3m2!1sen!2sus!4v1695691595449!5m2!1sen!2sus\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-1",
-        "template--14657502707825__3cd1676e-1549-4475-a85d-e69123de47cd-column-2"
-      ],
-      "settings": {
-        "title": "Bleusalt in Malibu Store Information:",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "btextimg": "",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "fd60cea1-cd2a-4e70-9cde-3533bd8ef3a2": {
@@ -294,8 +295,8 @@
   "order": [
     "main",
     "9552f085-723a-4876-98e9-4ccf6203c0a6",
-    "67a72fd0-4f87-4acf-9bbf-ad6cf6ed7ff2",
     "3cd1676e-1549-4475-a85d-e69123de47cd",
+    "67a72fd0-4f87-4acf-9bbf-ad6cf6ed7ff2",
     "fd60cea1-cd2a-4e70-9cde-3533bd8ef3a2",
     "56ff5175-ce28-4d64-8ec8-3d17d143ab45",
     "1676492971e2872bb9"
