@@ -516,11 +516,6 @@
               </product-form>  
               <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: none;{% else %}display: block;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
-
-            
-
-              
-
               {% comment %}
               {% render 'hs-defer-css' with filename: 'component-pickup-availability.css', pages: 'collection,index,product' | split: ',', local: true %}
 
