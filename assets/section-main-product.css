@@ -367,6 +367,12 @@ fieldset.product-form__input .form__label {
   }
 }
 
+#show-low-messaging {
+  font-size: 14px;
+  margin-top: 0; 
+  margin-bottom: 0;
+}
+
 /* Overrides */
 .shopify-payment-button__more-options {
   color: rgb(var(--color-foreground));
@@ -1445,10 +1451,4 @@ table[data-in-to-cm] td {
 
 .product-collection-link p {
   margin: 0;
-}
-
-#show-low-messaging {
-  margin-top: 0; 
-  line-height: 1.2;
-  margin-bottom: 0;
 }
