@@ -710,6 +710,9 @@ cart-note:after {
 }
 
 /* cart rebuy CSS */
+.cart-upsell {
+  padding: 0 1.5rem;
+}
 
 .cart-upsell .rebuy-widget {
   padding: 10px 0 20px;
