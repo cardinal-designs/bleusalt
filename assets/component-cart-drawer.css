@@ -651,7 +651,6 @@ wear-with .swiper-next {
   background: rgb(var(--color-foreground),0.1);
 }
 
-
 cart-note:before,
 cart-note:after {
   content: initial !important;
@@ -671,9 +670,12 @@ cart-note:after {
 }
 
 .cart-text {
+  font-size: 14px;
+  margin-top: 10px;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 1.2;
   padding: 0 1.5rem;
+  text-align: center;
 }
 
 .cart-freeshipping {
