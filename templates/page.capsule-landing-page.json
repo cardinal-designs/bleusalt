@@ -1,1 +1,145 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"show_heading":true,"heading_size":"h1","heading_alignment":"center","padding_top":36,"padding_bottom":36,"page_width":"page-width--narrow"}},"1661898424dccd1840":{"type":"multicolumn","blocks":{"1661898423461d8183-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/winter-2023.jpg","title":"THE WINTER CAPSULE WARDROBE","text":"<p>$900<\/p>","html":"","link_label":"","link":"shopify:\/\/pages\/winter-capsule-wardrobe"}}},"block_order":["1661898423461d8183-2"],"settings":{"title":"","heading_size":"h2","image_width":"full","image_ratio":"adapt","columns_desktop":3,"btextimg":"","column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":0}},"650d2e6f-78f3-40b0-a147-52df9e974242":{"type":"rich-text","blocks":{"template--14667687166065__650d2e6f-78f3-40b0-a147-52df9e974242-button-1":{"type":"button","settings":{"button_label":"Buy Now","button_link":"shopify:\/\/pages\/winter-capsule-wardrobe","button_style_secondary":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["template--14667687166065__650d2e6f-78f3-40b0-a147-52df9e974242-button-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":0,"padding_bottom":52}},"8137d931-8d8f-467c-8d80-cbe4196cfa7e":{"type":"rich-text","blocks":{"template--14667687166065__8137d931-8d8f-467c-8d80-cbe4196cfa7e-text-1":{"type":"text","settings":{"text":"<p>WHAT IS A CAPSULE WARDROBE?<br\/><br\/>A capsule wardrobe is a curated collection of essential,versatile clothing items that can be mixed and matched to create a wide range of outfits.  The key principles of a capsule wardrobe are quality over quantity, versatility and longevity.  With fewer items, you can focus on quality, reduce clutter and simplify your daily routine.<br\/><br\/>WHY BLEUSALT FOR YOUR CAPSULE WARDROBE?<br\/><br\/>Bleusalt's commitment to sustainability and unparalleled comfort makes it a perfect choice for a capsule wardrobe paired with your tried and true accessories and outerwear.<\/p>"}}},"block_order":["template--14667687166065__8137d931-8d8f-467c-8d80-cbe4196cfa7e-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":48}},"1633381624c65b9a08":{"type":"rich-text","blocks":{"95c27c52-2cd7-4156-9741-ea6e848df84e":{"type":"heading","settings":{"heading":"<p>Capsule Wardrobes<\/p>","heading_size":"h1"}},"9fd35e0e-1569-4b70-85c2-298018db9411":{"type":"text","settings":{"text":"<h2>Introducing the Bleusalt Capsule Wardrobe.<\/h2><p>At Bleusalt, we believe less is more when it comes to dressing. That’s why we’ve selected each capsule to take you effortlessly from day to night and anywhere you want to go with our signature sustainable luxury designs. You mix in your <em>own<\/em> tried and true favorites to complete the look you want to achieve, and we provide the perfect foundation for your style.<\/p><h2>Build a Capsule Wardrobe with Timeless Pieces<\/h2><p>These luxurious, seasonless basics will elevate your look and create a streamlined dressing experience while leaving you with more time to enjoy your life and curating the confidence to keep you looking as good as you feel. Experience the ease of having a collection of clothing elevated and easily interchangeable items. Choose from our 6-piece, 9-piece, or 12-piece women’s capsule wardrobe and enjoy ~20%.<\/p><h2>Shop Sustainable Capsule Wardrobes<\/h2><p>Our sustainable basics are made from high-quality materials, including our signature TENCEL™ fabric. By investing in high-quality basics that can be worn in various ways, you can create a more environmentally conscious wardrobe. <\/p><p>Browse our collections of capsule wardrobes for travel and everyday wear.<\/p>"}}},"block_order":["95c27c52-2cd7-4156-9741-ea6e848df84e","9fd35e0e-1569-4b70-85c2-298018db9411"],"disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"capsulewardrobes-page","background_image_size":"cover","color_scheme":"background-1","full_width":false,"padding_top":24,"padding_bottom":48}}},"order":["main","1661898424dccd1840","650d2e6f-78f3-40b0-a147-52df9e974242","8137d931-8d8f-467c-8d80-cbe4196cfa7e","1633381624c65b9a08"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "1661898424dccd1840": {
+      "type": "multicolumn",
+      "blocks": {
+        "1661898423461d8183-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/winter-2023.jpg",
+            "title": "THE SPRING CAPSULE WARDROBE",
+            "text": "<p>$1100<\/p>",
+            "html": "",
+            "link_label": "",
+            "link": "shopify:\/\/pages\/spring-capsule-wardrobe"
+          }
+        }
+      },
+      "block_order": [
+        "1661898423461d8183-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "btextimg": "",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "650d2e6f-78f3-40b0-a147-52df9e974242": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14667687166065__650d2e6f-78f3-40b0-a147-52df9e974242-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify:\/\/pages\/spring-capsule-wardrobe",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14667687166065__650d2e6f-78f3-40b0-a147-52df9e974242-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "8137d931-8d8f-467c-8d80-cbe4196cfa7e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14667687166065__8137d931-8d8f-467c-8d80-cbe4196cfa7e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>WHAT IS A CAPSULE WARDROBE?<br\/><br\/>A capsule wardrobe is a curated collection of essential,versatile clothing items that can be mixed and matched to create a wide range of outfits.  The key principles of a capsule wardrobe are quality over quantity, versatility and longevity.  With fewer items, you can focus on quality, reduce clutter and simplify your daily routine.<br\/><br\/>WHY BLEUSALT FOR YOUR CAPSULE WARDROBE?<br\/><br\/>Bleusalt's commitment to sustainability and unparalleled comfort makes it a perfect choice for a capsule wardrobe paired with your tried and true accessories and outerwear.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14667687166065__8137d931-8d8f-467c-8d80-cbe4196cfa7e-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 48
+      }
+    },
+    "1633381624c65b9a08": {
+      "type": "rich-text",
+      "blocks": {
+        "95c27c52-2cd7-4156-9741-ea6e848df84e": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Capsule Wardrobes<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "9fd35e0e-1569-4b70-85c2-298018db9411": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Introducing the Bleusalt Capsule Wardrobe.<\/h2><p>At Bleusalt, we believe less is more when it comes to dressing. That’s why we’ve selected each capsule to take you effortlessly from day to night and anywhere you want to go with our signature sustainable luxury designs. You mix in your <em>own<\/em> tried and true favorites to complete the look you want to achieve, and we provide the perfect foundation for your style.<\/p><h2>Build a Capsule Wardrobe with Timeless Pieces<\/h2><p>These luxurious, seasonless basics will elevate your look and create a streamlined dressing experience while leaving you with more time to enjoy your life and curating the confidence to keep you looking as good as you feel. Experience the ease of having a collection of clothing elevated and easily interchangeable items. Choose from our 6-piece, 9-piece, or 12-piece women’s capsule wardrobe and enjoy ~20%.<\/p><h2>Shop Sustainable Capsule Wardrobes<\/h2><p>Our sustainable basics are made from high-quality materials, including our signature TENCEL™ fabric. By investing in high-quality basics that can be worn in various ways, you can create a more environmentally conscious wardrobe. <\/p><p>Browse our collections of capsule wardrobes for travel and everyday wear.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "95c27c52-2cd7-4156-9741-ea6e848df84e",
+        "9fd35e0e-1569-4b70-85c2-298018db9411"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "capsulewardrobes-page",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1661898424dccd1840",
+    "650d2e6f-78f3-40b0-a147-52df9e974242",
+    "8137d931-8d8f-467c-8d80-cbe4196cfa7e",
+    "1633381624c65b9a08"
+  ]
+}
