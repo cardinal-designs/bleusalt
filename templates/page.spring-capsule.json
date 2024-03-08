@@ -17,8 +17,8 @@
         "6e752db5-b4b1-4fbe-aa22-bc5471584a20": {
           "type": "column",
           "settings": {
-            "title": "7 PIECE WINTER WARDROBE",
-            "text": "<p><br\/>The Turtleneck Dress<br\/>The Turtleneck<br\/>The Poncho<br\/>The Palazzo Sailor Pant<br\/>The Tube Skirt<br\/>The Bubble Crew<br\/>The 3 Yard Wrap<br\/><br\/><strong>$900<br\/><br\/><\/strong><br\/>Save 20% when you buy a Wardrobe<br\/>Select Sizes & Colors Below...<\/p>",
+            "title": "7 PIECE SPRING WARDROBE",
+            "text": "<p><br\/>The Long Sleeve Crew Dress<br\/>The Big Rock Boyfriend Blazer<br\/>The Tube Skirt<br\/>The Zip Polo<br\/>The 3 Yard Wrap<br\/>The Classic Crew<br\/>The Cindy Pant<br\/><br\/><strong>$900<br\/><br\/><\/strong><br\/>Save 20% when you buy a Wardrobe<br\/>Select Sizes & Colors Below...<\/p>",
             "html": "",
             "link_label": "",
             "link": ""
@@ -35,7 +35,7 @@
         ".cat-hding {top: 50%; transform: translate(0, -50%); position: relative;}"
       ],
       "settings": {
-        "title": "THE WINTER CAPSULE WARDROBE",
+        "title": "THE SPRING CAPSULE WARDROBE",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "portrait",
@@ -60,8 +60,8 @@
       ],
       "settings": {
         "title": "SELECT YOUR SIZES",
-        "collection": "winter-capsule-collection",
-        "discount_percentage": "22.5475"
+        "collection": "spring-2024-capsule-wardrobe",
+        "discount_percentage": "21.2595"
       }
     }
   },
