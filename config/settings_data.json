@@ -294,13 +294,22 @@
               "color_bg": "#0d1c29",
               "color_text": "#ffffff"
             }
+          },
+          "badge_RVNF4P": {
+            "type": "badge",
+            "settings": {
+              "title": "FINAL SALE",
+              "color_bg": "#dd1d1d",
+              "color_text": "#fff"
+            }
           }
         },
         "block_order": [
           "78544067-df99-47bb-8dc1-ff5109ef24be",
           "c0797ee9-220b-462b-860e-8678570e8db5",
           "a5bcc235-3022-41a1-8824-20c702e49e8b",
-          "ab73618f-7bb2-46f8-851b-bb2d4d867958"
+          "ab73618f-7bb2-46f8-851b-bb2d4d867958",
+          "badge_RVNF4P"
         ],
         "settings": {
         }
