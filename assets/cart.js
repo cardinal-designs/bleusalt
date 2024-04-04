@@ -169,7 +169,7 @@ class CartItems extends HTMLElement {
           errors.textContent = window.cartStrings.error;
           this.disableLoading();
         }).finally(() => {
-          this.disableLoading();
+          console.log("helloo finally")
         });
     }
   }
