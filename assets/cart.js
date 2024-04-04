@@ -96,7 +96,7 @@ class CartItems extends HTMLElement {
         return;
         const parsedState = JSON.parse(state);
         if (!parsedState.sections) {
-          // this.forceUpdateCartDrawer();
+          this.forceUpdateCartDrawer();
           return;
         }
 
