@@ -245,26 +245,26 @@ if (!customElements.get('canvas-bag')) {
       this.cartItems = document.querySelector("cart-drawer-items");
       this.cartDrawer = document.querySelector('cart-drawer');
 
-      this.addEventListener('change', debounce((event) => {
-        const quantity = parseFloat(this.querySelector('.quantity__input').value);
+      // this.addEventListener('change', debounce((event) => {
+      //   const quantity = parseFloat(this.querySelector('.quantity__input').value);
 
-        let updates = {};
+      //   let updates = {};
 
-        updates[this.variantId] = quantity;
+      //   updates[this.variantId] = quantity;
 
-        const body = JSON.stringify({
-          updates: updates,
-          sections: this.cartItems.getSectionsToRender().map((section) => section.section),
-          sections_url: window.location.pathname
-        });
+      //   const body = JSON.stringify({
+      //     updates: updates,
+      //     sections: this.cartItems.getSectionsToRender().map((section) => section.section),
+      //     sections_url: window.location.pathname
+      //   });
 
-        fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
-          .then(response => response.json())
-          .then(data => {
-            this.cartDrawer.renderContents(data)
-          })
-          .catch(error => console.log(error));
-      }, 300));
+      //   fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
+      //     .then(response => response.json())
+      //     .then(data => {
+      //       this.cartDrawer.renderContents(data)
+      //     })
+      //     .catch(error => console.log(error));
+      // }, 300));
     }
   });
 };
