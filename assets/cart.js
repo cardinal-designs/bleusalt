@@ -87,85 +87,87 @@ class CartItems extends HTMLElement {
     });
     console.log(body);
 
-    fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
-      .then((response) => {
-        return response.text();
-      })
-      .then((state) => {
-        updateCart();
-        return;
-        const parsedState = JSON.parse(state);
-        if (!parsedState.sections) {
-          this.forceUpdateCartDrawer();
-          return;
-        }
+    // fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
+    //   .then((response) => {
+    //     return response.text();
+    //   })
+    //   .then((state) => {
+    //     updateCart();
+    //     return;
+    //     const parsedState = JSON.parse(state);
+    //     if (!parsedState.sections) {
+    //       this.forceUpdateCartDrawer();
+    //       return;
+    //     }
 
-        this.classList.toggle('is-empty', parsedState.item_count === 0);
-        const cartDrawerWrapper = document.querySelector('cart-drawer');
-        const cartFooter = document.getElementById('main-cart-footer');
+    //     this.classList.toggle('is-empty', parsedState.item_count === 0);
+    //     const cartDrawerWrapper = document.querySelector('cart-drawer');
+    //     const cartFooter = document.getElementById('main-cart-footer');
 
-        // if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
-        // if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
+    //     // if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
+    //     // if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
-        this.getSectionsToRender().forEach((section => {
-          const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-          if(!elementToReplace) return true;
-          elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
-        }));
-
-
-BOLD.common.themeCartCallback = function(){
-let sections = (this.getSectionsToRender().map((section) => section.section)).join();
-fetch(`/?sections=${sections}`, {
-method: 'GET',
-})
-.then((response) => {
-return response.text();
-})
-.then((state) => {
-const pState = JSON.parse(state);
-this.getSectionsToRender().forEach((section => {
-const elementToReplace =
-document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-elementToReplace.innerHTML =
-this.getSectionInnerHTML(pState[section.section], section.selector);
-}));
-})
-}.bind(this);
-BOLD.common.eventEmitter.emit("BOLD_COMMON_cart_loaded", parsedState);parsedState.items.forEach(function(item){
-if(item.product_type && item.product_type.includes("HIDDEN_PRODUCT"))
-parsedState.item_count = parsedState.item_count - item.quantity;
-});
-this.updateLiveRegions(line, parsedState.item_count);
-        const lineItem =  document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
-        if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
-          cartDrawerWrapper ? trapFocus(cartDrawerWrapper, lineItem.querySelector(`[name="${name}"]`)) : lineItem.querySelector(`[name="${name}"]`).focus();
-        } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
-          trapFocus(cartDrawerWrapper.querySelector('.drawer__inner-empty'), cartDrawerWrapper.querySelector('a'))
-        } else if (document.querySelector('.cart-item') && cartDrawerWrapper) {
-          trapFocus(cartDrawerWrapper, document.querySelector('.cart-item__name'))
-        }
-
-        if(this.localName === 'cart-drawer-items') {
-          const drawerDoc = new DOMParser().parseFromString(parsedState.sections['cart-drawer'], 'text/html');
-          const newWearWith = drawerDoc.querySelector('.wear-with__desktop');
-          const oldWearWith = document.querySelector('.wear-with__desktop');
-          if(newWearWith && oldWearWith) {
-            oldWearWith.innerHTML = newWearWith.innerHTML;
-            document.querySelector('cart-drawer').wearWith();
-          }
-        }
+    //     this.getSectionsToRender().forEach((section => {
+    //       const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+    //       if(!elementToReplace) return true;
+    //       elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+    //     }));
 
 
-        this.disableLoading();
-        (typeof window.BOLD !== 'undefined' && typeof window.BOLD.common !== 'undefined' && typeof window.BOLD.common.eventEmitter !== 'undefined' && typeof window.BOLD.common.eventEmitter.emit !== 'undefined' && (BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded')));
-}).catch((error) => {
-        console.log(error);
-        this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
-        const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
-        errors.textContent = window.cartStrings.error;
-        this.disableLoading();
-      });
+    //     BOLD.common.themeCartCallback = function(){
+    //       let sections = (this.getSectionsToRender().map((section) => section.section)).join();
+    //       fetch(`/?sections=${sections}`, {
+    //         method: 'GET',
+    //       })
+    //       .then((response) => {
+    //         return response.text();
+    //       })
+    //       .then((state) => {
+    //         const pState = JSON.parse(state);
+    //         this.getSectionsToRender().forEach((section => {
+    //           const elementToReplace =
+    //           document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+    //           elementToReplace.innerHTML =
+    //           this.getSectionInnerHTML(pState[section.section], section.selector);
+    //         }));
+    //       })
+    //     }.bind(this);
+        
+    //     BOLD.common.eventEmitter.emit("BOLD_COMMON_cart_loaded", parsedState);parsedState.items.forEach(function(item){
+    //       if(item.product_type && item.product_type.includes("HIDDEN_PRODUCT"))
+    //       parsedState.item_count = parsedState.item_count - item.quantity;
+    //     });
+        
+    //     this.updateLiveRegions(line, parsedState.item_count);
+    //     const lineItem =  document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
+    //     if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
+    //       cartDrawerWrapper ? trapFocus(cartDrawerWrapper, lineItem.querySelector(`[name="${name}"]`)) : lineItem.querySelector(`[name="${name}"]`).focus();
+    //     } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
+    //       trapFocus(cartDrawerWrapper.querySelector('.drawer__inner-empty'), cartDrawerWrapper.querySelector('a'))
+    //     } else if (document.querySelector('.cart-item') && cartDrawerWrapper) {
+    //       trapFocus(cartDrawerWrapper, document.querySelector('.cart-item__name'))
+    //     }
+
+    //     if(this.localName === 'cart-drawer-items') {
+    //       const drawerDoc = new DOMParser().parseFromString(parsedState.sections['cart-drawer'], 'text/html');
+    //       const newWearWith = drawerDoc.querySelector('.wear-with__desktop');
+    //       const oldWearWith = document.querySelector('.wear-with__desktop');
+    //       if(newWearWith && oldWearWith) {
+    //         oldWearWith.innerHTML = newWearWith.innerHTML;
+    //         document.querySelector('cart-drawer').wearWith();
+    //       }
+    //     }
+
+
+    //     this.disableLoading();
+    //     (typeof window.BOLD !== 'undefined' && typeof window.BOLD.common !== 'undefined' && typeof window.BOLD.common.eventEmitter !== 'undefined' && typeof window.BOLD.common.eventEmitter.emit !== 'undefined' && (BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded')));
+    //   }).catch((error) => {
+    //     console.log(error);
+    //     this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
+    //     const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+    //     errors.textContent = window.cartStrings.error;
+    //     this.disableLoading();
+    //   });
   }
 
   updateLiveRegions(line, itemCount) {
