@@ -171,6 +171,8 @@ class CartItems extends HTMLElement {
         }).finally(() => {
           console.log("helloo finally")
         });
+    }else{
+      this.disableLoading();
     }
   }
 
