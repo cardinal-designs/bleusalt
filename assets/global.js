@@ -912,27 +912,27 @@ const updateCart = () => {
   })
   .then((html) => {
     console.log("testing 1")
-    // const elementsToUpdate = [
-    //   'cart-drawer .drawer__inner',
-    //   '#cart-icon-bubble',
-    //   '.wear-with__desktop'
-    // ]
-    // elementsToUpdate.forEach((selector) => {
-    //   const doc = new DOMParser().parseFromString(html, 'text/html');
-    //   const oldEl = document.querySelector(selector);
-    //   const newEl = doc.querySelector(selector);
-    //   if(!oldEl || !newEl) return;
-    //   oldEl.innerHTML = newEl.innerHTML;
-    // });
-    // if(!cartDrawer.classList.contains('active')) {
-    //   cartDrawer.open();
-    // }
-    // cartDrawer.wearWith();
+    const elementsToUpdate = [
+      'cart-drawer .drawer__inner',
+      '#cart-icon-bubble',
+      '.wear-with__desktop'
+    ]
+    elementsToUpdate.forEach((selector) => {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const oldEl = document.querySelector(selector);
+      const newEl = doc.querySelector(selector);
+      if(!oldEl || !newEl) return;
+      oldEl.innerHTML = newEl.innerHTML;
+    });
+    if(!cartDrawer.classList.contains('active')) {
+      cartDrawer.open();
+    }
+    cartDrawer.wearWith();
 
-    // if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
-    //               typeof BOLD.common.eventEmitter.emit === 'function'){
-    //             BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
-    //  }
+    if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
+                  typeof BOLD.common.eventEmitter.emit === 'function'){
+                BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+     }
     
   });
 }
