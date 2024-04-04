@@ -92,7 +92,7 @@ class CartItems extends HTMLElement {
         return response.text();
       })
       .then((state) => {
-        // updateCart();
+        updateCart();
         return;
         const parsedState = JSON.parse(state);
         if (!parsedState.sections) {
