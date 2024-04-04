@@ -168,6 +168,8 @@ class CartItems extends HTMLElement {
           const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
           errors.textContent = window.cartStrings.error;
           this.disableLoading();
+        }).finally(() => {
+          this.disableLoading();
         });
     }
   }
