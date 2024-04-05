@@ -1454,6 +1454,7 @@ table[data-in-to-cm] td {
   border: 1px solid #000000 !important;
   font-size: 10px;
   height: 28px;
+  text-align: center;
 }
 
 #PopupModal-sizing-guide .product-popup-modal__content tr td:first-child,
