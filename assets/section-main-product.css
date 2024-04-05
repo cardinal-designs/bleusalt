@@ -1434,7 +1434,8 @@ table[data-in-to-cm] td {
   background-color: #f8f8f8;
 }
 
-#PopupModal-sizing-guide .product-popup-modal__content {
+#PopupModal-sizing-guide .product-popup-modal__content,
+#PopupModal-measuring-guide .product-popup-modal__content {
   position: absolute;
   right: 0;
   height: 100%;
@@ -1445,7 +1446,8 @@ table[data-in-to-cm] td {
   border-radius: 0;
 }
 
-#PopupModal-sizing-guide {
+#PopupModal-sizing-guide,
+#PopupModal-measuring-guide {
   transition: all .20s linear;
 }
 
