@@ -1455,4 +1455,5 @@ table[data-in-to-cm] td {
 #PopupModal-sizing-guide .product-popup-modal__content tr td:first-child,
 #PopupModal-sizing-guide .product-popup-modal__content tr:first-child td {
   font-weight: 500;
+  line-height: normal;
 }
