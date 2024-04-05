@@ -1441,4 +1441,5 @@ table[data-in-to-cm] td {
   margin: 0;
   max-height: 100%;
   left: unset;
+  border-radius: 0;
 }
