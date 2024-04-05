@@ -1402,18 +1402,23 @@ table[data-in-to-cm] td {
 }
 
 @media screen and (max-width: 749px) {
+  
   .product__title h1 {
     font-size: 22px;
   }
+  
   #product__recommends {
     font-size: 1.4rem;
   }
+  
   .okeReviews-reviewsAggregate-recommends-badge {
     display: block;
   }
+  
   .price--large {
     font-size: 1.8rem;
   }
+  
 }
 
 #pdp-stylist-link {
@@ -1433,6 +1438,8 @@ table[data-in-to-cm] td {
 #pdp-stylist-link:hover {
   background-color: #f8f8f8;
 }
+
+/***** Popup Edits Start *****/
 
 #PopupModal-sizing-guide .product-popup-modal__content,
 #PopupModal-measuring-guide .product-popup-modal__content {
@@ -1476,3 +1483,15 @@ table[data-in-to-cm] td {
 #PopupModal-measuring-guide .product-popup-modal__content-info p {
   font-weight: normal;
 }
+
+@media screen and (max-width: 749px) {
+
+  #PopupModal-sizing-guide .product-popup-modal__content,
+  #PopupModal-measuring-guide .product-popup-modal__content {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+}
+
+/***** Popup Edits End *****/
