@@ -1494,6 +1494,7 @@ table[data-in-to-cm] td {
 
   #PopupModal-sizing-guide .product-popup-modal__content table {
     display: table;
+    max-width: 100%;
   }
   
 }
