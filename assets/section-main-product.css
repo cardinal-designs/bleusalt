@@ -1448,7 +1448,7 @@ table[data-in-to-cm] td {
 
 #PopupModal-sizing-guide,
 #PopupModal-measuring-guide {
-  transition: all .20s linear;
+  transition: all .25s linear;
 }
 
 #PopupModal-sizing-guide .product-popup-modal__content td,
