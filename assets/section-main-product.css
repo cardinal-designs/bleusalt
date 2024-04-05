@@ -1348,13 +1348,15 @@ a.product__text {
 }
 
 .size-conversion-link {
-  padding: 1rem 0.7rem;
+  padding: 1rem .7rem;
   display: inline-block;
   font-weight: 500;
   border: 0;
   background: 0;
   cursor: pointer;
+  font-size: 12px;
 }
+
 .size-conversion-link.active {
   text-decoration: underline;
 }
