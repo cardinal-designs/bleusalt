@@ -1492,7 +1492,7 @@ table[data-in-to-cm] td {
     width: 100%;
   }
 
-  .product-popup-modal__content table {
+  #PopupModal-sizing-guide .product-popup-modal__content table {
     display: table;
   }
   
