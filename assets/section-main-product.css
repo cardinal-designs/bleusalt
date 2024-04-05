@@ -1448,6 +1448,12 @@ table[data-in-to-cm] td {
   transition: all .30s linear;
 }
 
-.product-popup-modal__content td, .product-popup-modal__content th {
+.product-popup-modal__content td,
+.product-popup-modal__content th {
   border: 1px solid #000000 !important;
+}
+
+.product-popup-modal__content tr td:first-child,
+.product-popup-modal__content tr:first-child td {
+  font-weight: 500;
 }
