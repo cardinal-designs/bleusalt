@@ -1447,3 +1447,7 @@ table[data-in-to-cm] td {
 #PopupModal-sizing-guide {
   transition: all .30s linear;
 }
+
+.product-popup-modal__content td, .product-popup-modal__content th {
+  border: 1px solid #000000 !important;
+}
