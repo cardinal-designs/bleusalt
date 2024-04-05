@@ -1491,6 +1491,10 @@ table[data-in-to-cm] td {
     max-width: 100%;
     width: 100%;
   }
+
+  .product-popup-modal__content table {
+    display: table;
+  }
   
 }
 
