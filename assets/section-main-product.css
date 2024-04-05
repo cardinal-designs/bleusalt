@@ -1469,3 +1469,7 @@ table[data-in-to-cm] td {
   min-height: 100%;
   overflow-x: auto;
 }
+
+#PopupModal-measuring-guide ol li {
+  font-weight: normal;
+}
