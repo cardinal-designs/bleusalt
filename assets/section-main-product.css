@@ -1443,3 +1443,7 @@ table[data-in-to-cm] td {
   left: unset;
   border-radius: 0;
 }
+
+#PopupModal-sizing-guide {
+  transition: all .30s linear;
+}
