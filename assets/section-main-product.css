@@ -1472,6 +1472,7 @@ table[data-in-to-cm] td {
   overflow-x: auto;
 }
 
-#PopupModal-measuring-guide ol li {
+#PopupModal-measuring-guide .product-popup-modal__content-info ol li,
+#PopupModal-measuring-guide .product-popup-modal__content-info p {
   font-weight: normal;
 }
