@@ -827,6 +827,6 @@ cart-note:after {
 @media screen and (max-width: 749px) {
   .cart-upsell .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-media {
     width: 100%;
-    max-width: 130px;
+    max-width: 93px;
   }
 }
