@@ -823,3 +823,10 @@ cart-note:after {
   outline: none !important;
   box-shadow: unset;
 }
+
+@media screen and (max-width: 749px) {
+  .cart-upsell .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-media {
+    width: 100%;
+    max-width: 130px;
+  }
+}
