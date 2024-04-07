@@ -787,6 +787,7 @@ cart-note:after {
 
 .cart-upsell .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-media {
   width: 100%;
+  max-width: 130px;
 }
 
 .cart-upsell .rebuy-widget .rebuy-product-grid.large-columns-1 .rebuy-product-block .rebuy-product-info {
