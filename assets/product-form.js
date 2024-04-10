@@ -20,7 +20,7 @@ const inchesToCentimeters = () => {
     const buttonHtml = `
       <button class="btn--link size-conversion-link set-to-in active">Inches</button>
       <button class="btn--link size-conversion-link set-to-cm">Centimeters</button>
-      <button class="btn--link size-conversion-link set-to-cm">International</button>
+      <button class="btn--link size-conversion-link set-to-international">International</button>
     `;
     const buttons = document.createElement('div');
     buttons.innerHTML = buttonHtml;
