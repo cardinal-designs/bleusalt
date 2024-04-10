@@ -42,6 +42,7 @@ const inchesToCentimeters = () => {
     link.addEventListener('click', (event) => {
       const table = event.target.parentNode.nextSibling;
       const swappableElements = table.querySelectorAll('.swappable');
+      console.log('Clicked');
       international_table.classList.remove("hidden");
       international__chart.classList.add("hidden");
       
