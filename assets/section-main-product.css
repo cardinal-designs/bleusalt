@@ -1472,6 +1472,7 @@ table[data-in-to-cm] td {
   font-weight: 500;
   line-height: 1.4;
   font-size: 12px;
+  word-break: break-word;
 }
 
 #PopupModal-sizing-guide .product-popup-modal__content-info {
