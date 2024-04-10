@@ -14,17 +14,13 @@ const productThumbnailsFn = () => {
 };
 
 const inchesToCentimeters = () => {
-  const international_tab = document.querySelector('.set-to-international');
-  const international_table = document.querySelector('table[data-in-to-cm]');
-  const international__chart = document.querySelector('.international__chart');
   if (window.location.href.indexOf('babybleu') > -1) return;
   const tables = document.querySelectorAll('table[data-in-to-cm]');
-
   tables.forEach((table) => {
     const buttonHtml = `
       <button class="btn--link size-conversion-link set-to-in active">Inches</button>
       <button class="btn--link size-conversion-link set-to-cm">Centimeters</button>
-      <button class="btn--link set-to-international">International</button>
+      <button class="btn--link size-conversion-link set-to-international">International</button>
     `;
     const buttons = document.createElement('div');
     buttons.innerHTML = buttonHtml;
@@ -42,10 +38,7 @@ const inchesToCentimeters = () => {
     link.addEventListener('click', (event) => {
       const table = event.target.parentNode.nextSibling;
       const swappableElements = table.querySelectorAll('.swappable');
-      console.log('Clicked');
-      international_table.classList.remove("hidden");
-      international__chart.classList.add("hidden");
-      
+
       sizeConversionLinks.forEach((link) => {
         link.classList.remove('active');
       });
@@ -71,9 +64,17 @@ const inchesToCentimeters = () => {
       }
     });
   });
-  console.log(international_tab);
-
+  const international_tab = document.querySelector('.set-to-international');
+  const international_table = document.querySelector("table[data-in-to-cm]");
+  const international__chart = document.querySelector(".international__chart");
+  international_tab.addEventListener('click', () => {
+    international_table.classList.add("hidden");
+    international__chart.classList.remove("hidden");
+  });
 };
+
+
+
 
 const onSwiperChange = () => {
   const mediaList = document.querySelector('.product__media-list');
