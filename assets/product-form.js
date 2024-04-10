@@ -15,8 +15,8 @@ const productThumbnailsFn = () => {
 
 const inchesToCentimeters = () => {
   const international_tab = document.querySelector('.set-to-international');
-  const international_table = document.querySelector("table[data-in-to-cm]");
-  const international__chart = document.querySelector(".international__chart");
+  const international_table = document.querySelector('table[data-in-to-cm]');
+  const international__chart = document.querySelector('.international__chart');
   if (window.location.href.indexOf('babybleu') > -1) return;
   const tables = document.querySelectorAll('table[data-in-to-cm]');
 
