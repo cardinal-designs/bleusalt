@@ -16,7 +16,6 @@ const productThumbnailsFn = () => {
 const inchesToCentimeters = () => {
   if (window.location.href.indexOf('babybleu') > -1) return;
   const tables = document.querySelectorAll('table[data-in-to-cm]');
-  const inernationaltables = document.querySelectorAll('table[data-international]');
   tables.forEach((table) => {
     const buttonHtml = `
       <button class="btn--link size-conversion-link set-to-in active">Inches</button>
@@ -66,8 +65,6 @@ const inchesToCentimeters = () => {
     });
   });
 };
-
-const tables = document.querySelector('.set-to-international');
 
 const onSwiperChange = () => {
   const mediaList = document.querySelector('.product__media-list');
