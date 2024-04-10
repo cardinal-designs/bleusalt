@@ -71,11 +71,13 @@ const inchesToCentimeters = () => {
       }
     });
   });
+  console.log(international_tab);
+  international_tab.addEventListener('click', () => {
+    international_table.classList.add("hidden");
+    international__chart.classList.remove("hidden");
+  });
+  
 
-  // international_tab.addEventListener('click', () => {
-  //   international_table.classList.add("hidden");
-  //   international__chart.classList.remove("hidden");
-  // });
 };
 
 const onSwiperChange = () => {
