@@ -1454,7 +1454,7 @@ table[data-in-to-cm] td {
   border-radius: 0;
 }
 
-.international__chart table {
+#PopupModal-sizing-guide .product-popup-modal__content .international__chart table {
   display: block;
   max-width: -moz-fit-content;
   max-width: fit-content;
