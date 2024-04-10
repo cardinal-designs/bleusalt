@@ -66,7 +66,10 @@ const inchesToCentimeters = () => {
   });
 };
 
-const tables = document.querySelector('.set-to-international');
+const international_tab = document.querySelector('.set-to-international');
+international_tab.addEventListener('click', => {
+  console.log('Clicked');
+});
 
 
 const onSwiperChange = () => {
