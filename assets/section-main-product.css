@@ -1334,6 +1334,7 @@ a.product__text {
 #PopupModal-measuring-guide table {
   border: 0;
   box-shadow: initial;
+  border-collapse: collapse;
 }
 
 .product-popup-modal__content tr td:first-child,
