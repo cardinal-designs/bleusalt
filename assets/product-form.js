@@ -66,7 +66,7 @@ const inchesToCentimeters = () => {
   });
   const international_tab = document.querySelector('.set-to-international');
   const international_table = document.querySelector("table[data-in-to-cm]");
-  const ; = document.querySelector("international__chart");
+  const international__chart = document.querySelector(".international__chart");
   international_tab.addEventListener('click', () => {
   console.log('Clicked');
     international_table.classList.add("hidden");
