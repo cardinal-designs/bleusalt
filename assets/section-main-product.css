@@ -1507,7 +1507,7 @@ table[data-in-to-cm] td {
   
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 550px) {
 
   #PopupModal-sizing-guide .product-popup-modal__content .international__chart table {
     display: block;
