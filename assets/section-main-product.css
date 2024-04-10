@@ -1508,6 +1508,14 @@ table[data-in-to-cm] td {
   .international__chart {
     overflow: auto;  
   }
+
+  .international__chart table td {
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 12px;
+    word-break: break-word;
+    width: 58px;
+  }
   
 }
 
