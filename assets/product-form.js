@@ -65,8 +65,10 @@ const inchesToCentimeters = () => {
     });
   });
   const international_tab = document.querySelector('.set-to-international');
+  const international_table = document.querySelector("table[data-in-to-cm]");
   international_tab.addEventListener('click', () => {
   console.log('Clicked');
+    international_table.classList.add("hidden")
   });
 };
 
