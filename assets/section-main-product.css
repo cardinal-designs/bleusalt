@@ -1504,20 +1504,11 @@ table[data-in-to-cm] td {
     display: table;
     max-width: 100%;
   }
-  
-}
 
-@media screen and (max-width: 550px) {
-
-  #PopupModal-sizing-guide .product-popup-modal__content .international__chart table {
-    display: block;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    margin: 0 auto;
-    overflow-x: auto;
-    white-space: nowrap;
+  .international__chart {
+    overflow: auto;  
   }
-
+  
 }
 
 /***** Popup Edits End *****/
