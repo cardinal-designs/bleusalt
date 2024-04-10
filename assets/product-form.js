@@ -39,6 +39,9 @@ const inchesToCentimeters = () => {
       const table = event.target.parentNode.nextSibling;
       const swappableElements = table.querySelectorAll('.swappable');
 
+      document.querySelector('table[data-in-to-cm]').classList.remove("hidden");
+      document.querySelector('.international__chart').classList.add("hidden");
+      
       sizeConversionLinks.forEach((link) => {
         link.classList.remove('active');
       });
