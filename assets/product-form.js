@@ -67,6 +67,8 @@ const inchesToCentimeters = () => {
   });
 };
 
+const tables = document.querySelector('.set-to-international');
+
 const onSwiperChange = () => {
   const mediaList = document.querySelector('.product__media-list');
   if (!mediaList) return;
