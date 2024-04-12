@@ -618,13 +618,13 @@
               echo pages[sizing_page].content
             endcase
           -%}
-
-          {%- if section.settings.international_chart != blank -%}
-            <div class="international__chart">
-              {{ section.settings.international_chart }}
-            </div>
-          {%- endif -%}
         </div>
+
+        {%- if section.settings.international_chart != blank -%}
+          <div class="international__chart">
+            {{ section.settings.international_chart }}
+          </div>
+        {%- endif -%}
       </div>
     </modal-dialog>
   {%- endfor -%}
