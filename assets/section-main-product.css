@@ -1492,6 +1492,10 @@ table[data-in-to-cm] td {
   margin: 30px 0 0;
 }
 
+.international__chart h4 {
+  text-align: center;
+}
+
 @media screen and (max-width: 749px) {
 
   #PopupModal-sizing-guide .product-popup-modal__content,
