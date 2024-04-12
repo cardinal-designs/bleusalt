@@ -621,7 +621,9 @@
 
           {%- if section.settings.international_chart != blank -%}
             <div class="international__chart">
-              <h5>{{ section.settings.international_chart_title }}</h5>
+              {%- if section.settings.international_chart_title != blank -%}
+                <h5>{{ section.settings.international_chart_title }}</h5>
+              {%- endif -%} 
               {{ section.settings.international_chart }}
             </div>
           {%- endif -%}
