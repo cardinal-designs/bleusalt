@@ -621,7 +621,7 @@
 
           {%- if section.settings.international_chart != blank -%}
             <div class="international__chart">
-              <h5>Size Conversion</h5>
+              <h5>{{ section.settings.international_chart_title }}</h5>
               {{ section.settings.international_chart }}
             </div>
           {%- endif -%}
@@ -1098,6 +1098,12 @@
       "id": "enable_zoom",
       "default": true,
       "label": "Enable zoom"
+    },
+    {
+      "type": "text",
+      "id": "international_chart_title",
+      "label": "International Chart Title",
+      "default": "Size Conversion"
     },
     {
       "type": "textarea",
