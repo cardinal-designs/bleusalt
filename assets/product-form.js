@@ -20,7 +20,6 @@ const inchesToCentimeters = () => {
     const buttonHtml = `
       <button class="btn--link size-conversion-link set-to-in active">Inches</button>
       <button class="btn--link size-conversion-link set-to-cm">Centimeters</button>
-      <button class="btn--link size-conversion-link set-to-international">International</button>
     `;
     const buttons = document.createElement('div');
     buttons.innerHTML = buttonHtml;
@@ -66,13 +65,6 @@ const inchesToCentimeters = () => {
         });
       }
     });
-  });
-  const international_tab = document.querySelector('.set-to-international');
-  const international_table = document.querySelector("table[data-in-to-cm]");
-  const international__chart = document.querySelector(".international__chart");
-  international_tab.addEventListener('click', () => {
-    international_table.classList.add("hidden");
-    international__chart.classList.remove("hidden");
   });
 };
 
