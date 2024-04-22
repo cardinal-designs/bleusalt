@@ -2,23 +2,22 @@
   <ul>
     <li><a href="/">Home</a></li>
     {% if product.tags contains "womens tops" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">womens tops</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "mens tops" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">mens tops</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "womens bottoms" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">womens bottoms</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "mens-bottoms" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">mens-bottoms</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "dresses" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">dresses</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "womens-accessories" and product.tags contains "mens-accessories" and product.tags contains "Accessories" %}
       <li><a href="/collections/all?constraint=accessories">accessories</a></li>
     {% elsif product.tags contains "womens-accessories" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "mens-accessories" %}
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% endif %}
-    
     <li>{{ product.title }}</li>
   </ul>
 </div>
