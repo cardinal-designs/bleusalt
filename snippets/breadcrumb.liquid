@@ -1,7 +1,6 @@
 <div class="breadcrumb">
   <ul>
     <li><a href="/">Home</a></li>
-
     {% if product.tags contains "womens tops" %}
       <li><a href="/collections/all?constraint={{ 'womens tops' | handleize }}">womens tops</a></li>
     {% elsif product.tags contains "mens tops" %}
@@ -19,7 +18,6 @@
     {% elsif product.tags contains "mens-accessories" %}
       <li><a href="/collections/all?constraint={{ 'mens-accessories' | handleize }}">mens-accessories</a></li>
     {% endif %}
-
     <li>{{ product.title }}</li>
   </ul>
 </div>
