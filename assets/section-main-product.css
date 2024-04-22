@@ -1546,6 +1546,19 @@ table[data-in-to-cm] td {
   text-decoration: none;
 }
 
+.breadcrumb ul li:not(:last-child):after {
+  border-style: solid;
+  border-width: .10em .10em 0 0;
+  content: '';
+  display: inline-block;
+  height: .20em;
+  margin: 0 .20em;
+  position: relative;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  width: .20em;
+}
+
 .breadcrumb ul li a {
   color: inherit;
 }
