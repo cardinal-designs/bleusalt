@@ -1544,6 +1544,7 @@ table[data-in-to-cm] td {
   color: inherit;
   font-weight: normal;
   text-decoration: none;
+  font-family: var(--font-body-family);
 }
 
 .breadcrumb ul li:not(:last-child):after {
