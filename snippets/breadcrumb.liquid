@@ -1,6 +1,8 @@
 <div class="breadcrumb">
   <ul>
     <li><a href="/">Home</a></li>
+    <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
+    
     {% if product.tags contains "womens tops" %}
       <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ tag }}</a></li>
     {% elsif product.tags contains "mens tops" %}
