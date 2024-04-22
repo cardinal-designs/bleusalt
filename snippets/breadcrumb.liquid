@@ -22,8 +22,14 @@
   </ul>
 </div>
 
-{{ shop.metafields.global.size_chart_tagged_dresses.value }}
+{% if product.tags contains 'tops' %}{
+  {{ shop.metafields.global.size_chart_tagged_tops.value }}
+{% elsif product.tags contains 'bottom' %}
+  {{ shop.metafields.global.size_chart_tagged_bottom.value }}
+{% elsif product.tags contains 'dresses' %}
+  {{ shop.metafields.global.size_chart_tagged_dresses.value }}
+{% endif %}
 
-{{ shop.metafields.global.size_chart_tagged_tops.value }}
 
-{{ shop.metafields.global.size_chart_tagged_bottom.value }}
+
+
