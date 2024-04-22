@@ -43,8 +43,9 @@
       
       
       
-      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      
       {% endcomment %}
+      <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
     {% endfor %}
 
     {% if product.tags contains "womens tops" %}
