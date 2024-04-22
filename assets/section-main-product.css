@@ -1564,3 +1564,9 @@ table[data-in-to-cm] td {
   color: inherit;
   text-decoration: none;
 }
+
+@media screen and (max-width: 749px) {
+  .breadcrumb {
+    margin: 1em 0 2em;
+  }
+}
