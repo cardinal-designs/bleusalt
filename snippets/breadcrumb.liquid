@@ -50,7 +50,7 @@
 
     {% if product.tags contains "womens tops" %}
       <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
-    {% elsif product.tags contains "womens-accessories" and product.tags contains "mens-accessories" and product.tags contains "accessories" %}
+    {% elsif product.tags contains "womens-accessories" and product.tags contains "mens-accessories" and product.tags contains "Accessories" %}
       <li><a href="/collections/all?constraint={{ tag | handleize }}">accessories</a></li>
     {% elsif product.tags contains "womens-accessories" %}
       <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
