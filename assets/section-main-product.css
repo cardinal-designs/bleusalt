@@ -1563,6 +1563,7 @@ table[data-in-to-cm] td {
 .breadcrumb ul li a {
   color: inherit;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 749px) {
