@@ -1541,6 +1541,9 @@ table[data-in-to-cm] td {
 
 .breadcrumb ul li {
   display: inline-block;
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .breadcrumb ul li a {
