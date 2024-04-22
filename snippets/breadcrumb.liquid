@@ -3,7 +3,7 @@
     <li><a href="/">Home</a></li>
     {% for tag in product.tags %}
       {% assign specificTag = tag | downcase %}
-      {% comment %}
+      
       {% case specificTag %}
         {% when "womens tops" %}
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
@@ -15,13 +15,17 @@
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
         {% when "dresses" %}
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "womens-accessories", "mens-accessories" %}
+          <li><a href="/collections/all?constraint={{ tag | handleize }}">Unisex</a></li>
         {% when "womens-accessories" %}
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
         {% when "mens-accessories" %}
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
       {% endcase %}
-      {% endcomment %}
+      
+      {% comment %}
       <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% endcomment %}
     {% endfor %}
     <li>{{ product.title }}</li>
   </ul>
