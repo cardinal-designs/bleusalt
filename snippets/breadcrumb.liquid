@@ -2,7 +2,25 @@
   <ul>
     <li><a href="/">Home</a></li>
     {% for tag in product.tags %}
-    <li><a href="/">{{ tag }}</a></li>
+      {% assign specificTag = tag | downcase %}
+
+      {% case specificTag %}
+        {% when "womens tops" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "mens tops" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "womens bottoms" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "mens-bottoms" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "dresses" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "womens-accessories" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+        {% when "mens-accessories" %}
+          <li><a href="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% endcase %}
+    
     {% endfor %}
     <li>{{ product.title }}</li>
   </ul>
