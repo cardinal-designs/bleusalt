@@ -3,7 +3,8 @@
     <li><a href="/">Home</a></li>
     {% for tag in product.tags %}
       {% assign specificTag = tag | downcase %}
-      
+
+      {% comment %}
       {% case specificTag %}
         {% when "womens tops" %}
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
@@ -22,6 +23,24 @@
         {% when "mens-accessories" %}
           <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
       {% endcase %}
+      {% endcomment %}
+      
+      {% if specificTag == "womens tops" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% elsif specificTag == "mens tops" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% elsif specificTag == "womens bottoms" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% elsif specificTag == "mens-bottoms" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% elsif specificTag == "dresses" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% elsif specificTag == "womens-accessories" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% elsif specificTag == "mens-accessories" %}
+        <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
+      {% endif %}
+      
       
       {% comment %}
       <li><a href="/collections/all?constraint={{ tag | handleize }}">{{ specificTag }}</a></li>
