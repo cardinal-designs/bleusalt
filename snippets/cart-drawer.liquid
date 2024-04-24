@@ -430,9 +430,11 @@
           </div>
         {% endif %}
 
-        <div class="cart-upsell">
-          <div data-rebuy-id="134158"></div>
-        </div>
+        {% if settings.cart_rebuy %}
+          <div class="cart-upsell">
+            <div data-rebuy-id="134158"></div>
+          </div>
+        {% endif %}
       </cart-drawer-items>
 
       <div class="drawer__footer">
