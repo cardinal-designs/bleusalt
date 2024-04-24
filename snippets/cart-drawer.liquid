@@ -154,16 +154,20 @@
                     {% if shipping_percentage > 100 %}
                       {% assign shipping_percentage = 100 %}
                     {% endif %}
-                    <div class="cart-drawer-header-info"> 
-                      {% if price_needed > 0 %}
-                        <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
-                      {% else %}
-                        <p class="cart-freeshipping">Free shipping enabled</p>
-                      {% endif %}
-                      <div class="free-shipping__bar-container">
-                        <div style="width: {{ shipping_percentage }}%;" class="free-shipping__bar"></div>
+                    
+                    {% if section.settings.promo_bar %}
+                      <div class="cart-drawer-header-info"> 
+                        {% if price_needed > 0 %}
+                          <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
+                        {% else %}
+                          <p class="cart-freeshipping">Free shipping enabled</p>
+                        {% endif %}
+                        <div class="free-shipping__bar-container">
+                          <div style="width: {{ shipping_percentage }}%;" class="free-shipping__bar"></div>
+                        </div>
                       </div>
-                    </div>
+                    {% endif %}
+                    
                     {% if settings.cart_drawer_text != blank %}
                     <p class="cart-text">{{ settings.cart_drawer_text }}</p>
                     {% endif %}
