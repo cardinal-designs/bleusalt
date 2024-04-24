@@ -1211,6 +1211,12 @@
         "id": "cart_promo_bar",
         "label": "Enable cart promo bar?",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_rebuy",
+        "label": "Enable Rebuy in cart?",
+        "default": false
       }
     ]
   },
