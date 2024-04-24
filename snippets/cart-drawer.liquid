@@ -166,11 +166,12 @@
                           <div style="width: {{ shipping_percentage }}%;" class="free-shipping__bar"></div>
                         </div>
                       </div>
+
+                      {% if settings.cart_drawer_text != blank %}
+                        <p class="cart-text">{{ settings.cart_drawer_text }}</p>
+                      {% endif %}
                     {% endif %}
                     
-                    {% if settings.cart_drawer_text != blank %}
-                    <p class="cart-text">{{ settings.cart_drawer_text }}</p>
-                    {% endif %}
                     {%- for item in cart.items -%}
                       {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
                       {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
