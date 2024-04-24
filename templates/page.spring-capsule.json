@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "8af459e2-8f01-4555-b985-a2e183c9f1e9": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spring-2024.jpg",
+            "title": "",
+            "text": "",
+            "html": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "6e752db5-b4b1-4fbe-aa22-bc5471584a20": {
+          "type": "column",
+          "settings": {
+            "title": "7 PIECE SPRING WARDROBE",
+            "text": "<p><br\/>The Long Sleeve Crew Dress<br\/>The Big Rock Boyfriend Blazer<br\/>The Tube Skirt<br\/>The Women's 1\/4 Zip<br\/>The 3 Yard Wrap<br\/>The Classic Crew<br\/>The Cindy Pant<br\/><br\/><strong>$1100<br\/><br\/><\/strong><br\/>Save 20% when you buy a Wardrobe<br\/>Select Sizes & Colors Below...<\/p>",
+            "html": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2",
+        "6e752db5-b4b1-4fbe-aa22-bc5471584a20"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".title-wrapper-with-link {display: block;}",
+        ".cat-hding {top: 50%; transform: translate(0, -50%); position: relative;}"
+      ],
+      "settings": {
+        "title": "THE SPRING CAPSULE WARDROBE",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "btextimg": "",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "capsule-page",
+      "custom_css": [
+        "h1 {font-size: 1.2em;}",
+        ".capsule-type,.capsule-highlights__price {display: none;}"
+      ],
+      "settings": {
+        "title": "SELECT YOUR SIZES",
+        "collection": "spring-2024-capsule-wardrobe",
+        "discount_percentage": "21.2595"
+      }
+    }
+  },
+  "order": [
+    "8af459e2-8f01-4555-b985-a2e183c9f1e9",
+    "main"
+  ]
+}

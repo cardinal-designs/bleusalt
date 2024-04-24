@@ -65,6 +65,7 @@
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
 
+  {% render 'breadcrumb', product: product %}
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
@@ -638,6 +639,36 @@
               echo pages[sizing_page].content
             endcase
           -%}
+
+          {%- if section.settings.international_chart != blank -%}
+            <div class="international__chart">
+              {% if product.tags contains 'tops' %}
+                {%- if section.settings.international_chart_title_tops != blank -%}
+                  <h4>{{ section.settings.international_chart_title_tops }}</h4>
+                {%- endif -%}
+                {{ section.settings.tops_international_chart }}
+              {% elsif product.tags contains 'bottom' %}
+                {%- if section.settings.international_chart_title_bottom != blank -%}
+                  <h4>{{ section.settings.international_chart_title_bottom }}</h4>
+                {%- endif -%}
+                {{ section.settings.bottom_international_chart }}
+              {% elsif product.tags contains 'dresses' %}
+                {%- if section.settings.international_chart_title_dresses != blank -%}
+                  <h4>{{ section.settings.international_chart_title_dresses }}</h4>
+                {%- endif -%}
+                {{ section.settings.dresses_international_chart }}
+              {% endif %}
+              
+              {% comment %}
+              {%- if section.settings.international_chart_title != blank -%}
+                <h4>{{ section.settings.international_chart_title }}</h4>
+              {%- endif -%} 
+              
+              
+              {{ section.settings.international_chart }}
+              {% endcomment %}
+            </div>
+          {%- endif -%}
         </div>
       </div>
     </modal-dialog>
@@ -1111,6 +1142,50 @@
       "id": "enable_zoom",
       "default": true,
       "label": "Enable zoom"
+    },
+    {
+      "type": "text",
+      "id": "international_chart_title",
+      "label": "International Chart Title",
+      "default": "Size Conversion"
+    },
+    {
+      "type": "textarea",
+      "id": "international_chart",
+      "label": "International Chart"
+    },
+    {
+      "type": "text",
+      "id": "international_chart_title_dresses",
+      "label": "Dresses International Chart Title",
+      "default": "Dresses Size Conversion"
+    },
+    {
+      "type": "textarea",
+      "id": "dresses_international_chart",
+      "label": "Dresses International Chart"
+    },
+    {
+      "type": "text",
+      "id": "international_chart_title_tops",
+      "label": "Tops International Chart Title",
+      "default": "Tops Size Conversion"
+    },
+    {
+      "type": "textarea",
+      "id": "tops_international_chart",
+      "label": "Tops International Chart"
+    },
+    {
+      "type": "text",
+      "id": "international_chart_title_bottom",
+      "label": "Bottom International Chart Title",
+      "default": "Bottom Size Conversion"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_international_chart",
+      "label": "Bottom International Chart"
     },
     {
       "type": "header",

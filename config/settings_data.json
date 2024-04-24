@@ -295,12 +295,12 @@
               "color_text": "#ffffff"
             }
           },
-          "badge_RVNF4P": {
+          "badge_9atKTg": {
             "type": "badge",
             "settings": {
               "title": "FINAL SALE",
               "color_bg": "#dd1d1d",
-              "color_text": "#ffffff"
+              "color_text": "#FFFFFF"
             }
           }
         },
@@ -309,7 +309,7 @@
           "c0797ee9-220b-462b-860e-8678570e8db5",
           "a5bcc235-3022-41a1-8824-20c702e49e8b",
           "ab73618f-7bb2-46f8-851b-bb2d4d867958",
-          "badge_RVNF4P"
+          "badge_9atKTg"
         ],
         "settings": {
         }
