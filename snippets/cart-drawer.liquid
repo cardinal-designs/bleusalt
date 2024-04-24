@@ -24,7 +24,8 @@
 -%}
 
 <cart-drawer class="drawer">
-  <div id="CartDrawer" class="cart-drawer">
+  <!-- <div id="CartDrawer" class="cart-drawer"> -->
+  <div id="cart-drawer" class="cart-drawer">
     {%- liquid
       comment
         Figure out what color
@@ -146,6 +147,31 @@
                   </thead>
 
                   <tbody>
+                    {% assign thresh = settings.free_shipping_threshold | times: 1.0 %}
+                    {% assign current_total = cart.total_price | divided_by: 100 %}
+                    {% assign price_needed = thresh | minus: current_total %}
+                    {% assign shipping_percentage = current_total | divided_by: thresh | times: 100 | round %}
+                    {% if shipping_percentage > 100 %}
+                      {% assign shipping_percentage = 100 %}
+                    {% endif %}
+                    
+                    {% if settings.cart_promo_bar %}
+                      <div class="cart-drawer-header-info"> 
+                        {% if price_needed > 0 %}
+                          <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
+                        {% else %}
+                          <p class="cart-freeshipping">Free shipping enabled</p>
+                        {% endif %}
+                        <div class="free-shipping__bar-container">
+                          <div style="width: {{ shipping_percentage }}%;" class="free-shipping__bar"></div>
+                        </div>
+                      </div>
+
+                      {% if settings.cart_drawer_text != blank %}
+                        <p class="cart-text">{{ settings.cart_drawer_text }}</p>
+                      {% endif %}
+                    {% endif %}
+                    
                     {%- for item in cart.items -%}
                       {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
                       {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
@@ -253,6 +279,7 @@
                             </dl>
 
                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                            <p class="product-option">Qty: {{ item.quantity }}</p>
                           {%- endif -%}
 
                           {%- if item.original_price != item.final_price -%}
@@ -272,9 +299,11 @@
 
                             </div>
                           {%- else -%}
+                            {% comment %}
                            <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span> <div class="">
                               {{ item.original_price | money_with_currency }}
                             </div>
+                            {% endcomment %}
 
 
                           {%- endif -%}
@@ -298,27 +327,26 @@
                             </div>
                           </div>
                           <div class="cart-item__price-wrapper">
-
                             {%- if item.original_line_price != item.final_line_price -%}
                               <div class="cart-item__discounted-prices">
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money_with_currency }}
+                                  {{ item.original_line_price | money_without_trailing_zeros}}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
-                               <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                                  {{ item.final_line_price | money_with_currency }}
+                               <span class="">
+                                  {{ item.final_line_price | money_without_trailing_zeros }}
                                 </span>
 
 
                               </div>
                             {%- else -%}
-                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span> <span class="">
-                                {{ item.original_line_price | money_with_currency }}
+                              <span class="">
+                                {{ item.original_line_price | money_without_trailing_zeros }}
                               </span>
 
 
@@ -378,6 +406,7 @@
                             </svg>
                           </div>
                         </td>
+
                       </tr>
                     {% endif %}
                     {%- endfor -%}
@@ -398,6 +427,12 @@
                 <div class="swiper-wrapper"></div>
               </div>
             </wear-with>
+          </div>
+        {% endif %}
+
+        {% if settings.cart_rebuy %}
+          <div class="cart-upsell">
+            <div data-rebuy-id="134158"></div>
           </div>
         {% endif %}
       </cart-drawer-items>
@@ -454,7 +489,7 @@
             {%- endif -%}
           {%- endfor -%}
         {%- endif -%}
-
+        
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer" class="cart-drawer__note-wrapper">
             <summary class="cart-drawer__note-toggle">
@@ -496,7 +531,7 @@
               </ul>
             {%- endif -%}
           </div>
-
+          {% comment %}
           <small class="tax-note caption-large rte">
             {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
               {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -508,6 +543,7 @@
               {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
             {%- endif -%}
           </small>
+          {% endcomment %}
         </div>
 
         <!-- CTAs -->
@@ -520,7 +556,7 @@
           </noscript>
 
           <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button" name="checkout" onClick="addTotal('{{ cart.total_price | money }}')" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
-            {{ 'sections.cart.checkout' | t }}
+            Continue
           </button>
         </div>
         <p class="cart__safe-secure center">Safe &amp; Secure Checkout</p>

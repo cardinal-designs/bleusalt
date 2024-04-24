@@ -1,11 +1,9 @@
 <!doctype html>
   <html class="no-js" lang="{{ request.locale.iso_code }}">
-
     <head>
-{% include 'hyperspeed-imports' %}
-
-{% render 'hs-critical-css' %}
-{% render 'pagefly-head' %}
+      {% include 'hyperspeed-imports' %}
+      {% render 'hs-critical-css' %}  
+      {% render 'pagefly-head' %}
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,8 +13,8 @@
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    <!-- Triple Whale Begin -->
-    <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
+      <!-- Triple Whale Begin -->
+      <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
 
 
 
@@ -376,5 +374,59 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
 
+      <script>
+        function addWrapperRebuy(){
+          const targetNode = document.body;
+          const config = { attributes: true, childList: true, subtree: true };
+          const callback = function(mutationsList, observer) {
+              for(const mutation of mutationsList) {
+                  if (mutation.type === 'childList') {
+                      for (const addedNode of mutation.addedNodes) {
+                          if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
+                              $('.rebuy-product-block').each(function(){
+                                if (!$(this).find('.rebuy-product-wrapper').length) {
+                                  $(this).find('.rebuy-product-wrapper').contents().unwrap();
+                                  $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
+                                }
+                                
+                              })
+                              // Disconnect the observer if the class is found
+                              // observer.disconnect();
+                              return;
+                          }
+                      }
+                  }
+                  // Check if the attributes of any node are changed to have the class "rebuy-product-block"
+                  else if (mutation.type === 'attributes' && mutation.target.classList.contains('rebuy-product-block')) {
+                      $('.rebuy-product-block').each(function(){
+                        if (!$(this).find('.rebuy-product-wrapper').length) {
+                          $(this).find('.rebuy-product-wrapper').contents().unwrap();
+                          $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
+                        }
+                      })
+                      // Disconnect the observer if the class is found
+                      // observer.disconnect();
+                      return;
+                  }
+              }
+          };
+          
+          const observer = new MutationObserver(callback);
+          observer.observe(targetNode, config);
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+          document.addEventListener('rebuy:cart.add', (event) => {
+            updateCart();
+          });
+
+          $(document).on('click', '.rebuy-button', function(){
+              var $this = $(this);
+              $this.closest('.rebuy-product-wrapper').contents().unwrap();
+              $this.closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
+          })
+          addWrapperRebuy();
+        });
+      </script>
+      
   </body>
   </html>

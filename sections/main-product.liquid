@@ -160,7 +160,29 @@
     </div>
     {%- assign product_form_id = 'product-form-' | append: section.id -%}
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
-      <div id="ProductInfo-{{ section.id }}" class="product__info-container small-page-width small-text-center{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
+      <div id="ProductInfo-{{ section.id }}" class="product__info-container small-page-width small-text-center{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">    
+       {% assign badges = '' %}
+       {% for tag in product.tags %}
+         {% if tag contains 'badge:' %}
+           {% if badges == '' %}
+             {% assign badges = tag | split: ':' | last %}
+           {% else %}
+             {% assign badges = badges | append: ',' | append: tag | split: ':' | last %}
+           {% endif %}
+         {% endif %}
+       {% endfor %}
+        <div class="pdp__badge">
+          {%- if product.available == false -%}
+            <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+          {%- elsif product.compare_at_price > product.price and product.available -%}
+            <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+          {%- endif -%}
+          {%- if badges != '' -%}
+            {%- for badge in badges -%}
+              <span id="Badge-{{ section_id }}-{{ product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when '@app' -%}
@@ -171,7 +193,9 @@
 
             <p class="product__text product__text--{{ text_identifier }}{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {%- liquid
-                if text_identifier == 'shippingcalculated'
+                if product.metafields.custom.sub_atc_text != blank
+                  assign text = product.metafields.custom.sub_atc_text.value
+                elsif text_identifier == 'shippingcalculated' 
                   assign text = block.settings.text | replace: 'Shipping','<a class="link" href="/pages/shipping">Shipping</a>'
                 else
                   assign text = block.settings.text | escape
@@ -182,11 +206,11 @@
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1 class="h2">{{ product.title | escape }}</h1>
-              <a href="{{ product.url }}" class="product__title">
-                <h2 class="h1">
-                  {{ product.title | escape }}
-                </h2>
+            {% if product.metafields.custom.breadcrumb_collection != blank %}
+              <a class="product-collection-link" href="/collections/{{ product.metafields.custom.breadcrumb_collection.value.handle }}">
+               <p>{{ product.metafields.custom.breadcrumb_collection.value.title }}</p>
               </a>
+            {% endif %}
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -490,12 +514,8 @@
                   <div class="klaviyo-bis__response alert" style="display: none;"></div>
                 </div>
                 {% endif %}
-              </product-form>
-                      
-
-            
-
-              
+              </product-form>  
+              <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: none;{% else %}display: block;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
               {% comment %}
               {% render 'hs-defer-css' with filename: 'component-pickup-availability.css', pages: 'collection,index,product' | split: ',', local: true %}

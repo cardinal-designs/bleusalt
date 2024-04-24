@@ -911,6 +911,7 @@ const updateCart = () => {
     return response.text();
   })
   .then((html) => {
+    console.log("testing 1")
     const elementsToUpdate = [
       'cart-drawer .drawer__inner',
       '#cart-icon-bubble',
@@ -931,9 +932,8 @@ const updateCart = () => {
     if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
                   typeof BOLD.common.eventEmitter.emit === 'function'){
                 BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
- }
-
-
+     }
+    
   });
 }
 
@@ -1287,3 +1287,4 @@ findEmptyButtons();
 document.addEventListener('call_widget_closed', (e) => {
   updateCart();
 });
+

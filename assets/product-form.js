@@ -211,6 +211,7 @@ class VariantSelects extends HTMLElement {
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
+    this.updateQuantityAvailability();
     this.removeErrorMessage();
 
     if (!this.currentVariant) {
@@ -494,6 +495,14 @@ class VariantSelects extends HTMLElement {
     } else {
       pickUpAvailability.removeAttribute('available');
       pickUpAvailability.innerHTML = '';
+    }
+  }
+
+  updateQuantityAvailability() {
+    if(this.currentVariant.inventory_quantity <= 10) {
+      document.getElementById('show-low-messaging').style.display = 'block';
+    } else {
+      document.getElementById('show-low-messaging').style.display = 'none';
     }
   }
 

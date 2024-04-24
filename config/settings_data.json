@@ -29,6 +29,8 @@
     "cart_type": "drawer",
     "show_cart_note": true,
     "cart_drawer_collection": "bottoms-skimpy",
+    "cart_drawer_text": "Up to 35% Off Sitewide Ends Tuesday!",
+    "free_shipping_threshold": 175,
     "checkout_logo_image": "shopify:\/\/shop_images\/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",

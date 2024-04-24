@@ -12,7 +12,6 @@
           <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
         </cart-note>
       {%- endif -%}
-
       <div class="cart__blocks">
         {% for block in section.blocks %}
           {%- case block.type -%}
