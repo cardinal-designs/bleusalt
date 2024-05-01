@@ -520,9 +520,9 @@
           href="{{ routes.root_url }}" 
           class="header__heading-link link link--text focus-inset" 
           aria-label="bleusalt top logo"
-          {% if section.settings.below_logo %}
+          {%- if section.settings.below_logo -%}
             style="padding-bottom: 0px;"
-          {% endif %}
+          {%- endif -%}
         >
           <span class="visually-hidden">Bleusalt logo</span>
           {% render 'icon-logo' %}
