@@ -2393,7 +2393,7 @@ input[type='checkbox'] {
 
 .header__under-logo .list-menu li,
 .header__under-logo .top-right-link {
-  padding: 0 40px;
+  padding: 10px 40px;
 }
 
 @media screen and (max-width: 990px) {
