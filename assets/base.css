@@ -2404,6 +2404,10 @@ input[type='checkbox'] {
   }
 }
 
+.header__under-logo .header__menu-item {
+  padding: 0;
+}
+
 .header__heading-link {
   display: inline-block;
   padding: 0.75rem;
