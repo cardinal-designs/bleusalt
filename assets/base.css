@@ -2399,7 +2399,8 @@ input[type='checkbox'] {
   /* padding: 1rem 40px; */
 }
 
-.header__under-logo .list-menu li {
+.header__under-logo .list-menu li,
+.header__under-logo .header__icons .top-right-link {
   padding: 1rem 45px;
 }
 
