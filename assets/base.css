@@ -2385,6 +2385,10 @@ input[type='checkbox'] {
   justify-self: center;
 }
 
+.header__under-logo {
+  display: flex;
+}
+
 .header__heading-link {
   display: inline-block;
   padding: 0.75rem;
