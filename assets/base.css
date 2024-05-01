@@ -2395,6 +2395,10 @@ input[type='checkbox'] {
   padding: 1rem 25px;
 }
 
+.header__under-logo .header__menu-item {
+  padding: 1rem 25px;
+}
+
 .header__heading-link {
   display: inline-block;
   padding: 0.75rem;
