@@ -2392,7 +2392,7 @@ input[type='checkbox'] {
 }
 
 .header__under-logo .top-right-link {
-  padding: 1rem 0.75rem;
+  padding: 1rem 12px;
 }
 
 .header__heading-link {
