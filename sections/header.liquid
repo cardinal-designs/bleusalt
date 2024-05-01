@@ -398,7 +398,7 @@
       </details-modal>
     {%- endif -%}
 
-    {%- if section.settings.below_logo == false -%}
+    {%- unless section.settings.below_logo -%}
       <div>
         {%- if section.settings.menu != blank -%}
           {%- if section.settings.menu_type_desktop == 'dropdown' -%}
@@ -511,7 +511,7 @@
           {%- endif -%}
         {%- endif -%}
       </div>
-    {%- endif -%}
+    {%- endunless -%}
 
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
@@ -541,9 +541,9 @@
 
 
     <div class="header__icons">
-      {%- if section.settings.below_logo == false -%}
+      {%- unless section.settings.below_logo -%}
         {%- render 'top-right-links' -%}
-      {%- endif -%}
+      {%- endunless -%}
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
