@@ -2400,7 +2400,7 @@ input[type='checkbox'] {
 }
 
 .header__under-logo .list-menu li {
-  padding: inherit 45px;
+  padding: 1rem 45px;
 }
 
 @media screen and (max-width: 990px) {
