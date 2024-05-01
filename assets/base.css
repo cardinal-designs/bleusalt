@@ -2399,10 +2399,6 @@ input[type='checkbox'] {
   padding: 1rem 25px;
 }
 
-.header__under-logo .link--text:hover {
-  border-bottom: 1px solid #000;
-}
-
 .header__heading-link {
   display: inline-block;
   padding: 0.75rem;
