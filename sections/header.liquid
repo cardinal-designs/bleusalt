@@ -649,7 +649,7 @@
     </div>
   </header>
 
-  <div class="header__under-logo">
+  <div class="header__under-logo page-width">
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu">
@@ -702,7 +702,7 @@
           </ul>
         </nav>
       {%- else -%}
-        <nav class=" page-width">
+        <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline">
             {%- for link in section.settings.menu.links -%}
               <li>
