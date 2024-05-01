@@ -2392,15 +2392,15 @@ input[type='checkbox'] {
 }
 
 .header__under-logo .top-right-link {
-  padding: 1rem 5%;
+  padding: 1rem 40px;
 }
 
 .header__under-logo .header__menu-item {
-  padding: 1rem 5%;
+  padding: 1rem 40px;
 }
 
 @media screen and (max-width: 990px) {
-
+  
   .header__under-logo .header__icons {
     display: none;
   }
