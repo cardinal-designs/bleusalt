@@ -2399,6 +2399,13 @@ input[type='checkbox'] {
   padding: 1rem 25px;
 }
 
+@media screen and (max-width: 990px) {
+  
+  .header__under-logo .header__icons {
+    display: none;
+  }
+}
+
 .header__heading-link {
   display: inline-block;
   padding: 0.75rem;
