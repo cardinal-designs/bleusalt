@@ -2400,7 +2400,7 @@ input[type='checkbox'] {
 }
 
 .header__under-logo .link--text:hover {
-  color: red;
+  border-bottom: 1px solid #000;
 }
 
 .header__heading-link {
