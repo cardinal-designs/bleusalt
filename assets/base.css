@@ -2405,7 +2405,7 @@ input[type='checkbox'] {
 }
 
 .header__under-logo .header__menu-item {
-  padding: 0;
+  padding-top: 0;
 }
 
 .header__heading-link {
