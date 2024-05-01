@@ -2391,17 +2391,9 @@ input[type='checkbox'] {
   align-items: center;
 }
 
-/* .header__under-logo .top-right-link {
-  padding: 1rem 40px;
-} */
-
-.header__under-logo .header__menu-item {
-  /* padding: 1rem 40px; */
-}
-
 .header__under-logo .list-menu li,
-.header__under-logo .header__icons .top-right-link {
-  padding: 1rem 45px;
+.header__under-logo .top-right-link {
+  padding: 1rem 40px;
 }
 
 @media screen and (max-width: 990px) {
