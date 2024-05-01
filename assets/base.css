@@ -2387,6 +2387,7 @@ input[type='checkbox'] {
 
 .header__under-logo {
   display: flex;
+  justify-content: space-between;
 }
 
 .header__heading-link {
