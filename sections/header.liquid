@@ -516,7 +516,12 @@
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset" aria-label="bleusalt top logo">
+        <a 
+          href="{{ routes.root_url }}" 
+          class="header__heading-link link link--text focus-inset" 
+          aria-label="bleusalt top logo"
+          style="padding-bottom: 0px;"
+        >
           <span class="visually-hidden">Bleusalt logo</span>
           {% render 'icon-logo' %}
           {% comment %}
