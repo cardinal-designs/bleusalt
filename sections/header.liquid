@@ -399,7 +399,7 @@
     {%- endif -%}
 
 
-    {%- if section.settings.menu != blank -%}
+    {% comment %} {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" >
@@ -508,7 +508,7 @@
           </ul>
         </nav>
       {%- endif -%}
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
 
 
 
