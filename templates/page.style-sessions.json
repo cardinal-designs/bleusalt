@@ -24,7 +24,7 @@
     "featured_blog_mUymtm": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Blog posts",
+        "heading": "WATCH + SHOP",
         "heading_size": "h1",
         "blog": "bleusalt",
         "post_limit": 3,
@@ -37,18 +37,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "blog_articles_8jPjJf": {
-      "type": "blog-articles",
-      "settings": {
-        "blog": "bleusalt"
-      }
     }
   },
   "order": [
     "main",
     "image_text_video_d9cHie",
-    "featured_blog_mUymtm",
-    "blog_articles_8jPjJf"
+    "featured_blog_mUymtm"
   ]
 }
