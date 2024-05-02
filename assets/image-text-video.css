@@ -19,6 +19,7 @@
 
 .image-text-video__heading {
   font-size: 22px;
+  text-transform: uppercase;
 }
 
 .image-text-video__cta {
