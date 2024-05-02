@@ -2385,36 +2385,6 @@ input[type='checkbox'] {
   justify-self: center;
 }
 
-.header__under-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header__under-logo .list-menu li,
-.header__under-logo .top-right-link {
-  padding: 1rem 30px;
-  padding-top: 0;
-}
-
-@media screen and (max-width: 990px) {
-  
-  .header__under-logo .header__icons {
-    display: none;
-  }
-}
-
-.header__heading-link.nav-items-below-logo {
-  padding-bottom: 0;
-}
-
-@media screen and (max-width: 990px) {
-
-  .header__heading-link.nav-items-below-logo {
-    padding-bottom: .75rem;
-  }
-}
-
 .header__heading-link {
   display: inline-block;
   padding: 0.75rem;
