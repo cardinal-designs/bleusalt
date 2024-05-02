@@ -11,9 +11,16 @@
         "padding_bottom": 36,
         "page_width": "page-width--narrow"
       }
+    },
+    "image_text_video_d9cHie": {
+      "type": "image-text-video",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bc9cc1192e7b6017e6b3aa18b1bd2534_3200x.progressive_94a752a5-e298-4235-bd87-28c71ad491f0.webp"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_text_video_d9cHie"
   ]
 }
