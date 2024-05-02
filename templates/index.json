@@ -499,7 +499,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/bleusalt-malibu-store-interior.jpg",
         "border_top": false,
-        "page_width": "page-width",
+        "page_width": "page-width--narrow",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
