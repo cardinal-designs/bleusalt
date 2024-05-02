@@ -16,3 +16,8 @@
   max-width: 700px;
   width: 100%;
 }
+
+.image-text-video__cta {
+  background: none;
+  border: 1px solid #000;
+}
