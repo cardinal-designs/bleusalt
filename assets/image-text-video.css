@@ -48,6 +48,13 @@
   margin: 0;
 }
 
+@media screen and (max-width: 749px) {
+
+  .image-text-video__subheading {
+    font-size: 14px;
+  }
+}
+
 .image-text-video__cta {
   margin-top: 40px;
   font-size: 14px;
