@@ -2385,7 +2385,7 @@ input[type='checkbox'] {
   justify-self: center;
 }
 
-.header__under-logo {
+/* .header__under-logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2406,7 +2406,7 @@ input[type='checkbox'] {
 
 .header__heading-link.nav-items-below-logo {
   padding-bottom: 0;
-}
+} */
 
 @media screen and (max-width: 990px) {
 
