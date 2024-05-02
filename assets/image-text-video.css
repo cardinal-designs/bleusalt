@@ -33,7 +33,7 @@
   text-transform: uppercase;
   letter-spacing: 2.17px;
   background: none;
-  border: 1px solid #000;
+  border: 1px solid rgb(var(--color-foreground));
   padding: 10px 25px;
   cursor: pointer;
 }
