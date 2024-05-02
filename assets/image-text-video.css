@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+.image-text-video__heading {
+  font-size: 22px;
+}
+
 .image-text-video__cta {
   background: none;
   border: 1px solid #000;
