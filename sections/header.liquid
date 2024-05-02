@@ -657,8 +657,6 @@
     </div>
   </header>
 
-</div>
-
   {%- if section.settings.below_logo -%}
     <div class="header__under-logo page-width">
       {%- if section.settings.menu != blank -%}
@@ -776,6 +774,8 @@
       </div>
     </div>
   {%- endif -%}
+
+</div>
 
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
