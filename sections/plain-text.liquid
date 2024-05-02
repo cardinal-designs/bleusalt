@@ -1,5 +1,7 @@
 <div class="plain-text page-width">
-  <p class="plain-text__content">{{ section.settings.content }}</p>
+  {%- if section.settings.content != blank -%}
+    <p class="plain-text__content">{{ section.settings.content }}</p>
+  {%- endif -%}
 </div>
 
 {% schema %}
