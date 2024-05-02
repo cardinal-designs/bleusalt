@@ -1,5 +1,6 @@
 .image-text-video__wrapper {
   display: flex;
+  align-items: center;
 }
 
 .image-text-video .image-with-text__media-item {
