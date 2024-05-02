@@ -20,6 +20,7 @@
 .image-text-video__heading {
   font-size: 22px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .image-text-video__cta {
