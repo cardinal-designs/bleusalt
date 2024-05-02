@@ -1,3 +1,11 @@
 .image-text-video__wrapper {
   display: flex;
 }
+
+.image-text-video .image-with-text__media-item {
+  flex: 1;
+}
+
+.image-text-video__content {
+  flex: 1;
+}
