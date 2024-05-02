@@ -23,6 +23,10 @@
   margin: 0;
 }
 
+.image-text-video__subheading {
+  margin: 0;
+}
+
 .image-text-video__cta {
   background: none;
   border: 1px solid #000;
