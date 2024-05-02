@@ -30,6 +30,8 @@
 .image-text-video__cta {
   margin-top: 40px;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.17px;
   background: none;
   border: 1px solid #000;
   padding: 10px 25px;
