@@ -3,6 +3,14 @@
   align-items: center;
 }
 
+@media screen and (max-width: 749px) {
+
+  .image-text-video__wrapper {
+    display: block;
+  }
+  
+}
+
 .image-text-video .image-with-text__media-item {
   flex: 1;
 }
