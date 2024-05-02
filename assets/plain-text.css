@@ -1,3 +1,7 @@
+.plain-text {
+  padding: 40px 0;
+}
+
 .plain-text__content {
   padding: 0;
 }
