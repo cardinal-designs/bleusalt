@@ -4,10 +4,23 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "show_heading": true,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "image_text_video_JVck3U": {
+      "type": "image-text-video",
+      "settings": {
+        "heading": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_text_video_JVck3U"
   ]
 }
