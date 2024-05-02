@@ -27,7 +27,7 @@
 @media screen and (max-width: 749px) {
 
   .image-text-video__content-inner {
-    padding: 0;
+    padding: 30px 15px;
   }
 }
 
