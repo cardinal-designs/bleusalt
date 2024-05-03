@@ -1,4 +1,13 @@
-const videoCta = document.querySelector('.image-text-video__cta');
+const selectors = {
+  dom: {
+    videoCta: 'image-text-video__cta',
+    iframeParent: '.image-text-video__iframe',
+    iframe: '.image-text-video__iframe iframe',
+    closeIframe: '.image-text-video__close-iframe',
+  }
+};
+
+const videoCta = document.querySelector(`.${selectors.dom.videoCta}`);
 const iframeParent = document.querySelector('.image-text-video__iframe');
 const iframe = iframeParent.querySelector("iframe");
 
