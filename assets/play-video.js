@@ -36,8 +36,9 @@ function playVideo() {
 function clickOutside() {
   document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.image-text-video__iframe');
+    const $btnIsOutside = !e.target.closest('.image-text-video__cta')
 
-    if ($isOutside) {
+    if ($isOutside && btnIsOutside) {
       iframeParent.style.display = 'none';
       iframe.setAttribute("src", iframeSrc);
       document.querySelector('body').style.overflow = 'initial';
