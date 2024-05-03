@@ -42,7 +42,7 @@ function closeIframePopUp() {
 function clickOutside() {
   document.addEventListener('click', (e) => {
     const isOutside = !e.target.closest(`.${selectors.dom.iframeInner}`);
-    const btnIsOutside = !e.target.closest('.image-text-video__cta')
+    const btnIsOutside = !e.target.closest(`.${selectors.dom.videoCta}`)
 
     if (isOutside && btnIsOutside) {
       closeIframePopUp();
