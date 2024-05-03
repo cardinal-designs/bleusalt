@@ -25,12 +25,13 @@ function playVideo() {
   iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
   document.querySelector('body').style.overflow = 'hidden';
 
-  // Close iframe
+  // close
   closeIframe.addEventListener('click', () => {
     closeIframe();
   });
 }
 
+// Close iframe
 function closeIframe() {
   iframeParent.style.display = 'none';
   iframe.setAttribute("src", iframeSrc);
@@ -43,9 +44,7 @@ function clickOutside() {
     const btnIsOutside = !e.target.closest('.image-text-video__cta')
 
     if (isOutside && btnIsOutside) {
-      iframeParent.style.display = 'none';
-      iframe.setAttribute("src", iframeSrc);
-      document.querySelector('body').style.overflow = 'initial';
+      closeIframe();
     }
   });
 }
