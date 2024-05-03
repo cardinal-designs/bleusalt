@@ -31,6 +31,7 @@ function playVideo() {
 
 // Close iframe
 function closeIframe() {
+  const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
   closeIframe.addEventListener('click', () => {
     iframeParent.style.display = 'none';
     iframe.setAttribute("src", iframeSrc);
