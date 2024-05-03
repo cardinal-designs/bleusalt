@@ -58,8 +58,8 @@
 
   playVideo.addEventListener('click', () => {
     document.querySelector('.image-text-video__iframe').style.display = 'block';
-    const iframeSrc = iframe.getAttribute("src");
-    console.log(iframeSrc);
+    var iframeSrc = iframe.getAttribute("src");
+    iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
   })
 </script>
 
