@@ -3,7 +3,7 @@ const selectors = {
     videoCta: 'image-text-video__cta',
     iframeParent: 'image-text-video__iframe',
     iframe: 'iframe',
-    closeIframe: '.image-text-video__close-iframe',
+    closeIframe: 'image-text-video__close-iframe',
   }
 };
 
@@ -24,7 +24,7 @@ function playVideo() {
   iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
   document.querySelector('body').style.overflow = 'hidden';
 
-  const closeIframe = document.querySelector('.image-text-video__close-iframe');
+  const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
   closeIframe.addEventListener('click', () => {
     iframeParent.style.display = 'none';
     iframe.setAttribute("src", iframeSrc);
