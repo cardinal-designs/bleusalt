@@ -53,9 +53,12 @@
 
 <script>
   const playVideo = document.querySelector('.image-text-video__cta');
+  const iframeParent = document.querySelector('.image-text-video__iframe');
+  const iframe = iframeParent.querySelector("iframe");
 
   playVideo.addEventListener('click', () => {
     document.querySelector('.image-text-video__iframe').style.display = 'block';
+    console.log(iframe)
   })
 </script>
 
