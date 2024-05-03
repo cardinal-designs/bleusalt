@@ -91,5 +91,6 @@
   transform: translate(-50%, -50%);
   height: 80%;
   width: 80%;
+  background: #000;
   z-index: 999999;
 }
