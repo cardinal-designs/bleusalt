@@ -91,4 +91,5 @@
   height: 100%;
   width: 100%;
   background: #000;
+  z-index: 999999;
 }
