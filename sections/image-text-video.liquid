@@ -39,7 +39,12 @@
           <p class="image-text-video__subheading">{{ section.settings.sub_heading }}</p>
         {%- endif -%}
         {%- if section.settings.cta_text != blank -%}
-          <button class="image-text-video__cta">{{ section.settings.cta_text }}</button>
+          <div>
+            <button class="image-text-video__cta">{{ section.settings.cta_text }}</button>
+            <video class="video__video" src="wDchsz8nmbo" loop muted playsinline controls>
+              <source src="your_video.mp4" type="video/mp4">
+            </video>
+          </div>
         {%- endif -%}
       </div>
     </div>
