@@ -44,3 +44,5 @@ function clickOutside() {
     }
   });
 }
+
+clickOutside();
