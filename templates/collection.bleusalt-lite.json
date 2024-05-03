@@ -42,6 +42,7 @@
       "blocks": {
         "27179d79-3ebb-4a24-9485-9336f0bfe5f8": {
           "type": "marketing_tile",
+          "disabled": true,
           "settings": {
             "tile_size": "1x",
             "media_type": "image",
