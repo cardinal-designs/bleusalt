@@ -26,7 +26,7 @@ function playVideo() {
 
   const closeIframe = document.querySelector('.image-text-video__close-iframe');
   closeIframe.addEventListener('click', () => {
-    document.querySelector('.image-text-video__iframe').style.display = 'none';
+    iframeParent.style.display = 'none';
     iframe.setAttribute("src", iframeSrc);
     document.querySelector('body').style.overflow = 'initial';
   });
