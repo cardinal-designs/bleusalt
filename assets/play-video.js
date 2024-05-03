@@ -38,7 +38,7 @@ function clickOutside() {
     const $isOutside = !e.target.closest('.image-text-video__iframe');
     const $btnIsOutside = !e.target.closest('.image-text-video__cta')
 
-    if ($isOutside && btnIsOutside) {
+    if ($isOutside && $btnIsOutside) {
       iframeParent.style.display = 'none';
       iframe.setAttribute("src", iframeSrc);
       document.querySelector('body').style.overflow = 'initial';
