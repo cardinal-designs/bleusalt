@@ -105,6 +105,14 @@
   width: 80%;
 }
 
+@media screen and (max-width: 768px) {
+
+  .image-text-video__iframe-inner {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .image-text-video__wrapper iframe {
   display: block;
   border: none;
