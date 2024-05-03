@@ -23,59 +23,6 @@
   }
 {%- endstyle -%}
 
-{%- if template == 'page.style-sessions' -%}
-  <style>
-    .feat-blog {
-      padding-bottom: 80px;
-    }
-
-    .blog__title {
-      font-size: 22px;
-    }
-
-    .feat-blog {
-      padding-top: 0;
-    }
-
-    .title-wrapper-with-link {
-      margin-bottom: 40px;
-    }
-
-    .card__information {
-      padding: 15px !important;
-    }
-
-    .card__heading {
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    .article-card__info {
-      font-size: 12px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .feat-blog {
-        padding-bottom: 30px;
-      }
-
-      .blog__title {
-        font-size: 16px;
-      }
-
-      .blog .grid__item {
-        width: 100%;
-        max-width: initial;
-        padding: 0 15px;
-      }
-
-      .title-wrapper-with-link {
-        margin-bottom: 30px;
-      }
-    }
-  </style>
-{%- endif -%}
-
 {%- liquid
   assign posts_displayed = section.settings.blog.articles_count
   if section.settings.post_limit <= section.settings.blog.articles_count
