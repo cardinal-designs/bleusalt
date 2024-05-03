@@ -44,12 +44,30 @@
       "settings": {
         "content": "Watch the latest ANINE BING live-shopping event and discover seasonal styles, Classics Collection, best sellers, and more. Learn how to mix, match, and layer fundamental wardrobe basics with seasonal statement pieces, modern accessories, and versatile footwear. Build a year-round wardrobe with featured women's clothing styles from the livestream shopping shows. Join us in real time to watch and shop key looks from the ANINE BING collections."
       }
+    },
+    "video_banner_XLgcGN": {
+      "type": "video-banner",
+      "settings": {
+        "video_url": "",
+        "video_url_mobile": "",
+        "description": "",
+        "image_overlay_opacity": 0,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "100",
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "main",
     "image_text_video_d9cHie",
     "blog_articles_wQFfVG",
-    "plain_text_arTE3r"
+    "plain_text_arTE3r",
+    "video_banner_XLgcGN"
   ]
 }
