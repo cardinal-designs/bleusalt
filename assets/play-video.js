@@ -36,5 +36,11 @@ function playVideo() {
 function clickOutside() {
   document.addEventListener('click', () => {
     const $isOutside = !e.target.closest('.image-text-video__iframe');
+
+    if ($isOutside) {
+      iframeParent.style.display = 'none';
+      iframe.setAttribute("src", iframeSrc);
+      document.querySelector('body').style.overflow = 'initial';
+    }
   });
 }
