@@ -69,3 +69,15 @@
   padding: 10px 25px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+
+  .image-with-text__media-item {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
