@@ -10,6 +10,7 @@ const selectors = {
 const videoCta = document.querySelector(`.${selectors.dom.videoCta}`);
 const iframeParent = document.querySelector(`.${selectors.dom.iframeParent}`);
 const iframe = iframeParent.querySelector(selectors.dom.iframe);
+const iframeSrc = iframe.getAttribute("src");
 
 if(videoCta) {
   videoCta.addEventListener('click', () => {
@@ -20,10 +21,11 @@ if(videoCta) {
 // Play Video
 function playVideo() {
   iframeParent.style.display = 'block';
-  var iframeSrc = iframe.getAttribute("src");
   iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
   document.querySelector('body').style.overflow = 'hidden';
+}
 
+function closeIframe() {
   const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
   closeIframe.addEventListener('click', () => {
     iframeParent.style.display = 'none';
