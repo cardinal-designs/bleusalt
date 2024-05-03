@@ -82,3 +82,7 @@
     margin-right: -50vw;
   }
 }
+
+.image-text-video__iframe {
+  display: none;
+}
