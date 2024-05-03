@@ -89,8 +89,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
-  width: 50%;
-  background: #000;
+  height: 80%;
+  width: 80%;
   z-index: 999999;
 }
