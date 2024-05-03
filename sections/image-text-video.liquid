@@ -41,7 +41,9 @@
         {%- if section.settings.cta_text != blank -%}
           <div>
             <button class="image-text-video__cta">{{ section.settings.cta_text }}</button>
-            <iframe src="https://www.youtube.com/embed/wDchsz8nmbo" frameborder="0" allowfullscreen="" class="video__iframe" frameborder="0"></iframe>
+            <div class="image-text-video__iframe">
+              <iframe src="https://www.youtube.com/embed/wDchsz8nmbo" frameborder="0" allowfullscreen="" class="video__iframe" frameborder="0"></iframe>
+            </div>
           </div>
         {%- endif -%}
       </div>
