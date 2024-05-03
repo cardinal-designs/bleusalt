@@ -27,10 +27,14 @@ function playVideo() {
 
   // Close iframe
   closeIframe.addEventListener('click', () => {
-    iframeParent.style.display = 'none';
-    iframe.setAttribute("src", iframeSrc);
-    document.querySelector('body').style.overflow = 'initial';
+    closeIframe();
   });
+}
+
+function closeIframe() {
+  iframeParent.style.display = 'none';
+  iframe.setAttribute("src", iframeSrc);
+  document.querySelector('body').style.overflow = 'initial';
 }
 
 function clickOutside() {
