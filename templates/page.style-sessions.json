@@ -21,6 +21,24 @@
         "cta_text": "WATCH NOW"
       }
     },
+    "blog_articles_wQFfVG": {
+      "type": "blog-articles",
+      "settings": {
+        "heading": "WATCH + SHOP",
+        "heading_size": "h1",
+        "blog": "bleusalt",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_mUymtm": {
       "type": "featured-blog",
       "settings": {
@@ -49,6 +67,7 @@
   "order": [
     "main",
     "image_text_video_d9cHie",
+    "blog_articles_wQFfVG",
     "featured_blog_mUymtm",
     "plain_text_arTE3r"
   ]
