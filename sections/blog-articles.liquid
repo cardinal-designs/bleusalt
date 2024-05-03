@@ -68,11 +68,11 @@
     {%- endunless -%}
     {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
       <slider-component class="slider-mobile-gutter">
-        <ul id=""
-          class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+        <ul id="Slider-{{ section.id }}"
+          class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop"
         >
           {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
-            <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="blog__post grid__item article slider__slide slider__slide--full-width">
+            <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="blog__post grid__item article">
               {% render 'article-card', 
                 blog: section.settings.blog, 
                 article: article, 
