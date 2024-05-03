@@ -1,8 +1,8 @@
-  const playVideo = document.querySelector('.image-text-video__cta');
+  const videoCta = document.querySelector('.image-text-video__cta');
   const iframeParent = document.querySelector('.image-text-video__iframe');
   const iframe = iframeParent.querySelector("iframe");
 
-  playVideo.addEventListener('click', () => {
+  videoCta.addEventListener('click', () => {
     document.querySelector('.image-text-video__iframe').style.display = 'block';
     var iframeSrc = iframe.getAttribute("src");
     iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
