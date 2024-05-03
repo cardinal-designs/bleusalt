@@ -85,14 +85,26 @@
 
 .image-text-video__iframe {
   display: none;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80%;
-  width: 80%;
-  background: #000;
-  z-index: 999999;
+  right: 0;
+  top: 0;
+  z-index: 2147483647;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.image-text-video__iframe-inner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    background: #000;
+    z-index: 999999;
 }
 
 .image-text-video__wrapper iframe {
