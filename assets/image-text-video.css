@@ -120,6 +120,7 @@
   right: 0;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .image-text-video__close-iframe svg {
