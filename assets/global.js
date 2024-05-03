@@ -1288,3 +1288,8 @@ document.addEventListener('call_widget_closed', (e) => {
   updateCart();
 });
 
+const playVideo = document.querySelector('.image-text-video__cta');
+
+playVideo.addEventListener('click', () => {
+  console.log('clicked')
+})
