@@ -25,11 +25,6 @@ function playVideo() {
   document.querySelector('body').style.overflow = 'hidden';
 
   // Close iframe
-  closeIframe();
-}
-
-// Close iframe
-function closeIframe() {
   const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
   closeIframe.addEventListener('click', () => {
     iframeParent.style.display = 'none';
