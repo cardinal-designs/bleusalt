@@ -24,9 +24,11 @@ function playVideo() {
   iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
   document.querySelector('body').style.overflow = 'hidden';
 
+  // Close iframe
   closeIframe();
 }
 
+// Close iframe
 function closeIframe() {
   const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
   closeIframe.addEventListener('click', () => {
