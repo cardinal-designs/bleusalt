@@ -129,6 +129,13 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+
+  .image-text-video__close-iframe {
+    top: -10px;
+  }
+}
+
 .image-text-video__close-iframe svg {
   width: 20px;
   height: 20px;
