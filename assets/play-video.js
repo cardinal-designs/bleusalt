@@ -27,12 +27,12 @@ function playVideo() {
 
   // close
   closeIframe.addEventListener('click', () => {
-    closeIframe();
+    closeIframePopUp();
   });
 }
 
 // Close iframe
-function closeIframe() {
+function closeIframePopUp() {
   iframeParent.style.display = 'none';
   iframe.setAttribute("src", iframeSrc);
   document.querySelector('body').style.overflow = 'initial';
@@ -44,7 +44,7 @@ function clickOutside() {
     const btnIsOutside = !e.target.closest('.image-text-video__cta')
 
     if (isOutside && btnIsOutside) {
-      closeIframe();
+      closeIframePopUp();
     }
   });
 }
