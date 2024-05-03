@@ -121,3 +121,8 @@
   background: none;
   border: none;
 }
+
+.image-text-video__close-iframe svg {
+  width: 25px;
+  height: 25px;
+}
