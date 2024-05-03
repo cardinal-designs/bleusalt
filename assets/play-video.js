@@ -1,15 +1,15 @@
 const selectors = {
   dom: {
     videoCta: 'image-text-video__cta',
-    iframeParent: '.image-text-video__iframe',
-    iframe: '.image-text-video__iframe iframe',
+    iframeParent: 'image-text-video__iframe',
+    iframe: 'iframe',
     closeIframe: '.image-text-video__close-iframe',
   }
 };
 
 const videoCta = document.querySelector(`.${selectors.dom.videoCta}`);
-const iframeParent = document.querySelector('.image-text-video__iframe');
-const iframe = iframeParent.querySelector("iframe");
+const iframeParent = document.querySelector(`.${selectors.dom.iframeParent}`);
+const iframe = iframeParent.querySelector(selectors.dom.iframe);
 
 if(videoCta) {
   videoCta.addEventListener('click', () => {
