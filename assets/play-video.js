@@ -2,11 +2,11 @@ const videoCta = document.querySelector('.image-text-video__cta');
 const iframeParent = document.querySelector('.image-text-video__iframe');
 const iframe = iframeParent.querySelector("iframe");
 
-if (!videoCta) return;
-
-videoCta.addEventListener('click', () => {
-  playVideo();
-});
+if(videoCta) {
+  videoCta.addEventListener('click', () => {
+    playVideo();
+  });
+}
 
 // Play Video
 function playVideo() {
