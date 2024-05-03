@@ -12,6 +12,20 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
+        "27179d79-3ebb-4a24-9485-9336f0bfe5f8": {
+          "type": "marketing_tile",
+          "settings": {
+            "tile_size": "1x",
+            "media_type": "image",
+            "image": "shopify:\/\/shop_images\/bleusalt-lite-hero.jpg",
+            "video_url": "",
+            "link": "",
+            "position": 2,
+            "title": "Introducing... BLEUSALT LITE",
+            "paragraph": "<p>The soft Bleusalt fibers you fell in love with, just a little lighter.<\/p>",
+            "button_text": ""
+          }
+        },
         "34ffb5d5-755c-463a-9bed-4c9080b2f1c2": {
           "type": "marketing_tile",
           "disabled": true,
@@ -27,21 +41,6 @@
             "button_text": "Watch Now"
           }
         },
-        "27179d79-3ebb-4a24-9485-9336f0bfe5f8": {
-          "type": "marketing_tile",
-          "disabled": true,
-          "settings": {
-            "tile_size": "1x",
-            "media_type": "image",
-            "image": "shopify:\/\/shop_images\/333015852_2071585826379588_4033906886454278447_n.jpg",
-            "video_url": "",
-            "link": "shopify:\/\/products\/the-cindy-top",
-            "position": 2,
-            "title": "The Cindy Top",
-            "paragraph": "<p>The latest addition to the Bleusalt Collection<\/p>",
-            "button_text": ""
-          }
-        },
         "e832fc10-de4c-40a0-af3d-5596883c7716": {
           "type": "marketing_tile",
           "disabled": true,
@@ -51,7 +50,7 @@
             "image": "shopify:\/\/shop_images\/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
             "video_url": "",
             "link": "shopify:\/\/collections\/the-signature-bleusalt-wrap",
-            "position": 6,
+            "position": 9,
             "title": "Bleusalt Wraps",
             "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.<\/p>",
             "button_text": ""
@@ -59,15 +58,15 @@
         }
       },
       "block_order": [
-        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2",
         "27179d79-3ebb-4a24-9485-9336f0bfe5f8",
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2",
         "e832fc10-de4c-40a0-af3d-5596883c7716"
       ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
         "image_ratio": "portrait",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
