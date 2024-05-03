@@ -94,3 +94,10 @@
   background: #000;
   z-index: 999999;
 }
+
+.image-text-video__wrapper iframe {
+  display: block;
+  border: none;
+  height: calc(100vh - 30px);
+  width: 100%;
+}
