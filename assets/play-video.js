@@ -34,7 +34,7 @@ function playVideo() {
 }
 
 function clickOutside() {
-  document.addEventListener('click', () => {
+  document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.image-text-video__iframe');
 
     if ($isOutside) {
