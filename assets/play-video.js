@@ -4,6 +4,7 @@ const selectors = {
     iframeParent: 'image-text-video__iframe',
     iframe: 'iframe',
     closeIframe: 'image-text-video__close-iframe',
+    iframeInner: 'image-text-video__iframe-inner'
   }
 };
 
@@ -40,7 +41,7 @@ function closeIframePopUp() {
 
 function clickOutside() {
   document.addEventListener('click', (e) => {
-    const isOutside = !e.target.closest('.image-text-video__iframe-inner');
+    const isOutside = !e.target.closest(`.${selectors.dom.iframeInner}`);
     const btnIsOutside = !e.target.closest('.image-text-video__cta')
 
     if (isOutside && btnIsOutside) {
