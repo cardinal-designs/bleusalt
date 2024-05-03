@@ -32,3 +32,11 @@ function playVideo() {
     document.querySelector('body').style.overflow = 'initial';
   });
 }
+
+function clickOutsideElement(element, callback) {
+  document.addEventListener('click', function(event) {
+    if (!element.contains(event.target)) {
+      callback();
+    }
+  });
+}
