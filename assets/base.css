@@ -679,11 +679,11 @@ h6:empty {
 }
 
 .link--text {
-  color: rgb(var(--color-foreground));
+  color: rgba(var(--color-foreground), 0.75);
 }
 
 .link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
 }
 
 .link-with-icon {

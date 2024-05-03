@@ -104,6 +104,7 @@
 
         ],
         "settings": {
+          "below_logo": true,
           "color_scheme": "background-1",
           "logo_width": 90,
           "logo_position": "middle-center",
