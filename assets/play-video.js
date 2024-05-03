@@ -33,10 +33,8 @@ function playVideo() {
   });
 }
 
-function clickOutsideElement(element, callback) {
-  document.addEventListener('click', function(event) {
-    if (!element.contains(event.target)) {
-      callback();
-    }
+function clickOutside() {
+  document.addEventListener('click', () => {
+
   });
 }
