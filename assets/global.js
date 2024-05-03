@@ -1287,3 +1287,4 @@ findEmptyButtons();
 document.addEventListener('call_widget_closed', (e) => {
   updateCart();
 });
+
