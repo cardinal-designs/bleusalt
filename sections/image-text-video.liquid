@@ -43,7 +43,9 @@
             <button class="image-text-video__cta">{{ section.settings.cta_text }}</button>
             <div class="image-text-video__iframe">
               <div class="image-text-video__iframe-inner">
-                <button class="image-text-video__close-iframe">CLOSE</button>
+                <button class="image-text-video__close-iframe">
+                  {% render 'icon-close' %}
+                </button>
                 <iframe src="https://www.youtube.com/embed/wDchsz8nmbo" allowfullscreen class="video__iframe" frameborder="0"></iframe>
               </div>
             </div>
