@@ -1,0 +1,14 @@
+.plain-text {
+  padding: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .plain-text {
+    padding: 32px 0;
+  }
+}
+
+.plain-text__content {
+  margin: 0;
+}

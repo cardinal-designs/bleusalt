@@ -1,0 +1,143 @@
+.image-text-video__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 749px) {
+
+  .image-text-video__wrapper {
+    display: block;
+    padding: 20px 0;
+  }
+}
+
+.image-text-video .image-with-text__media-item {
+  flex: 1;
+}
+
+.image-text-video__content {
+  flex: 1;
+}
+
+.image-text-video__content-inner {
+  padding: 15%;
+  max-width: 800px;
+  width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+
+  .image-text-video__content-inner {
+    padding: 30px 0;
+  }
+}
+
+.image-text-video__heading {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 749px) {
+
+  .image-text-video__heading {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.image-text-video__subheading {
+  margin: 0;
+}
+
+@media screen and (max-width: 749px) {
+
+  .image-text-video__subheading {
+    font-size: 14px;
+  }
+}
+
+.image-text-video__cta {
+  margin-top: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.17px;
+  background: none;
+  border: 1px solid rgb(var(--color-foreground));
+  color: rgb(var(--color-foreground));
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+  .image-with-text__media-item {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+.image-text-video__iframe {
+  display: none;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.image-text-video__iframe-inner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: 85%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .image-text-video__iframe-inner {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.image-text-video__wrapper iframe {
+  display: block;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.image-text-video__close-iframe {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+  .image-text-video__close-iframe {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.image-text-video__close-iframe svg {
+  width: 20px;
+  height: 20px;
+}
