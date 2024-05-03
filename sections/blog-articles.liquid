@@ -36,6 +36,12 @@
     .title-wrapper-with-link {
       margin-bottom: 40px;
     }
+
+    @media screen and (max-width: 768px) {
+      .blog .grid__item {
+        width: 100%;
+      }
+    }
   </style>
 {%- endif -%}
 
@@ -71,7 +77,7 @@
         <ul class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop"
         >
           {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
-            <li class="blog__post article">
+            <li class="blog__post grid__item article">
               {% render 'article-card', 
                 blog: section.settings.blog, 
                 article: article, 
