@@ -1,6 +1,7 @@
 .image-text-video__wrapper {
   display: flex;
   align-items: center;
+  padding-bottom: 60px;
 }
 
 @media screen and (max-width: 749px) {
