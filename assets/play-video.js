@@ -11,6 +11,7 @@ const videoCta = document.querySelector(`.${selectors.dom.videoCta}`);
 const iframeParent = document.querySelector(`.${selectors.dom.iframeParent}`);
 const iframe = iframeParent.querySelector(selectors.dom.iframe);
 const iframeSrc = iframe.getAttribute("src");
+const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
 
 if(videoCta) {
   videoCta.addEventListener('click', () => {
@@ -30,7 +31,6 @@ function playVideo() {
 
 // Close iframe
 function closeIframe() {
-  const closeIframe = document.querySelector(`.${selectors.dom.closeIframe}`);
   closeIframe.addEventListener('click', () => {
     iframeParent.style.display = 'none';
     iframe.setAttribute("src", iframeSrc);
