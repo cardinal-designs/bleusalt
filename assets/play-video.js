@@ -6,6 +6,7 @@ videoCta.addEventListener('click', () => {
   playVideo();
 });
 
+// Play Video
 function playVideo() {
   document.querySelector('.image-text-video__iframe').style.display = 'block';
   var iframeSrc = iframe.getAttribute("src");
