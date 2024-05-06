@@ -15,7 +15,7 @@
   color: inherit;
 }
 
-.image-text-video__back-caret {
+.image-text-video__back-caret svg {
   transform: rotate(90deg);
 }
 
