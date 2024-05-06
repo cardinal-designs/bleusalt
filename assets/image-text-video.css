@@ -15,6 +15,10 @@
   color: inherit;
 }
 
+.image-text-video__back-caret {
+  transform: rotate(90deg);
+}
+
 @media screen and (max-width: 749px) {
 
   .image-text-video__wrapper {
