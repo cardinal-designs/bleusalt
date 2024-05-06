@@ -40,6 +40,11 @@
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
           <h2 class="image-text-video__heading">{{ title }}</h2>
+          {%- for article in blog.articles -%}
+            <script>
+              console.log({{ article.title | json }})
+            </script>
+          {%- endfor -%}
           <p class="image-text-video__subheading">{{ description }}</p>
           <div>
           <button class="image-text-video__cta">{{ cta_text }}</button>
