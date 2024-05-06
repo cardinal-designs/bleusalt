@@ -159,6 +159,7 @@
   font-weight: normal;
   text-decoration: none;
   font-family: var(--font-body-family);
+  text-transform: uppercase;
 }
 
 .breadcrumb ul li:not(:last-child):after {
