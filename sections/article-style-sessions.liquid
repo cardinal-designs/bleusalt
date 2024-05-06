@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="{{ 'image-text-video.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
 
+{%- assign title = article.metafields.custom.style_sessions_title.value -%}
+
 <div class="image-text-video page-width">
   <div class="image-text-video__wrapper">
     {%- comment -%} Image {%- endcomment -%}
@@ -33,7 +35,7 @@
     {%- comment -%} Content {%- endcomment -%}
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
-          <h2 class="image-text-video__heading">Heading</h2>
+          <h2 class="image-text-video__heading">{{ title }}</h2>
           <p class="image-text-video__subheading">Sub heading</p>
           <div>
           <button class="image-text-video__cta">WATCH NOW</button>
