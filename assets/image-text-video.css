@@ -48,13 +48,13 @@
   }
 }
 
-.image-text-video__subheading {
+.image-text-video__desc {
   margin: 0;
 }
 
 @media screen and (max-width: 749px) {
 
-  .image-text-video__subheading {
+  .image-text-video__desc {
     font-size: 14px;
   }
 }
