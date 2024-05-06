@@ -23,6 +23,12 @@
   .image-text-video__back {
     font-size: 14px;
   }
+
+  .image-text-video__back-caret svg {
+    transform: rotate(90deg);
+    width: 14px;
+    height: 8px;
+  }
 }
 
 .image-text-video__back-caret svg {
