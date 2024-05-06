@@ -3,6 +3,7 @@
 
 {%- assign title = article.metafields.custom.style_sessions_title.value -%}
 {%- assign sub_title = article.metafields.custom.style_sessions_subtitle.value -%}
+{%- assign cta_text = article.metafields.custom.style_sessions_cta_text.value -%}
 {%- assign image = article.metafields.custom.style_sessions_image.value -%}
 {%- assign youtube_Id = article.metafields.custom.style_sessions_youtube_id.value -%}
 
@@ -39,9 +40,9 @@
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
           <h2 class="image-text-video__heading">{{ title }}</h2>
-          <p class="image-text-video__subheading">Sub heading</p>
+          <p class="image-text-video__subheading">{{ sub_title }}</p>
           <div>
-          <button class="image-text-video__cta">WATCH NOW</button>
+          <button class="image-text-video__cta">{{ cta_text }}</button>
             <div class="image-text-video__iframe">
               <div class="image-text-video__iframe-inner">
                 <div class="image-text-video__close-iframe">
