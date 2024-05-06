@@ -1,8 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
-      "disabled": true,
+      "type": "style-sessions-blog",
       "settings": {
       }
     }
