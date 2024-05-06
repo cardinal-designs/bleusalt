@@ -56,27 +56,26 @@
         </div>
       </div>
     </div>
-
-      <div>
-        <ul class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop"
-        >
-          {%- for article in blog.articles limit: section.settings.post_limit -%}
-            {%- if article.image -%}
-              <li class="blog__post grid__item article">
-                {% render 'article-card', 
-                  blog: section.settings.blog, 
-                  article: article, 
-                  media_aspect_ratio: 1.66, 
-                  show_image: section.settings.show_image, 
-                  show_date: section.settings.show_date, 
-                  show_author: section.settings.show_author, 
-                  show_excerpt: section.settings.show_excerpt
-                %}
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </div>
-
   </div>
+</div>
+
+<div>
+  <ul class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop"
+  >
+    {%- for article in blog.articles limit: section.settings.post_limit -%}
+      {%- if article.image -%}
+        <li class="blog__post grid__item article">
+          {% render 'article-card', 
+            blog: section.settings.blog, 
+            article: article, 
+            media_aspect_ratio: 1.66, 
+            show_image: section.settings.show_image, 
+            show_date: section.settings.show_date, 
+            show_author: section.settings.show_author, 
+            show_excerpt: section.settings.show_excerpt
+          %}
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
 </div>
