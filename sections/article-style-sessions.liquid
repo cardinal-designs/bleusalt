@@ -2,6 +2,7 @@
 <script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
 
 {%- assign description = article.metafields.custom.style_sessions_description.value -%}
+{%- assign date = article.metafields.custom.style_sessions_date.value -%}
 {%- assign cta_text = article.metafields.custom.style_sessions_cta_text.value -%}
 {%- assign image = article.metafields.custom.style_sessions_image.value -%}
 {%- assign youtube_Id = article.metafields.custom.style_sessions_youtube_id.value -%}
@@ -40,6 +41,7 @@
       <div class="image-text-video__content-inner">
         <h2 class="image-text-video__heading">{{ article.title }}</h2>
         <p class="image-text-video__subheading">{{ description }}</p>
+        <p class="image-text-video__subheading">{{ date }}</p>
         <div>
         <button class="image-text-video__cta">{{ cta_text }}</button>
           <div class="image-text-video__iframe">
