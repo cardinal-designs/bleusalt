@@ -23,7 +23,7 @@ if(videoCta) {
 // Play Video
 function playVideo() {
   iframeParent.style.display = 'block';
-  iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
+  iframe.setAttribute("src", iframeSrc + "?autoplay=1");
   document.querySelector('body').style.overflow = 'hidden';
 
   // close
@@ -39,6 +39,7 @@ function closeIframePopUp() {
   document.querySelector('body').style.overflow = 'initial';
 }
 
+// Click outside to close iframe
 function clickOutside() {
   document.addEventListener('click', (e) => {
     const isOutside = !e.target.closest(`.${selectors.dom.iframeInner}`);
