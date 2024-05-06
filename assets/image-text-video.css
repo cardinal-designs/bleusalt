@@ -8,6 +8,10 @@
   padding-top: 20px;
 }
 
+.image-text-video__back {
+  font-size: 16px;
+}
+
 @media screen and (max-width: 749px) {
 
   .image-text-video__wrapper {
