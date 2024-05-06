@@ -141,3 +141,47 @@
   width: 20px;
   height: 20px;
 }
+
+.breadcrumb {
+  margin: 0 0 2em;
+}
+
+.breadcrumb ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb ul li {
+  display: inline-block;
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  font-family: var(--font-body-family);
+}
+
+.breadcrumb ul li:not(:last-child):after {
+  border-style: solid;
+  border-width: .10em .10em 0 0;
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 .20em;
+  position: relative;
+  transform: rotate(45deg);
+  vertical-align: middle;
+}
+
+.breadcrumb ul li a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 749px) {
+
+  .breadcrumb {
+    margin: 1em 0;
+  }
+}
