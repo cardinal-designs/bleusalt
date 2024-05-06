@@ -14,7 +14,10 @@
       <li>{{ article.title }}</li>
     </ul>
   </div>
-  <a class="image-text-video__back" href="/pages/style-sessions">GO BACK</a>
+  <a class="image-text-video__back" href="/pages/style-sessions">
+    {% render 'icon-caret' %}
+    <span>GO BACK</span>
+  </a>
   <div class="image-text-video__wrapper">
     {%- comment -%} Image {%- endcomment -%}
     <div class="image-with-text__media-item">
