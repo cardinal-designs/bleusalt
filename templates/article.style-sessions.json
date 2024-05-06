@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-style-sessions",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
