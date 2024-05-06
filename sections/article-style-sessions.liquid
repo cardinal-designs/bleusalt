@@ -39,12 +39,12 @@
     {%- comment -%} Content {%- endcomment -%}
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
-          {%- for article in blog.articles -%}
+
             <h2 class="image-text-video__heading">{{ article.title }}</h2>
             <script>
               console.log({{ article.title | json }})
             </script>
-          {%- endfor -%}
+
           <p class="image-text-video__subheading">{{ description }}</p>
           <div>
           <button class="image-text-video__cta">{{ cta_text }}</button>
