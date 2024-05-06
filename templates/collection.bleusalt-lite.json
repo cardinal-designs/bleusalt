@@ -1,0 +1,159 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true,
+        "color_scheme": "inverse"
+      }
+    },
+    "otto_image_8wPW6g": {
+      "type": "otto-image",
+      "settings": {
+        "image_name": "bleusalt-lite",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "image_margin_bottom": 20,
+        "show_content": false,
+        "content_width": 60,
+        "content_background_color": "#ffffff",
+        "content_text_color": "#000000",
+        "content_horizontal_alignment": "center",
+        "content_vertical_alignment": "center",
+        "header_font_tag": "h1",
+        "header_font_size": 2,
+        "header_font_size_mobile": 2,
+        "subheader_font_tag": "h2",
+        "subheader_font_size": 1,
+        "subheader_font_size_mobile": 1,
+        "body_font_tag": "p",
+        "body_font_size": 1,
+        "body_font_size_mobile": 1,
+        "button_background_color": "#000000",
+        "button_background_hover_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_text_hover_color": "#000000"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "27179d79-3ebb-4a24-9485-9336f0bfe5f8": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "1x",
+            "media_type": "image",
+            "image": "shopify:\/\/shop_images\/bleusalt-lite-hero.jpg",
+            "video_url": "",
+            "link": "",
+            "position": 2,
+            "title": "Introducing... BLEUSALT LITE",
+            "paragraph": "<p>The soft Bleusalt fibers you fell in love with, just a little lighter.<\/p>",
+            "button_text": ""
+          }
+        },
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "2x",
+            "media_type": "image",
+            "image": "shopify:\/\/shop_images\/womens-wraps.jpg",
+            "video_url": "",
+            "link": "shopify:\/\/pages\/bleusalt-styling",
+            "position": 5,
+            "title": "Style Tips",
+            "paragraph": "<p>Watch our style tips videos and create the perfect look<\/p>",
+            "button_text": "Watch Now"
+          }
+        },
+        "e832fc10-de4c-40a0-af3d-5596883c7716": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "1x",
+            "media_type": "image",
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
+            "video_url": "",
+            "link": "shopify:\/\/collections\/the-signature-bleusalt-wrap",
+            "position": 9,
+            "title": "Bleusalt Wraps",
+            "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.<\/p>",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "27179d79-3ebb-4a24-9485-9336f0bfe5f8",
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2",
+        "e832fc10-de4c-40a0-af3d-5596883c7716"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1660937591af29c294": {
+      "type": "rich-text",
+      "blocks": {
+        "1660937591138d0f9f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1660937591138d0f9f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"
+          }
+        },
+        "70b3749d-0024-40ad-b6a7-6ef19124d692": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "1660937591138d0f9f-0",
+        "1660937591138d0f9f-1",
+        "70b3749d-0024-40ad-b6a7-6ef19124d692"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image": "shopify:\/\/shop_images\/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "otto_image_8wPW6g",
+    "product-grid",
+    "1660937591af29c294"
+  ]
+}
