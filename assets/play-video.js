@@ -23,7 +23,7 @@ if(videoCta) {
 // Play Video
 function playVideo() {
   iframeParent.style.display = 'block';
-  iframe.setAttribute("src", iframeSrc + "?autoplay=1&mute=1");
+  iframe.setAttribute("src", iframeSrc + '?autoplay=1&mute=0');
   document.querySelector('body').style.overflow = 'hidden';
 
   // close
