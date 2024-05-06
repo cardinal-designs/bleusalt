@@ -4,6 +4,10 @@
   padding: 60px 0;
 }
 
+.style-sessions-article .image-text-video__wrapper {
+  padding-top: 20px;
+}
+
 @media screen and (max-width: 749px) {
 
   .image-text-video__wrapper {
