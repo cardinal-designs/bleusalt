@@ -13,6 +13,9 @@
   text-decoration: none;
   font-family: var(--font-body-family);
   color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .image-text-video__back-caret svg {
