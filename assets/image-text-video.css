@@ -20,6 +20,8 @@
 
 .image-text-video__back-caret svg {
   transform: rotate(90deg);
+  width: 16px;
+  height: 10px;
 }
 
 @media screen and (max-width: 749px) {
