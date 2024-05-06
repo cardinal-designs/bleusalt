@@ -39,8 +39,8 @@
     {%- comment -%} Content {%- endcomment -%}
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
-          <h2 class="image-text-video__heading">{{ title }}</h2>
           {%- for article in blog.articles -%}
+            <h2 class="image-text-video__heading">{{ article.title }}</h2>
             <script>
               console.log({{ article.title | json }})
             </script>
