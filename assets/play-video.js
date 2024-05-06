@@ -23,7 +23,8 @@ if(videoCta) {
 // Play Video
 function playVideo() {
   iframeParent.style.display = 'block';
-  iframe.setAttribute("src", iframeSrc + 'https://www.youtube.com/embed/Gq9DCfhrAZY?autoplay=1');
+  iframe.src = 'https://www.youtube.com/embed/Gq9DCfhrAZY?autoplay=1'
+  // iframe.setAttribute("src", iframeSrc + 'https://www.youtube.com/embed/Gq9DCfhrAZY?autoplay=1');
   document.querySelector('body').style.overflow = 'hidden';
 
   // close
