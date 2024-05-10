@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ 'plain-text.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="page-width">
+  <div class="plain-text">
+    {%- if section.settings.content != blank -%}
+      <p class="plain-text__content">{{ section.settings.content }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Plain Text",
+  "tag": "section",
+  "class": "section section--plain-text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Plain Text"
+    }
+  ]
+}
+{% endschema %}

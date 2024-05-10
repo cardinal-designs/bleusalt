@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="{{ 'image-text-video.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
+
+{%- assign description = article.metafields.custom.style_sessions_description.value -%}
+{%- assign date = article.metafields.custom.style_sessions_date.value -%}
+{%- assign cta_text = article.metafields.custom.style_sessions_cta_text.value -%}
+{%- assign youtube_Id = article.metafields.custom.style_sessions_youtube_id.value -%}
+
+<div class="style-sessions-article image-text-video page-width">
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="/pages/style-sessions">STYLE SESSIONS</a></li>
+      <li>{{ article.title }}</li>
+    </ul>
+  </div>
+  <a class="image-text-video__back" href="/pages/style-sessions">
+    <span class="image-text-video__back-caret">
+      {% render 'icon-caret' %}
+    </span>
+    <span>GO BACK</span>
+  </a>
+  <div class="image-text-video__wrapper">
+    {%- comment -%} Image {%- endcomment -%}
+    <div class="image-with-text__media-item">
+      <div class="image-with-text__media global-media-settings {% if article.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
+        {% if article.image != blank %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
+      >
+        {%- if article.image != blank -%}
+          <img
+            srcset="{%- if article.image.width >= 165 -%}{{ article.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if article.image.width >= 360 -%}{{ article.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if article.image.width >= 535 -%}{{ article.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if article.image.width >= 750 -%}{{ article.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if article.image.width >= 1070 -%}{{ article.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if article.image.width >= 1500 -%}{{ article.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ article.image | image_url }} {{ article.image.width }}w"
+            src="{{ article.image | image_url: width: 1500 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ article.image.alt | escape }}"
+            loading="lazy"
+            width="{{ article.image.width }}"
+            height="{{ article.image.height }}"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} Content {%- endcomment -%}
+    <div class="image-text-video__content">
+      <div class="image-text-video__content-inner">
+        <h2 class="image-text-video__heading">{{ article.title }}</h2>
+        {%- if description != blank -%}
+          <p class="image-text-video__desc">{{ description }}</p>
+        {%- endif -%}
+        {%- if date != blank -%}
+          <p class="image-text-video__desc">{{ date }}</p>
+        {%- endif -%}
+        {%- if cta_text != blank -%}
+          <div>
+            <button class="image-text-video__cta">{{ cta_text }}</button>
+            {%- if youtube_Id != blank -%}
+              <div class="image-text-video__iframe">
+                <div class="image-text-video__iframe-inner">
+                  <div class="image-text-video__close-iframe">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                      <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="#fff" stroke="#fff" stroke-width="0.5" />
+                    </svg>
+                  </div>
+                  <iframe src="https://www.youtube.com/embed/{{ youtube_Id }}" allowfullscreen class="video__iframe" frameborder="0"></iframe>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
