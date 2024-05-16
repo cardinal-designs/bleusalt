@@ -46,22 +46,6 @@
   </div>
 {%- endpaginate -%}
 
-{% comment %} {%- if section.settings.layout == 'masonry' -%}
-  <script defer src="{{ 'masonry.pkgd.min.js' | asset_url }}"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      var msnry = new Masonry( '.blog-articles', {
-        itemSelector: '.blog-articles__article',
-        columnWidth: '.grid-sizer',
-        percentPosition: false,
-        gutter: 10
-      });
-    });
-    
-  </script>
-  {% render 'hs-defer-css' with filename: 'blog.masonry.css', pages: 'collection,index,product' | split: ',', local: true %}
-{%- endif -%} {% endcomment %}
-
 {% schema %}
 {
   "name": "t:sections.main-blog.name",
@@ -71,27 +55,6 @@
     {
       "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "options": [
-        {
-          "value": "grid",
-          "label": "t:sections.main-blog.settings.layout.options__1.label"
-        },
-        {
-          "value": "collage",
-          "label": "t:sections.main-blog.settings.layout.options__2.label"
-        },
-        {
-          "value": "masonry",
-          "label": "Masonry"
-        }
-      ],
-      "default": "collage",
-      "label": "t:sections.main-blog.settings.layout.label",
-      "info": "t:sections.main-blog.settings.layout.info"
     },
     {
       "type": "select",
