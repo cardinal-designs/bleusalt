@@ -160,6 +160,13 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+  
+  .card__heading {
+    font-size: 14px;
+  }
+}
+
 .card__heading:last-child {
   margin-bottom: 0;
 }
