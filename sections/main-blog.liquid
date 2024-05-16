@@ -27,12 +27,12 @@
     <div class="blog-articles">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
-          <div>HEY</div>
           {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
             media_aspect_ratio: article.image.aspect_ratio,
             show_image: 'false',
+            show_logo: '',
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
             show_excerpt: true 
