@@ -18,13 +18,13 @@
 
 {%- paginate blog.articles by 24 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary {{ section.settings.header_alignment }}">HEY</h1>
+    <h1 class="title--primary {{ section.settings.header_alignment }}">{{ blog.title | escape }}</h1>
     {%  if blog.title == 'Press' %}
       <div class="rte center">
         <p>For media inquiries, please contact <a class="link" href="mailto:adee@infinitycreativeagency.com">adee@infinitycreativeagency.com</a></p>
       </div>
     {% endif %}
-    <div class="blog-articles">
+    <div class="">
       {%- for article in blog.articles -%}
         {% if section.settings.layout == 'masonry' %}
         <div class="grid-sizer"><span class="visually-hidden">Sizing</span></div>
