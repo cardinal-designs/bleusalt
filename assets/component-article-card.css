@@ -82,6 +82,14 @@
   font-size: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  
+  .article-card__excerpt {
+    font-size: 12px;
+  }
+  
+}
+
 .article-card__link:not(:only-child) {
   margin-right: 3rem;
 }
