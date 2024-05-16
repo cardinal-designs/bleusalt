@@ -26,8 +26,8 @@
     {% endif %}
     <div class="blog-articles">
       {%- for article in blog.articles -%}
-        <div>HEY</div>
         <div class="blog-articles__article article">
+          <div>HEY</div>
           {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
