@@ -60,7 +60,7 @@
         {%- endif -%}
         <div class="card__content">        
           <div class="card__information">
-            <h2 class="card__heading{% if show_excerpt %} h2{% endif %}">
+            <h2 class="card__heading">
               <a href="{{ article.url }}" class="full-unstyled-link">
                 {{ article.title | truncate: 50 | escape }}
               </a>
