@@ -91,12 +91,11 @@
 }
 
 .card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
   padding: 1rem;
   width: 100%;
+  flex-grow: 1;
 }
 
 .card__content--auto-margins {
