@@ -1,5 +1,6 @@
 .blog-articles {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   column-gap: var(--grid-mobile-horizontal-spacing);
   row-gap: var(--grid-mobile-vertical-spacing);
