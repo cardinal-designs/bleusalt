@@ -9,7 +9,6 @@
   align-items: center;
   padding: 10px;
   border: 1px solid #e5e5e5;
-  border-radius: 12px;
 }
 
 @media screen and (max-width: 768px) {
@@ -17,7 +16,6 @@
   .article {
     padding: 0;
   }
-  
 }
 
 .article.grid__item {
