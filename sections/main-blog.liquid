@@ -28,11 +28,8 @@
       {%- for article in blog.articles -%}
         {% assign logo = article.metafields.custom.article_logo.value %}
         <div class="blog-articles__article article">
-          <img
-            class="blog-articles__logo"
-            src="{{ logo | img_url: 'master' }}" 
-            style="height: 100px; width: 100px;"
-          >
+          <img class="blog-articles__logo" src="{{ logo | img_url: 'master' }}">
+          {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
             media_aspect_ratio: article.image.aspect_ratio,
