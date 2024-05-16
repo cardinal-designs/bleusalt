@@ -34,6 +34,7 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__content">
+        <img class="blog-articles__logo" src="{{ show_logo | img_url: 'master' }}">
         <div class="card__information">
           <h2 class="card__heading{% if show_excerpt %} h2{% endif %}">
             <a href="{{ article.url }}" class="full-unstyled-link">
