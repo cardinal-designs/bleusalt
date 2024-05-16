@@ -13,8 +13,8 @@
   margin: 0 auto;
 }
 
-.article-template__hero-container .media.loaded>img {
-  opacity: 1;
+.article-template__hero-container .media>img {
+  opacity: 1!important;
 }
 
 .article-template__hero-small {
