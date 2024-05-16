@@ -26,9 +26,6 @@
     {% endif %}
     <div class="blog-articles">
       {%- for article in blog.articles -%}
-        {% if section.settings.layout == 'masonry' %}
-        <div class="grid-sizer"><span class="visually-hidden">Sizing</span></div>
-        {% endif %}
         <div class="blog-articles__article article">
           {%- render 'article-card',
             article: article,
