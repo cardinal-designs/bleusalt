@@ -49,7 +49,7 @@
   </div>
 {%- endpaginate -%}
 
-{%- if section.settings.layout == 'masonry' -%}
+{% comment %} {%- if section.settings.layout == 'masonry' -%}
   <script defer src="{{ 'masonry.pkgd.min.js' | asset_url }}"></script>
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
@@ -63,7 +63,7 @@
     
   </script>
   {% render 'hs-defer-css' with filename: 'blog.masonry.css', pages: 'collection,index,product' | split: ',', local: true %}
-{%- endif -%}
+{%- endif -%} {% endcomment %}
 
 {% schema %}
 {
