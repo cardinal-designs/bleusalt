@@ -7,6 +7,15 @@
 .article {
   display: flex;
   align-items: center;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+@media screen and (max-width: 768px) {
+
+  .article {
+    padding: 0;
+  }
 }
 
 .article.grid__item {
@@ -76,6 +85,15 @@
 .article-card__excerpt {
   width: 100%;
   margin-top: 1.2rem;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .article-card__excerpt {
+    font-size: 12px;
+  }
+  
 }
 
 .article-card__link:not(:only-child) {

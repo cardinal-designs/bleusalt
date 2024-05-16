@@ -1,14 +1,5 @@
-.blog-articles__article,
-.grid-sizer {
-    width: 50%;
-    width: calc(50% - 1px);
-}
-
-@media screen and (max-width: 749px) {
-    .blog-articles__article,
-    .grid-sizer {
-        width: 100%;
-    }    
+.blog-articles__article {
+    width: 100%;
 }
 
 .blog-articles__article {
