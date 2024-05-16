@@ -27,10 +27,12 @@
     <div class="blog-articles">
       {%- for article in blog.articles -%}
         {% assign logo = article.metafields.custom.article_logo.value %}
-        <script>
-          console.log({{ logo | json }})
-        </script>
         <div class="blog-articles__article article">
+          <img
+            class="featured__image lazyload"
+            src="{{ logo | img_url: 'master' }}" 
+            alt="{{ logo.alt | escape }}"
+          >
           {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
