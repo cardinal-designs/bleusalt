@@ -26,3 +26,8 @@
     row-gap: var(--grid-desktop-vertical-spacing);
   }
 }
+
+.blog-articles__logo {
+  width: 100px;
+  height: 100px;
+}

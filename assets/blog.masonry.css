@@ -2,11 +2,6 @@
     width: 100%;
 }
 
-.blog-articles__logo {
-    width: 100px;
-    height: 100px;
-}
-
 .blog-articles__article {
     padding: 3rem;
     padding-bottom: 0;
