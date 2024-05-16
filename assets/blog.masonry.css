@@ -2,12 +2,10 @@
     width: 100%;
 }
 
-/* @media screen and (max-width: 749px) {
-    .blog-articles__article,
-    .grid-sizer {
-        width: 100%;
-    }    
-} */
+.blog-articles__logo {
+    width: 100px;
+    height: 100px;
+}
 
 .blog-articles__article {
     padding: 3rem;
