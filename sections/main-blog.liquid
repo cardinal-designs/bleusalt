@@ -26,6 +26,10 @@
     {% endif %}
     <div class="blog-articles">
       {%- for article in blog.articles -%}
+        {% assign logo = article.metafields.custom.article_logo %}
+        <script>
+          console.log({{ logo | json }})
+        </script>
         <div class="blog-articles__article article">
           {%- render 'article-card',
             article: article,
