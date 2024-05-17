@@ -15,3 +15,8 @@
 .rebuy-widget {
   padding: 0;
 }
+
+.rebuy-widget-content .primary-title {
+  margin: 0;
+  margin-bottom: 3rem
+}
