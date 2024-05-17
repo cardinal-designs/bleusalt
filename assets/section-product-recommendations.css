@@ -61,7 +61,7 @@
 
 .product-recommendations .rebuy-product-wrapper {
   grid-row-start: 2;
-  padding: 1.3rem 1rem;
+  padding: 1.3rem 0;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-info, 
@@ -104,7 +104,6 @@
 .product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-info .rebuy-product-title.clickable {
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 70%;
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-size: calc(var(--font-heading-scale) * 1.5rem);
