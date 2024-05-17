@@ -32,6 +32,11 @@
   justify-content: flex-start;
 }
 
+.rebuy-product-grid .splide__list {
+  column-gap: var(--grid-desktop-horizontal-spacing);
+  row-gap: var(--grid-desktop-vertical-spacing);
+}
+
 
 @media only screen and (min-width: 750px) {
 
