@@ -64,6 +64,13 @@
   padding: 1.3rem 1rem;
 }
 
+.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-info, 
+.product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-actions, 
 .product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-actions {
   display: none;
