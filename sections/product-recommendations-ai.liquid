@@ -18,32 +18,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-.rebuy-product-image-container {
-    position: relative;
-    display: inline-block;
-}
-
-.rebuy-product-image-container + .rebuy-product-image-container {
-  display : none;
-}
-
-.second-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.rebuy-product-image-container:hover .second-image {
-    opacity: 1;
-}
-
 {%- endstyle -%}
 
 {%- if section.settings.show_rebuy_recommendaation -%}
   <div data-rebuy-id="{{ section.settings.rebuy_recommendaation_widget_id }}" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
-  {% render 'rebuy-recommendation-template', widget_id: section.settings.rebuy_recommendaation_widget_id %}
 {%- else -%}
 
   <div class="color-{{ section.settings.color_scheme }} gradient">
