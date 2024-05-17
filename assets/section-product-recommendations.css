@@ -13,11 +13,11 @@
   margin-bottom: 3rem;
 }
 
-.rebuy-widget {
+.product-recommendations .rebuy-widget {
   padding: 0;
 }
 
-.rebuy-widget-content .primary-title {
+.product-recommendations .rebuy-widget-content .primary-title {
   font-size: calc(var(--font-heading-scale) * 3rem);
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
@@ -29,7 +29,7 @@
 
 @media only screen and (min-width: 750px) {
 
-  .rebuy-widget-content .primary-title {
+  .product-recommendations .rebuy-widget-content .primary-title {
     font-size: calc(var(--font-heading-scale) * 4rem);
   }
   
