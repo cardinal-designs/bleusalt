@@ -85,6 +85,8 @@
   color: #ea0606;
 }
 
+.product-recommendations .rebuy-money.compare-at, 
+.product-recommendations .rebuy-widget .rebuy-money.compare-at,
 .product-recommendations .rebuy-money, 
 .product-recommendations .rebuy-widget .rebuy-money {
   color: rgba(var(--color-foreground), .75);
