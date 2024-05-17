@@ -59,6 +59,11 @@
   width: 100%;
 }
 
+.product-recommendations .rebuy-product-wrapper {
+  grid-row-start: 2;
+  padding: 1.3rem 1rem;
+}
+
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-actions, 
 .product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-actions {
   display: none;
@@ -73,6 +78,11 @@
   .product-recommendations .rebuy-widget .rebuy-product-block {
     width: calc(25% - var(--grid-desktop-horizontal-spacing)* 3 / 4) !important;
     max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+
+  .product-recommendations .rebuy-product-wrapper {
+    padding-bottom: 1.7rem;
+    padding-top: 1.7rem;
   }
   
 }
