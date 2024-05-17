@@ -94,6 +94,11 @@
   color: rgba(var(--color-foreground), .75);
 }
 
+.product-recommendations .rebuy-money, 
+.product-recommendations .rebuy-widget .rebuy-money {
+  margin: 0 1rem 0 0;
+}
+
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title.clickable, 
 .product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-info .rebuy-product-title.clickable {
   margin-top: 0;
