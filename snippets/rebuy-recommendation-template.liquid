@@ -39,7 +39,7 @@
                   v-bind:src="itemImage(product, product, '400x400')"
                   v-bind:alt="itemImageAlt(product, product)">
 
-                <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'"
+                <img
                   v-bind:src="product.images[1].src"
                   v-bind:alt="itemImageAlt(product, product)">
               </a>
