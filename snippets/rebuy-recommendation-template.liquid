@@ -1,10 +1,10 @@
 {{ widget_id }}--
 <script>
-  var widget_id = {{ widget_id }};
+  var widget_id = "{{ widget_id }}";
 </script>
 {% raw %}
 <script id="rebuy-widget-149470" type="text/template" data-rebuy-shopify-product-ids="{{ product.id }}">
-  <div class="rebuy-widget demotemplatesnippet" data-widgetattr="'rebuy-widget-' + widget_id" v-cloak v-on:click="stopPropagation($event)" v-bind:id="'rebuy-widget-' + id"
+  <div class="rebuy-widget demotemplatesnippet" v-bind:data-widgetattr="'rebuy-widget-' + widget_id" v-cloak v-on:click="stopPropagation($event)" v-bind:id="'rebuy-widget-' + id"
     v-bind:class="['widget-type-' + config.type.replace('_','-'), 'widget-display-' + config.display_type, products.length > 0 ? 'is-visible' : 'is-hidden', 'widget-layout-' + currentLayout()]">
 
     <div class="rebuy-widget-container" v-cloak
