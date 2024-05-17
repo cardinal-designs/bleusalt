@@ -33,13 +33,14 @@
             aria-label="product" class="rebuy-product-block" role="listitem">
 
             <div class="rebuy-product-media teeee" data-url="{{ product.images | json }}">
-              <a class="rebuy-product-image" tabindex="-1" v-bind:href="learnMoreURL(product)" v-bind:style="imageStyles"
-                v-on:click="learnMore(product);" v-bind:class="[hasLearnMore() ? 'clickable' : '']">
-                <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'"
-                  v-bind:src="itemImage(product, product, '400x400')"
-                  v-bind:alt="itemImageAlt(product, product)">
-
-              </a>
+              <div class="rebuy-product-images">
+                <!-- Loop through each image of the product -->
+                <a v-for="(image, index) in product.images" :key="index" class="rebuy-product-image" tabindex="-1"
+                  :href="learnMoreURL(product)" :style="imageStyles" @click="learnMore(product)"
+                  :class="[hasLearnMore() ? 'clickable' : '']">
+                  <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt">
+                </a>
+              </div>
             </div>
             <div class="rebuy-product-info">
               <a role="heading" aria-level="5" class="rebuy-product-title" v-bind:href="learnMoreURL(product)"
