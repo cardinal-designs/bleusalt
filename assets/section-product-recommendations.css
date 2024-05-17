@@ -70,6 +70,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-price, 
