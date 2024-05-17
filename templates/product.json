@@ -268,6 +268,11 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rebuy_recommendation_QGWwL9": {
+      "type": "Rebuy-recommendation",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -278,6 +283,7 @@
     "product-recommendations",
     "product_recommendations_ai_mCkeP9",
     "1662737421ca8ebddf",
-    "16899109760dd19e0a"
+    "16899109760dd19e0a",
+    "rebuy_recommendation_QGWwL9"
   ]
 }
