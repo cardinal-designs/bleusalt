@@ -113,6 +113,7 @@
 .product-recommendations .rebuy-recommended-products .rebuy-product-review {
   order: 3;
   max-width: 100%;
+  text-align: left;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-actions, 
