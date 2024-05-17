@@ -80,6 +80,7 @@
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
   order: 2;
+  text-align: right;
 }
 
 .product-recommendations .rebuy-money.sale, 
