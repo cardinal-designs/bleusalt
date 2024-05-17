@@ -33,11 +33,11 @@
             aria-label="product" class="rebuy-product-block" role="listitem">
 
             <div class="rebuy-product-media teeee" data-url="{{ product.images | json }}">
-              <div class="rebuy-product-images">
-                <!-- Loop through each image of the product -->
-                <a v-for="(image, index) in product.images" :key="index" class="rebuy-product-image" tabindex="-1"
-                  :href="learnMoreURL(product)" :style="imageStyles" @click="learnMore(product)"
-                  :class="[hasLearnMore() ? 'clickable' : '']">
+               <div class="rebuy-product-images">
+              <!-- Loop through the first two images of the product -->
+                <a v-for="(image, index) in product.images.slice(0, 2)" :key="index" class="rebuy-product-image" tabindex="-1"
+                :href="learnMoreURL(product)" :style="imageStyles" @click="learnMore(product)"
+                :class="[hasLearnMore() ? 'clickable' : '']">
                   <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt">
                 </a>
               </div>
