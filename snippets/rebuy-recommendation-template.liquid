@@ -48,10 +48,11 @@ console.log(scriptElement,"scriptElement");
             <div class="rebuy-product-media">
               <div class="rebuy-product-images">
               <!-- Loop through the first two images of the product -->
-                <div class="rebuy-product-image-container" v-for="(image, index) in product.images.slice(0, 2)" :key="index">
-                  <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt" class="first-image">
-                  <img v-if="index === 0 && product.images.length > 1" :src="product.images[1].src" :alt="product.images[1].alt" class="second-image">
-                </div>
+                <a v-for="(image, index) in product.images.slice(0, 2)" :key="index" class="rebuy-product-image" tabindex="-1"
+                  :href="learnMoreURL(product)" :style="imageStyles" @click="learnMore(product)"
+                  :class="[hasLearnMore() ? 'clickable' : '']">
+                  <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt">
+                </a>
               </div>
             </div>
             <div class="rebuy-product-info">
