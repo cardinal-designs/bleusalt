@@ -36,15 +36,13 @@
             aria-label="product" class="rebuy-product-block" role="listitem">
 
             <div class="rebuy-product-media teeee" data-url="{{ product.images | json }}">
-                <div class="rebuy-product-images">
-                    <!-- Loop through the first two images of the product -->
-                    <div class="rebuy-product-image-container" v-for="(image, index) in product.images.slice(0, 2)" :key="index"
-                        @mouseover="showSecondImage = true" @mouseleave="showSecondImage = false">
-                        <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt">
-                        <img v-if="index === 0 && showSecondImage && product.images.length > 1" class="second-image"
-                            :src="product.images[1].src" :alt="product.images[1].alt">
-                    </div>
+              <div class="rebuy-product-images">
+              <!-- Loop through the first two images of the product -->
+                <div class="rebuy-product-image-container" v-for="(image, index) in product.images.slice(0, 2)" :key="index">
+                  <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt" class="first-image">
+                  <img v-if="index === 0 && product.images.length > 1" :src="product.images[1].src" :alt="product.images[1].alt" class="second-image">
                 </div>
+              </div>
             </div>
             <div class="rebuy-product-info">
               <a role="heading" aria-level="5" class="rebuy-product-title" v-bind:href="learnMoreURL(product)"
