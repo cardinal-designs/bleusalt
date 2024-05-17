@@ -21,7 +21,7 @@
 {%- endstyle -%}
 
 {%- if section.settings.show_rebuy_recommendaation -%}
-  <div class="product-recommendations page-width section-{{ section.id }}-padding">
+  <div class="product-recommendations page-width section-{{ section.id }}-padding product-recommendations--loaded">
     <div data-rebuy-id="{{ section.settings.rebuy_recommendaation_widget_id }}" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
   </div>
 {%- else -%}
