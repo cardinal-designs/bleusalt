@@ -21,7 +21,9 @@
 {%- endstyle -%}
 
 {%- if section.settings.show_rebuy_recommendaation -%}
-  <div data-rebuy-id="{{ section.settings.rebuy_recommendaation_widget_id }}" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+  <div class="product-recommendations page-width section-{{ section.id }}-padding">
+    <div data-rebuy-id="{{ section.settings.rebuy_recommendaation_widget_id }}" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+  </div>
 {%- else -%}
 
   <div class="color-{{ section.settings.color_scheme }} gradient">
