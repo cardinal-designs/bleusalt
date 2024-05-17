@@ -208,6 +208,20 @@
     },
     "product_recommendations_ai_mCkeP9": {
       "type": "product-recommendations-ai",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_AqqLzD": {
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "149470",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_AqqLzD"
+      ],
       "settings": {
         "heading": "We pulled these for you.",
         "heading_size": "h1",
