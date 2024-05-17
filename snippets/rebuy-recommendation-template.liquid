@@ -50,7 +50,7 @@ console.log(scriptElement,"scriptElement");
               <!-- Loop through the first two images of the product -->
                 <div class="rebuy-product-image-container" v-for="(image, index) in product.images.slice(0, 2)" :key="index">
                   <img :loading="index > 1 ? 'lazy' : 'eager'" :src="image.src" :alt="image.alt" class="first-image">
-                  <img v-if="index === 0 && product.images.length > 1" :src="product.images[1].src" :alt="product.images[1].alt" style="display:none;" class="second-image">
+                  <img v-if="index === 0 && product.images.length > 1" :src="product.images[1].src" :alt="product.images[1].alt" class="second-image">
                 </div>
               </div>
             </div>
