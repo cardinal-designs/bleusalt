@@ -71,6 +71,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-price, 
@@ -80,7 +81,6 @@
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
   order: 2;
-  text-align: right;
 }
 
 .product-recommendations .rebuy-money.sale, 
