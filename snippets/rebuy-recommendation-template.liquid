@@ -1,8 +1,18 @@
 <script>
   var widget_id = "{{ widget_id }}";
+  function setScriptId() {
+    var scriptElement = document.querySelector('.rebuy-widget-template');
+console.log(scriptElement,"scriptElement");
+    if (scriptElement) {
+      scriptElement.id = 'rebuy-widget-' + widget_id;
+    }
+  }
+  // Call the function to set the ID after the page has loaded
+  window.onload = setScriptId;
 </script>
 
-<script id="rebuy-widget-149470" type="text/template" data-rebuy-shopify-product-ids="{{ product.id }}"  data-data={{ widget_id }}>
+{% raw %}
+<script id="" type="text/template" data-rebuy-shopify-product-ids="{{ product.id }}" class="rebuy-widget-template">
   <div class="rebuy-widget demotemplatesnippet" v-bind:data-widgetattr="'rebuy-widget-' + widget_id" v-cloak v-on:click="stopPropagation($event)" v-bind:id="'rebuy-widget-' + id"
     v-bind:class="['widget-type-' + config.type.replace('_','-'), 'widget-display-' + config.display_type, products.length > 0 ? 'is-visible' : 'is-hidden', 'widget-layout-' + currentLayout()]">
 
@@ -166,3 +176,4 @@
     </div>
   </div>
 </script>
+{% endraw %}
