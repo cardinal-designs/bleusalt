@@ -32,12 +32,12 @@
             v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
             aria-label="product" class="rebuy-product-block" role="listitem">
 
-            <div class="rebuy-product-media" {{ product.selected_variant }}>
+            <div class="rebuy-product-media">
               <a class="rebuy-product-image" tabindex="-1" v-bind:href="learnMoreURL(product)" v-bind:style="imageStyles"
                 v-on:click="learnMore(product);" v-bind:class="[hasLearnMore() ? 'clickable' : '']">
                 <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'"
-                  v-bind:src="itemImage(product, product.selected_variant, '400x400')"
-                  v-bind:alt="itemImageAlt(product, product.selected_variant)">
+                  v-bind:src="itemImage(product, product, '400x400')"
+                  v-bind:alt="itemImageAlt(product, product)">
               </a>
             </div>
             <div class="rebuy-product-info">
