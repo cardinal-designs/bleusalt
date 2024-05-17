@@ -18,6 +18,21 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .rebuy-product-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.rebuy-product-image-container:hover .second-image {
+    display: block;
+}
 {%- endstyle -%}
 
 {%- if section.settings.show_rebuy_recommendaation -%}
