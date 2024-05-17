@@ -72,7 +72,13 @@
   align-items: center;
 }
 
-.product-recommendations .rebuy-money, .rebuy-widget .rebuy-money {
+.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-price, 
+.product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-info .rebuy-product-price {
+  margin: 0;
+}
+
+.product-recommendations .rebuy-money, 
+.product-recommendations .rebuy-widget .rebuy-money {
   color: rgba(var(--color-foreground), .75);
 }
 
