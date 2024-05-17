@@ -79,6 +79,7 @@
   font-size: 1.5rem;
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
+  order: 2;
 }
 
 .product-recommendations .rebuy-money.sale, 
