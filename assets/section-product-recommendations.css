@@ -37,11 +37,32 @@
   row-gap: var(--grid-desktop-vertical-spacing);
 }
 
+.rebuy-widget .rebuy-product-block {
+  width: calc(25% - var(--grid-mobile-horizontal-spacing)* 3 / 4);
+  max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 990px) {
+
+  .rebuy-widget .rebuy-product-block {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing)* 3 / 4);
+    max-width: calc(25% - var(--grid-desktop-horizontal-spacing)* 3 / 4);
+  }
+  
+}
 
 @media only screen and (min-width: 750px) {
 
   .product-recommendations .rebuy-widget-content .primary-title {
     font-size: calc(var(--font-heading-scale) * 4rem);
+  }
+
+  .rebuy-widget .rebuy-product-block {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing)* 3 / 4);
+    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
   
 }
