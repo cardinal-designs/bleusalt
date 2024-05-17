@@ -45,7 +45,7 @@ console.log(scriptElement,"scriptElement");
             v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
             aria-label="product" class="rebuy-product-block" role="listitem">
 
-            <div class="rebuy-product-media teeee" data-url="{{ product.images | json }}">
+            <div class="rebuy-product-media">
               <div class="rebuy-product-images">
               <!-- Loop through the first two images of the product -->
                 <div class="rebuy-product-image-container" v-for="(image, index) in product.images.slice(0, 2)" :key="index">
