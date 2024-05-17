@@ -22,6 +22,7 @@
 
 {%- if section.settings.show_rebuy_recommendaation -%}
   <div data-rebuy-id="{{ section.settings.rebuy_recommendaation_widget_id }}" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+  {% render 'rebuy-recommendation-template', widget_id: section.settings.rebuy_recommendaation_widget_id %}
 {%- else -%}
 
   <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -94,7 +95,7 @@
   customElements.define('product-recommendations', ProductRecommendations);
 
 {% endjavascript %}
-{% render 'rebuy-recommendation-template' %}
+
 {% schema %}
 {
   "name": "Recommendations AI",
