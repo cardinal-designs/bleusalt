@@ -72,7 +72,9 @@
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-actions, 
-.product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-actions {
+.product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-actions,
+.product-recommendations .rebuy-widget .powered-by-rebuy, 
+.product-recommendations .rebuy-recommended-products .powered-by-rebuy {
   display: none;
 }
 
