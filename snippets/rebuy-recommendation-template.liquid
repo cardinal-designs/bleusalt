@@ -32,7 +32,7 @@
             v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
             aria-label="product" class="rebuy-product-block" role="listitem">
 
-            <div class="rebuy-product-media">
+            <div class="rebuy-product-media" data-url="{{ product.images[1].url }}">
               <a class="rebuy-product-image" tabindex="-1" v-bind:href="learnMoreURL(product)" v-bind:style="imageStyles"
                 v-on:click="learnMore(product);" v-bind:class="[hasLearnMore() ? 'clickable' : '']">
                 <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'"
@@ -40,7 +40,7 @@
                   v-bind:alt="itemImageAlt(product, product)">
 
                 <img
-                  v-bind:src="product.images[1].src"
+                  v-bind:src="product.images[1].url"
                   v-bind:alt="itemImageAlt(product, product)">
               </a>
             </div>
