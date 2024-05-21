@@ -383,3 +383,11 @@
 .card__selected-color {
   font-size: 1.3rem;
 }
+
+.template--blog .card--standard.card--media .card__inner .card__information, 
+.template--blog .card--standard.card--text > .card__content .card__heading, 
+.template--blog .card--standard > .card__content .card__badge, 
+.template--blog .card--standard.card--text.article-card > .card__content .card__information, 
+.template--blog .card--standard>.card__content .card__caption {
+  display: block;
+}
