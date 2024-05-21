@@ -27,14 +27,24 @@
   }
 }
 
-.blog-articles__logo {
-  width: 100%;
+.blog-articles__logo-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
   height: 100px;
+}
+
+.blog-articles__logo {
+  width: auto;
+  max-height: 100px;
+  height: auto;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
 
-  .blog-articles__logo {
+  .blog-articles__logo-main {
     height: 80px;
   }
 }
