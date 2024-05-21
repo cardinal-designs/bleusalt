@@ -36,7 +36,9 @@
     >
       <div class="card__content">
         {%- if show_logo != blank -%}
-          <img class="blog-articles__logo" src="{{ show_logo | img_url: 'master' }}">
+          <div class="blog-articles__logo-main">
+            <img class="blog-articles__logo" src="{{ show_logo | img_url: 'master' }}">
+          </div>
         {%- endif -%}
         <div class="card__information">
           <h2 class="card__heading{% if show_excerpt %} h2{% endif %}">
