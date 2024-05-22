@@ -24,17 +24,16 @@
         <p>For media inquiries, please contact <a class="link" href="mailto:adee@infinitycreativeagency.com">adee@infinitycreativeagency.com</a></p>
       </div>
     {% endif %}
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="blog-articles">
       {%- for article in blog.articles -%}
-        {% if section.settings.layout == 'masonry' %}
-        <div class="grid-sizer"><span class="visually-hidden">Sizing</span></div>
-        {% endif %}
+        {% assign logo = article.metafields.custom.article_logo.value %}
         <div class="blog-articles__article article">
           {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
             media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
+            show_image: 'false',
+            show_logo: logo,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
             show_excerpt: true 
@@ -49,22 +48,6 @@
   </div>
 {%- endpaginate -%}
 
-{%- if section.settings.layout == 'masonry' -%}
-  <script defer src="{{ 'masonry.pkgd.min.js' | asset_url }}"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      var msnry = new Masonry( '.blog-articles', {
-        itemSelector: '.blog-articles__article',
-        columnWidth: '.grid-sizer',
-        percentPosition: false,
-        gutter: 10
-      });
-    });
-    
-  </script>
-  {% render 'hs-defer-css' with filename: 'blog.masonry.css', pages: 'collection,index,product' | split: ',', local: true %}
-{%- endif -%}
-
 {% schema %}
 {
   "name": "t:sections.main-blog.name",
@@ -74,27 +57,6 @@
     {
       "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "options": [
-        {
-          "value": "grid",
-          "label": "t:sections.main-blog.settings.layout.options__1.label"
-        },
-        {
-          "value": "collage",
-          "label": "t:sections.main-blog.settings.layout.options__2.label"
-        },
-        {
-          "value": "masonry",
-          "label": "Masonry"
-        }
-      ],
-      "default": "collage",
-      "label": "t:sections.main-blog.settings.layout.label",
-      "info": "t:sections.main-blog.settings.layout.info"
     },
     {
       "type": "select",
