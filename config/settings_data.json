@@ -373,15 +373,15 @@
         "settings": {
         }
       },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+      "17824471530847535147": {
+        "type": "shopify:\/\/apps\/web-accessibility-by-accessibe\/blocks\/accessiBe\/149b77a2-0170-42f6-9355-0bef39587b09",
         "disabled": false,
         "settings": {
         }
       },
-      "17824471530847535147": {
-        "type": "shopify:\/\/apps\/web-accessibility-by-accessibe\/blocks\/accessiBe\/149b77a2-0170-42f6-9355-0bef39587b09",
-        "disabled": false,
+      "17676059084223943535": {
+        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": true,
         "settings": {
         }
       }
