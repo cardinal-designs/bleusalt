@@ -27,14 +27,14 @@
   }
 }
 
-/* .blog-articles__logo-main {
+.blog-articles__logo-main {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
   height: 100px;
   padding: 10px;
-} */
+}
 
 .blog-articles__logo {
   width: auto;
@@ -42,10 +42,10 @@
   height: auto;
   max-width: 100%;
 }
-/* 
+
 @media screen and (max-width: 768px) {
 
   .blog-articles__logo-main {
     height: 80px;
   }
-} */
+}
