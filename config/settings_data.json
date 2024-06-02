@@ -322,6 +322,7 @@
         "blocks": {
           "5c928d39-473d-4787-994f-43ebd478188f": {
             "type": "accessory",
+            "disabled": true,
             "settings": {
               "accessory_heading": "Add canvas bags?",
               "accessory_product": "the-canvas-bag-12-inch"
@@ -376,12 +377,6 @@
       "17824471530847535147": {
         "type": "shopify:\/\/apps\/web-accessibility-by-accessibe\/blocks\/accessiBe\/149b77a2-0170-42f6-9355-0bef39587b09",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": true,
         "settings": {
         }
       }
