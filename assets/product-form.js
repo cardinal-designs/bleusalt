@@ -674,18 +674,17 @@ const otherColors = () => {
             newColors.push(variant.options[colorIndex]);
           }
         });
-        newColors.forEach((color) => {
-          if (window.productJSON.handle === "the-turtleneck" || window.productJSON.handle === "the-perfect-classic-t") return;
-          const colorInput = doc.querySelector(`input[value="${color}"]`);
-          const colorList = document.querySelector('.product-form__option[data-option="Color"] .product-form__input');
-          const formId = document.querySelector('product-form form').getAttribute('id');
-          colorInput.setAttribute('form', formId);
-          if (!colorInput) return true;
-          const colorWrapper = colorInput.parentNode;
-          colorList.appendChild(colorWrapper);
+        // newColors.forEach((color) => {
+        //   if (window.productJSON.handle === "the-turtleneck" || window.productJSON.handle === "the-perfect-classic-t") return;
+        //   const colorInput = doc.querySelector(`input[value="${color}"]`);
+        //   const colorList = document.querySelector('.product-form__option[data-option="Color"] .product-form__input');
+        //   const formId = document.querySelector('product-form form').getAttribute('id');
+        //   colorInput.setAttribute('form', formId);
+        //   if (!colorInput) return true;
+        //   const colorWrapper = colorInput.parentNode;
+        //   colorList.appendChild(colorWrapper);
 
-        });
-        console.log(newColors);
+        // });
       });
       customElements.define('variant-selects', VariantSelects);
       customElements.define('variant-radios', VariantRadios);
