@@ -638,7 +638,6 @@ const buildNewSwatches = (newColors) => {
 
 const otherColors = () => {
   if (window.productJSON === undefined) return;
-  console.log('jksdflahs')
   const productTitle = window.productJSON.title;
   const fetchUrl = `/search.json?q=title:${productTitle}&type=product&view=api`;
   const currentColorIndex = window.productJSON.options.indexOf('Color');
