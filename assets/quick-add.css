@@ -55,7 +55,7 @@ quick-add {
 }
 
 .quick-add__button--color[selected] {
-  border: var(--inputs-border-width) solid rgba(var(--color-foreground),0.5);
+  border: var(--inputs-border-width) solid rgba(var(--color-foreground),0.5) !important;
   box-shadow:
     0 0 0 2px #fff,
     0 0 0 3px rgba(var(--color-foreground),0.5);
