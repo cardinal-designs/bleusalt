@@ -1481,7 +1481,9 @@ table[data-in-to-cm] td {
 }
 
 #PopupModal-sizing-guide .product-popup-modal__content td,
-#PopupModal-sizing-guide .product-popup-modal__content th {
+#PopupModal-sizing-guide .product-popup-modal__content th,
+#PopupModal-measuring-guide .product-popup-modal__content td,
+#PopupModal-measuring-guide .product-popup-modal__content th {
   border: 1px solid #000000 !important;
   font-size: 12px;
   height: 28px;
@@ -1532,7 +1534,8 @@ table[data-in-to-cm] td {
     width: 100%;
   }
 
-  #PopupModal-sizing-guide .product-popup-modal__content table {
+  #PopupModal-sizing-guide .product-popup-modal__content table,
+  #PopupModal-measuring-guide .product-popup-modal__content table {
     display: table;
     max-width: 100%;
   }
