@@ -1560,7 +1560,7 @@ table[data-in-to-cm] td {
   } 
   
   #PopupModal-measuring-guide .product-popup-modal__content-info p {
-    padding-left: 15px;
+    padding-left: 0;
   }
   
 }
