@@ -1482,8 +1482,8 @@ table[data-in-to-cm] td {
 
 #PopupModal-sizing-guide .product-popup-modal__content td,
 #PopupModal-sizing-guide .product-popup-modal__content th,
-#PopupModal-measuring-guide .product-popup-modal__content td,
-#PopupModal-measuring-guide .product-popup-modal__content th {
+#PopupModal-measuring-guide .international__chart td,
+#PopupModal-measuring-guide .international__chart th {
   border: 1px solid #000000 !important;
   font-size: 12px;
   height: 28px;
@@ -1492,8 +1492,8 @@ table[data-in-to-cm] td {
 
 #PopupModal-sizing-guide .product-popup-modal__content tr td:first-child,
 #PopupModal-sizing-guide .product-popup-modal__content tr:first-child td,
-#PopupModal-measuring-guide .product-popup-modal__content tr td:first-child,
-#PopupModal-measuring-guide .product-popup-modal__content tr:first-child td {
+#PopupModal-measuring-guide .international__chart tr td:first-child,
+#PopupModal-measuring-guide .international__chart tr:first-child td {
   font-weight: 500;
   line-height: 1.4;
   font-size: 12px;
@@ -1510,6 +1510,10 @@ table[data-in-to-cm] td {
 #PopupModal-measuring-guide .product-popup-modal__content-info p {
   font-weight: normal;
   font-size: 12px;  
+}
+
+#PopupModal-measuring-guide .product-popup-modal__content-info p {
+  padding-left: 30px;
 }
 
 #PopupModal-sizing-guide .product-popup-modal__content-info,
@@ -1549,6 +1553,14 @@ table[data-in-to-cm] td {
     font-size: 12px;
     word-break: break-word;
     width: 58px;
+  }
+
+  #PopupModal-measuring-guide .product-popup-modal__content-info ol {
+    padding-left: 15px;
+  } 
+  
+  #PopupModal-measuring-guide .product-popup-modal__content-info p {
+    padding-left: 0;
   }
   
 }
