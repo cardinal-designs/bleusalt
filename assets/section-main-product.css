@@ -1510,6 +1510,9 @@ table[data-in-to-cm] td {
 #PopupModal-measuring-guide .product-popup-modal__content-info p {
   font-weight: normal;
   font-size: 12px;  
+}
+
+#PopupModal-measuring-guide .product-popup-modal__content-info p {
   padding-left: 30px;
 }
 
@@ -1550,6 +1553,14 @@ table[data-in-to-cm] td {
     font-size: 12px;
     word-break: break-word;
     width: 58px;
+  }
+
+  #PopupModal-measuring-guide .product-popup-modal__content-info ol {
+    padding-left: 15px;
+  } 
+  
+  #PopupModal-measuring-guide .product-popup-modal__content-info p {
+    padding-left: 15px;
   }
   
 }
