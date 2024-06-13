@@ -1482,8 +1482,8 @@ table[data-in-to-cm] td {
 
 #PopupModal-sizing-guide .product-popup-modal__content td,
 #PopupModal-sizing-guide .product-popup-modal__content th,
-.international__chart .product-popup-modal__content td,
-.international__chart .product-popup-modal__content th {
+#PopupModal-measuring-guide .international__chart .product-popup-modal__content td,
+#PopupModal-measuring-guide .international__chart .product-popup-modal__content th {
   border: 1px solid #000000 !important;
   font-size: 12px;
   height: 28px;
@@ -1492,8 +1492,8 @@ table[data-in-to-cm] td {
 
 #PopupModal-sizing-guide .product-popup-modal__content tr td:first-child,
 #PopupModal-sizing-guide .product-popup-modal__content tr:first-child td,
-.international__chart .product-popup-modal__content tr td:first-child,
-.international__chart .product-popup-modal__content tr:first-child td {
+#PopupModal-measuring-guide .international__chart .product-popup-modal__content tr td:first-child,
+#PopupModal-measuring-guide .international__chart .product-popup-modal__content tr:first-child td {
   font-weight: 500;
   line-height: 1.4;
   font-size: 12px;
