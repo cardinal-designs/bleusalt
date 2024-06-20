@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "colors_accent_1": "#0d1c29",
@@ -390,6 +399,15 @@
         "type": "shopify:\/\/apps\/gorgias-live-chat-helpdesk\/blocks\/gorgias\/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": true,
         "settings": {
+        }
+      },
+      "4291333794791649201": {
+        "type": "shopify:\/\/apps\/loyalty-rewards-and-referrals\/blocks\/embed-sdk\/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "disabled": false,
+        "settings": {
+          "disableBundledCSS": false,
+          "disableBundledFonts": false,
+          "useClassIsolator": false
         }
       }
     }
