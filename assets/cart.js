@@ -272,3 +272,50 @@ if (!customElements.get('canvas-bag')) {
     }
   });
 };
+
+class BundleRemoveCart extends HTMLElement {
+  constructor() {
+    super();  
+    this.querySelector('button').addEventListener('click',this.onClick.bind(this));
+    this.cartDrawer = document.querySelector('cart-drawer');
+  }
+  onClick() {
+    const updates = this.getAttribute('data-bundle-items').split(',');
+    let updatesObj = {
+      updates: {},
+      sections: 'cart-drawer,cart-icon-bubble,main-cart-items,main-cart-footer',
+      sections_url: window.location.pathname
+    }
+
+    updates.forEach(update => { 
+      updatesObj.updates[update] = 0;
+    });
+    
+    fetch('/cart/update.js', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatesObj),
+    })
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+        this.cartDrawer.renderContents(data)
+        if(!this.cartDrawer.classList.contains('active')) {
+          this.cartDrawer.open();
+        }
+    })
+    .catch((error) => {
+        console.error('Error:',error);
+    });
+  }
+}
+
+window.cart-remove-button = new BundleRemoveCart();
+
+
+
+customElements.define('bundle-remove-cart', BundleRemoveCart);
