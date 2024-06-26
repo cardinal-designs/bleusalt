@@ -219,9 +219,9 @@
                                 {% capture update %}{{ bundle_item.id }}{% endcapture %}
                                 {% assign my_bundle_items = my_bundle_items | append: ',' | append: update %}
                                 {% endfor %}
-                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
+                                <bundle-remove-cart data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
                                   <button class="bundle--cart-remove" type="button" >{%- render 'icon-remove' -%}</button>
-                                </bundle-remove>
+                                </bundle-remove-cart>
                               </div>
                               <div class="bundle--cart-title">
                                 <span>Bundle</span>
