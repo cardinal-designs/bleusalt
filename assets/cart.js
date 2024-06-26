@@ -223,6 +223,8 @@ class CartItems extends HTMLElement {
 }
 customElements.define('cart-items', CartItems);
 
+window.CartItems = new CartItems();
+
 if (!customElements.get('cart-note')) {
   customElements.define('cart-note', class CartNote extends HTMLElement {
     constructor() {
