@@ -162,7 +162,7 @@
 <script defer src="{{ 'details-disclosure.min.js' | asset_url }}"></script>
 <script defer src="{{ 'details-modal.min.js' | asset_url }}"></script>
 <script defer src="{{ 'cart-notification.min.js' | asset_url }}"></script>
-{%- if settings.cart_type == "drawer" -%}
+{%- if settings.cart_type == "drawer" and template != "cart" -%}
   <script defer src="{{ 'cart-drawer.min.js' | asset_url }}"></script>
 {%- endif -%}
 
