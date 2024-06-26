@@ -222,6 +222,8 @@ class CartItems extends HTMLElement {
   }
 }
 
+window.cartItems = new CartItems();
+
 customElements.define('cart-items', CartItems);
 
 if (!customElements.get('cart-note')) {
