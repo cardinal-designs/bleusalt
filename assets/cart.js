@@ -221,9 +221,6 @@ class CartItems extends HTMLElement {
     mainCartItems.classList.remove('cart__items--disabled');
   }
 }
-
-window.cartItems = new CartItems();
-
 customElements.define('cart-items', CartItems);
 
 if (!customElements.get('cart-note')) {
