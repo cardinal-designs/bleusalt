@@ -157,10 +157,6 @@ class CartItems extends HTMLElement {
               document.querySelector('cart-drawer').wearWith();
             }
           }
-
-          if(document.querySelector('cart-items')){
-            document.querySelector('cart-items').forceUpdateCartDrawer();
-          }
   
           this.disableLoading();
           (typeof window.BOLD !== 'undefined' && typeof window.BOLD.common !== 'undefined' && typeof window.BOLD.common.eventEmitter !== 'undefined' && typeof window.BOLD.common.eventEmitter.emit !== 'undefined' && (BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded')));
