@@ -313,8 +313,4 @@ class BundleRemoveCart extends HTMLElement {
     });
   }
 }
-
-window.BundleRemoveCart = new BundleRemoveCart;
-
-
 customElements.define('bundle-remove-cart', BundleRemoveCart);
