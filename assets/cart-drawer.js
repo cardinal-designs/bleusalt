@@ -240,21 +240,65 @@ class CartDrawer extends HTMLElement {
 
 customElements.define('cart-drawer', CartDrawer);
 
-class CartDrawerItems extends CartItems {
-  getSectionsToRender() {
-    return [
-      {
-        id: 'CartDrawer',
-        section: 'cart-drawer',
-        selector: '.drawer__inner'
-      },
-      {
-        id: 'cart-icon-bubble',
-        section: 'cart-icon-bubble',
-        selector: '.shopify-section'
-      }
-    ];
-  }
-}
+// class CartDrawerItems extends CartItems {
+//   getSectionsToRender() {
+//     return [
+//       {
+//         id: 'CartDrawer',
+//         section: 'cart-drawer',
+//         selector: '.drawer__inner'
+//       },
+//       {
+//         id: 'cart-icon-bubble',
+//         section: 'cart-icon-bubble',
+//         selector: '.shopify-section'
+//       }
+//     ];
+//   }
+// }
 
-customElements.define('cart-drawer-items', CartDrawerItems);
+// customElements.define('cart-drawer-items', CartDrawerItems);
+
+
+// class BundleRemove extends HTMLElement {
+//   constructor() {
+//     super();  
+//     this.querySelector('button').addEventListener('click',this.onClick.bind(this));
+//     this.cartDrawer = document.querySelector('cart-drawer');
+//   }
+//   onClick() {
+//     const updates = this.getAttribute('data-bundle-items').split(',');
+//     let updatesObj = {
+//       updates: {},
+//       sections: 'cart-drawer,cart-icon-bubble,main-cart-items,main-cart-footer',
+//       sections_url: window.location.pathname
+//     }
+
+//     updates.forEach(update => { 
+//       updatesObj.updates[update] = 0;
+//     });
+    
+//     fetch('/cart/update.js', {
+//       method: 'POST',
+//       credentials: 'same-origin',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(updatesObj),
+//     })
+//     .then(response => {
+//       return response.json();
+//     })
+//     .then(data => {
+//         this.cartDrawer.renderContents(data)
+//         if(!this.cartDrawer.classList.contains('active')) {
+//           this.cartDrawer.open();
+//         }
+//     })
+//     .catch((error) => {
+//         console.error('Error:',error);
+//     });
+//   }
+// }
+
+// customElements.define('bundle-remove', BundleRemove);
