@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -64,7 +73,7 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Features",
+            "heading": "Description",
             "use_product_description": true,
             "product_description_split_value": "<!--split-->",
             "product_description_index": 0,
@@ -75,7 +84,7 @@
         "3cbca740-3858-4794-a06d-86306c2065df": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Description",
+            "heading": "Material",
             "use_product_description": true,
             "product_description_split_value": "<!--split-->",
             "product_description_index": 1,
