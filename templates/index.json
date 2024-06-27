@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "16597180576b9dbb68": {
@@ -25,8 +34,8 @@
         "b0641e0b-814c-49d9-97b2-7a1cdcc96d82"
       ],
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2b2fb100a8cb482095b86baf83cbb99a.mp4",
-        "video_url_mobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ab6cb5c627a14cf994d633db0a26b164.mp4",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8b7be7d65a334f1da29db348c5bc4d0f.mp4",
+        "video_url_mobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8b7be7d65a334f1da29db348c5bc4d0f.mp4",
         "description": "Bleusalt Lifestyle Video",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
