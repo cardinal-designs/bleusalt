@@ -199,7 +199,7 @@
                               <div class="ajaxcart--bundle__images">
                                 {% assign cart_items_reverse = cart.items | reverse %}
                                 {% for bundle_item in cart_items_reverse %}
-                                {{ bundle_item }}
+                                {{ bundle_item | json }}
                                 {%- liquid
                                   if bundle_item.properties['_bundle'] == blank
                                     continue
