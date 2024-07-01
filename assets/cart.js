@@ -99,8 +99,6 @@ class CartItems extends HTMLElement {
             return;
           }
 
-          console.log("test")
-  
           this.classList.toggle('is-empty', parsedState.item_count === 0);
           const cartDrawerWrapper = document.querySelector('cart-drawer');
           const cartFooter = document.getElementById('main-cart-footer');
@@ -109,7 +107,7 @@ class CartItems extends HTMLElement {
           // if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
   
           this.getSectionsToRender().forEach((section => {
-            const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+            const elementToReplace = document.getElementById(section?.id).querySelector(section.selector) || document.getElementById(section.id);
             if(!elementToReplace) return true;
             elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
           }));
