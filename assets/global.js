@@ -4,12 +4,13 @@ function bundleUpdateCart() {
   .then(cart => {
     let cartItems = cart?.items;
     console.log("cartItems", cartItems);
+    
     let groupedItems = {};
     cartItems?.forEach(item => {
-      if (groupedItems[item.bundle_id]) {
-        groupedItems[item.bundle_id].push(item);
+      if (groupedItems[item?.properties?.[bundle_id]]) {
+        groupedItems[item?.properties?.[bundle_id]].push(item);
       } else {
-        groupedItems[item.bundle_id] = [item];
+        groupedItems[item?.properties?.[bundle_id]] = [item];
       }
     });
     
