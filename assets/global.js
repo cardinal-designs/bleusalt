@@ -1,30 +1,37 @@
 function bundleUpdateCart() {
   fetch('/cart.js')
-  .then(response => response.json())
-  .then(cart => {
-    let cartItems = cart?.items;
-    console.log("cartItems", cartItems);
-    
-    let groupedItems = {};
-    cartItems?.forEach(item => {
-      console.log("item?.properties?.[bundle_id]", item?.properties?.['bundle_id'])
-      if(item?.properties?.['bundle_id']){
-        if (groupedItems[item?.properties?.['bundle_id']]) {
-          groupedItems[item?.properties?.['bundle_id']].push(item?.key);
-        } else {
-          groupedItems[item?.properties?.['bundle_id']] = [item?.key];
+    .then(response => response.json())
+    .then(cart => {
+      let cartItems = cart?.items;
+      console.log("cartItems", cartItems);
+      
+      let groupedItems = {};
+      
+      cartItems?.forEach(item => {
+        let bundle_id = item?.properties?.['bundle_id'];
+        if (bundle_id) {
+          if (groupedItems[bundle_id]) {
+            groupedItems[bundle_id] += `, ${item.key}`;
+          } else {
+            groupedItems[bundle_id] = `${item.key}`;
+          }
         }
+      });
+      
+      console.log(groupedItems);
+      
+      // Example: Update UI with groupedItems data
+      for (let bundle_id in groupedItems) {
+        console.log(`Bundle ID: ${bundle_id}, Items: ${groupedItems[bundle_id]}`);
+        // Perform further actions as needed, such as updating the UI
       }
+      
+    })
+    .catch(error => {
+      console.error('Error fetching cart:', error);
     });
-    
-    console.log(groupedItems);
-
-  })
-  .catch(error => {
-    console.error('Error fetching cart:', error);
-  });
-
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
   bundleUpdateCart();
