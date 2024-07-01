@@ -25,6 +25,7 @@ function bundleUpdateCart() {
           // console.log('dataEditItem', dataEditItem)
           let dataKey = groupedItems[dataEditItem];
           console.log('dataKey', dataKey)
+          element.setAttribute('data-bundle-items-key', dataKey)
       })
       
       // Example: Update UI with groupedItems data
