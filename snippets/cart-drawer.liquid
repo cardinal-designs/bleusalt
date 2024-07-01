@@ -171,7 +171,20 @@
                         <p class="cart-text">{{ settings.cart_drawer_text }}</p>
                       {% endif %}
                     {% endif %}
+
+                    {%- assign bundle_item_keys = '' -%}
+
+                    {%- for item in cart.items -%}
+                      {%- if item.properties.bundle_id -%}
+                        {%- assign bundle_item_keys = bundle_item_keys | append: item.key | append: ',' -%}
+                      {%- endif -%}
+                    {%- endfor -%}
                     
+                    {%- assign bundle_item_keys = bundle_item_keys | split: ',' | uniq -%}
+                    {%- assign bundle_item_keys = bundle_item_keys | join: ',' -%}
+                    
+                    <p>Matching bundle item keys: {{ bundle_item_keys }}</p>
+                                        
                     {%- for item in cart.items -%}
                       {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
                       {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
@@ -179,6 +192,7 @@
                           <input id="drawer-quantity--{{ item.id }}" type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
                           {%- continue -%}
                       {%- endif -%}
+               
                       {%- liquid
                         assign is_bundle_item = false
                         if item.properties['_bundle'] != blank
