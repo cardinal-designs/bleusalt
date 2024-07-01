@@ -250,7 +250,7 @@
                                   {%- for bundle in bundles -%}
                                     {%- assign parts = bundle | split: ':' -%}
                                     <!-- <p>Bundle ID {{ parts[0] }}: {{ parts[1] }}</p> -->
-                                    {{ bundle }}
+                                    <!-- {{ bundle }} -->
                                     {% if bundle contains item.key %}
                                     {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: item.key %}
                                     {% endif %}
