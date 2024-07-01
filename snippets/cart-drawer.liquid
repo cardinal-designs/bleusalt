@@ -199,7 +199,6 @@
                               <div class="ajaxcart--bundle__images">
                                 {% assign cart_items_reverse = cart.items | reverse %}
                                 {% for bundle_item in cart_items_reverse %}
-                                {{ bundle_item.key }}
                                 {%- liquid
                                   if bundle_item.properties['_bundle'] == blank
                                     continue
@@ -217,9 +216,11 @@
                                 </div>
 
                                 {% capture update %}{{ bundle_item.id }}{% endcapture %}
+                                {% capture update_key %}{{ bundle_item.key }}{% endcapture %}
                                 {% assign my_bundle_items = my_bundle_items | append: ',' | append: update %}
+                                {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: update_key %}
                                 {% endfor %}
-                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
+                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-bundle-items-key="{{ my_bundle_items_key | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
                                   <button class="bundle--cart-remove" type="button" >{%- render 'icon-remove' -%}</button>
                                 </bundle-remove>
                               </div>
