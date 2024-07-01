@@ -202,7 +202,10 @@
                       {%- assign bundle_items_dict[array_name] = array_value -%}
                     {%- endfor -%}
                     
-                    {{ bundle_items_dict[0] }}
+
+                    {%- for bundle in bundle_items_dict -%}
+                      {{ bundle }}
+                    {%- endfor -%}
 
                     
                     
