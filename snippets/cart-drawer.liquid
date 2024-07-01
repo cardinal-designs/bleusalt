@@ -175,16 +175,24 @@
 
                     <!-- code start -->
 
-                    {%- assign bundle_items_dict = '' -%}
+                    {%- assign bundle_ids = '' -%}
 
                     {%- for item in cart.items -%}
-                    {%- if item.properties.bundle_id != blank -%}
-                      {%- assign current_bundle_id = item.properties.bundle_id -%}
-
-                      -current_bundle_id -{{ current_bundle_id }}
-                      
-                    {%- endif -%}
+                      {%- if item.properties.bundle_id != blank -%}
+                        {%- assign current_bundle_id = item.properties.bundle_id -%}
+                        
+                        {%- assign bundle_ids = bundle_ids | append: current_bundle_id | append: ',' -%}
+                      {%- endif -%}
                     {%- endfor -%}
+                    
+                    {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
+                    
+                    {%- for bundle_id in bundle_ids_array -%}
+                      {%- if bundle_id != blank -%}
+                        -current_bundle_id -{{ bundle_id }}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    
                     <!-- code end -->
                                         
                     {%- for item in cart.items -%}
