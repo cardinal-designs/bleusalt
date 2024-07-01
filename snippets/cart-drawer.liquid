@@ -187,11 +187,23 @@
                     
                     {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
                     
+                    {%- assign bundle_items_dict = '' -%}
+
                     {%- for bundle_id in bundle_ids_array -%}
                       {%- if bundle_id != blank -%}
-                        -current_bundle_id -{{ bundle_id }}
+                        {%- assign array_name = "bundle_items_dict_" | append: forloop.index0 -%}
+                        {%- assign array_value = bundle_id -%}
+                        
+                        {%- assign bundle_items_dict[array_name] = array_value -%}
                       {%- endif -%}
                     {%- endfor -%}
+                    
+               
+                    
+                    
+                    
+                    
+
                     
                     <!-- code end -->
                                         
