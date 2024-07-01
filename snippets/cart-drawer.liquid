@@ -245,7 +245,8 @@
 
                                   {%- for bundle in bundles -%}
                                     {%- assign parts = bundle | split: ':' -%}
-                                    <p>Bundle ID {{ parts[0] }}: {{ parts[1] }}</p>
+                                    <!-- <p>Bundle ID {{ parts[0] }}: {{ parts[1] }}</p> -->
+                                    <p>{{ parts[1] }}</p>
                                   {%- endfor -%}
 
 
