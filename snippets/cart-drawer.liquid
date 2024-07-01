@@ -187,18 +187,17 @@
                     
                     {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
                     
-                    {%- assign bundle_items_dict = '' -%}
-                    
-                    {%- for bundle_id in bundle_ids_array -%}
-                      {%- if bundle_id != blank -%}
-                        {%- assign array_name = "bundle_items_dict_" | append: forloop.index0 -%}
-                        {%- assign array_value = bundle_id | append: "_test" -%}
-                        
-                        {%- assign bundle_items_dict[array_name] = array_value -%}
-                      {%- endif -%}
-                    {%- endfor -%}
+                    {%- capture bundle_items_dict -%}
+                      {%- for bundle_id in bundle_ids_array -%}
+                        {%- if bundle_id != blank -%}
+                          {% unless forloop.first %},{% endunless %}
+                          "bundle_items_dict_{{ forloop.index0 }}": "{{ bundle_id }}_test"
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endcapture -%}
                     
                     {{ bundle_items_dict }}
+
                     
                     
                     
