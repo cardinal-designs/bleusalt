@@ -181,7 +181,7 @@
                     {%- if item.properties.bundle_id != blank -%}
                       {%- assign current_bundle_id = item.properties.bundle_id -%}
 
-                      {{ current_bundle_id }}-current_bundle_id
+                      -current_bundle_id -{{ current_bundle_id }}
                       
                     {%- endif -%}
                     {%- endfor -%}
