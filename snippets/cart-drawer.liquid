@@ -172,18 +172,50 @@
                       {% endif %}
                     {% endif %}
 
-                    {%- assign bundle_item_keys = '' -%}
 
+                    <!-- code start -->
+
+                    {%- assign bundle_items_by_id = '' -%}
+                    
                     {%- for item in cart.items -%}
-                      {%- if item.properties.bundle_id -%}
-                        {%- assign bundle_item_keys = bundle_item_keys | append: item.key | append: ',' -%}
+                      {%- if item.properties.bundle_id != blank -%}
+                        {%- assign current_bundle_id = item.properties.bundle_id -%}
+                        {%- capture bundle_keys %}{{ current_bundle_id }}:{{ item.key }}{% endcapture %}
+                        {%- if bundle_items_by_id == '' -%}
+                          {%- assign bundle_items_by_id = bundle_keys -%}
+                        {%- else -%}
+                          {%- assign bundle_items_by_id = bundle_items_by_id | append: ',' | append: bundle_keys -%}
+                        {%- endif -%}
                       {%- endif -%}
                     {%- endfor -%}
                     
-                    {%- assign bundle_item_keys = bundle_item_keys | split: ',' | uniq -%}
-                    {%- assign bundle_item_keys = bundle_item_keys | join: ',' -%}
+                    {%- assign bundle_items_by_id = bundle_items_by_id | split: ',' -%}
+                    {%- assign bundle_dict = '' -%}
                     
-                    <p>Matching bundle item keys: {{ bundle_item_keys }}</p>
+                    {%- for bundle_item in bundle_items_by_id -%}
+                      {%- assign parts = bundle_item | split: ':' -%}
+                      {%- assign bundle_id = parts[0] -%}
+                      {%- assign item_key = parts[1] -%}
+                      {%- capture bundle %}{{ bundle_id }}:{{ item_key }}{% endcapture %}
+                      {%- if bundle_dict contains bundle_id -%}
+                        {%- assign bundle_dict = bundle_dict | replace: bundle_id, bundle_id | append: ',' | append: item_key -%}
+                      {%- else -%}
+                        {%- if bundle_dict == '' -%}
+                          {%- assign bundle_dict = bundle_id | append: ':' | append: item_key -%}
+                        {%- else -%}
+                          {%- assign bundle_dict = bundle_dict | append: ',' | append: bundle_id | append: ':' | append: item_key -%}
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    
+                    <p>Matching bundle item keys:</p>
+                    {%- for bundle in bundle_dict | split: ',' -%}
+                      {%- assign parts = bundle | split: ':' -%}
+                      <p>{{ parts[0] }}: {{ parts[1] }}</p>
+                    {%- endfor -%}
+
+
+                    <!-- code end -->
                                         
                     {%- for item in cart.items -%}
                       {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
