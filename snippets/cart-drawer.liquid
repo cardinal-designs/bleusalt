@@ -241,21 +241,26 @@
                                   <!-- code start -->
                                 
 
+                                  {% capture update_key %}{{ bundle_item.key }}{% endcapture %}
+                                  
                                   {%- assign bundles = bundle_items_dict | split: ',' -%}
 
+                                  
+                                  
                                   {%- for bundle in bundles -%}
                                     {%- assign parts = bundle | split: ':' -%}
                                     <!-- <p>Bundle ID {{ parts[0] }}: {{ parts[1] }}</p> -->
                                     {{ bundle }}
+                                    {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: item.key %}
                                   {%- endfor -%}
 
 
                                   <!-- code end -->
 
                                 {% capture update %}{{ bundle_item.id }}{% endcapture %}
-                                {% capture update_key %}{{ bundle_item.key }}{% endcapture %}
+                                <!-- {% capture update_key %}{{ bundle_item.key }}{% endcapture %} -->
                                 {% assign my_bundle_items = my_bundle_items | append: ',' | append: update %}
-                                {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: update_key %}
+                                <!-- {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: update_key %} -->
                                 {% endfor %}
                                 <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-bundle-items-key="{{ my_bundle_items_key | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
                                   <button class="bundle--cart-remove" type="button" >{%- render 'icon-remove' -%}</button>
