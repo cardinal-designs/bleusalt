@@ -176,7 +176,7 @@
                     <!-- code start -->
 
                     {%- assign bundle_items_by_id = '' -%}
-                    
+
                     {%- for item in cart.items -%}
                       {%- if item.properties.bundle_id != blank -%}
                         {%- assign current_bundle_id = item.properties.bundle_id -%}
@@ -189,10 +189,10 @@
                       {%- endif -%}
                     {%- endfor -%}
                     
-                    {%- assign bundle_items_by_id = bundle_items_by_id | split: ',' -%}
+                    {%- assign bundle_items_array = bundle_items_by_id | split: ',' -%}
                     {%- assign bundle_dict = '' -%}
                     
-                    {%- for bundle_item in bundle_items_by_id -%}
+                    {%- for bundle_item in bundle_items_array -%}
                       {%- assign parts = bundle_item | split: ':' -%}
                       {%- assign bundle_id = parts[0] -%}
                       {%- assign item_key = parts[1] -%}
@@ -209,10 +209,12 @@
                     {%- endfor -%}
                     
                     <p>Matching bundle item keys:</p>
-                    {%- for bundle in bundle_dict | split: ',' -%}
+                    {%- assign bundles = bundle_dict | split: ',' -%}
+                    {%- for bundle in bundles -%}
                       {%- assign parts = bundle | split: ':' -%}
                       <p>{{ parts[0] }}: {{ parts[1] }}</p>
                     {%- endfor -%}
+
 
 
                     <!-- code end -->
