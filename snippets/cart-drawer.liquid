@@ -195,6 +195,8 @@
                       
                       {%- for item in cart.items -%}
                         {%- if item.properties.bundle_id == current_bundle_id -%}
+                          {{ item.properties.bundle_id }}-item.properties.bundle_id
+                          {{ current_bundle_id }}-current_bundle_id
                           {%- assign array_value = array_value | push: item.key -%}
                         {%- endif -%}
                       {%- endfor -%}
