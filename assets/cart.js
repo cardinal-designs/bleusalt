@@ -85,7 +85,6 @@ class CartItems extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section).join(','),
       sections_url: window.location.pathname
     });
-    console.log(body);
     if(line){
       fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
         .then((response) => {
