@@ -199,7 +199,7 @@
                         {%- endif -%}
                       {%- endfor -%}
                       {{ array_value }}--array_value
-                      {%- assign bundle_items_dict[array_name] = array_value -%}
+                      {%- assign bundle_items_dict[forloop.index0] = array_value -%}
                     {%- endfor -%}
                     
                     {% assign arrSize = bundle_items_dict | size %}
