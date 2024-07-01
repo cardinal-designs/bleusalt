@@ -172,52 +172,6 @@
                       {% endif %}
                     {% endif %}
 
-
-                    <!-- code start -->
-
-                    {%- assign bundle_ids = '' -%}
-
-                    {%- for item in cart.items -%}
-                      {%- if item.properties.bundle_id != blank -%}
-                        {%- assign current_bundle_id = item.properties.bundle_id -%}
-                        {%- assign bundle_ids = bundle_ids | append: current_bundle_id | append: ',' -%}
-                      {%- endif -%}
-                    {%- endfor %}
-                    
-                    {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
-                    
-                    {%- assign bundle_items_dict = '' -%}
-                    
-                    {%- for bundle_id in bundle_ids_array -%}
-                      {%- assign current_bundle_id = bundle_id | strip -%}
-                      {%- assign array_name = "bundle_items_dict_" | append: forloop.index0 -%}
-                      {%- assign array_value = '' -%}
-                      
-                      {%- for item in cart.items -%}
-                        {%- if item.properties.bundle_id == current_bundle_id -%}
-                          {%- assign array_value = array_value | append: item.key -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                      {{ array_value }}--array_value
-                      {%- assign bundle_items_dict[forloop.index0] = array_value -%}
-                    {%- endfor -%}
-                    
-                    {% assign arrSize = bundle_items_dict | size %}
-                    arrSize-{{ arrSize }}
-                    
-                    {%- for bundle_name in bundle_items_dict -%}
-                      {{ bundle_name }}: {{ bundle_items_dict[bundle_name] | join: ', ' }}<br>
-                    {%- endfor -%}
-
-
-
-                    
-                    
-                    
-                    
-
-                    
-                    <!-- code end -->
                                         
                     {%- for item in cart.items -%}
                       {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
@@ -263,22 +217,10 @@
                                   {{ bundle_item | image_url: width: 250 | image_tag }}
                                 </div>
 
-                                  <!-- code start -->
-                                
-
-                                  {% capture update_key %}{{ bundle_item.key }}{% endcapture %}
-                                  
-                                  
-
-
-                                  <!-- code end -->
-
                                 {% capture update %}{{ bundle_item.id }}{% endcapture %}
-                                <!-- {% capture update_key %}{{ bundle_item.key }}{% endcapture %} -->
                                 {% assign my_bundle_items = my_bundle_items | append: ',' | append: update %}
-                                {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: update_key %}
                                 {% endfor %}
-                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-bundle-items-key="{{ my_bundle_items_key | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
+                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-bundle-items-key="" data-edit-item="{{ item.properties['bundle_id'] }}">
                                   <button class="bundle--cart-remove" type="button" >{%- render 'icon-remove' -%}</button>
                                 </bundle-remove>
                               </div>
