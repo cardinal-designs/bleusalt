@@ -197,7 +197,7 @@
                         {{ item.properties.bundle_id }}
                         {%- if item.properties.bundle_id == current_bundle_id -%}
                           {{ current_bundle_id }}-current_bundle_id
-                          {%- assign array_value = array_value | append : item.title -%}
+                          {%- assign array_value = array_value | append : item.key -%}
                         {%- endif -%}
                       {%- endfor -%}
                       
