@@ -180,21 +180,25 @@
                     {%- for item in cart.items -%}
                       {%- if item.properties.bundle_id != blank -%}
                         {%- assign current_bundle_id = item.properties.bundle_id -%}
-                        
                         {%- assign bundle_ids = bundle_ids | append: current_bundle_id | append: ',' -%}
                       {%- endif -%}
                     {%- endfor -%}
                     
                     {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
                     
-                    {%- capture bundle_items_dict -%}
-                      {%- for bundle_id in bundle_ids_array -%}
-                        {%- if bundle_id != blank -%}
-                          {% unless forloop.first %},{% endunless %}
-                          "bundle_items_dict_{{ forloop.index0 }}": "{{ bundle_id }}_test"
+                    {%- for bundle_id in bundle_ids | split: ',' | uniq -%}
+                      {%- assign current_bundle_id = bundle_id | strip -%}
+                      {%- assign array_name = "bundle_items_dict_" | append: forloop.index0 -%}
+                      {%- assign array_value = '' | split: ',' -%}
+                      
+                      {%- for item in cart.items -%}
+                        {%- if item.properties.bundle_id == current_bundle_id -%}
+                          {%- assign array_value = array_value | push: item.title -%}
                         {%- endif -%}
                       {%- endfor -%}
-                    {%- endcapture -%}
+                      
+                      {%- assign bundle_items_dict[array_name] = array_value -%}
+                    {%- endfor -%}
                     
                     {{ bundle_items_dict }}
 
