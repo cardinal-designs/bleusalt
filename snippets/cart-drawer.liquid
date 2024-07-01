@@ -186,7 +186,7 @@
                     
                     {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
                     
-                    {%- assign bundle_items_dict = {} -%}
+                    {%- assign bundle_items_dict = '' -%}
                     
                     {%- for bundle_id in bundle_ids_array -%}
                       {%- assign current_bundle_id = bundle_id | strip -%}
