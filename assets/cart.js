@@ -70,7 +70,6 @@ class CartItems extends HTMLElement {
           document.querySelector('cart-drawer').updateWearWith(parsedState['cart-drawer']);
         }
         const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-        console.log("elementToReplace", elementToReplace)
         if(!elementToReplace) return true;
         elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState[section.section], section.selector);
       }));
@@ -99,6 +98,8 @@ class CartItems extends HTMLElement {
             this.forceUpdateCartDrawer();
             return;
           }
+
+          console.log("test")
   
           this.classList.toggle('is-empty', parsedState.item_count === 0);
           const cartDrawerWrapper = document.querySelector('cart-drawer');
