@@ -980,7 +980,8 @@ const updateCart = () => {
                   typeof BOLD.common.eventEmitter.emit === 'function'){
                 BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
      }
-    
+
+    bundleUpdateCart();
   });
 }
 
