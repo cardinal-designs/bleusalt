@@ -3,10 +3,7 @@ function bundleUpdateCart() {
     .then(response => response.json())
     .then(cart => {
       let cartItems = cart?.items;
-      // console.log("cartItems", cartItems);
-      
       let groupedItems = {};
-      
       cartItems?.forEach(item => {
         let bundle_id = item?.properties?.['bundle_id'];
         if (bundle_id) {
@@ -18,22 +15,11 @@ function bundleUpdateCart() {
         }
       });
       
-      // console.log(groupedItems);
-
       document.querySelectorAll('[data-edit-item]').forEach(function (element) {
          let dataEditItem = element.getAttribute('data-edit-item');
-          // console.log('dataEditItem', dataEditItem)
           let dataKey = groupedItems[dataEditItem];
-          console.log('dataKey', dataKey)
           element.setAttribute('data-bundle-items-key', dataKey)
       })
-      
-      // Example: Update UI with groupedItems data
-      // for (let bundle_id in groupedItems) {
-      //   console.log(`Bundle ID: ${bundle_id}, Items: ${groupedItems[bundle_id]}`);
-      //   // Perform further actions as needed, such as updating the UI
-      // }
-      
     })
     .catch(error => {
       console.error('Error fetching cart:', error);
