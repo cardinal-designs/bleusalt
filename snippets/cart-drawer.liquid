@@ -182,30 +182,33 @@
                         {%- assign current_bundle_id = item.properties.bundle_id -%}
                         {%- assign bundle_ids = bundle_ids | append: current_bundle_id | append: ',' -%}
                       {%- endif -%}
-                    {%- endfor -%}
+                    {%- endfor %}
                     
                     {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
                     
-                    {%- assign bundle_items_dict = '' -%}
+                    {%- assign bundle_items_dict = {} -%}
                     
                     {%- for bundle_id in bundle_ids_array -%}
                       {%- assign current_bundle_id = bundle_id | strip -%}
                       {%- assign array_name = "bundle_items_dict_" | append: forloop.index0 -%}
-                      {%- assign array_value = '' | split: ',' -%}
+                      {%- assign array_value = [] -%}
                       
                       {%- for item in cart.items -%}
                         {%- if item.properties.bundle_id == current_bundle_id -%}
-                          {%- assign array_value = array_value | append: item.key -%}
+                          {%- assign array_value = array_value | push: item.key -%}
                         {%- endif -%}
                       {%- endfor -%}
                       
                       {%- assign bundle_items_dict[array_name] = array_value -%}
                     {%- endfor -%}
+                    
                     {% assign arrSize = bundle_items_dict | size %}
                     arrSize-{{ arrSize }}
+                    
                     {%- for bundle_name in bundle_items_dict -%}
                       {{ bundle_name }}: {{ bundle_items_dict[bundle_name] | join: ', ' }}<br>
                     {%- endfor -%}
+
 
 
                     
