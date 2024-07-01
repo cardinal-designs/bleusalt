@@ -3,7 +3,7 @@ function bundleUpdateCart() {
     .then(response => response.json())
     .then(cart => {
       let cartItems = cart?.items;
-      console.log("cartItems", cartItems);
+      // console.log("cartItems", cartItems);
       
       let groupedItems = {};
       
@@ -18,13 +18,20 @@ function bundleUpdateCart() {
         }
       });
       
-      console.log(groupedItems);
+      // console.log(groupedItems);
+
+      document.querySelectorAll('[data-edit-item]').forEach(function (element) {
+         let dataEditItem = element.getAttribute('data-edit-item');
+          // console.log('dataEditItem', dataEditItem)
+          let dataKey = groupedItems[dataEditItem];
+          console.log('dataKey', dataKey)
+      })
       
       // Example: Update UI with groupedItems data
-      for (let bundle_id in groupedItems) {
-        console.log(`Bundle ID: ${bundle_id}, Items: ${groupedItems[bundle_id]}`);
-        // Perform further actions as needed, such as updating the UI
-      }
+      // for (let bundle_id in groupedItems) {
+      //   console.log(`Bundle ID: ${bundle_id}, Items: ${groupedItems[bundle_id]}`);
+      //   // Perform further actions as needed, such as updating the UI
+      // }
       
     })
     .catch(error => {
