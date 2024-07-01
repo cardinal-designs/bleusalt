@@ -175,47 +175,7 @@
 
                     <!-- code start -->
 
-                    {%- assign bundle_items_by_id = '' -%}
-
-                    {%- for item in cart.items -%}
-                      {%- if item.properties.bundle_id != blank -%}
-                        {%- assign current_bundle_id = item.properties.bundle_id -%}
-                        {%- capture bundle_keys %}{{ current_bundle_id }}:{{ item.key }}{% endcapture %}
-                        {%- if bundle_items_by_id == '' -%}
-                          {%- assign bundle_items_by_id = bundle_keys -%}
-                        {%- else -%}
-                          {%- assign bundle_items_by_id = bundle_items_by_id | append: ',' | append: bundle_keys -%}
-                        {%- endif -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                    
-                    {%- assign bundle_items_array = bundle_items_by_id | split: ',' -%}
-                    {%- assign bundle_dict = '' -%}
-                    
-                    {%- for bundle_item in bundle_items_array -%}
-                      {%- assign parts = bundle_item | split: ':' -%}
-                      {%- assign bundle_id = parts[0] -%}
-                      {%- assign item_key = parts[1] -%}
-                      {%- capture bundle %}{{ bundle_id }}:{{ item_key }}{% endcapture %}
-                      {%- if bundle_dict contains bundle_id -%}
-                        {%- assign bundle_dict = bundle_dict | replace: bundle_id, bundle_id | append: ',' | append: item_key -%}
-                      {%- else -%}
-                        {%- if bundle_dict == '' -%}
-                          {%- assign bundle_dict = bundle_id | append: ':' | append: item_key -%}
-                        {%- else -%}
-                          {%- assign bundle_dict = bundle_dict | append: ',' | append: bundle_id | append: ':' | append: item_key -%}
-                        {%- endif -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                    
-                    <p>Matching bundle item keys:</p>
-                    {%- assign bundles = bundle_dict | split: ',' -%}
-                    {%- for bundle in bundles -%}
-                      {%- assign parts = bundle | split: ':' -%}
-                      <p>{{ parts[0] }}: {{ parts[1] }}</p>
-                    {%- endfor -%}
-
-
+                    {%- assign bundle_items_dict = '' -%}
 
                     <!-- code end -->
                                         
@@ -262,6 +222,27 @@
                                 <div class="ajaxcart--bundle__image" data-id="">
                                   {{ bundle_item | image_url: width: 250 | image_tag }}
                                 </div>
+
+                                  <!-- code start -->
+                                {%- if item.properties.bundle_id != blank -%}
+                                  {%- assign current_bundle_id = item.properties.bundle_id -%}
+                                  {%- capture bundle_key %}{{ current_bundle_id }}:{{ item.key }}{% endcapture %}
+                                  {%- if bundle_items_dict contains current_bundle_id -%}
+                                    {%- assign bundle_items_dict = bundle_items_dict | replace: current_bundle_id | append: ',' | append: item.key -%}
+                                  {%- else -%}
+                                    {%- if bundle_items_dict == '' -%}
+                                      {%- assign bundle_items_dict = bundle_key -%}
+                                    {%- else -%}
+                                      {%- assign bundle_items_dict = bundle_items_dict | append: ',' | append: bundle_key -%}
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+
+                                  {%- assign bundles = bundle_items_dict | split: ',' -%}
+
+                                  {{ bundles }}
+
+                                  <!-- code end -->
 
                                 {% capture update %}{{ bundle_item.id }}{% endcapture %}
                                 {% capture update_key %}{{ bundle_item.key }}{% endcapture %}
