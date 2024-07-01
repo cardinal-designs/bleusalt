@@ -7,11 +7,11 @@ function bundleUpdateCart() {
     
     let groupedItems = {};
     cartItems?.forEach(item => {
-      console.log("item?.properties?.[bundle_id]", item?.properties?.[bundle_id])
-      if (groupedItems[item?.properties?.[bundle_id]]) {
-        groupedItems[item?.properties?.[bundle_id]].push(item);
+      console.log("item?.properties?.[bundle_id]", item?.properties?.['bundle_id'])
+      if (groupedItems[item?.properties?.['bundle_id']]) {
+        groupedItems[item?.properties?.['bundle_id']].push(item);
       } else {
-        groupedItems[item?.properties?.[bundle_id]] = [item];
+        groupedItems[item?.properties?.['bundle_id']] = [item];
       }
     });
     
