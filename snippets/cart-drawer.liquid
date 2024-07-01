@@ -252,7 +252,7 @@
                                     <!-- <p>Bundle ID {{ parts[0] }}: {{ parts[1] }}</p> -->
                                     <!-- {{ bundle }} -->
                                     {% if bundle contains item.key %}
-                                    {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: item.key %}
+                                      {% assign my_bundle_items_key = my_bundle_items_key | append: ',' | append: item.key %}
                                     {% endif %}
                                   {%- endfor -%}
 
