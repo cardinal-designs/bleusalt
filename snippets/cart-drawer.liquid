@@ -176,7 +176,7 @@
                     <!-- code start -->
 
                     {%- assign bundle_ids = '' -%}
-
+                    
                     {%- for item in cart.items -%}
                       {%- if item.properties.bundle_id != blank -%}
                         {%- assign current_bundle_id = item.properties.bundle_id -%}
@@ -185,7 +185,7 @@
                     {%- endfor -%}
                     
                     {%- assign bundle_ids_array = bundle_ids | split: ',' | uniq -%}
-
+                    
                     {%- assign bundle_items_dict = '' -%}
                     
                     {%- for bundle_id in bundle_ids_array -%}
@@ -195,17 +195,17 @@
                       
                       {%- for item in cart.items -%}
                         {%- if item.properties.bundle_id == current_bundle_id -%}
-                          {%- assign array_value = array_value | append : item.key -%}
+                          {%- assign array_value = array_value | push: item.key -%}
                         {%- endif -%}
                       {%- endfor -%}
                       
                       {%- assign bundle_items_dict[array_name] = array_value -%}
                     {%- endfor -%}
                     
-
-                    {%- for bundle in bundle_items_dict -%}
-                      {{ bundle }}
+                    {%- for bundle_name in bundle_items_dict -%}
+                      {{ bundle_name }}: {{ bundle_items_dict[bundle_name] | join: ', ' }}<br>
                     {%- endfor -%}
+
 
                     
                     
