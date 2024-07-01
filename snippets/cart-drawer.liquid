@@ -195,11 +195,10 @@
                       
                       {%- for item in cart.items -%}
                         {%- if item.properties.bundle_id == current_bundle_id -%}
-                          {{ item.key }}-item.key
                           {%- assign array_value = array_value | append: item.key -%}
                         {%- endif -%}
                       {%- endfor -%}
-                      
+                      {{ array_value }}--array_value
                       {%- assign bundle_items_dict[array_name] = array_value -%}
                     {%- endfor -%}
                     
