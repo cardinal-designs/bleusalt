@@ -180,16 +180,9 @@
                     {%- for item in cart.items -%}
                     {%- if item.properties.bundle_id != blank -%}
                       {%- assign current_bundle_id = item.properties.bundle_id -%}
-                      {%- capture bundle_key %}{{ current_bundle_id }}:{{ item.key }}{% endcapture %}
-                      {%- if bundle_items_dict contains current_bundle_id -%}
-                        {%- assign bundle_items_dict = bundle_items_dict | replace: current_bundle_id | append: ',' | append: item.key -%}
-                      {%- else -%}
-                        {%- if bundle_items_dict == '' -%}
-                          {%- assign bundle_items_dict = bundle_key -%}
-                        {%- else -%}
-                          {%- assign bundle_items_dict = bundle_items_dict | append: ',' | append: bundle_key -%}
-                        {%- endif -%}
-                      {%- endif -%}
+
+                      {{ current_bundle_id }}-current_bundle_id
+                      
                     {%- endif -%}
                     {%- endfor -%}
                     <!-- code end -->
@@ -244,7 +237,6 @@
                                   {% capture update_key %}{{ bundle_item.key }}{% endcapture %}
                                   
                                   
-                                  current_bundle_items -- {{ current_bundle_items }} ---{{ update_key }}===
 
 
                                   <!-- code end -->
