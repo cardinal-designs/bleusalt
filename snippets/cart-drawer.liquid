@@ -201,7 +201,8 @@
                       
                       {%- assign bundle_items_dict[array_name] = array_value -%}
                     {%- endfor -%}
-                    
+                    {% assign arrSize = bundle_items_dict | size %}
+                    arrSize-{{ arrSize }}
                     {%- for bundle_name in bundle_items_dict -%}
                       {{ bundle_name }}: {{ bundle_items_dict[bundle_name] | join: ', ' }}<br>
                     {%- endfor -%}
