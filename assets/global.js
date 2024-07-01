@@ -944,7 +944,7 @@ const updateCart = () => {
     return response.text();
   })
   .then((html) => {
-    console.log("testing 1")
+    // console.log("testing 1")
     const elementsToUpdate = [
       'cart-drawer .drawer__inner',
       '#cart-icon-bubble',
