@@ -171,7 +171,8 @@
                         <p class="cart-text">{{ settings.cart_drawer_text }}</p>
                       {% endif %}
                     {% endif %}
-                    
+
+                                        
                     {%- for item in cart.items -%}
                       {%- comment -%}Bold:PO 2.0 - Hybrid Input{%- endcomment -%}
                       {%- if item.properties._boldBuilderId  and item.properties._boldVariantIds == null -%}
@@ -179,6 +180,7 @@
                           <input id="drawer-quantity--{{ item.id }}" type="hidden" name="updates[]" id="updates_{{- item.key -}}" class="bold_hidden_input cart__product-qty" value="{{- item.quantity -}}" min="0" data-id="{{- item.key -}}">
                           {%- continue -%}
                       {%- endif -%}
+               
                       {%- liquid
                         assign is_bundle_item = false
                         if item.properties['_bundle'] != blank
@@ -199,7 +201,6 @@
                               <div class="ajaxcart--bundle__images">
                                 {% assign cart_items_reverse = cart.items | reverse %}
                                 {% for bundle_item in cart_items_reverse %}
-
                                 {%- liquid
                                   if bundle_item.properties['_bundle'] == blank
                                     continue
@@ -219,7 +220,7 @@
                                 {% capture update %}{{ bundle_item.id }}{% endcapture %}
                                 {% assign my_bundle_items = my_bundle_items | append: ',' | append: update %}
                                 {% endfor %}
-                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-edit-item="{{ item.properties['bundle_id'] }}">
+                                <bundle-remove data-bundle-items="{{ my_bundle_items | split: ',' | uniq | join: ',' }}" data-bundle-items-key="" data-edit-item="{{ item.properties['bundle_id'] }}">
                                   <button class="bundle--cart-remove" type="button" >{%- render 'icon-remove' -%}</button>
                                 </bundle-remove>
                               </div>

@@ -1,3 +1,36 @@
+function bundleUpdateCart() {
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      let cartItems = cart?.items;
+      let groupedItems = {};
+      cartItems?.forEach(item => {
+        let bundle_id = item?.properties?.['bundle_id'];
+        if (bundle_id) {
+          if (groupedItems[bundle_id]) {
+            groupedItems[bundle_id] += `, ${item.key}`;
+          } else {
+            groupedItems[bundle_id] = `${item.key}`;
+          }
+        }
+      });
+      
+      document.querySelectorAll('[data-edit-item]').forEach(function (element) {
+         let dataEditItem = element.getAttribute('data-edit-item');
+          let dataKey = groupedItems[dataEditItem];
+          element.setAttribute('data-bundle-items-key', dataKey)
+      })
+    })
+    .catch(error => {
+      console.error('Error fetching cart:', error);
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  bundleUpdateCart();
+});
+
 var Shopify=Shopify||{};Shopify.money_format="${{amount}}",Shopify.formatMoney=function(a,o){"string"==typeof a&&(a=a.replace(".",""));var e="",t=/\{\{\s*(\w+)\s*\}\}/,o=o||this.money_format;function r(a,o){return void 0===a?o:a}function n(a,o,e,t){if(o=r(o,2),e=r(e,","),t=r(t,"."),isNaN(a)||null==a)return 0;a=(a=(a/100).toFixed(o)).split(".");return a[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g,"$1"+e)+(a[1]?t+a[1]:"")}switch(o.match(t)[1]){case"amount":e=n(a,2);break;case"amount_no_decimals":e=n(a,0);break;case"amount_with_comma_separator":e=n(a,2,".",",");break;case"amount_no_decimals_with_comma_separator":e=n(a,0,".",",")}return o.replace(t,e)};
 
 function getFocusableElements(container) {
@@ -911,7 +944,7 @@ const updateCart = () => {
     return response.text();
   })
   .then((html) => {
-    console.log("testing 1")
+    // console.log("testing 1")
     const elementsToUpdate = [
       'cart-drawer .drawer__inner',
       '#cart-icon-bubble',
@@ -933,7 +966,8 @@ const updateCart = () => {
                   typeof BOLD.common.eventEmitter.emit === 'function'){
                 BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
      }
-    
+
+    bundleUpdateCart();
   });
 }
 

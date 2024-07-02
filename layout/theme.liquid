@@ -60,7 +60,7 @@
 
       {% render 'meta-tags' %}
 
-      <script defer src="{{ 'global.min.js' | asset_url }}"></script>
+      <script defer src="{{ 'global.js' | asset_url }}"></script>
       {{ content_for_header }}
 
       {%- render 'bold-options-hybrid' -%}
@@ -293,6 +293,7 @@
         {{ "accessibility.skip_to_text" | t }}
       </a>
 
+      
       {%- if settings.cart_type == 'drawer' -%}
         {%- section 'cart-drawer' -%}
       {%- endif -%}

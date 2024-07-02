@@ -85,7 +85,6 @@ class CartItems extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section).join(','),
       sections_url: window.location.pathname
     });
-    console.log(body);
     if(line){
       fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
         .then((response) => {
@@ -93,13 +92,13 @@ class CartItems extends HTMLElement {
         })
         .then((state) => {
           updateCart();
-          return;
+          // return;
           const parsedState = JSON.parse(state);
           if (!parsedState.sections) {
             this.forceUpdateCartDrawer();
             return;
           }
-  
+
           this.classList.toggle('is-empty', parsedState.item_count === 0);
           const cartDrawerWrapper = document.querySelector('cart-drawer');
           const cartFooter = document.getElementById('main-cart-footer');
@@ -108,7 +107,7 @@ class CartItems extends HTMLElement {
           // if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
   
           this.getSectionsToRender().forEach((section => {
-            const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+            const elementToReplace = document.getElementById(section?.id).querySelector(section.selector) || document.getElementById(section.id);
             if(!elementToReplace) return true;
             elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
           }));
@@ -221,8 +220,9 @@ class CartItems extends HTMLElement {
     mainCartItems.classList.remove('cart__items--disabled');
   }
 }
-
 customElements.define('cart-items', CartItems);
+
+
 
 if (!customElements.get('cart-note')) {
   customElements.define('cart-note', class CartNote extends HTMLElement {
