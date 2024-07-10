@@ -3,7 +3,7 @@
     <head>
       {% include 'hyperspeed-imports' %}
       {% render 'hs-critical-css' %}  
-      {% render 'pagefly-head' %}
+      
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -280,7 +280,7 @@
       <!-- End VWO Async SmartCode -->
     
       {% include "globale-js" %}
-    </head>
+    {% include 'pagefly-app-header' %}</head>
 
     <body class="gradient template--{{ template.name }}">
 
