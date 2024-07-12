@@ -53,7 +53,7 @@
         <h2 
           class="image-text-video__heading"
           {%- for article in blog.articles -%}
-            {% if article.metafields.custom.enable_featured_products_top %}
+            {%- if article.metafields.custom.enable_featured_products_top -%}
               style="margin: 0;"
             {%- endif -%}
           {%- endfor -%}
