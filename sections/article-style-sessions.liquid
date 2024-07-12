@@ -85,7 +85,7 @@
             {%- comment -%} Products{%- endcomment -%}
             <ul class="article__feat-products">
               {%- for article in blog.articles -%}
-                {%- if article.metafields.custom.enable_featured_products_top -%}
+
                   {%- assign featured_products = article.metafields.custom.featured_products.value -%}
                     {%- for item in featured_products -%}
                       <li class="article__feat-products-item">
@@ -101,7 +101,7 @@
                         %}
                       </li>
                     {%- endfor -%}
-                {%- endif -%}
+
               {%- endfor -%}
             </ul>
 
