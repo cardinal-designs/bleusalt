@@ -77,7 +77,7 @@
             {% assign products = article.metafields.custom.featured_products.values %}
             {%- for item in products -%}
               <script>
-                console.log({{ item | json }})
+                console.log({{ item.title | json }})
               </script>
             {%- endfor -%}
             <ul>
