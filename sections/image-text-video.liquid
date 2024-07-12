@@ -1,19 +1,19 @@
 <link rel="stylesheet" href="{{ 'image-text-video.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
 
-  <style>
-    {% if page.metafields.page.enable_products_top %}
-      @media screen and (min-width: 1800px) {
-        .image-text-video__wrapper {
-          align-items: center;
-        }
-      }
-    {% else %}
+<style>
+  {% if page.metafields.page.enable_products_top %}
+    @media screen and (min-width: 1800px) {
       .image-text-video__wrapper {
         align-items: center;
       }
-    {% endif %}
-  </style>
+    }
+  {% else %}
+    .image-text-video__wrapper {
+      align-items: center;
+    }
+  {% endif %}
+</style>
 
 <div class="image-text-video page-width">
   <div class="image-text-video__wrapper">

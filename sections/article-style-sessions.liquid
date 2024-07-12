@@ -6,6 +6,20 @@
 {%- assign cta_text = article.metafields.custom.style_sessions_cta_text.value -%}
 {%- assign youtube_Id = article.metafields.custom.style_sessions_youtube_id.value -%}
 
+<style>
+  {% if page.metafields.page.enable_products_top %}
+    @media screen and (min-width: 1800px) {
+      .image-text-video__wrapper {
+        align-items: center;
+      }
+    }
+  {% else %}
+    .image-text-video__wrapper {
+      align-items: center;
+    }
+  {% endif %}
+</style>
+
 <div class="style-sessions-article image-text-video page-width">
   <div class="breadcrumb">
     <ul>
