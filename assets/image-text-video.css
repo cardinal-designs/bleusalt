@@ -229,11 +229,11 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 768px) {
 
   .article__feat-products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
