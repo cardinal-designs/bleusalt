@@ -1,6 +1,16 @@
 <link rel="stylesheet" href="{{ 'image-text-video.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
 
+{% if page.metafields.page.enable_products_top %}
+  <style>
+    @media screen and (min-width: 1800px) {
+      .image-text-video__wrapper {
+        align-items: center;
+      }
+    }
+  </style>
+{% endif %}
+
 <div class="image-text-video page-width">
   <div class="image-text-video__wrapper">
     {%- comment -%} Image {%- endcomment -%}
