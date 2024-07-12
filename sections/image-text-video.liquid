@@ -58,7 +58,7 @@
             {%- comment -%} Products{%- endcomment -%}
             <ul class="article__feat-products">
               {%- if page.metafields.page.enable_products_top -%}
-                {%- assign featured_products = page.metafields.page.feat_products.value -%}
+                {%- assign featured_products = page.metafields.page.feat_products_top.value -%}
                   {%- for item in featured_products -%}
                     <li class="article__feat-products-item">
                       {% render 'card-product',
