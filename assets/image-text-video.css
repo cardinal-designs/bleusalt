@@ -244,4 +244,8 @@
   .article__feat-products-bottom {
     padding-bottom: 30px;
   }
+
+  .article__title {
+    padding-bottom: 30px;
+  }
 }
