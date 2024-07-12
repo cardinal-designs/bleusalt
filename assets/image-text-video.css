@@ -1,5 +1,6 @@
 .image-text-video__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 60px 0;
 }
