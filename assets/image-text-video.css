@@ -54,7 +54,8 @@
 }
 
 .image-text-video__content-inner {
-  padding: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
   max-width: 800px;
   width: 100%;
 }
