@@ -72,7 +72,13 @@
                 </div>
               </div>
             {%- endif -%}
-            <h1>HEY</h1>
+
+            {%- comment -%} Products{%- endcomment -%}
+            {% assign products = article.metafields.custom.featured_products %}
+            <ul>
+              <li></li>
+            </ul>
+
           </div>
         {%- endif -%}
       </div>
