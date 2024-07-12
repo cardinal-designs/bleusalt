@@ -74,11 +74,11 @@
             {%- endif -%}
 
             {%- comment -%} Products{%- endcomment -%}
-            <ul class="flex gap-[20px] pl-0 !important">
+            <ul class="article__feat-products">
               {%- for article in blog.articles -%}
               {% assign featured_products = article.metafields.custom.featured_products.value %}
                 {%- for item in featured_products -%}
-                  <li class="list-none">
+                  <li class="article__feat-products-item">
                     {% render 'card-product',
                       card_product: item,
                       media_aspect_ratio: item.featured_image.image_ratio,
