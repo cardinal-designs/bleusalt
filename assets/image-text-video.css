@@ -249,3 +249,10 @@
 .article__feat-products-bottom {
   padding-bottom: 80px;
 }
+
+@media screen and (max-width: 768px) {
+
+  .article__feat-products-bottom {
+    padding-bottom: 40px;
+  }
+}
