@@ -220,3 +220,7 @@
     margin: 1em 0;
   }
 }
+
+.article__feat-products {
+  display: flex;
+}
