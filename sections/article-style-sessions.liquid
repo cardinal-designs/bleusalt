@@ -111,7 +111,7 @@
   <div>
     <h1 class="article__title">SHOP THE VIDEO</h1>
     <ul class="article__feat-products">
-        {%- assign featured_products = article.metafields.custom.featured_products_bottom -%}
+        {%- assign featured_products = article.metafields.custom.featured_products_bottom.value -%}
           {%- for item in featured_products -%}
             <li class="article__feat-products-item">
               {% render 'card-product',
