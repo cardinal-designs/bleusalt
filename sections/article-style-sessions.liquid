@@ -7,7 +7,7 @@
 {%- assign youtube_Id = article.metafields.custom.style_sessions_youtube_id.value -%}
 
 <style>
-  {% if page.metafields.page.enable_products_top %}
+  {% if article.metafields.custom.enable_featured_products_top %}
     @media screen and (min-width: 1800px) {
       .image-text-video__wrapper {
         align-items: center;
