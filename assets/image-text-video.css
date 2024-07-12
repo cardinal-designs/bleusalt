@@ -223,4 +223,10 @@
 
 .article__feat-products {
   display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.article__feat-products-item {
+  list-style-type: none;
 }
