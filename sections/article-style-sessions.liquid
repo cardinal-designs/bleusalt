@@ -75,6 +75,11 @@
 
             {%- comment -%} Products{%- endcomment -%}
             {% assign products = article.metafields.custom.featured_products %}
+            {%- for item in products -%}
+              <script>
+                console.log({{ item | json }})
+              </script>
+            {%- endfor -%}
             <ul>
               <li></li>
             </ul>
