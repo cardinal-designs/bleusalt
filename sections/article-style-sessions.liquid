@@ -110,6 +110,25 @@
   {%- comment -%} Featured Products Bottom {%- endcomment -%}
   <div>
     <h1 class="article__title">SHOP THE VIDEO</h1>
+                <ul class="article__feat-products">
+              {%- if article.metafields.custom.enable_featured_products_top -%}
+                {%- assign featured_products = article.metafields.custom.featured_products.value -%}
+                  {%- for item in featured_products -%}
+                    <li class="article__feat-products-item">
+                      {% render 'card-product',
+                        card_product: item,
+                        media_aspect_ratio: item.featured_image.image_ratio,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: 'false',
+                        show_rating: 'false',
+                        lazy_load: lazy_load,
+                        show_quick_add: 'true',
+                        section_id: section.id
+                      %}
+                    </li>
+                  {%- endfor -%}
+              {%- endif -%}
+            </ul>
   </div>
   {%- comment -%} End Featured Products {%- endcomment -%}
 
