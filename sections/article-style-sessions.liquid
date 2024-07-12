@@ -52,9 +52,11 @@
       <div class="image-text-video__content-inner">
         <h2 
           class="image-text-video__heading"
-          {% if article.metafields.custom.enable_featured_products_top %}
-            style="padding: 100px;"
-          {%- endif -%}
+          {%- for article in blog.articles -%}
+            {% if article.metafields.custom.enable_featured_products_top %}
+              style="padding: 100px;"
+            {%- endif -%}
+          {%- endfor -%}
         >
           {{ article.title }}
         </h2>
