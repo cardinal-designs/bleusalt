@@ -90,25 +90,27 @@
   </div>
 
   {%- if page.metafields.page.enable_products_bottom -%}
-    {%- comment -%} Featured Products {%- endcomment -%}
-    <ul class="article__feat-products grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
+    <div class="article__feat-products-bottom">
       <h1 class="article__title">SHOP THE VIDEO</h1>
-      {%- assign featured_products_bottom = page.metafields.page.feat_products_bottom.value -%}
-        {%- for item in featured_products_bottom -%}
-          <li class="article__feat-products-item grid__item">
-            {% render 'card-product',
-              card_product: item,
-              media_aspect_ratio: item.featured_image.image_ratio,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: 'false',
-              show_rating: 'false',
-              lazy_load: 'true',
-              show_quick_add: 'true',
-              section_id: section.id
-            %}
-          </li>
-        {%- endfor -%}
-    </ul>
+      {%- comment -%} Featured Products {%- endcomment -%}
+      <ul class="article__feat-products grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
+        {%- assign featured_products_bottom = page.metafields.page.feat_products_bottom.value -%}
+          {%- for item in featured_products_bottom -%}
+            <li class="article__feat-products-item grid__item">
+              {% render 'card-product',
+                card_product: item,
+                media_aspect_ratio: item.featured_image.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: 'false',
+                show_rating: 'false',
+                lazy_load: 'true',
+                show_quick_add: 'true',
+                section_id: section.id
+              %}
+            </li>
+          {%- endfor -%}
+      </ul>
+    </div>
   {%- endif -%}
 
 </div>
