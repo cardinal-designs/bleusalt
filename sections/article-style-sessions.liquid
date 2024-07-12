@@ -81,7 +81,7 @@
             {%- endif -%}
 
             {%- comment -%} Featured Products Top {%- endcomment -%}
-            <ul class="article__feat-products">
+            <ul class="grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
               {%- if article.metafields.custom.enable_featured_products_top -%}
                 {%- assign featured_products = article.metafields.custom.featured_products.value -%}
                   {%- for item in featured_products -%}
