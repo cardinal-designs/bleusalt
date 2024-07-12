@@ -74,11 +74,11 @@
             {%- endif -%}
 
             {%- comment -%} Products{%- endcomment -%}
-            {% assign products = article.metafields.custom.featured_products %}
-            {%- for item in products -%}
-              <p>{{ item.title }}</p>
+            {% assign featured_products = article.metafields.custom.featured_products %}
+            {% for product_id in featured_products %}
+              {% assign product = all_products[product_id] %}
               <script>
-                console.log({{ item.title | json }})
+                console.log({{ product | json }})
               </script>
             {%- endfor -%}
             <ul>
