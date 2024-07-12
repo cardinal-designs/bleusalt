@@ -74,7 +74,7 @@
             {%- endif -%}
 
             {%- comment -%} Products{%- endcomment -%}
-            <ul>
+            <ul class="flex gap-[20px]">
               {%- for article in blog.articles -%}
               {% assign featured_products = article.metafields.custom.featured_products.value %}
                 {%- for item in featured_products -%}
