@@ -76,7 +76,9 @@
             {%- comment -%} Products{%- endcomment -%}
             {%- for article in blog.articles -%}
             {% assign featured_products = article.metafields.custom.featured_products.value %}
+            <ul>
               {%- for item in featured_products -%}
+                <li>
                   {% render 'card-product',
                     card_product: item,
                     media_aspect_ratio: item.featured_image.image_ratio,
@@ -87,11 +89,10 @@
                     show_quick_add: section.settings.enable_quick_add,
                     section_id: section.id
                   %}
+                </li>
               {%- endfor -%}
-            {%- endfor -%}
-            <ul>
-              <li><h1>hey</h1></li>
             </ul>
+            {%- endfor -%}
 
           </div>
         {%- endif -%}
