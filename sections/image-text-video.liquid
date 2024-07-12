@@ -57,13 +57,6 @@
 
             {%- comment -%} Products{%- endcomment -%}
             <ul class="article__feat-products">
-              <h1>HEY</h1>
-              {% comment %} {%- assign featured_products = page.metafields.page.feat_products.value -%}
-              {%- for item in featured_products -%}
-                <script>
-                  console.log({{ item | json }})
-                </script>
-              {%- endfor -%} {% endcomment %}
               {%- if page.metafields.page.enable_products_top -%}
                 {%- assign featured_products = page.metafields.page.feat_products.value -%}
                   {%- for item in featured_products -%}
