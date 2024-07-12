@@ -222,19 +222,8 @@
 }
 
 .article__feat-products {
-  display: flex;
-  gap: 10px;
-  padding-left: 0;
   margin-top: 50px;
   margin-bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-
-  .article__feat-products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .article__feat-products-item {
