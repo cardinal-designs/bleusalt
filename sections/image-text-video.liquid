@@ -1,6 +1,20 @@
 <link rel="stylesheet" href="{{ 'image-text-video.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
 
+<style>
+  {% if page.metafields.page.enable_products_top %}
+    @media screen and (min-width: 1800px) {
+      .image-text-video__wrapper {
+        align-items: center;
+      }
+    }
+  {% else %}
+    .image-text-video__wrapper {
+      align-items: center;
+    }
+  {% endif %}
+</style>
+
 <div class="image-text-video page-width">
   <div class="image-text-video__wrapper">
     {%- comment -%} Image {%- endcomment -%}
@@ -34,7 +48,14 @@
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
         {%- if section.settings.heading != blank -%}
-          <h2 class="image-text-video__heading">{{ section.settings.heading }}</h2>
+          <h2 
+            class="image-text-video__heading"
+            {%- if page.metafields.page.enable_products_top -%}
+              style="margin: 0;"
+            {%- endif -%}
+          >
+            {{ section.settings.heading }}
+          </h2>
         {%- endif -%}
         {%- if section.settings.sub_heading != blank -%}
           <p class="image-text-video__subheading">{{ section.settings.sub_heading }}</p>
@@ -54,11 +75,54 @@
                 </div>
               </div>
             {%- endif -%}
+            {%- comment -%} Featured Products Top {%- endcomment -%}
+            {%- if page.metafields.page.enable_products_top -%}
+              <ul class="article__feat-products grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
+                {%- assign featured_products = page.metafields.page.feat_products_top.value -%}
+                  {%- for item in featured_products -%}
+                    <li class="article__feat-products-item grid__item">
+                      {% render 'card-product',
+                        card_product: item,
+                        media_aspect_ratio: item.featured_image.image_ratio,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: 'false',
+                        show_rating: 'false',
+                        lazy_load: 'true',
+                        show_quick_add: 'true',
+                        section_id: section.id
+                      %}
+                    </li>
+                  {%- endfor -%}
+              </ul>
+            {%- endif -%}
           </div>
         {%- endif -%}
       </div>
     </div>
   </div>
+  {%- comment -%} Featured Products Bottom {%- endcomment -%}
+  {%- if page.metafields.page.enable_products_bottom -%}
+    <div class="article__feat-products-bottom">
+      <h1 class="article__title">SHOP THE VIDEO</h1>
+      <ul class="article__feat-products grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
+        {%- assign featured_products_bottom = page.metafields.page.feat_products_bottom.value -%}
+          {%- for item in featured_products_bottom -%}
+            <li class="article__feat-products-item grid__item">
+              {% render 'card-product',
+                card_product: item,
+                media_aspect_ratio: item.featured_image.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: 'false',
+                show_rating: 'false',
+                lazy_load: 'true',
+                show_quick_add: 'true',
+                section_id: section.id
+              %}
+            </li>
+          {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
