@@ -86,7 +86,7 @@
             <ul class="article__feat-products">
               {%- for article in blog.articles -%}
                 {%- if article.metafields.custom.enable_featured_products_top -%}
-                  {% assign featured_products = article.metafields.custom.featured_products.value %}
+                  {%- assign featured_products = article.metafields.custom.featured_products.value -%}
                     {%- for item in featured_products -%}
                       <li class="article__feat-products-item">
                         {% render 'card-product',
@@ -104,7 +104,7 @@
                 {%- endif -%}
               {%- endfor -%}
             </ul>
-            
+
           </div>
         {%- endif -%}
       </div>
