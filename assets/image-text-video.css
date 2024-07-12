@@ -1,7 +1,7 @@
 .image-text-video__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* align-items: center; */
+  align-items: flex-start;
   justify-content: space-between;
   padding: 60px 0;
 }
