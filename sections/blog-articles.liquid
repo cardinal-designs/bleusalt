@@ -32,7 +32,10 @@
 -%}
 <div class="blog-articles blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
   <div class="feat-blog page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
-    <h1>HEY</h1>
+    {%- comment -%} Featured Products {%- endcomment -%}
+    <div>
+      <h1 class="blog__title">SHOP THE VIDEO</h1>
+    </div>
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
         <h2 
