@@ -34,7 +34,14 @@
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
         {%- if section.settings.heading != blank -%}
-          <h2 class="image-text-video__heading">{{ section.settings.heading }}</h2>
+          <h2 
+            class="image-text-video__heading"
+            {%- if page.metafields.page.enable_products_top -%}
+              style="margin: 0;"
+            {%- endif -%}
+          >
+            {{ section.settings.heading }}
+          </h2>
         {%- endif -%}
         {%- if section.settings.sub_heading != blank -%}
           <p class="image-text-video__subheading">{{ section.settings.sub_heading }}</p>
