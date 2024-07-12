@@ -60,7 +60,7 @@
               <h1>HEY</h1>
               {%- assign featured_products = page.metafields.page.feat_products -%}
               <script>
-                console.log({{ featured_products | json }})
+                console.log({{ featured_products.title | json }})
               </script>
               {% comment %} {%- for article in blog.articles -%}
                 {%- if article.metafields.custom.enable_featured_products_top -%}
