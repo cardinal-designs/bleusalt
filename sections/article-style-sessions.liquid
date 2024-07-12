@@ -77,6 +77,7 @@
             {% assign featured_products = article.metafields.custom.featured_products %}
             {% for product_id in featured_products %}
               {% assign product = all_products[product_id] %}
+              <h1>hey</h1>
               <script>
                 console.log({{ product | json }})
               </script>
