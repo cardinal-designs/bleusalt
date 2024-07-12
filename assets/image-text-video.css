@@ -37,7 +37,7 @@
   height: 10px;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 989px) {
 
   .image-text-video__wrapper {
     display: block;
@@ -230,7 +230,7 @@
 }
 
 @media screen and (max-width: 989px) {
-  
+
   .article__feat-products {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
