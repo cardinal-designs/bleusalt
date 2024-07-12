@@ -74,7 +74,7 @@
             {%- endif -%}
 
             {%- comment -%} Products{%- endcomment -%}
-            {% assign featured_products = article.metafields.custom.featured_products.value %}
+            {% assign featured_products = article.metafields.custom.featured_products.values %}
             {%- for item in featured_products -%}
               <script>
                 console.log({{ item.title | json }})
