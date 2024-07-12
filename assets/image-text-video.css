@@ -240,3 +240,8 @@
 .article__feat-products-item {
   list-style-type: none;
 }
+
+.article__title {
+  margin-bottom: 40px;
+  font-size: 22px;
+}
