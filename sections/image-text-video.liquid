@@ -58,11 +58,12 @@
             {%- comment -%} Products{%- endcomment -%}
             <ul class="article__feat-products">
               <h1>HEY</h1>
-              {%- assign featured_product_one = page.metafields.page.feat_product_one.value -%}
-              {%- assign featured_product_two = page.metafields.page.feat_product_two.value -%}
-              <script>
-                console.log({{ featured_product_two | json }})
-              </script>
+              {%- assign featured_products = page.metafields.page.feat_products.value -%}
+              {%- for item in featured_products -%}
+                <script>
+                  console.log({{ item | json }})
+                </script>
+              {%- endfor -%}
               {% comment %} {%- for article in blog.articles -%}
                 {%- if article.metafields.custom.enable_featured_products_top -%}
                   {% assign featured_products = article.metafields.custom.featured_products.value %}
