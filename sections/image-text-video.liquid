@@ -62,9 +62,9 @@
               </div>
             {%- endif -%}
 
-            {%- comment -%} Featured Products {%- endcomment -%}
-            <ul class="article__feat-products grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
-              {%- if page.metafields.page.enable_products_top -%}
+            {%- if page.metafields.page.enable_products_top -%}
+              {%- comment -%} Featured Products {%- endcomment -%}
+              <ul class="article__feat-products grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
                 {%- assign featured_products = page.metafields.page.feat_products_top.value -%}
                   {%- for item in featured_products -%}
                     <li class="article__feat-products-item grid__item">
@@ -80,8 +80,8 @@
                       %}
                     </li>
                   {%- endfor -%}
-              {%- endif -%}
-            </ul>
+              </ul>
+            {%- endif -%}
 
           </div>
         {%- endif -%}
