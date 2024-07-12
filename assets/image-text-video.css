@@ -224,7 +224,7 @@
 .article__feat-products {
   display: flex;
   gap: 20px;
-  list-style-type: none;
+  padding-left: 0;
 }
 
 .article__feat-products-item {
