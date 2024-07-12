@@ -50,7 +50,14 @@
     {%- comment -%} Content {%- endcomment -%}
     <div class="image-text-video__content">
       <div class="image-text-video__content-inner">
-        <h2 class="image-text-video__heading">{{ article.title }}</h2>
+        <h2 
+          class="image-text-video__heading"
+          {% if article.metafields.custom.enable_featured_products_top %}
+            style="margin: 0;"
+          {%- endif -%}
+        >
+          {{ article.title }}
+        </h2>
         {%- if description != blank -%}
           <p class="image-text-video__desc">{{ description }}</p>
         {%- endif -%}
