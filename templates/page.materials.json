@@ -378,6 +378,7 @@
         "heading_tCWtLE",
         "text_WAUAnc"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/materials-bleusalt-luxe.jpg",
         "border_top": true,
