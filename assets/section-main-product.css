@@ -1604,19 +1604,10 @@ table[data-in-to-cm] td {
   text-transform: capitalize;
 }
 
-.model_size {
-  line-height: 1;
-  margin: 0;
-}
-
 @media screen and (max-width: 749px) {
   
   .breadcrumb {
     margin: 1em 0;
   }
 
-  .product-form__buttons {
-    margin: 0 auto;
-  }
-  
 }
