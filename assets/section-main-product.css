@@ -367,6 +367,11 @@ fieldset.product-form__input .form__label {
   }
 }
 
+.product__model-sizing {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
 #show-low-messaging {
   font-size: 14px;
   margin-top: -1rem;
