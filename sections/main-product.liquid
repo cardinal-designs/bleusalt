@@ -450,9 +450,11 @@
             
           {%- when 'buy_buttons' -%}
             <div class="product__buttons-wrapper" {{ block.shopify_attributes }}>
+
               {% if product.metafields.custom.model_size_info != blank %}
               <p class="product__model-sizing">{{ product.metafields.custom.model_size_info }}</p>
               {% endif %}
+
               {% if template == 'product.app-only' %}
                 <div class="button app-only button--full-width">
                   {{ 'products.product.app_only' | t }}
