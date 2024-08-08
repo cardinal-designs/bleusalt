@@ -1118,6 +1118,13 @@
         "default": true,
         "label": "Search only products",
         "info": "(exclude pages\/posts\/etc)"
+      },
+      {
+        "type": "checkbox",
+        "id": "search_only_products_and_pages",
+        "default": false,
+        "label": "Search only products and pages",
+        "info": "(exclude posts\/etc)"
       }
     ]
   },
