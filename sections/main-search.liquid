@@ -97,6 +97,8 @@
             <input name="options[prefix]" type="hidden" value="last">
             {% if settings.search_only_products %}
               <input name="type" type="hidden" value="product">
+            {% elsif settings.search_only_products_and_pages %}
+              <input name="type" type="hidden" value="product+page">
             {% endif %}
 
             {%- if settings.predictive_search_enabled -%}
