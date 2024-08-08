@@ -206,7 +206,7 @@
               <div class="loading-overlay gradient"></div>
               <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
                 {%- for item in search.results -%}
-                  {{ item.metafields.custom.show_in_search }}--item.metafields.custom.show_in_search
+                  
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
                   {%- if item.metafields.custom.show_in_search == 'false' or item.metafields.custom.show_in_search == false -%}{%- continue -%}{%- endif -%}
                   {%-liquid 
