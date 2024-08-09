@@ -213,7 +213,7 @@
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
       
               
-                    {%- if item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true -%}
+                    {%- unless item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true -%}
                       <li class="grid__item">
                        {%- case item.object_type -%}
                         {%- when 'product' -%}
@@ -255,7 +255,7 @@
                          </div>
                         {%- endcase -%}
                       </li>  
-                    {%- endif -%}
+                    {%- endunless -%}
              
             
                   {%-liquid 
