@@ -212,9 +212,7 @@
                 {%- for item in search.results -%}
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
               
-                  {% if item.object_type == 'page' %}
-                    {%- unless item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true -%}{%- continue -%}{%- endunless -%}
-                  {% endif %}
+ 
               
                   {%-liquid 
                     if item.tags contains 'hidden-search'
