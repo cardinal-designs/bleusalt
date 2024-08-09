@@ -212,11 +212,11 @@
 
                {% comment %} {% assign dataArr = "bleusalt-size-chart-sizing-guide,sizing-guide-the-1z,accessibility-statement" | split : ',' %}{% endcomment %}
             
-                {% assign dataArr = settings.pages_handle | newline_to_br | replace: '<br>', '|' %}
+                {% assign dataArr = settings.pages_handle | newline_to_br %}
                 <!-- Debugging output to check if the array is being created correctly -->
                 {{ dataArr }} -- dataArr
                 
-                {% assign dataArr = dataArr | split: '|' %}
+                {% assign dataArr = dataArr | split: '<br>' %}
                 {{ dataArr }}--dataArr
                 {% for data in dataArr %}
                   {% assign availableData = pages[data] %}
