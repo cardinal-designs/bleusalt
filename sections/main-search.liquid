@@ -205,6 +205,26 @@
           </div>
         {%- else -%}
 
+          {% assign results = search.results %}
+          {% assign filtered_results = '' %}
+          {% assign separator = '' %}
+          
+          {% for item in results %}
+            {% if item.object_type == 'page' %}
+              {% if item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true %}
+                {% assign filtered_results = filtered_results | append: separator | append: item %}
+                {% assign separator = ',' %}
+              {% endif %}
+            {% else %}
+              {% assign filtered_results = filtered_results | append: separator | append: item %}
+              {% assign separator = ',' %}
+            {% endif %}
+          {% endfor %}
+          
+          {% assign results = filtered_results | split: ',' %}
+
+          {{ results }}---results
+
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
