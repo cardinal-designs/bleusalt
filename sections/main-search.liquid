@@ -95,7 +95,7 @@
             >
             <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
             <input name="options[prefix]" type="hidden" value="last">
-            {% if settings.search_only_products %}
+            {% if settings.search_only_products or settings.search_only_products_and_pages %}
               <input name="type" type="hidden" value="product">
             {% endif %}
 
