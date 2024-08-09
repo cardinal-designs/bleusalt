@@ -218,7 +218,7 @@
                 {% endfor %}
                 
                 {% assign dataArr = settings.pages_handle | newline_to_br %}
-                {% assign dataArr = dataArr | split: '<br>' %}
+                {% assign dataArr = dataArr | split: '<br />' %}
             
                 {% for data in dataArr %}
                   {{ data }}--data
