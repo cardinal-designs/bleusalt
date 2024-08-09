@@ -205,33 +205,39 @@
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
               <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
-                {% if paginate.current_page == 1 %}
-                  {% for data in dataArr %}
-                    {% assign availableData = pages[data] %}
-                    {% assign title = availableData.title | downcase %}
-                    {% assign description = availableData.description | downcase %}
-                    {% if title contains search.terms or description contains search.terms  %}
-                      <li class="grid__item">
-                       <div class="card-wrapper underline-links-hover">
-                          <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
-                            <div class="card__content">
-                              <div class="card__information">
-                                <h2 class="card__heading">
-                                  <a href="{{ availableData.url }}" class="full-unstyled-link">
-                                    {{ availableData.title | truncate: 50 | escape }}
-                                  </a>
-                                </h2>
-                              </div>
-                              <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+
+                {% unless settings.search_only_products %}
+                  {% if settings.search_only_products_and_pages %}
+                    {% if paginate.current_page == 1 %}
+                      {% for data in dataArr %}
+                        {% assign availableData = pages[data] %}
+                        {% assign title = availableData.title | downcase %}
+                        {% assign description = availableData.description | downcase %}
+                        {% if title contains search.terms or description contains search.terms  %}
+                          <li class="grid__item">
+                           <div class="card-wrapper underline-links-hover">
+                              <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
+                                <div class="card__content">
+                                  <div class="card__information">
+                                    <h2 class="card__heading">
+                                      <a href="{{ availableData.url }}" class="full-unstyled-link">
+                                        {{ availableData.title | truncate: 50 | escape }}
+                                      </a>
+                                    </h2>
+                                  </div>
+                                  <div class="card__badge {{ settings.badge_position }}">
+                                    <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </li>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
                     {% endif %}
-                  {% endfor %}
-                {% endif %}
+                  {% endif %}
+                {% endunless %}
+                
                 
                 {%- for item in search.results -%}
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
