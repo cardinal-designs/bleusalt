@@ -215,9 +215,10 @@
               {{ title }}--title
             {% endif %}
           {% endfor %}
-      
+          {% comment %}
           {% assign dataArr = settings.pages_handle | newline_to_br %}
           {% assign dataArr = dataArr | split: '<br />' %}
+          {% endcomment %}
           <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
           {% for data in dataArr %}
             {% assign availableData = pages[data] %}
