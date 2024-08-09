@@ -223,8 +223,6 @@
           
           {% assign results = filtered_results | split: ',' %}
 
-          {{ results }}---results
-
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
