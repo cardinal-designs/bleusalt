@@ -204,6 +204,25 @@
             </div>
           </div>
         {%- else -%}
+
+          {%- assign filtered_results = "" | split: "" -%} 
+          {%- for item in search.results -%}
+            {%- assign include_item = true -%}
+            
+            {%- if item.tags contains 'hidden-search' -%}
+              {%- assign include_item = false -%}
+            {%- endif -%}
+          
+            {%- if item.metafields.custom.exclude_from_search == 'true' -%}
+              {%- assign include_item = false -%}
+            {%- endif -%}
+          
+            {%- if include_item -%}
+              {%- assign filtered_results = filtered_results | push: item -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {{ filtered_results }}--filtered_results
           
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
