@@ -205,10 +205,10 @@
           </div>
         {%- else -%}
 
-          {%- assign filtered_results = "" | split: "" -%} 
+          {%- assign filtered_ids = "" -%}
           {%- for item in search.results -%}
             {%- assign include_item = true -%}
-            
+          
             {%- if item.tags contains 'hidden-search' -%}
               {%- assign include_item = false -%}
             {%- endif -%}
@@ -218,11 +218,13 @@
             {%- endif -%}
           
             {%- if include_item -%}
-              {%- assign filtered_results = filtered_results | concat: item | split: "," -%}
+              {%- capture filtered_ids -%}{{ filtered_ids }}{{ item.id }}, {% endcapture -%}
             {%- endif -%}
           {%- endfor -%}
+          
+          {%- assign filtered_ids = filtered_ids | split: ", " -%}
 
-          {{ filtered_results }}--filtered_results
+          {{ filtered_ids }}---filtered_ids
           
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
