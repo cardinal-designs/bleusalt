@@ -219,6 +219,7 @@
                 {% assign dataArr = dataArr | split: '<br>' %}
                 {{ dataArr }}--dataArr
                 {% for data in dataArr %}
+                  {{ data }}--data
                   {% assign availableData = pages[data] %}
                   {% assign title = availableData.title | downcase %}
                   {% assign descriptiom = availableData.description | downcase %}
