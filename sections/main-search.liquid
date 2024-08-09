@@ -220,8 +220,8 @@
                   {% assign availableData = pages[data] %}
                   {% assign title = availableData.title | downcase %}
                   {{ title }}
-                  {% assign descriptiom = availableData.description | downcase %}
-                  {% if title contains search.terms or descriptiom contains search.terms %}
+                  {% assign description = availableData.description | downcase %}
+                  {% if title contains search.terms or description contains search.terms %}
                      <div class="card-wrapper underline-links-hover">
                         <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
                           <div class="card__content">
