@@ -205,7 +205,7 @@
           </div>
         {%- else -%}
 
-
+          {% comment %}
           {% assign dataArr = "bleusalt-size-chart-sizing-guide,sizing-guide-the-1z,accessibility-statement" | split : ',' %}
           {% for data in dataArr %}
             {% assign availableData = pages[data] %}
@@ -215,43 +215,40 @@
               {{ title }}--title
             {% endif %}
           {% endfor %}
+          {% endcomment %}
+          {% assign dataArr = settings.pages_handle | newline_to_br %}
+          {% assign dataArr = dataArr | split: '<br />' %}
+      
+          {% for data in dataArr %}
+            {% assign availableData = pages[data] %}
+            {% assign title = availableData.title | downcase %}
+
+            {% assign description = availableData.description | downcase %}
+
+            {% if title contains search.terms or description contains search.terms %}
+               <div class="card-wrapper underline-links-hover">
+                  <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
+                    <div class="card__content">
+                      <div class="card__information">
+                        <h2 class="card__heading">
+                          <a href="{{ availableData.url }}" class="full-unstyled-link">
+                            {{ availableData.title | truncate: 50 | escape }}
+                          </a>
+                        </h2>
+                      </div>
+                      <div class="card__badge {{ settings.badge_position }}">
+                        <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {% endif %}
+          {% endfor %}
 
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
               <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
-
-               {% comment %} {% assign dataArr = "bleusalt-size-chart-sizing-guide,sizing-guide-the-1z,accessibility-statement" | split : ',' %}{% endcomment %}
-
-  
-                {% assign dataArr = settings.pages_handle | newline_to_br %}
-                {% assign dataArr = dataArr | split: '<br />' %}
-            
-                {% for data in dataArr %}
-                  {% assign availableData = pages[data] %}
-                  {% assign title = availableData.title | downcase %}
-                  {{ title }}---title
-                  {% assign description = availableData.description | downcase %}
-                  {{ search.terms }}---search.terms
-                  {% if title contains search.terms or description contains search.terms %}
-                     <div class="card-wrapper underline-links-hover">
-                        <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
-                          <div class="card__content">
-                            <div class="card__information">
-                              <h2 class="card__heading">
-                                <a href="{{ availableData.url }}" class="full-unstyled-link">
-                                  {{ availableData.title | truncate: 50 | escape }}
-                                </a>
-                              </h2>
-                            </div>
-                            <div class="card__badge {{ settings.badge_position }}">
-                              <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  {% endif %}
-                {% endfor %}
                       
                 {%- for item in search.results -%}
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
