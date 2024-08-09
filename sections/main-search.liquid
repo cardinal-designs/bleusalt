@@ -230,7 +230,7 @@
           <div class="template-search__results">
             <ul class="grid product-grid">
               {%- for item in search.results -%}
-                {%- assign item_id_str = item.id | string -%} <!-- Convert item.id to a string -->
+                {%- assign item_id_str = item.id -%} <!-- Convert item.id to a string -->
                 {%- if filtered_ids contains item_id_str -%}  <!-- Use the converted string in the condition -->
                   <li class="grid__item">
                     {%- case item.object_type -%}
