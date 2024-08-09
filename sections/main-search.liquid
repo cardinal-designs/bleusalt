@@ -218,7 +218,22 @@
                   {% assign title = availableData.title | downcase %}
                   {% assign descriptiom = availableData.description | downcase %}
                   {% if title contains search.terms or descriptiom contains search.terms %}
-                    {{ title }}--title
+                     <div class="card-wrapper underline-links-hover">
+                        <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
+                          <div class="card__content">
+                            <div class="card__information">
+                              <h2 class="card__heading">
+                                <a href="{{ availableData.url }}" class="full-unstyled-link">
+                                  {{ availableData.title | truncate: 50 | escape }}
+                                </a>
+                              </h2>
+                            </div>
+                            <div class="card__badge {{ settings.badge_position }}">
+                              <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   {% endif %}
                 {% endfor %}
                       
