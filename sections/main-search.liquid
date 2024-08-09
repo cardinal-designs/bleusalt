@@ -211,9 +211,11 @@
               <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
                 {%- for item in search.results -%}
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-              
- 
-              
+                  {% comment %}
+                  {% if item.object_type == 'page' %}
+                    {%- unless item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true -%}{%- continue -%}{%- endunless -%}
+                  {% endif %}
+                  {% endcomment %}
                   {%-liquid 
                     if item.tags contains 'hidden-search'
                       continue
