@@ -205,38 +205,6 @@
           </div>
         {%- else -%}
 
-          {% assign filtered_results = '' %}
-          {% assign separator = '' %}
-          
-          {% for item in search.results %}
-            {% if item.metafields.inventory.ShappifyHidden != 'true' %}
-              {% if item.object_type != 'page' or item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true %}
-                {% unless item.tags contains 'hidden-search' %}
-                  {% assign filtered_results = filtered_results | append: separator | append: item %}
-                  {% assign separator = ',' %}
-                {% endunless %}
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-          
-          {% assign results = filtered_results | split: ',' %}
-
-          {{ results }}---results
-          
-          {% assign results = search.results %}
-          {% for item in results %}
-              {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-              {% if item.object_type == 'page' %}
-                {%- unless item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true -%}{%- continue -%}{%- endunless -%}
-              {% endif %}
-              {%-liquid 
-                if item.tags contains 'hidden-search'
-                  continue
-                endif
-              -%}
-          {% endfor %}
-          
-
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
