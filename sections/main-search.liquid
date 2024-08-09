@@ -214,10 +214,10 @@
             
                 {% assign dataArr = settings.pages_handle | newline_to_br %}
                 <!-- Debugging output to check if the array is being created correctly -->
-                {{ dataArr }} -- dataArr
+         
                 
                 {% assign dataArr = dataArr | split: '<br>' %}
-                {{ dataArr }}--dataArr
+            
                 {% for data in dataArr %}
                   {{ data }}--data
                   {% assign availableData = pages[data] %}
