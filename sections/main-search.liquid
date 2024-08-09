@@ -236,7 +236,7 @@
                     {% assign description = availableData.description | downcase %}
         
                     {% if title contains search.terms or description contains search.terms  %}
-                
+                      <li class="grid__item">
                        <div class="card-wrapper underline-links-hover">
                           <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
                             <div class="card__content">
@@ -253,6 +253,7 @@
                             </div>
                           </div>
                         </div>
+                      </li>
                     {% endif %}
                   {% endfor %}
                 {% endif %}
