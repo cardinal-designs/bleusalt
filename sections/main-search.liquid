@@ -99,11 +99,6 @@
               <input name="type" type="hidden" value="product">
             {% endif %}
 
-            {% unless settings.search_only_products %}
-              {% if settings.search_only_products_and_pages %}
-                <input name="type" type="hidden" value="product+page">
-              {% endif %}
-            {% endunless %}
             {%- if settings.predictive_search_enabled -%}
               <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
                 <div class="predictive-search__loading-state">
@@ -205,23 +200,7 @@
           </div>
         {%- else -%}
 
-          {% comment %}
-          {% assign dataArr = "bleusalt-size-chart-sizing-guide,sizing-guide-the-1z,accessibility-statement" | split : ',' %}
-          {% for data in dataArr %}
-            {% assign availableData = pages[data] %}
-            {% assign title = availableData.title | downcase %}
-            {% assign descriptiom = availableData.description | downcase %}
-            {% if title contains search.terms or descriptiom contains search.terms %}
-              {{ title }}--title
-            {% endif %}
-          {% endfor %}
-          {% assign dataArr = settings.pages_handle | newline_to_br %}
-          {% assign dataArr = dataArr | split: '<br />' %}
-
-          {% endcomment %}
-  
           {% assign dataArr = settings.pages_handle | split : ',' %}
-
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
