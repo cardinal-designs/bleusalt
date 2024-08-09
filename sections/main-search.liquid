@@ -207,6 +207,7 @@
 
           {%- assign filtered_results = "" | split: "" -%} 
           {%- for item in search.results -%}
+            {{ item }}--item
             {%- assign include_item = true -%}
             
             {%- if item.tags contains 'hidden-search' -%}
