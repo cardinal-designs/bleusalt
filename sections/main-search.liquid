@@ -207,13 +207,22 @@
 
           {% assign filtered_results = '' %}
           {% for item in search.results %}
-            {% unless item.handle == "page-handle-to-exclude" %}
+            {% unless item.object_type == 'page' %}
+              {%- unless item.metafields.custom.show_in_search == 'true' or item.metafields.custom.show_in_search == true -%}
+                {% if filtered_results == '' %}
+                  {% assign filtered_results = item %}
+                {% else %}
+                  {% assign filtered_results = filtered_results | append: ',' | append: item %}
+                {% endif %}
+              {%- endunless -%}
+            {% else %}
               {% if filtered_results == '' %}
                 {% assign filtered_results = item %}
               {% else %}
                 {% assign filtered_results = filtered_results | append: ',' | append: item %}
               {% endif %}
             {% endunless %}
+
           {% endfor %}
 
           {% paginate filtered_results by 20 %}
