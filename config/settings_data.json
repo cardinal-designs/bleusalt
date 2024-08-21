@@ -35,7 +35,7 @@
     "predictive_search_show_price": true,
     "search_only_products": false,
     "search_only_products_and_pages": true,
-    "pages_handle": "bleusalt-size-chart-sizing-guide,sizing-guide-the-1z,accessibility-statement",
+    "pages_handle": "bleusalt-size-chart-sizing-guide",
     "favicon": "shopify:\/\/shop_images\/bleusalt-favico150_01182006-a0ea-4364-a08e-e62fa70a0c81.jpg",
     "currency_code_enabled": false,
     "cart_type": "drawer",
