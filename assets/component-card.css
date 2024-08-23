@@ -401,10 +401,13 @@
   display: none;
 }
 
+.template--search .grid__item--page .card {
+  background: white;
+}
+
 .template--search .grid__item--page .card__content  {
   display: block;
   padding: 0;
-  background: white;
 }
 
 .template--search .grid__item--page .card__content .card__information {
