@@ -214,7 +214,7 @@
                         {% assign title = availableData.title | downcase %}
                         {% assign description = availableData.description | downcase %}
                         {% if title contains search.terms or description contains search.terms  %}
-                          <li class="grid__item">
+                          <li class="grid__item 000">
                            <div class="card-wrapper underline-links-hover">
                               <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
                                 <div class="card__content">
@@ -256,7 +256,7 @@
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                  <li class="grid__item">
+                  <li class="grid__item 111">
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         
