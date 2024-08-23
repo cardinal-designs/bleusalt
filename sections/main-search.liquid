@@ -221,11 +221,11 @@
                                   <div class="card__information">
                                     <h2 class="card__heading">
                                       
-                                      {% unless availableData.metafields.custom.featured_image_for_search_result.value != blank %}
+                                      
                                       <a href="{{ availableData.url }}" class="full-unstyled-link">
                                         {{ availableData.title | truncate: 50 | escape }}
                                       </a>
-                                      {% endunless %}
+                                      
                                     </h2>
                                   </div>
                                   <div class="card__badge {{ settings.badge_position }}">
