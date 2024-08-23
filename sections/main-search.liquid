@@ -95,7 +95,7 @@
             >
             <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
             <input name="options[prefix]" type="hidden" value="last">
-            {% if settings.search_only_products %}
+            {% if settings.search_only_products or settings.search_only_products_and_pages %}
               <input name="type" type="hidden" value="product">
             {% endif %}
 
@@ -199,10 +199,53 @@
             </div>
           </div>
         {%- else -%}
+
+          {% assign dataArr = settings.pages_handle | split : ',' %}
           {% paginate search.results by 24 %}
             <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
               <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
+
+                {% unless settings.search_only_products %}
+                  {% if settings.search_only_products_and_pages %}
+                    {% if paginate.current_page == 1 %}
+                      {% for data in dataArr %}
+                        {% assign availableData = pages[data] %}
+                        {% assign title = availableData.title | downcase %}
+                        {% assign description = availableData.description | downcase %}
+                        {% if title contains search.terms or description contains search.terms  %}
+                          <li class="grid__item grid__item--page">
+                           <div class="card-wrapper underline-links-hover">
+                              <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
+                                <a href="{{ availableData.url }}" class="card__content-link">
+                                  <div class="card__content {% if availableData.metafields.custom.featured_image_for_search_result.value == blank %}size__image--blank{% endif %}">
+                                    <div class="card__information">
+                                      <h2 class="card__heading size__image--wrap">
+                                        {% if availableData.metafields.custom.featured_image_for_search_result.value != blank %}
+                                          <img class="size__guide--image" loading="lazy" src="https://bleusalt.com/cdn/shop/{{ availableData.metafields.custom.featured_image_for_search_result.value | image_url: 'master' }}">
+                                        {% endif %}
+                                        {% unless availableData.metafields.custom.featured_image_for_search_result.value != blank %}
+                                        <a href="{{ availableData.url }}" class="full-unstyled-link">
+                                          {{ availableData.title | truncate: 50 | escape }}
+                                        </a>
+                                        {% endunless %}
+                                      </h2>
+                                    </div>
+                                    <div class="card__badge {{ settings.badge_position }}">
+                                      <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  {% endif %}
+                {% endunless %}
+                
+                
                 {%- for item in search.results -%}
                   {%- if item.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
                   {%-liquid 
@@ -265,6 +308,7 @@
               {%- endif -%}
             </div>
           {% endpaginate %}
+
         {%- endif -%}
       </div>
     </div>

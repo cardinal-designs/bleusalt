@@ -391,3 +391,25 @@
 .template--blog .card--standard>.card__content .card__caption {
   display: block;
 }
+
+.card-wrapper .card__information .size__guide--image {
+  width: 100%;
+}
+
+/* Search Results */
+.template--search data-oke-star-rating {
+  display: none;
+}
+
+.template--search .grid__item--page .card {
+  background: white;
+}
+
+.template--search .grid__item--page .card__content  {
+  display: block;
+  padding: 0;
+}
+
+.template--search .grid__item--page .card__content .card__information {
+  padding: 0;
+}
