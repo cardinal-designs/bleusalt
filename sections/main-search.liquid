@@ -223,9 +223,11 @@
                                       {% if availableData.metafields.custom.featured_image_for_search_result.value != blank %}
                                         <img class="size__guide--image" src="https://bleusalt.com/cdn/shop/{{ availableData.metafields.custom.featured_image_for_search_result.value | image_url: '100x' }}">
                                       {% endif %}
+                                      {% unless availableData.metafields.custom.featured_image_for_search_result.value != blank %}
                                       <a href="{{ availableData.url }}" class="full-unstyled-link">
                                         {{ availableData.title | truncate: 50 | escape }}
                                       </a>
+                                      {% endunless %}
                                     </h2>
                                   </div>
                                   <div class="card__badge {{ settings.badge_position }}">
