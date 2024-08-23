@@ -214,8 +214,8 @@
                         {% assign title = availableData.title | downcase %}
                         {% assign description = availableData.description | downcase %}
                         {% if title contains search.terms or description contains search.terms  %}
-                          <li class="grid__item">
-                           <div class="card-wrapper underline-links-hover TEST">
+                          <li class="grid__item grid__item--page">
+                           <div class="card-wrapper underline-links-hover">
                               <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
                                 <a href="{{ availableData.url }}" class="card__content-link">
                                   <div class="card__content {% if availableData.metafields.custom.featured_image_for_search_result.value == blank %}size__image--blank{% endif %}">
