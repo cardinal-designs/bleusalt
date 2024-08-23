@@ -217,23 +217,25 @@
                           <li class="grid__item">
                            <div class="card-wrapper underline-links-hover">
                               <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
-                                <div class="card__content {% if availableData.metafields.custom.featured_image_for_search_result.value == blank %}size__image--blank{% endif %}">
-                                  <div class="card__information">
-                                    <h2 class="card__heading size__image--wrap">
-                                      {% if availableData.metafields.custom.featured_image_for_search_result.value != blank %}
-                                        <img class="size__guide--image" loading="lazy" src="https://bleusalt.com/cdn/shop/{{ availableData.metafields.custom.featured_image_for_search_result.value | image_url: 'master' }}">
-                                      {% endif %}
-                                      {% unless availableData.metafields.custom.featured_image_for_search_result.value != blank %}
-                                      <a href="{{ availableData.url }}" class="full-unstyled-link">
-                                        {{ availableData.title | truncate: 50 | escape }}
-                                      </a>
-                                      {% endunless %}
-                                    </h2>
+                                <a href="{{ availableData.metafields.custom.featured_image_url_for_search_result }}" class="card__content-link">
+                                  <div class="card__content {% if availableData.metafields.custom.featured_image_for_search_result.value == blank %}size__image--blank{% endif %}">
+                                    <div class="card__information">
+                                      <h2 class="card__heading size__image--wrap">
+                                        {% if availableData.metafields.custom.featured_image_for_search_result.value != blank %}
+                                          <img class="size__guide--image" loading="lazy" src="https://bleusalt.com/cdn/shop/{{ availableData.metafields.custom.featured_image_for_search_result.value | image_url: 'master' }}">
+                                        {% endif %}
+                                        {% unless availableData.metafields.custom.featured_image_for_search_result.value != blank %}
+                                        <a href="{{ availableData.url }}" class="full-unstyled-link">
+                                          {{ availableData.title | truncate: 50 | escape }}
+                                        </a>
+                                        {% endunless %}
+                                      </h2>
+                                    </div>
+                                    <div class="card__badge {{ settings.badge_position }}">
+                                      <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+                                    </div>
                                   </div>
-                                  <div class="card__badge {{ settings.badge_position }}">
-                                    <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
-                                  </div>
-                                </div>
+                                </a>
                               </div>
                             </div>
                           </li>
