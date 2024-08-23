@@ -391,3 +391,7 @@
 .template--blog .card--standard>.card__content .card__caption {
   display: block;
 }
+
+.card-wrapper .card__information .size__guide--image {
+  width: 100%;
+}
