@@ -31,3 +31,7 @@
 input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+.template-search__results .product-grid .card-wrapper .card__information .size__guide--image {
+  width: 100%;
+}
