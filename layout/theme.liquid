@@ -276,7 +276,7 @@
       {% include "globale-js" %}
       {% include 'pagefly-app-header' %}</head>
 
-    <body class="gradient template--{{ template.name }} {% if page.handle contains 'guide' %}page--size-guide{% endif %}">
+    <body class="gradient template--{{ template.name }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
 
       
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
