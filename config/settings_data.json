@@ -113,7 +113,7 @@
       "header": {
         "type": "header",
         "custom_css": [
-          ".accordion__title {font-size: 21.38px;}"
+
         ],
         "settings": {
           "below_logo": true,
