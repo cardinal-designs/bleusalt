@@ -585,7 +585,7 @@
     {%- endif -%}
 
 
-    <div class="header__icons TETS">
+    <div class="header__icons">
       {%- unless section.settings.below_logo -%}
         {%- render 'top-right-links' -%}
       {%- endunless -%}
@@ -676,6 +676,10 @@
           </span>
         </a>
       {%- endif -%}
+
+      <a href="/pages/rewards" class="header__icon header__icon--reward link focus-inset">
+        {% render 'icon-reward' %}
+      </a>
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
