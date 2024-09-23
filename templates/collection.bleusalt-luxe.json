@@ -21,7 +21,7 @@
     "otto_image_8wPW6g": {
       "type": "otto-image",
       "settings": {
-        "image_name": "bleusalt-lite",
+        "image_name": "bleusalt-luxe",
         "image_width_desktop": 100,
         "image_width_mobile": 100,
         "image_margin_bottom": 20,
@@ -104,7 +104,7 @@
         "products_per_page": 24,
         "columns_desktop": 3,
         "image_ratio": "portrait",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
