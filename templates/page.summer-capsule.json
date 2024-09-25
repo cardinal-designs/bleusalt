@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "8af459e2-8f01-4555-b985-a2e183c9f1e9": {
@@ -6,7 +15,7 @@
         "template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/summer-2024.jpg",
+            "image": "shopify://shop_images/fall-2024.jpg",
             "title": "",
             "text": "",
             "html": "",
@@ -17,8 +26,8 @@
         "6e752db5-b4b1-4fbe-aa22-bc5471584a20": {
           "type": "column",
           "settings": {
-            "title": "7 PIECE SUMMER WARDROBE",
-            "text": "<p><br\/>The 3 Yard Wrap<br\/>The Perfect T Lite<br\/>The Camisole Lite<br\/>The Bralette Lite<br\/>The Cindy Pant<br\/>The Tube Skirt Lite<br\/>The Slip Dress Lite<br\/><br\/><strong>$700<br\/><br\/><\/strong><br\/>Save 20% when you buy a Wardrobe<br\/>Select Sizes & Colors Below...<\/p>",
+            "title": "7 PIECE FALL WARDROBE",
+            "text": "<p><br/>The LUXE Big Rock Blazer<br/>The Cindy V LITE<br/>The Tube Skirt<br/>The 2 Yard Wrap<br/>The LUXE Shorty Crew<br/>The Cindy Pant<br/>The Classic Crew<br/><br/><strong>$1000<br/><br/></strong><br/>Save 20% when you buy a Wardrobe<br/>Select Sizes & Colors Below...</p>",
             "html": "",
             "link_label": "",
             "link": ""
@@ -60,8 +69,8 @@
       ],
       "settings": {
         "title": "SELECT YOUR SIZES",
-        "collection": "summer-2024-capsule-wardrobe",
-        "discount_percentage": "20.454"
+        "collection": "fall-2024-capsule-wardrobe",
+        "discount_percentage": "19.159"
       }
     }
   },
