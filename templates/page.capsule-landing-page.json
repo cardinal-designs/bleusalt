@@ -32,7 +32,7 @@
             "text": "<p>$1000</p>",
             "html": "",
             "link_label": "",
-            "link": "shopify://pages/summer-capsule-wardrobe"
+            "link": "shopify://pages/bleusalt-capsule-wardrobe"
           }
         }
       },
@@ -64,7 +64,7 @@
           "type": "button",
           "settings": {
             "button_label": "Buy Now",
-            "button_link": "shopify://pages/summer-capsule-wardrobe",
+            "button_link": "shopify://pages/bleusalt-capsule-wardrobe",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
