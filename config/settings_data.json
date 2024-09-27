@@ -27,16 +27,16 @@
     "badge_position": "top left",
     "badge_corner_radius": 2,
     "sale_badge_color_scheme": "accent-2",
-    "social_twitter_link": "https:\/\/twitter.com\/bleusalt_",
-    "social_facebook_link": "https:\/\/www.facebook.com\/bleusalt\/",
-    "social_pinterest_link": "https:\/\/www.pinterest.com\/bleusalt1\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/bleusalt\/",
+    "social_twitter_link": "https://twitter.com/bleusalt_",
+    "social_facebook_link": "https://www.facebook.com/bleusalt/",
+    "social_pinterest_link": "https://www.pinterest.com/bleusalt1/",
+    "social_instagram_link": "https://www.instagram.com/bleusalt/",
     "predictive_search_enabled": true,
     "predictive_search_show_price": true,
     "search_only_products": false,
     "search_only_products_and_pages": true,
     "pages_handle": "bleusalt-size-chart-sizing-guide",
-    "favicon": "shopify:\/\/shop_images\/bleusalt-favico150_01182006-a0ea-4364-a08e-e62fa70a0c81.jpg",
+    "favicon": "shopify://shop_images/bleusalt-favico150_01182006-a0ea-4364-a08e-e62fa70a0c81.jpg",
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_cart_note": true,
@@ -45,7 +45,7 @@
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
     "cart_rebuy": true,
-    "checkout_logo_image": "shopify:\/\/shop_images\/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
+    "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",
     "checkout_accent_color": "#0d1c29",
@@ -58,7 +58,7 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "Last Day for Ground Christmas Delivery is 12\/12\/22",
+              "text": "Last Day for Ground Christmas Delivery is 12/12/22",
               "link": ""
             }
           },
@@ -66,7 +66,7 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "Last Day for 2nd Day Christmas Delivery is 12\/19\/22",
+              "text": "Last Day for 2nd Day Christmas Delivery is 12/19/22",
               "link": ""
             }
           },
@@ -74,14 +74,14 @@
             "type": "announcement",
             "settings": {
               "text": "Free shipping on all orders over $175",
-              "link": "shopify:\/\/policies\/shipping-policy"
+              "link": "shopify://policies/shipping-policy"
             }
           },
           "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c": {
             "type": "announcement",
             "settings": {
               "text": "Get The Bleusalt App for Special Savings & In-App Exclusives",
-              "link": "shopify:\/\/pages\/download-the-bleusalt-app"
+              "link": "shopify://pages/download-the-bleusalt-app"
             }
           },
           "announcement-bar-0": {
@@ -137,7 +137,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<span class=\"visuallyhideen\">Address<\/span>\n<p>The Malibu Country Mart<\/p>\n<p>Bleusalt HQ<\/p>\n<p>3835 Cross Creek Rd -19<\/p>\n<p>Malibu, California 90265<\/p>\n<p>Please Text (310)-317-4590 to contact Bleusalt HQ<!--<a aria-label=\"call us on, +3103174590\" href=\"tel:+3103174590\">(310)-317-4590<\/a>--><\/p>\n<p> <\/p><p>For Customer Service Call: <a aria-label=\"call us on, +3237396057\" href=\"tel:+3237396057\">(323) 739-6057<\/a><\/p>\n<p>Mon - Fri 8am - 4:30pm PST<\/p>",
+              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n<p>Please Text (310)-317-4590 to contact Bleusalt HQ<!--<a aria-label=\"call us on, +3103174590\" href=\"tel:+3103174590\">(310)-317-4590</a>--></p>\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +3237396057\" href=\"tel:+3237396057\">(323) 739-6057</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
               "show_logo": true
             }
           },
@@ -161,7 +161,7 @@
             "type": "newsletter",
             "settings": {
               "heading": "Sign up.",
-              "subtext": "<p>Anything here?<\/p>",
+              "subtext": "<p>Anything here?</p>",
               "newsletter_service": "klaviyo",
               "show_value_props": true
             }
@@ -362,50 +362,50 @@
     ],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "320593021044489861": {
-        "type": "shopify:\/\/apps\/sale-discount-manager\/blocks\/countdown\/29205fb1-2e68-4d81-a905-d828a51c8413",
+        "type": "shopify://apps/sale-discount-manager/blocks/countdown/29205fb1-2e68-4d81-a905-d828a51c8413",
         "disabled": false,
         "settings": {
         }
       },
       "733389323033596483": {
-        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
         "disabled": false,
         "settings": {
           "show_preview_data": true
         }
       },
       "7919968004221747976": {
-        "type": "shopify:\/\/apps\/status-customer-accounts\/blocks\/app-embed\/00efb73e-3a22-41bb-be0f-8609abc31574",
+        "type": "shopify://apps/status-customer-accounts/blocks/app-embed/00efb73e-3a22-41bb-be0f-8609abc31574",
         "disabled": false,
         "settings": {
         }
       },
       "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {
         }
       },
       "17824471530847535147": {
-        "type": "shopify:\/\/apps\/web-accessibility-by-accessibe\/blocks\/accessiBe\/149b77a2-0170-42f6-9355-0bef39587b09",
+        "type": "shopify://apps/web-accessibility-by-accessibe/blocks/accessiBe/149b77a2-0170-42f6-9355-0bef39587b09",
         "disabled": false,
         "settings": {
         }
       },
       "10864971697205422121": {
-        "type": "shopify:\/\/apps\/gorgias-live-chat-helpdesk\/blocks\/gorgias\/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
+        "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": true,
         "settings": {
         }
       },
       "4291333794791649201": {
-        "type": "shopify:\/\/apps\/loyalty-rewards-and-referrals\/blocks\/embed-sdk\/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
         "disabled": false,
         "settings": {
           "disableBundledCSS": false,
@@ -414,14 +414,14 @@
         }
       },
       "15685250022964305326": {
-        "type": "shopify:\/\/apps\/elevar-conversion-tracking\/blocks\/dataLayerEmbed\/bc30ab68-b15c-4311-811f-8ef485877ad6",
+        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
         "disabled": false,
         "settings": {
         }
       },
       "10641372206048101839": {
-        "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-global-embed\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-        "disabled": true,
+        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+        "disabled": false,
         "settings": {
         }
       }
@@ -618,7 +618,7 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
               }
             }
           },
