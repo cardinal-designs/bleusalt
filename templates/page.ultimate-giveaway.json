@@ -140,7 +140,7 @@
         "button_znBWw6": {
           "type": "button",
           "settings": {
-            "button_label": "Shop All",
+            "button_label": "Shop Entire Sale",
             "button_link": "shopify://collections/the-bleusalt-collection",
             "button_style_secondary": false,
             "button_label_2": "",
