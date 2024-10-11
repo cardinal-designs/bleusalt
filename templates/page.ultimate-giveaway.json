@@ -153,6 +153,12 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "plain_text_RGGzVF": {
+      "type": "plain-text",
+      "settings": {
+        "content": "NO PURCHASE NECESSARY. Ends 12/31/24. Official Rules available at www.bleusalt.com. Open to legalresidents of the 50 US and DC at least 18+ or age of majority, whichever isgreater. Void where prohibited. Names, logos, and/or materials associated with prizedescriptions are used for purposes of promotion and/or prize descriptions onlyand such use is not intended to suggest or imply sponsorship or endorsement ofthis Sweepstakes."
+      }
     }
   },
   "order": [
@@ -161,6 +167,7 @@
     "collage_hnEkRM",
     "image_banner_nFJqKB",
     "featured_collection_XptFTm",
-    "1728584017c433d725"
+    "1728584017c433d725",
+    "plain_text_RGGzVF"
   ]
 }
