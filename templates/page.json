@@ -46,21 +46,21 @@
         "image_BgXrGL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_1L_title.png",
+            "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_1L_title_v2_4edd7d61-e742-429a-b877-045106bcb727.png",
             "image_padding": false
           }
         },
         "image_GmtV3b": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_1s_what_s_included.png",
+            "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_1s_what_s_included_v2.png",
             "image_padding": true
           }
         },
         "image_qJgB83": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_1s_shop_to_enter.png",
+            "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_1s_shop_to_enter_v2_6a4e1f7e-bb79-4ea8-bca6-55e39da93e7b.png",
             "image_padding": true
           }
         }
@@ -83,16 +83,16 @@
     "image_banner_nFJqKB": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_clothing_prices_example_-Long_427ac1fd-8a76-4e29-82e5-8334b89210b8.png",
-        "image_mobile": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_clothing_prices_example_-Long-mob_c16c7efa-9e43-40a0-9739-2fd5ed30f145.png",
+        "image": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_clothing_prices_example_-Long_V2_40af7e92-632e-4b96-a84f-6a5802f72964.png",
+        "image_mobile": "shopify://shop_images/A_Taste_of_Malibu_Giveaway_-_LANDING_PAGE_clothing_prices_example_-Long-mob_V2_dc386d78-38b0-4952-9e7e-bc4040329e30.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "featured_collection_XptFTm": {
