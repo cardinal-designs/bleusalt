@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,11 +24,11 @@
     "image_text_video_d9cHie": {
       "type": "image-text-video",
       "settings": {
-        "image": "shopify:\/\/shop_images\/BLEUSALT-STYLING-summer-looks.jpg",
-        "heading": "BLEUSALT STYLE SESSIONS | SUMMER LOOKS",
+        "image": "shopify://shop_images/2024-fall-look-1.jpg",
+        "heading": "BLEUSALT STYLE SESSIONS | FALL LOOK 1",
         "sub_heading": "",
         "cta_text": "WATCH NOW",
-        "youtube_video_id": "Y0_0qe7PrDA"
+        "youtube_video_id": "3TDwu1CVbFg"
       }
     },
     "blog_articles_wQFfVG": {
