@@ -343,7 +343,9 @@
                                <span class="">
                                   {{ item.final_line_price | money_without_trailing_zeros }}
                                 </span>
-
+                              <span class="price price--end price--end-t">
+                               <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span>   {{ item.original_line_price | money }}
+                                </span>
 
                               </div>
                             {%- else -%}
