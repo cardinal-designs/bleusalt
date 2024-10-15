@@ -346,14 +346,10 @@
 
                               </div>
                             {%- else -%}
-                              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span><strong class="cart-item__final-price product-option">
+                              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span>
+                              <strong class="cart-item__final-price product-option">
                                 {{ item.final_price | money_without_trailing_zeros }}
                               </strong>
-                              {% comment %}
-                              <span class="">
-                                {{ item.original_line_price | money_without_trailing_zeros }}
-                              </span>
-                              {% endcomment %}
 
                             {%- endif -%}
 
