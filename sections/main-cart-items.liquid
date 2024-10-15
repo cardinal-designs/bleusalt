@@ -314,20 +314,20 @@
                               {{ 'products.product.price.regular_price' | t }}
                             </dt>
                             <dd>
-                              <s class="cart-item__old-price price price--end">
+                              <s class="cart-item__old-price price price--end price--end-q">
                                 {{ item.original_line_price | money }}
                               </s>
                             </dd>
                             <dt class="visually-hidden">
                               {{ 'products.product.price.sale_price' | t }}
                             </dt>
-                            <dd class="price price--end">
+                            <dd class="price price--end price--end-r">
                             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span>  {{ item.final_line_price | money }}
                             </dd>
                           </dl>
                       
                         {%- else -%}
-                          <span class="price price--end">
+                          <span class="price price--end price--end-t">
                          <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{ item.key }}" style="display:none !important;"></span>   {{ item.original_line_price | money }}
                           </span>
   
