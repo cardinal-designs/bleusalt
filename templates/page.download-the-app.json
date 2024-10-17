@@ -34,7 +34,7 @@
         "svg_zQAAqH": {
           "type": "svg",
           "settings": {
-            "text": "<p style=\"text-align: center;\">Download the Bleusalt Mobile App on your iPhone or Android device today<br>and get a Free Scarf and 10% off every order you place through our app!</p>\n<p style=\"text-align: center;\">Plus get early VIP access to New Product Arrivals & Exclusive App<br>Only discounts available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"> </div>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+            "text": "<p style=\"text-align: center;\">Download the Bleusalt Mobile App on your iPhone or Android device today and get a Free Scarf and 10% off every order you place through our app!</p>\n<p style=\"text-align: center;\">Plus get early VIP access to New Product Arrivals & Exclusive App Only discounts available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"> </div>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
           }
         }
       },
@@ -53,7 +53,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
