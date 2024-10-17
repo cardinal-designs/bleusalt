@@ -24,6 +24,13 @@
     "image_with_text_FtxN6d": {
       "type": "image-with-text",
       "blocks": {
+        "heading_EGbFJk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get the App!",
+            "heading_size": "h1"
+          }
+        },
         "svg_zQAAqH": {
           "type": "svg",
           "settings": {
@@ -32,15 +39,17 @@
         }
       },
       "block_order": [
+        "heading_EGbFJk",
         "svg_zQAAqH"
       ],
       "settings": {
+        "image": "shopify://shop_images/download.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
