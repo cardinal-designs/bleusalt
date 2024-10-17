@@ -20,6 +20,34 @@
         "page_width": "page-width--narrow"
       }
     },
+    "image_with_text_FtxN6d": {
+      "type": "image-with-text",
+      "blocks": {
+        "svg_zQAAqH": {
+          "type": "svg",
+          "settings": {
+            "text": "<p style=\"text-align: center;\">Download the Bleusalt Mobile App on your iPhone or Android device today<br>and get a Free Scarf and 10% off every order you place through our app!</p>\n<p style=\"text-align: center;\">Plus get early VIP access to New Product Arrivals & Exclusive App<br>Only discounts available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"> </div>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "svg_zQAAqH"
+      ],
+      "settings": {
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1676492971e2872bb9": {
       "type": "apps",
       "blocks": {
@@ -62,6 +90,7 @@
   },
   "order": [
     "main",
+    "image_with_text_FtxN6d",
     "1676492971e2872bb9",
     "1728584017c433d725"
   ]
