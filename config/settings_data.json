@@ -99,9 +99,7 @@
           "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "announcement-bar-0"
         ],
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "autoplay": true,
           "autoplay_delay": 5,
@@ -112,9 +110,7 @@
       },
       "header": {
         "type": "header",
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "below_logo": true,
           "color_scheme": "background-1",
@@ -137,7 +133,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n<p>Please Text (310)-317-4590 to contact Bleusalt HQ<!--<a aria-label=\"call us on, +3103174590\" href=\"tel:+3103174590\">(310)-317-4590</a>--></p>\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +3237396057\" href=\"tel:+3237396057\">(323) 739-6057</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
+              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n<p>Please Text (310)-317-4590 to contact Bleusalt HQ<!--<a aria-label=\"call us on, +3103174590\" href=\"tel:+3103174590\">(310)-317-4590</a>--></p>\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
               "show_logo": true
             }
           },
@@ -188,13 +184,11 @@
       },
       "main-password-header": {
         "type": "main-password-header",
-        "settings": {
-        }
+        "settings": {}
       },
       "main-password-footer": {
         "type": "main-password-footer",
-        "settings": {
-        }
+        "settings": {}
       },
       "swatch-colors": {
         "type": "swatch-colors",
@@ -272,8 +266,7 @@
           "38dffe2e-b973-43d3-87ab-3ce52df1305c",
           "d530ea60-d8ee-41eb-907b-6dd3158ad9dd"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "product-badges": {
         "type": "product-badges",
@@ -326,8 +319,7 @@
           "ab73618f-7bb2-46f8-851b-bb2d4d867958",
           "badge_9atKTg"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "cart-drawer": {
         "type": "cart-drawer",
@@ -357,21 +349,17 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "320593021044489861": {
         "type": "shopify://apps/sale-discount-manager/blocks/countdown/29205fb1-2e68-4d81-a905-d828a51c8413",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "733389323033596483": {
         "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -383,26 +371,22 @@
       "7919968004221747976": {
         "type": "shopify://apps/status-customer-accounts/blocks/app-embed/00efb73e-3a22-41bb-be0f-8609abc31574",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "17824471530847535147": {
         "type": "shopify://apps/web-accessibility-by-accessibe/blocks/accessiBe/149b77a2-0170-42f6-9355-0bef39587b09",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "10864971697205422121": {
         "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "4291333794791649201": {
         "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
@@ -416,14 +400,12 @@
       "15685250022964305326": {
         "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "10641372206048101839": {
         "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "6412501105843178657": {
         "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-main/6f172e67-4106-4ac0-89c5-b32a069b3101",
@@ -558,8 +540,7 @@
           "block_order": [
             "announcement-bar-0"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "header": {
           "type": "header",
@@ -609,8 +590,7 @@
             "43cb22bb-34f8-46d4-9413-f6bb133bc4f7",
             "dee4374e-da21-41ff-a5ae-b94f961a9d49"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "footer": {
           "type": "footer",
