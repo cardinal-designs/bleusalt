@@ -421,6 +421,11 @@
           "button_neutral_background_color": "#757575",
           "button_neutral_text_color": "#ffffff"
         }
+      },
+      "11560147490181472608": {
+        "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
