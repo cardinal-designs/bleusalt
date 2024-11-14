@@ -474,8 +474,8 @@
       "type": "otto-image",
       "settings": {
         "image_name": "EVG",
-        "image_width_desktop": 100,
-        "image_width_mobile": 100,
+        "image_width_desktop": 80,
+        "image_width_mobile": 80,
         "image_margin_bottom": 20,
         "show_content": false,
         "content_width": 60,
