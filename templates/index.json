@@ -34,8 +34,8 @@
         "b0641e0b-814c-49d9-97b2-7a1cdcc96d82"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/3cf4e8ef90e94892bd6297cbccc55f2a.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/3cf4e8ef90e94892bd6297cbccc55f2a.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/a4c8958e84794730952cfb0de18e1803.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/a4c8958e84794730952cfb0de18e1803.mp4",
         "description": "Bleusalt Lifestyle Video",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
@@ -475,7 +475,7 @@
       "settings": {
         "image_name": "EVG",
         "image_width_desktop": 80,
-        "image_width_mobile": 80,
+        "image_width_mobile": 90,
         "image_margin_bottom": 20,
         "show_content": false,
         "content_width": 60,
