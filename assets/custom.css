@@ -66,12 +66,12 @@
   text-transform: uppercase;
 }
 
-[data-rebuy-id="189452"] {
+.rebuy-widget.widget-type-product {
   padding-top: 36px;
   padding-bottom: 36px;
 }
 
-[data-rebuy-id="189452"] .rebuy-widget-content .primary-title {
+.rebuy-widget.widget-type-product .rebuy-widget-content .primary-title {
   font-size: calc(var(--font-heading-scale)* 3rem);
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
@@ -86,7 +86,7 @@
   width: 100%;
 }
 
-[data-rebuy-id="189452"] .rebuy-product-grid .splide__list {
+.rebuy-widget.widget-type-product .rebuy-product-grid .splide__list {
   column-gap: var(--grid-desktop-horizontal-spacing);
   row-gap: var(--grid-desktop-vertical-spacing);
 }
