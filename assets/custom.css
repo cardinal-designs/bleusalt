@@ -68,9 +68,14 @@
 
 @media (max-width: 989px) {
 
+  .rebuy-widget .rebuy-widget-content .primary-title {
+    font-size: calc(var(--font-heading-scale)* 3rem);
+  }
+
   .rebuy-product-block .rebuy-product-wrapper .rebuy-product-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+  
 }
