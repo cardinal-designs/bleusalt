@@ -71,6 +71,25 @@
   padding-bottom: 36px;
 }
 
+[data-rebuy-id="189452"] .rebuy-widget-content .primary-title {
+  font-size: calc(var(--font-heading-scale)* 3rem);
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  color: rgb(var(--color-foreground));
+  line-height: calc(1 + .3 / max(1, var(--font-heading-scale)));
+  word-break: break-word;
+  text-align: left;
+}
+
+@media only screen and (min-width: 750px) {
+
+  [data-rebuy-id="189452"] .rebuy-widget-content .primary-title {
+      font-size: calc(var(--font-heading-scale)* 4rem);
+  }
+
+}
+
 @media (max-width: 989px) {
 
   .rebuy-widget .rebuy-widget-content .primary-title {
