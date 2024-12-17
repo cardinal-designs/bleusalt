@@ -149,6 +149,18 @@
   color: #ea0606;
 }
 
+.rebuy-widget.widget-type-product .rebuy-money, 
+.rebuy-widget.widget-type-product .rebuy-widget .rebuy-money {
+  margin: 0 1rem 0 0;
+}
+
+.rebuy-widget.widget-type-product .rebuy-money.compare-at, 
+.rebuy-widget.widget-type-product .rebuy-widget .rebuy-money.compare-at, 
+.rebuy-widget.widget-type-product .rebuy-money, 
+.rebuy-widget.widget-type-product .rebuy-widget .rebuy-money {
+  color: rgba(var(--color-foreground), .75);
+}
+
 @media only screen and (min-width: 750px) {
 
   .rebuy-widget.widget-type-product .rebuy-widget-content .primary-title {
