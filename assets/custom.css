@@ -65,3 +65,12 @@
   border-color: rgba(var(--color-button), var(--alpha-button-background));
   text-transform: uppercase;
 }
+
+@media (max-width: 989px) {
+
+  .rebuy-product-block .rebuy-product-wrapper .rebuy-product-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
