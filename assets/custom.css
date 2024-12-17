@@ -44,4 +44,5 @@
 .rebuy-product-block .rebuy-product-wrapper .rebuy-product-actions .rebuy-button {
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   border-color: rgba(var(--color-button), var(--alpha-button-background));
+  transition: box-shadow .5s ease;
 }
