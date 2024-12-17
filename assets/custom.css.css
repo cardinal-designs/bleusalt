@@ -1,0 +1,7 @@
+.rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-media {
+  order: 1;
+}
+
+.rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
+  order: 2;
+} 
