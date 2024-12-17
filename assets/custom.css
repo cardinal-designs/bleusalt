@@ -1,5 +1,6 @@
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-media {
   order: 1;
+  overflow: hidden;
 }
 
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-media img {
