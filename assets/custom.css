@@ -36,6 +36,10 @@
   font-style: var(--font-heading-style);
 }
 
+.rebuy-product-block .rebuy-product-wrapper .rebuy-product-info .rebuy-product-price {
+  margin-top: 13px;
+}
+
 .rebuy-product-block .rebuy-product-wrapper .rebuy-product-info .rebuy-product-price * {
   font-size: 1.5rem;
   line-height: calc(1 + .5 / var(--font-body-scale));
