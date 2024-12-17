@@ -40,3 +40,7 @@
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
 }
+
+.rebuy-product-block .rebuy-product-wrapper .rebuy-product-actions .rebuy-button {
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+}
