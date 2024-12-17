@@ -47,7 +47,7 @@
 }
 
 .rebuy-product-block .rebuy-product-wrapper .rebuy-product-actions {
-  margin-top: 13px;
+  margin-top: 13px !important;
 }
 
 .rebuy-product-block .rebuy-product-wrapper .rebuy-product-actions .rebuy-button {
