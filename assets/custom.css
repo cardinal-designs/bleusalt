@@ -66,6 +66,11 @@
   text-transform: uppercase;
 }
 
+[data-rebuy-id="189452"] {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
 @media (max-width: 989px) {
 
   .rebuy-widget .rebuy-widget-content .primary-title {
