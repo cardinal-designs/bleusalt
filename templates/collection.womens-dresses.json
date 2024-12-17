@@ -130,7 +130,7 @@
           "settings": {
             "enabled": true,
             "id": "{{ collection.metafields.custom.rebuy_widget_id.value }}",
-            "product_id_enabled": false,
+            "product_id_enabled": true,
             "collection_id_enabled": true
           }
         }
