@@ -6,6 +6,10 @@
   transition: transform .5s ease;
 }
 
+.rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-media:hover img {
+  transform: scale(1.03);
+}
+
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
   order: 2;
 } 
