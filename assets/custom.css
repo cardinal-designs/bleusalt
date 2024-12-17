@@ -161,6 +161,13 @@
   color: rgba(var(--color-foreground), .75);
 }
 
+.rebuy-widget.widget-type-product .rebuy-widget .rebuy-product-block .rebuy-product-actions, 
+.rebuy-widget.widget-type-product .rebuy-recommended-products .rebuy-product-block .rebuy-product-actions, 
+.rebuy-widget.widget-type-product .rebuy-widget .powered-by-rebuy, 
+.rebuy-widget.widget-type-product .rebuy-recommended-products .powered-by-rebuy {
+  display: none;
+}
+
 @media only screen and (min-width: 750px) {
 
   .rebuy-widget.widget-type-product .rebuy-widget-content .primary-title {
