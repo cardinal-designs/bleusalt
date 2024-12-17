@@ -31,7 +31,7 @@
   margin-bottom: 0;
   color: rgb(var(--color-foreground));
   font-size: 16px;
-  margin-top: 13px;
+  margin-top: 13px !important; 
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
 }
