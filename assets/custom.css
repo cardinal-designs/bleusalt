@@ -14,3 +14,11 @@
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
   order: 2;
 } 
+
+.rebuy-product-block .rebuy-product-wrapper .rebuy-product-info .rebuy-product-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+}
