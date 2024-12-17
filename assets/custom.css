@@ -2,6 +2,10 @@
   order: 1;
 }
 
+.rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-media img {
+  transition: transform .5s ease;
+}
+
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
   order: 2;
 } 
