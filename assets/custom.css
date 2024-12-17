@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.rebuy-product-block .rebuy-product-wrapper .rebuy-product-info .product.star {
+  display: none;
+}
+
 .rebuy-product-block .rebuy-product-wrapper .rebuy-product-info .rebuy-product-title {
   margin-top: 0;
   margin-bottom: 0;
