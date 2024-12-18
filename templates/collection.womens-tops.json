@@ -1,1 +1,153 @@
-{"sections":{"banner":{"type":"main-collection-banner","disabled":true,"settings":{"show_collection_description":false,"show_collection_image":true,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","blocks":{"34ffb5d5-755c-463a-9bed-4c9080b2f1c2":{"type":"marketing_tile","disabled":true,"settings":{"tile_size":"2x","media_type":"image","image":"shopify:\/\/shop_images\/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg","video_url":"","link":"shopify:\/\/pages\/bleusalt-styling","position":5,"title":"Style Tips","paragraph":"<p>Watch videos how to style the perfect look.<\/p>","button_text":"Watch Now"}}},"block_order":["34ffb5d5-755c-463a-9bed-4c9080b2f1c2"],"settings":{"products_per_page":24,"columns_desktop":3,"image_ratio":"portrait","show_secondary_image":false,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":36,"padding_bottom":36}},"1660937591af29c294":{"type":"rich-text","blocks":{"1660937591138d0f9f-0":{"type":"heading","settings":{"heading":"<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.<\/p>","heading_size":"h1"}},"1660937591138d0f9f-1":{"type":"text","settings":{"text":"<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http:\/\/127.0.0.1:9292\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"}},"70b3749d-0024-40ad-b6a7-6ef19124d692":{"type":"caption","settings":{"caption":"[value-props]","text_style":"caption-with-letter-spacing","text_size":"medium"}}},"block_order":["1660937591138d0f9f-0","1660937591138d0f9f-1","70b3749d-0024-40ad-b6a7-6ef19124d692"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image":"shopify:\/\/shop_images\/sustainable-grunge.jpg","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":100,"padding_bottom":100}},"aa41b3b6-ee72-40cb-9596-20aee70eed9b":{"type":"rich-text","blocks":{"d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa":{"type":"text","settings":{"text":"<h1>Shop Bleusalt's Women's Tops:<\/h1><h2>Elevate Your Style with Sustainable and Luxurious Designs<\/h2><p>Elevate your wardrobe with an air of effortless sophistication through Bleusalt's captivating collection of women's tops. Immerse yourself in the unparalleled comfort of luxurious fabrics, while embracing a timeless aesthetic that seamlessly blends opulence with modernity. From classic silhouettes to contemporary designs, our collection features a wide range of women's shirts, blazers, camisoles, and more. Indulge in the softness of our luxurious fabrics, embrace sustainable fashion, and elevate your wardrobe with tops that embody Bleusalt's commitment to quality.<\/p><h2>Versatile Tops for Every Occasion<\/h2><p>Our collection of women's tops caters to every occasion and style preference. Whether you're seeking a polished look for a day out or a more elegant evening ensemble, our tops effortlessly transition from day to night. Explore our range of women's tops that exude sophistication and style.<\/p><h2>Inclusive Sizing<\/h2><p>We believe in inclusivity and understand that women come in diverse sizes and shapes. That's why our collection offers size-inclusive tops, from XS to 3X, ensuring that every woman can find her perfect fit. Our tops are designed to flatter and celebrate every woman.<\/p><h2>Sustainable Women’s Tops<\/h2><p>Our women's tops are crafted with the softest fibers on Earth, ensuring unparalleled comfort throughout the day. Experience the indulgence of our sustainable TENCEL™ fabric, derived from botanic sources, which offers breathability without sacrificing sophistication.<\/p><h2>Elevate Your Wardrobe - Shop Our Women’s Tops<\/h2><p>With Bleusalt's luxurious women tops, you can effortlessly elevate your wardrobe to new heights of sophistication. Discover why Bleusalt is the top luxury clothing brand for women seeking to build a capsule wardrobe.<br\/><\/p>"}}},"block_order":["d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["banner","product-grid","1660937591af29c294","aa41b3b6-ee72-40cb-9596-20aee70eed9b"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "2x",
+            "media_type": "image",
+            "image": "shopify://shop_images/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg",
+            "video_url": "",
+            "link": "shopify://pages/bleusalt-styling",
+            "position": 5,
+            "title": "Style Tips",
+            "paragraph": "<p>Watch videos how to style the perfect look.</p>",
+            "button_text": "Watch Now"
+          }
+        }
+      },
+      "block_order": [
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1734416630f7a21117": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_CGFKUN": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "{{ collection.metafields.custom.rebuy_widget_id.value }}",
+            "product_id_enabled": true,
+            "collection_id_enabled": true
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_CGFKUN"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1660937591af29c294": {
+      "type": "rich-text",
+      "blocks": {
+        "1660937591138d0f9f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading_size": "h1"
+          }
+        },
+        "1660937591138d0f9f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http://127.0.0.1:9292/pages/materials\" title=\"Materials\">Learn more</a></p>"
+          }
+        },
+        "70b3749d-0024-40ad-b6a7-6ef19124d692": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "1660937591138d0f9f-0",
+        "1660937591138d0f9f-1",
+        "70b3749d-0024-40ad-b6a7-6ef19124d692"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b": {
+      "type": "rich-text",
+      "blocks": {
+        "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Shop Bleusalt's Women's Tops:</h1><h2>Elevate Your Style with Sustainable and Luxurious Designs</h2><p>Elevate your wardrobe with an air of effortless sophistication through Bleusalt's captivating collection of women's tops. Immerse yourself in the unparalleled comfort of luxurious fabrics, while embracing a timeless aesthetic that seamlessly blends opulence with modernity. From classic silhouettes to contemporary designs, our collection features a wide range of women's shirts, blazers, camisoles, and more. Indulge in the softness of our luxurious fabrics, embrace sustainable fashion, and elevate your wardrobe with tops that embody Bleusalt's commitment to quality.</p><h2>Versatile Tops for Every Occasion</h2><p>Our collection of women's tops caters to every occasion and style preference. Whether you're seeking a polished look for a day out or a more elegant evening ensemble, our tops effortlessly transition from day to night. Explore our range of women's tops that exude sophistication and style.</p><h2>Inclusive Sizing</h2><p>We believe in inclusivity and understand that women come in diverse sizes and shapes. That's why our collection offers size-inclusive tops, from XS to 3X, ensuring that every woman can find her perfect fit. Our tops are designed to flatter and celebrate every woman.</p><h2>Sustainable Women’s Tops</h2><p>Our women's tops are crafted with the softest fibers on Earth, ensuring unparalleled comfort throughout the day. Experience the indulgence of our sustainable TENCEL™ fabric, derived from botanic sources, which offers breathability without sacrificing sophistication.</p><h2>Elevate Your Wardrobe - Shop Our Women’s Tops</h2><p>With Bleusalt's luxurious women tops, you can effortlessly elevate your wardrobe to new heights of sophistication. Discover why Bleusalt is the top luxury clothing brand for women seeking to build a capsule wardrobe.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1734416630f7a21117",
+    "1660937591af29c294",
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b"
+  ]
+}
