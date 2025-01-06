@@ -1676,4 +1676,8 @@ table[data-in-to-cm] td {
     margin-bottom: 0;
   }
 
+  .product .product__title--price .price__container {
+    margin-top: 5px;
+  }
+
 }
