@@ -1650,4 +1650,8 @@ table[data-in-to-cm] td {
     flex-direction: column-reverse;
   }
 
+  .product__size-popups .product-popup-modal__button {
+    margin-top: .5rem;
+  }
+
 }
