@@ -1610,6 +1610,10 @@ table[data-in-to-cm] td {
   text-transform: capitalize;
 }
 
+.size__guide--grid {
+  display: flex;
+}
+
 @media screen and (min-width: 750px) {
 
   .product__title--price {
@@ -1639,6 +1643,10 @@ table[data-in-to-cm] td {
   
   .breadcrumb {
     margin: 1em 0;
+  }
+
+  .size__guide--grid {
+    flex-direction: column-reverse;
   }
 
 }
