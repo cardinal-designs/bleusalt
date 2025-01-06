@@ -1680,4 +1680,8 @@ table[data-in-to-cm] td {
     margin-top: 5px;
   }
 
+  .size__guide--grid .product__size-popups {
+    margin-bottom: 5px;
+  }
+
 }
