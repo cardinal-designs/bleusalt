@@ -1616,6 +1616,10 @@ table[data-in-to-cm] td {
   justify-content: space-between;
 }
 
+.product .product__title--price .price__container {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 749px) {
   
   .breadcrumb {
