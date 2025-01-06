@@ -1616,6 +1616,10 @@ table[data-in-to-cm] td {
   display: flex;
 }
 
+.product .product__title--price .price__container {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 750px) {
 
   .product__title--price {
@@ -1628,10 +1632,6 @@ table[data-in-to-cm] td {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .product .product__title--price .price__container {
-    margin-bottom: 0;
   }
   
   .size__guide--grid .product-popup-modal__button {
