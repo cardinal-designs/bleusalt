@@ -1609,26 +1609,30 @@ table[data-in-to-cm] td {
   text-decoration: none;
   text-transform: capitalize;
 }
+
+@media screen and (min-width: 750px) {
+
+  .product__title--price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
-.product__title--price {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.size__guide--grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.product .product__title--price .price__container {
-  margin-bottom: 0;
-}
-
-.size__guide--grid .product-popup-modal__button {
-  padding-left: 1.3rem;
-  padding-right: 0;
+  .size__guide--grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product .product__title--price .price__container {
+    margin-bottom: 0;
+  }
+  
+  .size__guide--grid .product-popup-modal__button {
+    padding-left: 1.3rem;
+    padding-right: 0;
+  }
+  
 }
 
 @media screen and (max-width: 749px) {
