@@ -1638,6 +1638,10 @@ table[data-in-to-cm] td {
     padding-left: 1.3rem;
     padding-right: 0;
   }
+
+  .product-form__input .size__guide--grid  .form__label {
+    margin-bottom: 0;
+  }
   
 }
 
