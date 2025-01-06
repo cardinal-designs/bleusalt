@@ -1333,6 +1333,7 @@ a.product__text {
 
 .product__size-popups .product-popup-modal__button {
   font-size: 1.3rem;
+  height: auto;
 }
 
 .product-form__radio-wrapper {
