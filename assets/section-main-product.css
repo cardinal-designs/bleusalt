@@ -1659,4 +1659,8 @@ table[data-in-to-cm] td {
     margin-top: .5rem;
   }
 
+  .product__title--price {
+    margin-bottom: 0;
+  }
+
 }
