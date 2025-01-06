@@ -1654,6 +1654,11 @@ table[data-in-to-cm] td {
 }
 
 @media screen and (max-width: 749px) {
+
+  .product-form__buttons {
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   .breadcrumb {
     margin: 1em 0;
