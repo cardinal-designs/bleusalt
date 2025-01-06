@@ -355,7 +355,20 @@
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
                       <fieldset class="js product-form__input">
-                        <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
+                        <div>
+                          <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
+                          <div>
+                            {% if option.name == 'Size' %}
+                              <div class="product__size-popups">
+                              {%- for popup in sizing_popups -%}
+                                <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                                  <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
+                                </modal-opener>
+                              {%- endfor -%}
+                              </div>
+                            {% endif %}
+                          </div>
+                        </div>
                         {%- for value in option.values -%}
                           {%- liquid 
                             if option.name == 'Color'
@@ -380,15 +393,6 @@
                           </div>
                         {%- endfor -%}
                       </fieldset>
-                      {% if option.name == 'Size' %}
-                        <div class="product__size-popups">
-                        {%- for popup in sizing_popups -%}
-                          <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
-                            <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
-                          </modal-opener>
-                        {%- endfor -%}
-                        </div>
-                      {% endif %}
                     </div>
                   {%- endfor -%}
                   
