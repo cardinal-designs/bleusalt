@@ -523,6 +523,9 @@
                 </div>
                 {% endif %}
               </product-form>  
+              <div class="payment-plan">
+                or 4 installments of <span class="payment-plan__amount">{{ product.selected_or_first_available_variant.price | divided_by: 4 | money_without_trailing_zeros }}</span> using {% render 'icon-afterpay' %}
+              </div>
               <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: none;{% else %}display: block;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
               {% comment %}
