@@ -1329,6 +1329,7 @@ a.product__text {
 .klaviyo-bis__email {
   padding: 2rem 1rem;
   flex: 1;
+  max-height: unset !important;
 }
 
 .product__size-popups .product-popup-modal__button {
