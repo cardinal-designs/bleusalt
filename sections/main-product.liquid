@@ -355,7 +355,7 @@
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
                       <fieldset class="js product-form__input">
-                        <div>
+                        <div class="size__guide--grid">
                           <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
                           <div>
                             {% if option.name == 'Size' %}
