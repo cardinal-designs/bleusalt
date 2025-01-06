@@ -1626,6 +1626,11 @@ table[data-in-to-cm] td {
   margin-bottom: 0;
 }
 
+.size__guide--grid .product-popup-modal__button {
+  padding-left: 1.3rem;
+  padding-right: 0;
+}
+
 @media screen and (max-width: 749px) {
   
   .breadcrumb {
