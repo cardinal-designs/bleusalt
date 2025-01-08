@@ -470,34 +470,6 @@
         "title": ""
       }
     },
-    "otto_image_VLgGDi": {
-      "type": "otto-image",
-      "settings": {
-        "image_name": "EVG",
-        "image_width_desktop": 80,
-        "image_width_mobile": 90,
-        "image_margin_bottom": 20,
-        "show_content": false,
-        "content_width": 60,
-        "content_background_color": "#ffffff",
-        "content_text_color": "#000000",
-        "content_horizontal_alignment": "center",
-        "content_vertical_alignment": "center",
-        "header_font_tag": "h1",
-        "header_font_size": 2,
-        "header_font_size_mobile": 2,
-        "subheader_font_tag": "h2",
-        "subheader_font_size": 1,
-        "subheader_font_size_mobile": 1,
-        "body_font_tag": "p",
-        "body_font_size": 1,
-        "body_font_size_mobile": 1,
-        "button_background_color": "#000000",
-        "button_background_hover_color": "#ffffff",
-        "button_text_color": "#ffffff",
-        "button_text_hover_color": "#000000"
-      }
-    },
     "image_with_text_XqniFF": {
       "type": "image-with-text",
       "blocks": {
@@ -622,7 +594,6 @@
     "166022784081bd0071",
     "1659735210e064d864",
     "16637947412bca5d08",
-    "otto_image_VLgGDi",
     "image_with_text_XqniFF",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
