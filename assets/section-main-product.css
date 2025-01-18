@@ -1628,6 +1628,7 @@ table[data-in-to-cm] td {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0;
   }
   
   .size__guide--grid {
