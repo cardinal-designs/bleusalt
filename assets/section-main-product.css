@@ -1296,6 +1296,8 @@ a.product__text {
 .payment-plan {
   font-size: 1.4rem;
   margin: 2.5rem 0;
+  max-width: 44rem;
+  text-align: center;
 }
 
 .payment-plan svg {
