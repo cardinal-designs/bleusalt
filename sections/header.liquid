@@ -66,6 +66,10 @@
     stroke: transparent;
   }
 
+  .template--index .header-wrapper.sticky-header-wrapper {
+    background: rgba(255,255,255,0.9);
+  }
+
   @media screen and (min-width: 990px) {
     
     header-drawer {
@@ -894,7 +898,7 @@
 <script>
   window.addEventListener('scroll', function () {
     const header = document.querySelector('.header-wrapper'); // Select the header-wrapper element
-    if (window.scrollY > 0) {
+    if (window.scrollY > 400) {
         header.classList.add('sticky-header-wrapper'); // Add the class when scrolling
     } else {
         header.classList.remove('sticky-header-wrapper'); // Remove the class when at the top
