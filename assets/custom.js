@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  // add all the code below
-  
-  
+  document.querySelectorAll(".close-announcement").forEach(el => {
+    el.addEventListener("click", function(e){
+      e.currentTarget.parentNode.classList.add("hidden");
+    })
+  })
 });
 
 window.addEventListener('scroll', function () {
