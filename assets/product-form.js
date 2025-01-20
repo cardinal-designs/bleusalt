@@ -631,7 +631,7 @@ class VariantRadios extends VariantSelects {
           if (variant.available) {
             input.classList.remove('soldout');
           } else {
-            input.classList.add('soldout');
+            // input.classList.add('soldout');
           }
         }
       });
