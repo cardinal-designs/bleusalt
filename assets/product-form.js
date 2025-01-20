@@ -567,14 +567,16 @@ class VariantSelects extends HTMLElement {
     if (disable) {
       // addButton.setAttribute('disabled', 'disabled');
       // if (text) addButtonText.textContent = text;
-
+      if(addButtonText.hasAttribute('disabled')) {
+        addButton.removeAttribute('disabled');
+      }
       addButton.setAttribute('data-join-list', 'true');
       addButtonText.textContent = 'Join The Waitlist';	
       
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
-      if (addButtonText.hasAttribute('data-join-list')) {
+      if(addButtonText.hasAttribute('data-join-list')) {
         addButtonText.removeAttribute('data-join-list'); // Remove the attribute
       }
     }
