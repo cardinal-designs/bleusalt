@@ -628,6 +628,7 @@ class VariantRadios extends VariantSelects {
     
     this.options.forEach((option, i) => {
       if (i === optionIndex) return true;
+      console.log("this.getVariantData()", this.getVariantData())
       this.getVariantData().forEach(variant => {
         console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
