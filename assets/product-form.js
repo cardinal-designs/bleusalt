@@ -633,7 +633,7 @@ class VariantRadios extends VariantSelects {
         // console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
           console.log("variant.options[optionIndex]", variant.options[optionIndex])
-          // console.log("variant", variant)
+          console.log("variant", variant)
 
           // console.log("this", this)
           
