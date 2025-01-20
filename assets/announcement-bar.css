@@ -5,11 +5,11 @@
 .close-announcement {
   position: absolute;
   right: 10px;
-  height: 100%;
-  top: 16px;
+  top: 22px;
   display: flex;
   align-items: center;
   z-index: 1;
+  color: #fff;
 }
 
 .close-announcement svg {
