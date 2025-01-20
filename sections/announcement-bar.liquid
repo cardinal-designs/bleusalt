@@ -23,7 +23,7 @@
 }
 {%- endcapture -%}
 
-<div class="swiper color-{{ section.settings.color_scheme }} gradient announcement-bar__wrapper" data-json='{{- swiper_settings | strip -}}'>
+<div class="swiper color-{{ section.settings.color_scheme }} gradient" data-json='{{- swiper_settings | strip -}}'>
   <div class="swiper-wrapper" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
