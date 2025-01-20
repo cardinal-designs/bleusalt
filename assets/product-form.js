@@ -623,19 +623,19 @@ class VariantRadios extends VariantSelects {
     const optionIndex = initial ? 0 : parseFloat(event.target.closest('.product-form__option').getAttribute('data-option-index'));
     console.log("optionIndex", optionIndex)
     const currentOption = this.options[optionIndex];
-    console.log("currentOption", currentOption)
-    console.log("this.options", this.options)
+    // console.log("currentOption", currentOption)
+    // console.log("this.options", this.options)
     
     this.options.forEach((option, i) => {
       if (i === optionIndex) return true;
-      console.log("this.getVariantData()", this.getVariantData())
+      // console.log("this.getVariantData()", this.getVariantData())
       this.getVariantData().forEach(variant => {
         // console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
           console.log("variant.options[optionIndex]", variant.options[optionIndex])
           // console.log("variant", variant)
 
-          console.log("this", this)
+          // console.log("this", this)
           
           // if(variant && variant.url == )
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
