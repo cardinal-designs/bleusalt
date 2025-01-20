@@ -208,6 +208,12 @@
 }
 
 
-.announcement-bar__link {
+.announcement-bar__wrapper  {
   position: relative;
+}
+
+.close-announcement {
+  position: absolute;
+  right: 10px;
+  height: 100%;
 }
