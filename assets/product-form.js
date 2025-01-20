@@ -632,36 +632,18 @@ class VariantRadios extends VariantSelects {
       this.getVariantData().forEach(variant => {
         // console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
-          console.log("variant.options[optionIndex]", variant.options[optionIndex])
-          console.log("variant", variant)
 
-          // console.log("this", this)
-          
-          // if(variant && variant.url == )
           let dataUrl = this.dataset.url;
           let variantUrl = variant.url;
-
-          console.log("dataUrl", dataUrl)
-          console.log("variantUrl", variantUrl)
-          
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
-          console.log("input", input)
           if(!input) return;
           if(dataUrl && (dataUrl?.includes(variantUrl) || dataUrl == variantUrl)){
-            
             if (variant.available) {
               input.classList.remove('soldout');
             } else {
               input.classList.add('soldout');
             }
           }
-          // else{
-          //   if (variant.available) {
-          //     input.classList.remove('soldout');
-          //   } else {
-          //     input.classList.add('soldout');
-          //   }
-          // }
         }
       });
     });
