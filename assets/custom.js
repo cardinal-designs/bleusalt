@@ -54,6 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Set interval to execute the function every 10 seconds
-  const intervalId = setInterval(appendButton, 10000);
+  const intervalId = setInterval(appendButton, 1000);
 });
 
