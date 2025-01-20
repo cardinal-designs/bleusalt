@@ -633,7 +633,7 @@ class VariantRadios extends VariantSelects {
         // console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
           console.log("variant.options[optionIndex]", variant.options[optionIndex])
-          
+          console.log("variant", variant)
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
           if(!input) return;
           if (variant.available) {
