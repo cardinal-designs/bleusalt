@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 document.addEventListener('DOMContentLoaded', function () {
   // Select the target element
   const targetElement = document.querySelector('.hc_cd.at_top.clickable');
-  
+  console.log("targetElement", targetElement)
   if (targetElement) {
     // Create a button element
     const button = document.createElement('button');
