@@ -226,3 +226,10 @@
   width: 18px;
   height: 18px;
 }
+
+@media (max-width: 989px) {
+
+  .announcement-bar__wrapper .close-announcement {
+    right: 3px;
+  }
+}
