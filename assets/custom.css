@@ -224,6 +224,8 @@
 
 @media (max-width: 749px) {
 
-
+  .close-announcement {
+    right: 3px;
+  }
   
 }
