@@ -640,11 +640,14 @@ class VariantRadios extends VariantSelects {
           // if(variant && variant.url == )
           let dataUrl = this.dataset.url;
           let variantUrl = variant.url;
+
+          console.log("dataUrl", dataUrl)
+          console.log("variantUrl", variantUrl)
+          
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
           if(!input) return;
           if(variant.available && dataUrl && (dataUrl?.includes(variantUrl) || dataUrl == variantUrl)){
-            console.log("dataUrl", dataUrl)
-            console.log("variantUrl", variantUrl)
+            
             if (variant.available) {
               input.classList.remove('soldout');
             } else {
