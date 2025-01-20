@@ -241,7 +241,7 @@ class VariantSelects extends HTMLElement {
         button.querySelector('span').textContent = window.variantStrings.addToCart;
       } else {
         button.disabled = true;
-        button.querySelector('span').textContent = 'Sold out';
+        button.querySelector('span').textContent = 'Join The Waitlist';
       }
       console.log(this.currentVariant.available);
     });
