@@ -648,13 +648,14 @@ class VariantRadios extends VariantSelects {
             } else {
               input.classList.add('soldout');
             }
-          }else{
-            if (variant.available) {
-              input.classList.remove('soldout');
-            } else {
-              input.classList.add('soldout');
-            }
           }
+          // else{
+          //   if (variant.available) {
+          //     input.classList.remove('soldout');
+          //   } else {
+          //     input.classList.add('soldout');
+          //   }
+          // }
         }
       });
     });
