@@ -645,6 +645,7 @@ class VariantRadios extends VariantSelects {
           console.log("variantUrl", variantUrl)
           
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
+          console.log("input", input)
           if(!input) return;
           if(variant.available && dataUrl && (dataUrl?.includes(variantUrl) || dataUrl == variantUrl)){
             
