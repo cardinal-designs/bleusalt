@@ -206,3 +206,26 @@
   }
   
 }
+
+.close-announcement {
+  position: absolute;
+  right: 10px;
+  top: 22px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  color: #fff;
+}
+
+.close-announcement svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 749px) {
+
+  .close-announcement {
+    display: none;
+  }
+  
+}
