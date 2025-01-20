@@ -210,13 +210,19 @@
 
 .announcement-bar__wrapper  {
   position: relative;
+  padding: 0 40px;
 }
 
-.close-announcement {
+.announcement-bar__wrapper .close-announcement {
   position: absolute;
   right: 10px;
   height: 100%;
   top: 0;
   display: flex;
   align-items: center;
+}
+
+.announcement-bar__wrapper .close-announcement svg {
+  width: 18px;
+  height: 18px;
 }
