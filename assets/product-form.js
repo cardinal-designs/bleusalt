@@ -239,8 +239,12 @@ class VariantSelects extends HTMLElement {
       if(this.currentVariant.available) {
         button.removeAttribute('disabled')
         button.querySelector('span').textContent = window.variantStrings.addToCart;
+        if (button.hasAttribute('data-join-list')) {
+          button.removeAttribute('data-join-list'); // Remove the attribute
+        }
       } else {
-        button.disabled = true;
+        // button.disabled = true;
+        button.setAttribute('data-join-list', 'true');
         button.querySelector('span').textContent = 'Join The Waitlist';
       }
       console.log(this.currentVariant.available);
