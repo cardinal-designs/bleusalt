@@ -565,11 +565,18 @@ class VariantSelects extends HTMLElement {
     if (!addButton) return;
 
     if (disable) {
-      addButton.setAttribute('disabled', 'disabled');
-      if (text) addButtonText.textContent = text;
+      // addButton.setAttribute('disabled', 'disabled');
+      // if (text) addButtonText.textContent = text;
+
+      addButton.setAttribute('data-join-list', 'true');
+      addButtonText.textContent = 'Join The Waitlist';	
+      
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
+      if (addButtonText.hasAttribute('data-join-list')) {
+        addButtonText.removeAttribute('data-join-list'); // Remove the attribute
+      }
     }
 
     if (!modifyClass) return;
