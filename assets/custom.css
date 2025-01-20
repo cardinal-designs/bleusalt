@@ -206,3 +206,8 @@
   }
   
 }
+
+
+.announcement-bar__link {
+  position: relative;
+}
