@@ -506,7 +506,13 @@
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
+                            {% assign waiting_test = 'products.product.join_the_waiting_list' | t %}
+                            {% if waiting_test != blank %}
+                              {{ waiting_test }}
+                            {% else %}
+                              {{ 'products.product.sold_out' | t }}
+                            {% endif %}
+                  
                           {%- endif -%}
                         </span>
                         <div class="loading-overlay__spinner hidden">
