@@ -230,3 +230,11 @@
   }
   
 }
+
+@media screen and (max-width: 749px) {
+  
+  .hc_cd.at_top .hc_cd_timernum {
+    font-size: 16px !important;
+  }
+  
+}
