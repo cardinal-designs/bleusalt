@@ -106,7 +106,6 @@ if (!customElements.get('product-form')) {
 
     onSubmitHandler(evt) {
       evt.preventDefault();
-      console.log("this", this.submitButton.getAttribute('data-join-list'))
       if(this.submitButton.getAttribute('data-join-list')){
         let klaviyoBisWrapper = this.querySelector('.klaviyo-bis__wrapper');
         if (klaviyoBisWrapper) {
@@ -268,14 +267,10 @@ class VariantSelects extends HTMLElement {
     const optionIndex = initial ? 0 : parseFloat(event.target.closest('.product-form__input--dropdown').getAttribute('data-option-index'));
 
     const currentOption = this.options[optionIndex];
-    console.log("currentOption", currentOption)
     this.options.forEach((option, i) => {
-      console.log("optionIndex", i, optionIndex)
       if (i === optionIndex) return true;
       this.getVariantData().forEach(variant => {
-        console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
-          console.log("variant.options[optionIndex]", variant.options[optionIndex])
           let input = document.querySelector(`.product-form__input--dropdown option[value="${variant.options[i]}"]`);
           if (variant.available) {
             input.classList.remove('soldout');
@@ -609,7 +604,7 @@ class VariantSelects extends HTMLElement {
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
-    console.log('variantRadios');
+    // console.log('variantRadios');
   }
 
   updateOptions() {
@@ -621,18 +616,11 @@ class VariantRadios extends VariantSelects {
 
   updateOtherOptions(initial = false) {
     const optionIndex = initial ? 0 : parseFloat(event.target.closest('.product-form__option').getAttribute('data-option-index'));
-    console.log("optionIndex", optionIndex)
     const currentOption = this.options[optionIndex];
-    // console.log("currentOption", currentOption)
-    // console.log("this.options", this.options)
-    
     this.options.forEach((option, i) => {
       if (i === optionIndex) return true;
-      // console.log("this.getVariantData()", this.getVariantData())
       this.getVariantData().forEach(variant => {
-        // console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
-
           let dataUrl = this.dataset.url;
           let variantUrl = variant.url;
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
