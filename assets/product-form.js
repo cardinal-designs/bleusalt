@@ -641,7 +641,7 @@ class VariantRadios extends VariantSelects {
           let dataUrl = this.dataset.url;
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
           if(!input) return;
-          if(variant.available && dataUrl && dataUrl?.includes(variant.url)){
+          if(variant.available && dataUrl && (dataUrl?.includes(variant.url) || dataUrl == variant.url)){
             console.log("dataUrl", dataUrl)
             if (variant.available) {
               input.classList.remove('soldout');
