@@ -109,8 +109,8 @@ if (!customElements.get('product-form')) {
       console.log("this", this.submitButton.getAttribute('data-join-list'))
       if(this.submitButton.getAttribute('data-join-list')){
         let klaviyoBisWrapper = this.querySelector('.klaviyo-bis__wrapper');
-        if(klaviyoBisWrapper){
-          klaviyoBisWrapper.style.css("display": "block !important")
+        if (klaviyoBisWrapper) {
+          klaviyoBisWrapper.style.setProperty('display', 'block', 'important');
         }
         return;
       }
