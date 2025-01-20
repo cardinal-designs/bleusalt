@@ -268,10 +268,14 @@ class VariantSelects extends HTMLElement {
     const optionIndex = initial ? 0 : parseFloat(event.target.closest('.product-form__input--dropdown').getAttribute('data-option-index'));
 
     const currentOption = this.options[optionIndex];
+    console.log("currentOption", currentOption)
     this.options.forEach((option, i) => {
+      console.log("optionIndex", i, optionIndex)
       if (i === optionIndex) return true;
       this.getVariantData().forEach(variant => {
+        console.log("variant", variant)
         if (variant.options[optionIndex] === currentOption) {
+          console.log("variant.options[optionIndex]", variant.options[optionIndex])
           let input = document.querySelector(`.product-form__input--dropdown option[value="${variant.options[i]}"]`);
           if (variant.available) {
             input.classList.remove('soldout');
