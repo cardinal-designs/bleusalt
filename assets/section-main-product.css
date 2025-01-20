@@ -1693,3 +1693,7 @@ table[data-in-to-cm] td {
 .product-form__submit[data-join-list] {
   display: block !important;
 }
+
+.template--product .klaviyo-bis__wrapper {
+  display: none !important;
+}
