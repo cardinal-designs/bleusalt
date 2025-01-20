@@ -107,7 +107,10 @@ if (!customElements.get('product-form')) {
     onSubmitHandler(evt) {
       evt.preventDefault();
       console.log("this", this.submitButton.getAttribute('data-join-list'))
-      if (this.submitButton.getAttribute('data-join-list') == 'true') return;
+      if(this.submitButton.getAttribute('data-join-list')){
+        return;
+      }
+
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
       this.handleErrorMessage();
