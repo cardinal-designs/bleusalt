@@ -2,24 +2,24 @@
   position: relative;
 }
 
-.announcement-bar__wrapper .close-announcement {
+.close-announcement {
   position: absolute;
   right: 10px;
   height: 100%;
-  top: 0;
+  top: 16px;
   display: flex;
   align-items: center;
   z-index: 1;
 }
 
-.announcement-bar__wrapper .close-announcement svg {
+.close-announcement svg {
   width: 18px;
   height: 18px;
 }
 
 @media (max-width: 989px) {
 
-  .announcement-bar__wrapper .close-announcement {
+  .close-announcement {
     right: 3px;
   }
   
