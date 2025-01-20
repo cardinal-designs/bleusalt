@@ -638,12 +638,21 @@ class VariantRadios extends VariantSelects {
           // console.log("this", this)
           
           // if(variant && variant.url == )
+          let dataUrl = this.dataset.url;
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
           if(!input) return;
-          if (variant.available) {
-            input.classList.remove('soldout');
-          } else {
-            input.classList.add('soldout');
+          if(variant.available && dataUrl && dataUrl?.includes(variant.url)){
+            if (variant.available) {
+              input.classList.remove('soldout');
+            } else {
+              input.classList.add('soldout');
+            }
+          }else{
+            if (variant.available) {
+              input.classList.remove('soldout');
+            } else {
+              input.classList.add('soldout');
+            }
           }
         }
       });
