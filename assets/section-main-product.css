@@ -1649,14 +1649,6 @@ table[data-in-to-cm] td {
   
 }
 
-@media screen and (max-width: 1023px) {
-
-  .product__info-wrapper--extra-padding {
-    padding-left: 2.5rem;
-  }
-  
-}
-
 @media screen and (max-width: 749px) {
 
   .product-form__buttons {
