@@ -1,7 +1,3 @@
-.announcement-bar__wrapper  {
-  position: relative;
-}
-
 .close-announcement {
   position: absolute;
   right: 10px;
@@ -17,7 +13,7 @@
   height: 18px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 749px) {
 
   .close-announcement {
     display: none;
