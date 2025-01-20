@@ -232,6 +232,10 @@
 }
 
 @media screen and (max-width: 749px) {
+
+  .hc_cd.at_top .hc_cd_subheading {
+    font-size: 13px !important;
+  }
   
   .hc_cd.at_top .hc_cd_timernum {
     font-size: 16px !important;
