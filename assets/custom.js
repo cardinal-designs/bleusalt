@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // e.currentTarget.parentNode.classList.add("hidden");
       let body = e.currentTarget.closest("body");
       if(body){
+        if(el){
+          el.classList.add("hidden");
+        }
         let announcementBar = body.querySelector("#shopify-section-announcement-bar");
         if(announcementBar){
           announcementBar.classList.add("hidden");
