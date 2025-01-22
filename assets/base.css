@@ -2733,7 +2733,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item span {
-  font-size: 15px;
+  font-size: 16px;
   transition: text-decoration var(--duration-short) ease;
 }
 
