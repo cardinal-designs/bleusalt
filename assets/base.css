@@ -2732,7 +2732,8 @@ details[open] > .header__submenu {
   color: rgb(var(--color-foreground));
 }
 
-.header__menu-item span {
+.header__menu-item span,
+.top-right-link span  {
   font-size: 16px;
   transition: text-decoration var(--duration-short) ease;
 }
