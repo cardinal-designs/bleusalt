@@ -83,8 +83,8 @@
   display: block;
   font-size: 1.4rem;
   line-height: calc(1 + 0.4 / var(--font-body-scale));
-  padding-bottom: 0.6rem;
-  padding-top: 0.6rem;
+  padding-bottom: 5px;
+  padding-top: 5px;
   text-decoration: none;
   transition: text-decoration var(--duration-short) ease;
   word-wrap: break-word;
