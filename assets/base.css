@@ -2738,7 +2738,8 @@ details[open] > .header__submenu {
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
+.header__menu-item:hover span,
+.top-right-link:hover span {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
