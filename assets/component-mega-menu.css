@@ -82,7 +82,6 @@
   color: rgba(var(--color-foreground), 0.75);
   display: block;
   font-size: 1.4rem;
-  font-weight: 700;
   line-height: calc(1 + 0.4 / var(--font-body-scale));
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
