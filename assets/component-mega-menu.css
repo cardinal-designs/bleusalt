@@ -37,6 +37,10 @@
   display: flex;
   list-style: none;
   align-items:center;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .mega-menu__list li:nth-child(1) > ul {
