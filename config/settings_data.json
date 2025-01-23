@@ -133,7 +133,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n<p>Please Text (310)-317-4590 to contact Bleusalt HQ<!--<a aria-label=\"call us on, +3103174590\" href=\"tel:+3103174590\">(310)-317-4590</a>--></p>\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
+              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
               "show_logo": true
             }
           },
@@ -420,11 +420,6 @@
       "10840395464443086010": {
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
         "disabled": false,
-        "settings": {}
-      },
-      "7919968004221747976": {
-        "type": "shopify://apps/status-customer-accounts/blocks/app-embed/00efb73e-3a22-41bb-be0f-8609abc31574",
-        "disabled": true,
         "settings": {}
       }
     }
