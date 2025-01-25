@@ -10,6 +10,10 @@
   margin-top: 0;
 }
 
+.template--index .three-cate.multicolumn .page-width {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 749px) {
   .multicolumn .title-wrapper-with-link {
     margin-bottom: 3rem;

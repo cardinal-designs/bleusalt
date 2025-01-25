@@ -206,13 +206,18 @@
               -%}
             </p>
           {%- when 'title' -%}
-            <div class="product__title" {{ block.shopify_attributes }}>
-              <h1 class="h2">{{ product.title | escape }}</h1>
-            {% if product.metafields.custom.breadcrumb_collection != blank %}
-              <a class="product-collection-link" href="/collections/{{ product.metafields.custom.breadcrumb_collection.value.handle }}">
-               <p>{{ product.metafields.custom.breadcrumb_collection.value.title }}</p>
-              </a>
-            {% endif %}
+            <div class="product__title--price">
+              <div class="product__title" {{ block.shopify_attributes }}>
+                <h1 class="h2">{{ product.title | escape }}</h1>
+              {% if product.metafields.custom.breadcrumb_collection != blank %}
+                <a class="product-collection-link" href="/collections/{{ product.metafields.custom.breadcrumb_collection.value.handle }}">
+                 <p>{{ product.metafields.custom.breadcrumb_collection.value.title }}</p>
+                </a>
+              {% endif %}
+              </div>
+              <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
+              </div>
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -231,16 +236,19 @@
             <div class="payment-plan">
               or 4 installments of <span class="payment-plan__amount">{{ product.selected_or_first_available_variant.price | divided_by: 4 | money_without_trailing_zeros }}</span> using {% render 'icon-afterpay' %}
             </div>
-            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-              <div class="product__tax caption rte">
-                {%- if shop.taxes_included -%}
-                  {{ 'products.product.include_taxes' | t }}
-                {%- endif -%}
-                {%- if shop.shipping_policy.body != blank -%}
-                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                {%- endif -%}
-              </div>
-            {%- endif -%}
+            {% comment %}
+              {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                <div class="product__tax caption rte">
+                  {%- if shop.taxes_included -%}
+                    {{ 'products.product.include_taxes' | t }}
+                  {%- endif -%}
+                  {%- if shop.shipping_policy.body != blank -%}
+                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {% endcomment %}
+            
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte quick-add-hidden">
@@ -349,7 +357,18 @@
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
                       <fieldset class="js product-form__input">
-                        <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
+                        <div class="size__guide--grid">
+                          <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
+                          {% if option.name == 'Size' %}
+                            <div class="product__size-popups">
+                            {%- for popup in sizing_popups -%}
+                              <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                                <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
+                              </modal-opener>
+                            {%- endfor -%}
+                            </div>
+                          {% endif %}
+                        </div>
                         {%- for value in option.values -%}
                           {%- liquid 
                             if option.name == 'Color'
@@ -374,15 +393,6 @@
                           </div>
                         {%- endfor -%}
                       </fieldset>
-                      {% if option.name == 'Size' %}
-                        <div class="product__size-popups">
-                        {%- for popup in sizing_popups -%}
-                          <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
-                            <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
-                          </modal-opener>
-                        {%- endfor -%}
-                        </div>
-                      {% endif %}
                     </div>
                   {%- endfor -%}
                   
@@ -492,13 +502,19 @@
                       type="submit"
                       name="add"
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                      {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                      {% if product.selected_or_first_available_variant.available == false %}data-join-list="true"{% endif %}
                     >
                         <span>
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
+                            {% assign waiting_test = 'products.product.join_the_waiting_list' | t %}
+                            {% if waiting_test != blank %}
+                              {{ waiting_test }}
+                            {% else %}
+                              {{ 'products.product.sold_out' | t }}
+                            {% endif %}
+                  
                           {%- endif -%}
                         </span>
                         <div class="loading-overlay__spinner hidden">
@@ -516,12 +532,15 @@
                 <div class="klaviyo-bis__wrapper" style="display: none;" data-success-message="You're in! We'll let you know when it's back.">
                   <div class="flex klaviyo-bis__form">
                     <input type="email" name="klaviyo_email" class="klaviyo-bis__email" value="{% if customer and customer.email %}{{ customer.email }}{% endif %}" placeholder="Email">
-                    <button type="button" class="button button-primary klaviyo-bis__submit">Notify me</button>
+                    <button type="button" class="button button-primary klaviyo-bis__submit">Notify Me</button>
                   </div>
                   <div class="klaviyo-bis__response alert" style="display: none;"></div>
                 </div>
                 {% endif %}
               </product-form>  
+              <div class="payment-plan">
+                or 4 installments of <span class="payment-plan__amount">{{ product.selected_or_first_available_variant.price | divided_by: 4 | money_without_trailing_zeros }}</span> using {% render 'icon-afterpay' %}
+              </div>
               <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: none;{% else %}display: block;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
               {% comment %}
@@ -708,7 +727,7 @@
       const variantSwitcher = document.querySelector('variant-radios[data-section="{{ section.id }}"]') || document.querySelector('variant-selects[data-section="{{ section.id }}"]');
       noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-{{ section.id }}').textContent;
       variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
-
+      console.log("noScriptInputWrapper.outerHTML", noScriptInputWrapper.outerHTML)
       document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function(event) {
         hiddenInput.value = event.currentTarget.value;
       });

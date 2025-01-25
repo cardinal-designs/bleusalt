@@ -561,6 +561,7 @@ a.product__text {
 
 .product__main {
   border-bottom: 1px solid rgb(var(--color-foreground));
+  max-width: 1440px;
 }
 
 /* Product media */
@@ -1294,7 +1295,10 @@ a.product__text {
 }
 
 .payment-plan {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin: 2.5rem 0;
+  max-width: 44rem;
+  text-align: center;
 }
 
 .payment-plan svg {
@@ -1328,10 +1332,12 @@ a.product__text {
 .klaviyo-bis__email {
   padding: 2rem 1rem;
   flex: 1;
+  max-height: unset !important;
 }
 
 .product__size-popups .product-popup-modal__button {
   font-size: 1.3rem;
+  height: auto;
 }
 
 .product-form__radio-wrapper {
@@ -1609,10 +1615,86 @@ table[data-in-to-cm] td {
   text-transform: capitalize;
 }
 
+.size__guide--grid {
+  display: flex;
+}
+
+.product .product__title--price .price__container {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 750px) {
+
+  .product__title--price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  
+  .size__guide--grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .size__guide--grid .product-popup-modal__button {
+    padding-left: 1.3rem;
+    padding-right: 0;
+  }
+
+  .product-form__input .size__guide--grid  .form__label {
+    margin-bottom: 0;
+  }
+  
+}
+
 @media screen and (max-width: 749px) {
+
+  .product-form__buttons {
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   .breadcrumb {
     margin: 1em 0;
+  }
+
+  .size__guide--grid {
+    flex-direction: column-reverse;
+  }
+
+  .product__size-popups .product-popup-modal__button {
+    margin-top: .5rem;
+  }
+
+  .product__title--price {
+    margin-bottom: 0;
+  }
+
+  .product .product__title--price .price__container {
+    margin-top: 5px;
+  }
+
+  .size__guide--grid .product__size-popups {
+    margin-bottom: 5px;
+  }
+
+}
+
+.product-form__submit[data-join-list] {
+  display: block !important;
+}
+
+.template--product .klaviyo-bis__wrapper {
+  display: none !important;
+}
+
+@media (max-width: 1023px) and (min-width: 750px) {
+  
+  .klaviyo-bis__form .klaviyo-bis__submit {
+    min-width: auto;
+    padding: 0 1rem;
   }
 
 }

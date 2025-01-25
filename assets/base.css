@@ -2723,7 +2723,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 1.2rem 0;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -2732,11 +2732,14 @@ details[open] > .header__submenu {
   color: rgb(var(--color-foreground));
 }
 
-.header__menu-item span {
+.header__menu-item span,
+.top-right-link span  {
+  font-size: 16px;
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
+.header__menu-item:hover span,
+.top-right-link:hover span {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }

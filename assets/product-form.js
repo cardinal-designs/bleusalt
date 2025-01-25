@@ -106,6 +106,14 @@ if (!customElements.get('product-form')) {
 
     onSubmitHandler(evt) {
       evt.preventDefault();
+      if(this.submitButton.getAttribute('data-join-list')){
+        let klaviyoBisWrapper = this.querySelector('.klaviyo-bis__wrapper');
+        if (klaviyoBisWrapper) {
+          klaviyoBisWrapper.style.setProperty('display', 'block', 'important');
+        }
+        return;
+      }
+
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
       this.handleErrorMessage();
@@ -239,9 +247,13 @@ class VariantSelects extends HTMLElement {
       if(this.currentVariant.available) {
         button.removeAttribute('disabled')
         button.querySelector('span').textContent = window.variantStrings.addToCart;
+        if (button.hasAttribute('data-join-list')) {
+          button.removeAttribute('data-join-list'); // Remove the attribute
+        }
       } else {
-        button.disabled = true;
-        button.querySelector('span').textContent = 'Sold out';
+        // button.disabled = true;
+        button.setAttribute('data-join-list', 'true');
+        button.querySelector('span').textContent = 'Join The Waitlist';
       }
       console.log(this.currentVariant.available);
     });
@@ -552,11 +564,20 @@ class VariantSelects extends HTMLElement {
     if (!addButton) return;
 
     if (disable) {
-      addButton.setAttribute('disabled', 'disabled');
-      if (text) addButtonText.textContent = text;
+      // addButton.setAttribute('disabled', 'disabled');
+      // if (text) addButtonText.textContent = text;
+      if(addButtonText.hasAttribute('disabled')) {
+        addButton.removeAttribute('disabled');
+      }
+      addButton.setAttribute('data-join-list', 'true');
+      addButtonText.textContent = 'Join The Waitlist';	
+      
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
+      if(addButtonText.hasAttribute('data-join-list')) {
+        addButtonText.removeAttribute('data-join-list'); // Remove the attribute
+      }
     }
 
     if (!modifyClass) return;
@@ -583,7 +604,7 @@ class VariantSelects extends HTMLElement {
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
-    console.log('variantRadios');
+    // console.log('variantRadios');
   }
 
   updateOptions() {
@@ -600,12 +621,16 @@ class VariantRadios extends VariantSelects {
       if (i === optionIndex) return true;
       this.getVariantData().forEach(variant => {
         if (variant.options[optionIndex] === currentOption) {
+          let dataUrl = this.dataset.url;
+          let variantUrl = variant.url;
           let input = document.querySelector(`.product-form__option input[value="${variant.options[i]}"]`);
           if(!input) return;
-          if (variant.available) {
-            input.classList.remove('soldout');
-          } else {
-            input.classList.add('soldout');
+          if(dataUrl && (dataUrl?.includes(variantUrl) || dataUrl == variantUrl)){
+            if (variant.available) {
+              input.classList.remove('soldout');
+            } else {
+              input.classList.add('soldout');
+            }
           }
         }
       });

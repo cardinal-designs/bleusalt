@@ -1,3 +1,6 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -39,10 +42,41 @@
     max-width: {{ section.settings.logo_width }}px;
   }
 
+  .template--index .header-wrapper {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    top: 0;
+    padding-top: 0;
+    transition: all 0.3s;
+  }
+
+  .template--index .header-wrapper:not(.sticky-header-wrapper) .header__under-logo .header__menu-item,
+  .template--index .header-wrapper:not(.sticky-header-wrapper) .header__under-logo .top-right-link {
+    color: #fff;
+  }
+
+  .template--index .header-wrapper:not(.sticky-header-wrapper) .header__heading svg *,
+  .template--index .header-wrapper:not(.sticky-header-wrapper) .header__icon svg *,
+  .template--index:not(.sticky-header-enabled) #icon-search * {
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  .template--index:not(.sticky-header-enabled) #icon-search * {
+    stroke: transparent;
+  }
+
+  .template--index .header-wrapper.sticky-header-wrapper {
+    background: rgba(255,255,255,0.9);
+  }
+
   @media screen and (min-width: 990px) {
+    
     header-drawer {
       display: none;
     }
+    
   }
 
   .menu-drawer-container {
@@ -101,15 +135,22 @@
 
   .header__under-logo .list-menu li,
   .header__under-logo .top-right-link {
-    padding: 1rem 30px;
+    padding: 1rem 20px;
     padding-top: 0;
+    font-family: "Oswald", serif;
+    font-weight: 300;
   }
 
-  @media screen and (max-width: 1170px) {
-    .header__under-logo .list-menu li,
-    .header__under-logo .top-right-link {
-      padding: 1rem 20px;
-    }
+  .header__under-logo .list-menu .mega-menu__list li {
+    padding: 5px 15px;
+  }
+
+  .header__under-logo .list-menu .mega-menu__list .mega-menu__has-image {
+    padding: 0;
+  }
+
+  .header__under-logo .list-menu .mega-menu__list li:not(.mega-menu__has-image) {
+    width: 205px;
   }
 
   @media screen and (max-width: 1050px) {
