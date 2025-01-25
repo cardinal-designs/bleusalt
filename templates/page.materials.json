@@ -299,18 +299,18 @@
             "text_style": "body"
           }
         },
-        "6feb4f8c-5a09-4968-9067-d75a31f68c0c": {
-          "type": "svg",
-          "disabled": true,
+        "button_Lte7re": {
+          "type": "button",
           "settings": {
-            "text": "<svg aria-hidden=\"true\" role=\"presentation\" width=\"65\" height=\"65\" viewbox=\"0 0 20 18\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M19.905 7.014c-.098-.284-.208-.58-.312-.853l-.092-.262a46.422 46.422 0 01-.706-1.927 4.48 4.48 0 00-2.607-2.74C15.205.835 14.314.475 13.44.14a1.943 1.943 0 00-.723-.14H7.11a1.695 1.695 0 00-.676.134L6.225.22c-.861.371-1.734.755-2.619 1.161a4.231 4.231 0 00-2.14 2.282l-.092.244A5151.69 5151.69 0 01.097 7.084a.915.915 0 00-.03.755c.12.226.331.39.579.453l.156.046 3.29.952v6.66a1.247 1.247 0 001.052 1.347c1.727.457 3.505.693 5.29.703h.4a15.763 15.763 0 004.14-.627 1.346 1.346 0 001.08-1.457v-6.66l.162-.053 1.203-.36 1.862-.58a.983.983 0 00.653-.459 1.02 1.02 0 00-.029-.79zm-3.856.453v-1.41a.68.68 0 00-.33-.581.61.61 0 00-.642 0 .894.894 0 00-.312.43.484.484 0 00-.029.278V16.148c-.085.04-.174.07-.266.093a14.615 14.615 0 01-4.747.528 21.107 21.107 0 01-4.047-.58 1.89 1.89 0 01-.295-.082 1.394 1.394 0 010-.296V6.01a.623.623 0 00-.642-.639.635.635 0 00-.653.645V8l-2.665-.754.034-.088c.081-.203.156-.4.237-.58.081-.18.191-.476.29-.714v-.058c.23-.581.433-1.057.63-1.562A3.004 3.004 0 014.08 2.549c.619-.313 1.26-.58 1.88-.877l.098-.046.578-.267.058.07.364.377c.462.48 1.022.854 1.642 1.097.94.386 2.004.321 2.891-.174a5.341 5.341 0 001.417-1.161l.208-.232.659.278.08.03c.66.26 1.342.54 2.001.841a2.992 2.992 0 011.585 1.8c.225.639.462 1.29.693 1.916l.035.082.312.853v.076l-2.544.772v-.517h.012zm-7.76-6.26h3.273c-.408.439-.97.701-1.567.733a2.487 2.487 0 01-1.705-.732z\" fill=\"#000000\" fill-rule=\"nonzero\"></path></svg>"
+            "button_label": "Shop Original Fabric",
+            "button_link": "shopify://collections/bleusalt-original-fabric"
           }
         }
       },
       "block_order": [
         "16618930934317c33e-0",
         "16618930934317c33e-1",
-        "6feb4f8c-5a09-4968-9067-d75a31f68c0c"
+        "button_Lte7re"
       ],
       "settings": {
         "image": "shopify://shop_images/original-hero.jpg",
@@ -344,11 +344,19 @@
             "text": "<p>96% micro modal 4% Spandex is a lighter more breathable and silkier variation of our signature fabric.  It maintains our signature<br/>softness and sustainability while offering enhanced airflow and a featherweight feel. Making it perfect for warmer weather.</p>",
             "text_style": "body"
           }
+        },
+        "button_PtrN9D": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Bleusalt Lite",
+            "button_link": "shopify://collections/bleusalt-lite"
+          }
         }
       },
       "block_order": [
         "heading_CmU7Jb",
-        "text_jkL4Jg"
+        "text_jkL4Jg",
+        "button_PtrN9D"
       ],
       "settings": {
         "image": "shopify://shop_images/lite-hero.jpg",
@@ -382,11 +390,19 @@
             "text": "<p>48% Micro Modal 48% Organic Cotton 4% Spandex Combining the ultra soft feel with a heavier more structured weight making I perfect for the colder months. It remains Sustainable and washer and dryer friendly.</p>",
             "text_style": "body"
           }
+        },
+        "button_KYJpnW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Bleusalt Luxe",
+            "button_link": "shopify://collections/bleusalt-luxe"
+          }
         }
       },
       "block_order": [
         "heading_XMVb3F",
-        "text_MegWL6"
+        "text_MegWL6",
+        "button_KYJpnW"
       ],
       "settings": {
         "image": "shopify://shop_images/luxe-hero.jpg",
