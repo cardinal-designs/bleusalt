@@ -27,10 +27,11 @@
     "badge_position": "top left",
     "badge_corner_radius": 2,
     "sale_badge_color_scheme": "accent-2",
-    "social_twitter_link": "https://twitter.com/bleusalt_",
+    "social_twitter_link": "",
     "social_facebook_link": "https://www.facebook.com/bleusalt/",
-    "social_pinterest_link": "https://www.pinterest.com/bleusalt1/",
+    "social_pinterest_link": "",
     "social_instagram_link": "https://www.instagram.com/bleusalt/",
+    "social_tiktok_link": "https://www.tiktok.com/@bleusalt",
     "predictive_search_enabled": true,
     "predictive_search_show_price": true,
     "search_only_products": false,
@@ -133,7 +134,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n<p>Please Text (310)-317-4590 to contact Bleusalt HQ<!--<a aria-label=\"call us on, +3103174590\" href=\"tel:+3103174590\">(310)-317-4590</a>--></p>\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
+              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
               "show_logo": true
             }
           },
@@ -356,8 +357,20 @@
         "disabled": false,
         "settings": {}
       },
-      "7919968004221747976": {
-        "type": "shopify://apps/status-customer-accounts/blocks/app-embed/00efb73e-3a22-41bb-be0f-8609abc31574",
+      "320593021044489861": {
+        "type": "shopify://apps/sale-discount-manager/blocks/countdown/29205fb1-2e68-4d81-a905-d828a51c8413",
+        "disabled": false,
+        "settings": {}
+      },
+      "733389323033596483": {
+        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {}
       },
