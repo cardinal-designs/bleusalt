@@ -2448,7 +2448,6 @@ input[type='checkbox'] {
   color: rgb(var(--color-foreground));
 }
 
-
 .header__icon span {
   height: 100%;
 }
@@ -2485,6 +2484,10 @@ input[type='checkbox'] {
   stroke-width: 0;
   position: relative;
   margin-right: -1.2rem;
+}
+
+.header__icon--search .icon-search {
+  stroke-width: 0;
 }
 
 .header__icon .icon-reward {
