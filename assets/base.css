@@ -2482,6 +2482,7 @@ input[type='checkbox'] {
 }
 
 .header__icon--cart {
+  stroke-width: 0;
   position: relative;
   margin-right: -1.2rem;
 }
