@@ -9,9 +9,33 @@
  */
 {
   "sections": {
+    "rich_text_bJ3jWa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EykmU3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Patrick Dempsey Collection</p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EykmU3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "show_heading": false,
         "heading_size": "h2",
@@ -21,12 +45,50 @@
         "page_width": "page-width--narrow"
       }
     },
+    "featured_collection_pfEUhV": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_QtPjpn": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "the-patrick-dempsey-collection"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QtPjpn"
+      ],
+      "settings": {
+        "title": "Shop the Collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1676492971e2872bb9": {
       "type": "apps",
       "blocks": {
         "958767c2-116f-4a62-a3d0-7bb62dbf695b": {
           "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "disabled": true,
           "settings": {
             "product": "",
             "widget_type": "reviews_widget"
@@ -62,7 +124,9 @@
     }
   },
   "order": [
+    "rich_text_bJ3jWa",
     "main",
+    "featured_collection_pfEUhV",
     "1676492971e2872bb9",
     "1728584017c433d725"
   ]
