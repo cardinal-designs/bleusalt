@@ -246,11 +246,9 @@ class VariantSelects extends HTMLElement {
     const productSubmitButtons = document.querySelectorAll('.product-form__submit');
     let buttonCount = 0;
     productSubmitButtons.forEach(button => {
-      console.log("button", button)
       if(button.classList.contains("product-form__submit")){
         buttonCount++;
       }
-      console.log("buttonCount", buttonCount)
       if(buttonCount < 2){
         if(this.currentVariant.available) {
           button.removeAttribute('disabled')
@@ -268,7 +266,7 @@ class VariantSelects extends HTMLElement {
           button.remove();
         }
       }
-      console.log(this.currentVariant.available);
+      // console.log(this.currentVariant.available);
     });
   }
   sendEvent(event) {
