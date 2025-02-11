@@ -1299,24 +1299,24 @@ const findEmptyLabelTags = () => {
 
 // findEmptyLabelTags();
 
-const findEmptyButtons = () => {
-  const buttons = document.getElementsByTagName('button');
-  const emptyButtons = [];
+// const findEmptyButtons = () => {
+//   const buttons = document.getElementsByTagName('button');
+//   const emptyButtons = [];
 
-  for (let i = 0; i < buttons.length; i++) {
-    const button = buttons[i];
-    const buttonText = button.textContent.trim();
-    const ariaLabel = button.getAttribute('aria-label');
-    const ariaLabelledBy = button.getAttribute('aria-labelledby');
+//   for (let i = 0; i < buttons.length; i++) {
+//     const button = buttons[i];
+//     const buttonText = button.textContent.trim();
+//     const ariaLabel = button.getAttribute('aria-label');
+//     const ariaLabelledBy = button.getAttribute('aria-labelledby');
 
-    if (buttonText === '' && !ariaLabel && !ariaLabelledBy) {
-      emptyButtons.push(button);
-    }
-  }
+//     if (buttonText === '' && !ariaLabel && !ariaLabelledBy) {
+//       emptyButtons.push(button);
+//     }
+//   }
 
-  return emptyButtons;
-}
-findEmptyButtons();
+//   return emptyButtons;
+// }
+// findEmptyButtons();
 
 document.addEventListener('call_widget_closed', (e) => {
   updateCart();
