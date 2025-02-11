@@ -243,18 +243,26 @@ class VariantSelects extends HTMLElement {
 
   updateButton() {
     const productSubmitButtons = document.querySelectorAll('.product-form__submit');
+    let buttonCount = 0;
     productSubmitButtons.forEach(button => {
       console.log("button", button)
-      if(this.currentVariant.available) {
-        button.removeAttribute('disabled')
-        button.querySelector('span').textContent = window.variantStrings.addToCart;
-        if (button.hasAttribute('data-join-list')) {
-          button.removeAttribute('data-join-list'); // Remove the attribute
+      if(button.classList.contains("product-form__submit")){
+        buttonCount++;
+      }
+      if(buttonCount < 1){
+        if(this.currentVariant.available) {
+          button.removeAttribute('disabled')
+          button.querySelector('span').textContent = window.variantStrings.addToCart;
+          if (button.hasAttribute('data-join-list')) {
+            button.removeAttribute('data-join-list'); // Remove the attribute
+          }
+        } else {
+          // button.disabled = true;
+          button.setAttribute('data-join-list', 'true');
+          button.querySelector('span').textContent = 'Join The Waitlist';
         }
-      } else {
-        // button.disabled = true;
-        button.setAttribute('data-join-list', 'true');
-        button.querySelector('span').textContent = 'Join The Waitlist';
+      }else{
+        button.remove();
       }
       console.log(this.currentVariant.available);
     });
