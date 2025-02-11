@@ -249,6 +249,7 @@ class VariantSelects extends HTMLElement {
       if(button.classList.contains("product-form__submit")){
         buttonCount++;
       }
+      console.log("buttonCount", buttonCount)
       if(buttonCount < 1){
         if(this.currentVariant.available) {
           button.removeAttribute('disabled')
