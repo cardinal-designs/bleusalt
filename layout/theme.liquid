@@ -346,13 +346,13 @@
       {%- endif -%}
 
       {% if settings.enable_klaviyo_onsite %}
-        <script>
+        <!-- <script>
           window.klaviyoCompanyId = {{ settings.klaviyo_company_id | json }};
           const klaviyoScript = document.createElement('script');
           klaviyoScript.src = 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{ settings.klaviyo_company_id }}';
           klaviyoScript.async = true;
           document.body.appendChild(klaviyoScript);
-        </script>
+        </script> -->
       {% endif %}
 
       {%- render 'pixels' -%}
