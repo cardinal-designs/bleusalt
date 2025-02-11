@@ -569,8 +569,8 @@ class VariantSelects extends HTMLElement {
       if(addButtonText.hasAttribute('disabled')) {
         addButton.removeAttribute('disabled');
       }
-      addButton.setAttribute('data-join-list', 'true');
-      addButtonText.textContent = 'Join The Waitlist';	
+      // addButton.setAttribute('data-join-list', 'true');
+      // addButtonText.textContent = 'Join The Waitlist';	
       
     } else {
       addButton.removeAttribute('disabled');
