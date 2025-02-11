@@ -242,7 +242,3 @@
   }
   
 }
-
-.product-form__submit[data-join-list] + .product-form__submit[data-join-list] {
-  display: none !important;
-}
