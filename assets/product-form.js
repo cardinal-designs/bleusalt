@@ -238,7 +238,7 @@ class VariantSelects extends HTMLElement {
       this.updateOtherOptions();
       this.sendEvent();
       this.backInStock();
-      this.updateButton();
+      // this.updateButton();
     }
   }
 
