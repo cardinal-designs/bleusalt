@@ -237,13 +237,14 @@ class VariantSelects extends HTMLElement {
       this.updateOtherOptions();
       this.sendEvent();
       this.backInStock();
-      // this.updateButton();
+      this.updateButton();
     }
   }
 
   updateButton() {
     const productSubmitButtons = document.querySelectorAll('.product-form__submit');
     productSubmitButtons.forEach(button => {
+      console.log("button", button)
       if(this.currentVariant.available) {
         button.removeAttribute('disabled')
         button.querySelector('span').textContent = window.variantStrings.addToCart;
@@ -569,15 +570,15 @@ class VariantSelects extends HTMLElement {
       if(addButtonText.hasAttribute('disabled')) {
         addButton.removeAttribute('disabled');
       }
-      // addButton.setAttribute('data-join-list', 'true');
-      // addButtonText.textContent = 'Join The Waitlist';	
+      addButton.setAttribute('data-join-list', 'true');
+      addButtonText.textContent = 'Join The Waitlist';	
       
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
-      // if(addButtonText.hasAttribute('data-join-list')) {
-      //   addButtonText.removeAttribute('data-join-list'); // Remove the attribute
-      // }
+      if(addButtonText.hasAttribute('data-join-list')) {
+        addButtonText.removeAttribute('data-join-list'); // Remove the attribute
+      }
     }
 
     if (!modifyClass) return;
