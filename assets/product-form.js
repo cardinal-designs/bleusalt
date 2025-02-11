@@ -264,7 +264,9 @@ class VariantSelects extends HTMLElement {
           button.querySelector('span').textContent = 'Join The Waitlist';
         }
       }else{
-        button.remove();
+        if(button.classList.contains("product-form__submit") || button.classList.contains("bold_clone")){
+          button.remove();
+        }
       }
       console.log(this.currentVariant.available);
     });
