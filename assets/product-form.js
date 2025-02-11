@@ -250,7 +250,7 @@ class VariantSelects extends HTMLElement {
         buttonCount++;
       }
       console.log("buttonCount", buttonCount)
-      if(buttonCount < 1){
+      if(buttonCount < 2){
         if(this.currentVariant.available) {
           button.removeAttribute('disabled')
           button.querySelector('span').textContent = window.variantStrings.addToCart;
