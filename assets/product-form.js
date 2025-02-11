@@ -237,7 +237,7 @@ class VariantSelects extends HTMLElement {
       this.updateOtherOptions();
       this.sendEvent();
       this.backInStock();
-      this.updateButton();
+      // this.updateButton();
     }
   }
 
@@ -575,9 +575,9 @@ class VariantSelects extends HTMLElement {
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
-      if(addButtonText.hasAttribute('data-join-list')) {
-        addButtonText.removeAttribute('data-join-list'); // Remove the attribute
-      }
+      // if(addButtonText.hasAttribute('data-join-list')) {
+      //   addButtonText.removeAttribute('data-join-list'); // Remove the attribute
+      // }
     }
 
     if (!modifyClass) return;
