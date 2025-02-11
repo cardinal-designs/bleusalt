@@ -212,7 +212,7 @@ class VariantSelects extends HTMLElement {
     this.updateOtherOptions(true);
     this.backInStock();
     this.showVariantImages();
-    // this.updateButton();
+    this.updateButton();
   }
 
   onVariantChange() {
