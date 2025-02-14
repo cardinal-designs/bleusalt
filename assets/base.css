@@ -2823,15 +2823,6 @@ details-disclosure > details {
   position: relative;
 }
 
-@media screen and (min-width: 990px) {
-
-  .header__under-logo .list-menu li {
-    font-family: "Josefin Sans", serif;
-    font-weight: 400;
-  }
-  
-}
-
 @keyframes animateMenuOpen {
   0% {
     opacity: 0;
