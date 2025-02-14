@@ -2825,7 +2825,10 @@ details-disclosure > details {
 
 @media screen and (min-width: 990px) {
 
-  
+  .header__under-logo .list-menu li {
+    font-family: "Josefin Sans", serif;
+    font-weight: 400;
+  }
   
 }
 
