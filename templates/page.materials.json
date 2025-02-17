@@ -326,6 +326,78 @@
         "padding_bottom": 36
       }
     },
+    "f2159109-de57-46f2-9ac3-fed67a46fab4": {
+      "type": "rich-text",
+      "blocks": {
+        "d0dcda94-b12f-4db3-8aa2-e64ca2082bfa": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>SUSTAINABLE SOURCING</h4><p>Bleusalt fabrics are crafted from natural, biodegradable fibers, ensuring a minimal environmental footprint without compromising luxury.</p><h4>ETHICAL MANUFACTURING</h4><p>We partner with responsible factories that uphold fair labor practices and sustainable production methods to create high-quality, long-lasting pieces.</p><h4>ECO-CONSCIOUS PRODUCTION</h4><p>Our closed-loop manufacturing process reduces water waste and avoids harmful chemicals, prioritizing both the planet and your comfort.</p><h4>LONGEVITY & CIRCULAR FASHION</h4><p>Designed to last, Bleusalt garments resist pilling and maintain their softness over time, promoting a slow fashion movement that values quality over quantity.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d0dcda94-b12f-4db3-8aa2-e64ca2082bfa"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_yrcAjM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CF7cCM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_3.webp",
+            "title": "MODAL",
+            "text": "<p>Sustainably sourced beechwood fibers create a silky-soft, breathable, and durable fabric for lasting comfort.</p>",
+            "html": "",
+            "link_label": "SHOP MODAL",
+            "link": "shopify://collections/all"
+          }
+        },
+        "column_idxHTA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_3.webp",
+            "title": "COTTON",
+            "text": "<p>Naturally soft and breathable, adding structure and lightweight durability for year-round wear.</p>",
+            "html": "",
+            "link_label": "SHOP COTTON",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "column_CF7cCM",
+        "column_idxHTA"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "btextimg": "",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "166189309339ab90c0": {
       "type": "image-with-text",
       "blocks": {
@@ -549,29 +621,43 @@
         "padding_bottom": 36
       }
     },
-    "f2159109-de57-46f2-9ac3-fed67a46fab4": {
-      "type": "rich-text",
+    "image_banner_FmPBWa": {
+      "type": "image-banner",
       "blocks": {
-        "d0dcda94-b12f-4db3-8aa2-e64ca2082bfa": {
+        "heading_b7GAF7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wash & Care Information",
+            "heading_size": "h1"
+          }
+        },
+        "text_DaERhd": {
           "type": "text",
           "settings": {
-            "text": "<p>The elevated line streamlines your wardrobe with timeless designs made to be styled together or worn separately from the Beach to the street and Day to night depending on how you style it and what accessories you add to your look.</p><p>Bleusalt clothing is breathable, machine washable, shrink resistant, sustainable, and ideal for layering. Our brand has a fully LA-based supply chain that utilizes minimal waste packaging to ensure that our luxury fashion is something you can look good in and feel good about. </p><p>All products are available in classic colors that evoke quiet luxury.   We offer luxurious men’s clothing, women’s clothing, unisex clothing, and kids’ clothing. We are also a size-inclusive fashion brand, with sizing running from 00 to 6, which correlates to an XXS to 3X.<br/></p>"
+            "text": "All Bleusalt garments are machine washable and do not shrink. Our dyes are OEKO-TEX Certified, composed of 95% reactive and 5% disperse dye.",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "d0dcda94-b12f-4db3-8aa2-e64ca2082bfa"
+        "heading_b7GAF7",
+        "text_DaERhd"
       ],
-      "disabled": true,
+      "custom_css": [
+        ".banner__heading * {background: transparent !important; color: var(--Dark, #0d1c29); text-align: center; font-family: \"BasicCommercial LT Roman\"; font-size: 24px; font-style: normal; font-weight: 400; line-height: 150%; /* 36px */ text-transform: uppercase;}",
+        ".banner__text {max-width: 600px; margin: auto; color: #0D1C29;text-align: center;font-family: \"BasicCommercial LT Light\";font-size: 16px;font-style: normal;font-weight: 400;line-height: 150%; /* 24px */}",
+        ".banner__box {background: transparent;}"
+      ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "btextimg": "",
-        "background_image_size": "cover",
+        "image": "shopify://shop_images/Rectangle_4_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     }
   },
@@ -584,11 +670,13 @@
     "1661889726da0c4670",
     "1661892598b12d422f",
     "6f381c49-7a76-40c7-8d9b-5501e934801d",
+    "f2159109-de57-46f2-9ac3-fed67a46fab4",
+    "multicolumn_yrcAjM",
     "166189309339ab90c0",
     "image_with_text_YhnVRq",
     "image_with_text_tBfK8e",
     "text_with_image_new_pkzbHF",
     "image_with_text_G3cBag",
-    "f2159109-de57-46f2-9ac3-fed67a46fab4"
+    "image_banner_FmPBWa"
   ]
 }
