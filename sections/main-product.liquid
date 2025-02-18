@@ -35,10 +35,14 @@
   "navigation": {
     "nextEl": ".product__media-list .swiper-button-next",
     "prevEl": ".product__media-list .swiper-button-prev"
+  },
+  "scrollbar": {
+    "el": ".swiper-scrollbar",
+    "hide": false,
+    "draggable": true
   }
 }
 {%- endcapture -%}
-
 
 {%- liquid 
     for option in product.options_with_values
@@ -73,60 +77,41 @@
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
         {{ "accessibility.skip_to_product_info" | t }}
       </a>
-      <div id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
-        {%- if product.media.size > 1 and section.settings.gallery_layout != 'stacked' or section.settings.mobile_thumbnails == 'show' -%}
-          <div id="GalleryThumbnails-{{ section.id }}" class="product-thumbnails {% if section.settings.mobile_thumbnails == 'hide' %} small-hide{% endif %}">
-            <ul id="Slider-Thumbnails-{{ section.id }}" class="list-unstyled">
-              {%- for media in product.media -%}
-                  {%- liquid
-                    capture media_index
-                      if media.media_type == 'model'
-                        increment model_index
-                      elsif media.media_type == 'video' or media.media_type == 'external_video'
-                        increment video_index
-                      elsif media.media_type == 'image'
-                        increment image_index
-                      endif
-                    endcapture
-                    assign media_index = media_index | plus: 1
-                  -%}
-                   <li id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}" class="thumbnail-list__item" data-target="{{ section.id }}-{{ media.id }}"  data-media-position="{{ media_index }}" {% if media.alt != selected_color and product.options_by_name['Color'].values.size > 1 %}style="display: none;"{% endif %}>
-                    {%- if media.media_type == 'model' -%}
-                      <span class="thumbnail__badge" aria-hidden="true">
-                        {%- render 'icon-3d-model' -%}
-                      </span>
-                    {%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}
-                      <span class="thumbnail__badge" aria-hidden="true">
-                        {%- render 'icon-play' -%}
-                      </span>
-                    {%- endif -%}
-                    <button class="product__thumbnail"
-                      type="button"
-                      aria-label="{%- if media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
-                      {% if media == product.selected_or_first_available_variant.featured_media or product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} aria-current="true"{% endif %}
-                      data-index="{{ forloop.index0 }}"
-                    >
-                     {% render 'image-element', image: media.preview_image %}
-                    </button>
-                  </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
+      
+      {%- comment -%} Images {%- endcomment -%}
+      <div 
+        id="MediaGallery-{{ section.id }}"
+        role="region" 
+        {% if section.settings.enable_sticky_info %}
+          class="product__media-gallery"
+        {% endif %} 
+        aria-label="{{ 'products.product.media.gallery_viewer' | t }}" 
+        data-desktop-layout="{{ section.settings.gallery_layout }}"
+      >
         <div id="GalleryViewer-{{ section.id }}" class="product-main-images">
-          <div id="Slider-Gallery-{{ section.id }}" class="product__media-list contains-media swiper" data-json='{{- swiper_options -}}'>
-            <div class="swiper-wrapper">
+          <div id="Slider-Gallery-{{ section.id }}" class="product__media-list contains-media swiper" data-json='{{- swiper_options -}}'
+        >
+          {%- comment -%} Mobile Images Slider {%- endcomment -%}
+          <div class="product__gallery swiper-wrapper medium-up-hide">
             {%- liquid
               assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
               assign media_count = product.media.size
               if section.settings.hide_variants and media_count > 1
                 assign media_count = media_count | minus: variant_images.size | plus: 1
               endif
-
             -%}
             {%- for media in product.media -%}
-              {% assign media_color =  media.alt | split: ' | ' | first %}
-                <div class="swiper-slide product__main-image {% if section.settings.enable_zoom %}product__image--zoom{% endif %}" data-filter="{{ media_color  }}" {% if media_color != selected_color and product.options_by_name['Color'].values.size > 1 %}style="display: none;"{% endif %} {% if section.settings.enable_zoom %}data-bg="{{ media.preview_image | image_url: width: 2000 }}"{% endif %}>
+              {%- assign media_color =  media.alt | split: ' | ' | first -%}
+              {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+                <div 
+                  class="swiper-slide product__main-image {% if section.settings.enable_zoom %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
+                  data-filter="{{ media_color  }}"
+                  {% if media_color != selected_color and product.options_by_name['Color'].values.size > 1 %}  style="display: none;"
+                  {% endif %} 
+                  {% if section.settings.enable_zoom %}
+                    data-bg="{{ media.preview_image | image_url: width: 2000 }}"
+                  {% endif %}
+                >
                   {% case media.media_type %}
                     {% when 'image' %}
                       {% render 'image-element', image: media.preview_image %}
@@ -138,10 +123,39 @@
                   {% endcase %}
                 </div>
             {%- endfor -%}
-            </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          </div>
+          
+          {%- comment -%} Desktop Images (no slider) {%- endcomment -%}
+          <div class="product__gallery small-hide">
+            {%- for media in product.media -%}
+              {%- assign media_color = media.alt | split: ' | ' | first -%}
+              {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+              <div 
+                class="product__main-image {% if section.settings.enable_zoom and media.media_type != 'video' %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
+                data-filter="{{ media_color }}"
+                {% if media_color != selected_color and product.options_by_name['Color'].values.size > 1 %} style="display: none;" {% endif %} 
+                {% if section.settings.enable_zoom and media.media_type != 'video' %}
+                  data-bg="{{ media.preview_image | image_url: width: 2000 }}"
+                {% endif %}
+              >
+                {% case media.media_type %}
+                  {% when 'image' %}
+                    {% render 'image-element', image: media.preview_image %}
+                  {% when 'video' %}
+                    {% assign ratio = 1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
+                    <div class="media" style="padding-top:{{ ratio }}%;">
+                      {{ media | video_tag: autoplay: true, playsinline: true, loop: true, autoplay: true, muted: true, controls: false }}
+                    </div>
+                {% endcase %}
+              </div>
+            {%- endfor -%}
+          </div>
+
+          <div class="swiper-pagination medium-up-hide"></div>
+          <div class="swiper-button-prev medium-up-hide"></div>
+          <div class="swiper-button-next medium-up-hide"></div>
+          <div class="swiper-scrollbar medium-up-hide"></div>
+
         </div>
         {%- if first_3d_model -%}
           <button
@@ -159,6 +173,7 @@
         {%- endif -%}
         </div>
       </div>
+
     </div>
     {%- assign product_form_id = 'product-form-' | append: section.id -%}
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">

@@ -11,6 +11,7 @@
     - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
     - show_quick_add: {Boolean} Show the quick add button.
     - section_id: {String} The ID of the section that contains this card.
+    - hasHover_image: {Boolean} Show 2nd image on hover.
 
     Usage:
     {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -108,6 +109,48 @@
                 >
               {%- endif -%}
             </div>
+
+            {%- comment -%} Hover image {%- endcomment -%}
+            {%- if hasHover_image -%}
+              {%- assign alt_image = null -%}
+              {%- comment -%} Check images alt that has "All" {%- endcomment -%}
+              {%- for media in card_product.media -%}
+                {%- if media.media_type != 'video' -%}
+                  {%- if media.alt contains 'All' -%}
+                    {%- assign alt_image = media -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+              <div class="card__hover-image media media--transparent">
+                <img
+                  srcset="{%- if alt_image -%}
+                    {%- if alt_image.width >= 165 -%}{{ alt_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if alt_image.width >= 360 -%}{{ alt_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if alt_image.width >= 533 -%}{{ alt_image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if alt_image.width >= 720 -%}{{ alt_image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if alt_image.width >= 940 -%}{{ alt_image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if alt_image.width >= 1066 -%}{{ alt_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ alt_image | image_url }} {{ alt_image.width }}w
+                  {%- else -%}
+                    {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
+                  {%- endif -%}
+                  "
+                  src="{% if alt_image %}{{ alt_image | image_url: width: 533 }}{% else %}{{ card_product.media[1] | image_url: width: 533 }}{% endif %}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{% if alt_image %}{{ alt_image.alt }}{% else %}{{ card_product.media[1].alt }}{% endif %}"
+                  class="motion-reduce"
+                  loading="lazy"
+                  width="{% if alt_image %}{{ alt_image.width }}{% else %}{{ card_product.media[1].width }}{% endif %}"
+                  height="{% if alt_image %}{{ alt_image.height }}{% else %}{{ card_product.media[1].height }}{% endif %}"
+                >
+              </div>
+            {%- endif -%}
           </div>
         {%- endif -%}
         <div class="card__content">
