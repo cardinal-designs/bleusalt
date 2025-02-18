@@ -21,6 +21,14 @@
 }
 
 @media screen and (min-width: 750px) {
+  .product__info-wrapper {
+    position: sticky;
+    top: 158px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
   .product--thumbnail .product__media-gallery,
   .product--thumbnail_slider .product__media-gallery,
   .product--stacked .product__info-container--sticky {
@@ -46,13 +54,8 @@
     display: block;
     cursor: pointer;
     background: 0;
-    border: 1px solid transparent;
     margin: 7.75px 0;
     padding: 0;
-  }
-
-  .product__thumbnail[aria-current="true"] {
-    border-color: rgba(var(--color-foreground), 0.5);
   }
 
   .product__thumbnail img {
@@ -70,10 +73,6 @@
 
   .product__info-wrapper {
     padding-left: 5rem;
-  }
-
-  .product__info-wrapper--extra-padding {
-    padding-left: 8rem;
   }
 
   .product__media-container .slider-buttons {
@@ -95,13 +94,13 @@
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
   .product--small:not(.product--no-media) .product__info-wrapper {
-    max-width: 55%;
+    max-width: 35%;
     width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--medium:not(.product--no-media) .product__info-wrapper,
   .product--small:not(.product--no-media) .product__media-wrapper {
-    max-width: 45%;
+    max-width: 100%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
@@ -561,7 +560,6 @@ a.product__text {
 
 .product__main {
   border-bottom: 1px solid rgb(var(--color-foreground));
-  max-width: 1440px;
 }
 
 /* Product media */
@@ -1697,4 +1695,49 @@ table[data-in-to-cm] td {
     padding: 0 1rem;
   }
 
+}
+
+@media screen and (min-width: 750px) {
+  .product__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+}
+
+.product__media-gallery .swiper-scrollbar {
+  background: rgba(0, 0, 0, 0.1);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.product__media-gallery .swiper-scrollbar-drag {
+  background: #0d1c29 !important;
+  display: block !important;
+}
+
+.product__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+/* Default order for all items */
+.product-media-item {
+  order: 999;
+}
+
+/* Image with "All" in the alt text will show second */
+.product-media-item.is-all {
+  order: 2;
+}
+
+/* First image always show in first position */
+.product-media-item.pdp-first-image {
+  order: 1;
+}
+
+/* No order change for videos */
+.product-media-item.is-video {
+  order: 3;
 }

@@ -68,6 +68,17 @@
   top: 0;
 }
 
+.card__hover-image {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.grid__item:hover .card__hover-image {
+  opacity: 1;
+}
+
 .card .media {
   width: 100%;
 }

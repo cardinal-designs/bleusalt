@@ -1,18 +1,3 @@
-const productThumbnailsFn = () => {
-  const productThumbnails = document.querySelectorAll('.product__thumbnail');
-  productThumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener('click', event => {
-      productThumbnails.forEach(thumbnail => {
-        thumbnail.removeAttribute('aria-current');
-      });
-      const index = parseFloat(thumbnail.getAttribute('data-index'));
-      const mainImages = document.querySelector('.product__media-list').swiper;
-      thumbnail.setAttribute('aria-current', true);
-      mainImages.slideTo(index);
-    });
-  });
-};
-
 const inchesToCentimeters = () => {
   if (window.location.href.indexOf('babybleu') > -1) return;
   const tables = document.querySelectorAll('table[data-in-to-cm]');
@@ -66,27 +51,7 @@ const inchesToCentimeters = () => {
   });
 };
 
-const onSwiperChange = () => {
-  const mediaList = document.querySelector('.product__media-list');
-  if (!mediaList) return;
-  const mainSwiper = mediaList.swiper;
-  const productThumbnails = document.querySelectorAll('.product__thumbnail');
-
-  mainSwiper.on('slideChange', (event) => {
-    productThumbnails.forEach(thumbnail => {
-      thumbnail.removeAttribute('aria-current');
-    });
-    let newCurrent = document.querySelector(`.product__thumbnail[data-index="${mainSwiper.activeIndex}"]`);
-    newCurrent.setAttribute('aria-current', true);
-    console.log(event);
-  });
-};
-window.addEventListener('DOMContentLoaded', (event) => {
-  productThumbnailsFn();
-});
-
 window.addEventListener('load', (event) => {
-  onSwiperChange();
   inchesToCentimeters();
 });
 
@@ -367,12 +332,10 @@ class VariantSelects extends HTMLElement {
 
   showVariantImages() {
 
-
     if (!this.multipleColors()) return;
 
     const currentColorEl = document.querySelector('input[type="radio"][name="Color"]:checked');
     if (!currentColorEl) return;
-    const allThumbs = document.querySelectorAll('.product__thumbnail');
     const mainImages = document.querySelectorAll('.product__main-image');
     const mainSwiperEl = document.querySelector('.product__media-list');
     let mainSwiper = mainSwiperEl.swiper;
@@ -391,34 +354,16 @@ class VariantSelects extends HTMLElement {
         const isVideoPlaying = currentVideo => !!(currentVideo.currentTime > 0 && !currentVideo.paused && !currentVideo.ended && currentVideo.readyState > 2);
         console.log('isVideoPlaying: ' + isVideoPlaying);
         if(!isVideoPlaying) {
-          
           currentVideo.play();
         } else {
-          video.currentTime = 0;
-          video.play();
+          currentVideo.currentTime = 0;
+          currentVideo.play();
         }
         // currentVideo.play();
       }
       
     });
 
-    let newIndex = 0;
-    let newFirstImage = false;
-    for (let index = 0; index < allThumbs.length; index++) {
-      allThumbs[index].parentNode.style.display = 'none';
-      const colorAlt = allThumbs[index].querySelector('img').getAttribute('data-alt');
-      if (colorAlt === currentColorEl.value || allThumbs[index].querySelector('img').alt.indexOf('All') !== -1) {
-        if (newIndex === 0) {
-          allThumbs[index].setAttribute('aria-current', true);
-          newFirstImage = allThumbs[index];
-        }
-        allThumbs[index].parentNode.style.display = 'block';
-        allThumbs[index].setAttribute('data-index', newIndex);
-        newIndex++;
-      } else {
-        allThumbs[index].removeAttribute('data-index')
-      }
-    }
     // mainSwiper.destroy();
     mainImages.forEach(image => {
       image.style.display = 'none';
@@ -428,13 +373,6 @@ class VariantSelects extends HTMLElement {
     });
     mainSwiper.update();
     mainSwiper.slideTo(0);
-
-    productThumbnailsFn();
-    // const options = JSON.parse(mainSwiperEl.getAttribute('data-json'));
-    // setTimeout(function() {
-    //   mainSwiper = new Swiper(mainSwiperEl, options);
-    //   newFirstImage.click();
-    // },250);
   }
 
   updateCurrentValues() {
