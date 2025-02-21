@@ -3252,8 +3252,8 @@ details-disclosure > details {
 }
 
 @media screen and (min-width: 749px) {
-  .banner__buttons--desktop {
-    display: initial !important;
+  .banner__buttons--mobile {
+    display: none;
   }
 }
 
