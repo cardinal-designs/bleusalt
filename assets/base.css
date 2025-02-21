@@ -3245,7 +3245,7 @@ details-disclosure > details {
   }
 
   .banner__buttons--desktop {
-    display: none;
+    display: none !important;
   }
 }
 
