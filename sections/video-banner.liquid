@@ -77,6 +77,27 @@
       font-size: 40px;
     }
   }
+
+  @media screen and (max-width: 749px) {
+    .banner__buttons--mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-top: 27px;
+      gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .video-banner .banner__content {
+      position: absolute !important;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 {%- endstyle -%}
 
 <div 
