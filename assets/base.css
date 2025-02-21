@@ -3235,7 +3235,7 @@ details-disclosure > details {
   margin-bottom: 0;
 }
 
-.video-banner__text {
+/* .video-banner__text {
   font-size: 22.4px;
 }
 
@@ -3243,7 +3243,7 @@ details-disclosure > details {
   .video-banner__text {
     font-size: 20px;
   }
-}
+} */
 
 @media screen and (max-width: 749px) {
   .banner__buttons--mobile {
