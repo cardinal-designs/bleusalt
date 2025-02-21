@@ -3235,6 +3235,10 @@ details-disclosure > details {
   margin-bottom: 0;
 }
 
+.video-banner__text {
+  font-size: 22.4px;
+}
+
 .card__selected-color {
   opacity: 1 !important;
   color: #6e6e6e;
