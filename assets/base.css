@@ -3254,6 +3254,7 @@ details-disclosure > details {
 @media screen and (min-width: 749px) {
   .banner__buttons--mobile {
     display: none !important;
+    padding-top: 27px;
   }
 }
 
