@@ -3239,6 +3239,12 @@ details-disclosure > details {
   font-size: 22.4px;
 }
 
+@media screen and (max-width: 749px) {
+  .video-banner__text {
+    font-size: 20px;
+  }
+}
+
 .video-banner__button {
   opacity: 1 !important;
 }
