@@ -832,16 +832,16 @@ const videoControls = (v) => {
       const pauseIcon = button.querySelector('.pause');
       button.addEventListener('click',event => {
         console.log(button.getAttribute('aria-label'))
-        // const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
-        // if(myVideo.paused) {
-        //   myVideo.play();
-        //   playIcon.style.display = 'none';
-        //   pauseIcon.style.display = 'block';
-        // } else {
-        //   myVideo.pause();
-        //   playIcon.style.display = 'block';
-        //   pauseIcon.style.display = 'none';
-        // }
+        const myVideo = document.querySelector('.banner__video');
+        if(myVideo.paused) {
+          myVideo.play();
+          playIcon.style.display = 'none';
+          pauseIcon.style.display = 'block';
+        } else {
+          myVideo.pause();
+          playIcon.style.display = 'block';
+          pauseIcon.style.display = 'none';
+        }
       });
     });
     const volumeButtons = document.querySelectorAll('.muteunmute');
@@ -849,7 +849,7 @@ const videoControls = (v) => {
       const muteIcon = button.querySelector('.mute');
       const unmuteIcon = button.querySelector('.unmute');
       button.addEventListener('click',event => {
-        const myVideo = document.getElementById(button.getAttribute('aria-label'));
+        const myVideo = document.querySelector('.banner__video');
         if(myVideo.muted) {
           myVideo.muted = false;
           muteIcon.style.display = 'block';
