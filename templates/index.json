@@ -27,11 +27,23 @@
             "heading_color": "#FFFFFF",
             "heading_size": "h0"
           }
+        },
+        "buttons_fCtqBt": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button One",
+            "button_link_1": "shopify://collections",
+            "button_bg_color": "#FFFFFF",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "Button Two",
+            "button_link_2": "shopify://collections"
+          }
         }
       },
       "block_order": [
         "text_f3gYBW",
-        "heading_9qBHw9"
+        "heading_9qBHw9",
+        "buttons_fCtqBt"
       ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/042f77f7a8d7495283eaee409a930161.mp4",
