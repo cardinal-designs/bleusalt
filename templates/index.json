@@ -43,8 +43,8 @@
             "button_link_1": "shopify://collections",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "",
-            "button_link_2": ""
+            "button_label_2": "Shop Men's New",
+            "button_link_2": "shopify://collections"
           }
         }
       },
