@@ -3251,9 +3251,9 @@ details-disclosure > details {
   } 
 }
 
-.banner__buttons--mobile {
+/* .banner__buttons--mobile {
   display: none;
-}
+} */
 
 @media screen and (max-width: 749px) {
   .banner__buttons--mobile {
