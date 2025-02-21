@@ -12,20 +12,20 @@
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
-        "heading_ghrWPf": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_color": "#ffffff",
-            "heading_size": "h1"
-          }
-        },
         "text_hTMaJw": {
           "type": "text",
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_color": "#FFFFFF",
             "text_style": "body"
+          }
+        },
+        "heading_ghrWPf": {
+          "type": "heading",
+          "settings": {
+            "heading": "HEADING",
+            "heading_color": "#ffffff",
+            "heading_size": "h1"
           }
         },
         "buttons_Y3UtqD": {
@@ -41,8 +41,8 @@
         }
       },
       "block_order": [
-        "heading_ghrWPf",
         "text_hTMaJw",
+        "heading_ghrWPf",
         "buttons_Y3UtqD"
       ],
       "settings": {
