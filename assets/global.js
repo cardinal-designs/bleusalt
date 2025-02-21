@@ -831,7 +831,7 @@ const videoControls = (v) => {
       const playIcon = button.querySelector('.play');
       const pauseIcon = button.querySelector('.pause');
       button.addEventListener('click',event => {
-        console.log(button.getAttribute('aria-labelledby'))
+        console.log(button.getAttribute('aria-label'))
         // const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
         // if(myVideo.paused) {
         //   myVideo.play();
