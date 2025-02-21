@@ -3225,7 +3225,7 @@ details-disclosure > details {
   background-color: #595959 !important;
 }
 
-.banner__heading span:not(video-banner .banner__heading span){
+.banner__heading span {
   background: #000 !important;
   padding: 5px;
   border-radius: 20px;
