@@ -53,6 +53,10 @@
   --color-foreground: var(--color-base-accent-2);
 }
 
+.color-none {
+  background: none;
+}
+
 :root,
 .color-background-1 {
   --color-link: var(--color-base-outline-button-labels);
