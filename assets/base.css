@@ -3246,16 +3246,6 @@ details-disclosure > details {
 }
 
 @media screen and (max-width: 749px) {
-  .banner__buttons--desktop {
-    display: none !important;
-  } 
-}
-
-/* .banner__buttons--mobile {
-  display: none;
-} */
-
-@media screen and (max-width: 749px) {
   .banner__buttons--mobile {
     display: flex;
     flex-direction: column;
