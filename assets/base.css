@@ -3259,7 +3259,8 @@ details-disclosure > details {
 
 .video-banner__button {
   opacity: 1 !important;
-  min-width: 217px;
+  min-width: 220px;
+  text-transform: capitalize !important;
 }
 
 @media screen and (max-width: 749px) {
