@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-  <noscript><link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}"></noscript>
+{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- if section.settings.video_url != blank and section.settings.video_url_mobile != blank -%}
 
