@@ -3244,11 +3244,11 @@ details-disclosure > details {
 }
 
 @media screen and (max-width: 749px) {
-  .video-banner__banner-content {
-    /* position: absolute;
+  .video-banner .banner__content {
+    position: absolute !important;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
   }
 }
 
