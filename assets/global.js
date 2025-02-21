@@ -833,7 +833,6 @@ const videoControls = (v) => {
         button.addEventListener('click',event => {
           console.log('clicked');
             const myVideo = document.querySelector('.banner__video');
-            console.log(myVideo);
             if(myVideo.paused) {
               myVideo.play();
               playIcon.style.display = 'none';
@@ -851,7 +850,7 @@ const videoControls = (v) => {
         const unmuteIcon = button.querySelector('.unmute');
         button.addEventListener('click',event => {
             const myVideo = document.querySelector('.banner__video');
-            console.log(myVideo);
+            console.log('volume', myVideo);
             if(myVideo.muted) {
               myVideo.muted = false;
               muteIcon.style.display = 'block';
