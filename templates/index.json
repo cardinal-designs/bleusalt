@@ -15,7 +15,7 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Lorem ipsum dolor sit amet, consectetur",
+            "text": "Lorem ipsum dolor",
             "text_color": "#FFFFFF",
             "text_style": "body"
           }
@@ -26,6 +26,14 @@
             "heading": "Lorem ipsum dolor sit",
             "heading_color": "#FFFFFF",
             "heading_size": "h0"
+          }
+        },
+        "text_two_NHhmBc": {
+          "type": "text-two",
+          "settings": {
+            "text": "Lorem ipsum dolor sit amet, consectetur",
+            "text_color": "#FFFFFF",
+            "text_style": "body"
           }
         },
         "buttons_fCtqBt": {
@@ -43,6 +51,7 @@
       "block_order": [
         "text_f3gYBW",
         "heading_9qBHw9",
+        "text_two_NHhmBc",
         "buttons_fCtqBt"
       ],
       "settings": {
