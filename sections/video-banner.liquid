@@ -77,7 +77,7 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2 
-              class="video-banner__heading {{ block.settings.heading_size }}" 
+              class="video-banner__heading" 
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.heading_color }}"
             >
@@ -85,7 +85,7 @@
             </h2>
           {%- when 'text' -%}
             <div 
-              class="video-banner__text {{ block.settings.text_style }}" 
+              class="video-banner__text" 
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.text_color }}"
             >
@@ -93,7 +93,7 @@
             </div>
           {%- when 'text-two' -%}
             <div 
-              class="video-banner__text {{ block.settings.text_style }}" 
+              class="video-banner__text" 
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.text_color }}"
             >
