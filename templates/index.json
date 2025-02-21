@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_color": "#FFFFFF",
+            "heading_color": "#ffffff",
             "heading_size": "h1"
           }
         },
@@ -24,6 +24,7 @@
           "type": "text",
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_color": "#FFFFFF",
             "text_style": "body"
           }
         },
