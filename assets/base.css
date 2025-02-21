@@ -3231,10 +3231,6 @@ details-disclosure > details {
   border-radius: 20px;
 }
 
-.video-banner__heading {
-  margin-bottom: 0;
-}
-
 .card__selected-color {
   opacity: 1 !important;
   color: #6e6e6e;
