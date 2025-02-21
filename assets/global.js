@@ -851,6 +851,7 @@ const videoControls = (v) => {
         button.addEventListener('click',event => {
             const myVideo = document.querySelector('.banner__video');
             console.log('volume', myVideo);
+            myVideo.pause();
             if(myVideo.muted) {
               myVideo.muted = false;
               muteIcon.style.display = 'block';
