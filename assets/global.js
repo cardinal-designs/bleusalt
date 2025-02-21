@@ -829,6 +829,7 @@ const videoControls = (v) => {
     // const buttons = document.querySelectorAll('.playpause');
 document.querySelectorAll('.video-controls').forEach(control => {
     const video = control.closest('.medium-up-hide');
+    const new_video = video.querySelector('.banner__video');
     const playPauseButton = control.querySelector('.playpause');
     const playIcon = playPauseButton.querySelector('.play');
     const pauseIcon = playPauseButton.querySelector('.pause');
@@ -839,12 +840,12 @@ document.querySelectorAll('.video-controls').forEach(control => {
 
     // Play/Pause functionality
     playPauseButton.addEventListener('click', () => {
-        if (video.paused) {
-            video.play();
+        if (new_video.paused) {
+            new_video.play();
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'block';
         } else {
-            video.pause();
+            new_video.pause();
             playIcon.style.display = 'block';
             pauseIcon.style.display = 'none';
         }
@@ -852,9 +853,9 @@ document.querySelectorAll('.video-controls').forEach(control => {
 
     // Mute/Unmute functionality
     muteUnmuteButton.addEventListener('click', () => {
-        video.muted = !video.muted;
-        muteIcon.style.display = video.muted ? 'none' : 'block';
-        unmuteIcon.style.display = video.muted ? 'block' : 'none';
+        new_video.muted = !new_video.muted;
+        muteIcon.style.display = new_video.muted ? 'none' : 'block';
+        unmuteIcon.style.display = new_video.muted ? 'block' : 'none';
     });
 });
 };
