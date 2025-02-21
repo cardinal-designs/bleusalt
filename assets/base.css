@@ -3231,7 +3231,7 @@ details-disclosure > details {
   border-radius: 20px;
 }
 
-.video-banner__heading {
+.video-banner__heading span {
   color: #fff;
 }
 
