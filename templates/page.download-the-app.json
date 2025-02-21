@@ -34,7 +34,7 @@
         "svg_zQAAqH": {
           "type": "svg",
           "settings": {
-            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get a Free Scarf and<br>10% off every order you place through our app!</p>\n<p>Plus get early VIP access to New Product Arrivals<br>& Exclusive App Only discounts available only<br>through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get a Free Scarf and<br>10% off every order you place through our app!<\/p>\n<p>Plus get early VIP access to New Product Arrivals<br>& Exclusive App Only discounts available only<br>through the Bleusalt Mobile App!<\/p>\n<div style=\"text-align: center;\"><\/div>\n<div style=\"text-align: center;\">  <a href=\"https:\/\/apps.apple.com\/us\/app\/bleusalt\/id1618014255\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1407\/3982\/files\/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"><\/a>   <a href=\"https:\/\/play.google.com\/store\/apps\/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1407\/3982\/files\/download-google.png?v=1670486415\" alt=\"Download for Android\"><\/a>\n<\/div>\n<div style=\"text-align: center;\"><\/div>"
           }
         }
       },
@@ -43,7 +43,7 @@
         "svg_zQAAqH"
       ],
       "settings": {
-        "image": "shopify://shop_images/download.jpg",
+        "image": "shopify:\/\/shop_images\/download.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -62,7 +62,7 @@
       "type": "apps",
       "blocks": {
         "958767c2-116f-4a62-a3d0-7bb62dbf695b": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "disabled": true,
           "settings": {
             "product": "",
@@ -81,7 +81,7 @@
       "type": "apps",
       "blocks": {
         "rebuy_personalization_engine_rebuy_widget_6H36VG": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
             "enabled": true,
             "id": "",

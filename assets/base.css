@@ -53,6 +53,10 @@
   --color-foreground: var(--color-base-accent-2);
 }
 
+.color-none {
+  background: none;
+}
+
 :root,
 .color-background-1 {
   --color-link: var(--color-base-outline-button-labels);
@@ -3221,7 +3225,7 @@ details-disclosure > details {
   background-color: #595959 !important;
 }
 
-.banner__heading span{
+.banner__heading span {
   background: #000 !important;
   padding: 5px;
   border-radius: 20px;
@@ -3230,7 +3234,8 @@ details-disclosure > details {
 .card__selected-color {
   opacity: 1 !important;
   color: #6e6e6e;
-}
+} 
+
 .quick-add__colors .link {
   color: #6e6e6e !important;
 }

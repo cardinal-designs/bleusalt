@@ -27,12 +27,12 @@
           "settings": {
             "tile_size": "2x",
             "media_type": "image",
-            "image": "shopify://shop_images/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg",
+            "image": "shopify:\/\/shop_images\/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg",
             "video_url": "",
-            "link": "shopify://pages/bleusalt-styling",
+            "link": "shopify:\/\/pages\/bleusalt-styling",
             "position": 5,
             "title": "Style Tips",
-            "paragraph": "<p>Watch videos how to style the perfect look.</p>",
+            "paragraph": "<p>Watch videos how to style the perfect look.<\/p>",
             "button_text": "Watch Now"
           }
         }
@@ -60,7 +60,7 @@
       "type": "apps",
       "blocks": {
         "rebuy_personalization_engine_rebuy_widget_Q3g3nz": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
             "enabled": true,
             "id": "{{ collection.metafields.custom.rebuy_widget_id.value }}",
@@ -82,14 +82,14 @@
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.<\/p>",
             "heading_size": "h1"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http://127.0.0.1:9292/pages/materials\" title=\"Materials\">Learn more</a></p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http:\/\/127.0.0.1:9292\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -110,7 +110,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "btextimg": "",
-        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
+        "background_image": "shopify:\/\/shop_images\/sustainable-grunge.jpg",
         "background_image_size": "cover",
         "color_scheme": "background-1",
         "full_width": true,
@@ -124,7 +124,7 @@
         "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa": {
           "type": "text",
           "settings": {
-            "text": "<h1>Shop Bleusalt's Women's Dresses</h1><h2>Soft and Sustainable Dresses</h2><p>Elevate your wardrobe with Bleusalt's exceptional collection of women's dresses. Each dress embodies a symphony of timeless silhouettes, meticulously tailored to work for any occasion.</p><h2>Versatile Dresses for Day to Night</h2><p>Our collection features versatile women's dresses that effortlessly transition from day to night. From elegant evening affairs to daytime outings, our dresses are tailored to suit a range of occasions. Dress them up with accessories for a sophisticated look or keep it minimalistic for an effortless, yet polished, style.</p><p>Dresses With Timeless Elegance<br/>Bleusalt embraces the concept of timeless elegance. Our dress designs are meticulously crafted to stand the test of time, ensuring that you can rely on them season after season. With clean lines, flattering silhouettes, and attention to detail, our dresses exude a classic charm that remains fashionable year after year.</p><h2>Build a Minimalist Capsule Wardrobe</h2><p>At Bleusalt, we encourage a minimalist approach to dressing. Our dresses are designed to be versatile, enabling you to create numerous outfits with fewer pieces. By investing in high-quality, timeless dresses, you can curate a capsule wardrobe that exudes sophistication and reduces clutter.</p><h2>Experience the Bleusalt Difference - Shop Our Dresses</h2><p>Shop our Women's Dresses collection today and indulge in the perfect blend of elegance, luxury, and versatility.</p>"
+            "text": "<h1>Shop Bleusalt's Women's Dresses<\/h1><h2>Soft and Sustainable Dresses<\/h2><p>Elevate your wardrobe with Bleusalt's exceptional collection of women's dresses. Each dress embodies a symphony of timeless silhouettes, meticulously tailored to work for any occasion.<\/p><h2>Versatile Dresses for Day to Night<\/h2><p>Our collection features versatile women's dresses that effortlessly transition from day to night. From elegant evening affairs to daytime outings, our dresses are tailored to suit a range of occasions. Dress them up with accessories for a sophisticated look or keep it minimalistic for an effortless, yet polished, style.<\/p><p>Dresses With Timeless Elegance<br\/>Bleusalt embraces the concept of timeless elegance. Our dress designs are meticulously crafted to stand the test of time, ensuring that you can rely on them season after season. With clean lines, flattering silhouettes, and attention to detail, our dresses exude a classic charm that remains fashionable year after year.<\/p><h2>Build a Minimalist Capsule Wardrobe<\/h2><p>At Bleusalt, we encourage a minimalist approach to dressing. Our dresses are designed to be versatile, enabling you to create numerous outfits with fewer pieces. By investing in high-quality, timeless dresses, you can curate a capsule wardrobe that exudes sophistication and reduces clutter.<\/p><h2>Experience the Bleusalt Difference - Shop Our Dresses<\/h2><p>Shop our Women's Dresses collection today and indulge in the perfect blend of elegance, luxury, and versatility.<\/p>"
           }
         }
       },

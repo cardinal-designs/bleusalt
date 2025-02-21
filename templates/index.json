@@ -12,83 +12,60 @@
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
-        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8": {
+        "text_f3gYBW": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Essentials made from the softest fibers on earth",
-            "text_style": "body"
+            "text": "Luxe Styles Now Available in",
+            "text_color": "#ffffff"
           }
         },
-        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82": {
+        "heading_9qBHw9": {
           "type": "heading",
+          "settings": {
+            "heading": "Coco & Navy",
+            "heading_color": "#ffffff",
+            "heading_size": "h0"
+          }
+        },
+        "text_two_NHhmBc": {
+          "type": "text-two",
           "disabled": true,
           "settings": {
-            "heading": "Essentials made from the softest fibers on earth",
-            "heading_size": "h1"
+            "text": "Lorem ipsum dolor sit amet, consectetur",
+            "text_color": "#ffffff"
+          }
+        },
+        "buttons_fCtqBt": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Luxe New Arrivals",
+            "button_link_1": "shopify://collections/bleusalt-luxe",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "Shop All New Arrivals",
+            "button_link_2": "shopify://collections/newest-products"
           }
         }
       },
       "block_order": [
-        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8",
-        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82"
+        "text_f3gYBW",
+        "heading_9qBHw9",
+        "text_two_NHhmBc",
+        "buttons_fCtqBt"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/042f77f7a8d7495283eaee409a930161.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/042f77f7a8d7495283eaee409a930161.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/aac20e0e6727495da80243fa8ad57e3a.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/aac20e0e6727495da80243fa8ad57e3a.mp4",
         "description": "Bleusalt Lifestyle Video",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "none",
         "mobile_content_alignment": "center",
         "video_height_mobile": "125",
         "show_text_below": true
-      }
-    },
-    "aca09b85-9cab-4e81-9e54-55887b34f7c3": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video": "shopify://files/videos/Bleu Runway.mp4",
-        "description": "A video of people wearing Bleusalt clothing in various locations",
-        "full_width": true,
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "acb3120d-e5c4-493b-a533-74ebd0e4a77e": {
-      "type": "otto-image",
-      "disabled": true,
-      "settings": {
-        "image_name": "home-sale-announcement",
-        "image_width_desktop": 100,
-        "image_width_mobile": 100,
-        "image_margin_bottom": 0,
-        "show_content": false,
-        "content_width": 60,
-        "content_background_color": "#ffffff",
-        "content_text_color": "#000000",
-        "content_horizontal_alignment": "center",
-        "content_vertical_alignment": "center",
-        "header_font_tag": "h1",
-        "header_font_size": 2,
-        "header_font_size_mobile": 2,
-        "subheader_font_tag": "h2",
-        "subheader_font_size": 1,
-        "subheader_font_size_mobile": 1,
-        "body_font_tag": "p",
-        "body_font_size": 1,
-        "body_font_size_mobile": 1,
-        "button_background_color": "#000000",
-        "button_background_hover_color": "#ffffff",
-        "button_text_color": "#ffffff",
-        "button_text_hover_color": "#000000"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
@@ -583,8 +560,6 @@
   },
   "order": [
     "16597180576b9dbb68",
-    "aca09b85-9cab-4e81-9e54-55887b34f7c3",
-    "acb3120d-e5c4-493b-a533-74ebd0e4a77e",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
     "featured_collection",
