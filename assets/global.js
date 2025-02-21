@@ -833,6 +833,7 @@ const videoControls = (v) => {
     button.addEventListener('click',event => {
       const currentTarget = event.currentTarget;
       const targetParent = currentTarget.parentElement.parentElement;
+      if (!targetParent) return;
       const myVideo = targetParent.querySelector('.banner__video');
       if(myVideo.paused) {
         myVideo.play();
@@ -852,6 +853,7 @@ const videoControls = (v) => {
     button.addEventListener('click',event => {
       const currentTarget = event.currentTarget;
       const targetParent = currentTarget.parentElement.parentElement;
+      if (!targetParent) return;
       const myVideo = targetParent.querySelector('.banner__video');
       if(myVideo.muted) {
         myVideo.muted = false;
