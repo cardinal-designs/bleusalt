@@ -68,49 +68,6 @@
         "show_text_below": true
       }
     },
-    "aca09b85-9cab-4e81-9e54-55887b34f7c3": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video": "shopify://files/videos/Bleu Runway.mp4",
-        "description": "A video of people wearing Bleusalt clothing in various locations",
-        "full_width": true,
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "acb3120d-e5c4-493b-a533-74ebd0e4a77e": {
-      "type": "otto-image",
-      "disabled": true,
-      "settings": {
-        "image_name": "home-sale-announcement",
-        "image_width_desktop": 100,
-        "image_width_mobile": 100,
-        "image_margin_bottom": 0,
-        "show_content": false,
-        "content_width": 60,
-        "content_background_color": "#ffffff",
-        "content_text_color": "#000000",
-        "content_horizontal_alignment": "center",
-        "content_vertical_alignment": "center",
-        "header_font_tag": "h1",
-        "header_font_size": 2,
-        "header_font_size_mobile": 2,
-        "subheader_font_tag": "h2",
-        "subheader_font_size": 1,
-        "subheader_font_size_mobile": 1,
-        "body_font_tag": "p",
-        "body_font_size": 1,
-        "body_font_size_mobile": 1,
-        "button_background_color": "#000000",
-        "button_background_hover_color": "#ffffff",
-        "button_text_color": "#ffffff",
-        "button_text_hover_color": "#000000"
-      }
-    },
     "d2140650-9af9-4246-8dce-94740740313a": {
       "type": "custom-liquid",
       "disabled": true,
@@ -603,8 +560,6 @@
   },
   "order": [
     "16597180576b9dbb68",
-    "aca09b85-9cab-4e81-9e54-55887b34f7c3",
-    "acb3120d-e5c4-493b-a533-74ebd0e4a77e",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
     "featured_collection",
