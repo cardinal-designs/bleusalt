@@ -12,26 +12,36 @@
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
-        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8": {
-          "type": "text",
-          "disabled": true,
+        "heading_ghrWPf": {
+          "type": "heading",
           "settings": {
-            "text": "Essentials made from the softest fibers on earth",
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_hTMaJw": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
           }
         },
-        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82": {
-          "type": "heading",
-          "disabled": true,
+        "buttons_Y3UtqD": {
+          "type": "buttons",
           "settings": {
-            "heading": "Essentials made from the softest fibers on earth",
-            "heading_size": "h1"
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8",
-        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82"
+        "heading_ghrWPf",
+        "text_hTMaJw",
+        "buttons_Y3UtqD"
       ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/042f77f7a8d7495283eaee409a930161.mp4",
