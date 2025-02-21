@@ -826,44 +826,45 @@ class SlideshowComponent extends SliderComponent {
 customElements.define('slideshow-component', SlideshowComponent);
 
 const videoControls = (v) => {
-    const buttons = document.querySelectorAll('.playpause');
-    buttons.forEach(button => {
-      const playIcon = button.querySelector('.play');
-      const pauseIcon = button.querySelector('.pause');
-      button.addEventListener('click',event => {
-        const currentTarget = event.currentTarget;
-        const targetParent = currentTarget.parentElement.parentElement;
-        const myVideo = targetParent.querySelector('.banner__video');
-        if(myVideo.paused) {
-          myVideo.play();
-          playIcon.style.display = 'none';
-          pauseIcon.style.display = 'block';
-        } else {
-          myVideo.pause();
-          playIcon.style.display = 'block';
-          pauseIcon.style.display = 'none';
-        }
-      });
+  const buttons = document.querySelectorAll('.playpause');
+  buttons.forEach(button => {
+    const playIcon = button.querySelector('.play');
+    const pauseIcon = button.querySelector('.pause');
+    button.addEventListener('click',event => {
+      const currentTarget = event.currentTarget;
+      const targetParent = currentTarget.parentElement;
+      console.log(targetParent)
+      // const myVideo = targetParent.querySelector('.banner__video');
+      if(myVideo.paused) {
+        myVideo.play();
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+      } else {
+        myVideo.pause();
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+      }
     });
-    const volumeButtons = document.querySelectorAll('.muteunmute');
-    volumeButtons.forEach(button => {
-      const muteIcon = button.querySelector('.mute');
-      const unmuteIcon = button.querySelector('.unmute');
-      button.addEventListener('click',event => {
-        const currentTarget = event.currentTarget;
-        const targetParent = currentTarget.parentElement.parentElement;
-        const myVideo = targetParent.querySelector('.banner__video');
-        if(myVideo.muted) {
-          myVideo.muted = false;
-          muteIcon.style.display = 'block';
-          unmuteIcon.style.display = 'none';
-        } else {
-          myVideo.muted = true;
-          muteIcon.style.display = 'none';
-          unmuteIcon.style.display = 'block';
-        }
-      });
-    })
+  });
+  const volumeButtons = document.querySelectorAll('.muteunmute');
+  volumeButtons.forEach(button => {
+    const muteIcon = button.querySelector('.mute');
+    const unmuteIcon = button.querySelector('.unmute');
+    button.addEventListener('click',event => {
+      const currentTarget = event.currentTarget;
+      const targetParent = currentTarget.parentElement.parentElement;
+      const myVideo = targetParent.querySelector('.banner__video');
+      if(myVideo.muted) {
+        myVideo.muted = false;
+        muteIcon.style.display = 'block';
+        unmuteIcon.style.display = 'none';
+      } else {
+        myVideo.muted = true;
+        muteIcon.style.display = 'none';
+        unmuteIcon.style.display = 'block';
+      }
+    });
+  })
 };
 videoControls();
 
