@@ -25,7 +25,7 @@
       "type": "apps",
       "blocks": {
         "958767c2-116f-4a62-a3d0-7bb62dbf695b": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "disabled": true,
           "settings": {
             "product": "",
@@ -44,7 +44,7 @@
       "type": "apps",
       "blocks": {
         "rebuy_personalization_engine_rebuy_widget_6H36VG": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
             "enabled": true,
             "id": "",

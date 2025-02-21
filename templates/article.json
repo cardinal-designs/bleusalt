@@ -33,11 +33,10 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "foursixty_shoppable_social_ugc_custom_minifeed_3TGz3f": {
-          "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_minifeed/e2616dfe-fbb6-4e7d-874d-d250b973556d",
+          "type": "shopify:\/\/apps\/foursixty-shoppable-social-ugc\/blocks\/custom_minifeed\/e2616dfe-fbb6-4e7d-874d-d250b973556d",
           "settings": {
             "foreground_color": "#ffffff",
             "background_color": "#000000",
@@ -71,8 +70,7 @@
         "content",
         "foursixty_shoppable_social_ugc_custom_minifeed_3TGz3f"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
