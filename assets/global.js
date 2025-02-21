@@ -850,7 +850,7 @@ const videoControls = (v) => {
       const unmuteIcon = button.querySelector('.unmute');
       button.addEventListener('click',event => {
         console.log(button);
-        const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
+        const myVideo = document.getElementById(button.getAttribute('aria-label'));
         if(myVideo.muted) {
           myVideo.muted = false;
           muteIcon.style.display = 'block';
