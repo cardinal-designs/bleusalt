@@ -834,7 +834,6 @@ const videoControls = (v) => {
         const currentTarget = event.currentTarget;
         const targetParent = currentTarget.parentElement.parentElement;
         const myVideo = targetParent.querySelector('.banner__video');
-        console.log(button.closest('.medium-up-hide').querySelector('.banner__video'));
         if(myVideo.paused) {
           myVideo.play();
           playIcon.style.display = 'none';
@@ -851,7 +850,9 @@ const videoControls = (v) => {
       const muteIcon = button.querySelector('.mute');
       const unmuteIcon = button.querySelector('.unmute');
       button.addEventListener('click',event => {
-        const myVideo = document.querySelector('.banner__video');
+        const currentTarget = event.currentTarget;
+        const targetParent = currentTarget.parentElement.parentElement;
+        const myVideo = targetParent.querySelector('.banner__video');
         if(myVideo.muted) {
           myVideo.muted = false;
           muteIcon.style.display = 'block';
