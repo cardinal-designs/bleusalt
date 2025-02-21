@@ -830,6 +830,7 @@ const videoControls = (v) => {
 document.querySelectorAll('.video-controls').forEach(control => {
     const video = control.closest('.medium-up-hide');
     const new_video = video.querySelector('.banner__video');
+    console.log(new_video);
     const playPauseButton = control.querySelector('.playpause');
     const playIcon = playPauseButton.querySelector('.play');
     const pauseIcon = playPauseButton.querySelector('.pause');
