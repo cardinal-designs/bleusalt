@@ -833,8 +833,7 @@ const videoControls = (v) => {
     button.addEventListener('click',event => {
       const currentTarget = event.currentTarget;
       const targetParent = currentTarget.closest('.video-controls');
-      console.log(targetParent)
-      // const myVideo = targetParent.querySelector('.banner__video');
+      const myVideo = targetParent.closest('.banner__video');
       if(myVideo.paused) {
         myVideo.play();
         playIcon.style.display = 'none';
