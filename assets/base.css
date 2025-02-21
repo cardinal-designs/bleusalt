@@ -3263,6 +3263,7 @@ details-disclosure > details {
     justify-content: space-between;
     padding: 0 16px;
     margin-top: 27px;
+    gap: 10px;
   }
 }
 
