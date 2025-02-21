@@ -3243,6 +3243,10 @@ details-disclosure > details {
   .video-banner__text {
     font-size: 20px;
   }
+
+  .banner__buttons--desktop {
+    display: none;
+  }
 }
 
 .video-banner__button {
