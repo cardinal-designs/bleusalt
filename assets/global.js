@@ -833,7 +833,8 @@ const videoControls = (v) => {
       button.addEventListener('click',event => {
         const currentTarget = event.currentTarget;
         const targetParent = currentTarget.parentElement.parentElement;
-        const myVideo = currentTarget.closest('.banner__video');
+        const myVideo = targetParent.querySelector('.banner__video');
+        console.log(button.closest('.medium-up-hide').querySelector('.banner__video'));
         if(myVideo.paused) {
           myVideo.play();
           playIcon.style.display = 'none';
