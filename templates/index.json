@@ -15,9 +15,9 @@
         "text_hTMaJw": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Introducing",
             "text_color": "#FFFFFF",
-            "text_style": "body"
+            "text_style": "caption-with-letter-spacing"
           }
         },
         "heading_ghrWPf": {
