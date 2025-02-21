@@ -12,47 +12,26 @@
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
-        "text_hTMaJw": {
+        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "Sub Heading",
-            "text_color": "#ffffff",
-            "text_style": "subtitle"
-          }
-        },
-        "heading_ghrWPf": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bleusalt Heading",
-            "heading_color": "#ffffff",
-            "heading_size": "h0"
-          }
-        },
-        "text_two_hCXBxQ": {
-          "type": "text-two",
-          "settings": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing",
-            "text_color": "#ffffff",
+            "text": "Essentials made from the softest fibers on earth",
             "text_style": "body"
           }
         },
-        "buttons_Y3UtqD": {
-          "type": "buttons",
+        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82": {
+          "type": "heading",
+          "disabled": true,
           "settings": {
-            "button_label_1": "Shop Women's New",
-            "button_link_1": "shopify://collections",
-            "button_bg_color": "#ffffff",
-            "button_text_color": "#0d1c29",
-            "button_label_2": "Shop Men's New",
-            "button_link_2": "shopify://collections"
+            "heading": "Essentials made from the softest fibers on earth",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "text_hTMaJw",
-        "heading_ghrWPf",
-        "text_two_hCXBxQ",
-        "buttons_Y3UtqD"
+        "0bf45662-70ff-46fa-be5b-aeadb4bbe3c8",
+        "b0641e0b-814c-49d9-97b2-7a1cdcc96d82"
       ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/042f77f7a8d7495283eaee409a930161.mp4",
@@ -63,7 +42,7 @@
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "none",
+        "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "video_height_mobile": "125",
         "show_text_below": true
