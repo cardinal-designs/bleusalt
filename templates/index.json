@@ -32,7 +32,7 @@
           "type": "text-two",
           "settings": {
             "text": "Our most innovative performance fabric yet",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_style": "body"
           }
         },
@@ -42,9 +42,7 @@
             "button_label_1": "Shop The Collection",
             "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_bg_color": "#FFFFFF"
           }
         }
       },
