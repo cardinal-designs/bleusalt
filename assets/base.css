@@ -3233,13 +3233,6 @@ details-disclosure > details {
 
 .video-banner__heading {
   margin-bottom: 0;
-  font-size: 52px;
-}
-
-@media screen and (max-width: 749px) {
-  .video-banner__heading {
-    font-size: 40px;
-  }
 }
 
 .video-banner__text {
