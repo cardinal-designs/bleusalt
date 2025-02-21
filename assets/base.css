@@ -1349,7 +1349,7 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
-.button:not(.video-banner__button),
+.button:not(video-banner__button),
 .shopify-challenge__button,
 .customer button,
 button.shopify-payment-button__button--unbranded,
