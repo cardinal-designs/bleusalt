@@ -3241,6 +3241,7 @@ details-disclosure > details {
 
 .video-banner__button {
   border: none !important;
+  border-color: transparent !important;
   opacity: 1 !important;
 }
 
