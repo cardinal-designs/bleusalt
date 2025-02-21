@@ -826,43 +826,37 @@ class SlideshowComponent extends SliderComponent {
 customElements.define('slideshow-component', SlideshowComponent);
 
 const videoControls = (v) => {
-    const buttons = document.querySelectorAll('.playpause');
-    buttons.forEach(button => {
-        const playIcon = button.querySelector('.play');
-        const pauseIcon = button.querySelector('.pause');
-        button.addEventListener('click',event => {
-          console.log('clicked');
-            const myVideo = document.querySelector('.banner__video');
-            if(myVideo.paused) {
-              myVideo.play();
-              playIcon.style.display = 'none';
-              pauseIcon.style.display = 'block';
-            } else {
-              myVideo.pause();
-              playIcon.style.display = 'block';
-              pauseIcon.style.display = 'none';
-            }
-        });
+    // const buttons = document.querySelectorAll('.playpause');
+document.querySelectorAll('.video-controls').forEach(control => {
+    const video = control.closest('.medium-up-hide').querySelector('.banner__video');
+    const playPauseButton = control.querySelector('.playpause');
+    const playIcon = playPauseButton.querySelector('.play');
+    const pauseIcon = playPauseButton.querySelector('.pause');
+    
+    const muteUnmuteButton = control.querySelector('.muteunmute');
+    const muteIcon = muteUnmuteButton.querySelector('.mute');
+    const unmuteIcon = muteUnmuteButton.querySelector('.unmute');
+
+    // Play/Pause functionality
+    playPauseButton.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+        } else {
+            video.pause();
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
     });
-    const volumeButtons = document.querySelectorAll('.muteunmute');
-    volumeButtons.forEach(button => {
-        const muteIcon = button.querySelector('.mute');
-        const unmuteIcon = button.querySelector('.unmute');
-        button.addEventListener('click',event => {
-            const myVideo = document.querySelector('.banner__video');
-            console.log('volume', myVideo);
-            myVideo.pause();
-            if(myVideo.muted) {
-              myVideo.muted = false;
-              muteIcon.style.display = 'block';
-              unmuteIcon.style.display = 'none';
-            } else {
-              myVideo.muted = true;
-              muteIcon.style.display = 'none';
-              unmuteIcon.style.display = 'block';
-            }
-        });
-    })
+
+    // Mute/Unmute functionality
+    muteUnmuteButton.addEventListener('click', () => {
+        video.muted = !video.muted;
+        muteIcon.style.display = video.muted ? 'none' : 'block';
+        unmuteIcon.style.display = video.muted ? 'block' : 'none';
+    });
+});
 };
 videoControls();
 
