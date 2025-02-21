@@ -54,7 +54,7 @@
 }
 
 .color-none {
-  background: none;
+  background: transparent;
 }
 
 :root,
