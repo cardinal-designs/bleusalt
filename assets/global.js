@@ -834,7 +834,7 @@ const videoControls = (v) => {
       const currentTarget = event.currentTarget;
       const targetParent = currentTarget.closest('.banner');
       const myVideo = targetParent.querySelector('.banner__media');
-      console.log(myVideo);
+      console.log(myVideo.closest('.banner__video'));
       if(myVideo.paused) {
         myVideo.play();
         playIcon.style.display = 'none';
