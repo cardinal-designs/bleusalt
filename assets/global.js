@@ -832,7 +832,9 @@ const videoControls = (v) => {
       const pauseIcon = button.querySelector('.pause');
       button.addEventListener('click',event => {
         const currentTarget = event.currentTarget;
-        console.log(currentTarget.parentElement.parentElement);
+        const targetParent = currentTarget.parentElement.parentElement;
+        const targetElement = targetParent.querySelector('.banner__video');
+        console.log(targetElement);
         const myVideo = document.querySelector('.banner__video');
         if(myVideo.paused) {
           myVideo.play();
