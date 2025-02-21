@@ -3243,9 +3243,17 @@ details-disclosure > details {
   .video-banner__text {
     font-size: 20px;
   }
+}
 
+@media screen and (max-width: 749px) {
   .banner__buttons--desktop {
     display: none !important;
+  } 
+}
+
+@media screen and (min-width: 749px) {
+  .banner__buttons--desktop {
+    display: initial !important;
   }
 }
 
