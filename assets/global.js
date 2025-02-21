@@ -833,15 +833,15 @@ const videoControls = (v) => {
       button.addEventListener('click',event => {
         console.log(button.getAttribute('aria-labelledby'))
         // const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
-        if(myVideo.paused) {
-          myVideo.play();
-          playIcon.style.display = 'none';
-          pauseIcon.style.display = 'block';
-        } else {
-          myVideo.pause();
-          playIcon.style.display = 'block';
-          pauseIcon.style.display = 'none';
-        }
+        // if(myVideo.paused) {
+        //   myVideo.play();
+        //   playIcon.style.display = 'none';
+        //   pauseIcon.style.display = 'block';
+        // } else {
+        //   myVideo.pause();
+        //   playIcon.style.display = 'block';
+        //   pauseIcon.style.display = 'none';
+        // }
       });
     });
     const volumeButtons = document.querySelectorAll('.muteunmute');
