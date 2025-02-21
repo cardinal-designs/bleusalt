@@ -15,7 +15,7 @@
         "text_hTMaJw": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "Sub Heading",
             "text_color": "#ffffff",
             "text_style": "subtitle"
           }
@@ -31,7 +31,7 @@
         "text_two_hCXBxQ": {
           "type": "text-two",
           "settings": {
-            "text": "Our most innovative performance fabric yet",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing",
             "text_color": "#ffffff",
             "text_style": "body"
           }
