@@ -846,6 +846,7 @@ const videoControls = (v) => {
     });
     const volumeButtons = document.querySelectorAll('.muteunmute');
     volumeButtons.forEach(button => {
+        console.log(button);
         const muteIcon = button.querySelector('.mute');
         const unmuteIcon = button.querySelector('.unmute');
         button.addEventListener('click',event => {
