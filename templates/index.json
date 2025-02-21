@@ -16,6 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
+            "heading_color": "#FFFFFF",
             "heading_size": "h1"
           }
         },
