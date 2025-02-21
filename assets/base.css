@@ -3257,6 +3257,7 @@ details-disclosure > details {
   width: 100%;
   justify-content: space-between;
   padding: 0 16px;
+  margin-top: 27px;
 }
 
 @media screen and (min-width: 749px) {
