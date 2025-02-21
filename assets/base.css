@@ -3240,8 +3240,8 @@ details-disclosure > details {
 }
 
 .video-banner__button {
-  border: none;
-  opacity: 1;
+  border: none !important;
+  opacity: 1 !important;
 }
 
 .card__selected-color {
