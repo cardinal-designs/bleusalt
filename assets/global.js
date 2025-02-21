@@ -832,7 +832,7 @@ const videoControls = (v) => {
         const pauseIcon = button.querySelector('.pause');
         button.addEventListener('click',event => {
           console.log('clicked');
-            const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
+            const myVideo = document.querySelector('.banner__video');
             console.log(myVideo);
             if(myVideo.paused) {
               myVideo.play();
@@ -850,7 +850,7 @@ const videoControls = (v) => {
         const muteIcon = button.querySelector('.mute');
         const unmuteIcon = button.querySelector('.unmute');
         button.addEventListener('click',event => {
-            const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
+            const myVideo = document.querySelector('.banner__video');
             console.log(myVideo);
             if(myVideo.muted) {
               myVideo.muted = false;
