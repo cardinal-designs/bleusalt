@@ -826,39 +826,40 @@ class SlideshowComponent extends SliderComponent {
 customElements.define('slideshow-component', SlideshowComponent);
 
 const videoControls = (v) => {
-    // const buttons = document.querySelectorAll('.playpause');
-document.querySelectorAll('.video-controls').forEach(control => {
-    const video = control.closest('.medium-up-hide');
-    const new_video = control.closest('.banner__video');
-    console.log(new_video);
-    const playPauseButton = control.querySelector('.playpause');
-    const playIcon = playPauseButton.querySelector('.play');
-    const pauseIcon = playPauseButton.querySelector('.pause');
-    
-    const muteUnmuteButton = control.querySelector('.muteunmute');
-    const muteIcon = muteUnmuteButton.querySelector('.mute');
-    const unmuteIcon = muteUnmuteButton.querySelector('.unmute');
-
-    // Play/Pause functionality
-    playPauseButton.addEventListener('click', () => {
-        if (new_video.paused) {
-            new_video.play();
-            playIcon.style.display = 'none';
-            pauseIcon.style.display = 'block';
-        } else {
-            new_video.pause();
-            playIcon.style.display = 'block';
-            pauseIcon.style.display = 'none';
-        }
+    const buttons = document.querySelectorAll('.playpause');
+    buttons.forEach(button => {
+        const playIcon = button.querySelector('.play');
+        const pauseIcon = button.querySelector('.pause');
+        button.addEventListener('click',event => {
+            const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
+            if(myVideo.paused) {
+              myVideo.play();
+              playIcon.style.display = 'none';
+              pauseIcon.style.display = 'block';
+            } else {
+              myVideo.pause();
+              playIcon.style.display = 'block';
+              pauseIcon.style.display = 'none';
+            }
+        });
     });
-
-    // Mute/Unmute functionality
-    muteUnmuteButton.addEventListener('click', () => {
-        new_video.muted = !new_video.muted;
-        muteIcon.style.display = new_video.muted ? 'none' : 'block';
-        unmuteIcon.style.display = new_video.muted ? 'block' : 'none';
-    });
-});
+    const volumeButtons = document.querySelectorAll('.muteunmute');
+    volumeButtons.forEach(button => {
+        const muteIcon = button.querySelector('.mute');
+        const unmuteIcon = button.querySelector('.unmute');
+        button.addEventListener('click',event => {
+            const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
+            if(myVideo.muted) {
+              myVideo.muted = false;
+              muteIcon.style.display = 'block';
+              unmuteIcon.style.display = 'none';
+            } else {
+              myVideo.muted = true;
+              muteIcon.style.display = 'none';
+              unmuteIcon.style.display = 'block';
+            }
+        });
+    })
 };
 videoControls();
 
