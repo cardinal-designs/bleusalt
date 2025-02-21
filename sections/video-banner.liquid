@@ -65,7 +65,11 @@
               <span>{{ block.settings.heading | escape }}</span>
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div 
+              class="banner__text {{ block.settings.text_style }}" 
+              {{ block.shopify_attributes }}
+              style="color: {{ block.settings.text_color }}"
+            >
               <span>{{ block.settings.text | escape }}</span>
             </div>
           {%- when 'buttons' -%}
@@ -329,6 +333,11 @@
           "id": "text",
           "default": "Give customers details about the banner image(s) or content on the template.",
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
         },
         {
           "type": "select",
