@@ -828,7 +828,7 @@ customElements.define('slideshow-component', SlideshowComponent);
 const videoControls = (v) => {
     // const buttons = document.querySelectorAll('.playpause');
 document.querySelectorAll('.video-controls').forEach(control => {
-    const video = control.closest('.medium-up-hide').querySelector('.banner__video');
+    const video = control.closest('.medium-up-hide');
     const playPauseButton = control.querySelector('.playpause');
     const playIcon = playPauseButton.querySelector('.play');
     const pauseIcon = playPauseButton.querySelector('.pause');
