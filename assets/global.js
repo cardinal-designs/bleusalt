@@ -846,21 +846,21 @@ const videoControls = (v) => {
     });
     const volumeButtons = document.querySelectorAll('.muteunmute');
     volumeButtons.forEach(button => {
-      console.log(button);
-      // const muteIcon = button.querySelector('.mute');
-      // const unmuteIcon = button.querySelector('.unmute');
-      // button.addEventListener('click',event => {
-      //   const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
-      //   if(myVideo.muted) {
-      //     myVideo.muted = false;
-      //     muteIcon.style.display = 'block';
-      //     unmuteIcon.style.display = 'none';
-      //   } else {
-      //     myVideo.muted = true;
-      //     muteIcon.style.display = 'none';
-      //     unmuteIcon.style.display = 'block';
-      //   }
-      // });
+      const muteIcon = button.querySelector('.mute');
+      const unmuteIcon = button.querySelector('.unmute');
+      button.addEventListener('click',event => {
+        console.log(button);
+        const myVideo = document.getElementById(button.getAttribute('aria-labelledby'));
+        if(myVideo.muted) {
+          myVideo.muted = false;
+          muteIcon.style.display = 'block';
+          unmuteIcon.style.display = 'none';
+        } else {
+          myVideo.muted = true;
+          muteIcon.style.display = 'none';
+          unmuteIcon.style.display = 'block';
+        }
+      });
     })
 };
 videoControls();
