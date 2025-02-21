@@ -3252,17 +3252,16 @@ details-disclosure > details {
 }
 
 .banner__buttons--mobile {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 16px;
-  margin-top: 27px;
+  display: none !important;
 }
 
-@media screen and (min-width: 749px) {
+@media screen and (max-width: 749px) {
   .banner__buttons--mobile {
-    display: none !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 16px;
     margin-top: 27px;
   }
 }
