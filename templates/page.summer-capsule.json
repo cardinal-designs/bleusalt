@@ -15,7 +15,7 @@
         "template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-2024.jpg",
+            "image": "shopify://shop_images/holiday-2024.jpg",
             "title": "",
             "text": "",
             "html": "",
@@ -27,7 +27,7 @@
           "type": "column",
           "settings": {
             "title": "7 PIECE HOLIDAY WARDROBE",
-            "text": "<p><br\/>The LUXE Big Rock Blazer<br\/>The Cindy V LITE<br\/>The Tube Skirt<br\/>The 2 Yard Wrap<br\/>The Long Sleeve Crew Dress<br\/>The Cindy Pant<br\/>The Classic Crew<br\/><br\/><strong>$1000<br\/><br\/><\/strong><br\/>Save 20% when you buy a Wardrobe<br\/>Select Sizes & Colors Below...<\/p>",
+            "text": "<p><br/>The LUXE Big Rock Blazer<br/>The Cindy V LITE<br/>The Tube Skirt<br/>The 2 Yard Wrap<br/>The Long Sleeve Crew Dress<br/>The Cindy Pant<br/>The Classic Crew<br/><br/><strong>$1000<br/><br/></strong><br/>Save 20% when you buy a Wardrobe<br/>Select Sizes & Colors Below...</p>",
             "html": "",
             "link_label": "",
             "link": ""
@@ -70,7 +70,7 @@
       "settings": {
         "title": "SELECT YOUR SIZES",
         "collection": "fall-2024-capsule-wardrobe",
-        "discount_percentage": "19.159"
+        "discount_percentage": "22.747"
       }
     }
   },
