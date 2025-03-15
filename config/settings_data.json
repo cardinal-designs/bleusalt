@@ -27,6 +27,7 @@
     "badge_position": "top left",
     "badge_corner_radius": 2,
     "sale_badge_color_scheme": "accent-2",
+    "show_sold_out": false,
     "social_twitter_link": "",
     "social_facebook_link": "https://www.facebook.com/bleusalt/",
     "social_pinterest_link": "",
