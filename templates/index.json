@@ -22,7 +22,7 @@
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Luxe Shacket",
+            "heading": "The Shacket",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -38,7 +38,7 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Luxe New Arrivals",
+            "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections/bleusalt-luxe",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
