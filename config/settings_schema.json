@@ -976,6 +976,12 @@
         "label": "t:settings_schema.badges.settings.sale_badge_color_scheme.label"
       },
       {
+        "type": "checkbox",
+        "id": "show_sold_out",
+        "default": false,
+        "label": "Show sold out badge?"
+      },
+      {
         "type": "select",
         "id": "sold_out_badge_color_scheme",
         "options": [
