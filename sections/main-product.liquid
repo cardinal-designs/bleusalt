@@ -190,7 +190,9 @@
        {% endfor %}
         <div class="pdp__badge">
           {%- if product.available == false -%}
-            <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+            {%- if settings.show_sold_out -%}
+              <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+            {%- endif -%}
           {%- elsif product.compare_at_price > product.price and product.available -%}
             <span id="Badge-{{ section_id }}-{{ product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}
