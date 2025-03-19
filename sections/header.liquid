@@ -640,17 +640,16 @@
             {%- assign logo_alt = section.settings.white_logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.white_logo.aspect_ratio -%}
             {{ section.settings.white_logo | image_url: width: section.settings.width | image_tag:
-              class: 'header__heading-logo',
+              class: 'header__heading-logo logo-light',
               widths: '50, 100, 150, 200, 250, 300, 400, 500',
               height: logo_height,
               width: section.settings.logo_width,
               alt: logo_alt
             }}
-          {%- elsif section.settings.logo != blank -%}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-              class: 'header__heading-logo',
+              class: 'header__heading-logo logo-dark',
               widths: '50, 100, 150, 200, 250, 300, 400, 500',
               height: logo_height,
               width: section.settings.logo_width,
