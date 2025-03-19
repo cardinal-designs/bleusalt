@@ -115,7 +115,7 @@
         "custom_css": [],
         "settings": {
           "below_logo": true,
-          "color_scheme": "inverse",
+          "color_scheme": "accent-1",
           "logo_width": 90,
           "logo_position": "middle-center",
           "menu": "main-menu-2022",
