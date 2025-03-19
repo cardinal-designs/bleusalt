@@ -64,14 +64,20 @@
 
   .template--index .header-wrapper:not(.sticky-header-wrapper) .header__heading svg *,
   .template--index .header-wrapper:not(.sticky-header-wrapper) .header__icon svg *,
-  .template--index .header-wrapper:not(.sticky-header-wrapper) .header__icon,
   .template--index:not(.sticky-header-enabled) #icon-search * {
     fill: #fff;
     stroke: #fff;
     color: #fff;
   }
 
-  .template--index .header-wrapper .header__icon,
+  .template--index .header-wrapper .header__icon {
+    color: #fff;
+  }
+  
+  .template--index .header-wrapper.sticky-header-wrapper .header__icon {
+    color: #0d1c29;
+  }
+  
   .template--index .header-wrapper.color-inverse .header__under-logo .header__menu-item,
   .template--index .header-wrapper.color-inverse .header__under-logo .top-right-link {
     color: #0d1c29;
