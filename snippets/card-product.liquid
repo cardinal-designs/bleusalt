@@ -71,6 +71,8 @@
 
         
         
+        {% comment %}
+          
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
@@ -157,8 +159,8 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        {% comment %}
-          
+
+        {% endcomment %}
 
           {%- if card_product.featured_media -%}
             <div class="card__media">
@@ -233,8 +235,6 @@
               </div>
             </div>
           {%- endif -%}
-        {% endcomment %}
-
 
 
 
