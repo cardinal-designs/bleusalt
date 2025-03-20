@@ -68,10 +68,15 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+
+        
+        {% comment %}
+          
+        
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
-              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+
               <img
                 srcset="{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
@@ -88,7 +93,7 @@
                 width="{{ card_product.featured_media.width }}"
                 height="{{ card_product.featured_media.height }}"
               >
-              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+
 
               {%- if card_product.media[1] != nil and show_secondary_image -%}
                 <img
@@ -110,11 +115,11 @@
               {%- endif -%}
             </div>
 
-            {%- comment -%} Hover image {%- endcomment -%}
+
             {% assign hasHover_image = true %}
             {%- if hasHover_image -%}
               {%- assign alt_image = null -%}
-              {%- comment -%} Check images alt that has "All" {%- endcomment -%}
+
               {%- for media in card_product.media -%}
                 {%- if media.media_type != 'video' -%}
                   {%- if media.alt contains 'All' -%}
@@ -154,6 +159,11 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+
+        {% endcomment %}
+
+
+        
         <div class="card__content">
           <div class="card__information">
             <h2 class="card__heading"{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
