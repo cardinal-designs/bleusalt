@@ -57,7 +57,7 @@
         "video_url": "https://cdn.shopify.com/videos/c/o/v/0bd65ad64fa844068e7b1d3e9ddb2fdb.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/0bd65ad64fa844068e7b1d3e9ddb2fdb.mp4",
         "description": "Introducing The Shacket by Bleusalt",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 30,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,

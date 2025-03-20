@@ -210,7 +210,7 @@
 .close-announcement {
   position: absolute;
   right: 10px;
-  top: 22px;
+  top: 10px;
   display: flex;
   align-items: center;
   z-index: 5;

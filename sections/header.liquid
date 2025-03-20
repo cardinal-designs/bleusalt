@@ -51,6 +51,11 @@
     transition: all 0.3s;
   }
 
+  .template--index .header-wrapper .header__under-logo .header__menu-item,
+  .template--index .header-wrapper .header__under-logo .top-right-link {
+    color: #0d1c29;
+  }
+
   .template--index .header-wrapper:not(.sticky-header-wrapper) .header__under-logo .header__menu-item,
   .template--index .header-wrapper:not(.sticky-header-wrapper) .header__under-logo .top-right-link {
     color: #fff;
@@ -62,8 +67,17 @@
   .template--index:not(.sticky-header-enabled) #icon-search * {
     fill: #fff;
     stroke: #fff;
+    color: #fff;
   }
 
+  .template--index .header-wrapper .header__icon--search {
+    color: #fff;
+  }
+  
+  .template--index .header-wrapper.sticky-header-wrapper .header__icon--search {
+    color: #0d1c29;
+  }
+  
   .template--index .header-wrapper.color-inverse .header__under-logo .header__menu-item,
   .template--index .header-wrapper.color-inverse .header__under-logo .top-right-link {
     color: #0d1c29;
@@ -73,7 +87,7 @@
   .template--index .header-wrapper.color-inverse .header__icon svg *,
   .template--index:not(.sticky-header-enabled) #icon-search * {
     fill: #0d1c29;
-    stroke:#0d1c29;
+    stroke: #0d1c29;
   }
 
   .template--index:not(.sticky-header-enabled) #icon-search * {
@@ -82,6 +96,31 @@
 
   .template--index .header-wrapper.sticky-header-wrapper {
     background: rgba(255,255,255,0.9);
+  }
+
+  .header__icon .icon-account path {
+    fill: #0d1c29;
+    stroke: #0d1c29;
+  }
+
+  .header__heading-logo.logo-light {
+    display: none;
+  }
+
+  .template--index:not(.sticky-header-enabled) .header__heading-logo.logo-light {
+    display: flex;
+  }
+
+  .template--index .header__heading-logo.logo-light {
+    display: none;
+  }
+
+  .template--index:not(.sticky-header-enabled) .header__heading-logo.logo-dark {
+    display: none;
+  }
+
+  .template--index .header__heading-logo.logo-dark {
+    display: flex;
   }
 
   @media screen and (min-width: 990px) {
@@ -225,9 +264,9 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewbox="0 0 14 19" fill="none">
-    <path d="M.184 16.04l3.313-3.94c-2.334-2.447-2.468-6.41-.305-9.03C5.355.452 9.062.088 11.638 2.24c2.576 2.155 3.125 6.077 1.25 8.938-1.874 2.86-5.519 3.664-8.305 1.83L1.2 17.021a.67.67 0 01-.509.25.73.73 0 01-.467-.191.753.753 0 01-.224-.51.76.76 0 01.183-.53zm12.235-8.465c.006-2.01-1.126-3.824-2.867-4.597-1.741-.774-3.748-.352-5.084 1.066C3.132 5.464 2.731 7.6 3.452 9.457c.72 1.857 2.42 3.068 4.307 3.068 2.568 0 4.653-2.214 4.66-4.95z" fill="#000" fill-rule="nonzero"></path>
+    <path d="M.184 16.04l3.313-3.94c-2.334-2.447-2.468-6.41-.305-9.03C5.355.452 9.062.088 11.638 2.24c2.576 2.155 3.125 6.077 1.25 8.938-1.874 2.86-5.519 3.664-8.305 1.83L1.2 17.021a.67.67 0 01-.509.25.73.73 0 01-.467-.191.753.753 0 01-.224-.51.76.76 0 01.183-.53zm12.235-8.465c.006-2.01-1.126-3.824-2.867-4.597-1.741-.774-3.748-.352-5.084 1.066C3.132 5.464 2.731 7.6 3.452 9.457c.72 1.857 2.42 3.068 4.307 3.068 2.568 0 4.653-2.214 4.66-4.95z" fill="currentColor" fill-rule="nonzero"></path>
   </symbol>
-  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <symbol id="icon-close" class="icon icon-close" fill="none"  viewBox="0 0 18 17">
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
@@ -617,9 +656,26 @@
           aria-label="bleusalt top logo"
         >
           <span class="visually-hidden">Bleusalt logo</span>
-          {% render 'icon-logo' %}
-          {% comment %}
-          {%- if section.settings.logo != blank -%}
+          {%- if section.settings.white_logo != blank -%}
+            {%- assign logo_alt = section.settings.white_logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.white_logo.aspect_ratio -%}
+            {{ section.settings.white_logo | image_url: width: section.settings.width | image_tag:
+              class: 'header__heading-logo logo-light',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt
+            }}
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+            {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+              class: 'header__heading-logo logo-dark',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt
+            }}
+          {%- elsif section.settings.logo != blank -%}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
@@ -632,7 +688,6 @@
           {%- else -%}
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
-          {% endcomment %}
         </a>
     {%- if request.page_type == 'index' -%}
       </h1>
@@ -647,14 +702,22 @@
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false"  >
-                <use href="#icon-search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" viewBox="0 0 14 19" fill="none">
+                <path
+                  d="M.184 16.04l3.313-3.94c-2.334-2.447-2.468-6.41-.305-9.03C5.355.452 9.062.088 11.638 2.24c2.576 2.155 3.125 6.077 1.25 8.938-1.874 2.86-5.519 3.664-8.305 1.83L1.2 17.021a.67.67 0 01-.509.25.73.73 0 01-.467-.191.753.753 0 01-.224-.51.76.76 0 01.183-.53zm12.235-8.465c.006-2.01-1.126-3.824-2.867-4.597-1.741-.774-3.748-.352-5.084 1.066C3.132 5.464 2.731 7.6 3.452 9.457c.72 1.857 2.42 3.068 4.307 3.068 2.568 0 4.653-2.214 4.66-4.95z"
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                ></path>
               </svg>
-              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false"  >
-                <use href="#icon-close">
+              <svg xmlns="http://www.w3.org/2000/svg" class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" viewBox="0 0 18 17" fill="none">
+                <path
+                  d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+                  fill="currentColor"
+                ></path>
               </svg>
             </span>
           </summary>
+
           <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
@@ -965,6 +1028,12 @@
       "type": "image_picker",
       "id": "logo",
       "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "white_logo",
+      "label": "Optional logo (white)",
+      "info": "If you use the optional logo, the main logo is required."
     },
     {
       "type": "range",
