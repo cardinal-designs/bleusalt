@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "New Arrival",
+            "text": "New Arrival's",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Shacket",
+            "heading": "The Kaia Pant & Kaia Crop Skater",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -54,10 +54,10 @@
         "buttons_fCtqBt"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/0bd65ad64fa844068e7b1d3e9ddb2fdb.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/0bd65ad64fa844068e7b1d3e9ddb2fdb.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/b39f8f5c4834430083b2a7438cfc5411.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b39f8f5c4834430083b2a7438cfc5411.mp4",
         "description": "Introducing The Shacket by Bleusalt",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 0,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
