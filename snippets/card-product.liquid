@@ -74,10 +74,12 @@
             <div class="media media--transparent media--hover-effect">
               {%- assign main_image = card_product.featured_media -%}
               {%- for media in card_product.media -%}
-                {%- if media.alt and media.alt contains 'All | ' -%}
-                  {%- assign main_image = media -%}
-                  {%- break -%}
-                {%- endif -%}
+                {% if media.media_type == 'image' %}
+                  {%- if media.alt and media.alt contains 'All | ' -%}
+                    {%- assign main_image = media -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {% endif %}
               {%- endfor -%}
         
               <img
