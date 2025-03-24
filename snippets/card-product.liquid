@@ -68,69 +68,59 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
-              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+              {%- assign main_image = card_product.featured_media -%}
+              {%- for media in card_product.media -%}
+                {% if media.media_type == 'image' %}
+                  {%- if media.alt and media.alt contains 'All | ' -%}
+                    {%- assign main_image = media -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {% endif %}
+              {%- endfor -%}
+        
               <img
-                srcset="{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w"
-                src="{{ card_product.featured_media | image_url: width: 533 }}"
+                srcset="{%- if main_image.width >= 165 -%}{{ main_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if main_image.width >= 360 -%}{{ main_image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if main_image.width >= 533 -%}{{ main_image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if main_image.width >= 720 -%}{{ main_image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if main_image.width >= 940 -%}{{ main_image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if main_image.width >= 1066 -%}{{ main_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ main_image | image_url }} {{ main_image.width }}w"
+                src="{{ main_image | image_url: width: 533 }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt="{{ card_product.featured_media.alt | escape }}"
+                alt="{{ main_image.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}loading="lazy"{% endunless %}
-                width="{{ card_product.featured_media.width }}"
-                height="{{ card_product.featured_media.height }}"
+                width="{{ main_image.width }}"
+                height="{{ main_image.height }}"
               >
-              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
-              {%- if card_product.media[1] != nil and show_secondary_image -%}
-                <img
-                  srcset="{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w"
-                  src="{{ card_product.media[1] | image_url: width: 533 }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                  alt=""
-                  class="motion-reduce"
-                  loading="lazy"
-                  width="{{ card_product.media[1].width }}"
-                  height="{{ card_product.media[1].height }}"
-                >
-              {%- endif -%}
-            </div>
-
-            {%- comment -%} Hover image {%- endcomment -%}
-            {%- if hasHover_image -%}
-              {%- assign alt_image = null -%}
-              {%- comment -%} Check images alt that has "All" {%- endcomment -%}
-              {%- for media in card_product.media -%}
-                {%- if media.media_type != 'video' -%}
-                  {%- if media.alt contains 'All' -%}
-                    {%- assign alt_image = media -%}
+              {%- assign hover_image = null -%}
+              {%- assign default_variant = card_product.variants.first -%}
+              {%- if default_variant and default_variant.option1 -%}
+                {%- assign color_name = default_variant.option1 -%}
+                {%- for media in card_product.media -%}
+                  {%- if media.alt and media.alt contains color_name -%}
+                    {%- assign hover_image = media -%}
+                    {%- break -%}
                   {%- endif -%}
-                {%- endif -%}
-              {%- endfor -%}
-              <div class="card__hover-image media media--transparent">
+                {%- endfor -%}
+              {%- endif -%}
+        
+              <div class="card__hover-image-1 card__hover-image media media--transparent">
                 <img
-                  srcset="{%- if alt_image -%}
-                    {%- if alt_image.width >= 165 -%}{{ alt_image | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if alt_image.width >= 360 -%}{{ alt_image | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if alt_image.width >= 533 -%}{{ alt_image | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if alt_image.width >= 720 -%}{{ alt_image | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if alt_image.width >= 940 -%}{{ alt_image | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if alt_image.width >= 1066 -%}{{ alt_image | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ alt_image | image_url }} {{ alt_image.width }}w
+                  srcset="{%- if hover_image -%}
+                    {%- if hover_image.width >= 165 -%}{{ hover_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if hover_image.width >= 360 -%}{{ hover_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if hover_image.width >= 533 -%}{{ hover_image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if hover_image.width >= 720 -%}{{ hover_image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if hover_image.width >= 940 -%}{{ hover_image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if hover_image.width >= 1066 -%}{{ hover_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ hover_image | image_url }} {{ hover_image.width }}w
                   {%- else -%}
                     {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
                     {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
@@ -141,18 +131,23 @@
                     {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
                   {%- endif -%}
                   "
-                  src="{% if alt_image %}{{ alt_image | image_url: width: 533 }}{% else %}{{ card_product.media[1] | image_url: width: 533 }}{% endif %}"
+                  src="{% if hover_image %}{{ hover_image | image_url: width: 533 }}{% else %}{{ card_product.media[1] | image_url: width: 533 }}{% endif %}"
                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                  alt="{% if alt_image %}{{ alt_image.alt }}{% else %}{{ card_product.media[1].alt }}{% endif %}"
+                  alt="{% if hover_image %}{{ hover_image.alt }}{% else %}{{ card_product.media[1].alt }}{% endif %}"
                   class="motion-reduce"
                   loading="lazy"
-                  width="{% if alt_image %}{{ alt_image.width }}{% else %}{{ card_product.media[1].width }}{% endif %}"
-                  height="{% if alt_image %}{{ alt_image.height }}{% else %}{{ card_product.media[1].height }}{% endif %}"
+                  width="{% if hover_image %}{{ hover_image.width }}{% else %}{{ card_product.media[1].width }}{% endif %}"
+                  height="{% if hover_image %}{{ hover_image.height }}{% else %}{{ card_product.media[1].height }}{% endif %}"
                 >
               </div>
-            {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
+
+
+
+
+        
         <div class="card__content">
           <div class="card__information">
             <h2 class="card__heading"{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
