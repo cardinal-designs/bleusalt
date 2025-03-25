@@ -111,11 +111,12 @@
                 {%- endfor -%}
               {%- endif -%}
 
-              {% if main_image == hover_image %}
-                {%- assign hover_image = card_product.media[1] -%}
-              {% endif %}
+              
         
               <div class="card__hover-image-1 card__hover-image media media--transparent" {% if main_image == hover_image %} data-hover-image="{{ hover_image }}"{% endif %}>
+                {% if main_image == hover_image %}
+                  {%- assign hover_image = card_product.media[1] -%}
+                {% endif %}
                 <img
                   srcset="{%- if hover_image -%}
                     {%- if hover_image.width >= 165 -%}{{ hover_image | image_url: width: 165 }} 165w,{%- endif -%}
