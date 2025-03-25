@@ -23,10 +23,10 @@
       "blocks": {
         "marketing_tile_KnNXCt": {
           "type": "marketing_tile",
-          "disabled": true,
           "settings": {
             "tile_size": "1x",
             "media_type": "image",
+            "image": "shopify://shop_images/meghan.jpg",
             "video_url": "",
             "link": "",
             "position": 2,
