@@ -110,6 +110,10 @@
                   {%- endif -%}
                 {%- endfor -%}
               {%- endif -%}
+
+              {% if main_image == hover_image %}
+                <pre>Yes Matching</pre>
+              {% endif %}
         
               <div class="card__hover-image-1 card__hover-image media media--transparent">
                 <img
