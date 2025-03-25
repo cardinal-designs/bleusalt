@@ -113,6 +113,7 @@
 
               {% if main_image == hover_image %}
                 <pre>Yes Matching</pre>
+                {%- assign hover_image = card_product.media[1] -%}
               {% endif %}
         
               <div class="card__hover-image-1 card__hover-image media media--transparent">
