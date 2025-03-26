@@ -20,25 +20,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "blocks": {
-        "marketing_tile_KnNXCt": {
-          "type": "marketing_tile",
-          "settings": {
-            "tile_size": "1x",
-            "media_type": "image",
-            "image": "shopify://shop_images/meghan2.jpg",
-            "video_url": "",
-            "link": "",
-            "position": 2,
-            "title": "Meghan's Favorites",
-            "paragraph": "",
-            "button_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "marketing_tile_KnNXCt"
-      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
