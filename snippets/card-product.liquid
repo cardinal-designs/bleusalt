@@ -99,6 +99,10 @@
                 height="{{ main_image.height }}"
               >
 
+
+              {{ show_secondary_image }}--show_secondary_image
+
+              
               {%- assign hover_image = show_secondary_image -%}
               {%- assign default_variant = card_product.variants.first -%}
               {%- if default_variant and default_variant.option1 -%}
