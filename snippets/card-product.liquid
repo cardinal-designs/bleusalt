@@ -99,7 +99,7 @@
                 height="{{ main_image.height }}"
               >
 
-              {%- assign hover_image = null -%}
+              {%- assign hover_image = second_image -%}
               {%- assign default_variant = card_product.variants.first -%}
               {%- if default_variant and default_variant.option1 -%}
                 {%- assign color_name = default_variant.option1 -%}
