@@ -73,6 +73,8 @@
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
               {%- assign main_image = card_product.featured_media -%}
+
+              {% if show_life_image %}
               {%- for media in card_product.media -%}
                 {% if media.media_type == 'image' %}
                   {%- if media.alt and media.alt contains 'All | ' -%}
@@ -81,6 +83,7 @@
                   {%- endif -%}
                 {% endif %}
               {%- endfor -%}
+              {% endif %}
         
               <img
                 srcset="{%- if main_image.width >= 165 -%}{{ main_image | image_url: width: 165 }} 165w,{%- endif -%}
