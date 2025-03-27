@@ -117,6 +117,7 @@
                 {%- assign hover_image = card_product.media[1] -%}
               {% endif %}
 
+              {% if hover_image != blank %}
               <div class="card__hover-image-1 card__hover-image media media--transparent" {% if matching_image %} data-hover-image="{{ hover_image }}"{% endif %}>
                 <img
                   srcset="{%- if hover_image -%}
@@ -146,6 +147,8 @@
                   height="{% if hover_image %}{{ hover_image.height }}{% else %}{{ card_product.media[1].height }}{% endif %}"
                 >
               </div>
+              {% endif %}
+              
             </div>
           </div>
         {%- endif -%}
