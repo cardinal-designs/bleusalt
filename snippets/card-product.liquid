@@ -103,7 +103,7 @@
               {{ show_secondary_image }}--show_secondary_image
 
               
-              {%- assign hover_image = show_secondary_image -%}
+              {%- assign hover_image = null -%}
               {%- assign default_variant = card_product.variants.first -%}
               {%- if default_variant and default_variant.option1 -%}
                 {%- assign color_name = default_variant.option1 -%}
@@ -121,7 +121,7 @@
                 {%- assign hover_image = card_product.media[1] -%}
               {% endif %}
 
-              {% if hover_image != blank %}
+              {% if hover_image != blank and show_secondary_image %}
               <div class="card__hover-image-1 card__hover-image media media--transparent" {% if matching_image %} data-hover-image="{{ hover_image }}"{% endif %}>
                 <img
                   srcset="{%- if hover_image -%}
