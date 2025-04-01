@@ -14,7 +14,6 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "Experience Sustainable Luxury",
             "text_color": "#ffffff"
@@ -22,9 +21,8 @@
         },
         "heading_9qBHw9": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "The Kaia Pant & Kaia Crop Skater",
+            "heading": "Feel To Believe",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
