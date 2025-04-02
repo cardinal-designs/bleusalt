@@ -512,11 +512,25 @@
         <!-- Start blocks-->
         <!-- Subtotals-->
 
+          {% assign amount_due_today = cart.total_price %}
+          {% assign trynow_item = false  %}
+        
+          {% for item in cart.items %}
+            {% if item.selling_plan_allocation
+            	and 
+          		item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy'
+            %}
+              {% assign trynow_item = true  %}
+              {% assign product_price = item.final_line_price %}
+              {% assign amount_due_today = amount_due_today | minus: product_price %}
+            {% endif %}
+          {% endfor %}
+        
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
-            <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+            <h2 class="totals__subtotal">{% if trynow_item %} Amount Due Today {% else %} {{ 'sections.cart.subtotal' | t }} {% endif %}</h2>
             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency | replace: '.00','' }}</p>
+            <p class="totals__subtotal-value">{{ amount_due_today  | money_with_currency | replace: '.00','' }}</p>
           </div>
 
           <div>
