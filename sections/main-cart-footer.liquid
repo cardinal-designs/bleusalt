@@ -103,9 +103,8 @@
       const cartDrawer2 = document.querySelector('cart-items');
       const cartObserver2 = new MutationObserver((mutationsList) => {
         mutationsList.forEach(async (record) => {
-          console.log('Change')
           if (!window.trynow) return;
-
+          console.log('Change lol')
           let amountDueToday = await window.trynow.cart.getAmountDueToday();
           let spanText = document.querySelector('.totals__subtotal-value');
           spanText.textContent = `${amountDueToday}`;
