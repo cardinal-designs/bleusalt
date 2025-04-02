@@ -629,7 +629,7 @@
             document.querySelector('.totals__subtotal').textContent = 'Amount Due Today';
           }
 
-          const cartItems = document.querySelectorAll('cart-item');
+          const cartItems = document.querySelectorAll('.cart-item');
           cartItems.forEach((item) => {
             const itemOption = item.querySelector('.product-option');
             if(itemOption && itemOption.textContent.includes('Try')){
