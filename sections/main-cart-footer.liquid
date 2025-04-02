@@ -103,6 +103,7 @@
       const cartDrawer2 = document.querySelector('cart-items');
       const cartObserver2 = new MutationObserver((mutationsList) => {
         mutationsList.forEach(async (record) => {
+          console.log('Change')
           if (!window.trynow) return;
 
           let amountDueToday = await window.trynow.cart.getAmountDueToday();
