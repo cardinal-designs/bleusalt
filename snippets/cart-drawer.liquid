@@ -634,6 +634,7 @@
             const itemOption = item.querySelector('.cart-item__details .product-option');
             console.log('inside', itemOption)
             if(itemOption && itemOption.textContent.includes('Try')){
+              console.log('Hey')
               item.querySelector('.cart-item__price-wrapper span').style.textDecoration = 'line-through';
             }
             
