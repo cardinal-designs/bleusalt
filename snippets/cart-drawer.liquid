@@ -631,7 +631,7 @@
 
           const cartItems = document.querySelectorAll('.cart-item');
           cartItems.forEach((item) => {
-            const itemOption = item.querySelector('.cart-item__details .product-option');
+            const itemOption = item.querySelector('.cart-item__details .product-option:nth-of-type(3)');
             console.log('inside', itemOption)
             if(itemOption && itemOption.textContent.includes('Try')){
               console.log('Hey')
