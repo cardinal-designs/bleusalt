@@ -20,40 +20,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "blocks": {
-        "marketing_tile_RyQdqd": {
-          "type": "marketing_tile",
-          "settings": {
-            "tile_size": "1x",
-            "media_type": "image",
-            "video_url": "",
-            "link": "",
-            "position": 5,
-            "title": "",
-            "paragraph": "",
-            "button_text": ""
-          }
-        },
-        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2": {
-          "type": "marketing_tile",
-          "disabled": true,
-          "settings": {
-            "tile_size": "2x",
-            "media_type": "image",
-            "image": "shopify://shop_images/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg",
-            "video_url": "",
-            "link": "shopify://pages/bleusalt-styling",
-            "position": 5,
-            "title": "Style Tips",
-            "paragraph": "<p>Watch videos how to style the perfect look.</p>",
-            "button_text": "Watch Now"
-          }
-        }
-      },
-      "block_order": [
-        "marketing_tile_RyQdqd",
-        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2"
-      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 3,
@@ -69,6 +35,26 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1742944571b3641f78": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_HHEJ9C": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "153262",
+            "product_id_enabled": true,
+            "collection_id_enabled": true
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_HHEJ9C"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "1660937591af29c294": {
@@ -141,6 +127,7 @@
   "order": [
     "banner",
     "product-grid",
+    "1742944571b3641f78",
     "1660937591af29c294",
     "aa41b3b6-ee72-40cb-9596-20aee70eed9b"
   ]
