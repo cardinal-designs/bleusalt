@@ -636,6 +636,9 @@
             if(itemOption && itemOption.textContent.includes('Try')){
               console.log('Hey')
               item.querySelector('.cart-item__price-wrapper span').style.textDecoration = 'line-through';
+              const freeTrial = document.createElement('span');
+              freeTrial.textContent = 'FREE TRIAL';
+              item.querySelector('.cart-item__price-wrapper').appendChild(freeTrial);
             }
             
           })
