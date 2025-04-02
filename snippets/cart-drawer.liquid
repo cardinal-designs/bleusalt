@@ -615,6 +615,12 @@
   });
 </script>
 
+  <style>
+    .free-trial {
+      width: 100px;
+    }
+  </style>
+
 <script type="text/javascript">
   const cartDrawer = document.querySelector('#cart-drawer');
   const cartObserver = new MutationObserver((mutationsList) => {
@@ -652,6 +658,7 @@
             const freeTrial = document.createElement('span');
             freeTrial.textContent = 'FREE TRIAL';
             freeTrial.classList.add('free-trial'); // Add a class to prevent duplicates
+            priceWrapper.style.display = 'flex';
             priceWrapper.appendChild(freeTrial);
           }
         }
