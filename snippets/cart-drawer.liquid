@@ -629,6 +629,15 @@
             document.querySelector('.totals__subtotal').textContent = 'Amount Due Today';
           }
 
+          const cartItems = document.querySelectorAll('cart-item');
+          cartItems.forEach((item) => {
+            const itemOption = item.querySelector('.product-option');
+            if(itemOption && itemOption.textContent.includes('Try')){
+              item.querySelector('.cart-item__price-wrapper span').style.textDecoration = 'line-through';
+            }
+            
+          })
+
           
         })
       })
