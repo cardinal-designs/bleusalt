@@ -630,9 +630,9 @@
           }
 
           const cartItems = document.querySelectorAll('.cart-item');
-          console.log('cart items', cartItems)
           cartItems.forEach((item) => {
             const itemOption = item.querySelector('.product-option');
+            console.log('inside', itemOption)
             if(itemOption && itemOption.textContent.includes('Try')){
               item.querySelector('.cart-item__price-wrapper span').style.textDecoration = 'line-through';
             }
