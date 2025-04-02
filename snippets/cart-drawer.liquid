@@ -630,6 +630,7 @@
           }
 
           const cartItems = document.querySelectorAll('.cart-item');
+          console.log('cart items', cartItems)
           cartItems.forEach((item) => {
             const itemOption = item.querySelector('.product-option');
             if(itemOption && itemOption.textContent.includes('Try')){
