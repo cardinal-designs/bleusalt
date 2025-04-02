@@ -616,40 +616,56 @@
 </script>
 
 <script type="text/javascript">
-      const cartDrawer = document.querySelector('#cart-drawer');
-      const cartObserver = new MutationObserver((mutationsList) => {
-        mutationsList.forEach(async (record) => {
-          if (!window.trynow) return;
-
-          let amountDueToday = await window.trynow.cart.getAmountDueToday();
-          let spanText = document.querySelector('.totals__subtotal-value');
-          spanText.textContent = `${amountDueToday}`;
-          const tryNowItemCount = await window.trynow.cart.getTryNowItemCount();
-          if(tryNowItemCount > 0){
-            document.querySelector('.totals__subtotal').textContent = 'Amount Due Today';
+  const cartDrawer = document.querySelector('#cart-drawer');
+  const cartObserver = new MutationObserver((mutationsList) => {
+    cartObserver.disconnect(); // Stop observing to prevent infinite loop
+  
+    mutationsList.forEach(async (record) => {
+      if (!window.trynow) return;
+  
+      let amountDueToday = await window.trynow.cart.getAmountDueToday();
+      let spanText = document.querySelector('.totals__subtotal-value');
+  
+      // Check if the value is already updated to prevent unnecessary updates
+      if (spanText.textContent !== `${amountDueToday}`) {
+        spanText.textContent = `${amountDueToday}`;
+      }
+  
+      const tryNowItemCount = await window.trynow.cart.getTryNowItemCount();
+      if (tryNowItemCount > 0) {
+        let subtotalText = document.querySelector('.totals__subtotal');
+        if (subtotalText.textContent !== 'Amount Due Today') {
+          subtotalText.textContent = 'Amount Due Today';
+        }
+      }
+  
+      const cartItems = document.querySelectorAll('.cart-item');
+      cartItems.forEach((item) => {
+        const itemOption = item.querySelector('.product-option.selling_plan');
+        if (itemOption && itemOption.textContent.includes('Try')) {
+          const priceWrapper = item.querySelector('.cart-item__price-wrapper');
+          const priceSpan = priceWrapper.querySelector('span');
+  
+          // Avoid adding duplicate modifications
+          if (!priceWrapper.querySelector('.free-trial')) {
+            priceSpan.style.textDecoration = 'line-through';
+            const freeTrial = document.createElement('span');
+            freeTrial.textContent = 'FREE TRIAL';
+            freeTrial.classList.add('free-trial'); // Add a class to prevent duplicates
+            priceWrapper.appendChild(freeTrial);
           }
-
-          const cartItems = document.querySelectorAll('.cart-item');
-          cartItems.forEach((item) => {
-            const itemOption = item.querySelector('.product-option.selling_plan');
-            console.log('inside', itemOption)
-            if(itemOption && itemOption.textContent.includes('Try')){
-              console.log('Hey')
-              item.querySelector('.cart-item__price-wrapper span').style.textDecoration = 'line-through';
-              const freeTrial = document.createElement('span');
-              freeTrial.textContent = 'FREE TRIAL';
-              /*
-              item.querySelector('.cart-item__price-wrapper').appendChild(freeTrial);
-              */
-            }
-            
-          })
-
-          
-        })
-      })
+        }
+      });
+    });
+  
     cartObserver.observe(cartDrawer, {
       subtree: true,
       childList: true,
-    })          
+    }); // Re-enable observer
+  });
+  
+  cartObserver.observe(cartDrawer, {
+    subtree: true,
+    childList: true,
+  });         
 </script>
