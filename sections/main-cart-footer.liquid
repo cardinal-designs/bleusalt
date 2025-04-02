@@ -106,11 +106,11 @@
           if (!window.trynow) return;
           console.log('Change lol')
           let amountDueToday = await window.trynow.cart.getAmountDueToday();
-          let spanText = document.querySelector('.totals__subtotal-value');
+          let spanText = document.querySelector('.cart__footer .totals__subtotal-value');
           spanText.textContent = `${amountDueToday}`;
           const tryNowItemCount = await window.trynow.cart.getTryNowItemCount();
           if(tryNowItemCount > 0){
-            document.querySelector('.totals__subtotal').textContent = 'Amount Due Today';
+            document.querySelector('.cart__footer .totals__subtotal').textContent = 'Amount Due Today';
           }
 
           
