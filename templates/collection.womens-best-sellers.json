@@ -1,1 +1,133 @@
-{"sections":{"banner":{"type":"main-collection-banner","disabled":true,"settings":{"show_collection_description":true,"show_collection_image":true,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","blocks":{"34ffb5d5-755c-463a-9bed-4c9080b2f1c2":{"type":"marketing_tile","disabled":true,"settings":{"tile_size":"2x","media_type":"image","image":"shopify:\/\/shop_images\/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg","video_url":"","link":"shopify:\/\/pages\/bleusalt-styling","position":5,"title":"Style Tips","paragraph":"<p>Watch videos how to style the perfect look.<\/p>","button_text":"Watch Now"}}},"block_order":["34ffb5d5-755c-463a-9bed-4c9080b2f1c2"],"settings":{"products_per_page":24,"columns_desktop":3,"image_ratio":"portrait","show_secondary_image":false,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":36,"padding_bottom":36}},"1660937591af29c294":{"type":"rich-text","blocks":{"1660937591138d0f9f-0":{"type":"heading","settings":{"heading":"<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.<\/p>","heading_size":"h1"}},"1660937591138d0f9f-1":{"type":"text","settings":{"text":"<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http:\/\/127.0.0.1:9292\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"}},"70b3749d-0024-40ad-b6a7-6ef19124d692":{"type":"caption","settings":{"caption":"[value-props]","text_style":"caption-with-letter-spacing","text_size":"medium"}}},"block_order":["1660937591138d0f9f-0","1660937591138d0f9f-1","70b3749d-0024-40ad-b6a7-6ef19124d692"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image":"shopify:\/\/shop_images\/sustainable-grunge.jpg","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":100,"padding_bottom":100}},"aa41b3b6-ee72-40cb-9596-20aee70eed9b":{"type":"rich-text","blocks":{"d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa":{"type":"text","settings":{"text":"<h2>Best-Selling Women’s Tops<\/h2><p>These best-selling tops are crafted with meticulous attention to detail and are made from the softest and most luxurious fabrics available. Our women’s tops offer flattering silhouettes and versatile designs that will make them your go-to pieces.<\/p><h2>Best-Selling Women’s Bottoms<\/h2><p>Complete your capsule wardrobe with our best-selling women’s bottoms, offering versatile pieces that seamlessly blend luxury and functionality. From best-selling pants and skirts, each garment is thoughtfully designed to enhance your silhouette. Elevate your outfits with the perfect combination of sophistication, versatility, and luxury.<\/p><h2>Best-Selling Women’s Accessories<\/h2><p>Complete your ensemble with our best-selling accessories, the perfect finishing touches to elevate your style and add a touch of luxury. Explore our collection of wraps and scarves, designed to complement our women’s tops and bottoms and enhance your overall look.<\/p><h2>Sustainable Women’s Fashion<\/h2><p>Bleusalt's best sellers represent the perfect synergy of luxury and consciousness. Each garment is meticulously designed to embrace your individual style while staying true to our commitment to sustainability. Our designer women's tops and bottoms exude a timeless appeal that transcends fleeting trends, ensuring that your wardrobe remains fashionable season after season. With clean lines, flattering cuts, and attention to detail, our best sellers are the epitome of elevated style.<\/p><p>Our best-selling collection is crafted using sustainable materials and innovative processes that prioritize the health of our planet. Our TENCEL™ fabric is responsibly sourced from sustainable wood sources to create garments that are not only soft and luxurious but also ethically produced.<\/p><h2>Experience the Difference with these Best Sellers<\/h2><p>Shop Bleusalt's coveted women's best-selling collection. Elevate your personal style to new heights and seize the moment to embrace the epitome of quiet luxury.<\/p>"}}},"block_order":["d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["banner","product-grid","1660937591af29c294","aa41b3b6-ee72-40cb-9596-20aee70eed9b"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "2x",
+            "media_type": "image",
+            "image": "shopify://shop_images/womens-wraps_5de7caa8-df1c-4915-8653-6be462947816.jpg",
+            "video_url": "",
+            "link": "shopify://pages/bleusalt-styling",
+            "position": 5,
+            "title": "Style Tips",
+            "paragraph": "<p>Watch videos how to style the perfect look.</p>",
+            "button_text": "Watch Now"
+          }
+        }
+      },
+      "block_order": [
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1660937591af29c294": {
+      "type": "rich-text",
+      "blocks": {
+        "1660937591138d0f9f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading_size": "h1"
+          }
+        },
+        "1660937591138d0f9f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http://127.0.0.1:9292/pages/materials\" title=\"Materials\">Learn more</a></p>"
+          }
+        },
+        "70b3749d-0024-40ad-b6a7-6ef19124d692": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "1660937591138d0f9f-0",
+        "1660937591138d0f9f-1",
+        "70b3749d-0024-40ad-b6a7-6ef19124d692"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b": {
+      "type": "rich-text",
+      "blocks": {
+        "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Best-Selling Women’s Tops</h2><p>These best-selling tops are crafted with meticulous attention to detail and are made from the softest and most luxurious fabrics available. Our women’s tops offer flattering silhouettes and versatile designs that will make them your go-to pieces.</p><h2>Best-Selling Women’s Bottoms</h2><p>Complete your capsule wardrobe with our best-selling women’s bottoms, offering versatile pieces that seamlessly blend luxury and functionality. From best-selling pants and skirts, each garment is thoughtfully designed to enhance your silhouette. Elevate your outfits with the perfect combination of sophistication, versatility, and luxury.</p><h2>Best-Selling Women’s Accessories</h2><p>Complete your ensemble with our best-selling accessories, the perfect finishing touches to elevate your style and add a touch of luxury. Explore our collection of wraps and scarves, designed to complement our women’s tops and bottoms and enhance your overall look.</p><h2>Sustainable Women’s Fashion</h2><p>Bleusalt's best sellers represent the perfect synergy of luxury and consciousness. Each garment is meticulously designed to embrace your individual style while staying true to our commitment to sustainability. Our designer women's tops and bottoms exude a timeless appeal that transcends fleeting trends, ensuring that your wardrobe remains fashionable season after season. With clean lines, flattering cuts, and attention to detail, our best sellers are the epitome of elevated style.</p><p>Our best-selling collection is crafted using sustainable materials and innovative processes that prioritize the health of our planet. Our TENCEL™ fabric is responsibly sourced from sustainable wood sources to create garments that are not only soft and luxurious but also ethically produced.</p><h2>Experience the Difference with these Best Sellers</h2><p>Shop Bleusalt's coveted women's best-selling collection. Elevate your personal style to new heights and seize the moment to embrace the epitome of quiet luxury.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1660937591af29c294",
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b"
+  ]
+}
