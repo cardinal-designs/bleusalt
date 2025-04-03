@@ -85,7 +85,7 @@
         "1663618695fc7e0630-0": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/womens_-_bw.jpg",
+            "image": "shopify://shop_images/womens.jpg",
             "title": "Shop Womens",
             "text": "",
             "html": "",
@@ -96,7 +96,7 @@
         "1663618695fc7e0630-1": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/wraps-clr.jpg",
+            "image": "shopify://shop_images/wraps_7e3791f9-14f8-48be-a12b-434d0578471f.jpg",
             "title": "Shop Wraps",
             "text": "",
             "html": "",
@@ -107,7 +107,7 @@
         "1663618695fc7e0630-2": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/mens---bw.jpg",
+            "image": "shopify://shop_images/mens.jpg",
             "title": "Shop Mens",
             "text": "",
             "html": "",
