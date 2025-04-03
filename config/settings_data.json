@@ -435,7 +435,7 @@
         "type": "shopify://apps/trynow-try-before-you-buy/blocks/gated-flow/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
         "disabled": false,
         "settings": {
-          "custom_css": "",
+          "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\n}",
           "sdk_version": "v1"
         }
       }
