@@ -1,1 +1,165 @@
-{"sections":{"banner":{"type":"main-collection-banner","disabled":true,"settings":{"show_collection_description":true,"show_collection_image":true,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","blocks":{"34ffb5d5-755c-463a-9bed-4c9080b2f1c2":{"type":"marketing_tile","disabled":true,"settings":{"tile_size":"2x","media_type":"image","image":"shopify:\/\/shop_images\/womens-wraps.jpg","video_url":"","link":"shopify:\/\/pages\/bleusalt-styling","position":5,"title":"Style Tips","paragraph":"<p>Watch our style tips videos and create the perfect look<\/p>","button_text":"Watch Now"}},"27179d79-3ebb-4a24-9485-9336f0bfe5f8":{"type":"marketing_tile","disabled":true,"settings":{"tile_size":"1x","media_type":"image","image":"shopify:\/\/shop_images\/333015852_2071585826379588_4033906886454278447_n.jpg","video_url":"","link":"shopify:\/\/products\/the-cindy-top","position":2,"title":"The Cindy Top","paragraph":"<p>The latest addition to the Bleusalt Collection<\/p>","button_text":""}},"e832fc10-de4c-40a0-af3d-5596883c7716":{"type":"marketing_tile","disabled":true,"settings":{"tile_size":"1x","media_type":"image","image":"shopify:\/\/shop_images\/Screen_Shot_2022-09-19_at_1.23.29_PM.png","video_url":"","link":"shopify:\/\/collections\/the-signature-bleusalt-wrap","position":6,"title":"Bleusalt Wraps","paragraph":"<p>any outfit, any color. add a matching wrap to comeplete any outfit.<\/p>","button_text":""}}},"block_order":["34ffb5d5-755c-463a-9bed-4c9080b2f1c2","27179d79-3ebb-4a24-9485-9336f0bfe5f8","e832fc10-de4c-40a0-af3d-5596883c7716"],"settings":{"products_per_page":24,"columns_desktop":3,"image_ratio":"portrait","show_secondary_image":false,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":36,"padding_bottom":36}},"1660937591af29c294":{"type":"rich-text","blocks":{"1660937591138d0f9f-0":{"type":"heading","settings":{"heading":"<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.<\/p>","heading_size":"h1"}},"1660937591138d0f9f-1":{"type":"text","settings":{"text":"<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"}},"70b3749d-0024-40ad-b6a7-6ef19124d692":{"type":"caption","settings":{"caption":"[value-props]","text_style":"caption-with-letter-spacing","text_size":"medium"}}},"block_order":["1660937591138d0f9f-0","1660937591138d0f9f-1","70b3749d-0024-40ad-b6a7-6ef19124d692"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image":"shopify:\/\/shop_images\/sustainable-grunge.jpg","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":100,"padding_bottom":100}},"52dfa345-32cc-4bb9-8f62-b9d74d7816e1":{"type":"rich-text","blocks":{"template--14658086371441__52dfa345-32cc-4bb9-8f62-b9d74d7816e1-text-1":{"type":"text","settings":{"text":"<h2>Versatile Styling For Any Occasion<\/h2><p>These wraps and scarves for men and women are not only environmentally friendly but also incredibly sophisticated and versatile. They can be worn in various ways, making them perfect for any occasion. Whether you're dressing up for a night out or simply want to add a touch of elegance to your everyday look, the Signature Bleusalt Wraps or Scarves are the perfect addition to your capsule wardrobe.<\/p><h2>Luxurious Material Made from the Softest Fibers on Earth<\/h2><p>One of the standout features of these men’s and women’s wraps and scarves is their luxurious feel. The TENCEL™ fabric is incredibly soft and gentle on the skin. Our scarves are also incredibly breathable, lightweight, and packable, making them the perfect addition to your travel capsule wardrobe.  <\/p><h2>Timeless Design In A Variety Of Options<\/h2><p>The wraps and scarves are available in various colors, allowing you to choose the perfect shade to complement your wardrobe. From classic neutrals like black and white to more vibrant hues like red and blue, there's a Signature Bleusalt Wrap or Scarf for everyone. The wraps and scarves also make excellent gifts for friends and loved ones.<\/p><p>In addition to their aesthetic appeal, the Signature Bleusalt Wraps and Scarves are incredibly easy to care for. They are machine washable and can be tumble dried on low heat, making them a convenient and low-maintenance option for busy individuals with a conscious mind. <\/p><h2>Sustainable Fashion<\/h2><p>The Signature Bleusalt Wraps and Scarves are also designed with sustainability in mind. The TENCEL™ fabric is a renewable resource and the production process is environmentally friendly. This means you can feel good about wearing a product that not only looks incredible but is also environmentally conscious.<\/p><h2>Shop Luxurious & Sustainable Fashion At Bleusalt<\/h2><p>The Signature Bleusalt Wraps are just one example of the high-quality luxury fashion pieces available at Bleusalt. Shop our <a href=\"\/collections\/womens-shop-all\" title=\"\/collections\/womens-shop-all\">women’s clothing collection<\/a>, <a href=\"\/collections\/mens-collection\" title=\"\/collections\/mens-collection\">men’s clothing collection<\/a>, or <a href=\"\/collections\/unisex-collection\" title=\"\/collections\/unisex-collection\">unisex clothing collection<\/a> online or visit our <a href=\"\/pages\/visit-our-store\" title=\"\/pages\/visit-our-store\">flagship store in Malibu<\/a>.<\/p>"}}},"block_order":["template--14658086371441__52dfa345-32cc-4bb9-8f62-b9d74d7816e1-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["banner","product-grid","1660937591af29c294","52dfa345-32cc-4bb9-8f62-b9d74d7816e1"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "2x",
+            "media_type": "image",
+            "image": "shopify://shop_images/womens-wraps.jpg",
+            "video_url": "",
+            "link": "shopify://pages/bleusalt-styling",
+            "position": 5,
+            "title": "Style Tips",
+            "paragraph": "<p>Watch our style tips videos and create the perfect look</p>",
+            "button_text": "Watch Now"
+          }
+        },
+        "27179d79-3ebb-4a24-9485-9336f0bfe5f8": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "1x",
+            "media_type": "image",
+            "image": "shopify://shop_images/333015852_2071585826379588_4033906886454278447_n.jpg",
+            "video_url": "",
+            "link": "shopify://products/the-cindy-top",
+            "position": 2,
+            "title": "The Cindy Top",
+            "paragraph": "<p>The latest addition to the Bleusalt Collection</p>",
+            "button_text": ""
+          }
+        },
+        "e832fc10-de4c-40a0-af3d-5596883c7716": {
+          "type": "marketing_tile",
+          "disabled": true,
+          "settings": {
+            "tile_size": "1x",
+            "media_type": "image",
+            "image": "shopify://shop_images/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
+            "video_url": "",
+            "link": "shopify://collections/the-signature-bleusalt-wrap",
+            "position": 6,
+            "title": "Bleusalt Wraps",
+            "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.</p>",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "34ffb5d5-755c-463a-9bed-4c9080b2f1c2",
+        "27179d79-3ebb-4a24-9485-9336f0bfe5f8",
+        "e832fc10-de4c-40a0-af3d-5596883c7716"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1660937591af29c294": {
+      "type": "rich-text",
+      "blocks": {
+        "1660937591138d0f9f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading_size": "h1"
+          }
+        },
+        "1660937591138d0f9f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
+          }
+        },
+        "70b3749d-0024-40ad-b6a7-6ef19124d692": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "1660937591138d0f9f-0",
+        "1660937591138d0f9f-1",
+        "70b3749d-0024-40ad-b6a7-6ef19124d692"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "52dfa345-32cc-4bb9-8f62-b9d74d7816e1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14658086371441__52dfa345-32cc-4bb9-8f62-b9d74d7816e1-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Versatile Styling For Any Occasion</h2><p>These wraps and scarves for men and women are not only environmentally friendly but also incredibly sophisticated and versatile. They can be worn in various ways, making them perfect for any occasion. Whether you're dressing up for a night out or simply want to add a touch of elegance to your everyday look, the Signature Bleusalt Wraps or Scarves are the perfect addition to your capsule wardrobe.</p><h2>Luxurious Material Made from the Softest Fibers on Earth</h2><p>One of the standout features of these men’s and women’s wraps and scarves is their luxurious feel. The TENCEL™ fabric is incredibly soft and gentle on the skin. Our scarves are also incredibly breathable, lightweight, and packable, making them the perfect addition to your travel capsule wardrobe.  </p><h2>Timeless Design In A Variety Of Options</h2><p>The wraps and scarves are available in various colors, allowing you to choose the perfect shade to complement your wardrobe. From classic neutrals like black and white to more vibrant hues like red and blue, there's a Signature Bleusalt Wrap or Scarf for everyone. The wraps and scarves also make excellent gifts for friends and loved ones.</p><p>In addition to their aesthetic appeal, the Signature Bleusalt Wraps and Scarves are incredibly easy to care for. They are machine washable and can be tumble dried on low heat, making them a convenient and low-maintenance option for busy individuals with a conscious mind. </p><h2>Sustainable Fashion</h2><p>The Signature Bleusalt Wraps and Scarves are also designed with sustainability in mind. The TENCEL™ fabric is a renewable resource and the production process is environmentally friendly. This means you can feel good about wearing a product that not only looks incredible but is also environmentally conscious.</p><h2>Shop Luxurious & Sustainable Fashion At Bleusalt</h2><p>The Signature Bleusalt Wraps are just one example of the high-quality luxury fashion pieces available at Bleusalt. Shop our <a href=\"/collections/womens-shop-all\" title=\"/collections/womens-shop-all\">women’s clothing collection</a>, <a href=\"/collections/mens-collection\" title=\"/collections/mens-collection\">men’s clothing collection</a>, or <a href=\"/collections/unisex-collection\" title=\"/collections/unisex-collection\">unisex clothing collection</a> online or visit our <a href=\"/pages/visit-our-store\" title=\"/pages/visit-our-store\">flagship store in Malibu</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14658086371441__52dfa345-32cc-4bb9-8f62-b9d74d7816e1-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1660937591af29c294",
+    "52dfa345-32cc-4bb9-8f62-b9d74d7816e1"
+  ]
+}
