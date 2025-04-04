@@ -157,9 +157,25 @@
   </div>
 </div>
 
-<script>
+{% if template.suffix == 'try-before-you-buy' %}
+  <script>
+    async function switchToTryNow(){
+      let tryLink = await window.trynow.hasPassedTryLink();
+        if(tryLink){
+            const buttons = document.querySelectorAll('button[value="Title"]');
+            buttons.forEach((button) => {
+              button.textContent = 'TRY BEFORE YOU BUY';
+          })
+        }
+    }
 
-</script>
+  window.addEventListener('trynow:initialized', (event) => {
+    switchToTryNow()
+  })
+
+  
+  </script>
+{% endif %}
 
 
 {% schema %}
