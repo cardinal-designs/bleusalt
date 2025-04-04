@@ -426,16 +426,11 @@
         "disabled": false,
         "settings": {}
       },
-      "14990294913865924732": {
-        "type": "shopify://apps/onyou/blocks/onyou-header/3379e12f-b2ef-4ba9-a9e9-5ea9425840ef",
-        "disabled": false,
-        "settings": {}
-      },
       "15804298063636319733": {
         "type": "shopify://apps/trynow-try-before-you-buy/blocks/gated-flow/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
         "disabled": false,
         "settings": {
-          "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\ncolor: #0D1C29;\n}\n\n.tn-gate-toggle-switch {\nz-index: 3 !important;\n}",
+          "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\ncolor: #0D1C29;\n}\n\n.tn-gate-toggle-switch {\nz-index: 3 !important;\n}\n\n.product-form__buttons:has(.bold_clone) {\n  display: flex;\n flex-direction: column-reverse;\n}",
           "sdk_version": "v1"
         }
       }
