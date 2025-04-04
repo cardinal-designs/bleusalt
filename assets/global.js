@@ -906,7 +906,8 @@ const playPauseVideos = () => {
 playPauseVideos();
 
 const addToCart = async(id, qty, properties = false, callback = false) => {
-
+  const template = '{{ template.suffix }}';
+  console.log('template', template);
   let sellingPlan = '';
   if(window.trynow){
       let sellingPlanGid = await window.trynow.getSellingPlanId();
