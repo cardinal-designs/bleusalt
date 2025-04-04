@@ -162,15 +162,14 @@
     async function switchToTryNow(){
       let tryLink = await window.trynow.hasPassedTryLink();
         if(tryLink){
-            const buttons = document.querySelectorAll('button[value="Title"]');
+            const buttons = document.querySelectorAll('.quick-add__add-button.button--inline')
             buttons.forEach((button) => {
               button.textContent = 'Try Before You Buy';
           })
         }
     }
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    console.log('Hello');
+  window.addEventListener('trynow:initialized', (event) => {
     switchToTryNow()
   })
 
