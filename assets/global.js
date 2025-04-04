@@ -906,15 +906,17 @@ const playPauseVideos = () => {
 playPauseVideos();
 
 const addToCart = async(id, qty, properties = false, callback = false) => {
-  if (window.ShopifyTemplate) {
-  console.log('Template name:', window.ShopifyTemplate.name);
-  console.log('Template suffix:', window.ShopifyTemplate.suffix);
-  console.log('Full template:', window.ShopifyTemplate.full);
-}
+  const template = '';
+    if (window.ShopifyTemplate) {
+    template = window.ShopifyTemplate.suffix;
+  }
   let sellingPlan = '';
   if(window.trynow){
-      let sellingPlanGid = await window.trynow.getSellingPlanId();
-      sellingPlan = sellingPlanGid.split('/').pop();
+      const hasTryLink = await window.trynow.hasPassedTryLink();
+      if (hasTryLink && template == 'try-before-you-buy'){
+        let sellingPlanGid = await window.trynow.getSellingPlanId();
+        sellingPlan = sellingPlanGid.split('/').pop();
+      }    
   }
 
   let formData = {
