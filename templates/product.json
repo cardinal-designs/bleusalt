@@ -282,7 +282,7 @@
         "trynow_try_before_you_buy_trynow_cta_button_JHY4EP": {
           "type": "shopify://apps/trynow-try-before-you-buy/blocks/trynow-cta-button/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
           "settings": {
-            "button_title": "Try Before You Buy - $0",
+            "button_title": "Try Before You Buy",
             "cta_button_custom_css": "",
             "button_classes": "",
             "button_margin": "0px 0px 5px 0px",
