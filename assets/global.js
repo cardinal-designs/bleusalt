@@ -906,13 +906,13 @@ const playPauseVideos = () => {
 playPauseVideos();
 
 const addToCart = async(id, qty, properties = false, callback = false) => {
-  const template = '';
+  let template = '';
     if (window.ShopifyTemplate) {
     template = window.ShopifyTemplate.suffix;
   }
   let sellingPlan = '';
   if(window.trynow){
-      const hasTryLink = await window.trynow.hasPassedTryLink();
+      let hasTryLink = await window.trynow.hasPassedTryLink();
       if (hasTryLink && template == 'try-before-you-buy'){
         let sellingPlanGid = await window.trynow.getSellingPlanId();
         sellingPlan = sellingPlanGid.split('/').pop();
