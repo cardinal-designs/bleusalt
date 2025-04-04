@@ -885,7 +885,10 @@
 {% endif %}
 
 <script>
-  alert("Test");
+  const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
+  checkbox.addEventListener('click', ()=> {
+    console.log('Hey');
+  })
 </script>
 
 {% schema %}
