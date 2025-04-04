@@ -919,6 +919,8 @@ const addToCart = async(id, qty, properties = false, callback = false) => {
       }    
   }
 
+  await window.trynow.addToCartClicked();
+
   let formData = {
    items: [{
     id: id,
