@@ -906,7 +906,6 @@ const playPauseVideos = () => {
 playPauseVideos();
 
 const addToCart = async(id, qty, properties = false, callback = false) => {
-  /*
   let template = '';
     if (window.ShopifyTemplate) {
     template = window.ShopifyTemplate.suffix;
@@ -919,12 +918,12 @@ const addToCart = async(id, qty, properties = false, callback = false) => {
         sellingPlan = sellingPlanGid.split('/').pop();
       }    
   }
-  */
 
   let formData = {
    items: [{
     id: id,
-    quantity: qty
+    quantity: qty,
+    selling_plan: sellingPlan
     }]
   };
   const cartDrawer = document.querySelector('cart-drawer');
