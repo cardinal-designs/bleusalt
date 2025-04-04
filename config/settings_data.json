@@ -430,7 +430,7 @@
         "type": "shopify://apps/trynow-try-before-you-buy/blocks/gated-flow/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
         "disabled": false,
         "settings": {
-          "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\ncolor: #0D1C29;\n}\n\n.tn-gate-toggle-switch {\nz-index: 3 !important;\n}\n\n.product-form__buttons:has(.bold_clone) {\n  display: flex;\n flex-direction: column-reverse;\n}",
+          "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\ncolor: #0D1C29;\n}\n\n.tn-gate-toggle-switch {\nz-index: 3 !important;\n}\n\n.product-form__buttons:has(.bold_clone) {\n  display: flex;\n flex-direction: column-reverse;\n}\n\n.product-form__buttons:has(.tn-gate-toggle-checked) .bold_clone {\n display:none !important;\n}",
           "sdk_version": "v1"
         }
       }
