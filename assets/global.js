@@ -905,12 +905,19 @@ const playPauseVideos = () => {
 
 playPauseVideos();
 
-const addToCart = (id, qty, properties = false, callback = false) => {
-  console.log('Adding to cart now!')
+const addToCart = async(id, qty, properties = false, callback = false) => {
+
+  let sellingPlan = '';
+  if(window.trynow){
+      let sellingPlanGid = await window.trynow.getSellingPlanId();
+      sellingPlan = sellingPlanGid.split('/').pop();
+  }
+
   let formData = {
    items: [{
     id: id,
-    quantity: qty
+    quantity: qty,
+    selling_plan: sellingPlan
     }]
   };
   const cartDrawer = document.querySelector('cart-drawer');
