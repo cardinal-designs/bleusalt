@@ -886,7 +886,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
-    setTimeout(()=> {
+    setTimeout(async ()=> {
       const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
     checkbox.addEventListener('click', ()=> {
       let inputValue = document.querySelector('.bold_option_element input').checked;
@@ -901,6 +901,12 @@
         }
       }
     })
+
+    const TryLink = await window.trynow.hasPassedTryLink();
+    if(TryLink){
+      document.querySelector('.bold_clone').classList.add('tn-condition-true');
+    }
+      
     } ,1000)  
   });
 </script>
