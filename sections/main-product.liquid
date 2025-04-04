@@ -886,11 +886,12 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
-    const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
+    setTimeout(()=> {
+      const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
     checkbox.addEventListener('click', ()=> {
       console.log('Hey');
     })
-  
+    } ,1000)  
   });
 
 
