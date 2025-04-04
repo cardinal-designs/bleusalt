@@ -885,10 +885,15 @@
 {% endif %}
 
 <script>
-  const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
-  checkbox.addEventListener('click', ()=> {
-    console.log('Hey');
-  })
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
+    checkbox.addEventListener('click', ()=> {
+      console.log('Hey');
+    })
+  
+  });
+
+
 </script>
 
 {% schema %}
