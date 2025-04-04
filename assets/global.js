@@ -906,8 +906,11 @@ const playPauseVideos = () => {
 playPauseVideos();
 
 const addToCart = async(id, qty, properties = false, callback = false) => {
-  const template = "{{ template.suffix }}";
-  console.log('template', template);
+  if (window.ShopifyTemplate) {
+  console.log('Template name:', window.ShopifyTemplate.name);
+  console.log('Template suffix:', window.ShopifyTemplate.suffix);
+  console.log('Full template:', window.ShopifyTemplate.full);
+}
   let sellingPlan = '';
   if(window.trynow){
       let sellingPlanGid = await window.trynow.getSellingPlanId();
