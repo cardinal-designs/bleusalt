@@ -906,6 +906,7 @@ const playPauseVideos = () => {
 playPauseVideos();
 
 const addToCart = (id, qty, properties = false, callback = false) => {
+  console.log('Adding to cart now!')
   let formData = {
    items: [{
     id: id,
