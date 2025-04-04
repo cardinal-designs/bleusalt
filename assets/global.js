@@ -916,10 +916,11 @@ const addToCart = async(id, qty, properties = false, callback = false) => {
       if (hasTryLink && template == 'try-before-you-buy'){
         let sellingPlanGid = await window.trynow.getSellingPlanId();
         sellingPlan = sellingPlanGid.split('/').pop();
+        await window.trynow.addToCartClicked();
       }    
   }
 
-  await window.trynow.addToCartClicked();
+
 
   let formData = {
    items: [{
