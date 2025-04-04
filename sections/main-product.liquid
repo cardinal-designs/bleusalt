@@ -890,6 +890,16 @@
       const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
     checkbox.addEventListener('click', ()=> {
       let inputValue = document.querySelector('.bold_option_element input').checked;
+      const tryNowBlock = document.querySelector('div:has(>trynow-cta-button)');
+      if(inputValue){
+        if(tryNowBlock){
+          tryNowBlock.style.display = 'none';
+        }
+      } else {
+        if(tryNowBlock){
+          tryNowBlock.style.display = 'unset';
+        }
+      }
       console.log(inputValue);
     })
     } ,1000)  
