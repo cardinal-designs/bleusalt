@@ -162,7 +162,7 @@
     async function switchToTryNow(){
       let tryLink = await window.trynow.hasPassedTryLink();
         if(tryLink){
-            const buttons = document.querySelectorAll('.quick-add__add-button.button--inline')
+            const buttons = document.querySelectorAll('.quick-add__add-button.button--inline');
             buttons.forEach((button) => {
               button.textContent = 'Try Before You Buy';
           })
