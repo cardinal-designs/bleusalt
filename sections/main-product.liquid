@@ -884,6 +884,12 @@
   </style>
 {% endif %}
 
+<style>
+  .showClone {
+    display: block !important;
+  }
+</style>
+
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
     setTimeout(async ()=> {
@@ -895,9 +901,11 @@
         if(tryNowBlock){
           tryNowBlock.style.display = 'none';
         }
+        document.querySelector('.bold_clone').classList.add('showClone');
       } else {
         if(tryNowBlock){
           tryNowBlock.style.display = 'unset';
+          document.querySelector('.bold_clone').classList.remove('showClone');
         }
       }
     })
