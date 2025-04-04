@@ -889,7 +889,8 @@
     setTimeout(()=> {
       const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
     checkbox.addEventListener('click', ()=> {
-      console.log('Hey');
+      let inputValue = document.querySelector('.bold_option_element input').checked;
+      console.log(inputValue);
     })
     } ,1000)  
   });
