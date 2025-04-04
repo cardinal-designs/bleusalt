@@ -32,6 +32,7 @@ if (!customElements.get('quick-add')) {
       this.variants.forEach((variant) => {
         if(variant.title === selectedArray) {
           addToCart(variant.id,1);
+          console.log('Adding to cart');
           return false;
         }
       });
