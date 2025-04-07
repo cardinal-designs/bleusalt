@@ -142,7 +142,7 @@
                                   v-bind:class="{ activeSwatch: product.selected_variant['option' + option.position] == value, unavailable: !variantOptionAvailable(product, 'option' + option.position, value) }"
                                   v-for="(value, index) in option.values" alt=""
                                   :style="{ background: value }"
-                                  v-on:click="selectVariantOption(product, 'option' + option.position, value)" v-bind:src="'/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '.jpg'">
+                                  v-on:click="selectVariantOption(product, 'option' + option.position, value)" v-bind:src="'/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg'">
                               </div>
                             </div>
   
