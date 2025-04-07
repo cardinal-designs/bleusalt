@@ -495,7 +495,8 @@
         "deferred_total_due_date_label": "Amount if kept",
         "payment_terms_totals": {
           "due_today": "Amount due today"
-        }
+        },
+        "total_due_later_label": "Amount if kept"
       }
     }
   }
