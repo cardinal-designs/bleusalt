@@ -199,7 +199,6 @@
           </div>
           <div class="card-information">
             {% assign category = card_product.metafields.custom.product_grid_description.value %}
-            category -- {{ category }}
             {% if category != blank %}
               <span class="caption-large light">
                 <a href="{{ category.url }}" class="full-unstyled-link">
