@@ -146,6 +146,7 @@
 .product-recommendations .rebuy-color-swatches{
   justify-content: start;
   gap: 5px;
+  margin-left: 1px;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-options {
