@@ -137,13 +137,13 @@
                                 <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title">{{ variant.title }}</option>
                             </select>
 
-                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
+                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches" data-test-options = {{ product.options }}>
                               <div class="variant-option" v-if="option.name.toLowerCase() == 'color' ">
                                 <img class="option-swatch"
                                   v-bind:class="{ activeSwatch: product.selected_variant['option' + option.position] == value, unavailable: !variantOptionAvailable(product, 'option' + option.position, value) }"
                                   v-for="(value, index) in option.values" alt=""
                                   :style="{ background: value }"
-                                  v-on:click="selectVariantOption(product, 'option' + option.position, value)" data-test={{ value }}>
+                                  v-on:click="selectVariantOption(product, 'option' + option.position, value)">
                               </div>
                             </div>
   
