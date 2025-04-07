@@ -487,6 +487,9 @@
       },
       "field_errors": {
         "purchase_options_agreement_blank": "To complete your order, please acknowledge below."
+      },
+      "general": {
+        "pay_now_button_label": "Complete order"
       }
     }
   }
