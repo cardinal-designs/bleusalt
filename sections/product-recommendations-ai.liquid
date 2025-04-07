@@ -137,6 +137,7 @@
                               <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title">{{ variant.title }}</option>
                           </select>
 
+                          
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                             <div class="variant-option" v-if="option.name.toLowerCase() == 'color' ">
                               <img class="option-swatch"
@@ -146,6 +147,7 @@
                                 v-on:click="selectVariantOption(product, 'option' + option.position, value)">
                             </div>
                           </div>
+                          
 
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                               <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
