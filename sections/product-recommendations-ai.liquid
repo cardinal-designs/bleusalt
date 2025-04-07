@@ -136,24 +136,6 @@
                               v-on:change="selectVariant(product)">
                               <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title">{{ variant.title }}</option>
                           </select>
-
-                          <div v-for="option in product.options" class="rebuy-color-swatches">
-                            <div class="variant-option" v-if="option.name.toLowerCase() === 'color'">
-                              <img
-                                class="option-swatch"
-                                v-for="(value, index) in option.values"
-                                :key="index"
-                                :src="'https://via.placeholder.com/32?text=' + value"  <!-- Replace with getURL(value) if working -->
-                                :alt="value"
-                                :style="{ backgroundColor: value }"
-                                :class="{
-                                  activeSwatch: product.selected_variant['option' + option.position] == value,
-                                  unavailable: false  // Skip availability check temporarily
-                                }"
-                                @click="selectVariantOption(product, 'option' + option.position, value)"
-                              />
-                            </div>
-                          </div>
   
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                               <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
