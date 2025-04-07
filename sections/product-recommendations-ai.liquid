@@ -144,6 +144,7 @@
                                   v-for="(value, index) in option.values" v-bind:src="getURL(value)" alt=""
                                   :style="{ background: value }"
                                   v-on:click="selectVariantOption(product, 'option' + option.position, value)">
+                                  {{ value }}
                               </div>
                             </div>
   
