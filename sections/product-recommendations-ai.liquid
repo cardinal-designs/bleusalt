@@ -34,7 +34,7 @@
     v-bind:class="['widget-type-' + config.type.replace('_','-'), 'widget-display-' + config.display_type, products.length > 0 ? 'is-visible' : 'is-hidden', 'widget-layout-' + currentLayout()]">
 
       <div
-          class="rebuy-widget-container"
+          class="rebuy-widget-container test---12345"
           v-cloak
           v-bind:class="['widget-display-' + config.display_type, visible ? 'is-visible' : 'is-hidden' ]"
           v-on:click.self="hide()">
