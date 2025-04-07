@@ -152,7 +152,7 @@
                                         :for="id + '-color-' + product_index + '-' + value + '-' + value_index"
                                         :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                                         :title="value"
-                                        class="rebuy-color-label" ></label>
+                                        class="rebuy-color-label" v-html="value"></label>
                                 </div>
                             </div>
                             
@@ -170,7 +170,7 @@
                                         v-on:change="selectVariantBySize(product, value, product_index)">
                                     <label
                                         :for="id + '-size-' + product_index + '-' + value"
-                                        class="rebuy-size-label">{{ value }}</label>
+                                        class="rebuy-size-label" >{{ value }}</label>
                                 </div>
                             </div>
                             
