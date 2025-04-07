@@ -138,6 +138,16 @@
                           </select>
 
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
+                            <div class="variant-option" v-if="option.name.toLowerCase() == 'color' ">
+                              <img class="option-swatch"
+                                v-bind:class="{ activeSwatch: product.selected_variant['option' + option.position] == value, unavailable: !variantOptionAvailable(product, 'option' + option.position, value) }"
+                                v-for="(value, index) in option.values" v-bind:src="" alt=""
+                                :style="{ background: value }"
+                                v-on:click="selectVariantOption(product, 'option' + option.position, value)">
+                            </div>
+                          </div>
+
+                          <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                               <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
                                   <input
                                       :name="id + '-color-' + product_index"
@@ -153,16 +163,6 @@
                                       :title="value"
                                       class="rebuy-color-label"></label>
                               </div>
-                          </div>
-
-                          <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
-                            <div class="variant-option" v-if="option.name.toLowerCase() == 'color' ">
-                              <img class="option-swatch"
-                                v-bind:class="{ activeSwatch: product.selected_variant['option' + option.position] == value, unavailable: !variantOptionAvailable(product, 'option' + option.position, value) }"
-                                v-for="(value, index) in option.values" v-bind:src="" alt=""
-                                :style="{ background: value }"
-                                v-on:click="selectVariantOption(product, 'option' + option.position, value)">
-                            </div>
                           </div>
                           
 
