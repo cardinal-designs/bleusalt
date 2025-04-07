@@ -66,19 +66,7 @@
                       role="listitem"
                   >
 
-                      <div class="rebuy-product-media">
-                          <a
-                              class="rebuy-product-image"
-                              tabindex="-1"
-                              v-bind:href="learnMoreURL(product)"
-                              v-bind:style="imageStyles"
-                              v-on:click="learnMore(product, $event);"
-                              v-bind:class="[hasLearnMore() ? 'clickable' : '']"
-                              rel="nofollow"
-                          >
-                              <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'" v-bind:src="itemImage(product, product.selected_variant, '400x400')" v-bind:alt="itemImageAlt(product, product.selected_variant)">
-                          </a>
-                      </div>
+                      
                       <div class="rebuy-product-info">
                           <a
                               aria-level="5"
