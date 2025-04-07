@@ -136,15 +136,7 @@
                                 v-on:change="selectVariant(product)">
                                 <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title"></option>
                             </select>
-                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches" data-test-options={{ product.options }}>
-                              <div class="variant-option" v-if="option.name.toLowerCase() == 'color' ">
-                                <img class="option-swatch"
-                                  v-bind:class="{ activeSwatch: product.selected_variant['option' + option.position] == value, unavailable: !variantOptionAvailable(product, 'option' + option.position, value) }"
-                                  v-for="(value, index) in option.values" alt=""
-                                  :style="{ background: value }"
-                                  v-on:click="selectVariantOption(product, 'option' + option.position, value)" v-bind:src="'/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg'">
-                              </div>
-                            </div>
+                          
   
                             <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                                 <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
@@ -158,7 +150,7 @@
                                         v-on:change="selectVariantByColor(product, value, product_index)">
                                     <label
                                         :for="id + '-color-' + product_index + '-' + value + '-' + value_index"
-                                        :style="{ backgroundColor: value }"
+                                        :style="{ backgroundImage: '/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg' }"
                                         :title="value"
                                         class="rebuy-color-label" ></label>
                                 </div>
