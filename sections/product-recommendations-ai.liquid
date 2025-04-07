@@ -145,6 +145,7 @@
                                 :style="{ background: value }"
                                 v-on:click="selectVariantOption(product, 'option' + option.position, value)">
                            </div>
+                          </div>
   
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                               <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
