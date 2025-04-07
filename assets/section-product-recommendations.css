@@ -130,6 +130,14 @@
   display: none;
 }
 
+.product-recommendations .rebuy-color-label {
+  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+  margin: 2px;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
 .product-recommendations .rebuy-color-input:checked+.rebuy-color-label {
   border: var(--inputs-border-width) solid rgba(var(--color-foreground), .5);
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(var(--color-foreground), .5);
