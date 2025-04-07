@@ -198,6 +198,9 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
           <div class="card-information">
+            {% if category != blank %}
+              <span class="caption-large light">{{ block.settings.description | escape }}</span>
+            {% endif %}
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
