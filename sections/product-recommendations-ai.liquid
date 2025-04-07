@@ -134,7 +134,7 @@
                                 v-bind:aria-label="'variant of ' + product.title"
                                 v-model="product.selected_variant_id"
                                 v-on:change="selectVariant(product)">
-                                <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title"></option>
+                                <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title">{{ variant.title }}</option>
                             </select>
                           
   
