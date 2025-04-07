@@ -150,9 +150,7 @@
                                       v-on:change="selectVariantByColor(product, value, product_index)">
                                   <label
                                       :for="id + '-color-' + product_index + '-' + value + '-' + value_index"
-                                      :style="{ backgroundImage: 'url(' + getImageForColor(value) + ')',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center' }"
+                                      :style="{ backgroundColor: value }"
                                       :title="value"
                                       class="rebuy-color-label"></label>
                               </div>
