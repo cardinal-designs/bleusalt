@@ -490,6 +490,9 @@
       },
       "general": {
         "pay_now_button_label": "Complete order"
+      },
+      "order_summary": {
+        "deferred_total_due_date_label": "Amount if kept"
       }
     }
   }
