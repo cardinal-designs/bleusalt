@@ -198,9 +198,9 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
           <div class="card-information">
-            {% assign category = product.metafields.custom.product_grid_description %}
+            {% assign category = card_product.metafields.custom.product_grid_description %}
             {% if category != blank %}
-              <span class="caption-large light">{{ category }}</span>
+              <span class="caption-large light">{{ category.title }}</span>
             {% endif %}
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
