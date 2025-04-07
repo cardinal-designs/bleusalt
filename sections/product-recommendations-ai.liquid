@@ -170,7 +170,7 @@
                                         v-on:change="selectVariantBySize(product, value, product_index)">
                                     <label
                                         :for="id + '-size-' + product_index + '-' + value"
-                                        class="rebuy-size-label" >{{ value }}</label>
+                                        class="rebuy-size-label" v-html="value">{{ value }}</label>
                                 </div>
                             </div>
                             
