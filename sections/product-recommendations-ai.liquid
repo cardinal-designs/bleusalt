@@ -136,7 +136,8 @@
                               v-on:change="selectVariant(product)">
                               <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title">{{ variant.title }}</option>
                           </select>
-  
+
+                          <!--
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                               <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
                                   <input
@@ -154,6 +155,7 @@
                                       class="rebuy-color-label"></label>
                               </div>
                           </div>
+                          -->
 
                           <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches">
                               <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch">
