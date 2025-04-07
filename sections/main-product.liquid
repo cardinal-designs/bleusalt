@@ -884,6 +884,41 @@
   </style>
 {% endif %}
 
+<style>
+  .product-form__buttons.tn-condition-true:has(.tn-gate-toggle-checked) .bold_clone.showClone {
+    display: block !important;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    setTimeout(async ()=> {
+      const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
+    checkbox.addEventListener('click', ()=> {
+      let inputValue = document.querySelector('.bold_option_element input').checked;
+      const tryNowBlock = document.querySelector('div:has(>trynow-cta-button)');
+      if(inputValue){
+        if(tryNowBlock){
+          tryNowBlock.style.display = 'none';
+        }
+        document.querySelector('.bold_clone').classList.add('showClone');
+      } else {
+        if(tryNowBlock){
+          tryNowBlock.style.display = 'unset';
+          document.querySelector('.bold_clone').classList.remove('showClone');
+        }
+      }
+    })
+
+    const TryLink = await window.trynow.hasPassedTryLink();
+    if(TryLink){
+      document.querySelector('.product-form__buttons').classList.add('tn-condition-true');
+    }
+      
+    } ,1000)  
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",

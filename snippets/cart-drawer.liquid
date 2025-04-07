@@ -279,7 +279,7 @@
                             -%}
                             </dl>
 
-                            <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                            <p class="product-option selling_plan">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                             <p class="product-option">Qty: {{ item.quantity }}</p>
                           {%- endif -%}
 
@@ -512,11 +512,25 @@
         <!-- Start blocks-->
         <!-- Subtotals-->
 
+          {% assign amount_due_today = cart.total_price %}
+          {% assign trynow_item = false  %}
+        
+          {% for item in cart.items %}
+            {% if item.selling_plan_allocation
+            	and 
+          		item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy'
+            %}
+              {% assign trynow_item = true  %}
+              {% assign product_price = item.final_line_price %}
+              {% assign amount_due_today = amount_due_today | minus: product_price %}
+            {% endif %}
+          {% endfor %}
+        
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
-            <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+            <h2 class="totals__subtotal">{% if trynow_item %} Amount Due Today {% else %} {{ 'sections.cart.subtotal' | t }} {% endif %}</h2>
             <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency | replace: '.00','' }}</p>
+            <p class="totals__subtotal-value">{{ amount_due_today  | money_with_currency | replace: '.00','' }}</p>
           </div>
 
           <div>
@@ -601,3 +615,64 @@
   });
 </script>
 
+  <style>
+    .free-trial {
+      width: 100px;
+    }
+  </style>
+
+<script type="text/javascript">
+  const cartDrawer = document.querySelector('#cart-drawer');
+  const cartObserver = new MutationObserver((mutationsList) => {
+    cartObserver.disconnect(); // Stop observing to prevent infinite loop
+  
+    mutationsList.forEach(async (record) => {
+      if (!window.trynow) return;
+  
+      let amountDueToday = await window.trynow.cart.getAmountDueToday();
+      let spanText = document.querySelector('.totals__subtotal-value');
+  
+      // Check if the value is already updated to prevent unnecessary updates
+      if (spanText.textContent !== `${amountDueToday}`) {
+        spanText.textContent = `${amountDueToday}`;
+      }
+  
+      const tryNowItemCount = await window.trynow.cart.getTryNowItemCount();
+      if (tryNowItemCount > 0) {
+        let subtotalText = document.querySelector('.totals__subtotal');
+        if (subtotalText.textContent !== 'Amount Due Today') {
+          subtotalText.textContent = 'Amount Due Today';
+        }
+      }
+  
+      const cartItems = document.querySelectorAll('.cart-item');
+      cartItems.forEach((item) => {
+        const itemOption = item.querySelector('.product-option.selling_plan');
+        if (itemOption && itemOption.textContent.includes('Try')) {
+          const priceWrapper = item.querySelector('.cart-item__price-wrapper');
+          const priceSpan = priceWrapper.querySelector('span');
+  
+          // Avoid adding duplicate modifications
+          if (!priceWrapper.querySelector('.free-trial')) {
+            priceSpan.style.textDecoration = 'line-through';
+            const freeTrial = document.createElement('span');
+            freeTrial.textContent = 'FREE TRIAL';
+            freeTrial.classList.add('free-trial'); // Add a class to prevent duplicates
+            priceWrapper.style.display = 'flex';
+            priceWrapper.appendChild(freeTrial);
+          }
+        }
+      });
+    });
+  
+    cartObserver.observe(cartDrawer, {
+      subtree: true,
+      childList: true,
+    }); // Re-enable observer
+  });
+  
+  cartObserver.observe(cartDrawer, {
+    subtree: true,
+    childList: true,
+  });         
+</script>

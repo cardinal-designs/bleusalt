@@ -99,6 +99,29 @@
   });
 </script>
 
+<script type="text/javascript">
+      const cartDrawer2 = document.querySelector('cart-items');
+      const cartObserver2 = new MutationObserver((mutationsList) => {
+        mutationsList.forEach(async (record) => {
+          if (!window.trynow) return;
+          let amountDueToday = await window.trynow.cart.getAmountDueToday();
+          let spanText = document.querySelector('.cart__footer .totals__subtotal-value');
+          spanText.textContent = `${amountDueToday}`;
+          const tryNowItemCount = await window.trynow.cart.getTryNowItemCount();
+          if(tryNowItemCount > 0){
+            document.querySelector('.cart__footer .totals__subtotal').textContent = 'Amount Due Today';
+          }
+
+          
+        })
+      })
+    cartObserver2.observe(cartDrawer2, {
+      subtree: true,
+      childList: true,
+    })          
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.main-cart-footer.name",
