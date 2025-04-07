@@ -148,6 +148,10 @@
   gap: 5px;
 }
 
+.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-options {
+  margin-top: 10px;
+}
+
 @media only screen and (min-width: 750px) {
 
   .product-recommendations .rebuy-widget-content .primary-title {
