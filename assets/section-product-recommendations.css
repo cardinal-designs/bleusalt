@@ -168,9 +168,10 @@
   position: relative;
 }
 
-.product-recommendations .rebuy-widget .rebuy-product-block .quick-add {
-  display: block;
+.product-recommendations .rebuy-widget .rebuy-product-block .quick-add { 
   position: absolute;
+  display: flex;
+  justify-content: center;
   bottom: 10px;
   left: 10px;
   right: 10px;
