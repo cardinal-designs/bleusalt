@@ -243,6 +243,14 @@
   
         </div>
     </div>
+
+
+    const quickAddElements = document.querySelectorAll('quick-add');
+    quickAddElements.forEach((el) => {
+      if (!(el instanceof customElements.get('quick-add'))) {
+        customElements.upgrade(el);
+      }
+    });
   </script>
  
 {%- else -%}
