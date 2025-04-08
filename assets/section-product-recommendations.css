@@ -127,7 +127,7 @@
 .product-recommendations .rebuy-recommended-products .rebuy-product-block .rebuy-product-actions,
 .product-recommendations .rebuy-widget .powered-by-rebuy, 
 .product-recommendations .rebuy-recommended-products .powered-by-rebuy {
-  display: none;
+  /* display: none; */
 }
 
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
