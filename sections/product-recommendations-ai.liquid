@@ -148,7 +148,7 @@
 
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
                             <button
-                              v-for="(value, index) in displayedColors"
+                              v-for="(value, index) in filterOOSOptions(option, product)"
                               :key="index"
                               :data-index="index + 1"
                               :aria-label="`color, ${value}`"
@@ -161,25 +161,7 @@
                             </button>
                           </div>
   
-                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
-    
-                                <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
-                                    <input
-                                        :name="id + '-color-' + product_index"
-                                        :id="id + '-color-' + product_index + '-' + value + '-' + value_index"
-                                        :checked="value_index == 0"
-                                        :value="value"
-                                        type="radio"
-                                        class="rebuy-color-input hide"
-                                        v-on:change="selectVariantByColor(product, value, product_index)">
-                                    <label
-                                        :for="id + '-color-' + product_index + '-' + value + '-' + value_index"
-                                        :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
-                                        :title="value"
-                                        class="rebuy-color-label"></label>
-                                    <span class="h4 card__selected-color" v-html="value">{{ value }}</span>
-                                </div>
-                            </div>
+                           
   
                             <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches">
                                 <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch">
