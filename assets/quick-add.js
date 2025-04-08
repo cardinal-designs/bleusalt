@@ -19,12 +19,9 @@ if (!customElements.get('quick-add')) {
       this.sizeIndex = this.json.options.indexOf('Size');
       this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
       this.init();
+      console.log("Element Added to DOM", this)
     }
 
-    onConnectedCallback(){
-      console.log("Element Added To DOM");
-    }
-    
     onButtonClick(event) {
       this.querySelectorAll('.quick-add__button').forEach(
         (button) => button.removeAttribute('selected')
