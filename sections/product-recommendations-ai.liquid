@@ -6,6 +6,10 @@
 <noscript>{% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 <noscript>{% render 'hs-defer-css' with filename: 'section-product-recommendations.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+<script defer src="{{ 'quick-add.js' | asset_url }}"></script>
+
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -62,7 +66,7 @@
                         v-for="(product, product_index) in products"
                         v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
                         aria-label="product"
-                        class="rebuy-product-block"
+                        class="rebuy-product-block card" data-json='{{ product | json | escape }}'
                         role="listitem"
                     >
   
@@ -78,27 +82,16 @@
                             >
                                 <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'" v-bind:src="itemImage(product, product.selected_variant, '400x400')" v-bind:alt="itemImageAlt(product, product.selected_variant)">
                             </a>
-
-                            <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches quick-add">
-                              <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch">
-                                  <input
-                                      :name="id + '-size-' + product_index"
-                                      :id="id + '-size-' + product_index + '-' + value"
-                                      :checked="value_index == 0"
-                                      :value="value"
-                                      type="radio"
-                                      class="rebuy-size-input hide"
-                                      v-on:change="selectVariantBySize(product, value, product_index)">
-                                  <label
-                                      :for="id + '-size-' + product_index + '-' + value"
-                                      class="rebuy-size-label quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</label>
-                              </div>
-                          </div>
+                            <quick-add v-if="displaySizeSwatches(option)" v-for="option in product.options">
+                              <button v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" class="quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</button>
+                            </quick-add>
                         </div>
                         <div class="rebuy-product-info">
+                            <div class="card__heading h4">
                               <a
                                   aria-level="5"
                                   class="rebuy-product-title"
+                                  data-product-url="{{ product.url }}"
                                   v-bind:href="learnMoreURL(product)"
                                   v-on:click="learnMore(product, $event);"
                                   v-html="product.title"
@@ -106,6 +99,7 @@
                                   v-bind:aria-label="'View ' + product.title"
                                   rel="nofollow"
                               ></a>
+                            </div>
                             <div class="rebuy-variant-title" v-if="showVariantTitle(product)" v-html="product.selected_variant.title"></div>
                             <div class="rebuy-product-review" v-if="hasProductReviews(product)" aria-label="product star rating">
                                 <span class="rebuy-star-rating">
@@ -169,7 +163,6 @@
                                         :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                                         :title="value"
                                         class="rebuy-color-label"></label>
-                                    <span class="h4 card__selected-color" v-html="value">{{ value }}</span>
                                 </div>
                             </div>
   
@@ -239,7 +232,12 @@
                             <span v-html="continueLabel()"></span>
                     </button>
                 </div>
-
+  
+                <div class="powered-by-rebuy">
+                    <a v-bind:href="'https://rebuyengine.com/?shop=' + config.shop.myshopify_domain" target="_blank" rel="noopener">
+                        Powered by Rebuy
+                    </a>
+                </div>
   
             </div>
   
