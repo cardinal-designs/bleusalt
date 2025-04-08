@@ -221,9 +221,6 @@
   border: var(--inputs-border-width) solid rgba(var(--color-foreground), var(--inputs-border-opacity); 
 }
 
-.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-actions {
-  display: block;
-}
 
 @media only screen and (min-width: 750px) {
 
@@ -232,8 +229,8 @@
   }
 
   .product-recommendations .rebuy-widget .rebuy-product-block {
-    width: calc(25% - var(--grid-desktop-horizontal-spacing) / 2) !important;
-    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) / 2);
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product-recommendations .rebuy-product-wrapper {
