@@ -36,3 +36,8 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+
+
+document.addEventListener('rebuy.loaded', function(){ 
+  console.log('rebuy.loaded event'); 
+});
