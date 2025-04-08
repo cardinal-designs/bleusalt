@@ -264,6 +264,7 @@
               (button) => button.addEventListener('click', this.onButtonClick.bind(this))
             );
             this.card = this.closest('.card');
+            console.log('this.card:: ',this)
             this.cardLink = this.card.querySelector('.card__heading.h4 a');
             this.productUrl = this.cardLink.getAttribute('data-product-url');
             this.json = JSON.parse(this.card.getAttribute('data-json'));
