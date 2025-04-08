@@ -156,6 +156,8 @@
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-options {
   margin-top: 10px;
+  z-index: 2;
+  position: relative;
 }
 
 .product-recommendations .rebuy-size-swatches {
