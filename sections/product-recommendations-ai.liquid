@@ -147,8 +147,18 @@
                             </select>
 
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
-                            <button v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" v-if="value_index == 0 ? selected ; ''" data-index="value_index" class="rebuy-color-swatch quick-add__button quick-add__button--color button--inline" v-html="value" 
-                                  :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }">{{ value }}</button>
+                            <button
+                              v-for="(value, index) in displayedColors"
+                              :key="index"
+                              :data-index="index + 1"
+                              :aria-label="`color, ${value}`"
+                              :selected="index === 0"
+                              type="button"
+                              :value="value"
+                              class="quick-add__button quick-add__button--color button--inline"
+                              :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
+                            >
+                            </button>
                           </div>
   
                             <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
