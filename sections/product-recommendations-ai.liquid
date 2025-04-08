@@ -246,13 +246,16 @@
   </script>
   <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
   <script type="text/javascript">
-    document.addEventListener('rebuy.loaded', function(){      
-      const quickAddElements = document.querySelectorAll('quick-add');
-      quickAddElements.forEach((el) => {
-        if (!(el instanceof customElements.get('quick-add'))) {
-          customElements.upgrade(el);
-        }
-      });
+    document.addEventListener('rebuy.loaded', function(){ 
+      setTimeout(() => {
+        console.log('5 sec')
+        const quickAddElements = document.querySelectorAll('quick-add');
+        quickAddElements.forEach((el) => {
+          if (!(el instanceof customElements.get('quick-add'))) {
+            customElements.upgrade(el);
+          }
+        });
+      },5000);
     });
   </script>
 
