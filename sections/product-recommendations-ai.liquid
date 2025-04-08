@@ -248,7 +248,12 @@
 
   <script type="text/javascript">
     document.addEventListener('rebuy.loaded', function(){ 
-      console.log('rebuy.loaded event'); 
+      const quickAddElements = document.querySelectorAll('quick-add');
+      quickAddElements.forEach((el) => {
+        if (!(el instanceof customElements.get('quick-add'))) {
+          customElements.upgrade(el);
+        }
+      });
     });
   </script>
  
