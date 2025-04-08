@@ -5,6 +5,7 @@ if (!customElements.get('quick-add')) {
       this.querySelectorAll('button').forEach(
         (button) => button.addEventListener('click', this.onButtonClick.bind(this))
       );
+      console.log('this:: ',this);
       this.card = this.closest('.card');
       this.cardLink = this.card.querySelector('.card__heading.h4 a');
       this.productUrl = this.cardLink.getAttribute('data-product-url');
