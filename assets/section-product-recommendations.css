@@ -183,6 +183,13 @@
   transition: opacity .3s ease;
 }
 
+.product-recommendations .rebuy-widget .rebuy-product-block .quick-add .rebuy-size-label {
+  font-size: 13.3333px;
+  line-height: 1;
+  margin: 0;
+  min-width: unset;
+}
+
 .product-recommendations .rebuy-widget .rebuy-product-block:hover .quick-add {
   opacity: 1;
   visibility: visible;
