@@ -225,11 +225,19 @@
   display: block;
 }
 
-.rebuy-color-swatch .card__selected-color {
+.product-recommendations .rebuy-color-swatch .card__selected-color {
   position: absolute;
   left: 0;
   top: 0;
   visibility: hidden;
+}
+
+.product-recommendations .rebuy-color-swatch {
+  padding-top: 16px;
+}
+
+.product-recommendations .rebuy-color-input:checked + .rebuy-color-label + .card__selected-color {
+  visibility: visible;
 }
 
 @media only screen and (min-width: 750px) {
