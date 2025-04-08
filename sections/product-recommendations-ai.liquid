@@ -91,7 +91,16 @@
                                       v-on:change="selectVariantBySize(product, value, product_index)">
                                   <label
                                       :for="id + '-size-' + product_index + '-' + value"
-                                      class="rebuy-size-label quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</label>
+                                      class="rebuy-size-label" v-html="value">{{ value }}</label>
+
+                                <button
+                                  class="rebuy-button"
+                                  v-bind:class="{ working: (product.status != 'ready' && product.status != 'selecting') }"
+                                  v-bind:disabled="!(variantAvailable(product.selected_variant)) || (product.status != 'ready' && product.status != 'selecting')"
+                                  v-bind:aria-label="buttonAriaLabel(product)"
+                                  v-on:click="addToCart(product)"
+                                  type="button" v-html="value">
+                              </button>
                               </div>
                           </div>
                         </div>
