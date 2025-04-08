@@ -65,7 +65,7 @@
                         v-for="(product, product_index) in products"
                         v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
                         aria-label="product"
-                        class="rebuy-product-block card" data-json='{{ product | json | escape }}'
+                        class="rebuy-product-block card" data-json='{{ product }}'
                         role="listitem"
                     >
   
