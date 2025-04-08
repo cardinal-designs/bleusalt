@@ -191,7 +191,7 @@
 .product-recommendations .rebuy-widget .rebuy-product-block .quick-add .rebuy-size-label {
   font-size: 13.3333px;
   line-height: 1;
-  margin: 0;
+  margin-right: 4px;
   min-width: unset;
   background: 0;
   border: 0;
