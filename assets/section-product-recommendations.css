@@ -224,7 +224,7 @@
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-actions {
-  display: block;
+  /* display: block; */
 }
 
 .product-recommendations .rebuy-color-swatch .card__selected-color {
