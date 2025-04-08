@@ -130,6 +130,10 @@
   display: none;
 }
 
+.rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
+  padding: 1.3rem 1rem;
+}
+
 .product-recommendations .rebuy-color-label {
   border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
   margin: 2px;
