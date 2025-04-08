@@ -294,6 +294,7 @@
   
         this.variants.forEach((variant) => {
           if (variant.title === selectedTitle) {
+            console.log('selectedTitle:: ',selectedTitle);
             addToCart(variant.id, 1);
           }
         });
