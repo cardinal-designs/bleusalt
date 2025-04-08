@@ -162,6 +162,7 @@
                                         :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                                         :title="value"
                                         class="rebuy-color-label"></label>
+                                    <span class="h4 card__selected-color" v-html="value">{{ value }}</span>
                                 </div>
                             </div>
   
