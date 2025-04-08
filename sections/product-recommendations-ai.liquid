@@ -290,6 +290,7 @@
             });
             const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
             this.variants.forEach((variant) => {
+              console.log('variant.title::: ', variant.title)
               if (variant.title === selectedArray) {
                 addToCart(variant.id, 1);
                 return false;
