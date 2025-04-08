@@ -86,8 +86,8 @@
                               <button v-on:click="addToCart(product)" v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" class="quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</button>
                             </div>
 
-                            <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches">
-                              <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch quick-add">
+                            <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches quick-add">
+                              <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch">
                                   <input
                                       :name="id + '-size-' + product_index"
                                       :id="id + '-size-' + product_index + '-' + value"
