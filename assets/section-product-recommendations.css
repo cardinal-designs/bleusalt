@@ -178,7 +178,7 @@
   position: relative;
 }
 
-.product-recommendations .rebuy-widget .rebuy-product-block .quick-add { 
+.product-recommendations .rebuy-widget .rebuy-product-block quick-add { 
   position: absolute;
   display: flex;
   justify-content: center;
@@ -214,7 +214,7 @@
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(var(--color-foreground), .25);
 }
 
-.product-recommendations .rebuy-widget .rebuy-product-block:hover .quick-add {
+.product-recommendations .rebuy-widget .rebuy-product-block:hover quick-add {
   opacity: 1;
   visibility: visible;
 }
