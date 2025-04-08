@@ -250,11 +250,35 @@
     document.addEventListener('rebuy.loaded', function(){ 
       setTimeout(() => {
         console.log('5 sec')
-        const quickAddElements = document.querySelectorAll('quick-add');
-        quickAddElements.forEach((el) => {
-          if (!(el instanceof customElements.get('quick-add'))) {
-            customElements.upgrade(el);
-          }
+        // Observe changes in the DOM to detect when Rebuy widget renders new elements
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (
+                node.nodeType === 1 && // ELEMENT_NODE
+                node.tagName.toLowerCase() === 'quick-add' &&
+                !(node instanceof customElements.get('quick-add'))
+              ) {
+                // Upgrade newly added quick-add elements
+                customElements.upgrade(node);
+              }
+        
+              // Or, if widgets insert a container, look for quick-add elements inside
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                node.querySelectorAll('quick-add').forEach((el) => {
+                  if (!(el instanceof customElements.get('quick-add'))) {
+                    customElements.upgrade(el);
+                  }
+                });
+              }
+            });
+          });
+        });
+        
+        // Start observing the whole body for DOM additions
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
         });
       },5000);
     });
