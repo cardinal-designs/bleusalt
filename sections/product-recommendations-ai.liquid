@@ -246,6 +246,7 @@
 
 
     const quickAddElements = document.querySelectorAll('quick-add');
+    console.log('quickAddElements:: ', quickAddElements);
     quickAddElements.forEach((el) => {
       if (!(el instanceof customElements.get('quick-add'))) {
         customElements.upgrade(el);
