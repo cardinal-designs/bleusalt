@@ -168,7 +168,7 @@
   position: relative;
 }
 
-.product-recommendations .rebuy-widget .rebuy-product-block:hover .quick-add {
+.product-recommendations .rebuy-widget .rebuy-product-block .quick-add {
   display: block;
   position: absolute;
   bottom: 10px;
