@@ -85,6 +85,22 @@
                             <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="quick-add">
                               <button v-on:click="addToCart(product)" v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" class="quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</button>
                             </div>
+
+                            <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches">
+                              <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch quick-add">
+                                  <input
+                                      :name="id + '-size-' + product_index"
+                                      :id="id + '-size-' + product_index + '-' + value"
+                                      :checked="value_index == 0"
+                                      :value="value"
+                                      type="radio"
+                                      class="rebuy-size-input hide"
+                                      v-on:change="selectVariantBySize(product, value, product_index)">
+                                  <label
+                                      :for="id + '-size-' + product_index + '-' + value"
+                                      class="rebuy-size-label quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</label>
+                              </div>
+                          </div>
                         </div>
                         <div class="rebuy-product-info">
                             <div class="card__heading h4">
