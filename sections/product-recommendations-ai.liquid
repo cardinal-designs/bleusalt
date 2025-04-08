@@ -78,6 +78,9 @@
                             >
                                 <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'" v-bind:src="itemImage(product, product.selected_variant, '400x400')" v-bind:alt="itemImageAlt(product, product.selected_variant)">
                             </a>
+                            <quick-add v-if="displaySizeSwatches(option)" v-for="option in product.options">
+                              <button v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" class="quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</button>
+                            </quick-add>
                         </div>
                         <div class="rebuy-product-info">
                             <a
@@ -155,10 +158,6 @@
                                         class="rebuy-color-label"></label>
                                 </div>
                             </div>
-
-                            <quick-add v-if="displaySizeSwatches(option)" v-for="option in product.options">
-                              <button v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" class="quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</button>
-                            </quick-add>
   
                             <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches">
                                 <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch">
