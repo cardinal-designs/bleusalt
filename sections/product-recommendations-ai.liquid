@@ -155,6 +155,7 @@
                               :selected="index === 0"
                               type="button"
                               :value="value"
+                              v-on:change="selectVariantByColor(product, value, product_index)"
                               class="quick-add__button quick-add__button--color button--inline"
                               :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                             >
