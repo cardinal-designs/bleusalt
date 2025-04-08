@@ -247,7 +247,7 @@
 
   <script type="text/javascript">
     // Generate the JSON data for the product
-    getProductJson(product) {
+    const getProductJson = function(product) {
       return JSON.stringify(product).replace(/</g, '&lt;').replace(/>/g, '&gt;'); // Escape JSON for safe HTML injection
     }
     document.addEventListener('rebuy.loaded', function () {
