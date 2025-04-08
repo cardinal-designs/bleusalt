@@ -96,7 +96,6 @@
                           </div>
                         </div>
                         <div class="rebuy-product-info">
-                            <div class="card__heading h4">
                               <a
                                   aria-level="5"
                                   class="rebuy-product-title"
@@ -107,7 +106,6 @@
                                   v-bind:aria-label="'View ' + product.title"
                                   rel="nofollow"
                               ></a>
-                            </div>
                             <div class="rebuy-variant-title" v-if="showVariantTitle(product)" v-html="product.selected_variant.title"></div>
                             <div class="rebuy-product-review" v-if="hasProductReviews(product)" aria-label="product star rating">
                                 <span class="rebuy-star-rating">
