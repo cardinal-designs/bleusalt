@@ -162,6 +162,10 @@
   display: none;
 }
 
+.product-recommendations .rebuy-widget .rebuy-product-media {
+  position: relative;
+}
+
 .product-recommendations .rebuy-widget .rebuy-product-block:hover quick-add {
   opacity: 1;
   visibility: visible;
