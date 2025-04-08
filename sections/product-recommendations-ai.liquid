@@ -156,6 +156,7 @@
   
                             <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
                                 <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
+                                    <span class="h4 card__selected-color" v-html="value">{{ value }}</span>
                                     <input
                                         :name="id + '-color-' + product_index"
                                         :id="id + '-color-' + product_index + '-' + value + '-' + value_index"
