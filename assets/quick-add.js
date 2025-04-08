@@ -7,8 +7,6 @@ if (!customElements.get('quick-add')) {
       );
       this.card = this.closest('.card');
       this.cardLink = this.card.querySelector('.card__heading.h4 a');
-      console.log('this.card:: ',this.card)
-      console.log('this.cardLink:: ',this.cardLink)
       this.productUrl = this.cardLink.getAttribute('data-product-url');
       this.json = JSON.parse(this.card.getAttribute('data-json'));
       this.variants = this.json.variants;
