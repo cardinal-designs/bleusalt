@@ -82,7 +82,7 @@
                             >
                                 <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'" v-bind:src="itemImage(product, product.selected_variant, '400x400')" v-bind:alt="itemImageAlt(product, product.selected_variant)">
                             </a>
-                            <div v-if="displaySizeSwatches(option)" v-for="option in product.options">
+                            <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="quick-add">
                               <button v-on:click="addToCart(product)" v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" value="value" class="quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</button>
                             </div>
                         </div>
