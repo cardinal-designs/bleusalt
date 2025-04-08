@@ -246,7 +246,7 @@
   </script>
   <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
   <script type="text/javascript">
-    document.addEventListener('rebuy.loaded', function(){ 
+    document.addEventListener('rebuy.init', function(){ 
       setTimeout(() => {
         console.log('5 sec')
         const quickAddElements = document.querySelectorAll('quick-add');
