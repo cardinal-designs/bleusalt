@@ -282,6 +282,7 @@
             event.target.setAttribute('selected', true);
             let allSelected = [];
             this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+              console.log('button.value:: ',button.value);
               allSelected.push(button.value);
             });
             const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
