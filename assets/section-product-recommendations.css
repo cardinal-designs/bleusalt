@@ -235,7 +235,7 @@
 }
 
 .product-recommendations .rebuy-color-swatch {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 
 .product-recommendations .rebuy-color-input:checked + .rebuy-color-label + .card__selected-color {
