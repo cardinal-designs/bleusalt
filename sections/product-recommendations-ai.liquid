@@ -65,7 +65,7 @@
                         v-for="(product, product_index) in products"
                         v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
                         aria-label="product"
-                        class="rebuy-product-block card" data-json='{{ product | json | escape }}'
+                        class="rebuy-product-block card" data-json='{{ product.variants | json | escape }}'
                         role="listitem"
                     >
   
@@ -266,7 +266,7 @@
               this.cardLink = this.card.querySelector('.card__heading.h4 a');
               this.productUrl = this.cardLink.getAttribute('data-product-url');
               this.json = JSON.parse(this.card.getAttribute('data-json'));
-              this.variants = this.json.variants;
+              this.variants = this.json;
               console.log('this.variants:: ',this.variants)
               this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
               this.colorButtons.forEach(
