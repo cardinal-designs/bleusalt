@@ -244,7 +244,7 @@
     </div>
     
   </script>
-
+  <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
   <script type="text/javascript">
     document.addEventListener('rebuy.loaded', function(){      
       const quickAddElements = document.querySelectorAll('quick-add');
@@ -256,7 +256,7 @@
     });
   </script>
 
-  <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
+  
  
 {%- else -%}
 
