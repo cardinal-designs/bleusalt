@@ -377,7 +377,6 @@
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           mutation.addedNodes.forEach((node) => {
-            console.log('node:: ',node);
             if (node.nodeType === 1) {
               // If the added node is a quick-add element
               if (node.tagName.toLowerCase() === 'quick-add') {
