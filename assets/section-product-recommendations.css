@@ -197,6 +197,7 @@
   border: 0;
   padding: 5px;
   cursor: pointer;
+  border-radius: 0;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .quick-add .rebuy-size-label:not([selected]):hover {
