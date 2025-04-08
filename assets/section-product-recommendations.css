@@ -230,6 +230,8 @@
   left: 0;
   top: 0;
   visibility: hidden;
+  line-height: calc(1 + .4 / var(--font-body-scale));
+  color: rgb(var(--color-foreground));
 }
 
 .product-recommendations .rebuy-color-swatch {
