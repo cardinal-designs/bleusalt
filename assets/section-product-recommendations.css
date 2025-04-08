@@ -232,8 +232,8 @@
   }
 
   .product-recommendations .rebuy-widget .rebuy-product-block {
-    /* width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2) !important;
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2); */
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product-recommendations .rebuy-product-wrapper {
