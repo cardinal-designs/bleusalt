@@ -245,6 +245,7 @@
   </script>
 
   <script type="text/javascript">
+    setTimeout(() => {
     // 1. Define QuickAdd early (and globally)
     class QuickAdd extends HTMLElement {
       constructor() {
@@ -363,37 +364,38 @@
   
     // 3. Setup MutationObserver *after* Rebuy loads
     document.addEventListener('rebuy.loaded', function () {
-      setTimeout(() => {
-        const observer = new MutationObserver((mutations) => {
-          mutations.forEach((mutation) => {
-            mutation.addedNodes.forEach((node) => {
-              if (node.nodeType === 1) {
-                // Direct <quick-add> element
-                if (node.tagName?.toLowerCase() === 'quick-add') {
-                  try {
-                    node.initQuickAdd?.(); // Safe call
-                  } catch (e) {
-                    console.warn('Failed to init direct quick-add:', e);
-                  }
+      
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === 1) {
+              // Direct <quick-add> element
+              if (node.tagName?.toLowerCase() === 'quick-add') {
+                try {
+                  node.initQuickAdd?.(); // Safe call
+                } catch (e) {
+                  console.warn('Failed to init direct quick-add:', e);
                 }
-  
-                // Descendant <quick-add> elements
-                node.querySelectorAll?.('quick-add').forEach((el) => {
-                  try {
-                    el.initQuickAdd?.();
-                  } catch (e) {
-                    console.warn('Failed to init nested quick-add:', e);
-                  }
-                });
               }
-            });
+
+              // Descendant <quick-add> elements
+              node.querySelectorAll?.('quick-add').forEach((el) => {
+                try {
+                  el.initQuickAdd?.();
+                } catch (e) {
+                  console.warn('Failed to init nested quick-add:', e);
+                }
+              });
+            }
           });
         });
-  
-        observer.observe(document.body, { childList: true, subtree: true });
-      }, 5000); // Ensure Rebuy fully renders
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+       // Ensure Rebuy fully renders
     });
-  </script>
+  }, 5000);
+</script>
  
 {%- else -%}
 
