@@ -337,6 +337,7 @@
 
           changeImage(variant) {
             const firstImage = this.card.querySelectorAll('.card__media img')[0];
+            console.log('variant:: ',variant);
             if (variant.featured_image) {
               firstImage.setAttribute('src', variant.featured_image.src);
               firstImage.removeAttribute('srcset');
