@@ -24,6 +24,7 @@ if (!customElements.get('quick-add')) {
         (button) => button.removeAttribute('selected')
       )
       event.target.setAttribute('selected',true);
+      console.log("event.target == ", event.target);
       let allSelected = [];
       this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
         allSelected.push(button.value);
