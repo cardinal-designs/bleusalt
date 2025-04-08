@@ -19,6 +19,11 @@ if (!customElements.get('quick-add')) {
       this.sizeIndex = this.json.options.indexOf('Size');
       this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
       this.init();
+
+
+      console.log("I am here !!!!")
+
+      
     }
 
     onButtonClick(event) {
