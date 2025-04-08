@@ -240,6 +240,10 @@
   visibility: visible;
 }
 
+.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-media .rebuy-product-image {
+  position: relative;
+}
+
 @media only screen and (min-width: 750px) {
 
   .product-recommendations .rebuy-widget-content .primary-title {
