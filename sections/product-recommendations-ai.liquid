@@ -147,7 +147,7 @@
                             </select>
                           
   
-                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches">
+                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
                                 <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-color-swatch">
                                     <input
                                         :name="id + '-color-' + product_index"
