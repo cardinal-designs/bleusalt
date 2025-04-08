@@ -7,7 +7,6 @@
 <noscript>{% render 'hs-defer-css' with filename: 'section-product-recommendations.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 
 <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-<script defer src="{{ 'quick-add.js' | asset_url }}"></script>
 
 
 {%- style -%}
@@ -256,6 +255,8 @@
       });
     });
   </script>
+
+  <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
  
 {%- else -%}
 
