@@ -91,7 +91,7 @@
                                       v-on:change="selectVariantBySize(product, value, product_index)">
                                   <label
                                       :for="id + '-size-' + product_index + '-' + value"
-                                      class="rebuy-size-label quick-add__button quick-add__button--size button--inline" v-html="value">{{ value }}</label>
+                                      class="rebuy-size-label quick-add__button quick-add__button--size button--inline" v-html="value" v-on:click="addToCart(product)">{{ value }}</label>
                               </div>
                           </div>
                         </div>
