@@ -290,12 +290,6 @@
         });
         
         console.log('Rebuy widget initialized, starting observer...');
-        
-        // function initSomethingWithProducts(products) {
-        //   console.log('Ready to use products:', products);
-        //   quickAdd(products)
-        // }
-
 
         const quickAdd = function (products) {
 
@@ -320,7 +314,6 @@
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 // this.json = products;
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
-                console.log("this.json", this.json)
                 this.variants = this.json.variants;
              
                 this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
