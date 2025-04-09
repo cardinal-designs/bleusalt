@@ -180,6 +180,7 @@
 .product-recommendations .rebuy-widget .rebuy-product-block quick-add { 
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   bottom: 10px;
   left: 10px;
