@@ -310,7 +310,7 @@
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
-                this.json = JSON.parse(products);
+                this.json = products;
                 console.log('this.json:: ',this.json);
                 this.variants = this.json.variants;
                 console.log('this.variants: ',this.variants);
