@@ -5,7 +5,7 @@ if (!customElements.get('quick-add')) {
       this.querySelectorAll('button').forEach(
         (button) => button.addEventListener('click', this.onButtonClick.bind(this))
       );
-      console.log('this:: ',this);
+      
       this.card = this.closest('.card');
       this.cardLink = this.card.querySelector('.card__heading.h4 a');
       this.productUrl = this.cardLink.getAttribute('data-product-url');
@@ -26,7 +26,6 @@ if (!customElements.get('quick-add')) {
         (button) => button.removeAttribute('selected')
       )
       event.target.setAttribute('selected',true);
-      console.log("event.target == ", event.target);
       let allSelected = [];
       this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
         allSelected.push(button.value);
@@ -73,9 +72,7 @@ if (!customElements.get('quick-add')) {
     }
     sizeAvailabilities() {
       if(!this.selectedColor) return;
-      console.log('this.selectedColor.value:: ',this.selectedColor.value);
       this.variants.forEach((variant) => {
-        console.log('variant.options[this.colorIndex]:: ',variant.options[this.colorIndex]);
         if(variant.options[this.colorIndex] !== this.selectedColor.value) return true;
         let sizeButton = this.querySelector(`button[value="${variant.options[this.sizeIndex]}"]`);
         if(sizeButton) sizeButton.disabled = !variant.available;
