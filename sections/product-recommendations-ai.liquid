@@ -318,12 +318,12 @@
               this.variants.forEach((variant) => {
                 console.log('variant.options::: ',variant.option1);
                 // console.log('this::: ',this);
-                // if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
-                //   console.log('ifff variant::: ',variant);
-                //   // this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
-                //   this.changeImage(variant);
-                //   foundOne = true;
-                // }
+                if (variant.option1 === this.selectedColor.value && !foundOne) {
+                  console.log('ifff variant::: ',variant);
+                  // this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
+                  this.changeImage(variant);
+                  foundOne = true;
+                }
               });
             }
 
