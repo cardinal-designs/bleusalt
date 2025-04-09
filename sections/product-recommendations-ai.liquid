@@ -269,6 +269,8 @@
           }
       })
 
+      consoel.log('handleArr:: ',handleArr);
+
       Promise.all(
         handleArr.map(handle => 
           fetch(`/products/${handle}.js`).then(res => res.json())
