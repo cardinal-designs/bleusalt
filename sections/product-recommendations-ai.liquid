@@ -274,8 +274,9 @@
         )
       )
       .then(products => {
-        // console.log('Fetched products:', products);
-        productJsonArr.push(products);
+        console.log('Fetched products:', products);
+        productJsonArr = [...products];
+        
         // products is an array of product JSON objects
       })
       .catch(error => {
