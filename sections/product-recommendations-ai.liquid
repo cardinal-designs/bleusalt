@@ -423,21 +423,25 @@
               }
             
               this.json.media.forEach((media) => {
-                if (media.media_type !== 'image') return; // Skip non-image media
-                if (!this.selectedColor || !this.selectedColor.value) {
-                  console.error('Selected color is undefined.');
-                  return;
-                }
-                if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
+              if (
+                media.media_type !== 'image' ||
+                !media.alt ||
+                !this.selectedColor?.value
+              ) {
+                return;
+              }
             
-                if (!foundOne) {
-                  updateSrcSet(firstImage, media.src); // Update the first image
-                  foundOne = true;
-                } else if (!foundTwo && secondImage) {
-                  updateSrcSet(secondImage, media.src); // Update the second image
-                  foundTwo = true;
-                }
-              });
+              const altColor = media.alt.split('|')[0].trim();
+              if (altColor !== this.selectedColor.value) return;
+            
+              if (!foundOne) {
+                updateSrcSet(firstImage, media.src);
+                foundOne = true;
+              } else if (!foundTwo && secondImage) {
+                updateSrcSet(secondImage, media.src);
+                foundTwo = true;
+              }
+            });
             }
   
             init() {
