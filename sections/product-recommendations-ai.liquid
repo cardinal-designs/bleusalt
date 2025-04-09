@@ -330,7 +330,6 @@
                 });
                 const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
 
-                console.log("selectedArray", selectedArray)
                 this.variants.forEach((variant) => {
                   if (variant.title === selectedArray) {
                     addToCart(variant.id, 1);
@@ -345,6 +344,9 @@
                 );
                 event.target.setAttribute('selected', true);
                 this.selectedColor = event.target;
+
+                console.log("this.selectedColor", this.selectedColor)
+                
                 this.updateUrl();
                 this.sizeAvailabilities();
                 // this.updateSelectedSize();
