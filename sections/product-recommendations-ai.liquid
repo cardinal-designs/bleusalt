@@ -278,6 +278,7 @@
                 (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
               );
               this.colorIndex = this.json.options.indexOf('Color');
+              console.log('this.json.options:: ',this.json.options);
               this.sizeIndex = this.json.options.indexOf('Size');
               this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
               this.init();
