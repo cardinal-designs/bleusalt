@@ -280,6 +280,7 @@
         )
         .then(products => {
           console.log('Fetched products:', products);
+          window.rebuyproducts = products;
           
           quickAdd(products)
         })
@@ -293,6 +294,8 @@
         //   console.log('Ready to use products:', products);
         //   quickAdd(products)
         // }
+
+        console.log("window.rebuyproducts", window.rebuyproducts)
 
         const quickAdd = function (products) {
 
