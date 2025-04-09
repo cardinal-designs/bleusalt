@@ -306,7 +306,6 @@
                 // this.json = products;
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
                 this.variants = this.json.variants;
-             
                 this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
                 this.colorButtons.forEach(
                   (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
@@ -317,6 +316,7 @@
                 
                 this.sizeIndex = this.json.options.indexOf('Size');
                 this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
+                
                 this.init();
               }
     
@@ -411,6 +411,12 @@
     
               init() {
                 if (!this.selectedColor) return;
+
+                let selectedColorEl = this.card.querySelector('.card__selected-color');
+                if (selectedColorEl) {
+                  selectedColorEl.innerHTML = this.selectedColor.value;
+                }
+                
                 this.sizeAvailabilities();
               }
             }
