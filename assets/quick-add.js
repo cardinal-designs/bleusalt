@@ -11,7 +11,6 @@ if (!customElements.get('quick-add')) {
       this.productUrl = this.cardLink.getAttribute('data-product-url');
       this.json = JSON.parse(this.card.getAttribute('data-json'));
       this.variants = this.json.variants;
-      console.log('this.variants:: ',this.variants);
       this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
       this.colorButtons.forEach(
         (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
