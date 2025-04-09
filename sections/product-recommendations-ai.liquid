@@ -297,9 +297,7 @@
                 this.querySelectorAll('button').forEach(
                   (button) => button.addEventListener('click', this.onButtonClick.bind(this))
                 );
-
-                console.log("this", this)
-
+                
                 this.productId = this.closest("[data-product-id]").getAttribute("data-product-id");
                 
                 this.card = this.closest('.card');
@@ -355,18 +353,9 @@
     
               updateUrl() {
                 let foundOne = false;
-                console.log("this.colorIndex", this.colorIndex)
-                console.log("this.selectedColor.value", this.selectedColor.value)
-                console.log("foundOne", foundOne)
-                
                 this.variants.forEach((variant) => {
-                  // console.log('variant: ',variant);
-                  console.log("variant.options[this.colorIndex]", variant.options[this.colorIndex])
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
-                    // this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
-
-                    console.log('variant: ',variant);
-                    
+                    this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
                   }
@@ -399,8 +388,6 @@
     
               changeImage(variant) {
                 const firstImage = this.card.querySelectorAll('.card__media img')[0];
-                // console.log('firstImage:: ',firstImage)
-                console.log('variant:: ',variant);
                 if (variant.featured_image) {
                   firstImage.setAttribute('src', variant.featured_image.src);
                   firstImage.removeAttribute('srcset');
