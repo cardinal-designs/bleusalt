@@ -162,6 +162,7 @@
   gap: 5px;
   margin-left: 1px;
   position: relative;
+  margin-bottom: 0;
 }
 
 .product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-options {
