@@ -335,6 +335,7 @@
   
             sizeAvailabilities() {
               if (!this.selectedColor) return;
+              console.log('this.selectedColor.value:: ',this.selectedColor.value);
               this.variants.forEach((variant) => {
                 if (variant.options[this.colorIndex] !== this.selectedColor.value) return true;
                 let sizeButton = this.querySelector(`button[value="${variant.options[this.sizeIndex]}"]`);
