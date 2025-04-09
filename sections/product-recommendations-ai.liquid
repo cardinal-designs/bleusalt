@@ -258,7 +258,6 @@
     
     
     document.addEventListener('rebuy.ready', function () {
-      console.log('rebuy.loaded:: ');
       setTimeout(() => {
         let handles = document.querySelectorAll('.rebuy-product-block[data-product-handle]');
         let handleArr = [];
@@ -282,8 +281,6 @@
           console.error('Error fetching products:', error);
         });
         
-        console.log('Rebuy widget initialized, starting observer...');
-
         const quickAdd = function () {
 
           if (!customElements.get('quick-add')) {
