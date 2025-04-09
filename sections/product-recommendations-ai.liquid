@@ -272,12 +272,12 @@
               this.productUrl = this.cardLink.getAttribute('data-product-url');
               this.json = JSON.parse(this.card.getAttribute('data-json'));
               this.variants = this.json.variants;
-              console.log('this.variants:: ',this.json)
               this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
               this.colorButtons.forEach(
                 (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
               );
               this.colorIndex = this.json.options.indexOf('Color');
+              console.log('this.json:: ',this.json);
               console.log('this.json.options:: ',this.json.options);
               console.log('colorIndex:: ',this.json.options.indexOf('Color'));
               this.sizeIndex = this.json.options.indexOf('Size');
