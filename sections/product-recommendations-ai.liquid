@@ -300,7 +300,6 @@
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
-                // this.json = products;
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
                 this.variants = this.json.variants;
                 this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
