@@ -42,8 +42,8 @@ if (!customElements.get('quick-add')) {
       let foundOne = false;
       this.json.variants.forEach((variant) => {
         // console.log('variant.options[this.colorIndex]:: ',variant.options[this.colorIndex]);
-        console.log('Out variant::: ',variant.options);
-                console.log('Out variant::: ',this);
+        console.log('variant::: ',variant);
+                console.log('this::: ',this);
         if(variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
           this.cardLink.setAttribute('href',`${this.productUrl}?variant=${variant.id}`);
           this.changeImage(variant);
