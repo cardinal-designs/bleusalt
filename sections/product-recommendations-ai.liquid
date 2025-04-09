@@ -295,7 +295,6 @@
         //   quickAdd(products)
         // }
 
-        console.log("window.rebuyproducts", window.rebuyproducts)
 
         const quickAdd = function (products) {
 
@@ -310,13 +309,15 @@
                 this.querySelectorAll('button').forEach(
                   (button) => button.addEventListener('click', this.onButtonClick.bind(this))
                 );
+
+                console.log("this", this)
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 this.json = products;
-                console.log('this.json:: ',this.json);
+         
                 this.variants = this.json.variants;
-                console.log('this.variants: ',this.variants);
+             
                 this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
                 this.colorButtons.forEach(
                   (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
