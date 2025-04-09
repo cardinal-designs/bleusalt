@@ -330,10 +330,17 @@
             }
   
             sizeAvailabilities() {
-              if (!this.selectedColor) return;
+              if (!this.selectedColor || this.colorIndex === -1 || this.sizeIndex === -1) return;
+            
               this.variants.forEach((variant) => {
-                if (variant.options[this.colorIndex] !== this.selectedColor.value) return true;
-                let sizeButton = this.querySelector(`button[value="${variant.options[this.sizeIndex]}"]`);
+                const colorOption = variant.options?.[this.colorIndex];
+                const sizeOption = variant.options?.[this.sizeIndex];
+            
+                if (colorOption !== this.selectedColor.value) return;
+            
+                if (typeof sizeOption === 'undefined') return;
+            
+                const sizeButton = this.querySelector(`button[value="${sizeOption}"]`);
                 if (sizeButton) sizeButton.disabled = !variant.available;
               });
             }
