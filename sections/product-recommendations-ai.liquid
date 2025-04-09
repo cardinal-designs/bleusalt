@@ -394,27 +394,25 @@
   
             changeImage(variant) {
               const firstImage = this.card.querySelectorAll('.card__media img')[0];
-              
-              if(variant.featured_image) {
-                firstImage.setAttribute('src',variant.featured_image.src);
+              console.log('variant:: ',variant);
+              if (variant.featured_image) {
+                firstImage.setAttribute('src', variant.featured_image.src);
                 firstImage.removeAttribute('srcset');
                 return;
               }
-              
-              let foundOne = false;
-              let foundTwo = false;
-              
-              // const secondImage = this.card.querySelectorAll('.card__media img')[1];
-              console.log('this.json.media:: ',this.json.media);
+  
+              const secondImage = this.card.querySelectorAll('.card__media img')[1];
+              let foundOne = false, foundTwo = false;
               this.json.media.forEach((media) => {
-                let mediaAlt = media.alt.split('|')[0].trim(); 
-                if(media.media_type != 'image') return true;
-                if(mediaAlt !== this.selectedColor.value) return true;
-                if(!foundOne) {
-                  updateSrcSet(firstImage,media.src);
+                if (media.media_type !== 'image') return;
+                if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
+                if (!foundOne) {
+                  updateSrcSet(firstImage, media.src);
                   foundOne = true;
+                } else if (!foundTwo) {
+                  updateSrcSet(secondImage, media.src);
+                  foundTwo = true;
                 }
-                
               });
             }
   
