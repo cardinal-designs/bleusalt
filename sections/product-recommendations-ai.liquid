@@ -262,21 +262,53 @@
               this.initQuickAdd();
             }
   
+            // initQuickAdd() {
+            //   this.querySelectorAll('button').forEach(
+            //     (button) => button.addEventListener('click', this.onButtonClick.bind(this))
+            //   );
+            //   this.card = this.closest('.card');
+            //   this.cardLink = this.card.querySelector('.card__heading.h4 a');
+            //   this.productUrl = this.cardLink.getAttribute('data-product-url');
+            //   this.json = JSON.parse(this.card.getAttribute('data-json'));
+            //   this.variants = this.json.variants;
+            //   this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
+            //   this.colorButtons.forEach(
+            //     (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
+            //   );
+            //   this.colorIndex = this.json.options.findIndex((option) => option.name === 'Color');
+            //   this.sizeIndex = this.json.options.findIndex((option) => option.name === 'Size');
+            //   this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
+            //   this.init();
+            // }
+
             initQuickAdd() {
-              this.querySelectorAll('button').forEach(
-                (button) => button.addEventListener('click', this.onButtonClick.bind(this))
-              );
+              if (this.initialized) return;
+              this.initialized = true;
+            
               this.card = this.closest('.card');
+              if (!this.card) return;
+            
               this.cardLink = this.card.querySelector('.card__heading.h4 a');
-              this.productUrl = this.cardLink.getAttribute('data-product-url');
-              this.json = JSON.parse(this.card.getAttribute('data-json'));
-              this.variants = this.json.variants;
+              this.productUrl = this.cardLink?.getAttribute('data-product-url');
+            
+              try {
+                this.json = JSON.parse(this.card.getAttribute('data-json'));
+              } catch (e) {
+                console.error('Failed to parse JSON from data-json:', e);
+                return;
+              }
+            
+              this.variants = this.json?.variants || [];
               this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
-              this.colorButtons.forEach(
-                (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
+            
+              this.colorButtons.forEach((button) =>
+                button.addEventListener('click', this.onColorButtonClick.bind(this))
               );
-              this.colorIndex = this.json.options.findIndex((option) => option.name === 'Color');
-              this.sizeIndex = this.json.options.findIndex((option) => option.name === 'Size');
+            
+              // Use .findIndex safely
+              this.colorIndex = this.json?.options?.findIndex?.((option) => option.name === 'Color') ?? -1;
+              this.sizeIndex = this.json?.options?.findIndex?.((option) => option.name === 'Size') ?? -1;
+            
               this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
               this.init();
             }
