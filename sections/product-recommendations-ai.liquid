@@ -148,6 +148,7 @@
                                 v-on:change="selectVariant(product)">
                                 <option v-for="variant in product.variants" v-bind:value="variant.id" v-html="variant.title">{{ variant.title }}</option>
                             </select>
+                          <span class="h4 card__selected-color">{{ selected_color }}</span>
 
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
                             <button
