@@ -276,11 +276,11 @@
               this.colorButtons.forEach(
                 (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
               );
-              this.colorIndex = this.json.options.indexOf('Color');
+              this.colorIndex = this.json.options.findIndex((option) => option.name === 'Color');
               console.log('this.json:: ',this.json);
               console.log('this.json.options:: ',this.json.options);
               console.log('colorIndex:: ',this.json.options.indexOf('Color'));
-              this.sizeIndex = this.json.options.indexOf('Size');
+              this.sizeIndex = this.json.options.findIndex((option) => option.name === 'Size');
               console.log('sizeIndex:: ',this.sizeIndex);
               this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
               this.init();
