@@ -267,7 +267,6 @@
                 (button) => button.addEventListener('click', this.onButtonClick.bind(this))
               );
               this.card = this.closest('.card');
-              console.log('this.card:: ',this)
               this.cardLink = this.card.querySelector('.card__heading.h4 a');
               this.productUrl = this.cardLink.getAttribute('data-product-url');
               this.json = JSON.parse(this.card.getAttribute('data-json'));
@@ -277,11 +276,7 @@
                 (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
               );
               this.colorIndex = this.json.options.findIndex((option) => option.name === 'Color');
-              // console.log('this.json:: ',this.json);
-              console.log('this.json.options:: ',this.json.options);
-              console.log('colorIndex:: ',this.colorIndex);
               this.sizeIndex = this.json.options.findIndex((option) => option.name === 'Size');
-              console.log('sizeIndex:: ',this.sizeIndex);
               this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
               this.init();
             }
