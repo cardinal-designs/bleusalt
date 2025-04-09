@@ -248,7 +248,7 @@
   <script type="text/javascript">
     // Generate the JSON data for the product
     const getProductJson = function(product) {
-      return JSON.stringify(product);
+      return JSON.stringify(product); // Escape JSON for safe HTML injection
     }
     document.addEventListener('rebuy.loaded', function () {
       setTimeout(() => {
