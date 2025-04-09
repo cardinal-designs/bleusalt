@@ -348,7 +348,7 @@
             updateUrl() {
               let foundOne = false;
               this.variants.forEach((variant) => {
-                console.log('Out variant::: ',variant.options[this.colorIndex]);
+                console.log('Out variant::: ',this.colorIndex);
                 if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                   console.log('ifff variant::: ',variant);
                   // this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
