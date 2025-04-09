@@ -65,6 +65,7 @@ if (!customElements.get('quick-add')) {
     }
     updateSelectedSize() {
       if(!this.selectedColor) return;
+      console.log("this.selectedColor", this.selectedColor)
       const selectedColorEl = this.card.querySelector('.card__selected-color');
       if(!selectedColorEl) return;
       selectedColorEl.innerHTML = this.selectedColor.value;
