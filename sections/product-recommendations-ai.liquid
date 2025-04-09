@@ -67,7 +67,7 @@
                         aria-label="product"
                         class="rebuy-product-block card" 
                         :data-json="getProductJson(product)"
-                        :data-product-id="product.id"
+                        :data-product-id="product.handle"
                         role="listitem"
                     >
   
@@ -254,6 +254,7 @@
     const getProductJson = function(product) {
       return JSON.stringify(product); // Escape JSON for safe HTML injection
     }
+    
     document.addEventListener('rebuy.loaded', function () {
       setTimeout(() => {
         
