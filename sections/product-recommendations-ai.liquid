@@ -71,6 +71,7 @@
                     >
   
                         <div class="rebuy-product-media">
+      <div class="card__media">
                             <a
                                 class="rebuy-product-image"
                                 tabindex="-1"
@@ -80,10 +81,10 @@
                                 v-bind:class="[hasLearnMore() ? 'clickable' : '']"
                                 rel="nofollow"
                             >
-    <div class="card__media">
+    
                                 <img v-bind:loading="product_index > 1 ? 'lazy' : 'eager'" v-bind:src="itemImage(product, product.selected_variant, '400x400')" v-bind:alt="itemImageAlt(product, product.selected_variant)">
-  </div>
                             </a>
+  </div>
                             <quick-add v-if="displaySizeSwatches(option)" v-for="option in product.options">
                               <button v-for="(value, value_index) in filterOOSOptions(option, product)" type="button" 
                               :value="value" 
