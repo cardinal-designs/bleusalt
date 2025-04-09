@@ -283,38 +283,6 @@
               this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
               this.init();
             }
-
-            // initQuickAdd() {
-            //   if (this.initialized) return;
-            //   this.initialized = true;
-            
-            //   this.card = this.closest('.card');
-            //   if (!this.card) return;
-            
-            //   this.cardLink = this.card.querySelector('.card__heading.h4 a');
-            //   this.productUrl = this.cardLink?.getAttribute('data-product-url');
-            
-            //   try {
-            //     this.json = JSON.parse(this.card.getAttribute('data-json'));
-            //   } catch (e) {
-            //     console.error('Failed to parse JSON from data-json:', e);
-            //     return;
-            //   }
-            
-            //   this.variants = this.json?.variants || [];
-            //   this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
-            
-            //   this.colorButtons.forEach((button) =>
-            //     button.addEventListener('click', this.onColorButtonClick.bind(this))
-            //   );
-            
-            //   // Use .findIndex safely
-            //   this.colorIndex = this.json?.options?.findIndex?.((option) => option.name === 'Color') ?? -1;
-            //   this.sizeIndex = this.json?.options?.findIndex?.((option) => option.name === 'Size') ?? -1;
-            
-            //   this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
-            //   this.init();
-            // }
   
             onButtonClick(event) {
               this.querySelectorAll('.quick-add__button').forEach(
@@ -348,7 +316,7 @@
             updateUrl() {
               let foundOne = false;
               this.variants.forEach((variant) => {
-                console.log('variant.options::: ',variant);
+                console.log('variant.options::: ',this.json.options);
                 console.log('this::: ',this);
                 if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                   console.log('ifff variant::: ',variant);
