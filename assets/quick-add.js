@@ -54,10 +54,9 @@ if (!customElements.get('quick-add')) {
       )
       event.target.setAttribute('selected',true);
       this.selectedColor = event.target;
-      console.log("this.selectedColor", this.selectedColor)
-      // this.updateUrl();
-      // this.sizeAvailabilities();
-      // this.updateSelectedSize();
+      this.updateUrl();
+      this.sizeAvailabilities();
+      this.updateSelectedSize();
     }
     init() {
       if(!this.selectedColor) return;
