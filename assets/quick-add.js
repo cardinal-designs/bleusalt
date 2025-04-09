@@ -75,6 +75,7 @@ if (!customElements.get('quick-add')) {
       if(!this.selectedColor) return;
       console.log('this.selectedColor.value:: ',this.selectedColor.value);
       this.variants.forEach((variant) => {
+        console.log('variant.options[this.colorIndex]:: ',variant.options[this.colorIndex]);
         if(variant.options[this.colorIndex] !== this.selectedColor.value) return true;
         let sizeButton = this.querySelector(`button[value="${variant.options[this.sizeIndex]}"]`);
         if(sizeButton) sizeButton.disabled = !variant.available;
