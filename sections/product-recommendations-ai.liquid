@@ -309,8 +309,8 @@
                 
                 // this.colorIndex = this.json.options.indexOf('Color');
                 this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
-                
-                this.sizeIndex = this.json.options.indexOf('Size');
+                this.sizeIndex = this.json.options.findIndex(option => option.name === 'Size');
+                // this.sizeIndex = this.json.options.indexOf('Size');
                 this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
                 
                 this.init();
