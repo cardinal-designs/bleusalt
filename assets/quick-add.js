@@ -17,6 +17,7 @@ if (!customElements.get('quick-add')) {
       );
       this.colorIndex = this.json.options.indexOf('Color');
       this.sizeIndex = this.json.options.indexOf('Size');
+      console.log('this.json.options:: ',this.json);
       console.log('this.json.options:: ',this.json.options);
       console.log('colorIndex:: ',this.colorIndex);
       console.log('sizeIndex:: ',this.sizeIndex);
