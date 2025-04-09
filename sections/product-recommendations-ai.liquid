@@ -254,8 +254,34 @@
     const getProductJson = function(product) {
       return JSON.stringify(product); // Escape JSON for safe HTML injection
     }
+
+    let productJsonArr = []
     
     document.addEventListener('rebuy.loaded', function () {
+
+      let handles = document.querySelectorAll('.card[data-product-id]');
+      let handleArr = []
+      handles.forEach( handle => {
+          let handleAttr = handle.getAttribute('data-product-id');
+          if(handleAttr){
+            handleArr.push(handleAttr)
+          }
+      })
+
+      Promise.all(
+        handleArr.map(handle => 
+          fetch(`/products/${handle}.js`).then(res => res.json())
+        )
+      )
+      .then(products => {
+        // console.log('Fetched products:', products);
+        productJsonArr.push(products);
+        // products is an array of product JSON objects
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+      
       setTimeout(() => {
         
         console.log('Rebuy widget initialized, starting observer...');
