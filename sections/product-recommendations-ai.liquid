@@ -339,24 +339,48 @@
             }
   
             changeImage(variant) {
-              const firstImage = this.card.querySelectorAll('.card__media img')[0];
-              console.log('variant:: ',variant);
+              const images = this.card.querySelectorAll('.card__media img');
+            
+              // Ensure images exist and are valid before accessing them
+              if (!images || images.length === 0) {
+                console.error('No images found in .card__media. Skipping image update.');
+                return;
+              }
+            
+              const firstImage = images[0]; // Get the first image safely
               if (variant.featured_image) {
+                // If the variant has a featured image, update the first image
                 firstImage.setAttribute('src', variant.featured_image.src);
                 firstImage.removeAttribute('srcset');
                 return;
               }
-  
-              const secondImage = this.card.querySelectorAll('.card__media img')[1];
+            
+              const secondImage = images[1]; // Safely get the second image
+              if (!secondImage) {
+                console.warn('Second image not found, skipping second image update.');
+              }
+            
               let foundOne = false, foundTwo = false;
+            
+              // Ensure this.json.media exists and is valid
+              if (!this.json.media || this.json.media.length === 0) {
+                console.error('No media found in product JSON. Skipping media assignment.');
+                return;
+              }
+            
               this.json.media.forEach((media) => {
-                if (media.media_type !== 'image') return;
+                if (media.media_type !== 'image') return; // Skip non-image media
+                if (!this.selectedColor || !this.selectedColor.value) {
+                  console.error('Selected color is undefined.');
+                  return;
+                }
                 if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
+            
                 if (!foundOne) {
-                  updateSrcSet(firstImage, media.src);
+                  updateSrcSet(firstImage, media.src); // Update the first image
                   foundOne = true;
-                } else if (!foundTwo) {
-                  updateSrcSet(secondImage, media.src);
+                } else if (!foundTwo && secondImage) {
+                  updateSrcSet(secondImage, media.src); // Update the second image
                   foundTwo = true;
                 }
               });
