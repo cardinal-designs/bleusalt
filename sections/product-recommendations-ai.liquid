@@ -316,6 +316,7 @@
             updateUrl() {
               let foundOne = false;
               this.variants.forEach((variant) => {
+                console.log('variant: ',variant);
                 if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                   // this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
                   this.changeImage(variant);
