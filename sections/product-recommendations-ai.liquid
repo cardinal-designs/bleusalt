@@ -355,9 +355,12 @@
               updateUrl() {
                 let foundOne = false;
                 this.variants.forEach((variant) => {
-                  console.log('variant: ',variant);
+                  // console.log('variant: ',variant);
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                     // this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
+
+                    console.log('variant: ',variant);
+                    
                     this.changeImage(variant);
                     foundOne = true;
                   }
