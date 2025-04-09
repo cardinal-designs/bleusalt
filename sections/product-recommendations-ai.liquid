@@ -354,6 +354,10 @@
     
               updateUrl() {
                 let foundOne = false;
+                console.log("this.colorIndex", this.colorIndex)
+                console.log("this.selectedColor.value", this.selectedColor.value)
+                console.log("foundOne", foundOne)
+                
                 this.variants.forEach((variant) => {
                   // console.log('variant: ',variant);
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
