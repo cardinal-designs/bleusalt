@@ -258,36 +258,36 @@
     
     
     document.addEventListener('rebuy.loaded', function () {
-
-      let handles = document.querySelectorAll('.card[data-product-id]');
-      console.log('handles:: ',handles);
-      let handleArr = [];
-      let productJsonArr = [];
-      handles.forEach( handle => {
-          let handleAttr = handle.getAttribute('data-product-id');
-          if(handleAttr){
-            handleArr.push(handleAttr)
-          }
-      })
-
-      console.log('handleArr:: ',handleArr);
-
-      Promise.all(
-        handleArr.map(handle => 
-          fetch(`/products/${handle}.js`).then(res => res.json())
-        )
-      )
-      .then(products => {
-        console.log('Fetched products:', products);
-        productJsonArr = [...products];
-        
-        // products is an array of product JSON objects
-      })
-      .catch(error => {
-        console.error('Error fetching products:', error);
-      });
-      
       setTimeout(() => {
+        let handles = document.querySelectorAll('.card[data-product-id]');
+        console.log('handles:: ',handles);
+        let handleArr = [];
+        let productJsonArr = [];
+        handles.forEach( handle => {
+            let handleAttr = handle.getAttribute('data-product-id');
+            if(handleAttr){
+              handleArr.push(handleAttr)
+            }
+        })
+  
+        console.log('handleArr:: ',handleArr);
+  
+        Promise.all(
+          handleArr.map(handle => 
+            fetch(`/products/${handle}.js`).then(res => res.json())
+          )
+        )
+        .then(products => {
+          console.log('Fetched products:', products);
+          productJsonArr = [...products];
+          
+          // products is an array of product JSON objects
+        })
+        .catch(error => {
+          console.error('Error fetching products:', error);
+        });
+      
+      
         
         console.log('Rebuy widget initialized, starting observer...');
 
