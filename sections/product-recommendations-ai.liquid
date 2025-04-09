@@ -255,12 +255,13 @@
       return JSON.stringify(product); // Escape JSON for safe HTML injection
     }
 
-    let productJsonArr = []
+    
     
     document.addEventListener('rebuy.loaded', function () {
 
       let handles = document.querySelectorAll('.card[data-product-id]');
-      let handleArr = []
+      let handleArr = [];
+      let productJsonArr = [];
       handles.forEach( handle => {
           let handleAttr = handle.getAttribute('data-product-id');
           if(handleAttr){
