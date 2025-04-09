@@ -291,6 +291,7 @@
         
         function initSomethingWithProducts(products) {
           console.log('Ready to use products:', products);
+          quickAdd(products)
         }
 
         const quickAdd = function (products) {
@@ -309,7 +310,7 @@
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
-                this.json = JSON.parse(productJsonArr);
+                this.json = JSON.parse(products);
                 console.log('this.json:: ',this.json);
                 this.variants = this.json.variants;
                 console.log('this.variants: ',this.variants);
