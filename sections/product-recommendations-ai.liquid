@@ -404,17 +404,14 @@
               let foundOne = false;
               let foundTwo = false;
               
-              const secondImage = this.card.querySelectorAll('.card__media img')[1];
+              // const secondImage = this.card.querySelectorAll('.card__media img')[1];
               this.json.media.forEach((media) => {
                 let mediaAlt = media.alt.split('|')[0].trim(); 
                 if(media.media_type != 'image') return true;
                 if(mediaAlt !== this.selectedColor.value) return true;
-                if(!foundOne && !foundTwo) {
+                if(!foundOne) {
                   updateSrcSet(firstImage,media.src);
                   foundOne = true;
-                } else if(foundOne && !foundTwo) {
-                  updateSrcSet(secondImage,media.src);
-                  foundTwo = true;
                 }
                 
               });
