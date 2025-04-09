@@ -240,7 +240,7 @@
   visibility: visible;
 }
 
-.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-media .rebuy-product-image {
+.product-recommendations .rebuy-widget .rebuy-product-block .rebuy-product-media .card__media {
   position: relative;
 }
 
