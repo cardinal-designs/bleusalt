@@ -66,7 +66,7 @@
                         v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
                         aria-label="product"
                         class="rebuy-product-block card" 
-                        :data-json="getProductJson(product)"
+                        data-json='{{ product | json | escape }}'
                         role="listitem"
                     >
   
