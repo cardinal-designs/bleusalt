@@ -311,7 +311,7 @@
         //   quickAdd(products)
         // }
 
-        const quickAdd = function (products) {
+        const quickAdd = function (product) {
 
           if (!customElements.get('quick-add')) {
             class QuickAdd extends HTMLElement {
@@ -327,7 +327,7 @@
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
-                this.json = products;
+                this.json = product;
                 console.log('this.json:: ',this.json);
                 this.variants = this.json.variants;
                 console.log('this.variants: ',this.variants);
