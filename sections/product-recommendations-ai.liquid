@@ -316,7 +316,7 @@
             updateUrl() {
               let foundOne = false;
               this.variants.forEach((variant) => {
-                console.log('variant.options::: ',this.json.options);
+                console.log('variant.options::: ',variant);
                 console.log('this::: ',this);
                 if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                   console.log('ifff variant::: ',variant);
