@@ -260,6 +260,7 @@
     document.addEventListener('rebuy.loaded', function () {
 
       let handles = document.querySelectorAll('.card[data-product-id]');
+      console.log('handles:: ',handles);
       let handleArr = [];
       let productJsonArr = [];
       handles.forEach( handle => {
