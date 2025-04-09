@@ -260,7 +260,6 @@
       console.log('rebuy.loaded:: ');
       setTimeout(() => {
         let handles = document.querySelectorAll('.rebuy-product-block[data-product-id]');
-        console.log('handles:: ', handles);
         
         let handleArr = [];
         
@@ -271,15 +270,13 @@
           }
         });
         
-        console.log('handleArr:: ', handleArr);
-        
         Promise.all(
           handleArr.map(handle =>
             fetch(`/products/${handle}.js`).then(res => res.json())
           )
         )
         .then(products => {
-          console.log('Fetched products:', products);
+          // console.log('Fetched products:', products);
           
           quickAdd(products)
         })
