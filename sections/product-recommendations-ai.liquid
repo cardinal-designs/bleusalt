@@ -394,6 +394,7 @@
                       
                           // Update the href attribute with the new URL and variant ID.
                           element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
+                          element.setAttribute('target', '_blank');
                       
                           // Attach a click listener to the element.
                           element.addEventListener("click", function (e) {
