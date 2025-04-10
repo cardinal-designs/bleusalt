@@ -353,9 +353,9 @@
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
-                    console.log("this", this.closest(".rebuy-product-grid"))
+                    console.log("this", this.closest("[data-product-id]"))
                     // Find the closest parent element with the class 'rebuy-product-grid'.
-                    let closestRebuyProductGrid = this.closest(".rebuy-product-grid");
+                    let closestRebuyProductGrid = this.closest("[data-product-id]");
                     
                     // Check if the closest '.rebuy-product-grid' was found successfully.
                     if (closestRebuyProductGrid) {
