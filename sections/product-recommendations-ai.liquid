@@ -354,13 +354,21 @@
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
                     console.log("this", this.closest(".rebuy-product-grid"))
+                    // Find the closest parent element with the class 'rebuy-product-grid'.
                     let closestRebuyProductGrid = this.closest(".rebuy-product-grid");
-                    if(closestRebuyProductGrid){
-                      closestRebuyProductGrid.querySelectorAll("[href]").forEach(function(element){
-                        element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
+                    
+                    // Check if the closest '.rebuy-product-grid' was found successfully.
+                    if (closestRebuyProductGrid) {
+                      // Select all elements in the grid that have an `href` attribute.
+                      closestRebuyProductGrid.querySelectorAll("[href]").forEach(function (element) {
+                        // Check if 'newData' and 'variant' objects exist before updating.
+                        if (newData && newData.url && variant && variant.id) {
+                          // Update the `href` attribute with the new URL and variant ID.
+                          element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
+                        }
                       });
                     }
-                    this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
+                    // this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
                   }
