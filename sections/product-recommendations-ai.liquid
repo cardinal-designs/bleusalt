@@ -367,13 +367,22 @@
                           // Update the `href` attribute with the new URL and variant ID.
                           element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                           element.addEventListener("click", function(e){
-                            e.preventDefault();
-                            let hrefData = e.target.getAttribute("href");
-                            console.log("hrefData", hrefData)
-                            if(hrefData){
-                              window.location = hrefData;
+                            // e.preventDefault();
+                            // let hrefData = e.target.getAttribute("href");
+                            // console.log("hrefData", hrefData)
+                            // if(hrefData){
+                            //   window.location = hrefData;
                               
+                            // }
+
+                            e.preventDefault();
+                            let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
+                            if(dataProductUrl){
+                              let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
+                              window.location = dataProductUrlValue;
                             }
+
+                            
                           })
                         }
                       });
@@ -387,26 +396,26 @@
                       });
 
 
-                      closestRebuyProductGrid.addEventListener("click", function(e){
-                        e.preventDefault();
-                        console.log("e.target", e.target)
-                        if (e.target.classList.contains("quick-add__button")) {
-                          return;
-                        }
+                      // closestRebuyProductGrid.addEventListener("click", function(e){
+                      //   e.preventDefault();
+                      //   console.log("e.target", e.target)
+                      //   // if (e.target.classList.contains("quick-add__button")) {
+                      //   //   return;
+                      //   // }
                         
-                        // e.preventDefault();
-                        // let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
-                        // if(dataProductUrl){
-                        //   let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
-                        //   window.location = dataProductUrlValue;
-                        // }
-                        // let hrefData = e.target.getAttribute("href");
-                        // console.log("hrefData", hrefData)
-                        // if(hrefData){
-                        //   window.location = hrefData;
+                      //   e.preventDefault();
+                      //   let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
+                      //   if(dataProductUrl){
+                      //     let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
+                      //     window.location = dataProductUrlValue;
+                      //   }
+                      //   // let hrefData = e.target.getAttribute("href");
+                      //   // console.log("hrefData", hrefData)
+                      //   // if(hrefData){
+                      //   //   window.location = hrefData;
                           
-                        // }
-                      })
+                      //   // }
+                      // })
                       
                     }
                     // this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
