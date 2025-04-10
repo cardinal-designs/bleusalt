@@ -351,6 +351,7 @@
                 let foundOne = false;
                 this.variants.forEach((variant) => {
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+                    console.log("variant", variant)
                     this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
