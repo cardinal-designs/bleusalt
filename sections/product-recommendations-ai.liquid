@@ -386,6 +386,21 @@
                         }
                       });
 
+
+                      closestRebuyProductGrid.addEventListener("click", function(e){
+                        e.preventDefault();
+                        let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
+                        if(dataProductUrl){
+                          let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
+                          window.location = dataProductUrlValue;
+                        }
+                        // let hrefData = e.target.getAttribute("href");
+                        // console.log("hrefData", hrefData)
+                        // if(hrefData){
+                        //   window.location = hrefData;
+                          
+                        // }
+                      })
                       
                     }
                     // this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
