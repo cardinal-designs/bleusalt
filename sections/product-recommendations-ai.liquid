@@ -353,7 +353,13 @@
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
-                    console.log("this", this)
+                    console.log("this", this.closest(".rebuy-product-grid"))
+                    let closestRebuyProductGrid = this.closest(".rebuy-product-grid");
+                    if(closestRebuyProductGrid){
+                      closestRebuyProductGrid.querySelectorAll("[href]").forEach(function(element){
+                        element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
+                      });
+                    }
                     this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
