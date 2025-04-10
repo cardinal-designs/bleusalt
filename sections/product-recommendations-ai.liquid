@@ -367,6 +367,16 @@
                           element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                         }
                       });
+
+                      closestRebuyProductGrid.querySelectorAll("[data-product-url]").forEach(function (element) {
+                        // Check if 'newData' and 'variant' objects exist before updating.
+                        if (newData && newData.url && variant && variant.id) {
+                          // Update the `href` attribute with the new URL and variant ID.
+                          element.setAttribute('data-product-url', `${newData.url}?variant=${variant.id}`);
+                        }
+                      });
+
+                      
                     }
                     // this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                     this.changeImage(variant);
