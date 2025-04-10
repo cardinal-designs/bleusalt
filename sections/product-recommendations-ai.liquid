@@ -388,6 +388,9 @@
 
 
                       closestRebuyProductGrid.addEventListener("click", function(e){
+                        if (e.target.classList.contains("quick-add__button")) {
+                          return;
+                        }
                         e.preventDefault();
                         let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
                         if(dataProductUrl){
