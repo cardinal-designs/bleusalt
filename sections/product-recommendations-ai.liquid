@@ -354,6 +354,7 @@
                     let productId = variant?.featured_image?.product_id;
                     console.log("variant", variant)
                     console.log("productId", productId)
+                    console.log("this.productId", this.productId)
                     this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
