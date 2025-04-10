@@ -388,15 +388,18 @@
 
 
                       closestRebuyProductGrid.addEventListener("click", function(e){
+                        e.preventDefault();
+                        console.log("e.target", e.target)
                         if (e.target.classList.contains("quick-add__button")) {
                           return;
                         }
-                        e.preventDefault();
-                        let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
-                        if(dataProductUrl){
-                          let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
-                          window.location = dataProductUrlValue;
-                        }
+                        
+                        // e.preventDefault();
+                        // let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
+                        // if(dataProductUrl){
+                        //   let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
+                        //   window.location = dataProductUrlValue;
+                        // }
                         // let hrefData = e.target.getAttribute("href");
                         // console.log("hrefData", hrefData)
                         // if(hrefData){
