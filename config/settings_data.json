@@ -116,7 +116,7 @@
         "settings": {
           "below_logo": true,
           "color_scheme": "accent-1",
-          "logo": "shopify://shop_images/site-logo.svg",
+          "logo": "shopify://shop_images/site-logo_black-USA-logo.svg",
           "white_logo": "shopify://shop_images/site-logo_white-USA-logo.svg",
           "logo_width": 160,
           "logo_position": "middle-center",
