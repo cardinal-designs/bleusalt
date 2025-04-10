@@ -360,7 +360,7 @@
 
                     console.log("newData", newData)
                     
-                    this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
+                    this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
                   }
