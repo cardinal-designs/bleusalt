@@ -355,6 +355,11 @@
                     console.log("variant", variant)
                     console.log("productId", productId)
                     console.log("this.productId", this.productId)
+
+                    let newData  = window.rebuyproducts?.find(item => item.id == productId);
+
+                    console.log("newData", newData)
+                    
                     this.cardLink.setAttribute('href', `${this.productUrl}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
