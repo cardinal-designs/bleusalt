@@ -353,6 +353,7 @@
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
+                    console.log("this", this)
                     this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                     this.changeImage(variant);
                     foundOne = true;
