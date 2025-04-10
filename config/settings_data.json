@@ -433,6 +433,21 @@
           "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\ncolor: #0D1C29;\n}\n\n.tn-gate-toggle-switch {\nz-index: 3 !important;\n}\n\n.product-form__buttons:has(.bold_clone) {\n  display: flex;\n flex-direction: column-reverse;\n}\n\n#trynow-cta-description {\nfont-size: 1.6rem !important;\njustify-content: center !important;\n}\n\n.product-form__buttons.tn-condition-true:has(.tn-gate-toggle-checked) .bold_clone {\n  display: none !important;\n}\n\n.product-option.selling_plan {\n width: 187px;\n}",
           "sdk_version": "v1"
         }
+      },
+      "10812935154079970445": {
+        "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+        "disabled": false,
+        "settings": {}
+      },
+      "2046743146925785077": {
+        "type": "shopify://apps/nosto/blocks/nosto-mc-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+        "disabled": false,
+        "settings": {}
+      },
+      "6990797075511561578": {
+        "type": "shopify://apps/nosto/blocks/nosto-tagging-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
