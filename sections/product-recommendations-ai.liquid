@@ -351,6 +351,7 @@
                 let foundOne = false;
                 this.variants.forEach((variant) => {
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+                    console.log("variant", variant)
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
                     console.log("this", this.closest("[data-product-id]"))
