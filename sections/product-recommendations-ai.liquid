@@ -351,71 +351,27 @@
                 let foundOne = false;
                 this.variants.forEach((variant) => {
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
-                    console.log("variant", variant)
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
-                    console.log("this", this.closest("[data-product-id]"))
                     // Find the closest parent element with the class 'rebuy-product-grid'.
                     let closestRebuyProductGrid = this.closest("[data-product-id]");
                     
                     // Check if the closest '.rebuy-product-grid' was found successfully.
                     if (closestRebuyProductGrid) {
                       // Select all elements in the grid that have an `href` attribute.
-                      // closestRebuyProductGrid.querySelectorAll("[href]").forEach(function (element) {
-                      //   // Check if 'newData' and 'variant' objects exist before updating.
-                      //   if (newData && newData.url && variant && variant.id) {
-                      //     // Update the `href` attribute with the new URL and variant ID.
-                      //     element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
-                      //     element.addEventListener("click", function(e){
-                      //       // e.preventDefault();
-                      //       // let hrefData = e.target.getAttribute("href");
-                      //       // console.log("hrefData", hrefData)
-                      //       // if(hrefData){
-                      //       //   window.location = hrefData;
-                              
-                      //       // }
-
-                      //       e.preventDefault();
-                      //       let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
-                      //       if(dataProductUrl){
-                      //         let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
-                      //         window.location = dataProductUrlValue;
-                      //       }
-
-                            
-                      //     })
-                      //   }
-                      // });
-
-                      // Iterate through all elements with an `href` in the grid.
                       closestRebuyProductGrid.querySelectorAll("[href]").forEach(function (element) {
-                        // Ensure that the required objects and properties exist before executing.
+                        // Check if 'newData' and 'variant' objects exist before updating.
                         if (newData && newData.url && variant && variant.id) {
-                      
-                          // Update the href attribute with the new URL and variant ID.
+                          // Update the `href` attribute with the new URL and variant ID.
                           element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
-                          element.setAttribute('target', '_blank');
-                      
-                          // Attach a click listener to the element.
-                          element.addEventListener("click", function (e) {
-                            e.preventDefault(); // Prevent default navigation behavior.
-                      
-                            // Fetch the closest '[data-product-url]' element.
+                          element.addEventListener("click", function(e){
+                            e.preventDefault();
                             let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
-                            
-                            // If a valid `data-product-url` is found, redirect the user.
-                            if (dataProductUrl) {
+                            if(dataProductUrl){
                               let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
-                      
-                              // Redirect using the specified URL.
                               window.location = dataProductUrlValue;
-                            } else {
-                              console.warn("No [data-product-url] attribute found in the closest grid."); // Debug message.
                             }
-                          });
-                        } else {
-                          // Log a warning if required objects (newData or variant) are unavailable.
-                          console.warn("Required data (newData.url or variant.id) is missing:", { newData, variant });
+                          })
                         }
                       });
 
@@ -425,30 +381,7 @@
                           // Update the `href` attribute with the new URL and variant ID.
                           element.setAttribute('data-product-url', `${newData.url}?variant=${variant.id}`);
                         }
-                      });
-
-
-                      // closestRebuyProductGrid.addEventListener("click", function(e){
-                      //   e.preventDefault();
-                      //   console.log("e.target", e.target)
-                      //   // if (e.target.classList.contains("quick-add__button")) {
-                      //   //   return;
-                      //   // }
-                        
-                      //   e.preventDefault();
-                      //   let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
-                      //   if(dataProductUrl){
-                      //     let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
-                      //     window.location = dataProductUrlValue;
-                      //   }
-                      //   // let hrefData = e.target.getAttribute("href");
-                      //   // console.log("hrefData", hrefData)
-                      //   // if(hrefData){
-                      //   //   window.location = hrefData;
-                          
-                      //   // }
-                      // })
-                      
+                      });                      
                     }
                     // this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
                     this.changeImage(variant);
