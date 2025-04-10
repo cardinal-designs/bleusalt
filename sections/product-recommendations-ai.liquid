@@ -366,6 +366,15 @@
                         if (newData && newData.url && variant && variant.id) {
                           // Update the `href` attribute with the new URL and variant ID.
                           element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
+                          element.addEventListener("click", function(e){
+                            e.preventDefault();
+                            let hrefData = e.target.getAttribute("href");
+                            console.log("hrefData", hrefData)
+                            if(hrefData){
+                              window.location = hrefData;
+                              
+                            }
+                          })
                         }
                       });
 
