@@ -118,6 +118,7 @@
         "heading_XPVrGY",
         "text_bPEUzN"
       ],
+      "disabled": true,
       "custom_css": [
         ".banner__heading * {color: #fff; text-align: center; font-family: \"BasicCommercial LT Roman\"; font-size: 40px; font-style: normal; font-weight: 400; line-height: 120%; /* 48px */ letter-spacing: 4px; text-transform: uppercase; background: transparent !important;}",
         ".banner__text {max-width: 205px; margin: auto;}",
@@ -381,6 +382,7 @@
         "column_CF7cCM",
         "column_idxHTA"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h2",
