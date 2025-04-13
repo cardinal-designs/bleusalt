@@ -2704,7 +2704,7 @@ details[open] > .header__submenu {
   display: none;
 }
 
-.header__inline-no-full {
+.header__inline-no-full .header__under-logo .list-menu li, .header__under-logo .top-right-link {
   position: relative;
 }
 
