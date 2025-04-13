@@ -2704,7 +2704,7 @@ details[open] > .header__submenu {
   display: none;
 }
 
-.mega-menu__no-full {
+.header__inline-no-full {
   position: relative;
 }
 
