@@ -2,6 +2,11 @@
   position: static;
 }
 
+.mega-menu:focus-visible {
+  outline: 0;
+  box-shadow: 0;
+}
+
 .mega-menu__content {
   background-color: rgb(var(--color-background));
   border-left: 0;
