@@ -270,6 +270,7 @@
         productLinks.forEach(link => {
             link.addEventListener('variantChange', function(e) {
                 const selectedVariant = e.detail.variant;
+              console.log("selectedVariant", selectedVariant)
                 link.href = `${link.href}?variant=${selectedVariant.id}`;
             });
         });
