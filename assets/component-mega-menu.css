@@ -17,6 +17,11 @@
 
 .mega-menu__no-full {
   width: fit-content;
+  overflow: hidden;
+}
+
+.mega-menu__no-full .mega-menu__list {
+  padding-left: 20px;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
