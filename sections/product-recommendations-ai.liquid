@@ -254,27 +254,6 @@
     const getProductJson = function(product) {
       return JSON.stringify(product); // Escape JSON for safe HTML injection
     }
-
-
-    document.addEventListener('rebuy.ready', function(event) {
-        const widget = event.detail.widget;
-      console.log("widget", widget)
-        setTimeout(() => {
-            const images = document.querySelectorAll(`#rebuy-widget-${widget.id} .rebuy-product-media img`);
-            images.forEach(image => {
-                var newSrc = image.src.replace("_400x400", "");
-                image.src = newSrc;
-            });
-        }, 100);
-        const productLinks = document.querySelectorAll(`#rebuy-widget-${widget.id} .rebuy-product-link`);
-        productLinks.forEach(link => {
-            link.addEventListener('variantChange', function(e) {
-                const selectedVariant = e.detail.variant;
-              console.log("selectedVariant", selectedVariant)
-                link.href = `${link.href}?variant=${selectedVariant.id}`;
-            });
-        });
-    });
     
     document.addEventListener('rebuy.ready', function () {
       setTimeout(() => {
