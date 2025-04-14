@@ -74,7 +74,7 @@
                         <div class="rebuy-product-media">
       <div class="card__media">
                             <a
-                                class="rebuy-product-image"
+                                class="rebuy-product-image rebuy-product-link"
                                 tabindex="-1"
                                 v-bind:href="learnMoreURL(product)"
                                 v-bind:style="imageStyles"
@@ -96,7 +96,7 @@
                             <div class="card__heading h4">
                               <a
                                   aria-level="5"
-                                  class="rebuy-product-title"
+                                  class="rebuy-product-title rebuy-product-link"
                                   data-product-url="{{ product.url }}"
                                   v-bind:href="learnMoreURL(product)"
                                   v-on:click="learnMore(product, $event);"
