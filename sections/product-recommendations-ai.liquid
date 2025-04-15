@@ -154,20 +154,24 @@
                             </select>
                           <span class="h4 card__selected-color">{{ selected_color }}</span>
 
-                          <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
-                            <button
+                          <div
+                            v-if="displayColorSwatches(option)"
+                            v-for="option in product.options"
+                            class="rebuy-color-swatches quick-add__colors"
+                          >
+                            <a
                               v-for="(value, index) in filterOOSOptions(option, product)"
                               :key="index"
-                              :data-index="index + 1"
+                              :href="getVariantUrl(value)"
                               :aria-label="`color, ${value}`"
-                              :selected="index === 0"
-                              type="button"
-                              :value="value"
                               class="quick-add__button quick-add__button--color button--inline"
-                              :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
+                              :style="{
+                                backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)'
+                              }"
                             >
-                            </button>
+                            </a>
                           </div>
+
   
                             <div v-if="displaySizeSwatches(option)" v-for="option in product.options" class="mt-10 rebuy-size-swatches">
                                 <div v-for="(value, value_index) in filterOOSOptions(option, product)" class="rebuy-size-swatch">
