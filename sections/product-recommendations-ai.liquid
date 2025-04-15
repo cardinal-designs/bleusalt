@@ -343,6 +343,7 @@
                 this.variants.forEach((variant) => {
                   if (variant.title === selectedArray) {
                     addToCart(variant.id, 1);
+                    window.redirect = true;
                     return false;
                   }
                 });
