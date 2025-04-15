@@ -260,6 +260,11 @@
     }
     
     document.addEventListener('rebuy.ready', function () {
+
+      let dataJson = document.querySelectorAll('.rebuy-product-block[data-json]');
+      console.log("dataJson", dataJson)
+
+      
       setTimeout(() => {
         let handles = document.querySelectorAll('.rebuy-product-block[data-product-handle]');
         let handleArr = [];
