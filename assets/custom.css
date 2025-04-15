@@ -235,6 +235,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s ease;
+  text-decoration: none;
 }
 
 .card-product:hover .inquires__btn {
