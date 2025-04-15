@@ -279,11 +279,16 @@
         )
         .then(products => {
           window.rebuyproducts = products;
-          quickAdd()
+          quickAdd();
+          updateVariantUrls();
         })
         .catch(error => {
           console.error('Error fetching products:', error);
         });
+
+        function updateVariantUrls() {
+          console.log("window.rebuyproducts", window.rebuyproducts)
+        }
         
         const quickAdd = function () {
 
