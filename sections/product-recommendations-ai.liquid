@@ -346,8 +346,8 @@
                 event.target.setAttribute('selected', true);
                 this.selectedColor = event.target;
 
-                // this.updateUrl();
-                this.redirectUrl();
+                this.updateUrl();
+                // this.redirectUrl();
                 this.sizeAvailabilities();
                 this.updateSelectedSize();
 
@@ -404,6 +404,9 @@
                 let foundOne = false;
                 this.variants.forEach((variant) => {
                   if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+
+                    console.log("variant", variant)
+                    
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
                     // Find the closest parent element with the class 'rebuy-product-grid'.
