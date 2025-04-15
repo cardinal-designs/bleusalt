@@ -484,35 +484,35 @@
                 });
               }
     
-              changeImage(variant) {
-                const firstImage = this.card.querySelectorAll('.card__media img')[0];
-                if (variant.featured_image) {
-                  firstImage.setAttribute('src', variant.featured_image.src);
-                  firstImage.removeAttribute('srcset');
-                  return;
-                }
+              // changeImage(variant) {
+              //   const firstImage = this.card.querySelectorAll('.card__media img')[0];
+              //   if (variant.featured_image) {
+              //     firstImage.setAttribute('src', variant.featured_image.src);
+              //     firstImage.removeAttribute('srcset');
+              //     return;
+              //   }
     
-                const secondImage = this.card.querySelectorAll('.card__media img')[1];
-                let foundOne = false, foundTwo = false;
-                this.json.media.forEach((media) => {
-                  if (media.media_type !== 'image') return;
-                  if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
-                  if (!foundOne) {
-                    updateSrcSet(firstImage, media.src);
-                    foundOne = true;
-                  } else if (!foundTwo) {
-                    updateSrcSet(secondImage, media.src);
-                    foundTwo = true;
-                  }
-                });
-              }
+              //   const secondImage = this.card.querySelectorAll('.card__media img')[1];
+              //   let foundOne = false, foundTwo = false;
+              //   this.json.media.forEach((media) => {
+              //     if (media.media_type !== 'image') return;
+              //     if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
+              //     if (!foundOne) {
+              //       updateSrcSet(firstImage, media.src);
+              //       foundOne = true;
+              //     } else if (!foundTwo) {
+              //       updateSrcSet(secondImage, media.src);
+              //       foundTwo = true;
+              //     }
+              //   });
+              // }
     
               init() {
                 if (!this.selectedColor) return;
 
                 let selectedColorEl = this.card.querySelector('.card__selected-color');
                 if (selectedColorEl) {
-                  selectedColorEl.innerHTML = this.selectedColor.value;
+                  selectedColorEl.innerHTML = this.selectedColor.dataset.value;
                 }
                 
                 this.sizeAvailabilities();
