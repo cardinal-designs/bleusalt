@@ -64,12 +64,13 @@
                     <div
                         v-for="(product, product_index) in products"
                         v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
-                        aria-label="product"
+                        aria-label="product" data-json='{{ product | json | escape }}'
                         class="rebuy-product-block card" 
                         :data-product-id="product.id"
                         :data-product-handle="product.handle"
                         role="listitem"
                         :data-demo-json="{{ product }}"
+                
                     >
   
                         <div class="rebuy-product-media">
