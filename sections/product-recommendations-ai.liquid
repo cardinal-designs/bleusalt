@@ -305,10 +305,10 @@
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
                 this.variants = this.json.variants;
-                this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
-                this.colorButtons.forEach(
-                  (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
-                );
+                // this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
+                // this.colorButtons.forEach(
+                //   (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
+                // );
                 
                 // this.colorIndex = this.json.options.indexOf('Color');
                 this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
