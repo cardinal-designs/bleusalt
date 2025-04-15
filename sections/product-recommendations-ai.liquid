@@ -261,17 +261,6 @@
     
     document.addEventListener('rebuy.ready', function () {
 
-      // let rebuyProductBlocks = document.querySelectorAll('.rebuy-product-block[data-json]');
-      // rebuyProductBlocks.forEach(function(rebuyProductBlock){
-      //   let dataJson = rebuyProductBlock.dataset.json;
-      //   if(dataJson){
-      //   console.log("dataJson", dataJson)
-          
-      //   }
-      // })
-      
-
-      
       setTimeout(() => {
         let handles = document.querySelectorAll('.rebuy-product-block[data-product-handle]');
         let handleArr = [];
@@ -305,9 +294,13 @@
               }
     
               initQuickAdd() {
-                this.querySelectorAll('button').forEach(
+                // this.querySelectorAll('button').forEach(
+                //   (button) => button.addEventListener('click', this.onButtonClick.bind(this))
+                // );
+                this.querySelectorAll('button:not(.quick-add__button--color)').forEach(
                   (button) => button.addEventListener('click', this.onButtonClick.bind(this))
                 );
+
                 
                 this.productId = this.closest("[data-product-id]").getAttribute("data-product-id");
                 
