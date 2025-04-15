@@ -155,7 +155,7 @@
                           <span class="h4 card__selected-color">{{ selected_color }}</span>
 
                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
-                            <a
+                            <button
                               v-for="(value, index) in filterOOSOptions(option, product)"
                               :key="index"
                               :data-index="index + 1"
@@ -166,7 +166,7 @@
                               class="quick-add__button quick-add__button--color button--inline `${value}`"
                               :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                             >
-                            </a>
+                            </button>
                           </div>
 
   
