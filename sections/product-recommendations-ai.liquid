@@ -388,10 +388,10 @@
 
                 let selectedColorEl = this.card.querySelector('.card__selected-color');
                 if (selectedColorEl) {
-                  selectedColorEl.innerHTML = this.selectedColor.value;
+                  selectedColorEl.innerHTML = this.selectedColor.dataset.value;
                 }
                 
-
+                this.sizeAvailabilities();
               }
             }
     
