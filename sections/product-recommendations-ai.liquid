@@ -308,6 +308,9 @@
                   let updatedUrl = `${window.origin}${prd.url}?variant=${matchingVariant.id}`;
                   quickAddButtonColor.setAttribute("href", updatedUrl);
                 }
+                if(quickAddButtonColor.classList.contains("pointer-none")){
+                  quickAddButtonColor.classList.remove("pointer-none")
+                }
               });
             }
           });
