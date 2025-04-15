@@ -362,6 +362,10 @@
                     
                     let productId = variant?.featured_image?.product_id;
                     let newData  = window.rebuyproducts?.find(item => item.id == productId);
+
+                    console.log("newData", newData)
+
+                    
                     // Find the closest parent element with the class 'rebuy-product-grid'.
                     let closestRebuyProductGrid = this.closest("[data-product-id]");
                     
