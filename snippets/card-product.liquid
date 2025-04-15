@@ -177,9 +177,13 @@
             {%- endif -%}
           </div>
         {% endcomment %}
-         {% if show_quick_add %}
-           {% render 'quick-add', product: card_product %}
-         {% endif %}
+          {% assign vendor_handle = card_product.vendor | handleize %}
+            
+          {% unless vendor_handle == 'couture' %}
+            {% if show_quick_add %}
+              {% render 'quick-add', product: card_product %}
+            {% endif %}
+          {% endunless %}
         </div>
       </div>
       <div class="card__content">
