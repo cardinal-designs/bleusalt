@@ -78,7 +78,7 @@
                                 tabindex="-1"
                                 v-bind:href="learnMoreURL(product)"
                                 v-bind:style="imageStyles"
-                                v-on:click="learnMore(product, $event);"
+                                
                                 v-bind:class="[hasLearnMore() ? 'clickable' : '']"
                                 rel="nofollow"
                             >
@@ -161,7 +161,7 @@
                               :data-index="index + 1"
                               :aria-label="`color, ${value}`"
                               :selected="index === 0"
-                              type="button"
+                              :href=""
                               :value="value"
                               class="quick-add__button quick-add__button--color button--inline `${value}`"
                               :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
