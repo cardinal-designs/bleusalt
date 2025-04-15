@@ -287,7 +287,34 @@
         });
 
         function updateVariantUrls() {
-          console.log("window.rebuyproducts", window.rebuyproducts)
+          window.rebuyproducts.forEach(function (prd) {
+            console.log("prd", prd);
+            let variantsData = prd.variants;
+            let dataProductHandle = document.querySelector(`.rebuy-product-block[data-product-handle="${prd.handle}"]`);
+          
+            if (dataProductHandle) {
+              let quickAddButtonColors = dataProductHandle.querySelectorAll(".quick-add__button--color");
+          
+              quickAddButtonColors.forEach(function (quickAddButtonColor) {
+                let dataIndex = quickAddButtonColor.dataset.index;
+                let dataColor = quickAddButtonColor.dataset.value;
+                console.log("dataIndex", dataIndex);
+                console.log("dataColor", dataColor);
+          
+                // Find a matching available variant where option1 or option2 equals dataColor
+                let matchingVariant = variantsData.find(variant =>
+                  variant.available &&
+                  (variant.option1 === dataColor || variant.option2 === dataColor)
+                );
+          
+                if (matchingVariant) {
+                  let updatedUrl = `${window.origin}${prd.url}?variant=${matchingVariant.id}`;
+                  quickAddButtonColor.setAttribute("href", updatedUrl);
+                }
+              });
+            }
+          });
+
         }
         
         const quickAdd = function () {
