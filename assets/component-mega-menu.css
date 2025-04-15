@@ -2,6 +2,11 @@
   position: static;
 }
 
+.mega-menu:focus-visible {
+  outline: 0;
+  box-shadow: 0;
+}
+
 .mega-menu__content {
   background-color: rgb(var(--color-background));
   border-left: 0;
@@ -13,6 +18,15 @@
   right: 0;
   top: 100%;
   z-index: 5;
+}
+
+.mega-menu__no-full {
+  width: fit-content;
+  overflow: hidden;
+}
+
+.mega-menu__no-full .mega-menu__list {
+  padding-left: 20px;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
@@ -37,7 +51,7 @@
   display: flex;
   list-style: none;
   align-items:center;
-  padding: 0;
+  padding: 30px 0;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
