@@ -338,17 +338,17 @@
                 });
               }
     
-              onColorButtonClick(event) {
-                this.card.querySelectorAll('.quick-add__button--color').forEach(
-                  (button) => button.removeAttribute('selected')
-                );
-                event.target.setAttribute('selected', true);
-                this.selectedColor = event.target;
+              // onColorButtonClick(event) {
+              //   this.card.querySelectorAll('.quick-add__button--color').forEach(
+              //     (button) => button.removeAttribute('selected')
+              //   );
+              //   event.target.setAttribute('selected', true);
+              //   this.selectedColor = event.target;
 
-                this.updateUrl();
-                this.sizeAvailabilities();
-                this.updateSelectedSize();
-              }
+              //   this.updateUrl();
+              //   this.sizeAvailabilities();
+              //   this.updateSelectedSize();
+              // }
     
               updateUrl() {
                 let foundOne = false;
