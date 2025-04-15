@@ -253,7 +253,7 @@
     
   </script>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     // Generate the JSON data for the product
     const getProductJson = function(product) {
       return JSON.stringify(product); // Escape JSON for safe HTML injection
@@ -517,7 +517,222 @@
   
       }, 5000); // Delay to allow Rebuy's Vue rendering to complete
     });
-  </script>
+  </script> -->
+
+  <script type="text/javascript">
+  // Generate the JSON data for the product
+  const getProductJson = function(product) {
+    return JSON.stringify(product); // Escape JSON for safe HTML injection
+  }
+
+  document.addEventListener('rebuy.ready', function () {
+
+    setTimeout(() => {
+      let handles = document.querySelectorAll('.rebuy-product-block[data-product-handle]');
+      let handleArr = [];
+      handles.forEach(handle => {
+        let handleAttr = handle.getAttribute('data-product-handle');
+        if (handleAttr) handleArr.push(handleAttr);
+      });
+
+      Promise.all(
+        handleArr.map(handle =>
+          fetch(`/products/${handle}.js`).then(res => res.json())
+        )
+      )
+      .then(products => {
+        window.rebuyproducts = products;
+        initQuickAddComponent();
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+
+      function initQuickAddComponent() {
+        if (!customElements.get('quick-add')) {
+          class QuickAdd extends HTMLElement {
+            constructor() {
+              super();
+              this.initCalled = false;
+            }
+
+            initQuickAdd() {
+              if (this.initCalled) return;
+              this.initCalled = true;
+
+              this.productId = this.closest("[data-product-id]").getAttribute("data-product-id");
+              this.card = this.closest('.card');
+              this.cardLink = this.card.querySelector('.card__heading.h4 a');
+              this.productUrl = this.cardLink?.getAttribute('data-product-url');
+              this.json = window.rebuyproducts?.find(item => item.id == this.productId);
+              if (!this.json) return;
+
+              this.variants = this.json.variants;
+              this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
+              this.sizeIndex = this.json.options.findIndex(option => option.name === 'Size');
+              this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
+
+              // Only bind ATC buttons, exclude color buttons
+              this.querySelectorAll('button:not(.quick-add__button--color)').forEach(
+                (button) => button.addEventListener('click', this.onButtonClick.bind(this))
+              );
+
+              // Bind color buttons
+              this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
+              this.colorButtons.forEach(
+                (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
+              );
+
+              this.init();
+            }
+
+            onButtonClick(event) {
+              console.log('🔥 Add to cart button clicked', event.target);
+              this.querySelectorAll('.quick-add__button').forEach(
+                (button) => button.removeAttribute('selected')
+              );
+              event.target.setAttribute('selected', true);
+              let allSelected = [];
+              this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+                allSelected.push(button.value);
+              });
+              const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
+
+              this.variants.forEach((variant) => {
+                if (variant.title === selectedArray) {
+                  addToCart(variant.id, 1);
+                  return false;
+                }
+              });
+            }
+
+            onColorButtonClick(event) {
+              console.log('🎨 Color swatch clicked', event.target);
+              this.card.querySelectorAll('.quick-add__button--color').forEach(
+                (button) => button.removeAttribute('selected')
+              );
+              event.target.setAttribute('selected', true);
+              this.selectedColor = event.target;
+
+              this.redirectUrl();
+              // Uncomment below if needed
+              // this.updateUrl();
+              // this.sizeAvailabilities();
+              // this.updateSelectedSize();
+            }
+
+            redirectUrl() {
+              let foundOne = false;
+              this.variants.forEach((variant) => {
+                if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+                  let productId = variant?.featured_image?.product_id;
+                  let newData = window.rebuyproducts?.find(item => item.id == productId);
+                  if (newData) {
+                    window.location.href = `${window.origin}${newData.url}?variant=${variant.id}`;
+                  }
+                  foundOne = true;
+                }
+              });
+            }
+
+            updateUrl() {
+              // Optional behavior (disabled above)
+              // Add your updateUrl logic if needed
+            }
+
+            updateSelectedSize() {
+              if (!this.selectedColor) return;
+              const selectedColorEl = this.card.querySelector('.card__selected-color');
+              if (selectedColorEl) {
+                selectedColorEl.innerHTML = this.selectedColor.value;
+              }
+            }
+
+            sizeAvailabilities() {
+              if (!this.selectedColor || this.colorIndex === -1 || this.sizeIndex === -1) return;
+
+              this.variants.forEach((variant) => {
+                const colorOption = variant.options?.[this.colorIndex];
+                const sizeOption = variant.options?.[this.sizeIndex];
+                if (colorOption !== this.selectedColor.value) return;
+                if (typeof sizeOption === 'undefined') return;
+
+                const sizeButton = this.querySelector(`button[value="${sizeOption}"]`);
+                if (sizeButton) sizeButton.disabled = !variant.available;
+              });
+            }
+
+            changeImage(variant) {
+              const firstImage = this.card.querySelectorAll('.card__media img')[0];
+              if (variant.featured_image) {
+                firstImage.setAttribute('src', variant.featured_image.src);
+                firstImage.removeAttribute('srcset');
+                return;
+              }
+
+              const secondImage = this.card.querySelectorAll('.card__media img')[1];
+              let foundOne = false, foundTwo = false;
+              this.json.media.forEach((media) => {
+                if (media.media_type !== 'image') return;
+                if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
+                if (!foundOne) {
+                  updateSrcSet(firstImage, media.src);
+                  foundOne = true;
+                } else if (!foundTwo) {
+                  updateSrcSet(secondImage, media.src);
+                  foundTwo = true;
+                }
+              });
+            }
+
+            init() {
+              if (!this.selectedColor) return;
+              let selectedColorEl = this.card.querySelector('.card__selected-color');
+              if (selectedColorEl) {
+                selectedColorEl.innerHTML = this.selectedColor.value;
+              }
+
+              this.sizeAvailabilities();
+            }
+          }
+
+          customElements.define('quick-add', QuickAdd);
+        }
+
+        // Setup MutationObserver
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeType !== 1) return;
+
+              if (node.tagName?.toLowerCase() === 'quick-add') {
+                if (node.initQuickAdd && !node.__quickAddInitialized) {
+                  node.__quickAddInitialized = true;
+                  node.initQuickAdd();
+                }
+              }
+
+              if (node.querySelectorAll) {
+                node.querySelectorAll('quick-add').forEach((el) => {
+                  if (el.initQuickAdd && !el.__quickAddInitialized) {
+                    el.__quickAddInitialized = true;
+                    el.initQuickAdd();
+                  }
+                });
+              }
+            });
+          });
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+      }
+    }, 5000); // Delay to allow Rebuy's Vue rendering to complete
+  });
+</script>
+
  
 {%- else -%}
 
