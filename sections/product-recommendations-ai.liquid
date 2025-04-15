@@ -332,6 +332,8 @@
                 this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
                   allSelected.push(button.value);
                 });
+
+                console.log("allSelected", allSelected)
                 const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
 
                 this.variants.forEach((variant) => {
