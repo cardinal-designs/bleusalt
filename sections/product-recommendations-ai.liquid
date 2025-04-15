@@ -64,13 +64,12 @@
                     <div
                         v-for="(product, product_index) in products"
                         v-bind:class="[product.handle, 'product-id-' + product.id, cartHasProduct(product) ? 'cart-has-item' : '', productTagClasses(product)]"
-                        aria-label="product" data-json='{{ product | json | escape }}'
+                        aria-label="product"
                         class="rebuy-product-block card" 
                         :data-product-id="product.id"
                         :data-product-handle="product.handle"
                         role="listitem"
-                        :data-demo-json="{{ product }}"
-                
+                    
                     >
   
                         <div class="rebuy-product-media">
@@ -157,8 +156,10 @@
                           <span class="h4 card__selected-color">{{ selected_color }}</span>
 
                           <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
-                          	<Link
+                          	<a
                           	  v-for="(value, index) in filterOOSOptions(option, product)"
+                              :key="index"
+    :data-variant-id="product.variants[index]?.id"
                           	  :key="index"
                           	  :data-index="index + 1"
                           	  :aria-label="`color, ${value}`"
@@ -169,7 +170,7 @@
                           	  class="quick-add__button quick-add__button--color button--inline `${value}`"
                           	  :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                           	>
-                          	</Link>
+                          	</a>
                           </div>
 
 
