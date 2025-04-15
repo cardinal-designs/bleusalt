@@ -489,38 +489,38 @@
         }
   
         // MutationObserver to re-initialize quick-add elements dynamically
-        const observer = new MutationObserver((mutations) => {
-          mutations.forEach((mutation) => {
-            mutation.addedNodes.forEach((node) => {
-              if (node.nodeType === 1) {
-                // If the added node is a quick-add element
-                if (node.tagName.toLowerCase() === 'quick-add') {
-                  try {
-                    new QuickAdd().initQuickAdd.call(node);
-                  } catch (err) {
-                    console.error('Error initializing quick-add element', err);
-                  }
-                }
+        // const observer = new MutationObserver((mutations) => {
+        //   mutations.forEach((mutation) => {
+        //     mutation.addedNodes.forEach((node) => {
+        //       if (node.nodeType === 1) {
+        //         // If the added node is a quick-add element
+        //         if (node.tagName.toLowerCase() === 'quick-add') {
+        //           try {
+        //             new QuickAdd().initQuickAdd.call(node);
+        //           } catch (err) {
+        //             console.error('Error initializing quick-add element', err);
+        //           }
+        //         }
   
-                // If the node contains quick-add elements
-                if (node.querySelectorAll) {
-                  node.querySelectorAll('quick-add').forEach((el) => {
-                    try {
-                      new QuickAdd().initQuickAdd.call(el);
-                    } catch (err) {
-                      console.error('Error initializing nested quick-add', err);
-                    }
-                  });
-                }
-              }
-            });
-          });
-        });
+        //         // If the node contains quick-add elements
+        //         if (node.querySelectorAll) {
+        //           node.querySelectorAll('quick-add').forEach((el) => {
+        //             try {
+        //               new QuickAdd().initQuickAdd.call(el);
+        //             } catch (err) {
+        //               console.error('Error initializing nested quick-add', err);
+        //             }
+        //           });
+        //         }
+        //       }
+        //     });
+        //   });
+        // });
   
-        observer.observe(document.body, {
-          childList: true,
-          subtree: true
-        });
+        // observer.observe(document.body, {
+        //   childList: true,
+        //   subtree: true
+        // });
   
       }, 5000); // Delay to allow Rebuy's Vue rendering to complete
     });
