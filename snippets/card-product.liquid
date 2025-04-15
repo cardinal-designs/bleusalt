@@ -179,7 +179,7 @@
         {% endcomment %}
           {% assign vendor_handle = card_product.vendor | handleize %}
           {% if vendor_handle == 'couture' %}
-            <a href="mailto:inquire@bleusalt.com" class="inquires__btn">Inquires Only</a>
+            <a href="mailto:inquire@bleusalt.com" class="inquires__btn button--inline">Inquires Only</a>
           {% endif %}
           {% render 'quick-add', product: card_product %}
           {% unless vendor_handle == 'couture' %}
