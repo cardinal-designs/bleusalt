@@ -335,7 +335,7 @@
                   allSelected.push(button.value);
                 });
                 this.card.querySelectorAll('.quick-add__button--color[selected]').forEach((button) => {
-                  allSelected.push(button.getAttribute(value));
+                  allSelected.push(button.dataset.value);
                 });
 
                 console.log("allSelected", allSelected)
