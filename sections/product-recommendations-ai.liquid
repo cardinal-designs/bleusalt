@@ -261,14 +261,14 @@
     
     document.addEventListener('rebuy.ready', function () {
 
-      let rebuyProductBlocks = document.querySelectorAll('.rebuy-product-block[data-json]');
-      rebuyProductBlocks.forEach(function(rebuyProductBlock){
-        let dataJson = rebuyProductBlock.dataset.json;
-        if(dataJson){
-        console.log("dataJson", dataJson)
+      // let rebuyProductBlocks = document.querySelectorAll('.rebuy-product-block[data-json]');
+      // rebuyProductBlocks.forEach(function(rebuyProductBlock){
+      //   let dataJson = rebuyProductBlock.dataset.json;
+      //   if(dataJson){
+      //   console.log("dataJson", dataJson)
           
-        }
-      })
+      //   }
+      // })
       
 
       
@@ -350,14 +350,14 @@
               }
     
               onColorButtonClick(event) {
-                // console.log("event", event.target)
-                // this.card.querySelectorAll('.quick-add__button--color').forEach(
-                //   (button) => button.removeAttribute('selected')
-                // );
-                // event.target.setAttribute('selected', true);
-                // this.selectedColor = event.target;
+                console.log("event", event.target)
+                this.card.querySelectorAll('.quick-add__button--color').forEach(
+                  (button) => button.removeAttribute('selected')
+                );
+                event.target.setAttribute('selected', true);
+                this.selectedColor = event.target;
 
-                // this.redirectUrl();
+                this.redirectUrl();
                 // this.updateUrl();
                 // this.sizeAvailabilities();
                 // this.updateSelectedSize();
