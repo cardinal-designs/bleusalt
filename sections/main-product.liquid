@@ -511,6 +511,11 @@
                   <span class="product-form__error-message"></span>
                 </div>
 
+                {% assign vendor_handle = product.vendor | handleize %}
+                {% if vendor_handle == 'couture' %}
+                  <a href="mailto:inquire@bleusalt.com" class="button button--full-width button--primary">Inquires only</a>
+                {% endif %}
+
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   
