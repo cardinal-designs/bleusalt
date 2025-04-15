@@ -196,8 +196,8 @@
 
             </h2>
             {% assign vendor_handle = card_product.vendor | handleize %}
-            vendor_handle -- {{ vendor_handle }}
-            {% unless vendor_handle == '' %}
+            
+            {% unless vendor_handle == 'couture' %}
             {% render 'price', product: card_product, price_class: '' %}
             {% endunless %}
           </div>
