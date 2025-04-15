@@ -159,7 +159,7 @@
   v-for="option in product.options"
   class="rebuy-color-swatches quick-add__colors"
 >
-<a
+<Link
   v-for="(value, index) in filterOOSOptions(option, product)"
   :key="index"
   :data-index="index + 1"
