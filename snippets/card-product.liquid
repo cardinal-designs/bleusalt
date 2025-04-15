@@ -178,7 +178,9 @@
           </div>
         {% endcomment %}
           {% assign vendor_handle = card_product.vendor | handleize %}
-            
+          {% if vendor_handle == 'couture' %}
+            <a></a>
+          {% endif %}
           {% unless vendor_handle == 'couture' %}
             {% if show_quick_add %}
               {% render 'quick-add', product: card_product %}
