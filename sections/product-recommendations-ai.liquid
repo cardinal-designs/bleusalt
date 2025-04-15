@@ -261,8 +261,15 @@
     
     document.addEventListener('rebuy.ready', function () {
 
-      let dataJson = document.querySelectorAll('.rebuy-product-block[data-json]');
-      console.log("dataJson", dataJson)
+      let rebuyProductBlocks = document.querySelectorAll('.rebuy-product-block[data-json]');
+      rebuyProductBlocks.forEach(function(rebuyProductBlock){
+        let dataJson = rebuyProductBlock.dataset.json;
+        if(dataJson){
+        console.log("dataJson", dataJson)
+          
+        }
+      })
+      
 
       
       setTimeout(() => {
