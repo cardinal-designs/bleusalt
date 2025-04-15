@@ -162,7 +162,7 @@
                               :aria-label="`color, ${value}`"
                               :selected="index === 0"
                               type="button"
-                              v-bind:href="learnMoreURL(product)"
+                              v-bind:href="product.handle"
                               :value="value"
                               class="quick-add__button quick-add__button--color button--inline `${value}`"
                               :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
