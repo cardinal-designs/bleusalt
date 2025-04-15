@@ -475,7 +475,11 @@
           <button type="button" id="pdp-stylist-link">{{ block.settings.link_text }}</button>
             {%- render 'product-bambuser' -%}
 
-
+          {%- when 'inquires_button' -%}
+          {% assign vendor_handle = product.vendor | handleize %}
+          {% if vendor_handle == 'couture' %}
+            <a href="mailto:inquire@bleusalt.com" class="inquires__btn button button--full-width button--primary">Inquires only</a>
+          {% endif %}
             
           {%- when 'buy_buttons' -%}
             <div class="product__buttons-wrapper" {{ block.shopify_attributes }}>
@@ -498,11 +502,6 @@
                 </div>
                 <div class="rte product__app-buttons"><small>Not in the U.S.?  <a href="/pages/contact">Contact Customer Service</a> to Purchase</small></div>
                 
-              {% endif %}
-
-              {% assign vendor_handle = product.vendor | handleize %}
-              {% if vendor_handle == 'couture' %}
-                <a href="mailto:inquire@bleusalt.com" class="inquires__btn button button--full-width button--primary">Inquires only</a>
               {% endif %}
               
               <product-form class="product-form" {% if template == 'product.app-only' %}style="display: none;"{% endif %}>
@@ -1017,6 +1016,11 @@
         }
       ]
     },
+    {
+      "type": "inquires_button",
+      "name": "Inquires Button",
+      "limit": 1
+    },    
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
