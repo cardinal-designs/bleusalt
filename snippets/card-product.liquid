@@ -195,7 +195,11 @@
               </a> {% endcomment %}
 
             </h2>
+            {% assign vendor_handle = product.vendor | handleize %}
+            vendor_handle -- {{ vendor_handle }}
+            {% unless vendor_handle == '' %}
             {% render 'price', product: card_product, price_class: '' %}
+            {% endunless %}
           </div>
           <div class="card-information">
             {%- if show_vendor -%}
