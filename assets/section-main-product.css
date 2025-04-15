@@ -1742,7 +1742,7 @@ table[data-in-to-cm] td {
   order: 3;
 }
 
-.product__buttons-wrapper .inquires__btn {
+.product__info-container .inquires__btn {
   margin-bottom: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
