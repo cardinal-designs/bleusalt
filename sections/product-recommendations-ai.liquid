@@ -285,7 +285,6 @@
 
         function updateVariantUrls() {
           window.rebuyproducts.forEach(function (prd) {
-            console.log("prd", prd);
             let variantsData = prd.variants;
             let dataProductHandle = document.querySelector(`.rebuy-product-block[data-product-handle="${prd.handle}"]`);
           
@@ -295,9 +294,7 @@
               quickAddButtonColors.forEach(function (quickAddButtonColor) {
                 let dataIndex = quickAddButtonColor.dataset.index;
                 let dataColor = quickAddButtonColor.dataset.value;
-                console.log("dataIndex", dataIndex);
-                console.log("dataColor", dataColor);
-          
+
                 // Find a matching available variant where option1 or option2 equals dataColor
                 let matchingVariant = variantsData.find(variant =>
                   variant.available &&
@@ -327,27 +324,17 @@
               }
     
               initQuickAdd() {
-                // this.querySelectorAll('button').forEach(
-                //   (button) => button.addEventListener('click', this.onButtonClick.bind(this))
-                // );
                 this.querySelectorAll('button.quick-add__button').forEach(
                   (button) => button.addEventListener('click', this.onButtonClick.bind(this))
                 );
 
-                
                 this.productId = this.closest("[data-product-id]").getAttribute("data-product-id");
-                
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
                 this.variants = this.json.variants;
-                // this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
-                // this.colorButtons.forEach(
-                //   (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
-                // );
-                
-                // this.colorIndex = this.json.options.indexOf('Color');
+
                 this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
                 this.sizeIndex = this.json.options.findIndex(option => option.name === 'Size');
                 // this.sizeIndex = this.json.options.indexOf('Size');
@@ -370,7 +357,6 @@
                   allSelected.push(button.dataset.value);
                 });
 
-                console.log("allSelected", allSelected)
                 const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
 
                 this.variants.forEach((variant) => {
@@ -381,84 +367,7 @@
                   }
                 });
               }
-    
-              onColorButtonClick(event) {
-                // console.log("event", event.target)
-                // this.card.querySelectorAll('.quick-add__button--color').forEach(
-                //   (button) => button.removeAttribute('selected')
-                // );
-                // event.target.setAttribute('selected', true);
-                // this.selectedColor = event.target;
-
-                // console.log("selecte -", this.selectedColor)
-
-                // this.redirectUrl();
-                // this.updateUrl();
-                // this.sizeAvailabilities();
-                // this.updateSelectedSize();
-
-              }
-
-              // redirectUrl() {
-              //   let foundOne = false;
-              //   this.variants.forEach((variant) => {
-              //     if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
-              //       console.log("variant", variant)
-              //       let productId = variant?.featured_image?.product_id;
-              //       let newData  = window.rebuyproducts?.find(item => item.id == productId);
-              //       console.log("newData", newData)
-              //       window.location.href = `${window.origin}${newData.url}?variant=${variant.id}`
-              //     }
-              //   });
-              // }
-    
-              // updateUrl() {
-              //   let foundOne = false;
-              //   console.log("this.variants", this.variants)
-              //   this.variants.forEach((variant) => {
-              //     if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
-
-              //       console.log("variant", variant)
-                    
-              //       let productId = variant?.featured_image?.product_id;
-              //       let newData  = window.rebuyproducts?.find(item => item.id == productId);
-              //       // Find the closest parent element with the class 'rebuy-product-grid'.
-              //       let closestRebuyProductGrid = this.closest("[data-product-id]");
-                    
-              //       // Check if the closest '.rebuy-product-grid' was found successfully.
-              //       if (closestRebuyProductGrid) {
-              //         // Select all elements in the grid that have an `href` attribute.
-              //         closestRebuyProductGrid.querySelectorAll("[href]").forEach(function (element) {
-              //           // Check if 'newData' and 'variant' objects exist before updating.
-              //           if (newData && newData.url && variant && variant.id) {
-              //             // Update the `href` attribute with the new URL and variant ID.
-              //             element.setAttribute('href', `${newData.url}?variant=${variant.id}`);
-              //             element.addEventListener("click", function(e){
-              //               e.preventDefault();
-              //               let dataProductUrl = closestRebuyProductGrid.querySelector("[data-product-url]");
-              //               if(dataProductUrl){
-              //                 let dataProductUrlValue = dataProductUrl.getAttribute("data-product-url");
-              //                 window.location = dataProductUrlValue;
-              //               }
-              //             })
-              //           }
-              //         });
-
-              //         closestRebuyProductGrid.querySelectorAll("[data-product-url]").forEach(function (element) {
-              //           // Check if 'newData' and 'variant' objects exist before updating.
-              //           if (newData && newData.url && variant && variant.id) {
-              //             // Update the `href` attribute with the new URL and variant ID.
-              //             element.setAttribute('data-product-url', `${newData.url}?variant=${variant.id}`);
-              //           }
-              //         });                      
-              //       }
-              //       this.cardLink.setAttribute('href', `${newData.url}?variant=${variant.id}`);
-              //       this.changeImage(variant);
-              //       foundOne = true;
-              //     }
-              //   });
-              // }
-    
+              
               updateSelectedSize() {
                 if (!this.selectedColor) return;
                 const selectedColorEl = this.card.querySelector('.card__selected-color');
@@ -483,30 +392,7 @@
                   if (sizeButton) sizeButton.disabled = !variant.available;
                 });
               }
-    
-              // changeImage(variant) {
-              //   const firstImage = this.card.querySelectorAll('.card__media img')[0];
-              //   if (variant.featured_image) {
-              //     firstImage.setAttribute('src', variant.featured_image.src);
-              //     firstImage.removeAttribute('srcset');
-              //     return;
-              //   }
-    
-              //   const secondImage = this.card.querySelectorAll('.card__media img')[1];
-              //   let foundOne = false, foundTwo = false;
-              //   this.json.media.forEach((media) => {
-              //     if (media.media_type !== 'image') return;
-              //     if (media.alt.split('|')[0].trim() !== this.selectedColor.value) return;
-              //     if (!foundOne) {
-              //       updateSrcSet(firstImage, media.src);
-              //       foundOne = true;
-              //     } else if (!foundTwo) {
-              //       updateSrcSet(secondImage, media.src);
-              //       foundTwo = true;
-              //     }
-              //   });
-              // }
-    
+
               init() {
                 if (!this.selectedColor) return;
 
