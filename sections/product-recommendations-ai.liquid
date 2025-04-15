@@ -154,7 +154,7 @@
                             </select>
                           <span class="h4 card__selected-color">{{ selected_color }}</span>
 
-                           <div
+<div
   v-if="displayColorSwatches(option)"
   v-for="option in product.options"
   class="rebuy-color-swatches quick-add__colors"
@@ -164,12 +164,13 @@
     :key="index"
     :data-index="index + 1"
     :aria-label="`color, ${value}`"
-    :href="`/products/${product.handle}?variant=${product.variants.find(v => v.options.includes(value))?.id}`"
+    :href="getVariantHref(product, value)"
     class="quick-add__button quick-add__button--color button--inline"
     :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(/ /g, '-') + '_80x.jpg)' }"
   >
   </a>
 </div>
+
 
 
   
