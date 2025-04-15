@@ -232,9 +232,12 @@
                 </a>
               {% endif %}
               </div>
+              {% assign vendor_handle = product.vendor | handleize %}
+              {% unless vendor_handle == 'couture' %}
               <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
               </div>
+              {% endunless %}
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
