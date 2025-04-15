@@ -334,9 +334,8 @@
                 this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
                   allSelected.push(button.value);
                 });
-                this.card.querySelectorAll('.quick-add__button--color').forEach((button, index) => {
-                  console.log("index", index)
-                  allSelected.push(button.value);
+                this.card.querySelectorAll('.quick-add__button--color[selected]').forEach((button) => {
+                  allSelected.push(button.getAttribute(value));
                 });
 
                 console.log("allSelected", allSelected)
