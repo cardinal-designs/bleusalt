@@ -181,10 +181,10 @@
           {% if vendor_handle == 'couture' %}
             <a href="mailto:inquire@bleusalt.com" class="inquires__btn">Inquires Only</a>
           {% endif %}
-          {% render 'quick-add', product: card_product %}
+          
           {% unless vendor_handle == 'couture' %}
             {% if show_quick_add %}
-              
+              {% render 'quick-add', product: card_product %}
             {% endif %}
           {% endunless %}
         </div>

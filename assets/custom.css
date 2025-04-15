@@ -222,6 +222,26 @@
   height: 18px;
 }
 
+.card__inner .inquires__btn {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+  padding: 1.5rem;
+  background: rgba(var(--color-background), .9);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease;
+}
+
+.card-product:hover .inquires__btn {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media screen and (max-width: 480px) {
 
   .close-announcement {
