@@ -253,7 +253,7 @@
     
   </script>
 
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     // Generate the JSON data for the product
     const getProductJson = function(product) {
       return JSON.stringify(product); // Escape JSON for safe HTML injection
@@ -350,7 +350,9 @@
                 event.target.setAttribute('selected', true);
                 this.selectedColor = event.target;
 
-                this.redirectUrl();
+                console.log("selecte -", this.selectedColor)
+
+                // this.redirectUrl();
                 // this.updateUrl();
                 // this.sizeAvailabilities();
                 // this.updateSelectedSize();
@@ -517,135 +519,7 @@
   
       }, 5000); // Delay to allow Rebuy's Vue rendering to complete
     });
-  </script> -->
-
-<script type="text/javascript">
-  document.addEventListener('rebuy.ready', function () {
-    setTimeout(() => {
-      const handleEls = document.querySelectorAll('.rebuy-product-block[data-product-handle]');
-      const handles = Array.from(handleEls).map(el => el.getAttribute('data-product-handle'));
-      
-      Promise.all(
-        handles.map(handle =>
-          fetch(`/products/${handle}.js`).then(res => res.json())
-        )
-      ).then(products => {
-        window.rebuyproducts = products;
-        defineQuickAddComponent(); // Define once
-        initQuickAddElements();    // Then init any present elements
-        observeForNewQuickAdd();   // And watch for dynamically added ones
-      }).catch(console.error);
-
-      function defineQuickAddComponent() {
-        if (customElements.get('quick-add')) return;
-
-        class QuickAdd extends HTMLElement {
-          constructor() {
-            super();
-            this.initCalled = false;
-          }
-
-          initQuickAdd() {
-            if (this.initCalled) return;
-            this.initCalled = true;
-
-            this.productId = this.closest("[data-product-id]")?.getAttribute("data-product-id");
-            this.card = this.closest('.card');
-            this.productData = window.rebuyproducts?.find(p => p.id == this.productId);
-            if (!this.productData) return;
-
-            this.variants = this.productData.variants;
-            this.colorIndex = this.productData.options.findIndex(o => o === 'Color');
-            this.sizeIndex = this.productData.options.findIndex(o => o === 'Size');
-
-            this.querySelectorAll('button').forEach(btn => {
-              if (btn.classList.contains('quick-add__button--color')) {
-                btn.addEventListener('click', this.onColorClick.bind(this));
-              } else {
-                btn.addEventListener('click', this.onAddToCart.bind(this));
-              }
-            });
-          }
-
-          onAddToCart(event) {
-            const selectedValues = [];
-            this.card.querySelectorAll('.quick-add__button[selected]').forEach(btn => {
-              selectedValues.push(btn.value);
-            });
-
-            const variantTitle = selectedValues.length > 1 ? selectedValues.reverse().join(' / ') : selectedValues[0];
-            const variant = this.variants.find(v => v.title === variantTitle);
-            if (variant) {
-              console.log('🛒 ATC:', variant.id);
-              addToCart(variant.id, 1);
-            }
-          }
-
-          onColorClick(event) {
-            const colorValue = event.target.value;
-            this.card.querySelectorAll('.quick-add__button--color').forEach(btn => btn.removeAttribute('selected'));
-            event.target.setAttribute('selected', true);
-
-            // Redirect to new product with same color
-            const variant = this.variants.find(v => v.options[this.colorIndex] === colorValue);
-            if (variant) {
-              const product = window.rebuyproducts?.find(p => p.id == variant.featured_image?.product_id);
-              if (product) {
-                window.location.href = `${product.url}?variant=${variant.id}`;
-              }
-            }
-          }
-        }
-
-        customElements.define('quick-add', QuickAdd);
-      }
-
-      function initQuickAddElements() {
-        document.querySelectorAll('quick-add').forEach(el => {
-          if (!el.__quickAddInitialized) {
-            el.__quickAddInitialized = true;
-            el.initQuickAdd?.();
-          }
-        });
-      }
-
-      function observeForNewQuickAdd() {
-        const observer = new MutationObserver((mutations) => {
-          mutations.forEach(mutation => {
-            mutation.addedNodes.forEach(node => {
-              if (node.nodeType !== 1) return;
-              if (node.tagName?.toLowerCase() === 'quick-add') {
-                if (!node.__quickAddInitialized) {
-                  node.__quickAddInitialized = true;
-                  node.initQuickAdd?.();
-                }
-              } else if (node.querySelectorAll) {
-                node.querySelectorAll('quick-add').forEach(el => {
-                  if (!el.__quickAddInitialized) {
-                    el.__quickAddInitialized = true;
-                    el.initQuickAdd?.();
-                  }
-                });
-              }
-            });
-          });
-        });
-
-        observer.observe(document.body, { childList: true, subtree: true });
-      }
-
-      function addToCart(variantId, quantity) {
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id: variantId, quantity })
-        }).then(res => res.json()).then(data => {
-          console.log('✅ Added to cart', data);
-        }).catch(console.error);
-      }
-    }, 5000);
-  });
-</script>
+  </script>
 
 
  
