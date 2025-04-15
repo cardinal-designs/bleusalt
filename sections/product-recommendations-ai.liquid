@@ -78,7 +78,8 @@
                                 tabindex="-1"
                                 v-bind:href="learnMoreURL(product)"
                                 v-bind:style="imageStyles"
-                   
+                                v-on:click="learnMore(product, $event);"
+                                v-bind:class="[hasLearnMore() ? 'clickable' : '']"
                                 rel="nofollow"
                             >
     
@@ -154,18 +155,19 @@
                           <span class="h4 card__selected-color">{{ selected_color }}</span>
 
                            <div v-if="displayColorSwatches(option)" v-for="option in product.options" class="rebuy-color-swatches quick-add__colors">
-                            <button
+                            <Link
                               v-for="(value, index) in filterOOSOptions(option, product)"
                               :key="index"
                               :data-index="index + 1"
                               :aria-label="`color, ${value}`"
                               :selected="index === 0"
                               type="button"
+                              v-bind:href="learnMoreURL(product)"
                               :value="value"
                               class="quick-add__button quick-add__button--color button--inline `${value}`"
                               :style="{ backgroundImage: 'url(/cdn/shop/files/' + value.toLowerCase().replace(' ', '-') + '_80x.jpg)' }"
                             >
-                            </button>
+                            </Link>
                           </div>
 
   
