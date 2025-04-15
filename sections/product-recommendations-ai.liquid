@@ -162,7 +162,7 @@
                             <a
                               v-for="(value, index) in filterOOSOptions(option, product)"
                               :key="index"
-                              :href="getVariantUrl(value)"
+                              :href="value"
                               :aria-label="`color, ${value}`"
                               class="quick-add__button quick-add__button--color button--inline"
                               :style="{
