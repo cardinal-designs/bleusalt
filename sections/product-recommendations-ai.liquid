@@ -305,10 +305,10 @@
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
                 this.variants = this.json.variants;
-                // this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
-                // this.colorButtons.forEach(
-                //   (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
-                // );
+                this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
+                this.colorButtons.forEach(
+                  (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
+                );
                 
                 // this.colorIndex = this.json.options.indexOf('Color');
                 this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
@@ -338,17 +338,32 @@
                 });
               }
     
-              // onColorButtonClick(event) {
-              //   this.card.querySelectorAll('.quick-add__button--color').forEach(
-              //     (button) => button.removeAttribute('selected')
-              //   );
-              //   event.target.setAttribute('selected', true);
-              //   this.selectedColor = event.target;
+              onColorButtonClick(event) {
+                // this.card.querySelectorAll('.quick-add__button--color').forEach(
+                //   (button) => button.removeAttribute('selected')
+                // );
+                // event.target.setAttribute('selected', true);
+                // this.selectedColor = event.target;
 
-              //   this.updateUrl();
-              //   this.sizeAvailabilities();
-              //   this.updateSelectedSize();
-              // }
+                // this.updateUrl();
+                // this.sizeAvailabilities();
+                // this.updateSelectedSize();
+
+                redirectUrl();
+              }
+
+              redirectUrl() {
+                let foundOne = false;
+                this.variants.forEach((variant) => {
+                  if (variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+
+                      console.log("variant", variant)
+
+
+                    
+                  }
+                });
+              }
     
               updateUrl() {
                 let foundOne = false;
