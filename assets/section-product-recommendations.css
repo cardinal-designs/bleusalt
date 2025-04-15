@@ -134,11 +134,11 @@
 .rebuy-widget .rebuy-product-grid .rebuy-product-block .rebuy-product-wrapper {
   padding: 1.3rem 1rem;
 }
-.product-recommendations a.quick-add__button--color {
+.product-recommendations .quick-add__button--color {
   display: inline-block;
 }
 
-.product-recommendations a.quick-add__button--color.pointer-none {
+.product-recommendations .quick-add__button--color.pointer-none {
   pointer-events: none;
 }
 
