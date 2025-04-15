@@ -214,11 +214,11 @@
             
           </div>
           
-        {%- if show_quick_add -%}
-          {% assign total_colors = card_product.options_by_name['Color'].values.size %}
-          {% assign max_colors = 5 %}
-          
-          <div class="quick-add__colors">
+          {%- if show_quick_add -%}
+            {% assign total_colors = card_product.options_by_name['Color'].values.size %}
+            {% assign max_colors = 5 %}
+            
+            <div class="quick-add__colors">
           {% assign hide_me = false %}
           {% for value in card_product.options_by_name['Color'].values %}
             {%- liquid 
