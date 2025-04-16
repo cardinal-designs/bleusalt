@@ -232,9 +232,12 @@
                 </a>
               {% endif %}
               </div>
+              {% assign vendor_handle = product.vendor | handleize %}
+              {% unless vendor_handle == 'couture' %}
               <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
               </div>
+              {% endunless %}
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden product__price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -475,7 +478,11 @@
           <button type="button" id="pdp-stylist-link">{{ block.settings.link_text }}</button>
             {%- render 'product-bambuser' -%}
 
-
+          {%- when 'inquires_button' -%}
+          {% assign vendor_handle = product.vendor | handleize %}
+          {% if vendor_handle == 'couture' %}
+            <a href="mailto:inquire@bleusalt.com" class="inquires__btn button button--full-width button--primary">Inquires only</a>
+          {% endif %}
             
           {%- when 'buy_buttons' -%}
             <div class="product__buttons-wrapper" {{ block.shopify_attributes }}>
@@ -1012,6 +1019,11 @@
         }
       ]
     },
+    {
+      "type": "inquires_button",
+      "name": "Inquires Button",
+      "limit": 1
+    },    
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",

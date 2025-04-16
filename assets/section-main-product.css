@@ -1740,4 +1740,11 @@ table[data-in-to-cm] td {
 /* No order change for videos */
 .product-media-item.is-video {
   order: 3;
+} 
+
+.product__info-container .inquires__btn {
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 44rem;
 }

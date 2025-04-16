@@ -177,9 +177,16 @@
             {%- endif -%}
           </div>
         {% endcomment %}
-         {% if show_quick_add %}
-           {% render 'quick-add', product: card_product %}
-         {% endif %}
+          {% assign vendor_handle = card_product.vendor | handleize %}
+          {% if vendor_handle == 'couture' %}
+            <a href="mailto:inquire@bleusalt.com" class="inquires__btn button--inline">Inquires only</a>
+          {% endif %}
+          
+          {% unless vendor_handle == 'couture' %}
+            {% if show_quick_add %}
+              {% render 'quick-add', product: card_product %}
+            {% endif %}
+          {% endunless %}
         </div>
       </div>
       <div class="card__content">
@@ -195,7 +202,11 @@
               </a> {% endcomment %}
 
             </h2>
-            {% render 'price', product: card_product, price_class: '' %}
+            {% assign vendor_handle = card_product.vendor | handleize %}
+            
+            {% unless vendor_handle == 'couture' %}
+              {% render 'price', product: card_product, price_class: '' %}
+            {% endunless %}
           </div>
           <div class="card-information">
             {%- if show_vendor -%}
@@ -209,33 +220,34 @@
             {% endif %}
             
           </div>
-          
-        {%- if show_quick_add -%}
-          {% assign total_colors = card_product.options_by_name['Color'].values.size %}
-          {% assign max_colors = 5 %}
-          
-          <div class="quick-add__colors">
-          {% assign hide_me = false %}
-          {% for value in card_product.options_by_name['Color'].values %}
-            {%- liquid 
-              if forloop.index > max_colors
-                assign hide_me = true
-              endif
-              if value contains 'hide' or value contains 'Hide'
-                 assign hide_me = true
-              endif 
-            -%}
-            {% assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x' %}
-            <button data-index="{{ forloop.index }}" aria-label="color, {{ value }}" {% if hide_me %}style="display: none;"{% endif %}  {% if forloop.first %}selected{% endif %} type="button" value="{{ value }}" class="quick-add__button quick-add__button--color button--inline" style="background-image: url({{ swatch_url }});" >
-              <span class='visually-hidden'>{{ value }}</span>
-            </button>
-          {% endfor %}
-          
-          {% if total_colors > max_colors %}
-            <a href="{{ card_product.url }}" class="link">+ {{ total_colors | minus: max_colors }} more <span class="visuallyhideen">color of the {{ card_product.title | escape }}</span></a>
-          {% endif %}
-          </div>
-          {%- endif -%}
+          {% unless vendor_handle == 'couture' %}
+            {%- if show_quick_add -%}
+              {% assign total_colors = card_product.options_by_name['Color'].values.size %}
+              {% assign max_colors = 5 %}
+              
+              <div class="quick-add__colors">
+            {% assign hide_me = false %}
+            {% for value in card_product.options_by_name['Color'].values %}
+              {%- liquid 
+                if forloop.index > max_colors
+                  assign hide_me = true
+                endif
+                if value contains 'hide' or value contains 'Hide'
+                   assign hide_me = true
+                endif 
+              -%}
+              {% assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x' %}
+              <button data-index="{{ forloop.index }}" aria-label="color, {{ value }}" {% if hide_me %}style="display: none;"{% endif %}  {% if forloop.first %}selected{% endif %} type="button" value="{{ value }}" class="quick-add__button quick-add__button--color button--inline" style="background-image: url({{ swatch_url }});" >
+                <span class='visually-hidden'>{{ value }}</span>
+              </button>
+            {% endfor %}
+            
+            {% if total_colors > max_colors %}
+              <a href="{{ card_product.url }}" class="link">+ {{ total_colors | minus: max_colors }} more <span class="visuallyhideen">color of the {{ card_product.title | escape }}</span></a>
+            {% endif %}
+            </div>
+            {%- endif -%}
+          {% endunless %}
 
           {% unless template.name == 'search' %}
             {% render 'okendo-reviews-product-rating-summary', product: card_product %}

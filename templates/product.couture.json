@@ -20,8 +20,13 @@
           "type": "rating",
           "settings": {}
         },
+        "inquires_button_89UtPW": {
+          "type": "inquires_button",
+          "settings": {}
+        },
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div id=\"product__recommends\"></div>\n<div>Inquires Only: <a href=\"mailto:inquire@bleusalt.com\">inquire@bleusalt.com</a></div>"
           }
@@ -96,6 +101,7 @@
       "block_order": [
         "title",
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2",
+        "inquires_button_89UtPW",
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc",
         "price",
         "variant_picker",
