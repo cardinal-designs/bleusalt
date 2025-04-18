@@ -417,11 +417,6 @@
         "disabled": false,
         "settings": {}
       },
-      "11560147490181472608": {
-        "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
-        "disabled": false,
-        "settings": {}
-      },
       "15685250022964305326": {
         "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
         "disabled": false,
@@ -448,6 +443,11 @@
       "10812935154079970445": {
         "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
         "disabled": false,
+        "settings": {}
+      },
+      "11560147490181472608": {
+        "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+        "disabled": true,
         "settings": {}
       }
     }
