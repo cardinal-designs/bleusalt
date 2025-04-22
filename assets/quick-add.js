@@ -5,6 +5,7 @@ if (!customElements.get('quick-add')) {
       this.querySelectorAll('button').forEach(
         (button) => button.addEventListener('click', this.onButtonClick.bind(this))
       );
+      
       this.card = this.closest('.card');
       this.cardLink = this.card.querySelector('.card__heading.h4 a');
       this.productUrl = this.cardLink.getAttribute('data-product-url');
@@ -17,8 +18,9 @@ if (!customElements.get('quick-add')) {
       this.colorIndex = this.json.options.indexOf('Color');
       this.sizeIndex = this.json.options.indexOf('Size');
       this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
-      this.init();
+      this.init();      
     }
+
     onButtonClick(event) {
       this.querySelectorAll('.quick-add__button').forEach(
         (button) => button.removeAttribute('selected')
@@ -52,7 +54,6 @@ if (!customElements.get('quick-add')) {
       )
       event.target.setAttribute('selected',true);
       this.selectedColor = event.target;
-      
       this.updateUrl();
       this.sizeAvailabilities();
       this.updateSelectedSize();

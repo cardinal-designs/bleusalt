@@ -61,6 +61,10 @@
   text-align: var(--card-text-alignment);
 }
 
+.card-information .product__category {
+  letter-spacing: 0;
+}
+
 .card__media,
 .card .media {
   bottom: 0;
