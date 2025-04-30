@@ -24,6 +24,7 @@
         },
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2": {
           "type": "rating",
+          "disabled": true,
           "settings": {}
         },
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc": {
@@ -294,6 +295,7 @@
       "block_order": [
         "e6bba3ba-beb0-4103-8717-db2199f01530"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
