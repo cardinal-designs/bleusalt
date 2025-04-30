@@ -16,6 +16,12 @@
           "type": "title",
           "settings": {}
         },
+        "klaviyo_reviews_average_rating_EbVQDN": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2": {
           "type": "rating",
           "settings": {}
@@ -92,6 +98,7 @@
       },
       "block_order": [
         "title",
+        "klaviyo_reviews_average_rating_EbVQDN",
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2",
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc",
         "price",
