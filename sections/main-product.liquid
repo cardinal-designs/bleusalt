@@ -254,7 +254,7 @@
             {% endcomment %}
           {%- when 'payment_plans' %}
             <div class="payment-plan">
-              or 4 installments of <span class="payment-plan__amount">{{ product.selected_or_first_available_variant.price | divided_by: 4 | money_without_trailing_zeros }}</span> using {% render 'icon-afterpay' %}
+              or 4 installments of <span class="payment-plan__amount">{{ product.selected_or_first_available_variant.price | divided_by: 4 | money_without_trailing_zeros }}</span> using ShopPay Installments
             </div>
             {% comment %}
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
