@@ -1294,7 +1294,7 @@ a.product__text {
 
 .payment-plan {
   font-size: 1.4rem;
-  margin: 2.5rem 0;
+  margin: 1rem 0 2.5rem;
   max-width: 44rem;
   text-align: center;
 }
