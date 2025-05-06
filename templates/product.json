@@ -16,8 +16,15 @@
           "type": "title",
           "settings": {}
         },
+        "klaviyo_reviews_average_rating_EbVQDN": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2": {
           "type": "rating",
+          "disabled": true,
           "settings": {}
         },
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc": {
@@ -92,6 +99,7 @@
       },
       "block_order": [
         "title",
+        "klaviyo_reviews_average_rating_EbVQDN",
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2",
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc",
         "price",
@@ -258,6 +266,21 @@
         "padding_bottom": 52
       }
     },
+    "174599921146b1deae": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_product_reviews_wmTp4d": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/product-reviews/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_product_reviews_wmTp4d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "16899109760dd19e0a": {
       "type": "apps",
       "blocks": {
@@ -272,6 +295,7 @@
       "block_order": [
         "e6bba3ba-beb0-4103-8717-db2199f01530"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -317,6 +341,7 @@
     "product-recommendations",
     "product_recommendations_ai_mCkeP9",
     "1662737421ca8ebddf",
+    "174599921146b1deae",
     "16899109760dd19e0a",
     "17436175840c1ee6c6"
   ]
