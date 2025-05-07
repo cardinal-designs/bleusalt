@@ -284,7 +284,6 @@
         });
 
         function updateVariantUrls() {
-          console.log("data-product-handle", window.rebuyproducts)
           window.rebuyproducts.forEach(function (prd) {
             let variantsData = prd.variants;
             let dataProductHandle = document.querySelector(`.rebuy-product-block[data-product-handle="${prd.handle}"]`);
