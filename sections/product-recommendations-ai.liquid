@@ -366,18 +366,6 @@
                   allSelected.push(button.dataset.value);
                 });
 
-                this.querySelectorAll('.quick-add__add-button').forEach(
-                  (button) => button.removeAttribute('selected')
-                );
-                event.target.setAttribute('selected', true);
-                // let allSelected = [];
-                this.card.querySelectorAll('.quick-add__add-button[selected]').forEach((button) => {
-                  allSelected.push(button.value);
-                });
-                this.card.querySelectorAll('.quick-add__add-button--color[selected]').forEach((button) => {
-                  allSelected.push(button.dataset.value);
-                });
-
                 const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
 
                 this.variants.forEach((variant) => {
