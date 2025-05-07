@@ -333,7 +333,7 @@
                 this.card = this.closest('.card');
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
-                this.json = window.rebuyproducts?.find(item => item.id == this.productId);
+                this.json = window.rebuyproducts?.find(item => item.id == this.productId) || JSON.parse(this.card.getAttribute("data-json")));
                 console.log("this.json", this.json)
                 this.variants = this.json.variants;
                 console.log("this.variants", this.variants)
