@@ -251,7 +251,7 @@
     
   </script>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     // Generate the JSON data for the product
     const getProductJson = function(product) {
       return JSON.stringify(product); // Escape JSON for safe HTML injection
@@ -450,7 +450,206 @@
   
       }, 5000); // Delay to allow Rebuy's Vue rendering to complete
     });
-  </script>
+  </script> -->
+
+
+  <script type="text/javascript">
+  // Generate the JSON data for the product
+  const getProductJson = function(product) {
+    return JSON.stringify(product);
+  }
+
+  // Define QuickAdd globally
+  class QuickAdd extends HTMLElement {
+    constructor() {
+      super();
+      this.initQuickAdd();
+    }
+
+    initQuickAdd() {
+      this.querySelectorAll('button.quick-add__button').forEach(
+        (button) => button.addEventListener('click', this.onButtonClick.bind(this))
+      );
+
+      this.productId = this.closest("[data-product-id]").getAttribute("data-product-id");
+      this.card = this.closest('.card');
+      this.cardLink = this.card.querySelector('.card__heading.h4 a');
+      this.productUrl = this.cardLink.getAttribute('data-product-url');
+      this.json = window.rebuyproducts?.find(item => item.id == this.productId) || JSON.parse(this.card.getAttribute("data-json"));
+      this.variants = this.json.variants;
+
+      this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
+      this.sizeIndex = this.json.options.findIndex(option => option.name === 'Size');
+      this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
+      this.init();
+    }
+
+    onButtonClick(event) {
+      window.redirect = false;
+      this.querySelectorAll('.quick-add__button').forEach(
+        (button) => button.removeAttribute('selected')
+      );
+      event.target.setAttribute('selected', true);
+      let allSelected = [];
+      this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+        allSelected.push(button.value);
+      });
+      this.card.querySelectorAll('.quick-add__button--color[selected]').forEach((button) => {
+        allSelected.push(button.dataset.value);
+      });
+
+      const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
+
+      this.variants.forEach((variant) => {
+        if (variant.title === selectedArray) {
+          addToCart(variant.id, 1);
+          window.redirect = true;
+          return false;
+        }
+      });
+    }
+
+    updateSelectedSize() {
+      if (!this.selectedColor) return;
+      const selectedColorEl = this.card.querySelector('.card__selected-color');
+      if (selectedColorEl) {
+        selectedColorEl.innerHTML = this.selectedColor.dataset.value;
+      }
+    }
+
+    sizeAvailabilities() {
+      if (!this.selectedColor || this.colorIndex === -1 || this.sizeIndex === -1) return;
+
+      this.variants.forEach((variant) => {
+        const colorOption = variant.options?.[this.colorIndex];
+        const sizeOption = variant.options?.[this.sizeIndex];
+
+        if (colorOption !== this.selectedColor.dataset.value) return;
+        if (typeof sizeOption === 'undefined') return;
+
+        const sizeButton = this.querySelector(`button[value="${sizeOption}"]`);
+        if (sizeButton) sizeButton.disabled = !variant.available;
+      });
+    }
+
+    init() {
+      if (!this.selectedColor) return;
+      const selectedColorEl = this.card.querySelector('.card__selected-color');
+      if (selectedColorEl) {
+        selectedColorEl.innerHTML = this.selectedColor.dataset.value;
+      }
+
+      this.sizeAvailabilities();
+    }
+  }
+
+  if (!customElements.get('quick-add')) {
+    customElements.define('quick-add', QuickAdd);
+  }
+
+  document.addEventListener('rebuy.ready', function () {
+    setTimeout(() => {
+      let handles = document.querySelectorAll('.rebuy-product-block[data-product-handle]');
+      let handleArr = [];
+      handles.forEach(handle => {
+        let handleAttr = handle.getAttribute('data-product-handle');
+        if (handleAttr) {
+          handleArr.push(handleAttr);
+        }
+      });
+
+      Promise.all(
+        handleArr.map(handle =>
+          fetch(`/products/${handle}.js`).then(res => res.json())
+        )
+      )
+      .then(products => {
+        window.rebuyproducts = products;
+        quickAdd();
+        updateVariantUrls();
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+
+      function updateVariantUrls() {
+        window.rebuyproducts.forEach(function (prd) {
+          let variantsData = prd.variants;
+          let dataProductHandle = document.querySelector(`.rebuy-product-block[data-product-handle="${prd.handle}"]`);
+
+          if (dataProductHandle) {
+            let quickAddButtonColors = dataProductHandle.querySelectorAll(".quick-add__button--color");
+
+            quickAddButtonColors.forEach(function (quickAddButtonColor) {
+              let dataIndex = quickAddButtonColor.dataset.index;
+              let dataColor = quickAddButtonColor.dataset.value;
+
+              let matchingVariant = variantsData.find(variant =>
+                variant.available &&
+                (variant.option1 === dataColor || variant.option2 === dataColor)
+              );
+
+              if (matchingVariant) {
+                let updatedUrl = `${window.origin}${prd.url}?variant=${matchingVariant.id}`;
+                quickAddButtonColor.setAttribute("href", updatedUrl);
+              }
+
+              if (quickAddButtonColor.classList.contains("pointer-none")) {
+                quickAddButtonColor.classList.remove("pointer-none");
+              }
+            });
+          }
+        });
+      }
+
+      const quickAdd = function () {
+        document.querySelectorAll('quick-add').forEach((el) => {
+          try {
+            new QuickAdd().initQuickAdd.call(el);
+          } catch (err) {
+            console.error('Error initializing quick-add', err);
+          }
+        });
+      }
+
+      // Expose for manual reinitialization
+      window.reinitializeQuickAdd = quickAdd;
+
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === 1) {
+              if (node.tagName.toLowerCase() === 'quick-add') {
+                try {
+                  new QuickAdd().initQuickAdd.call(node);
+                } catch (err) {
+                  console.error('Error initializing quick-add element', err);
+                }
+              }
+
+              if (node.querySelectorAll) {
+                node.querySelectorAll('quick-add').forEach((el) => {
+                  try {
+                    new QuickAdd().initQuickAdd.call(el);
+                  } catch (err) {
+                    console.error('Error initializing nested quick-add', err);
+                  }
+                });
+              }
+            }
+          });
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+    }, 5000); // Allow time for Rebuy rendering
+  });
+</script>
+
 
 
  
