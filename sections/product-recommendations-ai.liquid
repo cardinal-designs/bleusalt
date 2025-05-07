@@ -314,13 +314,8 @@
           });
 
         }
-
-        window.destroyQuickAddInstances = function (scope = document) {
-          scope.querySelectorAll('quick-add').forEach(el => el.remove());
-        };
-
         
-        window.quickAddInit = function () {
+        const quickAdd = function () {
 
           if (!customElements.get('quick-add')) {
             class QuickAdd extends HTMLElement {
