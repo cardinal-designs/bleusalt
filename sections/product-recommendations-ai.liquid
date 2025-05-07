@@ -471,7 +471,13 @@
         (button) => button.addEventListener('click', this.onButtonClick.bind(this))
       );
 
-      this.productId = this.closest("[data-product-id]").getAttribute("data-product-id");
+      const productEl = this.closest("[data-product-id]");
+      if (!productEl) {
+        console.warn('No [data-product-id] parent found for', this);
+        return;
+      }
+      this.productId = productEl.getAttribute("data-product-id");
+
       this.card = this.closest('.card');
       this.cardLink = this.card.querySelector('.card__heading.h4 a');
       this.productUrl = this.cardLink.getAttribute('data-product-url');
