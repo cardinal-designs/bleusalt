@@ -117,6 +117,7 @@ if (!customElements.get('product-form')) {
 
           this.error = false;
           const quickAddModal = this.closest('quick-add-modal');
+          console.log("quickAddModal", quickAddModal)
           if (quickAddModal) {
             document.body.addEventListener('modalClosed', () => {
               setTimeout(() => { this.cart.renderContents(response) });
