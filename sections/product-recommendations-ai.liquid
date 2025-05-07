@@ -333,7 +333,10 @@
                 this.cardLink = this.card.querySelector('.card__heading.h4 a');
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId);
+                console.log("this.json", this.json)
                 this.variants = this.json.variants;
+                console.log("this.variants", this.variants)
+                
 
                 this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
                 this.sizeIndex = this.json.options.findIndex(option => option.name === 'Size');
