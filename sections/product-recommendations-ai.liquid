@@ -314,10 +314,15 @@
           });
 
         }
+
+        window.destroyQuickAddInstances = function (scope = document) {
+          scope.querySelectorAll('quick-add').forEach(el => el.remove());
+        };
+
         
         window.quickAddInit = function () {
 
-          // if (!customElements.get('quick-add')) {
+          if (!customElements.get('quick-add')) {
             class QuickAdd extends HTMLElement {
               constructor() {
                 super();
@@ -422,7 +427,7 @@
             }
     
             customElements.define('quick-add', QuickAdd);
-          // }
+          }
           
         }
   
