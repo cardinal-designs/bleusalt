@@ -1,0 +1,242 @@
+<div class="rivo-content-wrapper" style="background-color: {{ section.settings.rivo_wrapper_bg_color }};">
+  <div class="rivo-lp-content">
+    <h2 class="rivo-lp-section-title" style="color: {{ section.settings.rivo_section_title_color }};">How It Works</h2>
+    <div class="rivo-how-it-works-steps rivo-referrals-steps">
+      <div class="rivo-how-it-works-step-item">
+        {% if section.settings.rivo_step_1_image %}
+          <img
+            src="{{ section.settings.rivo_step_1_image | img_url: '200x' }}"
+            alt="Step 1"
+            class="rivo-how-it-works-step-img"
+          >
+        {% endif %}
+        <p
+          class="rivo-how-it-works-step-title"
+          style="font-size: {{ section.settings.rivo_step_title_font_size }}px; color: {{ section.settings.rivo_step_title_color }};"
+        >
+          {{ section.settings.rivo_step_1_title }}
+        </p>
+        <p
+          class="rivo-how-it-works-step-subtitle"
+          style="font-size: {{ section.settings.rivo_step_description_font_size }}px; color: {{ section.settings.rivo_step_description_color }};"
+        >
+          {{ section.settings.rivo_step_1_description }}
+        </p>
+      </div>
+      <div class="rivo-how-it-works-step-item">
+        {% if section.settings.rivo_step_2_image %}
+          <img
+            src="{{ section.settings.rivo_step_2_image | img_url: '200x' }}"
+            alt="Step 2"
+            class="rivo-how-it-works-step-img"
+          >
+        {% endif %}
+        <p
+          class="rivo-how-it-works-step-title"
+          style="font-size: {{ section.settings.rivo_step_title_font_size }}px; color: {{ section.settings.rivo_step_title_color }};"
+        >
+          {{ section.settings.rivo_step_2_title }}
+        </p>
+        <p
+          class="rivo-how-it-works-step-subtitle"
+          style="font-size: {{ section.settings.rivo_step_description_font_size }}px; color: {{ section.settings.rivo_step_description_color }};"
+        >
+          {{ section.settings.rivo_step_2_description }}
+        </p>
+      </div>
+      <div class="rivo-how-it-works-step-item">
+        {% if section.settings.rivo_step_3_image %}
+          <img
+            src="{{ section.settings.rivo_step_3_image | img_url: '200x' }}"
+            alt="Step 3"
+            class="rivo-how-it-works-step-img"
+          >
+        {% endif %}
+        <p
+          class="rivo-how-it-works-step-title"
+          style="font-size: {{ section.settings.rivo_step_title_font_size }}px; color: {{ section.settings.rivo_step_title_color }};"
+        >
+          {{ section.settings.rivo_step_3_title }}
+        </p>
+        <p
+          class="rivo-how-it-works-step-subtitle"
+          style="font-size: {{ section.settings.rivo_step_description_font_size }}px; color: {{ section.settings.rivo_step_description_color }};"
+        >
+          {{ section.settings.rivo_step_3_description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "RIVO Ref Steps",
+  "settings": [
+    {
+      "id": "rivo_section_title_color",
+      "type": "color",
+      "label": "Section Title Color",
+      "default": "#000000"
+    },
+    {
+      "id": "rivo_step_title_color",
+      "type": "color",
+      "label": "Step Title Color",
+      "default": "#000000"
+    },
+    {
+      "id": "rivo_step_description_color",
+      "type": "color",
+      "label": "Step Description Color",
+      "default": "#666666"
+    },
+    {
+      "id": "rivo_step_1_title",
+      "type": "text",
+      "label": "Step 1 Title",
+      "default": "Share Your Link"
+    },
+    {
+      "id": "rivo_step_1_description",
+      "type": "text",
+      "label": "Step 1 Description",
+      "default": "Simply share your unique referral link with your friends and family — on social, via email, or wherever!"
+    },
+    {
+      "id": "rivo_step_1_image",
+      "type": "image_picker",
+      "label": "Step 1 Image"
+    },
+    {
+      "id": "rivo_step_2_title",
+      "type": "text",
+      "label": "Step 2 Title",
+      "default": "Give $10, Get $10"
+    },
+    {
+      "id": "rivo_step_2_description",
+      "type": "text",
+      "label": "Step 2 Description",
+      "default": "When they use your link to make a purchase, they get $10 off and you'll get $10 off. That's a win-win!"
+    },
+    {
+      "id": "rivo_step_2_image",
+      "type": "image_picker",
+      "label": "Step 2 Image"
+    },
+    {
+      "id": "rivo_step_3_title",
+      "type": "text",
+      "label": "Step 3 Title",
+      "default": "Keep Sharing"
+    },
+    {
+      "id": "rivo_step_3_description",
+      "type": "text",
+      "label": "Step 3 Description",
+      "default": "The more people you refer, the more rewards you'll earn. It's that easy!"
+    },
+    {
+      "id": "rivo_step_3_image",
+      "type": "image_picker",
+      "label": "Step 3 Image"
+    },
+    {
+      "id": "rivo_wrapper_bg_color",
+      "type": "color",
+      "label": "Wrapper Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "id": "rivo_step_title_font_size",
+      "type": "range",
+      "label": "Step Title Font Size",
+      "min": 12,
+      "max": 36,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "id": "rivo_step_description_font_size",
+      "type": "range",
+      "label": "Step Description Font Size",
+      "min": 12,
+      "max": 24,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "id": "rivo_icon_height_desktop",
+      "type": "range",
+      "label": "Icon Height on Desktop",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "unit": "px",
+      "step": 2
+    },
+    {
+      "id": "rivo_icon_height_mobile",
+      "type": "range",
+      "label": "Icon Height on Mobile",
+      "min": 0,
+      "max": 200,
+      "default": 80,
+      "unit": "px",
+      "step": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "RIVO Ref Steps",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .rivo-how-it-works-steps.rivo-referrals-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .rivo-referrals-steps .rivo-how-it-works-step-item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(33.333% - 20px); /* 3 columns on desktop */
+    padding: 0 30px;
+  }
+
+
+  .rivo-referrals-steps .rivo-how-it-works-step-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .rivo-referrals-steps .rivo-how-it-works-step-subtitle {
+    margin: 0;
+  }
+
+  .rivo-referrals-steps .rivo-how-it-works-step-img {
+    height: {{ section.settings.rivo_icon_height_desktop }}px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .rivo-how-it-works-step-img {
+      height: {{ section.settings.rivo_icon_height_mobile }}px;
+    }
+    .rivo-how-it-works-steps.rivo-referrals-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
