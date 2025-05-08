@@ -204,6 +204,7 @@
       "blocks": {
         "rivo_loyalty_rewards_referrals_lp_referral_campaign_783HUq": {
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/lp-referral-campaign/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+          "disabled": true,
           "settings": {
             "background_color": "",
             "referral_campaign_id": "55309"
