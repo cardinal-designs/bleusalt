@@ -1,0 +1,31 @@
+{% assign signup_way_to_earn = shop.metafields.rivo.loy.points_program.ways_to_earn
+  | where: 'trigger', 'customer_member_enabled'
+  | first
+%}
+{% assign default_points = signup_way_to_earn.points_amount | times: 1 %}
+
+{% assign points_balance = customer.metafields.custom.rivo.value.points_balance | default: default_points %}
+
+{% assign adjusted_balance = points_balance | times: 100 %}
+{% assign formatted_balance = adjusted_balance | money_without_currency %}
+{% assign formatted_balance = formatted_balance | replace: ',', '' | replace: '.00', '' %}
+
+<a href="/pages/rewards" class="rivo-nav-points">
+  {{ formatted_balance }} Points
+</a>
+
+<style>  
+  .rivo-nav-points {
+    display: flex !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center;
+    color: #000 !important;
+    max-width: 50px !important;
+    font-size: 12px !important;    
+  }
+  @media (max-width: 767px) {
+      .rivo-nav-points {
+      }
+  }
+</style>
