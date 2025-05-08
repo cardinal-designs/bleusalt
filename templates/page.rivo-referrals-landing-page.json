@@ -12,10 +12,186 @@
     "rivo-loyalty-landing-page": {
       "type": "rivo-loyalty-landing-page",
       "settings": {
+        "primary_color": "#0c1c29",
+        "secondary_color": "#ffffff",
+        "page_background_color": "",
+        "rivo_icon_color": "#0c1c29",
+        "title_font_style": "inherit",
+        "title_font_family": "\"Basic Commercial\", sans-serif",
+        "subtitle_font_family": "\"Basic Commercial\", sans-serif",
+        "section_title_font_color": "#0c1c29",
+        "section_subtitle_font_color": "#0c1c29",
+        "page_max_width": 960,
+        "section_title_font_size": 38,
+        "section_title_font_weight": 400,
+        "section_subtitle_font_size": 18,
+        "section_subtitle_font_weight": 400,
+        "section_padding": 40,
+        "card_background_color": "#ffffff",
+        "card_font_color": "#0c1c29",
+        "card_title_font_size": 19,
+        "card_title_font_weight": 400,
+        "card_subtitle_font_size": 15,
+        "card_subtitle_font_weight": 400,
+        "card_icon_size": 70,
+        "card_container_max_width": 960,
+        "card_order": "stacked",
+        "corner_type": "square",
+        "modal_background_color": "#f1f1f1",
+        "modal_font_color": "#0c1c29",
+        "modal_icon_color": "#0c1c29",
+        "modal_icon_position_top": 15,
+        "modal_icon_position_right": 15,
+        "modal_login_title_font_size": 32,
+        "modal_title_font_size": 32,
+        "modal_subtitle_font_size": 16,
+        "modal_body_font_size": 16,
+        "modal_icon_size": 64,
+        "vip_desktop_progress_bar_width": 50,
+        "vip_table_tier_td_border_top": "none",
+        "custom_css": "/* --- ALL SECTIONS --- */\n.rivo-lp-section-title {\n  line-height: 1.5;\n  margin-top: 20px;\n}\n\n.rivo-lp-section-subtitle {\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.rivo-content-wrapper {\n  padding-left: 15px;\n  padding-right: 15px;\n}\n\n.rivo-card-title {\n  text-transform: capitalize;\n}\n\n.rivo-card-description {\n  padding-top: 0;\n  color: #797777;\n}\n\n.rivo-arrow-icon {\n  display: none;\n}\n\n.rivo-modal__title {\n  line-height: 1.2;\n  font-weight: 400 !important;\n}\n\n.rivo-modal-p a {\n  text-transform: capitalize;\n  text-decoration: underline;\n}\n\n.rivo-modal-button {\n  text-transform: none;\n}\n\n/* --- HERO --- */\n#rivo-lp-header {\n  display: flex;\n}\n\n.rivo-hero-banner-text {\n  height: 100%;\n}\n\n.rivo-hero-banner-wrapper {\n  max-width: 1500px;\n}\n\n.rivo-hero-title {\n  line-height: 1.15;\n}\n\n.rivo-hero-description {\n  line-height: 1.3;\n}\n\n.rivo-hero-buttons a {\n  padding: 0px;\n  text-transform: none;\n  min-width: 170px;\n}\n\n.rivo-hero-buttons {\n  width: 100%;\n  flex-wrap: nowrap;\n}\n\n.rivo-hero-banner-media img {\n  object-fit: cover;\n  object-position: center right !important;\n}\n\n/* --- HOW IT WORKS --- */\n#rivo-how-it-works .rivo-lp-section-title {\n  margin-top: 30px;\n  margin-bottom: 20px;\n}\n\n.rivo-how-it-works-step-title {\n  font-weight: 400 !important;\n}\n\n.rivo-how-it-works-step-subtitle {\n  line-height: 1.4;\n  color: #797777;\n}\n\n.rivo-how-it-works-step-image img {\n  margin: 0 auto;\n}\n\n/* --- WAYS TO EARN --- */\n#rivo-ways-to-earn .rivo-card-title {\n  margin-bottom: 4px;\n  line-height: 1.2;\n  letter-spacing: 0.4px;\n}\n\n#rivo-ways-to-earn .rivo-card-description {\n  line-height: 1.2;\n  padding-right: 20px;\n  padding-left: 20px;\n}\n\n#rivo-ways-to-earn .rivo-card {\n  background-image: linear-gradient(to bottom, var(--rivo-secondary-color), #F1F1F1);\n}\n\n#rivo-ways-to-earn .rivo-card:hover {\n  background: var(--rivo-secondary-color);\n}\n\n/* --- WAYS TO REDEEM (AND ACTIVITY) --- */\n#rivo-ways-to-redeem .rivo-card,\n#rivo-lp-my-rewards .rivo-card {\n  background-image: linear-gradient(to bottom, #F1F1F1, var(--rivo-secondary-color));\n}\n\n#rivo-ways-to-redeem .rivo-card:hover,\n#rivo-lp-my-rewards .rivo-card:hover {\n  background: #F1F1F1 !important;\n}\n\n/* --- VIP TIERS PROGRESS BAR --- */\n.rivo-vip-tier-progress-container {\n  width: 50%;\n}\n\n@media (max-width: 768px) {\n  .rivo-vip-tier-progress-container {\n    width: 95%;\n  }\n\n  /* --- LOGGED IN PROGRESS BAR --- */\n  .rivo-vip-tier-columns .rivo-vip-tier-progress-description {\n    display: block !important;\n    padding-left: 0px !important;\n  }\n}\n\n.rivo-account-progress-container {\n  background: var(--rivo-secondary-color);\n}\n\n.rivo-account-progress-bar {\n  background-color: var(--rivo-primary-color);\n}\n\n.rivo-progress-current-tier-label,\n.rivo-progress-next-tier-label {\n  font-size: 14px;\n}\n\n.rivo-vip-tier-progress-container.rivo-vip-tier-columns {\n  justify-content: center;\n}\n\n/* --- ACTIVITY --- */\n.rivo-completed {\n  display: none;\n}\n\n#rivo-lp-explainer .rivo-lp-section-subtitle {\n  color: var(--rivo-primary-color);\n}\n\n.rivo-points-expiry {\n  padding: 10px;\n  background: #0000;\n  width: fit-content;\n  margin: 0 auto;\n  border-radius: 0px;\n  font-size: 12px;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n#rivo-lp-my-rewards .rivo-lp-content {\n  padding: 0px;\n  margin: 0;\n  background-color: var(--rivo-secondary-color);\n  border-radius: 0px;\n  max-width: 100% !important;\n}\n\n#rivo-lp-my-rewards.rivo-content-wrapper {\n  padding: 0px !important;\n}\n\ninput.rivo-coupon-code {\n  font-size: 14px !important;\n  border-radius: 0px;\n  min-width: 100%;\n}\n\n#points-logs-activity th,\n#points-logs-activity td {\n  font-size: 14px;\n  border-bottom: 1px solid #E6E6E6;\n}\n\n#points-logs-activity {\n  border: none !important;\n}\n\n#points-logs-activity th {\n  color: var(--rivo-secondary-color);\n}\n\n\n/* Logged in - Activity Table - Odd rows (1st, 3rd, etc) */\n#points-logs-activity tr:nth-child(odd) {\n  background-color: transparent !important;\n}\n\n/* Logged in - Activity Table - Even rows (2nd, 4th, etc) */\n#points-logs-activity tr:nth-child(even) {\n  background-color: #F1F1F1;\n}\n\n/* --- VIP TIERS --- */\ntable.rivo-vip-tier-table {\n  margin-bottom: 60px;\n}\n\nspan.rivo-th-tier-threshold {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n/* Table Header */\nspan.rivo-th-tier-threshold {\n  color: #797777;\n  letter-spacing: 1px;\n  font-weight: 400;\n  text-transform: uppercase;\n}\n\n/* First column */\ntd.rivo-vip-tier-table-row-perk-name {\n  text-align: left;\n  font-weight: 600;\n}\n\nspan.rivo-th-tier-name {\n  color: var(--rivo-primary-color);\n  font-weight: 400;\n  letter-spacing: 0.3px;\n}\n\ntr.rivo-vip-tier-table-tbody-row td.rivo-tier-column {\n  color: var(--rivo-primary-color);\n}\n\nth.rivo-vip-tier-table-thead-tier-cell.rivo-active-tier-header-color-enabled.rivo-vip-tier-active {\n  border-radius: 6px !important;\n}\n\n/* — VIP Tiers Table Scroll — */\n@media (max-width: 768px) {\n  .rivo-how-it-works-step-image img {\n    height: 125px;\n    margin: 0 auto;\n  }\n\n  .rivo-vip-tier-container {\n    width: 100%;\n    overflow: auto;\n  }\n\n  table.rivo-vip-tier-table td,\n  table.rivo-vip-tier-table th {\n    width: 120px;\n    height: 50px;\n  }\n\n  .rivo-vip-tier-table-thead-first-cell {\n    background: #FFFFFF;\n  }\n\n  .rivo-vip-tier-table-thead-first-cell,\n  td.rivo-vip-tier-table-row-perk-name {\n    position: sticky;\n    left: 0;\n  }\n}\n\n/* --- SCROLL BAR --- */\n/* Styles for WebKit-based browsers (Chrome, Safari, newer versions of Edge) */\n.rivo-lp-cards-container::-webkit-scrollbar,\n.rivo-vip-tier-container::-webkit-scrollbar {\n  width: 10px;\n  height: 8px;\n}\n\n.rivo-lp-cards-container::-webkit-scrollbar-track,\n.rivo-vip-tier-container::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 10px;\n}\n\n.rivo-lp-cards-container::-webkit-scrollbar-thumb,\n.rivo-vip-tier-container::-webkit-scrollbar-thumb {\n  background: var(--rivo-primary-color);\n  border-radius: 10px;\n}\n\n.rivo-lp-cards-container::-webkit-scrollbar-thumb:hover,\n.rivo-vip-tier-container::-webkit-scrollbar-thumb:hover {\n  background: var(--rivo-primary-color);\n}\n\n/* --- REFERRAL --- */\niframe.rivo-referral {\n  margin: 0 auto;\n  background-color: #F1F1F1;\n}\n\n#rivo-lp-referral-campaign .rivo-lp-content {\n  max-width: 100%;\n}\n\n#rivo-lp-referral-campaign.rivo-content-wrapper {\n  padding: 0px;\n}\n\n/* —-- MOBILE Media queries —-- */\n@media screen and (max-width: 769px) {\n  /* —-- ALL SECTIONS —-- */\n  .rivo-lp-cards-container {\n    width: 100% !important;\n  }\n\n  #rivo-lp-header .rivo-lp-content {\n    padding-left: 0;\n    padding-right: 0;\n  }\n\n  #rivo-lp-referral-campaign .rivo-lp-content {\n    padding-left: 0;\n    padding-right: 0;\n  }\n\n  /* --- WAYS TO EARN & WAYS TO REDEEM (AND ACTIVITY) --- */\n  #rivo-ways-to-redeem .rivo-card-title,\n  #rivo-lp-my-rewards .rivo-card-title,\n  #rivo-ways-to-earn .rivo-card-title {\n    line-height: 1.2 !important;\n  }\n\n  #rivo-ways-to-redeem .rivo-lp-cards-container {\n    flex-wrap: wrap;\n  }\n\n  #points-logs-activity {\n    table-layout: auto;\n  }\n\n  table.rivo-vip-tier-table {\n    border-collapse: separate;\n    border-spacing: 0;\n  }\n\n  th.rivo-vip-tier-table-thead-tier-cell {\n    padding: 1rem 1rem 0rem !important;\n  }\n}\n\n\n@media (max-width: 749px) {\n  /* —-- HERO BANNER —-- */\n  #rivo-lp-header {\n    display: block;\n  }\n\n  .rivo-hero-banner-text {\n    padding-top: 0px;\n    padding-bottom: 40px;\n  }\n\n  /* —-- ALL SECTIONS —-- */\n  .rivo-content-wrapper {\n    padding-left: 10px;\n    padding-right: 10px;\n  }\n\n  .rivo-mobile-banner-overlay .rivo-lp-content {\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n  }\n\n  .rivo-lp-section-title {\n    font-size: 30px;\n    line-height: 1.2;\n  }\n\n  .rivo-lp-section-subtitle {\n    line-height: 1.2;\n  }\n\n  /* --- HOW IT WORKS --- */\n  .rivo-how-it-works-step-image img {\n    width: 70px;\n    height: 70px;\n  }\n\n  #rivo-how-it-works .rivo-lp-section-title {\n    margin-bottom: 0px;\n    margin-top: 8px;\n  }\n\n  #rivo-how-it-works {\n    margin-bottom: 0px;\n  }\n\n  .rivo-how-it-works-steps {\n    margin-top: 12px;\n  }\n\n  /* --- VIP TIERS --- */\n  .rivo-vip-tier-table-row-perk-name {\n    font-size: 14px !important;\n    line-height: 1.4;\n    padding: 4px !important;\n  }\n\n  span.rivo-th-tier-name {\n    font-size: 16px;\n    margin-bottom: 0px !important;\n  }\n\n  span.rivo-th-tier-threshold {\n    font-size: 10px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.2;\n    min-height: 40px;\n  }\n\n  td.rivo-vip-tier-table-row-perk-value {\n    font-size: 13px;\n  }\n\n  #rivo-vip-tiers img.custom-icon {\n    width: 60px !important;\n    height: 60px !important;\n  }\n\n  .rivo-vip-tier-container {\n    margin-top: 0px;\n  }\n\n  /* --- WAYS TO EARN --- */\n  .rivo-card-title {\n    font-size: 18px !important;\n  }\n\n  .rivo-card-description {\n    font-size: 15px !important;\n  }\n\n  #rivo-lp-referral-campaign.rivo-content-wrapper {\n    padding: 0px !important;\n  }\n}\n\n/* --- FAQs --- */\n.rivo-faq-question {\n  font-size: 15px !important;\n}\n\n.rivo-faq-answer {\n  font-size: 14px !important;\n}\n\n/* --- MODAL --- */\n.rivo-modal__title {\n  font-size: 23px !important;\n  font-weight: 600;\n}\n\n.rivo-modal p {\n  font-size: 15px !important;\n}\n\n\n/* --- DESKTOP Media queries ---*/\n@media (min-width: 770px) {\n  /* —-- HERO BANNER —-- */\n  .rivo-hero-banner-wrapper {\n    padding: 5rem;\n  }\n\n  .rivo-hero-banner-text {\n    display: flex;\n    flex-direction: column;\n  }\n\n  .rivo-hero-banner-wrapper {\n    padding-left: 0px;\n  }\n\n  .rivo-hero-description {\n    margin-top: 2px;\n    margin-bottom: 6px;\n  }\n\n  /* --- WAYS TO REDEEM --- */\n  .rivo-lp-cards-container {\n    padding-left: 30px;\n    padding-right: 30px;\n  }\n}\n\n.rivo-copy-coupon .rivo-success-button:before {\n  background-image: url(\"data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Cpath d='M10.5858 13.4142L7.75735 10.5858L6.34314 12L10.5858 16.2427L17.6568 9.1716L16.2426 7.75739L10.5858 13.4142Z' fill='%230C1C29' fill-rule='non-zero' /%3E%3C/svg%3E\")\n}\n\nbutton.rivo-copy-button {\n  width: fit-content;\n}\n\nth.rivo-vip-tier-table-thead-tier-cell.rivo-active-tier-header-color-enabled.rivo-tier-column-4,\ntr.rivo-vip-tier-table-tbody-row td.rivo-tier-column-4 {\n  display: none;\n}"
+      }
+    },
+    "174490016095985af7": {
+      "type": "apps",
+      "blocks": {
+        "rivo_loyalty_rewards_referrals_lp_referral_campaign_783HUq": {
+          "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/lp-referral-campaign/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+          "settings": {
+            "background_color": "",
+            "referral_campaign_id": "55309"
+          }
+        }
+      },
+      "block_order": [
+        "rivo_loyalty_rewards_referrals_lp_referral_campaign_783HUq"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "rivo_referrals_steps_img_xpDKFA": {
+      "type": "rivo-referrals-steps-img",
+      "custom_css": [
+        ".rivo-referrals-steps .rivo-how-it-works-step-title {line-height: 1.3;}",
+        "@media (max-width: 749px) {.rivo-how-it-works-step-img {height: 80px; } .rivo-how-it-works-steps.rivo-referrals-steps {gap: 35px; }}"
+      ],
+      "settings": {
+        "rivo_section_title_color": "#0c1c29",
+        "rivo_step_title_color": "#0c1c29",
+        "rivo_step_description_color": "#797777",
+        "rivo_step_1_title": "Share Your Link",
+        "rivo_step_1_description": "Simply share your unique referral link with your friends and family — on social, via email, or wherever!",
+        "rivo_step_1_image": "shopify://shop_images/Rivo_How_It_Works_1.svg",
+        "rivo_step_2_title": "Give $20, Get 500 Points",
+        "rivo_step_2_description": "When they use your link to make a purchase, they’ll get $20 off and you’ll earn 500 points!",
+        "rivo_step_2_image": "shopify://shop_images/Rivo_How_It_Works_2.svg",
+        "rivo_step_3_title": "Keep Sharing",
+        "rivo_step_3_description": "The more people you refer, the more rewards you'll earn. It's that easy!",
+        "rivo_step_3_image": "shopify://shop_images/Rivo_How_It_Works_3.svg",
+        "rivo_wrapper_bg_color": "#ffffff",
+        "rivo_step_title_font_size": 22,
+        "rivo_step_description_font_size": 16,
+        "rivo_icon_height_desktop": 100,
+        "rivo_icon_height_mobile": 50
+      }
+    },
+    "rivo_faqs_3Nr4TK": {
+      "type": "rivo-faqs",
+      "blocks": {
+        "rivo_faq_ref_1_MKQyfD": {
+          "type": "rivo_faq_ref_1",
+          "settings": {
+            "question": "How does the Refer a Friend program work?",
+            "answer": "When you refer a friend, they will receive a link to purchase with a special discount that will automatically apply to their first order, and you’ll receive a reward too!"
+          }
+        },
+        "rivo_faq_ref_2_F6DeVC": {
+          "type": "rivo_faq_ref_2",
+          "settings": {
+            "question": "How do I refer a friend?",
+            "answer": "Enter your email address and share your unique referral link with friends and family. They can use the link to make their first purchase, and their discount will automatically be applied at checkout."
+          }
+        },
+        "rivo_faq_ref_3_6trrx4": {
+          "type": "rivo_faq_ref_3",
+          "settings": {
+            "question": "How do I track the number of referrals I’ve made?",
+            "answer": "Enter your name and email above, then click My Stats. From there, you can send yourself an email which will contain your stats."
+          }
+        },
+        "rivo_faq_ref_4_Nhjmgz": {
+          "type": "rivo_faq_ref_4",
+          "settings": {
+            "question": "Is there a limit to how many people I can refer?",
+            "answer": "No, there is no limit to the number of people you can refer. You can refer as many friends as you like, and you'll get a reward for each successful referral!"
+          }
+        },
+        "rivo_faq_ref_5_zLk6wN": {
+          "type": "rivo_faq_ref_5",
+          "settings": {
+            "question": "How does my friend get the discount?",
+            "answer": "When your friend uses your unique referral link, the discount will automatically be applied to their first order at checkout."
+          }
+        },
+        "rivo_faq_ref_6_6PbJhp": {
+          "type": "rivo_faq_ref_6",
+          "settings": {
+            "question": "Can I refer friends who are already customers?",
+            "answer": "The referral friend reward is only valid for new customers."
+          }
+        },
+        "rivo_faq_ref_7_JTk8af": {
+          "type": "rivo_faq_ref_7",
+          "settings": {
+            "question": "How will I know if my friend has made a purchase?",
+            "answer": "You'll receive an email notification once your friend completes their first order using your referral link."
+          }
+        },
+        "rivo_faq_ref_8_YtgR7J": {
+          "type": "rivo_faq_ref_8",
+          "settings": {
+            "question": "What happens if my friend cancels their order?",
+            "answer": "If your friend's order is canceled prior to fulfillment, the referral discount won't be valid, and you won't receive the reward."
+          }
+        }
+      },
+      "block_order": [
+        "rivo_faq_ref_1_MKQyfD",
+        "rivo_faq_ref_2_F6DeVC",
+        "rivo_faq_ref_3_6trrx4",
+        "rivo_faq_ref_4_Nhjmgz",
+        "rivo_faq_ref_5_zLk6wN",
+        "rivo_faq_ref_6_6PbJhp",
+        "rivo_faq_ref_7_JTk8af",
+        "rivo_faq_ref_8_YtgR7J"
+      ],
+      "custom_css": [
+        ".rivo-lp-section-title {margin-bottom: 0px;}"
+      ],
+      "settings": {
+        "enable_faq_icon": false,
+        "rivo_section_icon_height_desktop": 100,
+        "rivo_section_icon_height_mobile": 80,
+        "rivo_section_title_subheading": "",
+        "rivo_section_title": "Got Questions?",
+        "rivo_section_bg_color": "#ffffff",
+        "rivo_faq_item_border": "1px solid #e2e2e2",
+        "rivo_faq_toggle_button_bg_color": "#ffffff",
+        "faq_icon_lines_bg": "#0c1c29",
+        "rivo_faq_toggle_width": 12,
+        "rivo_faq_toggle_height": 2,
+        "rivo_faq_question_font_size": "17px",
+        "rivo_faq_question_font_family": "\"Basic Commercial\", sans-serif",
+        "rivo_faq_answer_font_size": "15px",
+        "rivo_faq_answer_font_family": "\"Basic Commercial\", sans-serif"
       }
     }
   },
   "order": [
-    "rivo-loyalty-landing-page"
+    "rivo-loyalty-landing-page",
+    "174490016095985af7",
+    "rivo_referrals_steps_img_xpDKFA",
+    "rivo_faqs_3Nr4TK"
   ]
 }
