@@ -15,6 +15,7 @@
 
 {%- liquid
   assign first_item = true
+  assign discount_bar_title = section.settings.discount_bar_title
 
   for item in cart.items
     if first_item == true
@@ -22,8 +23,12 @@
     endif
   endfor
 -%}
+{%- capture css_variables -%}
+  --discount_bar_text: {{- section.settings.discount_bar_text -}};
+  --discount_bar_bg: {{- section.settings.discount_bar_bg -}};
+{%- endcapture -%}
 
-<cart-drawer class="drawer">
+<cart-drawer class="drawer" style="{{- css_variables | strip_newlines -}}">
   <!-- <div id="CartDrawer" class="cart-drawer"> -->
   <div id="cart-drawer" class="cart-drawer">
     {%- liquid
@@ -154,7 +159,32 @@
                     {% if shipping_percentage > 100 %}
                       {% assign shipping_percentage = 100 %}
                     {% endif %}
-                    
+                    {% if settings.discount_promo_bar %}
+                    <div class="discount-progress" id="discount-progress">
+                      <div class="discount-progress__container">
+                        {% if discount_bar_title != blank %}
+                          <h2 class="discount-progress__title">Curate your capsule</h2>
+                        {% endif %}
+                        <ul class="discount-progress__wrapper">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'discount' %}
+                              <li class="discount-progress__item">
+                                <ul class="discount-progress__pills-wrapper">
+                                  {% for pill in (1..block.settings.pills_number) %}
+                                    <li class="discount-progress__pill" data-qty="{{ i }}"></li>
+                                  {% endfor %}
+                                </ul>
+                                <div class="discount-progress__info">
+                                  <p class="discount-progress__info-head">{{ block.settings.discount_item_text }}</p>
+                                  <p class="discount-progress__info-text">{{ block.settings.discount_item_percentage }}</p>
+                                </div>
+                              </li>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
                     {% if settings.cart_promo_bar %}
                       <div class="cart-drawer-header-info"> 
                         {% if price_needed > 0 %}

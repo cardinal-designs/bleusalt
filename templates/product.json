@@ -49,6 +49,13 @@
           "disabled": true,
           "settings": {}
         },
+        "discount_message_Td8BDB": {
+          "type": "discount_message",
+          "settings": {
+            "product_discount_title": "Curate a Custom Wardrobe & Unlock Special Savings",
+            "product_discount_message": "<p>Buy 3 or more items ans save 10% on your entire order. Buy 5 or more and save 15%. Buy 7 or more and get 20% Off!</p>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -105,6 +112,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "discount_message_Td8BDB",
         "buy_buttons",
         "c4e54603-4bac-47c2-a27d-de6873cd6307",
         "e41b416a-cc32-40b1-a71e-a81edcd2ea81",

@@ -483,7 +483,7 @@
           {% if vendor_handle == 'couture' %}
             <a href="mailto:inquire@bleusalt.com" class="inquires__btn button button--full-width button--primary">Inquires only</a>
           {% endif %}
-            
+          
           {%- when 'buy_buttons' -%}
             <div class="product__buttons-wrapper" {{ block.shopify_attributes }}>
 
@@ -520,7 +520,14 @@
 
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                  
+                  {% for block in section.blocks %}
+                  {%- if block.type == 'discount_message' -%}
+                    <div class="product-discount__message">
+                      <div class="product-discount-title">{{- block.settings.product_discount_title -}} {% render 'icon-info' %}</div>
+                      <span class="product-discount-over">{{- block.settings.product_discount_message -}}  <div class="triangle"></div></span>
+                    </div>
+                  {% endif %}
+                  {% endfor %}
                   <div class="product-form__buttons">
                     <button
                       type="submit"
@@ -925,6 +932,23 @@
     } ,1000)  
   });
 </script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const messageBlock = document.querySelector('.product-discount__message');
+   
+    if (messageBlock){
+      messageBlock.addEventListener('click', (event) => {
+        event.stopPropagation();
+        messageBlock.classList.toggle('active');
+      });
+      document.addEventListener('click', (event) => {
+        if (!messageBlock.contains(event.target) || !event.target.closest('.product-discount-over')) {
+          messageBlock.classList.remove('active');
+        }
+      });
+    }
+  })
+</script>
 
 {% schema %}
 {
@@ -1016,6 +1040,25 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        }
+      ]
+    },
+    {
+      "type": "discount_message",
+      "name": "Discount message",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "product_discount_title",
+          "label": "Product discount title",
+          "default": "Curate a Custom Wardrobe & Unlock Special Savings"
+        },
+        {
+          "type": "richtext",
+          "id": "product_discount_message",
+          "label": "Product discount message",
+          "default": "<p>Buy 3 or more items ans save 10% on your entire order. Buy 5 or more and save 15%. Buy 7 or more and get 20% Off!</p>"
         }
       ]
     },

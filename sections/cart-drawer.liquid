@@ -9,6 +9,24 @@
         "id": "enable_accessories",
         "label": "Enable accessories",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "discount_bar_title",
+        "label": "Discount bar title",
+        "default": "Curate your capsule"
+      },
+      {
+        "type": "color",
+        "id": "discount_bar_text",
+        "label": "Discount bar text color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "discount_bar_bg",
+        "label": "Discount bar background color",
+        "default": "#0d1c29"
       }
     ],
     "blocks": [
@@ -26,6 +44,31 @@
             "type": "product",
             "id": "accessory_product",
             "label": "Product"
+          }
+        ]
+      },
+      {
+        "name": "Discount progress item",
+        "type": "discount",
+        "settings": [
+          {
+            "type": "range",
+            "id": "pills_number",
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "label": "Pills quantity",
+            "default": 2
+          },
+          {
+            "type": "text",
+            "id": "discount_item_text",
+            "label": "Discount item heading"
+          },
+          {
+            "type": "text",
+            "id": "discount_item_percentage",
+            "label": "Discount item percentage text"
           }
         ]
       }

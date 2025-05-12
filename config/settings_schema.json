@@ -1232,6 +1232,12 @@
       },
       {
         "type": "checkbox",
+        "id": "discount_promo_bar",
+        "label": "Enable cart discount bar?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "cart_rebuy",
         "label": "Enable Rebuy in cart?",
         "default": false

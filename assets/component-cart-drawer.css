@@ -712,6 +712,82 @@ cart-note:after {
   border-radius: 6px;
   background-color: rgb(var(--color-foreground));;
 }
+.discount-progress {
+  padding: 15px 15px 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.discount-progress__title {
+  color: var(--discount_bar_text);
+  margin: 0;
+  margin-bottom: 15px;
+}
+.discount-progress__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+.discount-progress__wrapper li {
+  list-style: none;
+}
+
+.discount-progress__pill {
+  height: 10px;
+  border-radius: 8px;
+  background-color: #43525f;
+  transition: all 0.3s ease;
+  display: block!important;
+  list-style: none;
+}
+.discount-progress__pills-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.discount-progress__pill.active {
+  background-color: var(--discount_bar_text);
+}
+.discount-progress__container {
+  padding: 10px;
+  background-color: var(--discount_bar_bg);
+  border-radius: 8px;
+}
+.discount-progress__info-head,
+.discount-progress__info-text {
+  color: var(--discount_bar_text);
+  margin: 0;
+  line-height: 1;
+  font-size: 12px;
+}
+.discount-progress__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.discount-progress__item:not(:last-child) .discount-progress__info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--discount_bar_text);
+}
+@media (min-width: 768px){
+  .discount-progress__info-head,
+  .discount-progress__info-text {
+    font-size: 15px;
+  }
+}
 
 /* cart rebuy CSS */
 .cart-upsell {
