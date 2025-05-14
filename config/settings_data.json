@@ -339,6 +339,7 @@
           },
           "8ea70fa6-b46c-4de6-be6b-c94a730dd3ac": {
             "type": "accessory",
+            "disabled": true,
             "settings": {
               "accessory_heading": "Add a large tote bag?",
               "accessory_product": "the-large-logo-tote"
