@@ -24,10 +24,10 @@
     <!-- Global-e CSS Start-->
     {% render 'hs-defer-css' with filename: '//gex.global-e.com/gempro/css/10000545', pages: 'collection,index,product' | split: ',', local: false, linkId: 'GEPIStyles' %}
     <!-- Global-e CSS End-->
-{% endcomment %}
+
     {% include "loyaltylion" %}
 <script>lion.configure({ checkout: true })</script>
-    
+{% endcomment %}    
   
   {% include "globale-checkout-css" %}
 </head>
