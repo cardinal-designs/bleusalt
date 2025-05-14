@@ -377,34 +377,10 @@
         "disabled": true,
         "settings": {}
       },
-      "4291333794791649201": {
-        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
-        "disabled": false,
-        "settings": {
-          "disableBundledCSS": false,
-          "disableBundledFonts": false,
-          "useClassIsolator": false
-        }
-      },
       "10641372206048101839": {
         "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
         "disabled": false,
         "settings": {}
-      },
-      "6412501105843178657": {
-        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-main/6f172e67-4106-4ac0-89c5-b32a069b3101",
-        "disabled": false,
-        "settings": {
-          "primary_color": "#4d384b",
-          "secondary_color": "#126bbf",
-          "icon_color": "#126bbf",
-          "button_size": "medium",
-          "button_border_radius": 4,
-          "button_primary_background_color": "#4d384b",
-          "button_primary_text_color": "#ffffff",
-          "button_neutral_background_color": "#757575",
-          "button_neutral_text_color": "#ffffff"
-        }
       },
       "10840395464443086010": {
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
@@ -449,6 +425,30 @@
         "disabled": true,
         "settings": {
           "show_preview_data": true
+        }
+      },
+      "4291333794791649201": {
+        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "disabled": true,
+        "settings": {
+          "disableBundledCSS": false,
+          "disableBundledFonts": false,
+          "useClassIsolator": false
+        }
+      },
+      "6412501105843178657": {
+        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-main/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "disabled": true,
+        "settings": {
+          "primary_color": "#4d384b",
+          "secondary_color": "#126bbf",
+          "icon_color": "#126bbf",
+          "button_size": "medium",
+          "button_border_radius": 4,
+          "button_primary_background_color": "#4d384b",
+          "button_primary_text_color": "#ffffff",
+          "button_neutral_background_color": "#757575",
+          "button_neutral_text_color": "#ffffff"
         }
       }
     }
