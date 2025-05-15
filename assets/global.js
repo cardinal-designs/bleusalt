@@ -1,8 +1,13 @@
+let cartCache = null;
+let resizeTimeout = null;
+
 function bundleUpdateCart() {
   fetch('/cart.js')
     .then(response => response.json())
     .then(cart => {
       let cartItems = cart?.items;
+      cartCache = cart;
+      updateDiscountProgress(cart);
       let groupedItems = {};
       cartItems?.forEach(item => {
         let bundle_id = item?.properties?.['bundle_id'];
@@ -26,9 +31,57 @@ function bundleUpdateCart() {
     });
 }
 
+function updateDiscountProgress(cart) {
+  const wrapper = document.querySelector('.discount-progress__wrapper');
+  if (!wrapper) return;
+
+  const blocksCount = wrapper?.querySelectorAll('.discount-progress__item').length;
+  const totalQty = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+  const pills = document.querySelectorAll('.discount-progress__pill');
+
+  if (!pills || pills.length === 0 ) return;
+
+  const blocksGap = blocksCount === 3 ? 30 : 15;
+  const pillsCount = pills.length;
+  const wrapperWidth = wrapper.clientWidth;
+  const pillGap = 8;
+  const totalGap = blocksGap + pillGap * (pillsCount - 1);
+  const pillWidth = (wrapperWidth - totalGap) / pillsCount;
+
+  pills.forEach((pill,index) => {
+    pill.style.width = `${pillWidth}px`;
+    pill.classList.toggle('active', index + 1 <= totalQty);
+  });
+  wrapper.style.opacity = '1';
+}
+function fetchAndUpdateCart() {
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      cartCache = cart;
+      updateDiscountProgress(cart);
+    })
+    .catch(error => {
+      console.error('Error fetching cart:', error);
+    });
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   bundleUpdateCart();
+  const discountProgress = document.querySelector('#discount-progress');
+  if (!discountProgress) return;
+  if (window.innerWidth < 768) {
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (cartCache) {
+          updateDiscountProgress(cartCache);
+        } else {
+          fetchAndUpdateCart();
+        }
+      }, 100);
+    });
+  }
 });
 
 var Shopify=Shopify||{};Shopify.money_format="${{amount}}",Shopify.formatMoney=function(a,o){"string"==typeof a&&(a=a.replace(".",""));var e="",t=/\{\{\s*(\w+)\s*\}\}/,o=o||this.money_format;function r(a,o){return void 0===a?o:a}function n(a,o,e,t){if(o=r(o,2),e=r(e,","),t=r(t,"."),isNaN(a)||null==a)return 0;a=(a=(a/100).toFixed(o)).split(".");return a[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g,"$1"+e)+(a[1]?t+a[1]:"")}switch(o.match(t)[1]){case"amount":e=n(a,2);break;case"amount_no_decimals":e=n(a,0);break;case"amount_with_comma_separator":e=n(a,2,".",",");break;case"amount_no_decimals_with_comma_separator":e=n(a,0,".",",")}return o.replace(t,e)};
@@ -974,7 +1027,6 @@ const updateCart = () => {
     return response.text();
   })
   .then((html) => {
-    // console.log("testing 1")
     const elementsToUpdate = [
       'cart-drawer .drawer__inner',
       '#cart-icon-bubble',
