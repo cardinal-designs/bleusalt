@@ -46,7 +46,6 @@
     "cart_drawer_text": "",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
-    "discount_promo_bar": true,
     "cart_rebuy": true,
     "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
@@ -346,7 +345,7 @@
               "accessory_product": "the-large-logo-tote"
             }
           },
-          "discount_QdRXRj": {
+          "discount_LxLaPX": {
             "type": "discount",
             "settings": {
               "pills_number": 3,
@@ -354,7 +353,7 @@
               "discount_item_percentage": "20% OFF"
             }
           },
-          "discount_haUfmQ": {
+          "discount_Xz6xXP": {
             "type": "discount",
             "settings": {
               "pills_number": 2,
@@ -362,7 +361,7 @@
               "discount_item_percentage": "25% OFF"
             }
           },
-          "discount_CHKTMd": {
+          "discount_gaW8cV": {
             "type": "discount",
             "settings": {
               "pills_number": 2,
@@ -374,9 +373,9 @@
         "block_order": [
           "5c928d39-473d-4787-994f-43ebd478188f",
           "8ea70fa6-b46c-4de6-be6b-c94a730dd3ac",
-          "discount_QdRXRj",
-          "discount_haUfmQ",
-          "discount_CHKTMd"
+          "discount_LxLaPX",
+          "discount_Xz6xXP",
+          "discount_gaW8cV"
         ],
         "settings": {
           "enable_accessories": true,
