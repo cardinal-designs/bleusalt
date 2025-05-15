@@ -350,7 +350,7 @@
             "settings": {
               "pills_number": 3,
               "discount_item_text": "3+ Items",
-              "discount_item_percentage": "20% OFF"
+              "discount_item_percentage": "10% OFF"
             }
           },
           "discount_haUfmQ": {
@@ -358,7 +358,7 @@
             "settings": {
               "pills_number": 2,
               "discount_item_text": "5+ Items",
-              "discount_item_percentage": "25% OFF"
+              "discount_item_percentage": "15% OFF"
             }
           },
           "discount_CHKTMd": {
@@ -366,7 +366,7 @@
             "settings": {
               "pills_number": 2,
               "discount_item_text": "7+ Items",
-              "discount_item_percentage": "30% OFF"
+              "discount_item_percentage": "20% OFF"
             }
           }
         },
