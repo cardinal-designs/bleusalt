@@ -46,6 +46,7 @@
     "cart_drawer_text": "",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
+    "discount_promo_bar": true,
     "cart_rebuy": true,
     "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
@@ -350,7 +351,7 @@
             "settings": {
               "pills_number": 3,
               "discount_item_text": "3+ Items",
-              "discount_item_percentage": "20% OFF"
+              "discount_item_percentage": "10% OFF"
             }
           },
           "discount_Xz6xXP": {
@@ -358,7 +359,7 @@
             "settings": {
               "pills_number": 2,
               "discount_item_text": "5+ Items",
-              "discount_item_percentage": "25% OFF"
+              "discount_item_percentage": "15% OFF"
             }
           },
           "discount_gaW8cV": {
@@ -366,7 +367,7 @@
             "settings": {
               "pills_number": 2,
               "discount_item_text": "7+ Items",
-              "discount_item_percentage": "30% OFF"
+              "discount_item_percentage": "20% OFF"
             }
           }
         },
