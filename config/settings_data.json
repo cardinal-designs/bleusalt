@@ -380,7 +380,7 @@
         ],
         "settings": {
           "enable_accessories": true,
-          "discount_bar_title": "Curate your capsule",
+          "discount_bar_title": "Curate Your Capsule",
           "discount_bar_text": "#ffffff",
           "discount_bar_bg": "#0d1c29"
         }
