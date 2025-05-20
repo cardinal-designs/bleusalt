@@ -36,10 +36,23 @@ function updateDiscountProgress(cart) {
   if (!wrapper) return;
 
   const blocksCount = wrapper?.querySelectorAll('.discount-progress__item').length;
-  const totalQty = cart.items.reduce((sum, item) => sum + item.quantity, 0);
   const pills = document.querySelectorAll('.discount-progress__pill');
 
   if (!pills || pills.length === 0 ) return;
+
+  const cartItemElements = document.querySelectorAll('.cart-item');
+  const totalQty = cart.items.reduce((sum, item) => {
+    const matchingElement = Array.from(cartItemElements).find(el => el.dataset.key === item.key);
+
+    if (!matchingElement) return sum;
+
+    const tags = matchingElement.dataset.tags.split(',').map(tag => tag.trim());
+    if (!tags.includes('excapsule')) {
+      return sum + item.quantity;
+    }
+
+    return sum;
+  }, 0);
 
   const blocksGap = blocksCount === 3 ? 30 : 15;
   const pillsCount = pills.length;
