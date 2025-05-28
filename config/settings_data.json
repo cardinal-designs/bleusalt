@@ -317,6 +317,14 @@
               "color_text": "#ffffff"
             }
           },
+          "badge_gHj8UM": {
+            "type": "badge",
+            "settings": {
+              "title": "Only a Few Left",
+              "color_bg": "#0d1c29",
+              "color_text": "#ffffff"
+            }
+          },
           "badge_RtpH3k": {
             "type": "badge",
             "settings": {
@@ -348,6 +356,7 @@
           "badge_By4ypX",
           "c0797ee9-220b-462b-860e-8678570e8db5",
           "a5bcc235-3022-41a1-8824-20c702e49e8b",
+          "badge_gHj8UM",
           "badge_RtpH3k",
           "ab73618f-7bb2-46f8-851b-bb2d4d867958",
           "badge_9atKTg"
