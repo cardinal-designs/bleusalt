@@ -285,6 +285,22 @@
               "color_text": "#ffffff"
             }
           },
+          "badge_G7taNU": {
+            "type": "badge",
+            "settings": {
+              "title": "Special Order",
+              "color_bg": "#0d1c29",
+              "color_text": "#ffffff"
+            }
+          },
+          "badge_By4ypX": {
+            "type": "badge",
+            "settings": {
+              "title": "Popular",
+              "color_bg": "#0d1c29",
+              "color_text": "#ffffff"
+            }
+          },
           "c0797ee9-220b-462b-860e-8678570e8db5": {
             "type": "badge",
             "settings": {
@@ -298,6 +314,14 @@
             "settings": {
               "title": "Back In Stock",
               "color_bg": "#414141",
+              "color_text": "#ffffff"
+            }
+          },
+          "badge_RtpH3k": {
+            "type": "badge",
+            "settings": {
+              "title": "Selling Fast",
+              "color_bg": "#0d1c29",
               "color_text": "#ffffff"
             }
           },
@@ -320,8 +344,11 @@
         },
         "block_order": [
           "78544067-df99-47bb-8dc1-ff5109ef24be",
+          "badge_G7taNU",
+          "badge_By4ypX",
           "c0797ee9-220b-462b-860e-8678570e8db5",
           "a5bcc235-3022-41a1-8824-20c702e49e8b",
+          "badge_RtpH3k",
           "ab73618f-7bb2-46f8-851b-bb2d4d867958",
           "badge_9atKTg"
         ],
@@ -442,45 +469,6 @@
         "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
         "disabled": false,
         "settings": {}
-      },
-      "15804298063636319733": {
-        "type": "shopify://apps/trynow-try-before-you-buy/blocks/gated-flow/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
-        "disabled": true,
-        "settings": {
-          "custom_css": "#tn-hiw-title,\n.tn-hiw-subtitle {\nfont-family: 'Avenir Next';\ncolor: #0D1C29;\n}\n\n.tn-gate-toggle-switch {\nz-index: 3 !important;\n}\n\n.product-form__buttons:has(.bold_clone) {\n  display: flex;\n flex-direction: column-reverse;\n}\n\n#trynow-cta-description {\nfont-size: 1.6rem !important;\njustify-content: center !important;\n}\n\n.product-form__buttons.tn-condition-true:has(.tn-gate-toggle-checked) .bold_clone {\n  display: none !important;\n}\n\n.product-option.selling_plan {\n width: 187px;\n}",
-          "sdk_version": "v1"
-        }
-      },
-      "733389323033596483": {
-        "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-        "disabled": true,
-        "settings": {
-          "show_preview_data": true
-        }
-      },
-      "4291333794791649201": {
-        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
-        "disabled": true,
-        "settings": {
-          "disableBundledCSS": false,
-          "disableBundledFonts": false,
-          "useClassIsolator": false
-        }
-      },
-      "6412501105843178657": {
-        "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-main/6f172e67-4106-4ac0-89c5-b32a069b3101",
-        "disabled": true,
-        "settings": {
-          "primary_color": "#4d384b",
-          "secondary_color": "#126bbf",
-          "icon_color": "#126bbf",
-          "button_size": "medium",
-          "button_border_radius": 4,
-          "button_primary_background_color": "#4d384b",
-          "button_primary_text_color": "#ffffff",
-          "button_neutral_background_color": "#757575",
-          "button_neutral_text_color": "#ffffff"
-        }
       }
     }
   },
