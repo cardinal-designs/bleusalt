@@ -810,8 +810,8 @@
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "{% if product.metafields.okendo.ReviewAverageValue != blank %}{{ product.metafields.okendo.ReviewAverageValue }}{% else %}5{% endif %}",
-        "reviewCount": "{% if product.metafields.okendo.ReviewCount != blank %}{{ product.metafields.okendo.ReviewCount }}{% else %}1{% endif %}"
+        "ratingValue": "{% if product.metafields.okendo.summaryData.reviewAverageValue != blank %}{{ product.metafields.okendo.ReviewAverageValue }}{% else %}5{% endif %}",
+        "reviewCount": "{% if product.metafields.okendo.summaryData.reviewCount != blank %}{{ product.metafields.okendo.ReviewCount }}{% else %}1{% endif %}"
       },
       "offers": [
         {%- for variant in product.variants -%}
