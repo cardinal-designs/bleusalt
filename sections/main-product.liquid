@@ -810,9 +810,10 @@
       },
 "aggregateRating": {
   "@type": "AggregateRating",
-  "ratingValue": "{% if product.reviews.rating > 0 %}{{ product.reviews.rating }}{% else %}5{% endif %}",
-  "reviewCount": "{% if product.reviews.count > 0 %}{{ product.reviews.count }}{% else %}1{% endif %}"
+  "ratingValue": "{% if product.metafields.klaviyo.reviews_average != blank %}{{ product.metafields.klaviyo.reviews_average }}{% else %}5{% endif %}",
+  "reviewCount": "{% if product.metafields.klaviyo.reviews_count != blank %}{{ product.metafields.klaviyo.reviews_count }}{% else %}1{% endif %}"
 }
+
 
       "offers": [
         {%- for variant in product.variants -%}
