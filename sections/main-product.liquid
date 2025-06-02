@@ -789,6 +789,7 @@
   -%}
 
   {%- assign days_product_price_valid_until = 10 | times: 86400 -%}
+  {% assign okendo_data = product.metafields.okendo.summaryData | parse_json %}
   <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
@@ -809,10 +810,10 @@
         "name": {{ product.vendor | json }}
       },
       "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{% if product.metafields.okendo.reviewAverageValue != blank %}{{ product.metafields.okendo.reviewAverageValue }}{% else %}5{% endif %}",
-        "reviewCount": "{% if product.metafields.okendo.reviewCount != blank %}{{ product.metafields.okendo.reviewCount }}{% else %}1{% endif %}"
-      },
+      "@type": "AggregateRating",
+        "ratingValue": "{% if okendo_data.reviewAverageValue != blank %}{{ okendo_data.reviewAverageValue }}{% else %}5{% endif %}",
+        "reviewCount": "{% if okendo_data.reviewCount != blank %}{{ okendo_data.reviewCount }}{% else %}1{% endif %}"
+      }
       "offers": [
         {%- for variant in product.variants -%}
           {
