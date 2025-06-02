@@ -146,6 +146,21 @@
                     <div class="media" style="padding-top:{{ ratio }}%;">
                       {{ media | video_tag: autoplay: true, playsinline: true, loop: true, autoplay: true, muted: true, controls: false }}
                     </div>
+
+                      <script type="application/ld+json">
+                      {
+                        "@context": "https://schema.org",
+                        "@type": "VideoObject",
+                        "name": "{{ media.title | escape }}",
+                        "description": "{{ media_color | escape }}",
+                        "thumbnailUrl": "{{ media.preview_image | image_url }}",
+                        "uploadDate": "2024-06-01",
+                        "contentUrl": "{{ media.sources[0].url }}",
+                        "embedUrl": "{{ media.sources[0].url }}",
+                        "duration": "PT30S"
+                      }
+                      </script>
+
                 {% endcase %}
               </div>
             {%- endfor -%}
