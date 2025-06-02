@@ -154,6 +154,8 @@
 
   .image-with-text.collapse-borders:not(.image-with-text--overlap) .image-with-text__content {
     border-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
