@@ -53,26 +53,11 @@
           "settings": {
             "text": "<p>Bleusalt is a female-founded luxury lifestyle brand born in Malibu and built on the principles of sustainability, elevated comfort, and timeless design. Founded by Lyndie Benson, a photographer, creative director, and mother of two, Bleusalt emerged from a vision to create consciously made wardrobe essentials that feel as beautiful as they look.</p><p>After decades behind the scenes in music and the arts, Lyndie set out to reinvent herself—creating a brand that reflects her love of coastal living, effortless elegance, and impeccable quality. What began as a small collection of elevated basics has grown into a globally recognized brand worn by icons such as Meghan Markle, Cindy Crawford, and Kaia Gerber.</p><p>Designed, sourced, and made entirely in the USA, every Bleusalt piece is crafted from the brand’s signature sustainable fabric—a luxurious, breathable blend derived from beechwood fibers. The collection includes seasonless essentials for both men and women, reimagined in silhouettes that move with you, wherever life leads.</p><p>Bleusalt is more than fashion—it’s a lifestyle rooted in reinvention, freedom, and the quiet power of starting over. Lyndie’s story is a testament to resilience, creativity, and the pursuit of something lasting. With a Malibu heart and a global vision, Bleusalt continues to expand through curated capsule collections, travel collaborations, and resort partnerships that bring coastal luxury to the world.</p>"
           }
-        },
-        "heading_VbyrYb": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>ABOUT LYNDIE BENSON</p>",
-            "heading_size": "h2"
-          }
-        },
-        "text_9GPYFM": {
-          "type": "text",
-          "settings": {
-            "text": "<p>After dedicating nearly three decades to building a life and legacy alongside her former husband—supporting his rise while raising their two sons—Lyndie Benson found herself starting over at age 50. With no roadmap, but a lifetime of experience, creativity, and resilience, she began again—this time on her own terms. What followed was a bold reinvention: the launch of a luxury lifestyle brand rooted in sustainability, style, and the spirit of Malibu.</p><p>A lifelong lover of the ocean and elevated living, Lyndie created Bleusalt to offer wardrobe essentials that reflect the beauty and ease of coastal life. She brings an artist’s eye to every detail, photographing and directing the brand’s campaigns while overseeing its creative and strategic direction.</p><p>As a founder, mother, and visionary, Lyndie is committed to building a legacy of independence, impact, and refinement—proof that it’s never too late to begin again and create something extraordinary.</p>"
-          }
         }
       },
       "block_order": [
         "16618951072671241e-0",
-        "16618951072671241e-1",
-        "heading_VbyrYb",
-        "text_9GPYFM"
+        "16618951072671241e-1"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -84,11 +69,51 @@
         "padding_top": 40,
         "padding_bottom": 60
       }
+    },
+    "image_with_text_yyjC4A": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_G3cMnx": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT LYNDIE BENSON",
+            "heading_size": "h2"
+          }
+        },
+        "text_rrgNWE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After dedicating nearly three decades to building a life and legacy alongside her former husband—supporting his rise while raising their two sons—Lyndie Benson found herself starting over at age 50. With no roadmap, but a lifetime of experience, creativity, and resilience, she began again—this time on her own terms. What followed was a bold reinvention: the launch of a luxury lifestyle brand rooted in sustainability, style, and the spirit of Malibu.</p><p>A lifelong lover of the ocean and elevated living, Lyndie created Bleusalt to offer wardrobe essentials that reflect the beauty and ease of coastal life. She brings an artist’s eye to every detail, photographing and directing the brand’s campaigns while overseeing its creative and strategic direction.</p><p>As a founder, mother, and visionary, Lyndie is committed to building a legacy of independence, impact, and refinement—proof that it’s never too late to begin again and create something extraordinary.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_G3cMnx",
+        "text_rrgNWE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_4215.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "1663795698389bd2f1",
-    "16618951073dd5fa7a"
+    "16618951073dd5fa7a",
+    "image_with_text_yyjC4A"
   ]
 }
