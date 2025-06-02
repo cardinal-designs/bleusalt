@@ -808,13 +808,11 @@
         "@type": "Brand",
         "name": {{ product.vendor | json }}
       },
-"aggregateRating": {
-  "@type": "AggregateRating",
-  "ratingValue": "{% if product.metafields.klaviyo.reviews_average != blank %}{{ product.metafields.klaviyo.reviews_average }}{% else %}5{% endif %}",
-  "reviewCount": "{% if product.metafields.klaviyo.reviews_count != blank %}{{ product.metafields.klaviyo.reviews_count }}{% else %}1{% endif %}"
-}
-
-
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{% if product.metafields.okendo.ReviewAverageValue != blank %}{{ product.metafields.okendo.ReviewAverageValue }}{% else %}5{% endif %}",
+        "reviewCount": "{% if product.metafields.okendo.ReviewCount != blank %}{{ product.metafields.okendo.ReviewCount }}{% else %}1{% endif %}"
+      },
       "offers": [
         {%- for variant in product.variants -%}
           {
