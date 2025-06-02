@@ -51,7 +51,6 @@
         },
         "discount_message_z7Vrwz": {
           "type": "discount_message",
-          "disabled": true,
           "settings": {
             "product_discount_title": "Curate a Custom Wardrobe & Unlock Special Savings",
             "product_discount_message": "<p>Buy 3 or more items and save 10% on your entire order. Buy 5 or more and save 15%. Buy 7 or more and get 20% Off!</p>"
@@ -292,18 +291,6 @@
     },
     "16899109760dd19e0a": {
       "type": "apps",
-      "blocks": {
-        "e6bba3ba-beb0-4103-8717-db2199f01530": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "e6bba3ba-beb0-4103-8717-db2199f01530"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
@@ -311,32 +298,6 @@
     },
     "17436175840c1ee6c6": {
       "type": "apps",
-      "blocks": {
-        "trynow_try_before_you_buy_trynow_cta_button_JHY4EP": {
-          "type": "shopify://apps/trynow-try-before-you-buy/blocks/trynow-cta-button/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
-          "settings": {
-            "button_title": "Try Before You Buy",
-            "cta_button_custom_css": "",
-            "button_classes": "",
-            "button_margin": "0px 0px 5px 0px",
-            "description": "Try up to [cart_limit_suggested_cart_size] items at home for [trial_period] days",
-            "description_font_size": 12,
-            "view_collection_text": "View TryNow collection",
-            "collection": "",
-            "add_to_cart_container_selector": "",
-            "gated_toggle_font_size": 12,
-            "gated_toggle_size": 0.7,
-            "logo_color": "black",
-            "logo_vertical_alignment": 1,
-            "logo_horizontal_alignment": 0,
-            "logo_width": 46,
-            "autoposition": true
-          }
-        }
-      },
-      "block_order": [
-        "trynow_try_before_you_buy_trynow_cta_button_JHY4EP"
-      ],
       "settings": {
         "include_margins": true
       }
