@@ -836,7 +836,7 @@
             "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
-              "url": "{{ shop.url }}/pages/privacy-policy",
+              "url": "{{ shop.url }}/pages/help",
               "returnPolicyCategory": "https://schema.org/ReturnableWithin30"
             },
             "url" : {{ request.origin | append: variant.url | json }}
