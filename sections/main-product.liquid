@@ -809,13 +809,13 @@
         "@type": "Brand",
         "name": {{ product.vendor | json }}
       },
-      {%- if okendo_data.reviewCount > 0 -%}
+      {% if okendo_data.reviewCount > 0 %}
       "aggregateRating": {
       "@type": "AggregateRating",
         "ratingValue": "{% if okendo_data.reviewAverageValue != blank %}{{ okendo_data.reviewAverageValue }}{% else %}5{% endif %}",
         "reviewCount": "{% if okendo_data.reviewCount != blank %}{{ okendo_data.reviewCount }}{% else %}1{% endif %}"
       },
-      {%- endif -%}
+      {% endif %}
       "offers": [
         {%- for variant in product.variants -%}
           {
