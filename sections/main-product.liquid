@@ -846,6 +846,15 @@
                 "value": "10.00",
                 "currency": "{{ shop.currency | escape }}"
               },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 3,
+                  "maxValue": 7,
+                  "unitCode": "d"
+                }
+              },
               "shippingDestination": {
                 "@type": "DefinedRegion",
                 "addressCountry": "US"
