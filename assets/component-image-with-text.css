@@ -282,7 +282,7 @@
     rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .image-with-text__content {
     padding: 3rem 0 3rem 3rem;
   }

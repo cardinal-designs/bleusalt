@@ -1,1 +1,119 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"show_heading":true,"heading_size":"h1","heading_alignment":"center","padding_top":28,"padding_bottom":28,"page_width":"page-width--narrow"}},"1663795698389bd2f1":{"type":"video-banner","settings":{"video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/71a76234043f4f0faeccdf8c72c4da61.mp4","video_url_mobile":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/71a76234043f4f0faeccdf8c72c4da61.mp4","description":"","image_overlay_opacity":0,"video_height":"56.25","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","video_height_mobile":"100","show_text_below":true}},"16618951073dd5fa7a":{"type":"rich-text","blocks":{"16618951072671241e-0":{"type":"heading","settings":{"heading":"<p>The Story of Bleusalt: Behind Our Quiet Luxury Fashion Brand<\/p>","heading_size":"h2"}},"bd6d58d7-ac70-47ca-a71a-c584b26094d9":{"type":"text","settings":{"text":"<h2>Bleusalt is inspired by a lifestyle in and around the ocean.<\/h2>"}},"16618951072671241e-1":{"type":"text","settings":{"text":"<p>Founder Lyndie Benson always loved Cashmere but found it too precious to withstand the elements at the beach. We combined the softest fibers on earth with beautiful classic timeless styles and created a collection of luxurious quality basics for your  everyday wardrobe or <a href=\"\/pages\/capsule-wardrobes\" title=\"\/pages\/capsule-wardrobes\">capsule wardrobe<\/a>, taking you day to night and everywhere in between.<\/p><h2>Luxuriously Soft Clothing to Elevate Every Look<\/h2><p>Bleusalt was founded in 2017 in Malibu California. Lyndie drew from her lifestyle to create elevated, elegant apparel that leaves you feeling your best. Each design is a celebration of the quality basics that fit seamlessly into your wardrobe. Our sustainable luxury fashion is also made in The USA from Tencel™ Fibers, the softest fibers on Earth.<\/p><h2>Inclusive, Sustainable Fashion<\/h2><p>Bleusalt is proudly size inclusive and runs from a 00-3x. We promote working towards Zero Waste and encourage capsule wardrobes and minimalist dressing by choosing quality over quantity, allowing you to complete your perfect wardrobe effortlessly. <\/p><h2>Shop Bleusalt’s Luxury Clothing Line<\/h2><p>At Bleusalt we work hard each and everyday to make sure we provide you with the highest quality when it comes to our products and service. We sincerely hope you love it as much as we love making it for you. Shop our luxury fashion collection online or visit our flagship store in Malibu. <br\/><\/p>"}}},"block_order":["16618951072671241e-0","bd6d58d7-ac70-47ca-a71a-c584b26094d9","16618951072671241e-1"],"settings":{"desktop_content_position":"center","content_alignment":"left","btextimg":"story-page","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":60}}},"order":["main","1663795698389bd2f1","16618951073dd5fa7a"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "1663795698389bd2f1": {
+      "type": "video-banner",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/71a76234043f4f0faeccdf8c72c4da61.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/71a76234043f4f0faeccdf8c72c4da61.mp4",
+        "description": "",
+        "image_overlay_opacity": 0,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "100",
+        "show_text_below": true
+      }
+    },
+    "16618951073dd5fa7a": {
+      "type": "rich-text",
+      "blocks": {
+        "16618951072671241e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>MY STORY</p>",
+            "heading_size": "h2"
+          }
+        },
+        "16618951072671241e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a female-founded luxury lifestyle brand born in Malibu and built on the principles of sustainability, elevated comfort, and timeless design. Founded by Lyndie Benson, a photographer, creative director, and mother of two, Bleusalt emerged from a vision to create consciously made wardrobe essentials that feel as beautiful as they look.</p><p>After decades behind the scenes in music and the arts, Lyndie set out to reinvent herself—creating a brand that reflects her love of coastal living, effortless elegance, and impeccable quality. What began as a small collection of elevated basics has grown into a globally recognized brand worn by icons such as Meghan Markle, Cindy Crawford, and Kaia Gerber.</p><p>Designed, sourced, and made entirely in the USA, every Bleusalt piece is crafted from the brand’s signature sustainable fabric—a luxurious, breathable blend derived from beechwood fibers. The collection includes seasonless essentials for both men and women, reimagined in silhouettes that move with you, wherever life leads.</p><p>Bleusalt is more than fashion—it’s a lifestyle rooted in reinvention, freedom, and the quiet power of starting over. Lyndie’s story is a testament to resilience, creativity, and the pursuit of something lasting. With a Malibu heart and a global vision, Bleusalt continues to expand through curated capsule collections, travel collaborations, and resort partnerships that bring coastal luxury to the world.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16618951072671241e-0",
+        "16618951072671241e-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "btextimg": "story-page",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_yyjC4A": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_G3cMnx": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT LYNDIE BENSON",
+            "heading_size": "h2"
+          }
+        },
+        "text_rrgNWE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After dedicating nearly three decades to building a life and legacy alongside her former husband—supporting his rise while raising their two sons—Lyndie Benson found herself starting over at age 50. With no roadmap, but a lifetime of experience, creativity, and resilience, she began again—this time on her own terms. What followed was a bold reinvention: the launch of a luxury lifestyle brand rooted in sustainability, style, and the spirit of Malibu.</p><p>A lifelong lover of the ocean and elevated living, Lyndie created Bleusalt to offer wardrobe essentials that reflect the beauty and ease of coastal life. She brings an artist’s eye to every detail, photographing and directing the brand’s campaigns while overseeing its creative and strategic direction.</p><p>As a founder, mother, and visionary, Lyndie is committed to building a legacy of independence, impact, and refinement—proof that it’s never too late to begin again and create something extraordinary.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_G3cMnx",
+        "text_rrgNWE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_4215.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663795698389bd2f1",
+    "16618951073dd5fa7a",
+    "image_with_text_yyjC4A"
+  ]
+}
