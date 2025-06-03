@@ -837,7 +837,11 @@
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
               "url": "{{ shop.url }}/pages/help",
-              "returnPolicyCategory": "https://schema.org/ReturnableWithin30"
+              "returnPolicyCategory": "https://schema.org/ReturnableWithin30",
+              "applicableCountry": {
+                "@type": "Country",
+                "name": "US"
+              }
             },
             "shippingDetails": {
               "@type": "OfferShippingDetails",
