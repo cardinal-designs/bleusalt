@@ -838,18 +838,18 @@
                 "value": "10.00",
                 "currency": "{{ shop.currency | escape }}"
               },
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 1,
-                "maxValue": 2,
-                "unitCode": "d"
-              },
               "deliveryTime": {
                 "@type": "ShippingDeliveryTime",
                 "transitTime": {
                   "@type": "QuantitativeValue",
                   "minValue": 3,
                   "maxValue": 7,
+                  "unitCode": "d"
+                },
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 2,
                   "unitCode": "d"
                 }
               },
