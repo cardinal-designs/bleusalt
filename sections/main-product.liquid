@@ -794,6 +794,18 @@
         "@type": "Brand",
         "name": {{ product.vendor | json }}
       },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4,
+          "bestRating": 5
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ shop.name }}"
+        }
+      },
       {% if okendo_data.reviewCount > 0 %}
       "aggregateRating": {
       "@type": "AggregateRating",
