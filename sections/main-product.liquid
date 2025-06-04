@@ -823,13 +823,13 @@
             "availability" : "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCountry": "US",
               "url": "{{ shop.url }}/pages/help",
               "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
               "merchantReturnDays": 30,
-              "applicableCountry": {
-                "@type": "Country",
-                "name": "US"
-              }
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
             },
             "shippingDetails": {
               "@type": "OfferShippingDetails",
