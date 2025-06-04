@@ -70,8 +70,10 @@
   flex-direction: row;
   flex-wrap: wrap
 }
+
 .price-item--sale { 
-  color:#EA0606
+  color: #0d1c29;
+  font-weight: 600;
 }
 
 .price--center {
@@ -81,7 +83,8 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.65);
+  font-weight: 500;
 }
 
 .unit-price {
