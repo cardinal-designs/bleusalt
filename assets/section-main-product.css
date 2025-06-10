@@ -1832,6 +1832,7 @@ table[data-in-to-cm] td {
 .product__info-wrapper .field {
   flex-direction: column;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .product__info-wrapper .field__input {
