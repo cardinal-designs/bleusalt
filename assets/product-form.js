@@ -99,8 +99,6 @@ if (!customElements.get('product-form')) {
       }
       config.body = formData;
 
-      console.log("body", config.body)
-      
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
         .then((response) => {
@@ -132,13 +130,9 @@ if (!customElements.get('product-form')) {
           }
           document.querySelector('cart-drawer').open();
 
-          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
-                            typeof BOLD.common.eventEmitter.emit === 'function'){
-                          BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
-           }
-
-
-          
+          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+            BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+          }
         })
         .catch((e) => {
           console.error(e);
@@ -149,12 +143,9 @@ if (!customElements.get('product-form')) {
           if (!this.error) this.submitButton.removeAttribute('aria-disabled');
           this.querySelector('.loading-overlay__spinner').classList.add('hidden');
 
-          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
-                  typeof BOLD.common.eventEmitter.emit === 'function'){
-                BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
- }
-
-
+          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+            BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+          }
         });
     }
 
