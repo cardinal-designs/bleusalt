@@ -422,7 +422,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Signature Fabric",
-            "button_link": "shopify://collections/bleusalt-original-fabric"
+            "button_link": "shopify://collections/bleusalt-signature-fabric"
           }
         }
       },
