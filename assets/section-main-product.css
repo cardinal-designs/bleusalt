@@ -1828,3 +1828,11 @@ table[data-in-to-cm] td {
     font-size: 15px;
   }
 }
+
+.product__info-wrapper .field__input {
+  background: #fff;
+  border: 1px solid #0d1c298c;
+  background-color: rgb(var(--color-background));
+  color: rgba(var(--color-foreground));
+  border-radius: var(--variant-pills-radius);
+}
