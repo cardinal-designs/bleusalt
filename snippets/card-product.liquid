@@ -281,7 +281,7 @@
               <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
             {%- endfor -%}
           {%- else card_product.compare_at_price > card_product.price and card_product.available -%}            
-            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="{{ card_product.compare_at_price }}{{ card_product.price }} badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="1 {{ card_product.compare_at_price }}2 {{ card_product.price }} badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}  
         </div>
       </div>
