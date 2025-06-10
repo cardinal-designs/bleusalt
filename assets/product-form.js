@@ -98,7 +98,14 @@ if (!customElements.get('product-form')) {
         this.cart.setActiveElement(document.activeElement);
       }
       config.body = formData;
-      fetch(`${routes.cart_add_url}`, config)
+      // fetch(`${routes.cart_add_url}`, config)
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
         .then((response) => response.json())
         .then((response) => {
           if (response.status) {
