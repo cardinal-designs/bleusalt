@@ -215,7 +215,7 @@ class VariantSelects extends HTMLElement {
         button.setAttribute('data-join-list', 'true');
         button.querySelector('span').textContent = 'Join The Waitlist';
       }
-      console.log(this.currentVariant.available);
+      // console.log(this.currentVariant.available);
     });
   }
   sendEvent(event) {
@@ -468,7 +468,7 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
-    console.log(this.currentVariant);
+    // console.log(this.currentVariant);
     fetch(`${this.currentVariant.url}?variant=${this.currentVariant.id}`)
       .then((response) => response.text())
       .then((responseText) => {
