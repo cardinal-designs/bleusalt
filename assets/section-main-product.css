@@ -1841,3 +1841,7 @@ table[data-in-to-cm] td {
 .product__info-wrapper .field:before {
   content: unset;
 }
+
+.product__info-wrapper .field__label {
+  position: unset;
+}
