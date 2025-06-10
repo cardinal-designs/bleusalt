@@ -245,7 +245,7 @@
           "type": "rivo_faq_loy_4",
           "settings": {
             "question": "Where can I see my points balance?",
-            "answer": "First, log in to your account! Your points balance will be highlighted at the top of the loyalty page, account dashboard or at checkout."
+            "answer": "First, log into your account! Your points balance will be highlighted at the top of the loyalty page, account dashboard or at checkout."
           }
         },
         "rivo_faq_loy_5_ywfCnM": {
@@ -279,7 +279,7 @@
         "rivo_faq_loy_9_8VJwKM": {
           "type": "rivo_faq_loy_9",
           "settings": {
-            "question": "I forgot to use my points at Checkout, can I apply them retroactively?",
+            "question": "I forgot to use my points at checkout, can I apply them retroactively?",
             "answer": "No, unfortunately points cannot be redeemed after a purchase has already been made."
           }
         }
