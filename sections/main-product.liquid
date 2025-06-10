@@ -528,6 +528,9 @@
                     </div>
                   {% endif %}
                   {% endfor %}
+                   {% if product.type == 'Gift Card' %}
+      {% render 'gift-card-recipient-form' %}
+    {% endif %}
                   <div class="product-form__buttons">
                     <button
                       type="submit"
