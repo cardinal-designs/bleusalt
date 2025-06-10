@@ -1841,6 +1841,14 @@ table[data-in-to-cm] td {
   background-color: rgb(var(--color-background));
   color: rgba(var(--color-foreground));
   border-radius: var(--variant-pills-radius);
+  padding: 10px;
+}
+
+.product__info-wrapper .field__input:focus,
+.product__info-wrapper .field__input :focus-within,
+.product__info-wrapper .field__input:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 .product__info-wrapper .field:after,
