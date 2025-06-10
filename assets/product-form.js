@@ -98,6 +98,9 @@ if (!customElements.get('product-form')) {
         this.cart.setActiveElement(document.activeElement);
       }
       config.body = formData;
+
+      console.log("body", body)
+      
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
         .then((response) => {
@@ -129,10 +132,10 @@ if (!customElements.get('product-form')) {
           }
           document.querySelector('cart-drawer').open();
 
-if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
-                  typeof BOLD.common.eventEmitter.emit === 'function'){
-                BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
- }
+          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
+                            typeof BOLD.common.eventEmitter.emit === 'function'){
+                          BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+           }
 
 
           
