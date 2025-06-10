@@ -1847,8 +1847,8 @@ table[data-in-to-cm] td {
 .product__info-wrapper .field__input:focus,
 .product__info-wrapper .field__input :focus-within,
 .product__info-wrapper .field__input:focus-visible {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .product__info-wrapper .field:after,
