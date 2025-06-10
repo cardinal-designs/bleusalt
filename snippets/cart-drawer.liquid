@@ -286,7 +286,7 @@
                           <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
 
                           {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
-                            <dl>
+                            <!-- <dl>
                               {%- if item.product.has_only_default_variant == false -%}
                                 {%- for option in item.options_with_values -%}
                                   <div class="product-option">
@@ -295,22 +295,20 @@
                                   </div>
                                 {%- endfor -%}
                               {%- endif -%}
-                              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_properties" style="display:none !important;"></span>
-                              {% assign propertySize = item.properties | size %}
-                              {% if propertySize > 0 %}
-                                {% for p in item.properties %}
-                                  {% assign first_character_in_key = p.first | truncate: 1, '' %}
-                                  {% unless p.last == blank or first_character_in_key == '_' %}
-                                    {{ p.first }}:
-                                    {% if p.last contains '/uploads/' %}
-                                      <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                                    {% else %}
-                                      {{ p.last }}
-                                    {% endif %}
-                                  {% endunless %}
-                                {% endfor %}
-                              {% endif %}
-                            </dl>
+                            <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_properties" style="display:none !important;"></span>
+                            {%- liquid
+                              assign propertySize = item.properties.size
+                              if propertySize > 0
+                                for p in item.properties
+                                  assign first_character_in_key = p.first | truncate: 1, ''
+                                  unless p.last == blank or first_character_in_key == '_'
+                                    echo p.first | append: ':' | append: p.last | append: '<br>'
+                                  endunless
+                                endfor
+                              endif
+                            -%}
+                            </dl> -->
+                            <span class="bold_load_cart_item_properties"></span>
 
                             <p class="product-option selling_plan">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                             <p class="product-option">Qty: {{ item.quantity }}</p>
