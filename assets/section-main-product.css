@@ -1844,6 +1844,10 @@ table[data-in-to-cm] td {
   padding: 10px;
 }
 
+.product__info-wrapper .field__input:placeholder {
+  color: #0d1c298c;
+}
+
 .product__info-wrapper .field__input:focus,
 .product__info-wrapper .field__input :focus-within,
 .product__info-wrapper .field__input:focus-visible {
