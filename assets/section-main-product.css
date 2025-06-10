@@ -1829,6 +1829,10 @@ table[data-in-to-cm] td {
   }
 }
 
+.product__info-wrapper .recipient-fields {
+  margin-top: 20px;
+}
+
 .product__info-wrapper .field {
   flex-direction: column;
   display: flex;
