@@ -1829,6 +1829,11 @@ table[data-in-to-cm] td {
   }
 }
 
+.product__info-wrapper .field {
+  flex-direction: column;
+  display: flex;
+}
+
 .product__info-wrapper .field__input {
   background: #fff;
   border: 1px solid #0d1c298c;
