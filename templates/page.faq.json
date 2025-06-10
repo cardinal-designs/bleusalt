@@ -54,7 +54,7 @@
         "template--14657444151409__d3cf693f-87ff-4e60-934e-d544a1f21832-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We believe that transparency is vital, which is why we've compiled a list of our most frequently asked questions about our luxury clothing. From information about our materials and production process to sizing and shipping, we're here to provide all the answers you need to make informed decisions about your purchases. If you have any additional questions or comments, please contact us. </p>"
+            "text": "<p>We believe that transparency is vital, which is why we've compiled a list of the most frequently asked questions about our luxury clothing. From information about our materials and production process to sizing and shipping, we're here to provide all the answers you need to make informed decisions about your purchases. If you have any additional questions or comments, please contact us. </p>"
           }
         }
       },
@@ -79,8 +79,8 @@
           "type": "FAQ",
           "settings": {
             "category": "Product & Care",
-            "title": "Does Bleusalt Shrink?",
-            "text": "<p>No, Bleusalt does not shrink</p>",
+            "title": "Does Bleusalt shrink?",
+            "text": "<p>No, Bleusalt does not shrink.  All of our products are made from Tencel™ fabric, and are preshrunk.</p>",
             "page": ""
           }
         },
@@ -116,7 +116,7 @@
           "settings": {
             "category": "Product & Care",
             "title": "How is Bleusalt sustainable?",
-            "text": "<p>We are sustainable in many ways: Our material is made sustainable, we are no waste, and we believe in less consumption by creating quality basics that are made to last and take you from day to night.</p>",
+            "text": "<p>We are sustainable in many ways.  Our material is made sustainably through a closed-loop process wherein chemicals do not leech into the environment. Our clothing production process is zero-waste, and we always reuse scrap fabric. We promote slow fashion by creating quality basics that are made to last.</p>",
             "page": ""
           }
         },
