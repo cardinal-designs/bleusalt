@@ -1836,3 +1836,8 @@ table[data-in-to-cm] td {
   color: rgba(var(--color-foreground));
   border-radius: var(--variant-pills-radius);
 }
+
+.product__info-wrapper .field:after,
+.product__info-wrapper .field:before {
+  content: unset;
+}
