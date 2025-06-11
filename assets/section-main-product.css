@@ -1871,6 +1871,7 @@ table[data-in-to-cm] td {
 .product__info-wrapper .field__label {
   position: unset;
   margin-bottom: 0;
+  text-align: left;
 }
 
 /* Gift Card Form design end */
