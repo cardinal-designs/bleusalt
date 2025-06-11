@@ -183,13 +183,13 @@
                               {% unless p.last == blank or first_character_in_key == '_' %}
                                 <div class="product-property">
                                   <dt>{{ p.first }}: </dt>
-                                  <dd>
+                                  <dt>
                                     {% if p.last contains '/uploads/' %}
                                       <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
                                     {% else %}
                                       {{ p.last }}
                                     {% endif %}
-                                  </dd>
+                                  </dt>
                                 </div>
                               {% endunless %}
                             {% endfor %}
