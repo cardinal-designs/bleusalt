@@ -12,6 +12,16 @@
     "settings": [
       {
         "type": "header",
+        "content": "Gift card"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Logo",
+        "info": "gift card logo"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },
       {
