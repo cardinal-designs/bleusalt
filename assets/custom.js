@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   const toggleCheckbox = document.getElementById("toggle-gift-fields");
-  const fields = document.getElementById("gift-card-fields");
+  const giftCardForm = document.querySelector(".gift__card--wrapper");
 
   if(toggleCheckbox){
     toggleCheckbox.addEventListener("change", function () {
-      fields.style.display = this.checked ? "block" : "none";
+      giftCardForm.style.display = this.checked ? "block" : "none";
     });
   }
   
