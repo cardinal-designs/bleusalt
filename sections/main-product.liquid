@@ -2,6 +2,8 @@
 {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- break -%}{%- endif -%}
 <section id="MainProduct-{{ section.id }}" class="product__main page-width small-full-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
 
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
+
   {% render 'hs-defer-css' with filename: 'section-main-product.css', pages: 'collection,index,product' | split: ',', local: true %}
   {% render 'hs-defer-css' with filename: 'component-accordion.css', pages: 'collection,index,product' | split: ',', local: true %}
   {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
@@ -11,7 +13,6 @@
   {% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
   {% render 'hs-defer-css' with filename: 'component-deferred-media.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-  {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
