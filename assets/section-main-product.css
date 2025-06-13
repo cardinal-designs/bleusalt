@@ -1835,8 +1835,8 @@ table[data-in-to-cm] td {
   display: none;
 }
 
-.product__info-wrapper .recipient-fields {
-  margin-top: 20px;
+.product__info-wrapper .gift__card--checkbox {
+  margin-bottom: 20px;
 }
 
 .product__info-wrapper .field {
