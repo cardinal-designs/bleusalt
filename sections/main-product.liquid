@@ -1,6 +1,9 @@
 {% comment %}theme-check-disable TemplateLength, LiquidTag{% endcomment %}
 {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- break -%}{%- endif -%}
 <section id="MainProduct-{{ section.id }}" class="product__main page-width small-full-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
+
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
+
   {% render 'hs-defer-css' with filename: 'section-main-product.css', pages: 'collection,index,product' | split: ',', local: true %}
   {% render 'hs-defer-css' with filename: 'component-accordion.css', pages: 'collection,index,product' | split: ',', local: true %}
   {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
@@ -528,6 +531,17 @@
                     </div>
                   {% endif %}
                   {% endfor %}
+                   {% if product.gift_card? or product.type == 'Gift Cards' %}
+                    <div class="gift__card--checkbox">
+                     <label>
+                        <input type="checkbox" id="toggle-gift-fields">
+                        {{ 'products.product.gift_card_checkbox' | t }}
+                      </label>
+                    </div>
+                    <div class="gift__card--wrapper">
+                    {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
+                    </div>
+                  {% endif %}
                   <div class="product-form__buttons">
                     <button
                       type="submit"
@@ -962,32 +976,32 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    setTimeout(async ()=> {
-      const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
-    checkbox.addEventListener('click', ()=> {
-      let inputValue = document.querySelector('.bold_option_element input').checked;
-      const tryNowBlock = document.querySelector('div:has(>trynow-cta-button)');
-      if(inputValue){
-        if(tryNowBlock){
-          tryNowBlock.style.display = 'none';
-        }
-        document.querySelector('.bold_clone').classList.add('showClone');
-      } else {
-        if(tryNowBlock){
-          tryNowBlock.style.display = 'unset';
-          document.querySelector('.bold_clone').classList.remove('showClone');
-        }
-      }
-    })
+  // document.addEventListener("DOMContentLoaded", (event) => {
+  //   setTimeout(async ()=> {
+  //     const checkbox = document.querySelector('.bold_option.bold_option_checkbox');
+  //   checkbox.addEventListener('click', ()=> {
+  //     let inputValue = document.querySelector('.bold_option_element input').checked;
+  //     const tryNowBlock = document.querySelector('div:has(>trynow-cta-button)');
+  //     if(inputValue){
+  //       if(tryNowBlock){
+  //         tryNowBlock.style.display = 'none';
+  //       }
+  //       document.querySelector('.bold_clone').classList.add('showClone');
+  //     } else {
+  //       if(tryNowBlock){
+  //         tryNowBlock.style.display = 'unset';
+  //         document.querySelector('.bold_clone').classList.remove('showClone');
+  //       }
+  //     }
+  //   })
 
-    const TryLink = await window.trynow.hasPassedTryLink();
-    if(TryLink){
-      document.querySelector('.product-form__buttons').classList.add('tn-condition-true');
-    }
+  //   const TryLink = await window.trynow.hasPassedTryLink();
+  //   if(TryLink){
+  //     document.querySelector('.product-form__buttons').classList.add('tn-condition-true');
+  //   }
       
-    } ,1000)  
-  });
+  //   } ,1000)  
+  // });
 </script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {

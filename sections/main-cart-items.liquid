@@ -181,18 +181,21 @@
                             {% for p in item.properties %}
                               {% assign first_character_in_key = p.first | truncate: 1, '' %}
                               {% unless p.last == blank or first_character_in_key == '_' %}
-                                {{ p.first }}:
-                                {% if p.last contains '/uploads/' %}
-                                  <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                                {% else %}
-                                  {{ p.last }}
-                                {% endif %}
+                                <div class="product-property">
+                                  <dt>{{ p.first }}: 
+                                    {% if p.last contains '/uploads/' %}
+                                      <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                                    {% else %}
+                                      {{ p.last }}
+                                    {% endif %}
+                                  </dt>
+                                </div>
                               {% endunless %}
                             {% endfor %}
                           {% endif %}
                         </dl>
-  <span class="bold_load_cart_item_properties"></span>
-  <div class="bold_edit_in_cart"></div>
+                        <span class="bold_load_cart_item_properties"></span>
+                        <div class="bold_edit_in_cart"></div>
   
                         <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                       {%- endif -%}

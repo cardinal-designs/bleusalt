@@ -8,6 +8,21 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Gift Card",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Gift card"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Logo",
+        "info": "gift card logo"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {

@@ -97,7 +97,17 @@
 
   <body class="gradient">
     <header class="gift-card__title">
-      <span class="h2">{{ shop.name }}</span>
+      {% if settings.logo_image != blank %}
+        {{ settings.logo_image | image_url: width: 160 | image_tag:
+          class: 'header__heading-logo logo-light',
+          widths: '50, 100, 150, 200, 250, 300, 400, 500',
+          height: '40px',
+          width: '160px',
+          alt: settings.logo_image.alt
+        }}
+      {% else %}
+        <span class="h2">{{ shop.name }}</span>
+      {% endif %}
       <h1 class="gift-card__heading">{{ 'gift_cards.issued.subtext' | t }}</h1>
       <div class="gift-card__price">
         <p>

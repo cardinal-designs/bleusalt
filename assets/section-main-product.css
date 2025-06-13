@@ -1828,3 +1828,62 @@ table[data-in-to-cm] td {
     font-size: 15px;
   }
 }
+
+/* Gift Card Form design start */
+
+.gift__card--wrapper {
+  display: none;
+}
+
+.product__info-wrapper .gift__card--checkbox {
+  margin: 20px 0;
+}
+
+.product__info-wrapper .gift__card--checkbox input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+  accent-color: black;
+  transform: scale(1.5);
+  margin-right: 8px;
+}
+
+.product__info-wrapper .field {
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.product__info-wrapper .field__input {
+  background: #fff;
+  border: 1px solid #0d1c298c;
+  background-color: rgb(var(--color-background));
+  color: rgba(var(--color-foreground));
+  border-radius: var(--variant-pills-radius);
+  padding: 10px;
+}
+
+.product__info-wrapper .field__input::placeholder {
+  color: #0d1c298c !important;
+  opacity: 1 !important;
+}
+
+.product__info-wrapper .field__input:focus,
+.product__info-wrapper .field__input :focus-within,
+.product__info-wrapper .field__input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid #0d1c29;
+}
+
+.product__info-wrapper .field:after,
+.product__info-wrapper .field:before {
+  content: unset;
+}
+
+.product__info-wrapper .field__label {
+  position: unset;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* Gift Card Form design end */

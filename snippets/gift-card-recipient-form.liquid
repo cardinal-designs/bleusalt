@@ -1,0 +1,128 @@
+{% comment %}
+  Renders gift card recipient form.
+  Accepts:
+  - product: {Object} product object.
+  - form: {Object} the product form object.
+  - section: {Object} section to which this snippet belongs.
+
+  Usage:
+  {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
+{% endcomment %}
+
+<div class="gift-card-recipient-form">
+  {%- assign gift_card_recipient_control_flag = 'properties[__shopify_send_gift_card_to_recipient]' -%}
+
+  <input
+    class="visually-hidden"
+    id="Recipient-checkbox-{{ section.id }}"
+    type="checkbox"
+    name="{{ gift_card_recipient_control_flag }}"
+    checked
+  >
+
+  <div class="recipient-fields">
+    <div class="recipient-fields__field">
+      <div class="field mb-20 md:mb-30">
+        <label class="field__label" for="Recipient__email">
+          <span class="recipient-email-label">Recipient email</span>
+        </label>
+        <input
+          class="field__input px-20 py-[13.5px] rounded-full border-scarlet"
+          id="Recipient__email"
+          type="email"
+          placeholder="Enter gift card recipient's email"
+          name="properties[Recipient email]"
+          value="{{ form.email }}"
+          required
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="RecipientForm-email-error-{{ section.id }}"
+          {% endif %}
+        >
+        <span id="emailError" class="error"></span>
+      </div>
+    </div>
+
+    <div class="recipient-fields__field">
+      <div class="field mb-20 md:mb-30">
+        <label class="field__label" for="Recipient-name-{{ section.id }}">
+          Recipient Name
+        </label>
+        <input
+          class="field__input px-20 py-[13.5px] rounded-full border-scarlet"
+          autocomplete="name"
+          type="text"
+          id="Recipient-name-{{ section.id }}"
+          name="properties[Recipient name]"
+          placeholder="Enter gift card recipient's name"
+          value="{{ form.name }}"
+          required
+          {% if form.errors contains 'name' %}
+            aria-invalid="true"
+            aria-describedby="RecipientForm-name-error-{{ section.id }}"
+          {% endif %}
+        >
+      </div>
+    </div>
+
+    <div class="recipient-fields__field">
+      <div class="field mb-20 md:mb-30">
+        <label class="form__label field__label" for="Recipient-send-on-{{ section.id }}">Send On Date</label>
+        <input
+          class="field__input px-20 py-[13.5px] rounded-full border-scarlet text-body"
+          autocomplete="send_on"
+          type="date"
+          id="Recipient-send-on-{{ section.id }}"
+          name="properties[Send on]"
+          placeholder="Send On Date"
+          pattern="\d{4}-\d{2}-\d{2}"
+          value="{{ form.send_on }}"
+          {% if form.errors contains 'send_on' %}
+            aria-invalid="true"
+            aria-describedby="RecipientForm-send_on-error-{{ section.id }}"
+          {% endif %}
+        >
+      </div>
+    </div>
+
+    <div class="recipient-fields__field">
+      {%- assign max_chars_message = 200 -%}
+      {%- assign max_chars_message_rendered = 'recipient.form.max_characters' | t: max_chars: max_chars_message -%}
+      {%- assign message_label_rendered = 'recipient.form.message_label' | t -%}
+      <div class="field mb-20 md:mb-30">
+        <label class="form__label field__label" for="Recipient-message-{{ section.id }}">Message</label>
+        <textarea
+          rows="4"
+          id="Recipient-message-{{ section.id }}"
+          class="text-area field__input px-20 py-[13.5px] rounded-[30px] border-scarlet"
+          name="properties[Message]"
+          maxlength="{{ max_chars_message }}"
+          placeholder="Add your message (optional)"
+          aria-label="{{ message_label_rendered }} {{ max_chars_message_rendered }}"
+          {% if form.errors contains 'message' %}
+            aria-invalid="true"
+            aria-describedby="RecipientForm-message-error-{{ section.id }}"
+          {% endif %}
+        >{{ form.message }}</textarea>
+
+        {% comment %} <label class="-mt-5 flex text-body-4">
+          <span>{{ max_chars_message_rendered }}</span>
+        </label> {% endcomment %}
+      </div>
+    </div>
+  </div>
+
+  <input
+    type="hidden"
+    name="{{ gift_card_recipient_control_flag }}"
+    value="if_present"
+    id="Recipient-control-{{ section.id }}"
+  >
+  <input
+    type="hidden"
+    name="properties[__shopify_offset]"
+    value=""
+    id="Recipient-timezone-offset-{{ section.id }}"
+    disabled
+  >
+</div>

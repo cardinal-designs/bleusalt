@@ -64,6 +64,9 @@ if (!customElements.get('product-form')) {
       this.form = this.querySelector('form');
       this.form.querySelector('[name=id]').disabled = false;
       this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
+
+      
+      
       this.cart = document.querySelector('cart-drawer');
       this.submitButton = this.querySelector('[type="submit"]');
       if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
@@ -71,6 +74,27 @@ if (!customElements.get('product-form')) {
 
     onSubmitHandler(evt) {
       evt.preventDefault();
+
+      let emailInput = document.getElementById("Recipient__email");
+      let giftCheckbox = document.getElementById("toggle-gift-fields");
+      if(emailInput && giftCheckbox.checked){
+        let emailError = document.getElementById("emailError");
+        let emailValue = emailInput.value.trim();
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (emailValue === "") {
+            emailError.textContent = "Email is required.";
+            emailInput.style.border = "1px solid red";
+            return;
+        } else if (!emailPattern.test(emailValue)) {
+            emailError.textContent = "Please enter a valid email address.";
+            emailInput.style.border = "1px solid red";
+            return;
+        } else { 
+            emailError.textContent = "";
+            emailInput.style.border = "1px solid rgb(13 28 41 / 55%)";
+        } 
+      }
+      
       if(this.submitButton.getAttribute('data-join-list')){
         let klaviyoBisWrapper = this.querySelector('.klaviyo-bis__wrapper');
         if (klaviyoBisWrapper) {
@@ -98,6 +122,7 @@ if (!customElements.get('product-form')) {
         this.cart.setActiveElement(document.activeElement);
       }
       config.body = formData;
+
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
         .then((response) => {
@@ -129,13 +154,9 @@ if (!customElements.get('product-form')) {
           }
           document.querySelector('cart-drawer').open();
 
-if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
-                  typeof BOLD.common.eventEmitter.emit === 'function'){
-                BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
- }
-
-
-          
+          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+            BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+          }
         })
         .catch((e) => {
           console.error(e);
@@ -146,12 +167,9 @@ if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
           if (!this.error) this.submitButton.removeAttribute('aria-disabled');
           this.querySelector('.loading-overlay__spinner').classList.add('hidden');
 
-          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
-                  typeof BOLD.common.eventEmitter.emit === 'function'){
-                BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
- }
-
-
+          if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+            BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+          }
         });
     }
 
@@ -221,7 +239,7 @@ class VariantSelects extends HTMLElement {
         button.setAttribute('data-join-list', 'true');
         button.querySelector('span').textContent = 'Join The Waitlist';
       }
-      console.log(this.currentVariant.available);
+      // console.log(this.currentVariant.available);
     });
   }
   sendEvent(event) {
@@ -474,7 +492,7 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
-    console.log(this.currentVariant);
+    // console.log(this.currentVariant);
     fetch(`${this.currentVariant.url}?variant=${this.currentVariant.id}`)
       .then((response) => response.text())
       .then((responseText) => {
