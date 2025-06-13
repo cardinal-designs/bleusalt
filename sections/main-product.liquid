@@ -529,8 +529,11 @@
                   {% endif %}
                   {% endfor %}
                    {% if product.gift_card? or product.type == 'Gift Cards' %}
-                    <div>
-                     
+                    <div class="gift__card--checkbox">
+                     <label>
+                        <input type="checkbox" id="toggle-gift-fields">
+                        Send directly to recipient
+                      </label>
                     </div>
                     <div class="gift__card--wrapper">
                     {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
