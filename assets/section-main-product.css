@@ -1844,7 +1844,7 @@ table[data-in-to-cm] td {
   height: 10px;
   accent-color: black;
   transform: scale(1.5);
-  margin: 0;
+  margin-right: 8px;
 }
 
 .product__info-wrapper .field {
