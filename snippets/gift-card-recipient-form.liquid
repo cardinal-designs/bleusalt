@@ -33,6 +33,7 @@
           placeholder="Enter gift card recipient's email"
           name="properties[Recipient email]"
           value="{{ form.email }}"
+          required
           {% if form.errors contains 'email' %}
             aria-invalid="true"
             aria-describedby="RecipientForm-email-error-{{ section.id }}"
@@ -54,6 +55,7 @@
           name="properties[Recipient name]"
           placeholder="Enter gift card recipient's name"
           value="{{ form.name }}"
+          required
           {% if form.errors contains 'name' %}
             aria-invalid="true"
             aria-describedby="RecipientForm-name-error-{{ section.id }}"
