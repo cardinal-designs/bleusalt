@@ -1839,6 +1839,14 @@ table[data-in-to-cm] td {
   margin: 20px 0;
 }
 
+.product__info-wrapper .gift__card--checkbox input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+  accent-color: black;
+  transform: scale(1.5);
+  margin: 0;
+}
+
 .product__info-wrapper .field {
   flex-direction: column;
   display: flex;
