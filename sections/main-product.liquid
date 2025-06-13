@@ -529,6 +529,9 @@
                   {% endif %}
                   {% endfor %}
                    {% if product.gift_card? or product.type == 'Gift Cards' %}
+                    <div>
+                     
+                    </div>
                     <div class="gift__card--wrapper">
                     {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
                     </div>
