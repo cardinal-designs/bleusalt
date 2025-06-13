@@ -18,7 +18,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
       }
     })
-  })
+  });
+
+  const toggleCheckbox = document.getElementById("toggle-gift-fields");
+  const fields = document.getElementById("gift-card-fields");
+
+  if(toggleCheckbox){
+    toggleCheckbox.addEventListener("change", function () {
+      fields.style.display = this.checked ? "block" : "none";
+    });
+  }
+  
 });
 
 window.addEventListener('scroll', function () {
