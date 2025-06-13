@@ -1831,6 +1831,10 @@ table[data-in-to-cm] td {
 
 /* Gift Card Form design start */
 
+.gift__card--wrapper {
+  display: none;
+}
+
 .product__info-wrapper .recipient-fields {
   margin-top: 20px;
 }
