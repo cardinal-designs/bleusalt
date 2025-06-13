@@ -91,7 +91,7 @@ if (!customElements.get('product-form')) {
             return;
         } else { 
             emailError.textContent = "";
-            emailInput.style.border = "1px solid rgb(30 50 43)";
+            emailInput.style.border = "1px solid rgb(13 28 41 / 55%)";
         } 
       }
       
