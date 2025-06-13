@@ -64,27 +64,7 @@ if (!customElements.get('product-form')) {
      
 
       this.form = this.querySelector('form');
-      this.form.querySelector('[name=id]').disabled = false;
-
-      let emailInput = document.getElementById("Recipient__email");
-      let giftCheckbox = document.getElementById("toggle-gift-fields");
-      if(emailInput && giftCheckbox.checked){
-      let emailError = document.getElementById("emailError");
-      let emailValue = emailInput.value.trim();
-      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      if (emailValue === "") {
-          emailError.textContent = "Email is required.";
-          emailInput.style.border = "1px solid red";
-         return;
-      } else if (!emailPattern.test(emailValue)) {
-          emailError.textContent = "Please enter a valid email address.";
-          emailInput.style.border = "1px solid red";
-          return;
-      } else { 
-          emailError.textContent = "";
-          emailInput.style.border = "1px solid rgb(30 50 43)";
-      } 
-      
+      this.form.querySelector('[name=id]').disabled = false;      
       this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
 
       
@@ -123,6 +103,26 @@ if (!customElements.get('product-form')) {
 
     onSubmitHandler(evt) {
       evt.preventDefault();
+
+      let emailInput = document.getElementById("Recipient__email");
+      let giftCheckbox = document.getElementById("toggle-gift-fields");
+      if(emailInput && giftCheckbox.checked){
+      let emailError = document.getElementById("emailError");
+      let emailValue = emailInput.value.trim();
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (emailValue === "") {
+          emailError.textContent = "Email is required.";
+          emailInput.style.border = "1px solid red";
+         return;
+      } else if (!emailPattern.test(emailValue)) {
+          emailError.textContent = "Please enter a valid email address.";
+          emailInput.style.border = "1px solid red";
+          return;
+      } else { 
+          emailError.textContent = "";
+          emailInput.style.border = "1px solid rgb(30 50 43)";
+      } 
+      
       if(this.submitButton.getAttribute('data-join-list')){
         let klaviyoBisWrapper = this.querySelector('.klaviyo-bis__wrapper');
         if (klaviyoBisWrapper) {
