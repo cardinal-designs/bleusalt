@@ -73,7 +73,7 @@
           type="date"
           id="Recipient-send-on-{{ section.id }}"
           name="properties[Send on]"
-          placeholder="{{ 'recipient.form.send_on' | t }}"
+          placeholder="Send On Date"
           pattern="\d{4}-\d{2}-\d{2}"
           value="{{ form.send_on }}"
           {% if form.errors contains 'send_on' %}
