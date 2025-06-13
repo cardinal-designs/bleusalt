@@ -67,7 +67,8 @@ if (!customElements.get('product-form')) {
 
       this.form.addEventListener("submit", (e) => {
         let emailInput = document.getElementById("Recipient__email");
-        if(emailInput){
+        let giftCheckbox = document.getElementById("toggle-gift-fields");
+        if(emailInput && giftCheckbox.checked){
           let emailError = document.getElementById("emailError");
           let emailValue = emailInput.value.trim();
           let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
