@@ -164,49 +164,49 @@
           "type": "text_block",
           "settings": {
             "question": "Are Bleusalt women’s bottoms sustainable?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>Yes! All Bleusalt garments are made using eco-friendly practices and sustainably sourced materials, making them a perfect choice for conscious fashion lovers.</p>"
           }
         },
         "text_block_NVVWwr": {
           "type": "text_block",
           "settings": {
             "question": "What sizes are available for Bleusalt women’s bottoms?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>Bleusalt offers sizes 00 through 6 (XXS to 2X). You can view our<a href=\"https://bleusalt.com/pages/bleusalt-size-chart-sizing-guide\"><span style=\"text-decoration:underline\"> size chart</span></a> for detailed measurements and fit guidance.</p>"
           }
         },
         "text_block_itf8iK": {
           "type": "text_block",
           "settings": {
             "question": "Are Bleusalt pants and leggings suitable for travel or daily wear?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>Absolutely. Our women’s bottoms are designed for comfort, style, and versatility—perfect for travel, lounging, work, or an evening out.</p>"
           }
         },
         "text_block_Q6izfe": {
           "type": "text_block",
           "settings": {
             "question": "How do I care for my Bleusalt leggings or pants?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>We recommend machine washing on cold and laying flat to dry to preserve the softness and longevity of your Bleusalt garments.</p>"
           }
         },
         "text_block_EcHkie": {
           "type": "text_block",
           "settings": {
             "question": "Can I build a capsule wardrobe with Bleusalt women’s bottoms?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>Yes! Our timeless pants, leggings, and skirts are ideal for mixing and matching in a minimalist, sustainable capsule wardrobe.</p>"
           }
         },
         "text_block_Hty9j7": {
           "type": "text_block",
           "settings": {
             "question": "What makes Bleusalt women’s bottoms luxurious?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>Each piece is crafted in the USA from premium TENCEL™ for unmatched softness, elegant drape, and high-end fit that embodies quiet luxury.</p>"
           }
         },
         "text_block_3bd3eM": {
           "type": "text_block",
           "settings": {
             "question": "Do any celebrities wear Bleusalt bottoms?",
-            "answer": "<p>Add Answer</p>"
+            "answer": "<p>Yes—iconic pieces in the collection were designed in collaboration with or inspired by figures like Kaia Gerber and Cindy Crawford.</p>"
           }
         }
       },
@@ -223,9 +223,9 @@
       "name": "FAQ NEW",
       "settings": {
         "title": "FAQ",
-        "subtitle": "FAQ Subtitle",
-        "faq_footer_title": "If you can’t find answer for your quesion, contact us",
-        "faq_footer_email": "lipsum@example.com"
+        "subtitle": "",
+        "faq_footer_title": "",
+        "faq_footer_email": ""
       }
     }
   },
