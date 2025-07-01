@@ -42,7 +42,13 @@
 }.faq-wrapper .faq-question span {
    line-height: 23px;
 }
-
+  .fa {
+    transition: all 0.3s ease;
+  }
+.fa.f-minus {
+  tranform: rotate(180deg)
+  
+}
 </style>
 <div class="page-width" data-section-id="{{ section.id }}">
   {% if section.blocks.size > 0 %}
@@ -51,7 +57,12 @@
           <div class="faq--{{ block.id }}" {{ block.shopify_attributes }}>
             <div class="faq-individual">
               {% if block.settings.question != blank %}
-              <div class="faq-question">{{ block.settings.question }} <span><i class="fa fa-plus"></i></span></div>
+              <div class="faq-question">{{ block.settings.question }} 
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="fa fa-plus" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M15.65 13.1501C15.5328 13.2671 15.374 13.3328 15.2083 13.3328C15.0427 13.3328 14.8839 13.2671 14.7667 13.1501L10 8.38423L5.23333 13.1501C5.17533 13.2081 5.10647 13.2541 5.03069 13.2855C4.95491 13.3168 4.87369 13.333 4.79166 13.333C4.70964 13.333 4.62842 13.3168 4.55264 13.2855C4.47685 13.2541 4.408 13.2081 4.35 13.1501C4.292 13.0921 4.24599 13.0232 4.2146 12.9474C4.18321 12.8716 4.16705 12.7904 4.16705 12.7084C4.16705 12.6264 4.18321 12.5451 4.2146 12.4694C4.24599 12.3936 4.292 12.3247 4.35 12.2667L9.55833 7.05839C9.67552 6.94135 9.83437 6.87561 10 6.87561C10.1656 6.87561 10.3245 6.94135 10.4417 7.05839L15.65 12.2667C15.767 12.3839 15.8328 12.5428 15.8328 12.7084C15.8328 12.874 15.767 13.0329 15.65 13.1501Z" fill="#051C2A"/>
+                  </svg>
+              </span></div>
               {% endif %}
               {% if block.settings.answer != blank %}
                 <div class="faq-answer">{{ block.settings.answer }}</div>
