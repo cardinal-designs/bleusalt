@@ -135,7 +135,7 @@
       </div>
     </div>
   {%- endif -%}
-  {%- if section.settings.video_url_mobile != blank or video_url_mobile_1 -%}
+  {%- if section.settings.video_url_mobile_1 -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
         {{ section.settings.video_url_1 | media_tag: 
@@ -149,7 +149,6 @@
           aria_label: section.settings.description,
           controls: false
         }}
-      
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
