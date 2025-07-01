@@ -220,6 +220,9 @@
         "text_block_4ggByE",
         "text_block_V8CnNA"
       ],
+      "custom_css": [
+        "ul {text-align: center; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center;}"
+      ],
       "name": "FAQ NEW",
       "settings": {
         "title": "FAQ",
