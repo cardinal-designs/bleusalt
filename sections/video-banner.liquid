@@ -120,19 +120,8 @@
     <div class="small-hide">
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
-
-        {{ section.settings.video | media_tag: 
-          id: video_id,
-          class: 'banner__video', 
-          preload: 'auto', 
-          autoplay: true, 
-          loop: true, 
-          muted: true,
-          playsinline: true, 
-          aria_label: section.settings.description
-        }}
-
-        {{ section.settings.video_url_1  | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+    
+        {{ section.settings.video_url_1 | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
 
         
         {% comment %}
