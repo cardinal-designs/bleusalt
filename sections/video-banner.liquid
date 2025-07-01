@@ -121,11 +121,24 @@
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
 
+        {{ section.settings.video_url_1 | video_tag: 
+          id: video_id,
+          class: 'banner__video', 
+          preload: 'auto', 
+          autoplay: true, 
+          loop: true, 
+          muted: true,
+          playsinline: true, 
+          aria_label: section.settings.description,
+          controls: false
+        }}
 
         
+
+        {% comment %}
         <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto"   aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url }}" data-expand="-10" width="100%"></video>
+        {% endcomment %}
         {% render 'video-controls', id: video_id %}
-        
       </div>
     </div>
   {%- endif -%}
