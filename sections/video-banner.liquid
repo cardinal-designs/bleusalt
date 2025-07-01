@@ -120,6 +120,24 @@
     <div class="small-hide">
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
+          {{ section.settings.video_url_1 | media_tag: 
+            id: video_id,
+            class: 'banner__video', 
+            preload: 'auto', 
+            autoplay: true, 
+            loop: true, 
+            muted: true,
+            playsinline: true, 
+            aria_label: section.settings.description,
+            controls: false
+          }}
+        {% render 'video-controls', id: video_id %}
+      </div>
+    </div>
+  {%- endif -%}
+  {%- if section.settings.video_url_mobile != blank or video_url_mobile_1 -%}
+    {% assign video_id = section.id | prepend: 'video-mobile--' %}
+    <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
         {{ section.settings.video_url_1 | media_tag: 
           id: video_id,
           class: 'banner__video', 
@@ -131,24 +149,20 @@
           aria_label: section.settings.description,
           controls: false
         }}
-        {% render 'video-controls', id: video_id %}
-      </div>
-    </div>
-  {%- endif -%}
-  {%- if section.settings.video_url_mobile != blank or video_url_mobile_1 -%}
-    {% assign video_id = section.id | prepend: 'video-mobile--' %}
-    <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
-      {{ section.settings.video_url_1 | media_tag: 
+
+      {{ section.settings.video_mobile | video_tag:
         id: video_id,
-        class: 'banner__video', 
-        preload: 'auto', 
-        autoplay: true, 
-        loop: true, 
+        class: 'banner__video',
+        preload: 'auto',
+        aria_hidden: true,
         muted: true,
-        playsinline: true, 
+        autoplay: true,
+        loop: true,
+        playsinline: true,
         aria_label: section.settings.description,
-        controls: false
+        poster: section.settings.poster_url_mobile 
       }}
+      
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
