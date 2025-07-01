@@ -17,9 +17,6 @@
       <!-- Preload JS/CSS -- Start -->
 
       <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'">
-      <noscript>
-        <link rel="stylesheet" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css">
-      </noscript>
       
       <!-- Preload JS/CSS -- End -->
 
@@ -302,6 +299,9 @@
     </head>
 
     <body class="gradient template--{{ template.name }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
+      <noscript>
+        <link rel="stylesheet" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css">
+      </noscript>
 
       
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
