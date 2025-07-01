@@ -41,7 +41,7 @@
               <div class="swiper-slide">
                 <div class="quote quote-press text-center">
                     {% if block.settings.logo != blank %}
-                    <div class="quote-press__logo"   style="background-image: url({{ block.settings.logo | image_url: height: 65 }});">
+                    <div class="quote-press__logo" data-bg="{{ block.settings.logo | image_url: height: 65 }}">
                         <span class="visually-hidden">Logo for {{ block.settings.author }}</span>
                     </div>
                     {% endif %}
