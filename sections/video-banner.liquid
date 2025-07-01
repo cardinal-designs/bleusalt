@@ -133,7 +133,7 @@
             controls: false
           }}
         {% endcapture %}
-        {% assign video_title = section.settings.video_url_1.alt %}
+        {% assign video_title = section.settings.description %}
         {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
         {{ video_tag_captured | replace: "<img", image_tag_replace }}
         {% render 'video-controls', id: video_id %}
@@ -156,7 +156,7 @@
           controls: false
         }}
       {% endcapture %}
-      {% assign video_title = section.settings.video_url_mobile_1.alt %}
+      {% assign video_title = section.settings.description %}
       {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
       {{ video_tag_captured | replace: "<img", image_tag_replace }}
       {% render 'video-controls', id: video_id %}
