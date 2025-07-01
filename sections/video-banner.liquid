@@ -1,6 +1,6 @@
 {% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-{%- if section.settings.video_url != blank and section.settings.video_url_mobile != blank -%}
+{%- if section.settings.video_url_1 != blank and section.settings.video_url_mobile_1 != blank -%}
 
 {% assign video_height_mobile = section.settings.video_height_mobile %}
 {% if section.settings.video_height_mobile == 'square' %}
