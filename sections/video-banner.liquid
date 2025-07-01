@@ -122,6 +122,9 @@
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
 
         I am here
+
+        {{ section.settings.video_url_1 | json }}
+        
         {{ section.settings.video_url_1 | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
         
         {% comment %}
