@@ -147,6 +147,46 @@
         "heading_6iA4DF",
         "text_WtDcDf"
       ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_TBQFyn": {
+      "type": "rich-text",
+      "blocks": {
+        "text_whWTme": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Shop Bleusalt's Women's Tops:</h1><h2>Luxurious Pants, Leggings, Shorts, Skirts & More<br/></h2><p>Bleusalt offers a selection of stunning, Luxurious Women’s Bottoms—pants and skirts that cater to the modern woman's wardrobe. Crafted from the softest fibers on Earth, these garments provide unparalleled  elegance and versatility.<br/><br/>Check out this<a href=\"#\" title=\"#\"> iconic pant designed for Kaia Gerber</a> or this luxuriously soft pant designed for Cindy Crawford.<br/><br/></p><h2>Versatile Tops for Every Occasion</h2><p>Our collection of sustainable women’s tops caters to every occasion and style preference. Whether you're seeking a polished look for a day out or a more elegant evening ensemble, our tops effortlessly transition from day to night. Explore our range of women's tops that exude sophistication and style.</p><h2>Inclusive Sizing</h2><p>We believe in inclusivity and understand that women come in diverse sizes and shapes. That's why our collection offers size-inclusive tops, from XS to 3X, ensuring that every woman can find her perfect fit. Our tops are designed to flatter and celebrate every woman.</p><h2>Sustainable Women’s Tops</h2><p>Our sustainable women’s tops are crafted with the softest fibers on Earth, ensuring unparalleled comfort throughout the day. Experience the indulgence of our sustainable TENCEL™ fabric, derived from botanic sources, which offers breathability without sacrificing sophistication.</p><h2>Elevate Your Wardrobe - Shop Our Women’s Tops</h2><p>With Bleusalt's luxurious women tops, you can effortlessly elevate your wardrobe to new heights of sophistication. Discover why Bleusalt is the top luxury clothing brand for women seeking to build a capsule wardrobe.<br/></p>"
+          }
+        },
+        "heading_KYeChB": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_bhCweV": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_whWTme",
+        "heading_KYeChB",
+        "text_bhCweV"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -164,6 +204,7 @@
     "product-grid",
     "1734416630f7a21117",
     "1660937591af29c294",
-    "aa41b3b6-ee72-40cb-9596-20aee70eed9b"
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
+    "rich_text_TBQFyn"
   ]
 }
