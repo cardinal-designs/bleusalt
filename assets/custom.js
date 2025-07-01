@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       giftCardForm.style.display = this.checked ? "block" : "none";
     });
   }
+
+  document.querySelectorAll('.quote-press__logo[data-bg]').forEach(function(el) {
+    el.style.backgroundImage = 'url(' + el.dataset.bg + ')';
+    el.removeAttribute('data-bg');
+  });
   
 });
 
