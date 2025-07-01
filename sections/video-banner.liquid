@@ -142,9 +142,9 @@
             controls="controls"
             preload="metadata"
             aria-label="Potion beats"
-            poster="{{ section.settings.video_poster_image | img_url: 'small'  }}"
         >
             <source src="{{ section.settings.video_url }}" type="video/mp4" />
+            {{ section.settings.video_poster_image | image_tag }}
           </video>
 
         
