@@ -132,20 +132,7 @@
           aria_label: section.settings.description
         }}
 
-        {{ section.settings.video  | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
-
-        <video
-            playsinline="playsinline"
-            autoplay="autoplay"
-            loop="loop"
-            muted="muted"
-            controls="controls"
-            preload="metadata"
-            aria-label="Potion beats"
-        >
-            <source src="{{ section.settings.video_url }}" type="video/mp4" />
-            {{ section.settings.video_poster_image | image_tag }}
-          </video>
+        {{ section.settings.video_url_1  | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
 
         
         {% comment %}
