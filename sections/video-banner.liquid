@@ -133,7 +133,7 @@
             controls: false
           }}
         {% endcapture %}
-        {% assign video_title = section.settings.video_url_1 | img_url: 'original' | split: "?" | first | split: "/" | last | replace: "_", " " | replace: "-", " " %}
+        {% assign video_title = section.settings.video_url_1.alt %}
         {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
         {{ video_tag_captured | replace: "<img", image_tag_replace }}
         {% render 'video-controls', id: video_id %}
@@ -144,7 +144,7 @@
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
       {% capture video_tag_captured %}
-        {{ section.settings.video_url_1 | media_tag: 
+        {{ section.settings.video_url_mobile_1 | media_tag: 
           id: video_id,
           class: 'banner__video', 
           preload: 'metadata', 
@@ -156,7 +156,7 @@
           controls: false
         }}
       {% endcapture %}
-      {% assign video_title = section.settings.video_url_1 | img_url: 'original' | split: "?" | first | split: "/" | last | replace: "_", " " | replace: "-", " " %}
+      {% assign video_title = section.settings.video_url_mobile_1.alt %}
       {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
       {{ video_tag_captured | replace: "<img", image_tag_replace }}
       {% render 'video-controls', id: video_id %}
