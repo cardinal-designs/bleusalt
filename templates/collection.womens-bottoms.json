@@ -149,6 +149,84 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "faq_new_ecE8yW": {
+      "type": "faq-new",
+      "blocks": {
+        "text_block_NackHg": {
+          "type": "text_block",
+          "settings": {
+            "question": "What materials are used in Bleusalt women’s bottoms?",
+            "answer": "<p>Bleusalt bottoms are made from ultra-soft, sustainable TENCEL™ fabric derived from beechwood fibers, offering luxurious comfort and eco-conscious quality.</p>"
+          }
+        },
+        "text_block_Piac3U": {
+          "type": "text_block",
+          "settings": {
+            "question": "Are Bleusalt women’s bottoms sustainable?",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_NVVWwr": {
+          "type": "text_block",
+          "settings": {
+            "question": "What sizes are available for Bleusalt women’s bottoms?",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_itf8iK": {
+          "type": "text_block",
+          "settings": {
+            "question": "Are Bleusalt pants and leggings suitable for travel or daily wear?",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_Q6izfe": {
+          "type": "text_block",
+          "settings": {
+            "question": "How do I care for my Bleusalt leggings or pants?",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_EcHkie": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I build a capsule wardrobe with Bleusalt women’s bottoms?",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_Hty9j7": {
+          "type": "text_block",
+          "settings": {
+            "question": "What makes Bleusalt women’s bottoms luxurious?",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_3bd3eM": {
+          "type": "text_block",
+          "settings": {
+            "question": "Do any celebrities wear Bleusalt bottoms?",
+            "answer": "<p>Add Answer</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_NackHg",
+        "text_block_Piac3U",
+        "text_block_NVVWwr",
+        "text_block_itf8iK",
+        "text_block_Q6izfe",
+        "text_block_EcHkie",
+        "text_block_Hty9j7",
+        "text_block_3bd3eM"
+      ],
+      "name": "FAQ NEW",
+      "settings": {
+        "title": "FAQ",
+        "subtitle": "FAQ Subtitle",
+        "faq_footer_title": "If you can’t find answer for your quesion, contact us",
+        "faq_footer_email": "lipsum@example.com"
+      }
     }
   },
   "order": [
@@ -156,6 +234,7 @@
     "product-grid",
     "1734417078762a987e",
     "1660937591af29c294",
-    "aa41b3b6-ee72-40cb-9596-20aee70eed9b"
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
+    "faq_new_ecE8yW"
   ]
 }
