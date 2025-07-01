@@ -142,10 +142,9 @@
             controls="controls"
             preload="metadata"
             aria-label="Potion beats"
-            poster="//polinas-potent-potions.myshopify.com/cdn/shop/products/4edc28a708b7405093a927cebe794f1a.thumbnail.0000000_small.jpg?v=1655255324"
+            poster="{{ section.settings.video_poster_image | img_url: 'small'  }}"
         >
             <source src="{{ section.settings.video_url }}" type="video/mp4" />
-            <img src="{{ section.settings.video_url }}" />
           </video>
 
         
