@@ -127,14 +127,7 @@
   {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
   {% endif %}
-  <!--/ Extra info to showcase like if you don't find contact us to this email address -->
-  {% if section.settings.faq_footer_title != blank %}
-  	<div class="faq-footer-title"><h3>{{ section.settings.faq_footer_title }}</h3></div>
-  {% endif %}
-  
-  {% if section.settings.faq_footer_email != blank %}
-  	<div class="faq-footer-email"><a href="mailto:{{ section.settings.faq_footer_email }}">{{ section.settings.faq_footer_email }}</a></div>
-  {% endif %}
+
   
 </div>
 <!--/ Script for toggle of question/answer. It is using font awesome for plus on unopen state and minus on opened state -->
@@ -171,20 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "id": "subtitle",
         "label": "FAQ page subtitle",
         "default": "FAQ Subtitle"
-      },
-	  {
-        "type": "text",
-        "id": "faq_footer_title",
-        "label": "Footer title",
-        "default": "If you can’t find answer for your quesion, contact us"
-      },
-	  {
-        "type": "text",
-        "id": "faq_footer_email",
-        "label": "Footer email",
-        "default": "lipsum@example.com"
       }
-      
     ],
     "blocks": [
       {

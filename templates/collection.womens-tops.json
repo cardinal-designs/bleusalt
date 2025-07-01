@@ -157,6 +157,42 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "faq_new_VxmFhr": {
+      "type": "faq-new",
+      "blocks": {
+        "text_block_VnXbqF": {
+          "type": "text_block",
+          "settings": {
+            "question": "Add Question",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_RRxJpB": {
+          "type": "text_block",
+          "settings": {
+            "question": "Add Question",
+            "answer": "<p>Add Answer</p>"
+          }
+        },
+        "text_block_QEXTtJ": {
+          "type": "text_block",
+          "settings": {
+            "question": "Add Question",
+            "answer": "<p>Add Answer</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_VnXbqF",
+        "text_block_RRxJpB",
+        "text_block_QEXTtJ"
+      ],
+      "name": "FAQ NEW",
+      "settings": {
+        "title": "FAQ",
+        "subtitle": "FAQ Subtitle"
+      }
     }
   },
   "order": [
@@ -164,6 +200,7 @@
     "product-grid",
     "1734416630f7a21117",
     "1660937591af29c294",
-    "aa41b3b6-ee72-40cb-9596-20aee70eed9b"
+    "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
+    "faq_new_VxmFhr"
   ]
 }
