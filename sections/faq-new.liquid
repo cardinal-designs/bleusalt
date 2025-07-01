@@ -1,6 +1,163 @@
+{% if section.settings.title != blank %}
+      <div class="page-width">
+        <div class="title-holder">
+          <h2>{{ section.settings.title | escape }}</h2>
+          <p class="faq-subtitle">{{ section.settings.subtitle }}</p>
+        </div>
+      </div>
+  {% endif %}
+  <!--/ By dfeault the answers are hidden and jquery used below will toggle on click-->
+<style type="text/css">
+  .faq-answer{display:none;}
+  .faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    background: #ececec;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    cursor: pointer;
+}.faq-question span {
+    display: inline-block;
+    float: right;
+    height: 25px;
+    width: 25px;
+    background: #bdbdbd;
+    text-align: center;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}.faq-answer {
+    background: white;
+    padding: 20px 30px 30px;
+    box-shadow: 5px 5px 65px #e7e7e7;
+    margin-bottom: 25px;
+}
+.faq-wrapper .faq-question span i {
+   text-stroke: 1px #bdbdbd;
+   -webkit-text-stroke: 1px #bdbdbd;
+   -moz-text-stroke: 1px #bdbdbd;
+   -ms-text-stroke: 1px #bdbdbd;
+   font-size: 15px;
+}.faq-wrapper .faq-question span {
+   line-height: 23px;
+}
+
+</style>
+<div class="page-width" data-section-id="{{ section.id }}">
+  {% if section.blocks.size > 0 %}
+    <div class="faq-wrapper">
+        {% for block in section.blocks %}
+          <div class="faq--{{ block.id }}" {{ block.shopify_attributes }}>
+            <div class="faq-individual">
+              {% if block.settings.question != blank %}
+              <div class="faq-question">{{ block.settings.question }} <span><i class="fa fa-plus"></i></span></div>
+              {% endif %}
+              {% if block.settings.answer != blank %}
+                <div class="faq-answer">{{ block.settings.answer }}</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+  <!--/ Extra info to showcase like if you don't find contact us to this email address -->
+  {% if section.settings.faq_footer_title != blank %}
+  	<div class="faq-footer-title"><h3>{{ section.settings.faq_footer_title }}</h3></div>
+  {% endif %}
+  
+  {% if section.settings.faq_footer_email != blank %}
+  	<div class="faq-footer-email"><a href="mailto:{{ section.settings.faq_footer_email }}">{{ section.settings.faq_footer_email }}</a></div>
+  {% endif %}
+  
+</div>
+<!--/ Script for toggle of question/answer. It is using font awesome for plus on unopen state and minus on opened state -->
+<script type="text/javascript">
+jQuery('.faq-question').click(function(){
+  jQuery(this).siblings('.faq-answer').slideToggle();
+    jQuery(this).parent().toggleClass('open-state');
+    if(jQuery(this).find('.fa').hasClass('fa-plus')){
+      jQuery(this).find('.fa').removeClass('fa-plus');
+
+      jQuery(this).find('.fa').addClass('fa-minus');
+    }else if(jQuery(this).find('.fa').hasClass('fa-minus')){
+      jQuery(this).find('.fa').removeClass('fa-minus');
+
+      jQuery(this).find('.fa').addClass('fa-plus');
+    }
+});
+</script>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "FAQ NEW",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "FAQ page heading",
+        "default": "FAQ"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "FAQ page subtitle",
+        "default": "FAQ Subtitle"
+      },
+	  {
+        "type": "text",
+        "id": "faq_footer_title",
+        "label": "Footer title",
+        "default": "If you can’t find answer for your quesion, contact us"
+      },
+	  {
+        "type": "text",
+        "id": "faq_footer_email",
+        "label": "Footer email",
+        "default": "lipsum@example.com"
+      }
+      
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Add Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Add answer",
+            "default": "<p>Add Answer</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ NEW",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
