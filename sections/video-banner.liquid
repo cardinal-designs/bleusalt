@@ -120,9 +120,7 @@
     <div class="small-hide">
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
-
-        <div aria-describedby="video-desc">
-           {{ section.settings.video_url_1 | media_tag: 
+          {{ section.settings.video_url_1 | media_tag: 
             id: video_id,
             class: 'banner__video', 
             preload: 'metadata', 
@@ -133,12 +131,7 @@
             aria_label: section.settings.description,
             controls: false
           }}
-          
-        </div>
         {% render 'video-controls', id: video_id %}
-
-        
-         
       </div>
     </div>
   {%- endif -%}
