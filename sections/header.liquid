@@ -372,7 +372,7 @@
                   <ul class="list-unstyled">
                     {% for link in linklists.mobile-menu-secondary.links %}
                       <li>
-                        <a href="{{ link.url }}" class="link mobile-menu__secondary-link"{% if link.current %} aria-current="page"{% endif %}>
+                        <a href="{{ link.url }}" class="link mobile-menu__secondary-link"{% if link.current %} aria-current="page"{% endif %} aria-label="Go To {{ link.url | split: '?' | first | split: '/' | last | replace: '_', ' ' | replace: '-', ' ' }}">
                           {{ link.title | escape }}
                         </a>
                       </li>
