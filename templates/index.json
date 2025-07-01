@@ -55,7 +55,9 @@
       ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/327135d12a204c15a4848c927e502d25.mp4",
+        "video_url_1": "shopify://files/videos/Bleu LS 1 50sec-Bleu Banner w_1_1.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/327135d12a204c15a4848c927e502d25.mp4",
+        "video_url_mobile_1": "shopify://files/videos/Bleu LS 1 50sec-Bleu Banner w_1_1.mp4",
         "video_poster_image": "shopify://shop_images/581676CD-99B8-4C70-9DFA-45B47B6120DA.jpg",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
