@@ -932,6 +932,7 @@
                                       <li>
                                         <a aria-label="Link to {{ link.title }} - {{ grandchildlink.title }}" href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                           {{ grandchildlink.title | escape }}
+                                      mega-menu__link link
                                         </a>
                                       </li>
                                     {%- endfor -%}
