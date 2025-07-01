@@ -131,6 +131,23 @@
           playsinline: true, 
           aria_label: section.settings.description
         }}
+
+        {{ section.settings.video  | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+
+        <video
+            playsinline="playsinline"
+            autoplay="autoplay"
+            loop="loop"
+            muted="muted"
+            controls="controls"
+            preload="metadata"
+            aria-label="Potion beats"
+            poster="//polinas-potent-potions.myshopify.com/cdn/shop/products/4edc28a708b7405093a927cebe794f1a.thumbnail.0000000_small.jpg?v=1655255324"
+        >
+            <source src="{{ section.settings.video_url }}" type="video/mp4" />
+            <img src="{{ section.settings.video_url }}" />
+          </video>
+
         
         {% comment %}
         <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto"   aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url }}" data-expand="-10" width="100%"></video>
