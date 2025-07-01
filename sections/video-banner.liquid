@@ -120,6 +120,7 @@
     <div class="small-hide">
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
+        {% capture video_tag_captured %}
           {{ section.settings.video_url_1 | media_tag: 
             id: video_id,
             class: 'banner__video', 
@@ -131,6 +132,10 @@
             aria_label: section.settings.description,
             controls: false
           }}
+        {% endcapture %}
+        {% assign video_title = section.settings.video_url_1 | img_url: 'original' | split: "?" | first | split: "/" | last | replace: "_", " " | replace: "-", " " %}
+        {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
+        {{ video_tag_captured | replace: "<img", image_tag_replace }}
         {% render 'video-controls', id: video_id %}
       </div>
     </div>
@@ -138,6 +143,7 @@
   {%- if section.settings.video_url_mobile_1 -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
+      {% capture video_tag_captured %}
         {{ section.settings.video_url_1 | media_tag: 
           id: video_id,
           class: 'banner__video', 
@@ -149,6 +155,10 @@
           aria_label: section.settings.description,
           controls: false
         }}
+      {% endcapture %}
+      {% assign video_title = section.settings.video_url_1 | img_url: 'original' | split: "?" | first | split: "/" | last | replace: "_", " " | replace: "-", " " %}
+      {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
+      {{ video_tag_captured | replace: "<img", image_tag_replace }}
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
