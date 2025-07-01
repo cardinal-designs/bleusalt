@@ -142,26 +142,13 @@
           id: video_id,
           class: 'banner__video', 
           preload: 'auto', 
-          autoplay: true, 
-          loop: true, 
-          muted: true,
-          playsinline: true, 
+          autoplay: '', 
+          loop: '', 
+          muted: '',
+          playsinline: '', 
           aria_label: section.settings.description,
           controls: false
         }}
-
-      {{ section.settings.video_mobile | video_tag:
-        id: video_id,
-        class: 'banner__video',
-        preload: 'auto',
-        aria_hidden: true,
-        muted: true,
-        autoplay: true,
-        loop: true,
-        playsinline: true,
-        aria_label: section.settings.description,
-        poster: section.settings.poster_url_mobile 
-      }}
       
       {% render 'video-controls', id: video_id %}
     </div>
