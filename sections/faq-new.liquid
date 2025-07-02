@@ -8,7 +8,7 @@
   {% endif %}
   <!--/ By dfeault the answers are hidden and jquery used below will toggle on click-->
 <style type="text/css">
-     .faq-answer {
+.faq-answer {
   display: none;
   overflow: hidden;
   transition: max-height 0.3s ease;
@@ -98,8 +98,88 @@
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1024px) {
+  .faq-answer {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 10px;
+  }
+
+  .faq-question span {
+    font-size: 13px;
+    height: 22px;
+    width: 22px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .title-holder h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
 }
 
+@media (max-width: 768px) {
+  .faq-answer {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px;
+  }
+
+  .faq-question span {
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .faq-answer p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .title-holder h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-question {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .faq-question span {
+    font-size: 11px;
+    height: 18px;
+    width: 18px;
+  }
+
+  .title-holder h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .faq-answer p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
 </style>
 <div class="page-width" data-section-id="{{ section.id }}" style="padding-bottom: 80px;">
   {% if section.blocks.size > 0 %}
