@@ -177,6 +177,132 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_aMrPbY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MUntnM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Corporate Gifting</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_BQEmcd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Timeless. Sizeless. Effortless Luxury.</p>"
+          }
+        },
+        "heading_F4MepD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Elevated Gifting, Thoughtfully Delivered</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_g4V4mQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt offers a refined corporate gifting experience featuring sustainable, luxurious basics that are beloved by celebrities, executives and tastemakers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MUntnM",
+        "text_BQEmcd",
+        "heading_F4MepD",
+        "text_g4V4mQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_bnj9aA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wtcUKe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Bleusalt Gifts Make a Lasting Impression",
+            "heading_size": "h2"
+          }
+        },
+        "text_8P3QpL": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Sizeless options that make gifting effortless and elegant </li><li>Customizable options</li><li>Sustainably made in the USA </li><li>Celebrity-favorite brand worn by style icons like Meghan Markle and Cindy Crawford</li><li>Seamless bulk ordering at wholesale prices with white-glove service </li><li>Beautiful minimal packaging</li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wtcUKe",
+        "text_8P3QpL"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Corporate_Gifts_1.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_JW6bwx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dpaydy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Popular Sizeless Gift Options",
+            "heading_size": "h2"
+          }
+        },
+        "text_3wix9X": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>The Bleusalt Wrap:</strong> Our bestselling travel essential </li><li><strong>Luxe Scarves: </strong>A cozy, gender-neutral classic</li><li><strong>Beanies: NEED DESCRIPTION</strong></li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dpaydy",
+        "text_3wix9X"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/iStock-1207059415.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1676492971e2872bb9": {
       "type": "apps",
       "settings": {
@@ -210,6 +336,9 @@
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
     "image_with_text_yMj7cG",
+    "rich_text_aMrPbY",
+    "image_with_text_bnj9aA",
+    "image_with_text_JW6bwx",
     "1676492971e2872bb9",
     "1728584017c433d725"
   ]
