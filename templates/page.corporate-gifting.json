@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_heading": false,
         "heading_size": "h2",
@@ -18,6 +19,100 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "page_width": "page-width--narrow"
+      }
+    },
+    "image_with_text_dk6JdV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ENQ8mp": {
+          "type": "heading",
+          "settings": {
+            "heading": "BESPOKE GIFTING",
+            "heading_size": "h1"
+          }
+        },
+        "text_7w7mxA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team will work with you to create tailor-made Bleusalt pieces that reflect your brand, your values, and your intention. From first conversation to final detail, we bring your vision to life with care, sophistication, and ease.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_CQgcta": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_ENQ8mp",
+        "text_7w7mxA",
+        "button_CQgcta"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Corporate_Gifts_1.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_JRfzHY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jbVADh": {
+          "type": "heading",
+          "settings": {
+            "heading": "BESPOKE GIFTING",
+            "heading_size": "h1"
+          }
+        },
+        "text_WtRPDU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team will work with you to create tailor-made Bleusalt pieces that reflect your brand, your values, and your intention. From first conversation to final detail, we bring your vision to life with care, sophistication, and ease.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_CYPpga": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_jbVADh",
+        "text_WtRPDU",
+        "button_CYPpga"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/iStock-1207059415.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1676492971e2872bb9": {
@@ -49,6 +144,8 @@
   },
   "order": [
     "main",
+    "image_with_text_dk6JdV",
+    "image_with_text_JRfzHY",
     "1676492971e2872bb9",
     "1728584017c433d725"
   ]
