@@ -28,7 +28,7 @@
           "type": "heading",
           "settings": {
             "heading": "BESPOKE GIFTING",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_7w7mxA": {
@@ -67,7 +67,7 @@
           "type": "heading",
           "settings": {
             "heading": "THE BLEUSALT EXPERIENCE",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_WtRPDU": {
@@ -106,7 +106,7 @@
           "type": "heading",
           "settings": {
             "heading": "CUSTOMIZED WITH CARE",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_WpjrCU": {
@@ -145,7 +145,7 @@
           "type": "heading",
           "settings": {
             "heading": "ELEVATE YOUR MOMENT",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_qPXgUk": {
@@ -303,6 +303,39 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_p4kEwi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bt3K87": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Effortless Ordering and Concierge Support</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_BPYCeR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team will assist you with choosing the perfect gifts, offer wholesale pricing and ensure a seamless experience from start to finish. Let us handle the details while you enjoy the gratitude.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bt3K87",
+        "text_BPYCeR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1676492971e2872bb9": {
       "type": "apps",
       "settings": {
@@ -339,6 +372,7 @@
     "rich_text_aMrPbY",
     "image_with_text_bnj9aA",
     "image_with_text_JW6bwx",
+    "rich_text_p4kEwi",
     "1676492971e2872bb9",
     "1728584017c433d725"
   ]
