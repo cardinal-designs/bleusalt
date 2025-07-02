@@ -1,6 +1,6 @@
 {% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-{%- if section.settings.video_url_1 != blank and section.settings.video_url_mobile_1 != blank -%}
+{%- if section.settings.video_url != blank and section.settings.video_url_mobile != blank -%}
 
 {% assign video_height_mobile = section.settings.video_height_mobile %}
 {% if section.settings.video_height_mobile == 'square' %}
@@ -116,49 +116,19 @@
   id="Banner-{{ section.id }}" 
   class="video-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}"
 >
-  {%- if section.settings.video_url_1 -%}
+  {%- if section.settings.video_url != blank -%}
     <div class="small-hide">
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
-        {% capture video_tag_captured %}
-          {{ section.settings.video_url_1 | media_tag: 
-            id: video_id,
-            class: 'banner__video', 
-            preload: 'metadata', 
-            autoplay: true, 
-            loop: true, 
-            muted: true,
-            playsinline: true, 
-            aria_label: section.settings.description,
-            controls: false
-          }}
-        {% endcapture %}
-        {% assign video_title = section.settings.description %}
-        {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
-        {{ video_tag_captured | replace: "<img", image_tag_replace }}
+        <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto"   aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url }}" data-expand="-10" width="100%"></video>
         {% render 'video-controls', id: video_id %}
       </div>
     </div>
   {%- endif -%}
-  {%- if section.settings.video_url_mobile_1 -%}
+  {%- if section.settings.video_url_mobile != blank -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
-      {% capture video_tag_captured %}
-        {{ section.settings.video_url_mobile_1 | media_tag: 
-          id: video_id,
-          class: 'banner__video', 
-          preload: 'metadata', 
-          autoplay: '', 
-          loop: '', 
-          muted: '',
-          playsinline: '', 
-          aria_label: section.settings.description,
-          controls: false
-        }}
-      {% endcapture %}
-      {% assign video_title = section.settings.description %}
-      {% assign image_tag_replace = '<img alt="' | append: video_title | append: '" ' %}
-      {{ video_tag_captured | replace: "<img", image_tag_replace }}
+      <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto" aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url_mobile }}" data-expand="-10" width="100%"></video>
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
@@ -238,14 +208,14 @@
   "class": "section section--video-banner",
   "settings": [
     {
-      "type": "video",
-      "id": "video_url_1",
+      "type": "url",
+      "id": "video_url",
       "label": "Video URL"
     },
     {
-      "type": "video",
-      "id": "video_url_mobile_1",
-      "label": "video_url_mobile_1"
+      "type": "url",
+      "id": "video_url_mobile",
+      "label": "Video URL (mobile)"
     },
     {
       "type": "text",
