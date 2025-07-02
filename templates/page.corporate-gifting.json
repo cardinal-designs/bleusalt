@@ -318,11 +318,25 @@
           "settings": {
             "text": "<p>Our team will assist you with choosing the perfect gifts, offer wholesale pricing and ensure a seamless experience from start to finish. Let us handle the details while you enjoy the gratitude.</p>"
           }
+        },
+        "text_ad6JRE": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Contact Us</h3>"
+          }
+        },
+        "text_7XQFpn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lyndie Benson, Founder & CEO <br/><a href=\"mailto:Lyndie@bleusalt.com\"><span style=\"text-decoration:underline\">Lyndie@bleusalt.com<br/></span></a><a href=\"http://bleusalt.com/corporate-gifting\"><span style=\"text-decoration:underline\">Bleusalt.com/corporate-gifting</span></a></p>"
+          }
         }
       },
       "block_order": [
         "heading_bt3K87",
-        "text_BPYCeR"
+        "text_BPYCeR",
+        "text_ad6JRE",
+        "text_7XQFpn"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
