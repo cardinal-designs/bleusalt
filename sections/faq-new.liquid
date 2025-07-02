@@ -132,31 +132,18 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.faq-question').forEach(function (question) {
-    question.addEventListener('click', function () {
-      const answer = this.parentElement.querySelector('.faq-answer');
-      const icon = this.querySelector('.fa');
-      const parent = this.parentElement;
-
-      // Toggle answer visibility using slide effect
-      if (answer.style.maxHeight) {
-        answer.style.maxHeight = null;
-      } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
+  jQuery('.faq-question').click(function(){
+    jQuery(this).siblings('.faq-answer').slideToggle();
+      jQuery(this).parent().toggleClass('open-state');
+      if(jQuery(this).find('.fa').hasClass('fa-plus')){
+        jQuery(this).find('.fa').removeClass('fa-plus');
+  
+        jQuery(this).find('.fa').addClass('fa-minus');
+      }else if(jQuery(this).find('.fa').hasClass('fa-minus')){
+        jQuery(this).find('.fa').removeClass('fa-minus');
+  
+        jQuery(this).find('.fa').addClass('fa-plus');
       }
-
-      // Toggle open class
-      parent.classList.toggle('open-state');
-
-      // Toggle icons
-      if (icon.classList.contains('fa-plus')) {
-        icon.classList.remove('fa-plus');
-        icon.classList.add('fa-minus');
-      } else if (icon.classList.contains('fa-minus')) {
-        icon.classList.remove('fa-minus');
-        icon.classList.add('fa-plus');
-      }
-    });
   });
 });
 </script>
