@@ -137,12 +137,18 @@ document.addEventListener('DOMContentLoaded', function () {
       const answer = this.parentElement.querySelector('.faq-answer');
       const icon = this.querySelector('.fa');
       const parent = this.parentElement;
+
+      // Toggle answer visibility using slide effect
       if (answer.style.maxHeight) {
         answer.style.maxHeight = null;
       } else {
         answer.style.maxHeight = answer.scrollHeight + "px";
       }
+
+      // Toggle open class
       parent.classList.toggle('open-state');
+
+      // Toggle icons
       if (icon.classList.contains('fa-plus')) {
         icon.classList.remove('fa-plus');
         icon.classList.add('fa-minus');
