@@ -299,6 +299,7 @@
   border-radius: 3px !important;
   background-color: #0d1c29 !important;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+  margin-top: 20px;
 }
 
 .klaviyo-form-UGk4Ub button.needsclick.go300628013.kl-private-reset-css-Xuajs1:hover {
