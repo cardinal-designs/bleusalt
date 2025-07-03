@@ -271,6 +271,7 @@
 .klaviyo-form-UGk4Ub {
   width: 100%;
   max-width: var(--page-width);
+  padding: 0 1.5rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
