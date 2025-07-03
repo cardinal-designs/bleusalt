@@ -286,18 +286,18 @@
   justify-content: center;
   align-items: center;
   border: 0;
-  padding: 0 3rem;
-  cursor: pointer;
+  padding: 0 3rem !important;
+  cursor: pointer !important;
   font: inherit;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff !important;
   transition: box-shadow var(--duration-short) ease;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 3px;
-  background-color: #0d1c29;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border-radius: 3px !important;
+  background-color: #0d1c29 !important;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
 }
 
