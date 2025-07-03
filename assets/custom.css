@@ -297,7 +297,8 @@
   -webkit-appearance: none;
   appearance: none;
   border-radius: 3px;
-  background-color: rgba(var(--color-button), var(--alpha-button-background);
+  background-color: #0d1c29;
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
 }
 
 @media screen and (min-width: 750px) {
