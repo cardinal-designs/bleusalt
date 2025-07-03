@@ -292,7 +292,7 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgb(var(--color-button-text));
+  color: #fff !important;
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
