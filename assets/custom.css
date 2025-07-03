@@ -281,6 +281,11 @@
   color: rgb(var(--color-foreground)) !important;
 }
 
+.klaviyo-form-UGk4Ub > div {
+  max-width: 100%;
+  width: 100%;
+}
+
 .klaviyo-form-UGk4Ub *:focus,
 .klaviyo-form-UGk4Ub *:focus-visible,
 .klaviyo-form-UGk4Ub *:focus-within {
