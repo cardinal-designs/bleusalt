@@ -320,7 +320,15 @@
 .klaviyo-form-UGk4Ub input:focus,
 .klaviyo-form-UGk4Ub input:focus-visible,
 .klaviyo-form-UGk4Ub input:focus-within {
-  border: 1px solid #0d1c29 !important;
+  outline-width: 2px;
+  outline-style: auto;
+  outline-color: #0d1c29;
+  outline-offset: 0;
+}
+
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus,
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus-visible,
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus-within {
   outline: none !important;
 }
 
