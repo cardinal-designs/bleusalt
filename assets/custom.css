@@ -263,3 +263,181 @@
   }
   
 }
+
+
+
+/* corporate-gifting Klaviyo CSS start */
+
+.klaviyo-form-UGk4Ub {
+  width: 100%;
+  max-width: var(--page-width);
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.klaviyo-form-UGk4Ub * {
+  font-family: var(--font-heading-family) !important;
+  color: rgb(var(--color-foreground)) !important;
+}
+
+.klaviyo-form-UGk4Ub span,
+.klaviyo-form-UGk4Ub div {
+  line-height: calc(1 + 0.8 / 1.0) !important;
+  font-size: 1.5rem !important;
+}
+
+.klaviyo-form-UGk4Ub > div {
+  max-width: 100%;
+  width: 100%;
+}
+
+.klaviyo-form-UGk4Ub *:focus,
+.klaviyo-form-UGk4Ub *:focus-visible,
+.klaviyo-form-UGk4Ub *:focus-within {
+  outline: none !important;
+}
+
+.klaviyo-form-UGk4Ub .kl-private-reset-css-Xuajs1 h1 *,
+.klaviyo-form-UGk4Ub .kl-private-reset-css-Xuajs1 h2 *,
+.klaviyo-form-UGk4Ub .kl-private-reset-css-Xuajs1 h3 * {
+  font-size: calc(1.0 * 2.4rem) !important;
+  line-height: calc(1 + .3 / max(1, 1.0)) !important;
+  font-weight: 400 !important;
+}
+
+.klaviyo-form-UGk4Ub button.needsclick.go300628013.kl-private-reset-css-Xuajs1 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: 0 3rem !important;
+  cursor: pointer !important;
+  font: inherit;
+  font-size: 1.5rem !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff !important;
+  transition: box-shadow var(--duration-short) ease;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border-radius: 3px !important;
+  background-color: #0d1c29 !important;
+  border: 2px solid transparent !important;
+  margin-top: 20px;
+}
+
+.klaviyo-form-UGk4Ub button.needsclick.go300628013.kl-private-reset-css-Xuajs1:hover {
+  outline: 1px solid #0d1c29 !important;
+}
+
+.klaviyo-form-UGk4Ub button#downshift-0-toggle-button {
+  display: flex;
+  align-items: center;
+}
+
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1,
+.klaviyo-form-UGk4Ub input {
+  border-radius: 3px !important;
+  border: 1px solid #0d1c29 !important;
+}
+
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input {
+  border-radius: 0px !important;
+  border: 1px solid transparent !important;
+}
+
+.klaviyo-form-UGk4Ub input:focus,
+.klaviyo-form-UGk4Ub input:focus-visible,
+.klaviyo-form-UGk4Ub input:focus-within {
+  outline-width: 2px !important;
+  outline-style: auto!important;
+  outline-color: #0d1c29!important;
+  outline-offset: 0;
+}
+
+.klaviyo-form-UGk4Ub input::placeholder {
+  font-family: var(--font-heading-family) !important;
+}
+
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1:focus,
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1:focus-visible,
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1:focus-within {
+  outline-width: 2px !important;
+  outline-style: auto!important;
+  outline-color: #0d1c29!important;
+  outline-offset: 0;
+}
+
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus,
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus-visible,
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus-within {
+  outline: none !important;
+}
+
+.klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"] {
+  max-width: 100%;
+  width: 100%;
+}
+
+.klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-last-child(2) {
+  max-width: 920px;
+}
+
+.klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"] .kl-private-reset-css-Xuajs1 label {
+  min-width: 280px;
+  padding-bottom: 30px !important;
+}
+
+@media screen and (min-width: 750px) {
+  
+  .klaviyo-form-UGk4Ub {
+    padding: 0 5rem;
+  }
+
+  .klaviyo-form-UGk4Ub * {
+    font-family: var(--font-heading-family) !important;
+    color: rgb(var(--color-foreground)) !important;
+    line-height: calc(1 + 0.8 / 1.0) !important;
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .klaviyo-form-UGk4Ub .kl-private-reset-css-Xuajs1 h1 *,
+  .klaviyo-form-UGk4Ub .kl-private-reset-css-Xuajs1 h2 *,
+  .klaviyo-form-UGk4Ub .kl-private-reset-css-Xuajs1 h3 * {
+    font-size: calc(1.0 * 2rem) !important;
+    line-height: calc(1 + .3 / max(1, 1.0)) !important;
+    font-weight: 400 !important;
+  }
+  
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(3),
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(4),
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(5) {
+    max-width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: unset !important;
+  }
+
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(3) [data-testid="form-component"],
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(4) [data-testid="form-component"],
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(5) [data-testid="form-component"] {
+    flex: unset !important;
+  }
+  
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(3) [data-testid="form-component"] > div,
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(4) [data-testid="form-component"] > div,
+  .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-child(5) [data-testid="form-component"] > div {
+    width: 100% !important;
+  }
+
+  .klaviyo-form-UGk4Ub form[data-testid=klaviyo-form-UGk4Ub] > div div[data-testid=form-row] .kl-private-reset-css-Xuajs1 label {
+    padding-bottom: 10px !important;
+    width: auto;
+  }
+  
+}
