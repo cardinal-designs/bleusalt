@@ -274,11 +274,10 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  font-family: var(--font-heading-family);
 }
 
 .klaviyo-form-UGk4Ub * {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-heading-family) !important;
 }
 
 @media screen and (min-width: 750px) {
