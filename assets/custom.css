@@ -359,7 +359,7 @@
   outline: none !important;
 }
 
-.klaviyo-form-UGk4Ub [data-testid="form-row"]:nth-last-child(2) {
+.klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-last-child(2) {
   max-width: 840px;
 }
 
