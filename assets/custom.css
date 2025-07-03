@@ -296,6 +296,7 @@
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
+  border-radius: 3px;
   background-color: rgba(var(--color-button), var(--alpha-button-background);
 }
 
