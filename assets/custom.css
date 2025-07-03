@@ -274,6 +274,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  font-family: var(--font-heading-family);
 }
 
 @media screen and (min-width: 750px) {
