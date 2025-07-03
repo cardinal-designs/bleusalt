@@ -301,6 +301,11 @@
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
 }
 
+.klaviyo-form-UGk4Ub button.needsclick.go300628013.kl-private-reset-css-Xuajs1:hover {
+  --border-offset: 1.3px;
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+}
+
 @media screen and (min-width: 750px) {
   .klaviyo-form-UGk4Ub {
     padding: 0 5rem;
