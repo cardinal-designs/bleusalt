@@ -281,6 +281,12 @@
   color: rgb(var(--color-foreground)) !important;
 }
 
+.klaviyo-form-UGk4Ub *:focus,
+.klaviyo-form-UGk4Ub *:focus-visible,
+.klaviyo-form-UGk4Ub *:focus-within {
+  outline: none !important;
+}
+
 .klaviyo-form-UGk4Ub button.needsclick.go300628013.kl-private-reset-css-Xuajs1 {
   display: inline-flex;
   justify-content: center;
@@ -329,12 +335,6 @@
 .klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus,
 .klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus-visible,
 .klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input:focus-within {
-  outline: none !important;
-}
-
-.klaviyo-form-UGk4Ub [data-testid="form-component"]:focus,
-.klaviyo-form-UGk4Ub [data-testid="form-component"]:focus-visible,
-.klaviyo-form-UGk4Ub [data-testid="form-component"]:focus-within {
   outline: none !important;
 }
 
