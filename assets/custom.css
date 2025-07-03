@@ -277,6 +277,10 @@
   font-family: var(--font-heading-family);
 }
 
+.klaviyo-form-UGk4Ub * {
+  font-family: var(--font-heading-family);
+}
+
 @media screen and (min-width: 750px) {
   .klaviyo-form-UGk4Ub {
     padding: 0 5rem;
