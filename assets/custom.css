@@ -429,6 +429,7 @@
 
   .klaviyo-form-UGk4Ub form[data-testid=klaviyo-form-UGk4Ub] > div div[data-testid=form-row] .kl-private-reset-css-Xuajs1 label {
     padding-bottom: 10px !important;
+    width: auto;
   }
   
 }
