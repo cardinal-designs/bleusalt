@@ -376,6 +376,7 @@
 
 .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"] .kl-private-reset-css-Xuajs1 label {
   min-width: 280px;
+  padding-bottom: 30px !important;
 }
 
 @media screen and (min-width: 750px) {
