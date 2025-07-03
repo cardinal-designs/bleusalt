@@ -206,7 +206,7 @@
           "type": "text_block",
           "settings": {
             "question": "Do any celebrities wear Bleusalt bottoms?",
-            "answer": "<p>Yes—iconic pieces in the collection were designed in collaboration with or inspired by figures like Kaia Gerber and Cindy Crawford.</p>"
+            "answer": "<p>Yes—iconic pieces in the collection were designed in collaboration with or inspired by figures like Kaia Gerber and Cindy Crawford. Many celebrities and royals around the world also wear Bleusalt, including Meghan, The Duchess of Sussex.</p>"
           }
         }
       },
@@ -223,9 +223,7 @@
       "name": "FAQ NEW",
       "settings": {
         "title": "FAQ",
-        "subtitle": "",
-        "faq_footer_title": "",
-        "faq_footer_email": ""
+        "subtitle": ""
       }
     }
   },
