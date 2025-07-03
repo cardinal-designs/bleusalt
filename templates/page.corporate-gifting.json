@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Corporate_Gifts_1.jpg",
+        "image": "shopify://shop_images/01-Hero.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -123,7 +123,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Corporate_Gifts_1.jpg",
+        "image": "shopify://shop_images/01-Hero.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -249,7 +249,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Corporate_Gifts_1.jpg",
+        "image": "shopify://shop_images/01-Hero.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
