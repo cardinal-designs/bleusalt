@@ -359,6 +359,11 @@
   outline: none !important;
 }
 
+.klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"] {
+  max-width: 100%;
+  width: 100%;
+}
+
 .klaviyo-form-UGk4Ub form[data-testid="klaviyo-form-UGk4Ub"] > div div[data-testid="form-row"]:nth-last-child(2) {
   max-width: 840px;
   background: red;
