@@ -8,98 +8,182 @@
   {% endif %}
   <!--/ By dfeault the answers are hidden and jquery used below will toggle on click-->
 <style type="text/css">
-         .faq-answer {
-            display: none;
-            overflow: hidden;
-            transition: max-height 0.3s ease
-        }
-        .faq-answer {
-            max-width: 712px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-    .faq-answer  p {
-    color: var(--Dark-Bleu-main-950, #051C2A);
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 20px;
-  }
-        .faq-question {
-          font-size: 18px; */
-          /* font-weight: bold; */
-          margin-top: 0px;
-          /* background: #ececec; */
-          padding: 12px;
-          /* border: 1px solid #eaeaea; */
-          cursor: pointer;
-          color: var(--Dark-Bleu-main-950, #051C2A);
-          font-family: "Miller Display";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 28px;
-          text-align: center;
-        }
-
-        .faq-question span {
-            display: inline-flex;
-            /* float: right; */
-            height: 25px;
-            width: 25px;
-            /* background: #bdbdbd; */
-            text-align: center;
-            border-radius: 50%;
-            text-align: center;
-            color: white;
-            margin-left: 5px;
-            margin-top /* background: white; */ /* padding: 20px 0px 0px; */ /* box-shadow: 5px 5px 65px #e7e7e7; */ margin-bottom: 25px;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            color: var(--Dark-Bleu-main-950, #051C2A);
-            text-align: center;
-            /* font-family: Futura; */
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            /* line-height: 20px; */
-            position: relative;
-            top: 5px;
-        }
-
-        .faq-wrapper .faq-question span i {
-            text-stroke: 1px #bdbdbd;
-            -webkit-text-stroke: 1px #bdbdbd;
-            -moz-text-stroke: 1px #bdbdbd;
-            -ms-text-stroke: 1px #bdbdbd;
-            font-size: 15px;
-        }
-
-        .faq-wrapper .faq-question span {
-            line-height: 23px;
-        }
-
-        .fa {
-            transition: all 0.3s ease;
-        }
-
-        .fa-minus {
-            transform: rotate(180deg)
-        }
-  .title-holder h2 {
-    color: var(--Dark-Bleu-main-950, #051C2A);
-    text-align: center;
-    font-family: "Miller Display";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px;
+.faq-answer {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer {
+  max-width: 712px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
 }
 
+.faq-answer p {
+  color: var(--Dark-Bleu-main-950, #051c2a);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+.faq-question {
+  font-size: 18px;
+  /* font-weight: bold; */
+  margin-top: 0px;
+  /* background: #ececec; */
+  padding: 12px;
+  /* border: 1px solid #eaeaea; */
+  cursor: pointer;
+  color: var(--Dark-Bleu-main-950, #051c2a);
+  font-family: "Miller Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+}
+
+.faq-question span {
+  display: inline-flex;
+  /* float: right; */
+  height: 25px;
+  width: 25px;
+  /* background: #bdbdbd; */
+  text-align: center;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin-left: 5px;
+  margin-bottom: 25px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--Dark-Bleu-main-950, #051c2a);
+  text-align: center;
+  /* font-family: Futura; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  /* line-height: 20px; */
+  position: relative;
+  top: 5px;
+}
+
+.faq-wrapper .faq-question span i {
+  text-stroke: 1px #bdbdbd;
+  -webkit-text-stroke: 1px #bdbdbd;
+  -moz-text-stroke: 1px #bdbdbd;
+  -ms-text-stroke: 1px #bdbdbd;
+  font-size: 15px;
+}
+
+.faq-wrapper .faq-question span {
+  line-height: 23px;
+}
+
+.fa {
+  transition: all 0.3s ease;
+}
+
+.fa-minus {
+  transform: rotate(180deg);
+}
+.faq-answer a {
+    all: unset;
+    cursor: pointer;
+}
+.title-holder h2 {
+  color: var(--Dark-Bleu-main-950, #051c2a);
+  text-align: center;
+  font-family: "Miller Display";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1024px) {
+  .faq-answer {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 10px;
+  }
+
+  .faq-question span {
+    font-size: 13px;
+    height: 22px;
+    width: 22px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .title-holder h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-answer {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px;
+  }
+
+  .faq-question span {
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .faq-answer p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .title-holder h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-question {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .faq-question span {
+    font-size: 11px;
+    height: 18px;
+    width: 18px;
+  }
+
+  .title-holder h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .faq-answer p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
 </style>
 <div class="page-width" data-section-id="{{ section.id }}" style="padding-bottom: 80px;">
   {% if section.blocks.size > 0 %}
@@ -130,7 +214,6 @@
 
   
 </div>
-<!--/ Script for toggle of question/answer. It is using font awesome for plus on unopen state and minus on opened state -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   jQuery('.faq-question').click(function(){

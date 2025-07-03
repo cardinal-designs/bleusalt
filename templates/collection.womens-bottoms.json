@@ -171,7 +171,7 @@
           "type": "text_block",
           "settings": {
             "question": "What sizes are available for Bleusalt women’s bottoms?",
-            "answer": "<p>Bleusalt offers sizes 00 through 6 (XXS to 2X). You can view our<a href=\"https://bleusalt.com/pages/bleusalt-size-chart-sizing-guide\"><span style=\"text-decoration:underline\"> size chart</span></a> for detailed measurements and fit guidance.</p>"
+            "answer": "<p>Bleusalt offers sizes 00 through 6 (XXS to 3X). You can view our<a href=\"https://bleusalt.com/pages/bleusalt-size-chart-sizing-guide\"><span style=\"text-decoration:underline\"> size chart</span></a> for detailed measurements and fit guidance.</p>"
           }
         },
         "text_block_itf8iK": {
@@ -206,7 +206,7 @@
           "type": "text_block",
           "settings": {
             "question": "Do any celebrities wear Bleusalt bottoms?",
-            "answer": "<p>Yes—iconic pieces in the collection were designed in collaboration with or inspired by figures like Kaia Gerber and Cindy Crawford.</p>"
+            "answer": "<p>Yes—iconic pieces in the collection were designed in collaboration with or inspired by figures like Kaia Gerber and Cindy Crawford. Many celebrities and royals around the world also wear Bleusalt, including Meghan, The Duchess of Sussex.</p>"
           }
         }
       },
@@ -223,9 +223,7 @@
       "name": "FAQ NEW",
       "settings": {
         "title": "FAQ",
-        "subtitle": "",
-        "faq_footer_title": "",
-        "faq_footer_email": ""
+        "subtitle": ""
       }
     }
   },
