@@ -306,9 +306,15 @@
   outline: 1px solid #0d1c29 !important;
 }
 
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1,
 .klaviyo-form-UGk4Ub input {
   border-radius: 3px !important;
   border: 1px solid #0d1c29 !important;
+}
+
+.klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1 input {
+  border-radius: 0px !important;
+  border: 1px solid transparent !important;
 }
 
 .klaviyo-form-UGk4Ub input:focus,
