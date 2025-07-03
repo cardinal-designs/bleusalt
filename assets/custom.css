@@ -281,6 +281,24 @@
   color: rgb(var(--color-foreground)) !important;
 }
 
+.klaviyo-form-UGk4Ub button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: 0 3rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(var(--color-button-text));
+  transition: box-shadow var(--duration-short) ease;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgba(var(--color-button), var(--alpha-button-background);
+}
+
 @media screen and (min-width: 750px) {
   .klaviyo-form-UGk4Ub {
     padding: 0 5rem;
