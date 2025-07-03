@@ -340,6 +340,10 @@
   outline-offset: 0;
 }
 
+.klaviyo-form-UGk4Ub input::placeholder {
+  font-family: var(--font-heading-family) !important;
+}
+
 .klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1:focus,
 .klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1:focus-visible,
 .klaviyo-form-UGk4Ub .needsclick.go4213795584.kl-private-reset-css-Xuajs1:focus-within {
