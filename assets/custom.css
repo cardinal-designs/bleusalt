@@ -280,6 +280,10 @@
 .klaviyo-form-UGk4Ub * {
   font-family: var(--font-heading-family) !important;
   color: rgb(var(--color-foreground)) !important;
+}
+
+.klaviyo-form-UGk4Ub span,
+.klaviyo-form-UGk4Ub div {
   line-height: calc(1 + 0.8 / 1.0) !important;
   font-size: 1.5rem !important;
 }
