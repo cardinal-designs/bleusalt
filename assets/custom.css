@@ -263,3 +263,17 @@
   }
   
 }
+
+
+
+/* corporate-gifting Klaviyo CSS start */
+
+.klaviyo-form-UGk4Ub {
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .klaviyo-form-UGk4Ub {
+    padding: 0 5rem;
+  }
+}
