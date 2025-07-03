@@ -359,6 +359,10 @@
   outline: none !important;
 }
 
+.klaviyo-form-UGk4Ub [data-testid="form-row"]:nth-last-child(2) {
+  max-width: 840px;
+}
+
 @media screen and (min-width: 750px) {
   .klaviyo-form-UGk4Ub {
     padding: 0 5rem;
