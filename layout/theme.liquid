@@ -1,8 +1,7 @@
 <!doctype html>
   <html class="no-js" lang="{{ request.locale.iso_code }}">
     <head>
-{% render 'visually_io_sdk' %}
-
+      {% render 'visually_io_sdk' %}
       {% include 'hyperspeed-imports' %}
       {% render 'hs-critical-css' %}  
       
@@ -14,6 +13,13 @@
       <meta name="google-site-verification" content="dW9JygpNiA3CxV_Ct50EQ7ozDR1NvtxzckIZmI511HQ" />
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+      <!-- Preload JS/CSS -- Start -->
+
+      <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'">
+      <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
+      
+      <!-- Preload JS/CSS -- End -->
 
       <script>
         window.ShopifyTemplate = {
@@ -32,10 +38,6 @@
       /* << TriplePixel :: end*/
       </script>
       <!-- Triple Whale End -->
-
-      {%  comment %}
-      
-      {%  endcomment %}
 
       {%- if settings.favicon != blank -%}
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -294,12 +296,13 @@
     </head>
 
     <body class="gradient template--{{ template.name }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
-
+      <noscript>
+        <link rel="stylesheet" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css">
+      </noscript>
       
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ "accessibility.skip_to_text" | t }}
       </a>
-
       
       {%- if settings.cart_type == 'drawer' -%}
         {%- section 'cart-drawer' -%}

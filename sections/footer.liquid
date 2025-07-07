@@ -80,11 +80,12 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank -%}
-                    <ul id="footer-list--{{ block.id }}" aria-labelledby="footer-heading--{{ block.id }}" class="footer-block__details-content list-unstyled footer-block__link-list">
+                    <ul id="footer-list--{{ block.id }}" aria-labelledby="footer-heading--{{ block.id }}" class="footer-block__details-content list-unstyled footer-block__link-list" >
                       {%- for link in block.settings.menu.links -%}
                         <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}" aria-label="Go To {{ link.url | split: '?' | first | split: '/' | last | replace: '_', ' ' | replace: '-', ' ' }}">
                             {{ link.title }}
+                            <p class="visually-hidden">Click here to go to {{ link.url | split: '?' | first | split: '/' | last | replace: '_', ' ' | replace: '-', ' ' }} </p>
                           </a>
                         </li>
                       {%- endfor -%}

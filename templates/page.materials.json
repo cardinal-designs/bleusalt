@@ -25,7 +25,9 @@
       "type": "video-banner",
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/86577e15b4554e7088ed2fbe934caecd.mp4",
+        "video_url_1": "shopify://files/videos/Bleusalt-Fabric-2025.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/86577e15b4554e7088ed2fbe934caecd.mp4",
+        "video_url_mobile_1": "shopify://files/videos/Bleusalt-Fabric-2025.mp4",
         "description": "",
         "image_overlay_opacity": 0,
         "video_height": "56.25",

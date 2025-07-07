@@ -372,8 +372,9 @@
                   <ul class="list-unstyled">
                     {% for link in linklists.mobile-menu-secondary.links %}
                       <li>
-                        <a href="{{ link.url }}" class="link mobile-menu__secondary-link"{% if link.current %} aria-current="page"{% endif %}>
+                        <a href="{{ link.url }}" class="link mobile-menu__secondary-link"{% if link.current %} aria-current="page"{% endif %} aria-label="Go To {{ link.url | split: '?' | first | split: '/' | last | replace: '_', ' ' | replace: '-', ' ' }}">
                           {{ link.title | escape }}
+                          <p class="visually-hidden">Click here to go to {{ link.url | split: '?' | first | split: '/' | last | replace: '_', ' ' | replace: '-', ' ' }} </p>
                         </a>
                       </li>
                     {% endfor %}
@@ -684,7 +685,8 @@
               widths: '50, 100, 150, 200, 250, 300, 400, 500',
               height: logo_height,
               width: section.settings.logo_width,
-              alt: logo_alt
+              alt: logo_alt,
+              loading: 'eager'
             }}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
@@ -693,7 +695,8 @@
               widths: '50, 100, 150, 200, 250, 300, 400, 500',
               height: logo_height,
               width: section.settings.logo_width,
-              alt: logo_alt
+              alt: logo_alt,
+              loading: 'lazy'
             }}
           {%- elsif section.settings.logo != blank -%}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
@@ -799,7 +802,7 @@
         </details>
       </details-modal>
 
-      <a href="/pages/rewards" class="header__icon header__icon--reward link focus-inset">
+      <a href="/pages/rewards" class="header__icon header__icon--reward link focus-inset" aria-label="Go To Rewards page">
         {% render 'icon-reward' %}
       </a>
 
