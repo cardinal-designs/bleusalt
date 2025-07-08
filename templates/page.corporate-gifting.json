@@ -21,6 +21,48 @@
         "page_width": "page-width--narrow"
       }
     },
+    "rich_text_aMrPbY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MUntnM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Corporate Gifting</p>",
+            "heading_size": "h2"
+          }
+        },
+        "heading_F4MepD": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<p>Elevated Gifting, Thoughtfully Delivered</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_g4V4mQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt offers a refined corporate gifting experience featuring sustainable, luxurious basics that are beloved by celebrities, executives and tastemakers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MUntnM",
+        "heading_F4MepD",
+        "text_g4V4mQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_dk6JdV": {
       "type": "image-with-text",
       "blocks": {
@@ -138,54 +180,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_aMrPbY": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_MUntnM": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Bleusalt Corporate Gifting</p>",
-            "heading_size": "h2"
-          }
-        },
-        "text_BQEmcd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Timeless. Sizeless. Effortless Luxury.</p>"
-          }
-        },
-        "heading_F4MepD": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Elevated Gifting, Thoughtfully Delivered</p>",
-            "heading_size": "h2"
-          }
-        },
-        "text_g4V4mQ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Bleusalt offers a refined corporate gifting experience featuring sustainable, luxurious basics that are beloved by celebrities, executives and tastemakers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_MUntnM",
-        "text_BQEmcd",
-        "heading_F4MepD",
-        "text_g4V4mQ"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "btextimg": "",
-        "background_image_size": "cover",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_liquid_88JTXy": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -225,10 +219,10 @@
   },
   "order": [
     "main",
+    "rich_text_aMrPbY",
     "image_with_text_dk6JdV",
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
-    "rich_text_aMrPbY",
     "custom_liquid_88JTXy",
     "1676492971e2872bb9",
     "1728584017c433d725"
