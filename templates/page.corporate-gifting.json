@@ -138,45 +138,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_yMj7cG": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_VV3Qi3": {
-          "type": "heading",
-          "settings": {
-            "heading": "ELEVATE YOUR MOMENT",
-            "heading_size": "h2"
-          }
-        },
-        "text_qPXgUk": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Whether you're celebrating your team, thanking loyal clients, or curating a memorable event, Bleusalt offers timeless, sizeless gifts designed to delight. Sustainably made in the USA from the softest fibers on Earth, our pieces offer luxury with meaning.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_VV3Qi3",
-        "text_qPXgUk"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/iStock-1207059415.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_aMrPbY": {
       "type": "rich-text",
       "blocks": {
@@ -212,131 +173,6 @@
         "text_BQEmcd",
         "heading_F4MepD",
         "text_g4V4mQ"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "btextimg": "",
-        "background_image_size": "cover",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_bnj9aA": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_wtcUKe": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why Bleusalt Gifts Make a Lasting Impression",
-            "heading_size": "h2"
-          }
-        },
-        "text_8P3QpL": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Sizeless options that make gifting effortless and elegant </li><li>Customizable options</li><li>Sustainably made in the USA </li><li>Celebrity-favorite brand worn by style icons like Meghan Markle and Cindy Crawford</li><li>Seamless bulk ordering at wholesale prices with white-glove service </li><li>Beautiful minimal packaging</li></ul>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_wtcUKe",
-        "text_8P3QpL"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/01-Hero.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_JW6bwx": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_dpaydy": {
-          "type": "heading",
-          "settings": {
-            "heading": "Popular Sizeless Gift Options",
-            "heading_size": "h2"
-          }
-        },
-        "text_3wix9X": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li><strong>The Bleusalt Wrap:</strong> Our bestselling travel essential </li><li><strong>Luxe Scarves: </strong>A cozy, gender-neutral classic</li><li><strong>Beanies: NEED DESCRIPTION</strong></li></ul>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_dpaydy",
-        "text_3wix9X"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/iStock-1207059415.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_p4kEwi": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_bt3K87": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Effortless Ordering and Concierge Support</p>",
-            "heading_size": "h2"
-          }
-        },
-        "text_BPYCeR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our team will assist you with choosing the perfect gifts, offer wholesale pricing and ensure a seamless experience from start to finish. Let us handle the details while you enjoy the gratitude.</p>"
-          }
-        },
-        "text_ad6JRE": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>Contact Us</h3>"
-          }
-        },
-        "text_7XQFpn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Lyndie Benson, Founder & CEO <br/><a href=\"mailto:Lyndie@bleusalt.com\"><span style=\"text-decoration:underline\">Lyndie@bleusalt.com<br/></span></a><a href=\"http://bleusalt.com/corporate-gifting\"><span style=\"text-decoration:underline\">Bleusalt.com/corporate-gifting</span></a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_bt3K87",
-        "text_BPYCeR",
-        "text_ad6JRE",
-        "text_7XQFpn"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -392,11 +228,7 @@
     "image_with_text_dk6JdV",
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
-    "image_with_text_yMj7cG",
     "rich_text_aMrPbY",
-    "image_with_text_bnj9aA",
-    "image_with_text_JW6bwx",
-    "rich_text_p4kEwi",
     "custom_liquid_88JTXy",
     "1676492971e2872bb9",
     "1728584017c433d725"
