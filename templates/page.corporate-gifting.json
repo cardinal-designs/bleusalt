@@ -75,14 +75,14 @@
         "heading_ENQ8mp": {
           "type": "heading",
           "settings": {
-            "heading": "A GIFT FROM BLEUSALT IS AN UNMATCHED EXPERIENCE",
+            "heading": "THE BLEUSALT EXPERIENCE",
             "heading_size": "h2"
           }
         },
         "text_7w7mxA": {
           "type": "text",
           "settings": {
-            "text": "<p>Our team will work with you to create tailor-made Bleusalt pieces that reflect your brand, your values, and your intention. From first conversation to final detail, we bring your vision to life with care, sophistication, and ease.</p>",
+            "text": "<p>Corporate gifting with Bleusalt is effortless and elevated. Whether you're sending a single gift or hundreds, our team will guide you through every step, offering creative ideas and concierge-level service to help you create an unforgettable gesture.</p>",
             "text_style": "body"
           }
         }
@@ -93,7 +93,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/01-Hero.jpg",
+        "image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c-1.webp",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -121,7 +121,7 @@
         "text_WtRPDU": {
           "type": "text",
           "settings": {
-            "text": "<p>Corporate gifting with Bleusalt is effortless and elevated. Whether you're sending a single gift or hundreds, our team will guide you through every step, offering creative ideas and concierge-level service to help you create an unforgettable gesture.</p>",
+            "text": "<p>Our team will work with you to create tailor-made Bleusalt pieces that reflect your brand, your values, and your intention. From first conversation to final detail, we bring your vision to life with care, sophistication, and ease.</p>",
             "text_style": "body"
           }
         }
@@ -132,7 +132,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/01_475c3483-48a5-4852-84f8-1ffb05a8303c.jpg",
+        "image": "shopify://shop_images/01-Hero.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -160,7 +160,7 @@
         "text_WpjrCU": {
           "type": "text",
           "settings": {
-            "text": "<p>From our signature wraps to curated capsule sets, we offer personalized options to make your gifts truly one-of-a-kind. Upon request, we'll include co-branded details, handwritten notes, or thoughtful packaging touches to make each delivery feel exceptional.</p>",
+            "text": "<p>Whether you're celebrating your team, thanking loyal clients, or curating a memorable event, Bleusalt offers timeless, sizeless gifts designed to delight. Sustainably made in the USA from the softest fibers on Earth, our pieces offer luxury with meaning.</p>",
             "text_style": "body"
           }
         }
@@ -172,6 +172,45 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/iStock-1207059415.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_HCF48T": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zx9iiM": {
+          "type": "heading",
+          "settings": {
+            "heading": "CUSTOMIZED WITH CARE",
+            "heading_size": "h2"
+          }
+        },
+        "text_MgGnVK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From our signature wraps to curated capsule sets, we offer personalized options to make your gifts truly one-of-a-kind. Upon request, we'll include co-branded details, handwritten notes, or thoughtful packaging touches to make each delivery feel exceptional.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zx9iiM",
+        "text_MgGnVK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/01_475c3483-48a5-4852-84f8-1ffb05a8303c.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -236,6 +275,7 @@
     "image_with_text_dk6JdV",
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
+    "image_with_text_HCF48T",
     "rich_text_hzaCpn",
     "custom_liquid_88JTXy"
   ]
