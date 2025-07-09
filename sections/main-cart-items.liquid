@@ -164,7 +164,7 @@
                           {{ item.original_price | money }}
                         </div>
                       {%- endif -%}
-                      1. {{ item.product.has_only_default_variant}} 2. {{ item.properties.size }} 3. {{ item.selling_plan_allocation }}
+
                       {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                         <dl>
                           {%- if item.product.has_only_default_variant == false -%}
