@@ -69,6 +69,54 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_XwGMxX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gpxCka": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why Bleusalt Gifts Make a Lasting Impression</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_rNTCpa": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Sizeless options that make gifting effortless and elegant </li><li>Customizable options</li><li>Sustainably made in the USA </li><li>Celebrity-favorite brand worn by style icons like Meghan Markle and Cindy Crawford</li><li>Seamless bulk ordering at wholesale prices with white-glove service </li><li>Beautiful minimal packaging </li></ul>"
+          }
+        },
+        "heading_3GGwNn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Popular Sizeless Gift Options </p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_MBWWzw": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>The Bleusalt Wrap:</strong> Our bestselling travel essential </li><li><strong>Luxe Scarves: </strong>A cozy, gender-neutral classic  </li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gpxCka",
+        "text_rNTCpa",
+        "heading_3GGwNn",
+        "text_MBWWzw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_dk6JdV": {
       "type": "image-with-text",
       "blocks": {
@@ -272,6 +320,7 @@
   "order": [
     "main",
     "rich_text_aMrPbY",
+    "rich_text_XwGMxX",
     "image_with_text_dk6JdV",
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
