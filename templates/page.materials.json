@@ -25,9 +25,7 @@
       "type": "video-banner",
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/86577e15b4554e7088ed2fbe934caecd.mp4",
-        "video_url_1": "shopify://files/videos/Bleusalt-Fabric-2025.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/86577e15b4554e7088ed2fbe934caecd.mp4",
-        "video_url_mobile_1": "shopify://files/videos/Bleusalt-Fabric-2025.mp4",
         "description": "",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
@@ -462,7 +460,7 @@
         "text_jkL4Jg": {
           "type": "text",
           "settings": {
-            "text": "<p>96% micro modal 4% spandex.  Our LITE fabric is a lighter, more breathable and silkier variation of our signature fabric. This fabric maintains our signature softness and sustainability while offering enhanced airflow and a featherweight feel, making it perfect for warmer weather.</p>",
+            "text": "<p>96% micro modal 4% spandex.  Our Lite fabric is a lighter, more breathable and silkier variation of our signature fabric. This fabric maintains our signature softness and sustainability while offering enhanced airflow and a featherweight feel, making it perfect for warmer weather.</p>",
             "text_style": "body"
           }
         },
@@ -508,7 +506,7 @@
         "text_MegWL6": {
           "type": "text",
           "settings": {
-            "text": "<p>48% micro modal 48% organic cotton 4% spandex. Our LUXE fabric combines the ultra soft feel of our Signature fabric with a heavier more structured weight, making it perfect for the colder months.</p>",
+            "text": "<p>48% micro modal 48% organic cotton 4% spandex. Our Luxe fabric combines the ultra soft feel of our Signature fabric with a heavier more structured weight, making it perfect for the colder months.</p>",
             "text_style": "body"
           }
         },
@@ -601,7 +599,7 @@
         "text_NkLAap": {
           "type": "text",
           "settings": {
-            "text": "<p>All Bleusalt garments are machine washable and do not shrink.  Our dyes are OEKO-TEX Certified, composed of 95% reactive and 5% disperse dye.</p><p><strong>For best results: </strong><br/>Wash: <em>Set on delicate. Turn garment inside out prior to washing. </em><br/>Dry: <em>Set on delicate. </em></p>",
+            "text": "<p>All Bleusalt garments are machine washable and do not shrink.  Our dyes are Oeko-Tex Certified, composed of 95% reactive and 5% disperse dye.</p><p><strong>For best results: </strong><br/>Wash: <em>Set on delicate. Turn garment inside out prior to washing. </em><br/>Dry: <em>Set on delicate. </em></p>",
             "text_style": "body"
           }
         }
@@ -639,7 +637,7 @@
         "text_DaERhd": {
           "type": "text",
           "settings": {
-            "text": "All Bleusalt garments are machine washable and do not shrink. Our dyes are OEKO-TEX Certified, composed of 95% reactive and 5% disperse dye.",
+            "text": "All Bleusalt garments are machine washable and do not shrink. Our dyes are Oeko-Tex Certified, composed of 95% reactive and 5% disperse dye.",
             "text_style": "body"
           }
         }
