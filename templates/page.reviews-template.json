@@ -26,7 +26,7 @@
         "template--14657442873457__be12e541-217a-4677-a9f0-ae36369b5336-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We're proud to share the positive experiences of our customers with you. From the quality of our materials to the elegance and style of our pieces, our reviews offer an honest look at what it's like to shop with Bleusalt and wear our elevated luxury clothing pieces. We value your feedback and strive to improve our products and services. </p>"
+            "text": "<p>We are honored by the amount of customers who return to Bleusalt again and again-not just for how our pieces feel, but how they truly take them anywhere they want to go looking and feeling their best.  From fabric to fit, our reviews reflect the care we put into everything we do from our product to our service. We truly try our best everyday to bring you the highest quality in our product and our service and we are so grateful you came to visit our website.</p>"
           }
         }
       },
@@ -50,19 +50,10 @@
         "klaviyo_reviews_all_reviews_HX7jGw": {
           "type": "shopify://apps/klaviyo-reviews/blocks/all-reviews/db20e365-d984-4ac4-9655-e1588d951ca9",
           "settings": {}
-        },
-        "958767c2-116f-4a62-a3d0-7bb62dbf695b": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "disabled": true,
-          "settings": {
-            "product": "",
-            "widget_type": "reviews_widget"
-          }
         }
       },
       "block_order": [
-        "klaviyo_reviews_all_reviews_HX7jGw",
-        "958767c2-116f-4a62-a3d0-7bb62dbf695b"
+        "klaviyo_reviews_all_reviews_HX7jGw"
       ],
       "settings": {
         "include_margins": true
