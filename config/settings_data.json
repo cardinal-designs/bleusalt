@@ -70,8 +70,8 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "Last Day for 2nd Day Christmas Delivery is 12/19/22",
-              "link": ""
+              "text": "Shop Our Newest Arrivals",
+              "link": "https://bleusalt.com/collections/womens-new-arrivals"
             }
           },
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327": {
@@ -92,7 +92,7 @@
             "type": "announcement",
             "settings": {
               "text": "Home of the Signature Bleusalt Wrap",
-              "link": "#"
+              "link": "https://bleusalt.com/collections/the-signature-bleusalt-wrap"
             }
           }
         },
