@@ -460,11 +460,6 @@
         "disabled": false,
         "settings": {}
       },
-      "2046743146925785077": {
-        "type": "shopify://apps/nosto/blocks/nosto-mc-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": false,
-        "settings": {}
-      },
       "10812935154079970445": {
         "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
         "disabled": false,
@@ -477,6 +472,16 @@
       },
       "10840395464443086010": {
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
+        "disabled": false,
+        "settings": {}
+      },
+      "2046743146925785077": {
+        "type": "shopify://apps/nosto/blocks/nosto-mc-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+        "disabled": false,
+        "settings": {}
+      },
+      "11809892702313333283": {
+        "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-header/347a2e4c-f5cb-410d-8354-490d1e80558c",
         "disabled": false,
         "settings": {}
       }
