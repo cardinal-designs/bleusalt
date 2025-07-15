@@ -204,6 +204,7 @@
     },
     "1660770662e0f526b9": {
       "type": "complete-the-look",
+      "disabled": true,
       "settings": {
         "heading": "Complete the look",
         "heading_size": "h1",
