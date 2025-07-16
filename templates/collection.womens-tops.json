@@ -228,6 +228,23 @@
         "title": "FAQ",
         "subtitle": ""
       }
+    },
+    "175268568895ed6739": {
+      "type": "apps",
+      "blocks": {
+        "firework_shoppable_video_ugc_firework_pro_embed_6WYePa": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-pro-embed/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "settings": {
+            "embedConfigId": "GoNk1g_fp"
+          }
+        }
+      },
+      "block_order": [
+        "firework_shoppable_video_ugc_firework_pro_embed_6WYePa"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -236,6 +253,7 @@
     "1734416630f7a21117",
     "1660937591af29c294",
     "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
-    "faq_new_VxmFhr"
+    "faq_new_VxmFhr",
+    "175268568895ed6739"
   ]
 }
