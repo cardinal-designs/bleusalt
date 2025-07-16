@@ -154,12 +154,30 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "175269254293212fe6": {
+      "type": "apps",
+      "blocks": {
+        "firework_shoppable_video_ugc_firework_pro_embed_zYWwkT": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-pro-embed/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "settings": {
+            "embedConfigId": "GoNk1g_fp"
+          }
+        }
+      },
+      "block_order": [
+        "firework_shoppable_video_ugc_firework_pro_embed_zYWwkT"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
     "1660937591af29c294",
-    "52dfa345-32cc-4bb9-8f62-b9d74d7816e1"
+    "52dfa345-32cc-4bb9-8f62-b9d74d7816e1",
+    "175269254293212fe6"
   ]
 }

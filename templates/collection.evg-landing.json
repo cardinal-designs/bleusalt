@@ -22,7 +22,7 @@
       "type": "apps",
       "blocks": {
         "9815e192-6dd7-46ba-96c2-177eb4f8f4cf": {
-          "type": "shopify:\/\/apps\/otto-image-scheduler\/blocks\/otto-banner\/82ad8868-80d7-4fdd-ab3c-3ea8db016cea",
+          "type": "shopify://apps/otto-blocks-images-scheduler/blocks/otto-banner/82ad8868-80d7-4fdd-ab3c-3ea8db016cea",
           "settings": {
             "placement_name": "evg",
             "section_width": 100,
@@ -62,12 +62,12 @@
           "settings": {
             "tile_size": "2x",
             "media_type": "image",
-            "image": "shopify:\/\/shop_images\/womens-wraps.jpg",
+            "image": "shopify://shop_images/womens-wraps.jpg",
             "video_url": "",
-            "link": "shopify:\/\/pages\/bleusalt-styling",
+            "link": "shopify://pages/bleusalt-styling",
             "position": 5,
             "title": "Style Tips",
-            "paragraph": "<p>Watch our style tips videos and create the perfect look<\/p>",
+            "paragraph": "<p>Watch our style tips videos and create the perfect look</p>",
             "button_text": "Watch Now"
           }
         },
@@ -77,12 +77,12 @@
           "settings": {
             "tile_size": "1x",
             "media_type": "image",
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
+            "image": "shopify://shop_images/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
             "video_url": "",
             "link": "",
             "position": 18,
             "title": "Bleusalt Wraps",
-            "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.<\/p>",
+            "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.</p>",
             "button_text": ""
           }
         }
@@ -96,6 +96,7 @@
         "columns_desktop": 3,
         "image_ratio": "portrait",
         "show_secondary_image": true,
+        "show_life_image": true,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
@@ -113,14 +114,14 @@
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.<\/p>",
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
             "heading_size": "h1"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -141,12 +142,29 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "btextimg": "",
-        "background_image": "shopify:\/\/shop_images\/sustainable-grunge.jpg",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
         "background_image_size": "cover",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 100,
         "padding_bottom": 100
+      }
+    },
+    "1752692501293910be": {
+      "type": "apps",
+      "blocks": {
+        "firework_shoppable_video_ugc_firework_pro_embed_biJ86E": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-pro-embed/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "settings": {
+            "embedConfigId": "GoNk1g_fp"
+          }
+        }
+      },
+      "block_order": [
+        "firework_shoppable_video_ugc_firework_pro_embed_biJ86E"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -154,6 +172,7 @@
     "banner",
     "16777009594784072e",
     "product-grid",
-    "1660937591af29c294"
+    "1660937591af29c294",
+    "1752692501293910be"
   ]
 }
