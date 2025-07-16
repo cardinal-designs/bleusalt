@@ -298,19 +298,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "16899109760dd19e0a": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "17436175840c1ee6c6": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -321,8 +308,6 @@
     "product-recommendations",
     "product_recommendations_ai_mCkeP9",
     "1662737421ca8ebddf",
-    "174599921146b1deae",
-    "16899109760dd19e0a",
-    "17436175840c1ee6c6"
+    "174599921146b1deae"
   ]
 }
