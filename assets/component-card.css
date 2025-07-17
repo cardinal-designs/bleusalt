@@ -173,8 +173,8 @@
     font-size: 14px;
   }
 
-  .card__content {
-    /* position: relative; */
+  .card__inner {
+    position: relative;
   }
 
   .card>.card__content>.card__badge {
