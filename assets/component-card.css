@@ -180,6 +180,16 @@
   .card>.card__content>.card__badge {
     top: 0;
     left: -3px;
+    margin: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 450px) {
+
+  .card>.card__content>.card__badge .badge {
+    font-size: 10px;
+    padding: 4px 8px;
   }
   
 }
