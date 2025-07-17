@@ -178,7 +178,7 @@
   }
 
   .card>.card__content>.card__badge {
-    top: 25%;
+    top: 0;
     left: -3px;
   }
   
