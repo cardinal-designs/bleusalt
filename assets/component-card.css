@@ -174,12 +174,12 @@
   }
 
   .card__content {
-    position: relative;
+    /* position: relative; */
   }
 
   .card>.card__content>.card__badge {
-    top: -48px;
-    left: -3px;
+    /* top: -48px; */
+    /* left: -3px; */
   }
   
 }
