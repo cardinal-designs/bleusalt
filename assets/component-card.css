@@ -173,8 +173,7 @@
     font-size: 14px;
   }
 
-  .card__inner,
-  .card__content {
+  .card__inner {
     position: relative;
   }
 
