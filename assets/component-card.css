@@ -178,8 +178,8 @@
   }
 
   .card>.card__content>.card__badge {
-    /* top: -48px; */
-    /* left: -3px; */
+    top: 50%;
+    left: -3px;
   }
   
 }
@@ -362,8 +362,6 @@
     background: rgba(var(--color-background), 0.8);
   }
 }
-
-
 
 .marketing-tile__content>*+* {
   margin-top: 1rem;
