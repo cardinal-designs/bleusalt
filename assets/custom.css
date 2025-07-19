@@ -441,3 +441,31 @@
   }
   
 }
+
+/* Corporate Gifting Form */
+.globo-form-app {
+  max-width: 1200px;
+}
+
+.globo-heading {
+  font-size: 24px !important;
+  font-weight: 400 !important;
+}
+
+.globo-description p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.gfb-style-material_outlined .gfb_material_outlined .gfb__outline-start,
+.gfb-style-material_outlined .gfb_material_outlined .gfb__outline-end {
+  border-radius: 0 !important;
+}
+
+.globo-form-app .gfb__footer button {
+  padding: 20px 30px !important;
+  font-size: 15px !important;
+  border-radius: 3px !important;
+}
+
+

@@ -483,6 +483,11 @@
         "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-header/347a2e4c-f5cb-410d-8354-490d1e80558c",
         "disabled": false,
         "settings": {}
+      },
+      "6279071938380501511": {
+        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
@@ -715,8 +720,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".card__badge {display: none !important;}"
-    ]
+    "custom_css": []
   }
 }

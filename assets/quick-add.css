@@ -23,7 +23,7 @@ quick-add {
 .quick-add__colors {
   position: relative;
   z-index: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .quick-add__button {
   background: 0;
