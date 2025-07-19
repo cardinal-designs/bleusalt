@@ -308,7 +308,6 @@
     },
     "custom_liquid_88JTXy": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"klaviyo-form-UGk4Ub\"></div>",
