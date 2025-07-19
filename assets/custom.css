@@ -458,7 +458,8 @@
 }
 
 .gfb-style-material_outlined .gfb_material_outlined .gfb__outline-start,
-.gfb-style-material_outlined .gfb_material_outlined .gfb__outline-end {
+.gfb-style-material_outlined .gfb_material_outlined .gfb__outline-end,
+.globo-form-app .gfb__footer button {
   border-radius: 0 !important;
 }
 
