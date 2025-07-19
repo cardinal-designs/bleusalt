@@ -458,7 +458,7 @@
 }
 
 .gfb-style-material_outlined .gfb_material_outlined .gfb__outline-start {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 
