@@ -443,6 +443,10 @@
 }
 
 /* Corporate Gifting Form */
+.globo-form-app {
+  max-width: 1200px;
+}
+
 .globo-heading {
   font-size: 24px !important;
   font-weight: 400 !important;
