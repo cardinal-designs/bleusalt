@@ -456,3 +456,9 @@
   font-size: 15px;
   font-weight: 400;
 }
+
+.globo-form-input input {
+  border-radius: 0;
+}
+
+
