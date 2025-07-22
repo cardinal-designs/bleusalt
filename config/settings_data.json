@@ -47,7 +47,7 @@
     "cart_drawer_text": "",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
-    "discount_promo_bar": false,
+    "discount_promo_bar": true,
     "cart_rebuy": true,
     "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
