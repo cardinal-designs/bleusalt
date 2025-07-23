@@ -217,6 +217,9 @@
         "heading_XUXw9h",
         "text_WpjrCU"
       ],
+      "custom_css": [
+        ".image-with-text {max-width: 1200px;}"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/iStock-1207059415.jpg",
