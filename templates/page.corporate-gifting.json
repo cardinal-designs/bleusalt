@@ -139,6 +139,9 @@
         "heading_ENQ8mp",
         "text_7w7mxA"
       ],
+      "custom_css": [
+        ".image-with-text {max-width: 1200px;}"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/bleusalt-logo_2c8bcfee-6dee-44cd-bbac-da6acd345933.png",
@@ -177,6 +180,9 @@
       "block_order": [
         "heading_jbVADh",
         "text_WtRPDU"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 1200px;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -258,6 +264,9 @@
       "block_order": [
         "heading_zx9iiM",
         "text_MgGnVK"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 1200px;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
