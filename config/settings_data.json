@@ -488,6 +488,11 @@
         "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {}
+      },
+      "16985609443196360602": {
+        "type": "shopify://apps/wair-size-fit-recommendation/blocks/app-embed/68b6dfc9-7d29-46dc-8820-cbcd3543e806",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
