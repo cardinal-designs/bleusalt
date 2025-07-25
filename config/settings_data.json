@@ -63,7 +63,7 @@
             "disabled": true,
             "settings": {
               "text": "Curate a Capsule & Unlock Savings the more Bleusalt you buy!",
-              "link": "/sale"
+              "link": "shopify://collections/the-bleusalt-collection"
             }
           },
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c": {
