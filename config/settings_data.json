@@ -62,13 +62,12 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "Last Day for Ground Christmas Delivery is 12/12/22",
+              "text": "Curate a Capsule & Unlock Savings the more Bleusalt you buy!",
               "link": ""
             }
           },
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "Shop Our Newest Arrivals",
               "link": "https://bleusalt.com/collections/womens-new-arrivals"
@@ -387,7 +386,7 @@
             "settings": {
               "pills_number": 3,
               "discount_item_text": "3+ Items",
-              "discount_item_percentage": "10% OFF"
+              "discount_item_percentage": "+10% OFF"
             }
           },
           "discount_Xz6xXP": {
@@ -395,7 +394,7 @@
             "settings": {
               "pills_number": 2,
               "discount_item_text": "5+ Items",
-              "discount_item_percentage": "15% OFF"
+              "discount_item_percentage": "+15% OFF"
             }
           },
           "discount_gaW8cV": {
@@ -403,7 +402,7 @@
             "settings": {
               "pills_number": 2,
               "discount_item_text": "7+ Items",
-              "discount_item_percentage": "20% OFF"
+              "discount_item_percentage": "+20% OFF"
             }
           }
         },
