@@ -1,0 +1,20 @@
+<style>
+  .predict-placement {
+    margin: ;
+  }
+  button#wair-fit-advisor {
+    border: ;
+  }
+  button#wair-fit-advisor > span,
+  button#wair-fit-advisor > span > span {
+    font-family: ;
+    font-size: ;
+    letter-spacing: ;
+  }
+</style>
+
+<div class="predict-placement"
+  data-predict-product-key="{{product.handle}}"
+  data-predict-product-name="{{ product.title | escape }}"
+  data-predict-product-img="{{ product.selected_or_first_available_variant.featured_image | default: product.featured_image | img_url: 'x600' }}">
+</div>
