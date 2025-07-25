@@ -385,8 +385,8 @@
                           {% if option.name == 'Size' %}
                             <div class="product__size-popups">
                             {%- for popup in sizing_popups -%}
-                              {% render 'wair' %}
                               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                                {% render 'wair' %}
                                 <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
                               </modal-opener>
                             {%- endfor -%}
