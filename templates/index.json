@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing The Lyndie Pant Lite",
+            "text": "OUR NEWEST ARRIVAL",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Launching Monday",
+            "heading": "The Lyndie Pant Lite",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -38,8 +38,8 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Our Collection",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/the-lyndie-pant-lite",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop New Arrivals",
@@ -54,8 +54,8 @@
         "buttons_fCtqBt"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/758019c039d8402fbe57cae250821ab5.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/758019c039d8402fbe57cae250821ab5.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/e7c27a5a473b4be784674a0ee5fb6f8d.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/e7c27a5a473b4be784674a0ee5fb6f8d.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
