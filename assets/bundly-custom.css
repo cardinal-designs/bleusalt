@@ -6,6 +6,15 @@
 }
 
 
+.bundly__medias li:first-child {
+  grid-column: unset;
+}
+
+.bundly__medias li:first-child:not(:only-child) {
+  margin-bottom: 0;
+}
+
+
 @media screen and (min-width: 990px) {
 
   .bundly__theme_shopify .bundly__fixed .bundly__medias {
