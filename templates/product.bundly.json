@@ -28,7 +28,7 @@
             "redirect_to_cart": true,
             "custom_data_metafield": "",
             "liquid": "",
-            "theme": "minimal",
+            "theme": "shopify",
             "css": ""
           }
         }
