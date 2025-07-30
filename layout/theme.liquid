@@ -292,6 +292,7 @@
       {% include 'pagefly-app-header' %}
 
       {{ 'custom.css' | asset_url | stylesheet_tag }}
+      {{ 'bundly-custom.css' | asset_url | stylesheet_tag }}
     </head>
 
     <body class="gradient template--{{ template.name }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
