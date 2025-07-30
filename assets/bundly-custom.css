@@ -3,3 +3,16 @@
   padding: 36px 0;
   gap: 0;
 }
+
+.bundly__fixed .bundly__medias {
+  
+}
+
+@media screen and (min-width: 990px) {
+
+  .bundly__fixed .bundly__details {
+    max-width: 35%;
+    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+  
+}
