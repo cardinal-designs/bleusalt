@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "175387233062831bb2": {
+      "type": "apps",
+      "blocks": {
+        "bundly_bundle_information_WNtLWh": {
+          "type": "shopify://apps/bundly/blocks/bundle_information/1cabc354-c7f9-42e9-8322-7655396b33b7",
+          "settings": {
+            "show_bundle_images": true,
+            "show_vendor": false,
+            "show_title": true,
+            "show_discount_type": false,
+            "show_original_price": true,
+            "show_new_price": true,
+            "show_component_images": true,
+            "show_component_prices": true,
+            "show_component_unit_prices": false,
+            "page_size": 12,
+            "redirect_to_cart": true,
+            "custom_data_metafield": "",
+            "liquid": "",
+            "theme": "minimal",
+            "css": ""
+          }
+        }
+      },
+      "block_order": [
+        "bundly_bundle_information_WNtLWh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -121,6 +152,7 @@
         "collapsible-row-0",
         "3cbca740-3858-4794-a06d-86306c2065df"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "show_breadcrumb": false,
@@ -293,6 +325,7 @@
     }
   },
   "order": [
+    "175387233062831bb2",
     "main",
     "166091863437fa707f",
     "16627372876bc0544e",
