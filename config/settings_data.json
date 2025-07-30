@@ -493,6 +493,11 @@
         "type": "shopify://apps/wair-size-fit-recommendation/blocks/app-embed/68b6dfc9-7d29-46dc-8820-cbcd3543e806",
         "disabled": false,
         "settings": {}
+      },
+      "5017882195547572635": {
+        "type": "shopify://apps/sc-easy-redirects/blocks/app/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
