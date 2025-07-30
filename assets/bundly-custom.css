@@ -1,5 +1,6 @@
 .bundly__theme_shopify .bundly__fixed .bundly__content {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   padding: 36px 0;
   gap: 0;
 }
