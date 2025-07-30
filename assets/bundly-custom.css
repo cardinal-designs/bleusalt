@@ -1,3 +1,5 @@
 .bundly__theme_shopify .bundly__content {
   display: grid;
+  padding: 36px 0;
+  gap: 0;
 }
