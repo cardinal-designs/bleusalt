@@ -1,4 +1,4 @@
-.bundly__theme_shopify .bundly__content {
+.bundly__theme_shopify .bundly__fixed .bundly__content {
   display: grid;
   padding: 36px 0;
   gap: 0;
@@ -7,12 +7,12 @@
 
 @media screen and (min-width: 990px) {
 
-  .bundly__fixed .bundly__medias {
+  .bundly__theme_shopify .bundly__fixed .bundly__medias {
     max-width: 100%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
   }
   
-  .bundly__fixed .bundly__details {
+  .bundly__theme_shopify .bundly__fixed .bundly__details {
     max-width: 35%;
     width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
   }
