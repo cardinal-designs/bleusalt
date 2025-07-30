@@ -18,5 +18,11 @@
     width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
     padding-left: 5rem;
   }
+
+  .bundly__fixed .bundly__medias ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
   
 }
