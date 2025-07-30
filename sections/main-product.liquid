@@ -293,18 +293,23 @@
                   {% render 'icon-caret' %}
                 </summary>
                 <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                  {%- liquid 
-                    if block.settings.use_product_description
-                      assign content = product.description | split: block.settings.product_description_split_value
-                      assign content = content[block.settings.product_description_index]
-                      echo content
-                    endif 
-                  -%}
-                  {{ block.settings.content }}
-                  {{ block.settings.page.content }}
+                  {% if block.settings.heading == 'Measuring Guide' %}
+                    Measuring guide
+                  {% else %}
+                    {%- liquid 
+                      if block.settings.use_product_description
+                        assign content = product.description | split: block.settings.product_description_split_value
+                        assign content = content[block.settings.product_description_index]
+                        echo content
+                      endif 
+                    -%}
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
+                  {% endif %}
                 </div>
               </details>
             </div>
+            
             {%- assign first_tab = false -%}
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
