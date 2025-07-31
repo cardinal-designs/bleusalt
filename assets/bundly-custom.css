@@ -104,6 +104,11 @@
   .bundly__theme_shopify .bundly__medias ul {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .bundly__theme_shopify .bundly__medias ul {
+    gap: 5px;
+  }
+
 }
 
 
