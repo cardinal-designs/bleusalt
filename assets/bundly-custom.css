@@ -114,6 +114,11 @@
   transition: text-decoration-thickness var(--duration-short) ease;
 }
 
+.bundly__theme_shopify .bundly__description a:hover {
+  color: rgb(var(--color-link));
+  text-decoration-thickness: .2rem;
+}
+
 .bundly__theme_shopify .bundly__add_to_cart_button {
   padding-top: 2rem;
   padding-bottom: 2rem;
