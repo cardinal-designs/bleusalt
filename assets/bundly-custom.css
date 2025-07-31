@@ -58,6 +58,12 @@
   color: rgb(var(--color-foreground));
 }
 
+.bundly__theme_shopify .bundly__product_option_name {
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
 
 
 
