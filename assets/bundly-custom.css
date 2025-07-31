@@ -91,6 +91,13 @@
 }
 
 
+@media screen and (min-width: 750px) {
+  .bundly__theme_shopify .bundly__fixed .bundly__details {
+    position: sticky;
+    top: 158px;
+    height: 100%;
+  }
+}
 
 
 @media screen and (min-width: 990px) {
@@ -122,3 +129,4 @@
   }
   
 }
+
