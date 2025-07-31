@@ -76,6 +76,7 @@
 
 .bundly__theme_shopify .bundly__component_original_price {
   font-size: 1.5rem;
+  letter-spacing: 0;
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
 }
@@ -94,6 +95,7 @@
 .bundly__theme_shopify .bundly__variant_radio + label {
   font-size: 1.2rem;
   line-height: 1;
+  letter-spacing: 0.5px;
   padding: .5rem;
 }
 
@@ -201,6 +203,6 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  
+
 }
 
