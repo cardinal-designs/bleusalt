@@ -107,6 +107,13 @@
   margin-top: 15px;
 }
 
+.bundly__theme_shopify .bundly__description a {
+  color: rgba(var(--color-link), var(--alpha-link));
+  text-underline-offset: .3rem;
+  text-decoration-thickness: .1rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
+}
+
 .bundly__theme_shopify .bundly__add_to_cart_button {
   padding-top: 2rem;
   padding-bottom: 2rem;
