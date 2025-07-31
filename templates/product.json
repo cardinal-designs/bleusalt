@@ -110,6 +110,17 @@
             "content": "",
             "page": ""
           }
+        },
+        "collapsible_tab_p67RW3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Measuring Guide",
+            "use_product_description": false,
+            "product_description_split_value": "",
+            "product_description_index": 0,
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -127,7 +138,8 @@
         "c6536c56-eee9-4466-a47f-7e5ad0fe4d23",
         "collapsible-row-0",
         "firework_shoppable_video_ugc_firework_pro_embed_product_CbL98e",
-        "3cbca740-3858-4794-a06d-86306c2065df"
+        "3cbca740-3858-4794-a06d-86306c2065df",
+        "collapsible_tab_p67RW3"
       ],
       "settings": {
         "enable_sticky_info": true,
