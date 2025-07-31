@@ -15,6 +15,10 @@
   gap: 0;
 } 
 
+.bundly__theme_shopify .bundly__medias ul li {
+  width: 100%;
+}
+
 .bundly__theme_shopify .bundly__fixed .bundly__medias li:first-child {
   grid-column: unset;
 }
