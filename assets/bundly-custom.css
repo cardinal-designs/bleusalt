@@ -135,6 +135,7 @@
 
 .bundly__buy_buttons .bundly__button_warning {
   display: none;
+  margin-bottom: 10px;
 }
 
 .bundly__buy_buttons .bundly__button_warning:nth-child(1) {
