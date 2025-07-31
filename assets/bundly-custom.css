@@ -15,12 +15,6 @@
   width: 100%;
 }
 
-.bundly__theme_shopify .bundly__content .bundly__details {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .bundly__theme_shopify .bundly__medias ul {
   display: flex;
   gap: 5px;
@@ -196,6 +190,16 @@
 
   .bundly__theme_shopify .bundly__details_content .bundly__price .bundly__bundle_new_price {
     font-size: 1.8rem;
+  }
+  
+}
+
+@media screen and (max-width: 749px) {
+
+  .bundly__theme_shopify .bundly__content .bundly__details {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
 }
