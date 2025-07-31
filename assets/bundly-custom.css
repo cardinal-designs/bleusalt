@@ -13,6 +13,8 @@
 .bundly__theme_shopify .bundly__medias ul {
   display: flex;
   gap: 0;
+  overflow-x: auto;
+  white-space: nowrap;
 } 
 
 .bundly__theme_shopify .bundly__medias ul li {
