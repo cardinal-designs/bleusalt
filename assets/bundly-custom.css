@@ -30,9 +30,17 @@
   object-position: center;
 }
 
+.bundly__theme_shopify .bundly__details_content .bundly__medias,
+.bundly__theme_shopify .bundly__details_content .bundly__details {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
 .bundly__theme_shopify .bundly__details_content .bundly__title h1 {
   font-size: calc(var(--font-heading-scale) * 2rem);
 }
+
+
 
 
 @media screen and (min-width: 990px) {
@@ -41,8 +49,6 @@
     flex: unset;
     max-width: 100%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
-    flex-grow: 1;
-    flex-shrink: 0;
   }
   
   .bundly__theme_shopify .bundly__fixed .bundly__details {
