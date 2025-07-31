@@ -102,6 +102,10 @@
     top: 158px;
     height: 100%;
   }
+
+  .bundly__theme_shopify .bundly__medias ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
