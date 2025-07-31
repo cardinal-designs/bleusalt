@@ -293,15 +293,25 @@
                   {% render 'icon-caret' %}
                 </summary>
                 <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                  {%- liquid 
-                    if block.settings.use_product_description
-                      assign content = product.description | split: block.settings.product_description_split_value
-                      assign content = content[block.settings.product_description_index]
-                      echo content
-                    endif 
-                  -%}
-                  {{ block.settings.content }}
-                  {{ block.settings.page.content }}
+                  {% if block.settings.heading == 'Measuring Guide' %}
+                    {%- for popup in sizing_popups -%}
+                      {% if popup == 'Measuring Guide' %}
+                      <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                        <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
+                      </modal-opener>
+                      {% endif %}
+                    {%- endfor -%}
+                  {% else %}
+                    {%- liquid 
+                      if block.settings.use_product_description
+                        assign content = product.description | split: block.settings.product_description_split_value
+                        assign content = content[block.settings.product_description_index]
+                        echo content
+                      endif 
+                    -%}
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
+                  {% endif %}
                 </div>
               </details>
             </div>
