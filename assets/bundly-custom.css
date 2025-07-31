@@ -148,6 +148,12 @@
 
   .bundly__theme_shopify .bundly__medias ul {
     gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bundly__theme_shopify .bundly__medias ul li {
+
   }
 
   .bundly__theme_shopify .bundly__details_content .bundly__title h1 {
@@ -202,7 +208,7 @@
   .bundly__theme_shopify .bundly__fixed .bundly__details {
     padding-left: 2rem;
   }
-  
+
 }
 
 @media screen and (max-width: 749px) {
