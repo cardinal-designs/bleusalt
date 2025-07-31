@@ -129,6 +129,10 @@
   max-width: 44rem;
 }
 
+.bundly__theme_shopify .bundly__button_warning {
+  text-align: left;
+}
+
 @media screen and (min-width: 750px) {
   .bundly__product.page-width {
     padding-left: 5rem;
