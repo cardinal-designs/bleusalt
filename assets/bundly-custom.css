@@ -5,7 +5,6 @@
   gap: 0;
 }
 
-
 .bundly__theme_shopify .bundly__fixed .bundly__medias li:first-child {
   grid-column: unset;
 }
@@ -31,6 +30,16 @@
   object-position: center;
 }
 
+.bundly__theme_shopify .bundly__details_content .bundly__title h1 {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  color: rgb(var(--color-foreground));
+  line-height: calc(1 + .3 / max(1, var(--font-heading-scale)));
+  word-break: break-word;
+}
+
+
 @media screen and (min-width: 990px) {
 
   .bundly__theme_shopify .bundly__fixed .bundly__medias {
@@ -53,5 +62,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
+
+  .bundly__theme_shopify .bundly__details_content .bundly__title h1 {
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
+  } 
   
 }
