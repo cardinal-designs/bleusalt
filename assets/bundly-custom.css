@@ -23,6 +23,7 @@
 
 .bundly__theme_shopify .bundly__medias ul li {
   width: 100%;
+  flex: 0 0 auto;
 }
 
 .bundly__theme_shopify .bundly__fixed .bundly__medias li:first-child {
