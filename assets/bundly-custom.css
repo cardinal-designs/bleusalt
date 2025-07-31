@@ -37,6 +37,8 @@
     flex: unset;
     max-width: 100%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+    flex-grow: 1;
+    flex-shrink: 0;
   }
   
   .bundly__theme_shopify .bundly__fixed .bundly__details {
