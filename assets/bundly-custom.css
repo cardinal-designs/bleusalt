@@ -64,6 +64,12 @@
   font-size: 1.4rem;
 }
 
+.bundly__theme_shopifyv .bundly__variant_radio + label {
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .5rem;
+}
+
 
 
 
