@@ -24,6 +24,7 @@
             "show_component_images": true,
             "show_component_prices": true,
             "show_component_unit_prices": false,
+            "product_click_action": "show_dialog",
             "page_size": 12,
             "redirect_to_cart": true,
             "custom_data_metafield": "",
@@ -37,6 +38,7 @@
         "bundly_bundle_information_WNtLWh"
       ],
       "settings": {
+        "custom_class": "bundly__product",
         "include_margins": true
       }
     },
@@ -320,6 +322,7 @@
         "klaviyo_reviews_product_reviews_wmTp4d"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
