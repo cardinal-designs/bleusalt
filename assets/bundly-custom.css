@@ -15,7 +15,7 @@
 
 .bundly__theme_shopify .bundly__fixed .bundly__medias .bundly__media {
   position: relative;
-  padding-top:125.0%;
+  padding-top: 125.0%;
 }
 
 .bundly__theme_shopify .bundly__fixed .bundly__medias .bundly__media img {
@@ -96,7 +96,7 @@
   .bundly__theme_shopify .bundly__content .bundly__details {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
-  
+
   .bundly__theme_shopify .bundly__fixed .bundly__details {
     position: sticky;
     top: 158px;
