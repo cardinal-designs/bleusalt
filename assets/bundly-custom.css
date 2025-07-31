@@ -5,6 +5,11 @@
   gap: 0;
 }
 
+.bundly__theme_shopify .bundly__content .bundly__medias,
+.bundly__theme_shopify .bundly__content .bundly__details {
+  width: 100%;
+}
+
 .bundly__theme_shopify .bundly__fixed .bundly__medias li:first-child {
   grid-column: unset;
 }
