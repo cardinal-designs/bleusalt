@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   padding: 36px 0;
   gap: 0;
+  flex-direction: row;
 }
 
 .bundly__theme_shopify .bundly__fixed .bundly__medias li:first-child {
