@@ -117,6 +117,11 @@
   max-width: 44rem;
 }
 
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+  .bundly__theme_shopify .bundly__fixed .bundly__details {
+    padding-left: 2rem;
+  }
+}
 
 @media screen and (min-width: 750px) {
   .bundly__product.page-width {
