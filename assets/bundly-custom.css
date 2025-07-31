@@ -62,6 +62,7 @@
   padding-left: 0;
   font-weight: 700;
   font-size: 1.4rem;
+  margin-bottom: 5px;
 }
 
 .bundly__theme_shopify .bundly__variant_radio + label {
