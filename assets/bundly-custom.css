@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.bundly__theme_shopify .bundly__content .bundly__details {
+  padding-top: 20px;
+}
+
 .bundly__theme_shopify .bundly__medias ul {
   display: flex;
   gap: 0;
