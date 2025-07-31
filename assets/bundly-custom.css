@@ -54,12 +54,14 @@
 
 .bundly__theme_shopify .bundly__details_content .bundly__title h1 {
   font-size: calc(var(--font-heading-scale) * 2rem);
+  text-align: center;
 }
 
 .bundly__theme_shopify .bundly__details_content .bundly__price .bundly__bundle_new_price {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: calc(1 + .5 / var(--font-body-scale));
+  text-align: center;
 }
 
 .bundly__theme_shopify .bundly__component_title {
@@ -134,6 +136,14 @@
 
   .bundly__theme_shopify .bundly__medias ul {
     gap: 5px;
+  }
+
+  .bundly__theme_shopify .bundly__details_content .bundly__title h1 {
+    text-align: left;
+  }
+
+  .bundly__theme_shopify .bundly__details_content .bundly__price .bundly__bundle_new_price {
+    text-align: left;
   }
 
 }
