@@ -5,6 +5,11 @@
   gap: 0;
 }
 
+.bundly__product.page-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .bundly__theme_shopify .bundly__content .bundly__medias,
 .bundly__theme_shopify .bundly__content .bundly__details {
   width: 100%;
@@ -16,7 +21,7 @@
 
 .bundly__theme_shopify .bundly__medias ul {
   display: flex;
-  gap: 0;
+  gap: 5px;
   overflow-x: auto;
   white-space: nowrap;
 } 
