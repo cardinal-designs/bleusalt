@@ -77,6 +77,7 @@
 
 .bundly__theme_shopify .bundly__component_original_price {
   font-size: 1.3rem;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: calc(1 + .5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
