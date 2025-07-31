@@ -54,7 +54,7 @@
 }
 
 .bundly__theme_shopify .bundly__details_content .bundly__title h1 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: 22px;
   text-align: center;
 }
 
