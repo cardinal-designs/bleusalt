@@ -30,8 +30,8 @@
   object-position: center;
 }
 
-.bundly__theme_shopify .bundly__details_content .bundly__medias,
-.bundly__theme_shopify .bundly__details_content .bundly__details {
+.bundly__theme_shopify .bundly__content .bundly__medias,
+.bundly__theme_shopify .bundly__content .bundly__details {
   flex-grow: 1;
   flex-shrink: 0;
 }
