@@ -19,7 +19,7 @@
       <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
       <!-- Preload JS/CSS -- End -->
 
-      {% if product.template_suffix contains 'app-only' or product.template_suffix contains 'couture' or product.template_suffix contains 'evg-pdp' or product.template_suffix contains 'capsule-pdp' %}
+      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' %}
         <meta name="robots" content="noindex">
       {% endif %}
 
