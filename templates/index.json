@@ -558,6 +558,24 @@
         "padding_top": 12,
         "padding_bottom": 52
       }
+    },
+    "17543395928699435c": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_Tfr3Ri": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_Tfr3Ri"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -572,6 +590,7 @@
     "16637947412bca5d08",
     "image_with_text_XqniFF",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
-    "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
+    "05cdb46b-48ec-4c49-9ab7-410d5ce62045",
+    "17543395928699435c"
   ]
 }
