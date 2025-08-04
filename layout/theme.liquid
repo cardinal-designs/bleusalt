@@ -15,11 +15,13 @@
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
       <!-- Preload JS/CSS -- Start -->
-
       <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'">
       <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
-      
       <!-- Preload JS/CSS -- End -->
+
+      {% if product.template_suffix contains 'app-only' or product.template_suffix contains 'couture' or product.template_suffix contains 'evg-pdp' or product.template_suffix contains 'capsule-pdp' %}
+        <meta name="robots" content="noindex">
+      {% endif %}
 
       <script>
         window.ShopifyTemplate = {
