@@ -145,6 +145,7 @@
 .bundly__product_option_value {
   padding: 0;
   font-size: 0;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 750px) {
