@@ -142,6 +142,10 @@
   display: block;
 }
 
+.bundly__product_option_value {
+  
+}
+
 @media screen and (min-width: 750px) {
   .bundly__product.page-width {
     padding-left: 5rem;
