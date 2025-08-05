@@ -53,67 +53,67 @@ window.addEventListener('scroll', function () {
 });
 
 /* Bundly App Swatch Custom Code - Start */
-(function () {
-  const selector = ".bundly__block";
-  let currentBlock = null;
-  let innerObserver = null;
+// (function () {
+//   const selector = ".bundly__block";
+//   let currentBlock = null;
+//   let innerObserver = null;
 
-  const applyColorSwatches = () => {
-    const bundlyBlock = document.querySelector(selector);
-    if (!bundlyBlock) return;
+//   const applyColorSwatches = () => {
+//     const bundlyBlock = document.querySelector(selector);
+//     if (!bundlyBlock) return;
 
-    const fieldsets = Array.from(
-      bundlyBlock.querySelectorAll(".bundly__variant_picker fieldset.bundly__product_option")
-    ).filter(fs => {
-      const legend = fs.querySelector("legend");
-      return legend && legend.textContent.trim() === "Color";
-    });
+//     const fieldsets = Array.from(
+//       bundlyBlock.querySelectorAll(".bundly__variant_picker fieldset.bundly__product_option")
+//     ).filter(fs => {
+//       const legend = fs.querySelector("legend");
+//       return legend && legend.textContent.trim() === "Color";
+//     });
 
-    fieldsets.forEach(fieldset => {
-      fieldset.querySelectorAll("input").forEach(input => {
-        const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
-        const imgUrl = `//${ window.location.host }/cdn/shop/files/${colorName}_80x.jpg`;
-        const swatch = input.nextElementSibling;
+//     fieldsets.forEach(fieldset => {
+//       fieldset.querySelectorAll("input").forEach(input => {
+//         const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
+//         const imgUrl = `//${ window.location.host }/cdn/shop/files/${colorName}_80x.jpg`;
+//         const swatch = input.nextElementSibling;
 
-        if (swatch) {
-          swatch.style.backgroundImage = `url(${imgUrl})`;
-          swatch.style.backgroundSize = "cover";
-        }
-      });
-    });
-  };
+//         if (swatch) {
+//           swatch.style.backgroundImage = `url(${imgUrl})`;
+//           swatch.style.backgroundSize = "cover";
+//         }
+//       });
+//     });
+//   };
 
-  const observeInner = (block) => {
-    if (innerObserver) innerObserver.disconnect();
+//   const observeInner = (block) => {
+//     if (innerObserver) innerObserver.disconnect();
 
-    innerObserver = new MutationObserver(() => {
-      applyColorSwatches();
-    });
+//     innerObserver = new MutationObserver(() => {
+//       applyColorSwatches();
+//     });
 
-    innerObserver.observe(block, {
-      childList: true,
-      subtree: true
-    });
-  };
+//     innerObserver.observe(block, {
+//       childList: true,
+//       subtree: true
+//     });
+//   };
 
-  const setupBlockWatcher = () => {
-    const newBlock = document.querySelector(selector);
+//   const setupBlockWatcher = () => {
+//     const newBlock = document.querySelector(selector);
 
-    if (newBlock && newBlock !== currentBlock) {
-      currentBlock = newBlock;
-      applyColorSwatches();
-      observeInner(currentBlock);
-    }
-  };
+//     if (newBlock && newBlock !== currentBlock) {
+//       currentBlock = newBlock;
+//       applyColorSwatches();
+//       observeInner(currentBlock);
+//     }
+//   };
 
-  // Watch for insertion or replacement of .bundly__block
-  const outerObserver = new MutationObserver(setupBlockWatcher);
-  outerObserver.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
+//   // Watch for insertion or replacement of .bundly__block
+//   const outerObserver = new MutationObserver(setupBlockWatcher);
+//   outerObserver.observe(document.body, {
+//     childList: true,
+//     subtree: true
+//   });
 
-  // Initial run
-  setupBlockWatcher();
-})();
+//   // Initial run
+//   setupBlockWatcher();
+// })();
 /* Bundly App Swatch Custom Code - End */
