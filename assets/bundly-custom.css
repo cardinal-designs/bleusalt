@@ -93,6 +93,10 @@
   margin-bottom: 5px;
 }
 
+.bundly__theme_shopify .bundly__product_option_name span {
+  
+}
+
 .bundly__theme_shopify .bundly__variant_radio + label {
   font-size: 1.2rem;
   line-height: 1;

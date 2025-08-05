@@ -164,7 +164,7 @@ window.addEventListener('scroll', function () {
         ? legend.innerText.split(":")[0]
         : legend.innerText;
 
-      const newHTML = `${legendBaseText}: <span>${input.value}</span>`;
+      const newHTML = `Select a ${legendBaseText}: <span>${input.value}</span>`;
 
       // Only update if different (to avoid triggering MutationObserver again)
       if (legend.innerHTML !== newHTML) {
