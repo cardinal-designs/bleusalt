@@ -154,23 +154,25 @@ window.addEventListener('scroll', function () {
       });
     });
 
-    // Safely update legend title without causing observer infinite loop
-    document.querySelectorAll(fieldsetsSelector).forEach(el => {
-      const input = el.querySelector("input:checked");
-      const legend = el.querySelector("legend");
-      if (!input || !legend) return;
+   // Safely update legend title without causing observer infinite loop
+  document.querySelectorAll(fieldsetsSelector).forEach(el => {
+    const input = el.querySelector("input:checked");
+    const legend = el.querySelector("legend");
+    if (!input || !legend) return;
 
-      const legendBaseText = legend.innerText.includes(":")
-        ? legend.innerText.split(":")[0]
-        : legend.innerText;
+    // Extract base text safely from raw HTML
+    const currentHTML = legend.innerHTML;
+    const existingBaseText = currentHTML.split(":")[0].replace(/^Select a\s*/, "").trim();
 
-      const newHTML = `${legendBaseText}: <span>${input.value}</span>`;
+    const newBaseText = `Select a ${existingBaseText}`;
+    const newHTML = `${newBaseText}: <span>${input.value}</span>`;
 
-      // Only update if different (to avoid triggering MutationObserver again)
-      if (legend.innerHTML !== newHTML) {
-        legend.innerHTML = newHTML;
-      }
-    });
+    // Only update if truly different
+    if (currentHTML !== newHTML) {
+      legend.innerHTML = newHTML;
+    }
+  });
+
   };
 
   const observeInner = (block) => {
