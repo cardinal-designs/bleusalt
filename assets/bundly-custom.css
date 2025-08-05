@@ -153,7 +153,7 @@
   border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
 }
 
-.product-form__input input[type=radio][name=Color]:checked+label {
+.product-form__input input.bundly__variant_radio:checked+label {
   border: var(--inputs-border-width) solid rgba(var(--color-foreground), .5);
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(var(--color-foreground), .5);
 }
