@@ -55,7 +55,6 @@ window.addEventListener('scroll', function () {
 /* Bundly App Swatch Custom Code - Start */
 (function () {
   const selector = ".bundly__block";
-  const fieldsetsSelector = ".bundly__block fieldset";
   let currentBlock = null;
   let innerObserver = null;
 
@@ -83,19 +82,6 @@ window.addEventListener('scroll', function () {
         }
       });
     });
-
-    document.querySelectorAll(fieldsetsSelector).forEach(el => {
-      let newLegendTitle = "";
-      if(el.querySelector("legend").innerText.includes(":")){
-        newLegendTitle = `${  el.querySelector("legend").innerText.split(":")[0] }: <span>${ el.querySelector("input:checked").value }</span`;
-      }
-      else{
-        newLegendTitle = `${ el.querySelector("legend").innerText }: <span>${ el.querySelector("input:checked").value }</span>`;
-      }
-      if(newLegendTitle != ""){
-        el.querySelector("legend").innerHTML = newLegendTitle;
-      }
-    })
   };
 
   const observeInner = (block) => {
