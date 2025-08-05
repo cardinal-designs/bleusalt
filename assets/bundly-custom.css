@@ -142,7 +142,7 @@
   display: block;
 }
 
-.bundly__theme_shopify .bundly__product_option_value {
+.bundly__theme_shopify .bundly__variant_radio+label {
   padding: 0;
   font-size: 0;
   border-radius: 50%;
