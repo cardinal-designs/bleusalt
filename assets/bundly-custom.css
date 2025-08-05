@@ -94,7 +94,8 @@
 }
 
 .bundly__theme_shopify .bundly__product_option_name span {
-  
+  font-weight: 400;
+  color: rgba(var(--color-foreground), .65);
 }
 
 .bundly__theme_shopify .bundly__variant_radio + label {
