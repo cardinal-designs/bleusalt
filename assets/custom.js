@@ -53,6 +53,71 @@ window.addEventListener('scroll', function () {
 });
 
 /* Bundly App Swatch Custom Code - Start */
+// (function () {
+//   const selector = ".bundly__block";
+//   let currentBlock = null;
+//   let innerObserver = null;
+
+//   const applyColorSwatches = () => {
+//     const bundlyBlock = document.querySelector(selector);
+//     if (!bundlyBlock) return;
+
+//     const fieldsets = Array.from(
+//       bundlyBlock.querySelectorAll(".bundly__variant_picker fieldset.bundly__product_option")
+//     ).filter(fs => {
+//       const legend = fs.querySelector("legend");
+//       return legend && legend.textContent.trim() === "Color";
+//     });
+
+//     fieldsets.forEach(fieldset => {
+//       fieldset.classList.add("color_swatch")
+//       fieldset.querySelectorAll("input").forEach(input => {
+//         const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
+//         const imgUrl = `//${ window.location.host }/cdn/shop/files/${colorName}_80x.jpg`;
+//         const swatch = input.nextElementSibling;
+
+//         if (swatch) {
+//           swatch.style.backgroundImage = `url(${imgUrl})`;
+//           swatch.style.backgroundSize = "cover";
+//         }
+//       });
+//     });
+//   };
+
+//   const observeInner = (block) => {
+//     if (innerObserver) innerObserver.disconnect();
+
+//     innerObserver = new MutationObserver(() => {
+//       applyColorSwatches();
+//     });
+
+//     innerObserver.observe(block, {
+//       childList: true,
+//       subtree: true
+//     });
+//   };
+
+//   const setupBlockWatcher = () => {
+//     const newBlock = document.querySelector(selector);
+
+//     if (newBlock && newBlock !== currentBlock) {
+//       currentBlock = newBlock;
+//       applyColorSwatches();
+//       observeInner(currentBlock);
+//     }
+//   };
+
+//   // Watch for insertion or replacement of .bundly__block
+//   const outerObserver = new MutationObserver(setupBlockWatcher);
+//   outerObserver.observe(document.body, {
+//     childList: true,
+//     subtree: true
+//   });
+
+//   // Initial run
+//   setupBlockWatcher();
+// })();
+
 (function () {
   const selector = ".bundly__block";
   let currentBlock = null;
@@ -70,10 +135,11 @@ window.addEventListener('scroll', function () {
     });
 
     fieldsets.forEach(fieldset => {
-      fieldset.classList.add("color_swatch")
+      fieldset.classList.add("color_swatch");
+
       fieldset.querySelectorAll("input").forEach(input => {
         const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
-        const imgUrl = `//${ window.location.host }/cdn/shop/files/${colorName}_80x.jpg`;
+        const imgUrl = `//${window.location.host}/cdn/shop/files/${colorName}_80x.jpg`;
         const swatch = input.nextElementSibling;
 
         if (swatch) {
@@ -81,6 +147,24 @@ window.addEventListener('scroll', function () {
           swatch.style.backgroundSize = "cover";
         }
       });
+    });
+
+    // Also update legend text with selected value
+    bundlyBlock.querySelectorAll('fieldset').forEach(el => {
+      const input = el.querySelector("input:checked");
+      const legend = el.querySelector("legend");
+      if (!input || !legend) return;
+
+      const selectedValue = input.value;
+      let newLegendTitle = "";
+
+      if (legend.innerText.includes(":")) {
+        newLegendTitle = `${legend.innerText.split(":")[0]}: <span>${selectedValue}</span>`;
+      } else {
+        newLegendTitle = `${legend.innerText}: <span>${selectedValue}</span>`;
+      }
+
+      legend.innerHTML = newLegendTitle;
     });
   };
 
@@ -107,14 +191,16 @@ window.addEventListener('scroll', function () {
     }
   };
 
-  // Watch for insertion or replacement of .bundly__block
+  // Outer observer for .bundly__block add/replace
   const outerObserver = new MutationObserver(setupBlockWatcher);
   outerObserver.observe(document.body, {
     childList: true,
     subtree: true
   });
 
-  // Initial run
+  // Initial fire
   setupBlockWatcher();
 })();
+
+
 /* Bundly App Swatch Custom Code - End */
