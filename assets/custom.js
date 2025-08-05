@@ -53,3 +53,70 @@ window.addEventListener('scroll', function () {
 });
 
 
+(function () {
+  const selector = ".bundly__block";
+  let currentBlock = null;
+  let innerObserver = null;
+
+  const applyColorSwatches = () => {
+    const bundlyBlock = document.querySelector(selector);
+    if (!bundlyBlock) return;
+
+    const fieldsets = Array.from(
+      bundlyBlock.querySelectorAll(".bundly__variant_picker fieldset.bundly__product_option")
+    ).filter(fs => {
+      const legend = fs.querySelector("legend");
+      return legend && legend.textContent.trim() === "Color";
+    });
+
+    fieldsets.forEach(fieldset => {
+      fieldset.querySelectorAll("input").forEach(input => {
+        const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
+        const imgUrl = `//bleusalt.com/cdn/shop/files/${colorName}_80x.jpg`;
+        const swatch = input.nextElementSibling;
+
+        if (swatch) {
+          swatch.style.backgroundImage = `url(${imgUrl})`;
+          swatch.style.backgroundSize = "cover";
+        }
+      });
+    });
+
+    console.log("🎨 Swatches applied");
+  };
+
+  const observeInner = (block) => {
+    if (innerObserver) innerObserver.disconnect();
+
+    innerObserver = new MutationObserver(() => {
+      console.log("🔄 Inner HTML updated");
+      applyColorSwatches();
+    });
+
+    innerObserver.observe(block, {
+      childList: true,
+      subtree: true
+    });
+  };
+
+  const setupBlockWatcher = () => {
+    const newBlock = document.querySelector(selector);
+
+    if (newBlock && newBlock !== currentBlock) {
+      console.log("🆕 New .bundly__block found or replaced");
+      currentBlock = newBlock;
+      applyColorSwatches();
+      observeInner(currentBlock);
+    }
+  };
+
+  // Watch for insertion or replacement of .bundly__block
+  const outerObserver = new MutationObserver(setupBlockWatcher);
+  outerObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  // Initial run
+  setupBlockWatcher();
+})();
