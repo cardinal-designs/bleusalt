@@ -55,6 +55,7 @@ window.addEventListener('scroll', function () {
 /* Bundly App Swatch Custom Code - Start */
 (function () {
   const selector = ".bundly__block";
+  const fieldsetsSelector = ".bundly__block fieldset";
   let currentBlock = null;
   let innerObserver = null;
 
@@ -83,7 +84,7 @@ window.addEventListener('scroll', function () {
       });
     });
 
-    document.querySelectorAll('.bundly__block fieldset').forEach(el => {
+    document.querySelectorAll(fieldsetsSelector).forEach(el => {
       let newLegendTitle = "";
       if(el.querySelector("legend").innerText.includes(":")){
         newLegendTitle = `${  el.querySelector("legend").innerText.split(":")[0] }: <span>${ el.querySelector("input:checked").value }</span`;
