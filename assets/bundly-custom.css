@@ -150,6 +150,7 @@
   height: 2.5rem;
   border-radius: 50%;
   background-color: #f0f0f0;
+  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
 }
 
 @media screen and (min-width: 750px) {
