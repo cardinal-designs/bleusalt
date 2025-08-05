@@ -70,6 +70,7 @@ window.addEventListener('scroll', function () {
     });
 
     fieldsets.forEach(fieldset => {
+      fieldset.classList.add("color_swatch")
       fieldset.querySelectorAll("input").forEach(input => {
         const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
         const imgUrl = `//${ window.location.host }/cdn/shop/files/${colorName}_80x.jpg`;
