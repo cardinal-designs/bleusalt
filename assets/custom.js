@@ -180,6 +180,4 @@ window.addEventListener('scroll', function () {
     // console.error("Error setting up outer observer:", err);
   }
 })();
-
-
 /* Bundly App Swatch Custom Code - End */
