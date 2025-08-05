@@ -97,6 +97,7 @@
   font-size: 1.2rem;
   line-height: 1;
   letter-spacing: 0.5px;
+  letter-spacing: 0;
   min-width: 26px;
   padding: .5rem;
 }
