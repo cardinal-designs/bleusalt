@@ -84,8 +84,6 @@
 
 .bundly__theme_shopify .bundly__product_option {
   margin-top: 0;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(var(--color-foreground), .25);
 }
 
 .bundly__theme_shopify .bundly__product_option_name {
