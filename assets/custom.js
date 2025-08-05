@@ -103,7 +103,6 @@ window.addEventListener('scroll', function () {
     const newBlock = document.querySelector(selector);
 
     if (newBlock && newBlock !== currentBlock) {
-      console.log("🆕 New .bundly__block found or replaced");
       currentBlock = newBlock;
       applyColorSwatches();
       observeInner(currentBlock);
