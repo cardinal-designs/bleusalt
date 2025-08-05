@@ -60,86 +60,126 @@ window.addEventListener('scroll', function () {
   let innerObserver = null;
 
   const applyColorSwatches = () => {
-    const bundlyBlock = document.querySelector(selector);
-    if (!bundlyBlock) return;
+    try {
+      const bundlyBlock = document.querySelector(selector);
+      if (!bundlyBlock) return;
 
-    const fieldsets = Array.from(
-      bundlyBlock.querySelectorAll(".bundly__variant_picker fieldset.bundly__product_option")
-    ).filter(fs => {
-      const legend = fs.querySelector("legend");
-      return legend && legend.textContent.trim() === "Color";
-    });
-
-    fieldsets.forEach(fieldset => {
-      fieldset.classList.add("color_swatch");
-
-      fieldset.querySelectorAll("input").forEach(input => {
-        const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
-        const imgUrl = `//${window.location.host}/cdn/shop/files/${colorName}_80x.jpg`;
-        const swatch = input.nextElementSibling;
-
-        if (swatch) {
-          swatch.style.backgroundImage = `url(${imgUrl})`;
-          swatch.style.backgroundSize = "cover";
+      const fieldsets = Array.from(
+        bundlyBlock.querySelectorAll(".bundly__variant_picker fieldset.bundly__product_option")
+      ).filter(fs => {
+        try {
+          const legend = fs.querySelector("legend");
+          return legend && legend.textContent.trim() === "Color";
+        } catch (err) {
+          // console.error("Error filtering fieldsets:", err);
+          return false;
         }
       });
-    });
 
-    // Safely update legend title without causing observer infinite loop
-    document.querySelectorAll(fieldsetsSelector).forEach(el => {
-      const input = el.querySelector("input:checked");
-      const legend = el.querySelector("legend");
-      if (!input || !legend) return;
+      fieldsets.forEach(fieldset => {
+        try {
+          fieldset.classList.add("color_swatch");
 
-      // Extract base text safely from raw HTML
-      const currentHTML = legend.innerHTML;
-      const existingBaseText = currentHTML.split(":")[0].replace(/^Select a\s*/, "").trim();
+          fieldset.querySelectorAll("input").forEach(input => {
+            try {
+              const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
+              const imgUrl = `//${window.location.host}/cdn/shop/files/${colorName}_80x.jpg`;
+              const swatch = input.nextElementSibling;
 
-      const newBaseText = `Select a ${existingBaseText}`;
-      const newHTML = `${newBaseText}: <span>${input.value}</span>`;
-
-      // Only update if truly different
-      if (currentHTML !== newHTML) {
-        legend.innerHTML = newHTML;
-      }
-    });
-
-  };
-
-  const observeInner = (block) => {
-    if (innerObserver) innerObserver.disconnect();
-
-    innerObserver = new MutationObserver(() => {
-      // Debounce with requestAnimationFrame to avoid flood
-      requestAnimationFrame(() => {
-        applyColorSwatches();
+              if (swatch) {
+                swatch.style.backgroundImage = `url(${imgUrl})`;
+                swatch.style.backgroundSize = "cover";
+              }
+            } catch (err) {
+              // console.error("Error applying swatch image:", err);
+            }
+          });
+        } catch (err) {
+          // console.error("Error processing fieldset:", err);
+        }
       });
-    });
 
-    innerObserver.observe(block, {
-      childList: true,
-      subtree: true
-    });
-  };
+      document.querySelectorAll(fieldsetsSelector).forEach(el => {
+        try {
+          const input = el.querySelector("input:checked");
+          const legend = el.querySelector("legend");
+          if (!input || !legend) return;
 
-  const setupBlockWatcher = () => {
-    const newBlock = document.querySelector(selector);
+          const currentHTML = legend.innerHTML;
+          const existingBaseText = currentHTML.split(":")[0].replace(/^Select a\s*/, "").trim();
 
-    if (newBlock && newBlock !== currentBlock) {
-      currentBlock = newBlock;
-      applyColorSwatches();
-      observeInner(currentBlock);
+          const newBaseText = `Select a ${existingBaseText}`;
+          const newHTML = `${newBaseText}: <span>${input.value}</span>`;
+
+          if (currentHTML !== newHTML) {
+            legend.innerHTML = newHTML;
+          }
+        } catch (err) {
+          // console.error("Error updating legend title:", err);
+        }
+      });
+    } catch (err) {
+      // console.error("Error in applyColorSwatches:", err);
     }
   };
 
-  const outerObserver = new MutationObserver(setupBlockWatcher);
-  outerObserver.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
+  const observeInner = (block) => {
+    try {
+      if (innerObserver) innerObserver.disconnect();
 
-  // Initial call
-  setupBlockWatcher();
+      innerObserver = new MutationObserver(() => {
+        requestAnimationFrame(() => {
+          try {
+            applyColorSwatches();
+          } catch (err) {
+            // console.error("Error in inner observer callback:", err);
+          }
+        });
+      });
+
+      innerObserver.observe(block, {
+        childList: true,
+        subtree: true
+      });
+    } catch (err) {
+      // console.error("Error in observeInner:", err);
+    }
+  };
+
+  const setupBlockWatcher = () => {
+    try {
+      const newBlock = document.querySelector(selector);
+
+      if (newBlock && newBlock !== currentBlock) {
+        currentBlock = newBlock;
+        applyColorSwatches();
+        observeInner(currentBlock);
+      }
+    } catch (err) {
+      // console.error("Error in setupBlockWatcher:", err);
+    }
+  };
+
+  try {
+    const outerObserver = new MutationObserver(() => {
+      try {
+        setupBlockWatcher();
+      } catch (err) {
+        // console.error("Error in outer observer callback:", err);
+      }
+    });
+
+    outerObserver.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Initial call
+    setupBlockWatcher();
+  } catch (err) {
+    // console.error("Error setting up outer observer:", err);
+  }
 })();
+
 
 /* Bundly App Swatch Custom Code - End */
