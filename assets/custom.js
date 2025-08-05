@@ -52,7 +52,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-
+/* Bundly App Swatch Custom Code - Start */
 (function () {
   const selector = ".bundly__block";
   let currentBlock = null;
@@ -72,7 +72,7 @@ window.addEventListener('scroll', function () {
     fieldsets.forEach(fieldset => {
       fieldset.querySelectorAll("input").forEach(input => {
         const colorName = input.value.toLowerCase().trim().replace(/\s+/g, "-");
-        const imgUrl = `//bleusalt.com/cdn/shop/files/${colorName}_80x.jpg`;
+        const imgUrl = `//${ window.location.host }/cdn/shop/files/${colorName}_80x.jpg`;
         const swatch = input.nextElementSibling;
 
         if (swatch) {
@@ -81,15 +81,12 @@ window.addEventListener('scroll', function () {
         }
       });
     });
-
-    console.log("🎨 Swatches applied");
   };
 
   const observeInner = (block) => {
     if (innerObserver) innerObserver.disconnect();
 
     innerObserver = new MutationObserver(() => {
-      console.log("🔄 Inner HTML updated");
       applyColorSwatches();
     });
 
@@ -119,3 +116,4 @@ window.addEventListener('scroll', function () {
   // Initial run
   setupBlockWatcher();
 })();
+/* Bundly App Swatch Custom Code - End */
