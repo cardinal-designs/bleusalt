@@ -247,8 +247,8 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type="radio"][name="Color"] + label {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   background-color: #f0f0f0;
 }
