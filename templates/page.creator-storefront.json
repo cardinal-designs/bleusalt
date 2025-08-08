@@ -43,15 +43,15 @@
             "bioButtonFontSize": 1,
             "shareButtonBorderRadious": 5,
             "cancelBioButtonFontColor": "#000000",
-            "cancelBioButtonBackgroundColor": "#FFFFFF",
-            "saveBioButtonFontColor": "#FFFFFF",
+            "cancelBioButtonBackgroundColor": "#ffffff",
+            "saveBioButtonFontColor": "#ffffff",
             "saveBioButtonBackgroundColor": "#23395b"
           }
         },
         "loudcrowd_ambassador_feed_gDVG6e": {
           "type": "shopify://apps/loudcrowd/blocks/ambassador-feed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
           "settings": {
-            "primaryBrandColor": "#23395B",
+            "primaryBrandColor": "#23395b",
             "productPickerBackgroundColor": "#ffffff",
             "titleTextColor": "#121212",
             "secondaryTextColor": "#4a4a4a",
@@ -60,7 +60,7 @@
             "showProductBrands": false,
             "addToCartButton": "hidden",
             "addToCartButtonLabel": "Add To Basket",
-            "discountPriceColor": "#E51010",
+            "discountPriceColor": "#e51010",
             "priceColor": "#121212",
             "titleTextSize": 0.9,
             "titleTextWeight": 500,
@@ -81,7 +81,7 @@
       ],
       "settings": {
         "custom_class": "",
-        "include_margins": true
+        "include_margins": false
       }
     }
   },
