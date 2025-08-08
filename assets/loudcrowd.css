@@ -3,11 +3,6 @@ ambassador-hero-block {
   /* top right corner button properties */
   --creator-btn-color: white;
   --creator-btn-padding: 8px 15px;
-  --creator-btn-background-color: #202099;
-  /* base font size */
-  --lc-font-size: 14px; 
-  /* controls font size for ambassador's name */   
-        --lc-fullname-font-size: 1.75rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
 }
