@@ -31,6 +31,12 @@
         };
       </script>
 
+      <!-- LoudCrowd --> 
+  {% if request.path contains '/pages/shop' %} 
+    <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }} 
+  {% endif %}
+
+
       <!-- Triple Whale Begin -->
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
 
