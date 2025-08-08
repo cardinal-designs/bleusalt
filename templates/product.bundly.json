@@ -38,7 +38,7 @@
         "bundly_bundle_information_WNtLWh"
       ],
       "settings": {
-        "custom_class": "bundly__product",
+        "custom_class": "",
         "include_margins": true
       }
     },
@@ -227,6 +227,7 @@
         "d6cd600e-0a68-488d-bb29-58ba58cc4bfc",
         "2ac3f5b2-dcf1-4378-95f7-8fbcd1cb9432"
       ],
+      "disabled": true,
       "settings": {
         "width": "page-width",
         "padding_top": 10,
@@ -321,6 +322,7 @@
       "block_order": [
         "klaviyo_reviews_product_reviews_wmTp4d"
       ],
+      "disabled": true,
       "settings": {
         "custom_class": "",
         "include_margins": true
