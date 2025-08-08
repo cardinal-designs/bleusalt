@@ -66,7 +66,7 @@
             "titleTextWeight": 500,
             "priceTextSize": 0.9,
             "priceTextWeight": 400,
-            "cardBorderRadius": 10,
+            "cardBorderRadius": 0,
             "productCardBackgroundOpacity": 0,
             "hideDiscountCard": false,
             "discountCardBackgroundColor": "#212121",
