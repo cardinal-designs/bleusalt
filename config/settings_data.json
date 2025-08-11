@@ -368,7 +368,6 @@
         "blocks": {
           "5c928d39-473d-4787-994f-43ebd478188f": {
             "type": "accessory",
-            "disabled": true,
             "settings": {
               "accessory_heading": "Add canvas bags?",
               "accessory_product": "the-canvas-bag-12-inch"
@@ -376,7 +375,6 @@
           },
           "8ea70fa6-b46c-4de6-be6b-c94a730dd3ac": {
             "type": "accessory",
-            "disabled": true,
             "settings": {
               "accessory_heading": "Add a large tote bag?",
               "accessory_product": "the-large-logo-tote"
@@ -385,8 +383,8 @@
           "discount_LxLaPX": {
             "type": "discount",
             "settings": {
-              "pills_number": 3,
-              "discount_item_text": "3+ Items",
+              "pills_number": 2,
+              "discount_item_text": "2+ Items",
               "discount_item_percentage": "+10% OFF"
             }
           },
@@ -394,7 +392,7 @@
             "type": "discount",
             "settings": {
               "pills_number": 2,
-              "discount_item_text": "5+ Items",
+              "discount_item_text": "4+ Items",
               "discount_item_percentage": "+15% OFF"
             }
           },
@@ -402,7 +400,7 @@
             "type": "discount",
             "settings": {
               "pills_number": 2,
-              "discount_item_text": "7+ Items",
+              "discount_item_text": "6+ Items",
               "discount_item_percentage": "+20% OFF"
             }
           }
