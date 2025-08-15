@@ -18,8 +18,42 @@
         "color_scheme": "inverse"
       }
     },
+    "rich_text_NirfgQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QyH9tV": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Lite Fabric</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_i3NHwq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Lite Fabric is a lighter, more breathable and silkier variation of our Signature Fabric. This fabric consists of 96% micro modal, 4% spandex and maintains our signature softness and sustainability while offering enhanced airflow and a featherweight feel, making it perfect for warmer weather.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QyH9tV",
+        "text_i3NHwq"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "otto_image_8wPW6g": {
       "type": "otto-image",
+      "disabled": true,
       "settings": {
         "image_name": "bleusalt-lite",
         "image_width_desktop": 100,
@@ -173,12 +207,14 @@
         "firework_shoppable_video_ugc_firework_pro_embed_fxwk7J"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
   },
   "order": [
     "banner",
+    "rich_text_NirfgQ",
     "otto_image_8wPW6g",
     "product-grid",
     "1660937591af29c294",
