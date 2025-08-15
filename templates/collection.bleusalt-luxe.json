@@ -18,8 +18,42 @@
         "color_scheme": "inverse"
       }
     },
+    "rich_text_Ecx8X8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YCxxzB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Luxe Fabric</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_mPkURL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Luxe Fabric combines the ultra soft feel of our Signature Fabric with a heavier more structured weight, making it perfect for the colder months.  It consists of 48% micro modal, 48% organic cotton, and 4% spandex.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YCxxzB",
+        "text_mPkURL"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "otto_image_8wPW6g": {
       "type": "otto-image",
+      "disabled": true,
       "settings": {
         "image_name": "bleusalt-luxe",
         "image_width_desktop": 100,
@@ -173,12 +207,14 @@
         "firework_shoppable_video_ugc_firework_pro_embed_AnAxg3"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
   },
   "order": [
     "banner",
+    "rich_text_Ecx8X8",
     "otto_image_8wPW6g",
     "product-grid",
     "1660937591af29c294",
