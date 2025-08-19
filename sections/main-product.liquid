@@ -14,6 +14,11 @@
   {% render 'hs-defer-css' with filename: 'component-deferred-media.css', pages: 'collection,index,product' | split: ',', local: true %}
 
   {%- style -%}
+
+      /* .product-form__submit[data-join-list] {
+      display: block !important;
+    } */
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -75,7 +80,7 @@
   {% if section.settings.show_breadcrumb %}
     {% render 'breadcrumb', product: product %}
   {% endif %}
-  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div data-id="{{ product.options.size }}" class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
         {{ "accessibility.skip_to_product_info" | t }}
