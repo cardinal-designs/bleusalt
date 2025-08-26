@@ -389,7 +389,7 @@
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
-                      <fieldset class="js product-form__input">
+                      <fieldset class="js product-form__input" data-wair-option-name="{{ option.name }}">
                         <div class="size__guide--grid">
                           <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
                           {% if option.name == 'Size' %}
