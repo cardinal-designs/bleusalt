@@ -74,6 +74,25 @@
         "rebuy_personalization_engine_rebuy_widget_CGFKUN"
       ],
       "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "17562306089958ff32": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_GTRpWj": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_GTRpWj"
+      ],
+      "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     },
@@ -243,6 +262,7 @@
         "firework_shoppable_video_ugc_firework_pro_embed_6WYePa"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
@@ -252,6 +272,7 @@
     "product-grid",
     "1734416630f7a21117",
     "1660937591af29c294",
+    "17562306089958ff32",
     "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
     "faq_new_VxmFhr",
     "175268568895ed6739"
