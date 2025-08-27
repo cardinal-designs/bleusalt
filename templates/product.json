@@ -266,6 +266,24 @@
         "rebuy_recommendaation_widget_id": "207510"
       }
     },
+    "1756326700d46d5da7": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_3pDdTV": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "productpage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_3pDdTV"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
     "1662737421ca8ebddf": {
       "type": "custom-liquid",
       "disabled": true,
@@ -288,6 +306,7 @@
         "klaviyo_reviews_product_reviews_wmTp4d"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
@@ -299,6 +318,7 @@
     "1660770662e0f526b9",
     "product-recommendations",
     "product_recommendations_ai_mCkeP9",
+    "1756326700d46d5da7",
     "1662737421ca8ebddf",
     "174599921146b1deae"
   ]
