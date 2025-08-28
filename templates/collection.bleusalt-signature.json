@@ -31,7 +31,7 @@
         "text_i3NHwq": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Signature Fabric is a luxurious material made from trees, and known for being ultra soft, ultra comfortable, breathable and versatile, combining the comfort of cashmere with the practicality of performance wear.   It consists of 95% modal and 5% spandex.</p>"
+            "text": "<p>Our Signature Fabric is a luxurious material made from trees, made sustainably, known as the softest fibers on earth, developed for us, and made in the USA. Machine wash and dry, and no shrinking.</p>"
           }
         }
       },
@@ -151,6 +151,24 @@
         "padding_bottom": 36
       }
     },
+    "1756401178909e7f5d": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_YG9yxp": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_YG9yxp"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
     "1660937591af29c294": {
       "type": "rich-text",
       "blocks": {
@@ -205,24 +223,6 @@
       },
       "block_order": [
         "firework_shoppable_video_ugc_firework_pro_embed_fxwk7J"
-      ],
-      "settings": {
-        "custom_class": "",
-        "include_margins": true
-      }
-    },
-    "1756401178909e7f5d": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_YG9yxp": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "categorypage-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_YG9yxp"
       ],
       "settings": {
         "custom_class": "",
