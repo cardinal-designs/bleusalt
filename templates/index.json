@@ -139,52 +139,22 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "17563249518812c6cf": {
+      "type": "apps",
       "blocks": {
-        "49238d89-463e-419a-8643-42f4463ad2dd": {
-          "type": "collection",
+        "nosto_nosto_placements_block_KqAXUy": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
-            "heading": "Womens",
-            "collection": "newest-products"
-          }
-        },
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
-          "type": "collection",
-          "settings": {
-            "heading": "Mens",
-            "collection": "mens-new-arrivals"
+            "placement": "frontpage-nosto-1"
           }
         }
       },
       "block_order": [
-        "49238d89-463e-419a-8643-42f4463ad2dd",
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
+        "nosto_nosto_placements_block_KqAXUy"
       ],
       "settings": {
-        "title": "Explore.",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": true,
-        "show_life_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
+        "custom_class": "",
+        "include_margins": true
       }
     },
     "1660226720e02964f9": {
@@ -342,6 +312,54 @@
         "title": ""
       }
     },
+    "featured_collection": {
+      "type": "featured-collection",
+      "blocks": {
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
+          "type": "collection",
+          "settings": {
+            "heading": "Womens",
+            "collection": "newest-products"
+          }
+        },
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
+          "type": "collection",
+          "settings": {
+            "heading": "Mens",
+            "collection": "mens-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "49238d89-463e-419a-8643-42f4463ad2dd",
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
+      ],
+      "settings": {
+        "title": "Newest Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
     "1659735210e064d864": {
       "type": "featured-collection",
       "blocks": {
@@ -446,24 +464,6 @@
         "press_link": "",
         "reviews_link": "",
         "title": ""
-      }
-    },
-    "17563249518812c6cf": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_KqAXUy": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "frontpage-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_KqAXUy"
-      ],
-      "settings": {
-        "custom_class": "",
-        "include_margins": true
       }
     },
     "image_with_text_XqniFF": {
@@ -582,13 +582,13 @@
     "16597180576b9dbb68",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
+    "17563249518812c6cf",
     "featured_collection",
     "1660226720e02964f9",
     "1660227726ff0f6237",
     "166022784081bd0071",
     "1659735210e064d864",
     "16637947412bca5d08",
-    "17563249518812c6cf",
     "image_with_text_XqniFF",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
