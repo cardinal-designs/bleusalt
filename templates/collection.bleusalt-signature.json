@@ -210,6 +210,24 @@
         "custom_class": "",
         "include_margins": true
       }
+    },
+    "1756401178909e7f5d": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_YG9yxp": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_YG9yxp"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -217,6 +235,7 @@
     "rich_text_NirfgQ",
     "otto_image_8wPW6g",
     "product-grid",
+    "1756401178909e7f5d",
     "1660937591af29c294",
     "175269609969217923"
   ]
