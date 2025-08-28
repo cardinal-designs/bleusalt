@@ -169,6 +169,25 @@
         "firework_shoppable_video_ugc_firework_pro_embed_zYWwkT"
       ],
       "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "1756401489a5da0395": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_PWr99D": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_PWr99D"
+      ],
+      "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
@@ -176,6 +195,7 @@
   "order": [
     "banner",
     "product-grid",
+    "1756401489a5da0395",
     "1660937591af29c294",
     "52dfa345-32cc-4bb9-8f62-b9d74d7816e1",
     "175269254293212fe6"
