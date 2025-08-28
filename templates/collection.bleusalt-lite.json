@@ -31,13 +31,22 @@
         "text_i3NHwq": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Lite Fabric is a lighter, more breathable and silkier variation of our Signature Fabric. This fabric consists of 96% micro modal, 4% spandex and maintains our signature softness and sustainability while offering enhanced airflow and a featherweight feel, making it perfect for warmer weather.</p>"
+            "text": "<p>Our Lite Fabric is a lighter, more breathable and silkier variation of our Signature Fabric. This fabric maintains our signature softness and sustainability while offering enhanced airflow and a featherweight feel, making it perfect for warmer weather.</p>"
+          }
+        },
+        "caption_hAQmwA": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
           }
         }
       },
       "block_order": [
         "heading_QyH9tV",
-        "text_i3NHwq"
+        "text_i3NHwq",
+        "caption_hAQmwA"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
