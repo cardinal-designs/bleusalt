@@ -33,11 +33,20 @@
           "settings": {
             "text": "<p>Our Signature Fabric is a luxurious material made from trees, made sustainably, known as the softest fibers on earth, developed for us, and made in the USA. Machine wash and dry, and no shrinking.</p>"
           }
+        },
+        "caption_Yxb89a": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "heading_QyH9tV",
-        "text_i3NHwq"
+        "text_i3NHwq",
+        "caption_Yxb89a"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
