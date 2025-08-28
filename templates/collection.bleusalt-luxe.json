@@ -31,13 +31,22 @@
         "text_mPkURL": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Luxe Fabric combines the ultra soft feel of our Signature Fabric with a heavier more structured weight, making it perfect for the colder months.  It consists of 48% micro modal, 48% organic cotton, and 4% spandex.</p>"
+            "text": "<p>Our Luxe Fabric combines the ultra soft feel of our Signature Fabric with a heavier more structured weight, making it perfect for the colder months.</p>"
+          }
+        },
+        "caption_7F9XGY": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
           }
         }
       },
       "block_order": [
         "heading_YCxxzB",
-        "text_mPkURL"
+        "text_mPkURL",
+        "caption_7F9XGY"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -151,6 +160,24 @@
         "padding_bottom": 36
       }
     },
+    "175640111657a18410": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_BL6UGp": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_BL6UGp"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
     "1660937591af29c294": {
       "type": "rich-text",
       "blocks": {
@@ -205,24 +232,6 @@
       },
       "block_order": [
         "firework_shoppable_video_ugc_firework_pro_embed_AnAxg3"
-      ],
-      "settings": {
-        "custom_class": "",
-        "include_margins": true
-      }
-    },
-    "175640111657a18410": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_BL6UGp": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "categorypage-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_BL6UGp"
       ],
       "settings": {
         "custom_class": "",
