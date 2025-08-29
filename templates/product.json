@@ -248,6 +248,7 @@
       "block_order": [
         "rebuy_personalization_engine_rebuy_widget_AqqLzD"
       ],
+      "disabled": true,
       "settings": {
         "heading": "We pulled these for you.",
         "heading_size": "h1",
