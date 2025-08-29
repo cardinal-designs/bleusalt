@@ -73,6 +73,7 @@
       "block_order": [
         "rebuy_personalization_engine_rebuy_widget_CGFKUN"
       ],
+      "disabled": true,
       "settings": {
         "custom_class": "",
         "include_margins": true
