@@ -38,12 +38,12 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "The Bui Racer Zip",
-            "button_link_1": "shopify://products/the-bui-racer-zip",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/newest-products",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "The Cindy Racer Pant",
-            "button_link_2": "shopify://products/the-cindy-racer-pant"
+            "button_label_2": "Shop All",
+            "button_link_2": "shopify://collections/the-bleusalt-collection"
           }
         }
       },
