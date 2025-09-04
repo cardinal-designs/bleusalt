@@ -58,7 +58,7 @@
         "text_874t3f": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt clothing is made from the softest fibers on Earth. Our TENCEL™ fabric is made sustainably in the USA. It starts as responsibly sourced wood pulp, and is transformed into fabric through a closed loop process that recovers 99% of solvents and prevents harmful chemicals from entering the environment. All Bleusalt clothing is machine-washable, and preshrunk for easy care. <br/><br/>Bleusalt is committed to creating the softest, most sustainable luxury essentials using eco-friendly materials. Our fabrics are crafted for ultimate comfort and durability, making them perfect for everyday wear.</p>"
+            "text": "<p>Bleusalt clothing is made from the softest fibers on Earth. Our TENCEL™ fabric is made sustainably in the USA. It starts as responsibly sourced wood pulp, and is transformed into fabric through a closed loop process that recovers 99% of solvents and prevents harmful chemicals from entering the environment. All Bleusalt clothing is machine-washable, and preshrunk for easy care.<br/><br/>Bleusalt is committed to creating the softest, most sustainable luxury essentials using eco-friendly materials. Our fabrics are ethically crafted for ultimate comfort and durability, making them perfect for everyday wear.</p>"
           }
         },
         "961ca534-88bc-43ae-82b4-098e5557cc98": {
@@ -414,7 +414,7 @@
         "16618930934317c33e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Signature Fabric is a luxurious material made from trees, made sustainably, known as the softest fibers on Earth, developed for us, and made in the USA.</p>",
+            "text": "<p>Our Signature Fabric is a luxuriously soft material made sustainably from trees, developed specially for us and made in the USA. Signature fabric delivers year round comfort with a smooth finish on the outside and a softly brushed interior. </p>",
             "text_style": "body"
           }
         },
@@ -460,7 +460,7 @@
         "text_jkL4Jg": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Lite Fabric is a lighter, more breathable and silkier variation of our Signature Fabric. This fabric maintains our signature softness and sustainability while offering enhanced airflow and a featherweight feel, making it perfect for warmer weather.</p>",
+            "text": "<p>Our Lite Fabric is a lighter, more breathable and silkier variation of our Signature Fabric. This fabric maintains our signature softness and sustainability without the softly brushed interior, offering enhanced airflow and a featherweight feel and making it perfect for warmer weather.</p>",
             "text_style": "body"
           }
         },
@@ -506,7 +506,7 @@
         "text_MegWL6": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Luxe Fabric combines the ultra soft feel of our Signature Fabric with a heavier more structured weight, making it perfect for the colder months.</p>",
+            "text": "<p>Our Luxe Fabric combines the ultra soft feel and softly brushed lining of our Signature Fabric with a heavier, more structured weight, making it perfect for the colder months.</p>",
             "text_style": "body"
           }
         },
