@@ -48,8 +48,8 @@
       "block_order": [
         "9815e192-6dd7-46ba-96c2-177eb4f8f4cf"
       ],
-      "disabled": true,
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     },
@@ -164,6 +164,7 @@
         "firework_shoppable_video_ugc_firework_pro_embed_biJ86E"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
