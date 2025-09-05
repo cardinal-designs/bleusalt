@@ -679,26 +679,59 @@ const otherColors = () => {
 
 otherColors();
 
+// const foursixtyListener = () => {
+//   const foursixtyEl = document.querySelector('.foursixty-feed');
+//   const fsObserver = new MutationObserver((mutations, observer) => {
+//     mutations.forEach((mutation) => {
+//       if (mutation.type == 'childList') {
+//         if(!mutation || mutation.addedNodes.length === 0 || !mutation.addedNodes[0]) return;
+//         if ('getAttribute' in mutation.addedNodes[0] && mutation.addedNodes[0].getAttribute('class') === 'fs-has-posts') {
+//           document.getElementById('foursixty').style.display = 'block';
+//           fsObserver.disconnect();
+//         }
+//       }
+
+//     });
+//   });
+
+//   fsObserver.observe(foursixtyEl, {
+//     attributes: false, childList: true, subtree: true
+//   });
+// };
+// foursixtyListener();
+
 const foursixtyListener = () => {
   const foursixtyEl = document.querySelector('.foursixty-feed');
+  if (!foursixtyEl) {
+    console.warn("⚠️ .foursixty-feed not found in DOM.");
+    return;
+  }
+
   const fsObserver = new MutationObserver((mutations, observer) => {
     mutations.forEach((mutation) => {
-      if (mutation.type == 'childList') {
-        if(!mutation || mutation.addedNodes.length === 0 || !mutation.addedNodes[0]) return;
-        if ('getAttribute' in mutation.addedNodes[0] && mutation.addedNodes[0].getAttribute('class') === 'fs-has-posts') {
+      if (mutation.type === 'childList') {
+        if (!mutation || mutation.addedNodes.length === 0 || !mutation.addedNodes[0]) return;
+
+        if (
+          'getAttribute' in mutation.addedNodes[0] &&
+          mutation.addedNodes[0].getAttribute('class') === 'fs-has-posts'
+        ) {
           document.getElementById('foursixty').style.display = 'block';
           fsObserver.disconnect();
         }
       }
-
     });
   });
 
   fsObserver.observe(foursixtyEl, {
-    attributes: false, childList: true, subtree: true
+    attributes: false,
+    childList: true,
+    subtree: true,
   });
 };
+
 foursixtyListener();
+
 
 
 const okendoListener = () => {
