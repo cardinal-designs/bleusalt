@@ -359,29 +359,32 @@ class VariantSelects extends HTMLElement {
     const mainSwiperEl = document.querySelector('.product__media-list');
     let mainSwiper = mainSwiperEl.swiper;
 
-    mainSwiper.on('slideChange', function (swiper) {
-      // console.log('slide changed');
-      let visibleSlides = [];
-      mainImages.forEach(slide => {
-        if(slide.offsetWidth > 0 || slide.offsetHeight > 0) {
-           visibleSlides.push(slide); 
+    if(mainSwiper){
+
+      mainSwiper.on('slideChange', function (swiper) {
+        // console.log('slide changed');
+        let visibleSlides = [];
+        mainImages.forEach(slide => {
+          if(slide.offsetWidth > 0 || slide.offsetHeight > 0) {
+             visibleSlides.push(slide); 
+          }
+        })
+        const currentSlide = visibleSlides[swiper.realIndex];
+        const currentVideo = currentSlide.querySelector('video');
+        if(currentVideo) {
+          const isVideoPlaying = currentVideo => !!(currentVideo.currentTime > 0 && !currentVideo.paused && !currentVideo.ended && currentVideo.readyState > 2);
+          console.log('isVideoPlaying: ' + isVideoPlaying);
+          if(!isVideoPlaying) {
+            currentVideo.play();
+          } else {
+            currentVideo.currentTime = 0;
+            currentVideo.play();
+          }
+          // currentVideo.play();
         }
-      })
-      const currentSlide = visibleSlides[swiper.realIndex];
-      const currentVideo = currentSlide.querySelector('video');
-      if(currentVideo) {
-        const isVideoPlaying = currentVideo => !!(currentVideo.currentTime > 0 && !currentVideo.paused && !currentVideo.ended && currentVideo.readyState > 2);
-        console.log('isVideoPlaying: ' + isVideoPlaying);
-        if(!isVideoPlaying) {
-          currentVideo.play();
-        } else {
-          currentVideo.currentTime = 0;
-          currentVideo.play();
-        }
-        // currentVideo.play();
-      }
-      
-    });
+        
+      });
+    }
 
     // mainSwiper.destroy();
     mainImages.forEach(image => {
