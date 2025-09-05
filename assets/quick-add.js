@@ -40,13 +40,15 @@ if (!customElements.get('quick-add')) {
     }
     updateUrl() {
       let foundOne = false;
-      this.json.variants.forEach((variant) => {
-        if(variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
-          this.cardLink.setAttribute('href',`${this.productUrl}?variant=${variant.id}`);
-          this.changeImage(variant);
-          foundOne = true;
-        };
-      });
+      if (this.json?.variants?.length) {
+        this.json.variants.forEach((variant) => {
+          if(variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+            this.cardLink.setAttribute('href',`${this.productUrl}?variant=${variant.id}`);
+            this.changeImage(variant);
+            foundOne = true;
+          };
+        });
+      }
     }
     onColorButtonClick() {
       this.card.querySelectorAll('.quick-add__button--color').forEach(
