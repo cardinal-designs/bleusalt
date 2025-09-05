@@ -10,7 +10,7 @@ if (!customElements.get('quick-add')) {
       this.cardLink = this.card.querySelector('.card__heading.h4 a');
       this.productUrl = this.cardLink.getAttribute('data-product-url');
       this.json = JSON.parse(this.card.getAttribute('data-json'));
-      this.variants = this.json?.variants || [];;
+      this.variants = this.json?.variants || [];
       this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
       this.colorButtons.forEach(
         (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
