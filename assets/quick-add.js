@@ -34,7 +34,7 @@ if (!customElements.get('quick-add')) {
 
       const container = event.currentTarget.closest('.quick-add');
       container.querySelectorAll('.quick-add__button').forEach(
-        (button) => button.removeAttribute('selected')
+        (button) => button.removeAttribute('selected');
       );
 
       // this.querySelectorAll('.quick-add__button').forEach(
