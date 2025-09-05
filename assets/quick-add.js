@@ -31,19 +31,21 @@ if (!customElements.get('quick-add')) {
     }
 
     onButtonClick(event) {
-      this.querySelectorAll('.quick-add__button').forEach(
+
+      const container = event.currentTarget.closest('.quick-add');
+      container.querySelectorAll('.quick-add__button').forEach(
         (button) => button.removeAttribute('selected')
-      )
+      );
+
+      // this.querySelectorAll('.quick-add__button').forEach(
+      //   (button) => button.removeAttribute('selected')
+      // )
+      
       event.target.setAttribute('selected',true);
       let allSelected = [];
-      this.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+      this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
         allSelected.push(button.value);
       });
-
-      // let allSelected = [];
-      // this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
-      //   allSelected.push(button.value);
-      // });
       const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
       if (this.variants?.length) {
         this.variants.forEach((variant) => {
