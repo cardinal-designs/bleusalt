@@ -15,7 +15,8 @@ if (!customElements.get('quick-add')) {
       this.colorButtons.forEach(
         (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
       );
-      this.colorIndex = this.json.options.indexOf('Color');
+      this.colorIndex = this.json?.options?.indexOf("Color") ?? -1;
+
       this.sizeIndex = this.json.options.indexOf('Size');
       this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
       this.init();      
