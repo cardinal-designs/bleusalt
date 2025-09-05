@@ -334,7 +334,7 @@
                 this.productUrl = this.cardLink.getAttribute('data-product-url');
                 this.json = window.rebuyproducts?.find(item => item.id == this.productId) || JSON.parse(this.card.getAttribute("data-json"));
      
-                this.variants = this.json.variants;
+                this.variants = this.json?.variants || [];
                 
                 this.colorIndex = this.json.options.findIndex(option => option.name === 'Color');
                 this.sizeIndex = this.json.options.findIndex(option => option.name === 'Size');
