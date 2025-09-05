@@ -384,12 +384,8 @@
         button: this.querySelector('button'),
         panel: this.querySelector('.disclosure__list-wrapper'),
       };
-      this.elements = {
-        button: document.querySelector(".your-button-selector") || null
-      };
-
       if (this.elements.button) {
-        this.elements.button.addEventListener("click", this.openSelector.bind(this));
+        this.elements.button.addEventListener("click",this.openSelector.bind(this));
       }
 
       // this.elements.button.addEventListener('click', this.openSelector.bind(this));
