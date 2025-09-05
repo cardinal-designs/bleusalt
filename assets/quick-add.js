@@ -16,7 +16,9 @@ if (!customElements.get('quick-add')) {
 
 
       this.variants = this.json?.variants || [];
-      this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
+      // this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
+      this.colorButtons = this.card ? this.card.querySelectorAll('.quick-add__button--color') : [];
+
       this.colorButtons.forEach(
         (button) => button.addEventListener('click', this.onColorButtonClick.bind(this))
       );
