@@ -17,7 +17,8 @@ if (!customElements.get('quick-add')) {
       );
       this.colorIndex = this.json?.options?.indexOf("Color") ?? -1;
 
-      this.sizeIndex = this.json.options.indexOf('Size');
+      this.sizeIndex = this.json?.options?.indexOf("Size") ?? -1;
+
       this.selectedColor = this.card.querySelector('.quick-add__button--color[selected]');
       this.init();      
     }
