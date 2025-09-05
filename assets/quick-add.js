@@ -36,9 +36,14 @@ if (!customElements.get('quick-add')) {
       )
       event.target.setAttribute('selected',true);
       let allSelected = [];
-      this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+      this.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
         allSelected.push(button.value);
       });
+
+      // let allSelected = [];
+      // this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+      //   allSelected.push(button.value);
+      // });
       const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
       if (this.variants?.length) {
         this.variants.forEach((variant) => {
