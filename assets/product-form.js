@@ -393,8 +393,11 @@ class VariantSelects extends HTMLElement {
         image.style.display = 'block';
       }
     });
-    mainSwiper.update();
-    mainSwiper.slideTo(0);
+    if(mainSwiper){
+
+      mainSwiper.update();
+      mainSwiper.slideTo(0);
+    }
   }
 
   updateCurrentValues() {
