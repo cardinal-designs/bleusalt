@@ -31,12 +31,14 @@ if (!customElements.get('quick-add')) {
         allSelected.push(button.value);
       });
       const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
-      this.variants.forEach((variant) => {
-        if(variant.title === selectedArray) {
-          addToCart(variant.id,1);
-          return false;
-        }
-      });
+      if (this.variants?.length) {
+        this.variants.forEach((variant) => {
+          if(variant.title === selectedArray) {
+            addToCart(variant.id,1);
+            return false;
+          }
+        });
+      }
     }
     updateUrl() {
       let foundOne = false;
@@ -73,11 +75,13 @@ if (!customElements.get('quick-add')) {
     }
     sizeAvailabilities() {
       if(!this.selectedColor) return;
-      this.variants.forEach((variant) => {
-        if(variant.options[this.colorIndex] !== this.selectedColor.value) return true;
-        let sizeButton = this.querySelector(`button[value="${variant.options[this.sizeIndex]}"]`);
-        if(sizeButton) sizeButton.disabled = !variant.available;
-      });
+      if (this.variants?.length) {
+        this.variants.forEach((variant) => {
+          if(variant.options[this.colorIndex] !== this.selectedColor.value) return true;
+          let sizeButton = this.querySelector(`button[value="${variant.options[this.sizeIndex]}"]`);
+          if(sizeButton) sizeButton.disabled = !variant.available;
+        });
+      }
     }
     changeImage(variant) {
       const firstImage = this.card.querySelectorAll('.card__media img')[0];
