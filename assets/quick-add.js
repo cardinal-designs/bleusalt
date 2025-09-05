@@ -8,7 +8,7 @@ if (!customElements.get('quick-add')) {
       
       this.card = this.closest('.card');
       this.cardLink = this.card?.querySelector('.card__heading.h4 a') || null;
-      this.productUrl = this.cardLink.getAttribute('data-product-url');
+      this.productUrl = this.cardLink ? this.cardLink.getAttribute('data-product-url'): '#';
       this.json = JSON.parse(this.card.getAttribute('data-json'));
       this.variants = this.json?.variants || [];
       this.colorButtons = this.card.querySelectorAll('.quick-add__button--color');
