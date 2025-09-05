@@ -356,10 +356,8 @@ class VariantSelects extends HTMLElement {
     const currentColorEl = document.querySelector('input[type="radio"][name="Color"]:checked');
     if (!currentColorEl) return;
     const mainImages = document.querySelectorAll('.product__main-image');
-
+    
     const mainSwiperEl = document.querySelector('.product__media-list');
-    if (!mainSwiperEl || !mainSwiperEl.swiper) return; // stop if Swiper not ready
-
     let mainSwiper = mainSwiperEl.swiper;
 
     mainSwiper.on('slideChange', function (swiper) {
