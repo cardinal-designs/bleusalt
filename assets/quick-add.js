@@ -30,31 +30,64 @@ if (!customElements.get('quick-add')) {
       this.init();      
     }
 
-    onButtonClick(event) {
+    // onButtonClick(event) {
 
-      const container = event.currentTarget.closest('.quick-add');
-      container.querySelectorAll('.quick-add__button').forEach(
-        (button) => button.removeAttribute('selected')
-      );
-      // this.querySelectorAll('.quick-add__button').forEach(
-      //   (button) => button.removeAttribute('selected')
-      // )
+    //   const container = event.currentTarget.closest('.quick-add');
+    //   if(container){
+    //     container.querySelectorAll('.quick-add__button').forEach(
+    //       (button) => button.removeAttribute('selected')
+    //     );ß
+    //   }
+    //   // this.querySelectorAll('.quick-add__button').forEach(
+    //   //   (button) => button.removeAttribute('selected')
+    //   // )
       
-      event.target.setAttribute('selected',true);
+    //   event.target.setAttribute('selected',true);
+    //   let allSelected = [];
+    //   this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+    //     allSelected.push(button.value);
+    //   });
+    //   const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
+    //   if (this.variants?.length) {
+    //     this.variants.forEach((variant) => {
+    //       if(variant.title === selectedArray) {
+    //         addToCart(variant.id,1);
+    //         return false;
+    //       }
+    //     });
+    //   }
+    // }
+
+    onButtonClick(event) {
+      const container = event.currentTarget.closest('.quick-add');
+
+      if (container) {
+        const buttons = container.querySelectorAll('.quick-add__button');
+        if (buttons.length) {
+          buttons.forEach((button) => button.removeAttribute('selected'));
+        }
+      }
+
+      event.target.setAttribute('selected', true);
+
       let allSelected = [];
-      this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
-        allSelected.push(button.value);
-      });
-      const selectedArray = allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
-      if (this.variants?.length) {
-        this.variants.forEach((variant) => {
-          if(variant.title === selectedArray) {
-            addToCart(variant.id,1);
-            return false;
-          }
+      if (this.card) {
+        this.card.querySelectorAll('.quick-add__button[selected]').forEach((button) => {
+          allSelected.push(button.value);
         });
       }
+
+      const selectedArray =
+        allSelected.length > 1 ? allSelected.reverse().join(' / ') : allSelected[0];
+
+      if (this.variants?.length && selectedArray) {
+        const matched = this.variants.find((variant) => variant.title === selectedArray);
+        if (matched) {
+          addToCart(matched.id, 1);
+        }
+      }
     }
+
     updateUrl() {
       let foundOne = false;
       if (this.json?.variants?.length) {
