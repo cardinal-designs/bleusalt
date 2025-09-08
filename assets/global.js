@@ -1054,7 +1054,14 @@ const updateCart = () => {
     });
     if(!cartDrawer.classList.contains('active')) {
       cartDrawer.open();
+      
     }
+    // if (!cartDrawer.classList.contains('active')) {
+    //   cartDrawer.classList.add('active');
+    //   document.body.classList.add('overflow-hidden'); // optional, if your theme does this
+    // }
+
+
     cartDrawer.wearWith();
 
     if (window.BOLD && BOLD.common && BOLD.common.eventEmitter &&
