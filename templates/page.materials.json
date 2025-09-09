@@ -646,6 +646,7 @@
         "heading_b7GAF7",
         "text_DaERhd"
       ],
+      "disabled": true,
       "custom_css": [
         ".banner__heading * {background: transparent !important; color: var(--Dark, #0d1c29); text-align: center; font-family: \"BasicCommercial LT Roman\"; font-size: 24px; font-style: normal; font-weight: 400; line-height: 150%; /* 36px */ text-transform: uppercase;}",
         ".banner__text {max-width: 600px; margin: auto; color: #0d1c29; text-align: center; font-family: \"BasicCommercial LT Light\"; font-size: 16px; font-style: normal; font-weight: 400; line-height: 150%; /* 24px */}",
