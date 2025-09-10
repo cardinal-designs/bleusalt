@@ -110,7 +110,7 @@
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on Earth. <a href=\"http://127.0.0.1:9292/pages/materials\" title=\"Materials\">Learn more</a></p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -159,6 +159,7 @@
         "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa",
         "text_HxfmTe"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -240,6 +241,7 @@
         "text_block_Hty9j7",
         "text_block_3bd3eM"
       ],
+      "disabled": true,
       "name": "FAQ NEW",
       "settings": {
         "title": "FAQ",
