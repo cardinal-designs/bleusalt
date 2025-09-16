@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing The Raglan Crew",
+            "text": "The Long Sleeve Oversized Polo",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Our Newest Arrival",
+            "heading": "Launching Monday",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -54,8 +54,8 @@
         "buttons_fCtqBt"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/5f09af71bdf943339dffc6d9d1dfd976.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/5f09af71bdf943339dffc6d9d1dfd976.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/e1a89e6243304330a72f953b59f575ca.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/e1a89e6243304330a72f953b59f575ca.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
