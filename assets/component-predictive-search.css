@@ -47,6 +47,7 @@
 predictive-search[open] .predictive-search,
 predictive-search[loading] .predictive-search {
   display: block;
+  display: none !important;
 }
 
 .predictive-search__heading {
