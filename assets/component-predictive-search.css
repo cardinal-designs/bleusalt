@@ -176,3 +176,8 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   object-fit: contain;
   font-family: 'object-fit: contain';
 }
+
+/* Hide search field on results template */
+.template-search__search {
+  display: none;
+}
