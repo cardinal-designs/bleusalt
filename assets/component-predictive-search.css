@@ -47,6 +47,7 @@
 predictive-search[open] .predictive-search,
 predictive-search[loading] .predictive-search {
   display: block;
+  display: none !important;
 }
 
 .predictive-search__heading {
@@ -174,4 +175,9 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   grid-area: product-image;
   object-fit: contain;
   font-family: 'object-fit: contain';
+}
+
+/* Hide search field on results template */
+.template-search__search {
+  display: none;
 }
