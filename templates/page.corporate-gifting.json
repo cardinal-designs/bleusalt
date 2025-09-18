@@ -117,6 +117,39 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_KaNKmy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jANkrP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>THE BLEUSALT EXPERIENCE</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_4wRbmU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Corporate gifting with Bleusalt is effortless and elevated. Whether you're sending a single gift or hundreds, our team will guide you through every step, offering creative ideas and concierge-level service to help you create an unforgettable gesture.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jANkrP",
+        "text_4wRbmU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_dk6JdV": {
       "type": "image-with-text",
       "blocks": {
@@ -139,6 +172,7 @@
         "heading_ENQ8mp",
         "text_7w7mxA"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text {max-width: 1200px;}"
       ],
@@ -343,6 +377,7 @@
         "powerful_form_builder_app_block_gPT9rE"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
@@ -351,6 +386,7 @@
     "main",
     "rich_text_aMrPbY",
     "rich_text_XwGMxX",
+    "rich_text_KaNKmy",
     "image_with_text_dk6JdV",
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
