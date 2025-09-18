@@ -1883,3 +1883,13 @@ table[data-in-to-cm] td {
 }
 
 /* Gift Card Form design end */
+
+.button_flex-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button_flex-container a button {
+  background-color: white;
+  color: #0d1c29;
+}
