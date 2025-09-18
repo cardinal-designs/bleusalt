@@ -202,6 +202,25 @@
       "block_order": [
         "nosto_nosto_placements_block_KqAXUy"
       ],
+      "disabled": true,
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "175815468017ca5ea6": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_adcqUP": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "frontpage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_adcqUP"
+      ],
       "settings": {
         "custom_class": "",
         "include_margins": true
@@ -586,6 +605,7 @@
     "1659735210e064d864",
     "16636186953571c8bf",
     "17563249518812c6cf",
+    "175815468017ca5ea6",
     "1660226720e02964f9",
     "1660227726ff0f6237",
     "166022784081bd0071",
