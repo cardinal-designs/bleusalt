@@ -1887,7 +1887,7 @@ table[data-in-to-cm] td {
 .button_flex-container {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .button_flex-container a button {
