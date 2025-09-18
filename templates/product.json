@@ -38,6 +38,12 @@
           "disabled": true,
           "settings": {}
         },
+        "similar_product_QWTTyF": {
+          "type": "similar_product",
+          "settings": {
+            "show_similar_product_button": false
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -111,6 +117,7 @@
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2",
         "d3e1df78-49f2-43fc-a97e-382ceb1326fc",
         "price",
+        "similar_product_QWTTyF",
         "variant_picker",
         "quantity_selector",
         "discount_message_z7Vrwz",
