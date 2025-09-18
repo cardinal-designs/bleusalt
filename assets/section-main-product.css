@@ -1890,6 +1890,11 @@ table[data-in-to-cm] td {
   /* flex-wrap: wrap; */
 }
 
+.button_flex-container button {
+  font-size: 12px;
+  padding: 0 10px;
+}
+
 .button_flex-container a button {
   background-color: white;
   color: #0d1c29;
