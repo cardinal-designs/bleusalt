@@ -16,6 +16,10 @@
     margin-bottom: 3rem;
   }
 
+  .template-search__header p {
+    display: none;
+  }
+
   .template-search__search {
     margin: 0 auto 3.5rem;
     max-width: 47.8rem;
@@ -130,7 +134,7 @@
         {%- endif -%}
       {%- endunless -%}
       {%- if search.results_count == 0 and search.filters == empty -%}
-        <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+        <p class="search--empty" role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
       {%- endif -%}
     {%- endif -%}
   </div>
