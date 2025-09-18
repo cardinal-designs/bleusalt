@@ -382,13 +382,14 @@
             </share-button>
             <script defer src="{{ 'share.min.js' | asset_url }}"></script>
           {%- when 'similar_product' -%}
+            {% if block.settings.similar_product != blank %}
             <div class="button_flex-container">
-              aa{{block.settings.similar_product }}
               <button class="button">{{ product.title }}</button>
               <a href="{{ block.settings.similar_product.url }}">
                 <button class="button">{{ block.settings.similar_product.title }}</button>
               </a>
             </div>
+          {% endif %}
           {%- when 'variant_picker' -%}         
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
