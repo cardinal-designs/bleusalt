@@ -383,8 +383,9 @@
             <script defer src="{{ 'share.min.js' | asset_url }}"></script>
           {%- when 'similar_product' -%}
             <div class="button_flex-container">
+              <button class="button">{{ product.title }}</button>
               <a href="{{ block.settings.similar_product.url }}">
-
+                <button class="button">{{ block.settings.similar_product.title }}</button>
               </a>
             </div>
           {%- when 'variant_picker' -%}         
