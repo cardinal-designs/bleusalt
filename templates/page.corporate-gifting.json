@@ -28,13 +28,13 @@
           "type": "heading",
           "settings": {
             "heading": "<p>Bleusalt Corporate Gifting</p>",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "text_g4V4mQ": {
           "type": "text",
           "settings": {
-            "text": "<p>Timeless. Sizeless. Effortless Luxury.</p>"
+            "text": "<p><em>Timeless. Sizeless. Effortless Luxury.</em></p>"
           }
         },
         "heading_F4MepD": {
@@ -124,7 +124,7 @@
           "type": "heading",
           "settings": {
             "heading": "<p>THE BLEUSALT EXPERIENCE</p>",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_4wRbmU": {
