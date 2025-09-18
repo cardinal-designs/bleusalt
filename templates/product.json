@@ -41,7 +41,7 @@
         "similar_product_QWTTyF": {
           "type": "similar_product",
           "settings": {
-            "show_similar_product_button": "{{ product.metafields.custom.similar_product.value }}"
+            "similar_product": "{{ product.metafields.custom.similar_product.value }}"
           }
         },
         "variant_picker": {
