@@ -384,9 +384,21 @@
           {%- when 'similar_product' -%}
             {% if block.settings.similar_product != blank %}
             <div class="button_flex-container">
-              <button class="button">{{ product.title }}</button>
+              <button class="button">
+                {% if product.title contains 'Lite' %}
+                  Lite Fabric
+                {% else %}
+                  Signature Fabric
+                {% endif %}
+              </button>
               <a href="{{ block.settings.similar_product.url }}">
-                <button class="button">{{ block.settings.similar_product.title }}</button>
+                <button class="button">
+                  {% if product.title contains 'Lite' %}
+                    Lite Fabric
+                  {% else %}
+                    Signature Fabric
+                  {% endif %}
+                </button>
               </a>
             </div>
           {% endif %}
