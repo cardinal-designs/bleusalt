@@ -394,18 +394,20 @@ class VariantSelects extends HTMLElement {
       const imageSize = image.getAttribute('data-size') || '';
       image.style.display = 'none';
 
-      if (imageColor === 'All' || imageSize === 'All') {
-          image.style.display = 'block';
-          return;
+      let colorMatch = false;
+      let sizeMatch = false;
+
+      if (imageColor === 'All' || imageColor === currentColor || imageColor === '') {
+        colorMatch = true;
       }
-
-      const colorMatch = (imageColor === currentColor || currentColor === '' || imageColor === '');
-      
-      const sizeMatch  = (imageSize === currentSize  || currentSize === ''  || imageSize === '');
-
-        if (colorMatch && sizeMatch) {
-            image.style.display = 'block';
-        }
+    
+      if (imageSize === 'All' || imageSize === currentSize || imageSize === '') {
+        sizeMatch = true;
+      }
+    
+      if (colorMatch && sizeMatch) {
+        image.style.display = 'block';
+      }
     });
     mainSwiper.update();
     mainSwiper.slideTo(0);
