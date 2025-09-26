@@ -488,6 +488,7 @@
         "heading_6FWmWW",
         "svg_qxQ83m"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/download.jpg",
         "border_top": false,
