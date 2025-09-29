@@ -381,7 +381,28 @@
               </details>
             </share-button>
             <script defer src="{{ 'share.min.js' | asset_url }}"></script>
-          {%- when 'variant_picker' -%}
+          {%- when 'similar_product' -%}
+            {% if block.settings.similar_product != blank %}
+            <div class="button_flex-container">
+              <button class="button">
+                {% if product.title contains 'Lite' %}
+                  Lite Fabric
+                {% else %}
+                  Signature Fabric
+                {% endif %}
+              </button>
+              <a href="{{ block.settings.similar_product.url }}">
+                <button class="button">
+                  {% if block.settings.similar_product.title contains 'Lite' %}
+                    Lite Fabric
+                  {% else %}
+                    Signature Fabric
+                  {% endif %}
+                </button>
+              </a>
+            </div>
+          {% endif %}
+          {%- when 'variant_picker' -%}         
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -1119,6 +1140,18 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        }
+      ]
+    },
+    {
+      "type": "similar_product",
+      "name": "Similar Product",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product",
+          "id": "similar_product",
+          "label": "Show Similar Product buttons (metafield)?"
         }
       ]
     },
