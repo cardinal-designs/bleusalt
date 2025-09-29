@@ -32,7 +32,7 @@
       </script>
 
       <!-- LoudCrowd --> 
-  {% if request.path contains '/pages/shop' %} 
+  {% if request.path contains '/pages/shop' or request.path contains '/products' %} 
     <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }} 
   {% endif %}
 
