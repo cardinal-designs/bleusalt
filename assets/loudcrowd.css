@@ -1,3 +1,11 @@
+:root {
+    --lc-product-card-title-font-color: #121212;
+    --lc-product-card-title-font-size: 0.9rem;
+    --lc-product-card-title-font-weight: 500;
+    --lc-product-price-font-size: 0.9rem;
+    --lc-product-price-font-color: #121212;
+}
+
 ambassador-hero-block {
 --lc-font-primary-color: #FFFFFF;
   /* top right corner button properties */
