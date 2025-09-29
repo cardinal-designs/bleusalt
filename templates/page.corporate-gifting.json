@@ -376,9 +376,45 @@
       "block_order": [
         "powerful_form_builder_app_block_gPT9rE"
       ],
+      "custom_css": [
+        "div {background-color: #e0e0e0;}"
+      ],
       "settings": {
         "custom_class": "",
         "include_margins": true
+      }
+    },
+    "rich_text_cKkRWw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_y4Beib": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Corporate & Wholesale Return Policy</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_YRTBG6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Bleusalt, we are committed to offering an elevated, seamless experience for our corporate and wholesale partners. Our policy is designed to ensure clarity and peace of mind while protecting the integrity of our bespoke creations.</p><h4>Custom & Corporate Orders</h4><p>All customized corporate orders—including embroidery, monogramming, specialty packaging, or made-to-order styles—are considered Final Sale. Each order is crafted uniquely and exclusively, reflecting the client’s vision, and therefore cannot be resold.</p><h4>Quality Guarantee</h4><p>We stand behind the craftsmanship of every Bleusalt piece. In the rare event that an item arrives with a manufacturing defect or is damaged in transit, we will promptly replace or repair the affected items at no cost. This assurance underscores our dedication to exceptional quality.</p><h4>Non-Custom Wholesale Orders</h4><p>For non-custom bulk orders, returns may be accepted within 30 days of delivery, provided the items remain unused, in their original condition, and in original packaging. Such returns are subject to a 15% restocking fee. As an alternative, we are pleased to offer exchanges or store credit.</p><h4>Our Commitment</h4><p>Our goal is to make every corporate and wholesale order a premium experience that reflects the values of Bleusalt: elegance, integrity, and care. We look forward to creating lasting partnerships built on trust and excellence.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_y4Beib",
+        "text_YRTBG6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -393,6 +429,7 @@
     "image_with_text_HCF48T",
     "rich_text_hzaCpn",
     "custom_liquid_88JTXy",
-    "17529574500028a36f"
+    "17529574500028a36f",
+    "rich_text_cKkRWw"
   ]
 }
