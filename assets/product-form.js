@@ -354,7 +354,11 @@ class VariantSelects extends HTMLElement {
     if (!this.multipleColors()) return;
 
     const currentColorEl = document.querySelector('input[type="radio"][name="Color"]:checked');
-    if (!currentColorEl) return;
+    const currentSizeEl = document.querySelector('input[type="radio"][name="Size"]:checked');
+
+    const currentColor = currentColorEl ? currentColorEl.value : '';
+    const currentSize = currentSizeEl ? currentSizeEl.value : '';
+
     const mainImages = document.querySelectorAll('.product__main-image');
     const mainSwiperEl = document.querySelector('.product__media-list');
     let mainSwiper = mainSwiperEl.swiper;
@@ -384,9 +388,24 @@ class VariantSelects extends HTMLElement {
     });
 
     // mainSwiper.destroy();
+
     mainImages.forEach(image => {
+      const imageColor = image.getAttribute('data-filter') || '';
+      const imageSize = image.getAttribute('data-size') || '';
       image.style.display = 'none';
-      if (image.getAttribute('data-filter') === currentColorEl.value || image.getAttribute('data-filter').indexOf('All') !== -1) {
+
+      let colorMatch = false;
+      let sizeMatch = false;
+
+      if (imageColor === 'All' || imageColor === currentColor || imageColor === '') {
+        colorMatch = true;
+      }
+    
+      if (imageSize === 'All' || imageSize === currentSize || imageSize === '') {
+        sizeMatch = true;
+      }
+    
+      if (colorMatch && sizeMatch) {
         image.style.display = 'block';
       }
     });
