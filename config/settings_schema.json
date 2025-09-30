@@ -1242,19 +1242,19 @@
       {
         "type": "checkbox",
         "id": "cart_promo_bar",
-        "label": "Enable cart promo bar?",
+        "label": "Enable Free Shipping Bar?",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "discount_promo_bar",
-        "label": "Enable cart discount bar?",
+        "label": "Enable Capsule Discount Bar?",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "cart_rebuy",
-        "label": "Enable Rebuy in cart?",
+        "label": "Enable Cart Recommendations?",
         "default": false
       }
     ]
