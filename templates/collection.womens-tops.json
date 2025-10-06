@@ -59,20 +59,6 @@
     },
     "1734416630f7a21117": {
       "type": "apps",
-      "blocks": {
-        "rebuy_personalization_engine_rebuy_widget_CGFKUN": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "settings": {
-            "enabled": true,
-            "id": "{{ collection.metafields.custom.rebuy_widget_id.value }}",
-            "product_id_enabled": true,
-            "collection_id_enabled": true
-          }
-        }
-      },
-      "block_order": [
-        "rebuy_personalization_engine_rebuy_widget_CGFKUN"
-      ],
       "disabled": true,
       "settings": {
         "custom_class": "",
@@ -241,9 +227,8 @@
         "text_block_4ggByE",
         "text_block_V8CnNA"
       ],
-      "disabled": true,
       "custom_css": [
-        "ul {text-align: center; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center;}"
+        "ul {font-family: inherit; text-align: center; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center;}"
       ],
       "name": "FAQ NEW",
       "settings": {
