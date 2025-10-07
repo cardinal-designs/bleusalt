@@ -88,6 +88,12 @@
             "link_text": "Connect with a Stylist"
           }
         },
+        "custom_liquid_fc3krr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>\n<p>As seen on.</p>"
+          }
+        },
         "foursixty_shoppable_social_ugc_custom_slider_aE7kpH": {
           "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_slider/e2616dfe-fbb6-4e7d-874d-d250b973556d",
           "settings": {
@@ -152,6 +158,7 @@
         "c4e54603-4bac-47c2-a27d-de6873cd6307",
         "e41b416a-cc32-40b1-a71e-a81edcd2ea81",
         "c6536c56-eee9-4466-a47f-7e5ad0fe4d23",
+        "custom_liquid_fc3krr",
         "foursixty_shoppable_social_ugc_custom_slider_aE7kpH",
         "collapsible-row-0",
         "3cbca740-3858-4794-a06d-86306c2065df"
@@ -228,6 +235,7 @@
         "d6cd600e-0a68-488d-bb29-58ba58cc4bfc",
         "2ac3f5b2-dcf1-4378-95f7-8fbcd1cb9432"
       ],
+      "disabled": true,
       "settings": {
         "width": "page-width",
         "padding_top": 10,
