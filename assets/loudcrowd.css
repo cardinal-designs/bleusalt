@@ -8,5 +8,7 @@ ambassador-hero-block {
 }
 
 /* navbar properties */
+{
     --lc-navbar-border-radius: 0px;
     --lc-navbar-active-tile-border-radius: 0px; 
+}
