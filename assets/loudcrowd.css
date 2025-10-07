@@ -7,8 +7,7 @@ ambassador-hero-block {
   margin-bottom: 15px;
 }
 
-/* navbar properties */
-{
+  ambassador-feed-block {
+
     --lc-navbar-border-radius: 0px;
-    --lc-navbar-active-tile-border-radius: 0px; 
-}
+    --lc-navbar-active-tile-border-radius: 0px; }
