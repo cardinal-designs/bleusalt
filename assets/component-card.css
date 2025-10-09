@@ -417,6 +417,7 @@
   .card__badge {
     align-self: flex-start;
     margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 
