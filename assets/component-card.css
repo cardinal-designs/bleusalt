@@ -411,6 +411,9 @@
   .card__information .flex {
     flex-direction: column;
   }
+  .quick-add__colors {
+    width: 100%;
+  }
   .card__badge {
     align-self: flex-start;
     margin-top: 5px;
