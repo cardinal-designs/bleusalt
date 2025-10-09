@@ -257,10 +257,10 @@
             {% comment %}
             {% render 'okendo-reviews-product-rating-summary', product: card_product %}
             {% endcomment %}
-            <div class="klaviyo-star-rating-widget 11111" data-id="{{card_product.id}}" data-product-title="{{card_product.title}}" data-product-type="{{card_product.type}}">{{template.name}}</div>
+            <div class="klaviyo-star-rating-widget" data-id="{{card_product.id}}" data-product-title="{{card_product.title}}" data-product-type="{{card_product.type}}">{{template.name}}</div>
           {% endunless %}
 
-          <div class="card__badge  1234">
+          <div class="card__badge">
             {%- if card_product.available == false -%}
                 {%- if settings.show_sold_out -%}
                   <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
