@@ -325,7 +325,7 @@
 }
 
 .card-information {
-  width: 100%;
+  width: auto;
 }
 
 .card-information>* {
