@@ -224,34 +224,56 @@
             {% endif %}
             
           </div>
-          {% unless vendor_handle == 'couture' %}
-            {%- if show_quick_add -%}
-              {% assign total_colors = card_product.options_by_name['Color'].values.size %}
-              {% assign max_colors = 5 %}
+
+          <div class="flex space-between align-center">
+            {% unless vendor_handle == 'couture' %}
+              {%- if show_quick_add -%}
+                {% assign total_colors = card_product.options_by_name['Color'].values.size %}
+                {% assign max_colors = 5 %}
+                
+                <div class="quick-add__colors">
+              {% assign hide_me = false %}
+              {% for value in card_product.options_by_name['Color'].values %}
+                {%- liquid 
+                  if forloop.index > max_colors
+                    assign hide_me = true
+                  endif
+                  if value contains 'hide' or value contains 'Hide'
+                    assign hide_me = true
+                  endif 
+                -%}
+                {% assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x' %}
+                <button data-index="{{ forloop.index }}" aria-label="color, {{ value }}" {% if hide_me %}style="display: none;"{% endif %}  {% if forloop.first %}selected{% endif %} type="button" value="{{ value }}" class="quick-add__button quick-add__button--color button--inline" style="background-image: url({{ swatch_url }});" >
+                  <span class='visually-hidden'>{{ value }}</span>
+                </button>
+              {% endfor %}
               
-              <div class="quick-add__colors">
-            {% assign hide_me = false %}
-            {% for value in card_product.options_by_name['Color'].values %}
-              {%- liquid 
-                if forloop.index > max_colors
-                  assign hide_me = true
-                endif
-                if value contains 'hide' or value contains 'Hide'
-                   assign hide_me = true
-                endif 
-              -%}
-              {% assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x' %}
-              <button data-index="{{ forloop.index }}" aria-label="color, {{ value }}" {% if hide_me %}style="display: none;"{% endif %}  {% if forloop.first %}selected{% endif %} type="button" value="{{ value }}" class="quick-add__button quick-add__button--color button--inline" style="background-image: url({{ swatch_url }});" >
-                <span class='visually-hidden'>{{ value }}</span>
-              </button>
-            {% endfor %}
-            
-            {% if total_colors > max_colors %}
-              <a href="{{ card_product.url }}" class="link">+ {{ total_colors | minus: max_colors }} more <span class="visuallyhideen">color of the {{ card_product.title | escape }}</span></a>
-            {% endif %}
+              {% if total_colors > max_colors %}
+                <a href="{{ card_product.url }}" class="link">+ {{ total_colors | minus: max_colors }} more <span class="visuallyhideen">color of the {{ card_product.title | escape }}</span></a>
+              {% endif %}
+              </div>
+              {%- endif -%}
+            {% endunless %}
+
+            <div class="card__badge">
+              {%- if card_product.available == false -%}
+                  {%- if settings.show_sold_out -%}
+                    <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+                  {%- endif -%}
+                {%- if badges != '' -%}
+                  {%- for badge in badges -%}
+                    <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- elsif badges != '' -%}
+                {%- for badge in badges -%}
+                  <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
+                {%- endfor -%}
+              {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}            
+                <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+              {%- endif -%}  
             </div>
-            {%- endif -%}
-          {% endunless %}
+          </div>
 
           {% unless template.name == 'search' %}
             {% comment %}
@@ -259,25 +281,6 @@
             {% endcomment %}
             <div class="klaviyo-star-rating-widget" data-id="{{card_product.id}}" data-product-title="{{card_product.title}}" data-product-type="{{card_product.type}}"></div>
           {% endunless %}
-
-          <div class="card__badge">
-            {%- if card_product.available == false -%}
-                {%- if settings.show_sold_out -%}
-                  <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
-                {%- endif -%}
-              {%- if badges != '' -%}
-                {%- for badge in badges -%}
-                  <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
-                {%- endfor -%}
-              {%- endif -%}
-            {%- elsif badges != '' -%}
-              {%- for badge in badges -%}
-                <span id="Badge-{{ section_id }}-{{ card_product.id }}--{{ badge | handle }}" class="badge badge--{{ badge | handle }}">{{ badge }}</span>
-              {%- endfor -%}
-            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}            
-              <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
-            {%- endif -%}  
-          </div>
   
         </div>
 
