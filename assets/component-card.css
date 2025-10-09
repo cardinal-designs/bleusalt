@@ -411,6 +411,10 @@
   .card__information .flex {
     flex-direction: column;
   }
+  .card__badge {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
 }
 
 .card__selected-color {
