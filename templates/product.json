@@ -88,6 +88,39 @@
             "link_text": "Connect with a Stylist"
           }
         },
+        "custom_liquid_fc3krr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>\n<p>As seen on.</p>"
+          }
+        },
+        "foursixty_shoppable_social_ugc_custom_slider_aE7kpH": {
+          "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_slider/e2616dfe-fbb6-4e7d-874d-d250b973556d",
+          "settings": {
+            "foreground_color": "#ffffff",
+            "background_color": "#000000",
+            "background_color_alpha": 25,
+            "post_spacing": 1,
+            "hover_margin": 0,
+            "cell_size": "33.3334%",
+            "target_blank": false,
+            "arrows_outside": false,
+            "show_icon": false,
+            "show_text": false,
+            "show_date": false,
+            "call_to_action": "SHOP",
+            "shop_type": "underline",
+            "body_font_size": 12,
+            "body_font": "sans_serif_n4",
+            "accent_font_size": 12,
+            "accent_font": "sans_serif_n4",
+            "disable_filter": false,
+            "override_feed_id": "",
+            "arbitrary_attributes": "",
+            "custom_css": "",
+            "custom_js": ""
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -125,6 +158,8 @@
         "c4e54603-4bac-47c2-a27d-de6873cd6307",
         "e41b416a-cc32-40b1-a71e-a81edcd2ea81",
         "c6536c56-eee9-4466-a47f-7e5ad0fe4d23",
+        "custom_liquid_fc3krr",
+        "foursixty_shoppable_social_ugc_custom_slider_aE7kpH",
         "collapsible-row-0",
         "3cbca740-3858-4794-a06d-86306c2065df"
       ],
@@ -200,6 +235,7 @@
         "d6cd600e-0a68-488d-bb29-58ba58cc4bfc",
         "2ac3f5b2-dcf1-4378-95f7-8fbcd1cb9432"
       ],
+      "disabled": true,
       "settings": {
         "width": "page-width",
         "padding_top": 10,
@@ -241,20 +277,6 @@
     },
     "product_recommendations_ai_mCkeP9": {
       "type": "product-recommendations-ai",
-      "blocks": {
-        "rebuy_personalization_engine_rebuy_widget_AqqLzD": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "settings": {
-            "enabled": true,
-            "id": "208412",
-            "product_id_enabled": true,
-            "collection_id_enabled": false
-          }
-        }
-      },
-      "block_order": [
-        "rebuy_personalization_engine_rebuy_widget_AqqLzD"
-      ],
       "disabled": true,
       "settings": {
         "heading": "We pulled these for you.",
