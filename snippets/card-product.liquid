@@ -283,8 +283,7 @@
           {% endunless %}
   
         </div>
-
-        {% comment %}
+        
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
               {%- if settings.show_sold_out -%}
@@ -303,7 +302,6 @@
             <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sale color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}  
         </div>
-        {% endcomment %}
   
       </div>
     </div>
