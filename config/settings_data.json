@@ -496,7 +496,7 @@
       },
       "15426571166493967512": {
         "type": "shopify://apps/loudcrowd/blocks/embed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "lc_secret": ""
         }
