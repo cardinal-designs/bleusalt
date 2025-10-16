@@ -500,6 +500,11 @@
         "settings": {
           "lc_secret": ""
         }
+      },
+      "6174493523689735930": {
+        "type": "shopify://apps/webrex-seo-schema/blocks/webrexSeoEmbed/283875bf-bf86-4e78-831b-502ad0c4a5c2",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
