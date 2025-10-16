@@ -505,6 +505,11 @@
         "type": "shopify://apps/webrex-seo-schema/blocks/webrexSeoEmbed/283875bf-bf86-4e78-831b-502ad0c4a5c2",
         "disabled": false,
         "settings": {}
+      },
+      "14724428607702905366": {
+        "type": "shopify://apps/webrex-ai-seo-optimizer/blocks/webrexSeoEmbed/b26797ad-bb4d-48f5-8ef3-7c561521049c",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
