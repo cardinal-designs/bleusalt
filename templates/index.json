@@ -22,7 +22,7 @@
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Oversized Turtleneck",
+            "heading": "The Travel Set",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -43,7 +43,7 @@
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop All",
-            "button_link_2": "shopify://collections/the-bleusalt-collection"
+            "button_link_2": "shopify://products/the-travel-set"
           }
         }
       },
@@ -54,8 +54,8 @@
         "buttons_fCtqBt"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/18a1f98bc01a4bca84b33ce84b0f6444.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/8984c9c25aca4a3cb0b5fc3c62927e50.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/5b08edb506be41b0861774da7d43d2f5.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/4ffba3221e7146f887b37659ff6de4be.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
