@@ -39,11 +39,11 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/the-oversized-turtleneck",
+            "button_link_1": "shopify://products/the-travel-set",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop All",
-            "button_link_2": "shopify://products/the-travel-set"
+            "button_link_2": "shopify://collections/the-bleusalt-collection"
           }
         }
       },
