@@ -47,7 +47,7 @@
     "cart_drawer_text": "",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
-    "discount_promo_bar": true,
+    "discount_promo_bar": false,
     "cart_rebuy": true,
     "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
@@ -500,11 +500,6 @@
         "settings": {
           "lc_secret": ""
         }
-      },
-      "6174493523689735930": {
-        "type": "shopify://apps/webrex-seo-schema/blocks/webrexSeoEmbed/283875bf-bf86-4e78-831b-502ad0c4a5c2",
-        "disabled": false,
-        "settings": {}
       },
       "14724428607702905366": {
         "type": "shopify://apps/webrex-ai-seo-optimizer/blocks/webrexSeoEmbed/b26797ad-bb4d-48f5-8ef3-7c561521049c",
