@@ -117,7 +117,7 @@
         "custom_css": [],
         "settings": {
           "below_logo": true,
-          "color_scheme": "inverse",
+          "color_scheme": "accent-1",
           "logo": "shopify://shop_images/bleusalt-site-logo-usa-black_971958f1-9ca0-4e77-b53b-56ba97aef361.svg",
           "white_logo": "shopify://shop_images/bleusalt-site-logo-usa-white.svg",
           "logo_width": 160,
