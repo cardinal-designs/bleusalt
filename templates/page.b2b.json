@@ -34,9 +34,9 @@
         "include_margins": true
       }
     },
-    "main_search_8P87TM": {
-      "type": "main-search",
-      "name": "Main Search",
+    "b2b_search_adn8Cm": {
+      "type": "b2b-search",
+      "name": "B2B Search",
       "settings": {
         "columns_desktop": 4,
         "image_ratio": "adapt",
@@ -58,6 +58,6 @@
     "main",
     "1676492971e2872bb9",
     "1728584017c433d725",
-    "main_search_8P87TM"
+    "b2b_search_adn8Cm"
   ]
 }
