@@ -485,13 +485,6 @@
         "disabled": false,
         "settings": {}
       },
-      "15426571166493967512": {
-        "type": "shopify://apps/loudcrowd/blocks/embed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
-        "disabled": false,
-        "settings": {
-          "lc_secret": ""
-        }
-      },
       "14724428607702905366": {
         "type": "shopify://apps/webrex-ai-seo-optimizer/blocks/webrexSeoEmbed/b26797ad-bb4d-48f5-8ef3-7c561521049c",
         "disabled": false,
@@ -506,6 +499,13 @@
         "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-header/347a2e4c-f5cb-410d-8354-490d1e80558c",
         "disabled": true,
         "settings": {}
+      },
+      "15426571166493967512": {
+        "type": "shopify://apps/loudcrowd/blocks/embed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
+        "disabled": false,
+        "settings": {
+          "lc_secret": ""
+        }
       }
     }
   },
