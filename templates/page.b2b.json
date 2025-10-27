@@ -9,31 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "show_heading": false,
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "page_width": "page-width--narrow"
-      }
-    },
-    "1676492971e2872bb9": {
-      "type": "apps",
-      "settings": {
-        "custom_class": "",
-        "include_margins": true
-      }
-    },
-    "1728584017c433d725": {
-      "type": "apps",
-      "settings": {
-        "custom_class": "",
-        "include_margins": true
-      }
-    },
     "b2b_search_adn8Cm": {
       "type": "b2b-search",
       "name": "B2B Search",
@@ -55,9 +30,6 @@
     }
   },
   "order": [
-    "main",
-    "1676492971e2872bb9",
-    "1728584017c433d725",
     "b2b_search_adn8Cm"
   ]
 }
