@@ -14,7 +14,6 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "Introducing",
             "text_color": "#ffffff"
@@ -22,7 +21,6 @@
         },
         "heading_9qBHw9": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "The Travel Set",
             "heading_color": "#ffffff",
@@ -40,12 +38,12 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/womens-new-arrivals",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop New Arrivals",
-            "button_link_2": "shopify://collections/womens-new-arrivals"
+            "button_label_2": "Shop All",
+            "button_link_2": "shopify://collections/the-bleusalt-collection"
           }
         }
       },
@@ -56,8 +54,8 @@
         "buttons_fCtqBt"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/ac5e2d5d66e5468c9ea9d4fd38579b70.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/48799e36151148d587bacab9e1d953d7.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/5b08edb506be41b0861774da7d43d2f5.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/4ffba3221e7146f887b37659ff6de4be.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
