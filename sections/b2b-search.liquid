@@ -16,10 +16,6 @@
     margin-bottom: 3rem;
   }
 
-  .template-search__header .search--empty {
-    display: none;
-  }
-
   .template-search__search {
     margin: 0 auto 3.5rem;
     max-width: 47.8rem;
@@ -37,12 +33,6 @@
     height: 1.8rem;
   }
 </style>
-
-{%- liquid
-  assign sort_by = search.sort_by | default: search.default_sort_by
-  assign terms = search.terms | escape
-  assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
--%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
