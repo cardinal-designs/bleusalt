@@ -1,7 +1,7 @@
 :root {
   --lc-product-card-title-font-color: #121212 !important;
   --lc-product-card-title-font-size: 1.7rem !important;
-  --lc-product-card-title-font-weight: 500 !important;
+  --lc-product-card-title-font-weight: 400 !important;
   --lc-product-price-font-size: 1.7rem !important;
   --lc-product-price-font-color: #121212 !important;
 }
