@@ -1,16 +1,16 @@
 :root {
-    --lc-product-card-title-font-color: #121212;
-    --lc-product-card-title-font-size: 0.9rem;
-    --lc-product-card-title-font-weight: 500;
-    --lc-product-price-font-size: 0.9rem;
-    --lc-product-price-font-color: #121212;
+  --lc-product-card-title-font-color: #121212 !important;
+  --lc-product-card-title-font-size: 1.7rem !important;
+  --lc-product-card-title-font-weight: 500 !important;
+  --lc-product-price-font-size: 1.7rem !important;
+  --lc-product-price-font-color: #121212 !important;
 }
 
 ambassador-hero-block {
---lc-font-primary-color: #FFFFFF;
+  --lc-font-primary-color: #FFFFFF !important;
   /* top right corner button properties */
-  --creator-btn-color: white;
-  --creator-btn-padding: 8px 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
+  --creator-btn-color: white !important;
+  --creator-btn-padding: 8px 15px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 15px !important;
 }
