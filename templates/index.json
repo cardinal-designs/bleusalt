@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "THE FALL EVENT",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Travel Set",
+            "heading": "Up to 40% Off + 10% On the App",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -38,12 +38,12 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop New Arrivals",
-            "button_link_1": "shopify://collections/womens-new-arrivals",
+            "button_label_1": "Shop Sale",
+            "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop All",
-            "button_link_2": "shopify://collections/the-bleusalt-collection"
+            "button_label_2": "Shop Best Sellers",
+            "button_link_2": "shopify://collections/womens-best-sellers"
           }
         }
       },
@@ -52,6 +52,9 @@
         "heading_9qBHw9",
         "text_two_NHhmBc",
         "buttons_fCtqBt"
+      ],
+      "custom_css": [
+        "h1,h2,h3 {font-family: \"EB Garamond\", serif;}"
       ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/5b08edb506be41b0861774da7d43d2f5.mp4",
