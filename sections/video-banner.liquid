@@ -18,6 +18,24 @@
     }
   }
 
+  {% if section.settings.button_overlay %}
+    @media screen and (max-width: 749px) {
+      .banner__media {
+        height: 75vh;
+      }
+
+      .banner__content {
+        top: 33%;
+        bottom: auto;
+      }
+
+      .banner__buttons--mobile {
+        position: absolute;
+        bottom: 70px;
+      }
+    }
+  {% endif %}
+
   @media screen and (min-width: 750px) {
     #Banner-{{ section.id }}::before,
     #Banner-{{ section.id }} .banner__media::before {
@@ -402,6 +420,11 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_overlay",
+      "label": "Mobile buttons overlay"
     }
   ],
   "blocks": [
