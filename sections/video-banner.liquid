@@ -134,6 +134,18 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  {% if section.settings.video_overlay_link != blank %}
+    @media screen and (max-width: 749px) {
+      .banner__video-overlay-link {
+        z-index: 3;
+      }
+
+      .banner__buttons--mobile {
+        z-index: 9;
+      }
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <div 
@@ -426,6 +438,11 @@
       "type": "checkbox",
       "id": "button_overlay",
       "label": "Mobile buttons overlay"
+    },
+    {
+      "type": "url",
+      "id": "video_overlay_link",
+      "label": "(Optional) Hero video overlay link"
     }
   ],
   "blocks": [
