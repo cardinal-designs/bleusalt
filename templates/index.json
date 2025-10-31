@@ -22,16 +22,15 @@
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Up to 40% Off + 10% On the App",
+            "heading": "Up to 40% Off Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Lorem ipsum dolor sit amet, consectetur",
+            "text": "Get an Extra 10% Off When you Order on The Bleusalt App",
             "text_color": "#ffffff"
           }
         },
