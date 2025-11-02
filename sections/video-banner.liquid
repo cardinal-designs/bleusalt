@@ -18,6 +18,24 @@
     }
   }
 
+  {% if section.settings.button_overlay %}
+    @media screen and (max-width: 749px) {
+      .banner__media {
+        height: 75vh;
+      }
+
+      .banner__content {
+        top: 33% !important;
+        bottom: auto;
+      }
+
+      .banner__buttons--mobile {
+        position: absolute;
+        bottom: 70px;
+      }
+    }
+  {% endif %}
+
   @media screen and (min-width: 750px) {
     #Banner-{{ section.id }}::before,
     #Banner-{{ section.id }} .banner__media::before {
@@ -117,6 +135,18 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  {% if section.settings.video_overlay_link != blank %}
+    @media screen and (max-width: 749px) {
+      .banner__video-overlay-link {
+        z-index: 3;
+      }
+
+      .banner__buttons--mobile {
+        z-index: 9;
+      }
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <div 
@@ -135,6 +165,7 @@
   {%- if section.settings.video_url_mobile != blank -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
+      {% if section.settings.video_overlay_link != blank %}<a href="{{ section.settings.video_overlay_link }}" class="banner__video-overlay-link"></a>{% endif %}
       <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto" aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url_mobile }}" data-expand="-10" width="100%"></video>
       {% render 'video-controls', id: video_id %}
     </div>
@@ -403,6 +434,16 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_overlay",
+      "label": "Mobile buttons overlay"
+    },
+    {
+      "type": "url",
+      "id": "video_overlay_link",
+      "label": "(Optional) Hero video overlay link"
     }
   ],
   "blocks": [
