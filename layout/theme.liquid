@@ -32,10 +32,9 @@
       </script>
 
       <!-- LoudCrowd --> 
-  {% if request.path contains '/pages/shop' or request.path contains '/products' %} 
-    <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }} 
-  {% endif %}
-
+      {% if request.path contains '/pages/shop' or request.path contains '/products' %} 
+        <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }} 
+      {% endif %}
 
       <!-- Triple Whale Begin -->
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
@@ -256,6 +255,9 @@
       {%- endunless -%}
       {%- unless settings.type_header_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+      {%- endunless -%}
+      {%- unless settings.type_hero_font.system? -%}
+        <link rel="preload" as="font" href="{{ settings.type_hero_font | font_url }}" type="font/woff2" crossorigin>
       {%- endunless -%}
 
       {%- if settings.predictive_search_enabled -%}
