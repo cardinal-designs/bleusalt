@@ -52,7 +52,9 @@
         "text_two_NHhmBc",
         "buttons_fCtqBt"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".video-banner__heading {font-family: \"EB Garamond\", serif;}"
+      ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/08a972a35fad4d2ba125cda7959c4b93.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/08a972a35fad4d2ba125cda7959c4b93.mp4",
