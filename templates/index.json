@@ -53,7 +53,7 @@
         "buttons_fCtqBt"
       ],
       "custom_css": [
-        "h1,h2,h3 {font-family: \"EB Garamond\", serif;}"
+        ".video-banner__heading {font-family: \"EB Garamond\", serif;}"
       ],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/08a972a35fad4d2ba125cda7959c4b93.mp4",
