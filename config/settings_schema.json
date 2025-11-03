@@ -154,7 +154,7 @@
         "type": "font_picker",
         "id": "type_hero_font",
         "default": "assistant_n4",
-        "label": "Hero Font",
+        "label": "Video Hero Font",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       }
     ]
