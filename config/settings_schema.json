@@ -145,6 +145,17 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Hero Font"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_hero_font",
+        "default": "assistant_n4",
+        "label": "Hero Font",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
       }
     ]
   },
