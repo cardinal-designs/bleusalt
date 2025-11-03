@@ -53,7 +53,7 @@
   }
 
   .video-banner__heading {
-    font-family: {{ settings.type_hero_font }}, serif;
+    font-family: {{ settings.type_hero_font.family }}, {{ settings.type_hero_font.fallback_families }};
     font-size: 52px;
   }
 
