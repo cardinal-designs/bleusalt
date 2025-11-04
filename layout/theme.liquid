@@ -2,8 +2,6 @@
   <html class="no-js" lang="{{ request.locale.iso_code }}">
     <head>
       {% render 'visually_io_sdk' %}
-      {% include 'hyperspeed-imports' %}
-      {% render 'hs-critical-css' %}  
       
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +13,8 @@
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
       <!-- Preload JS/CSS -- Start -->
-      <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'">
-      <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
+      {% comment %} <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'"> {% endcomment %}
+      {% comment %} <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script"> {% endcomment %}
       <!-- Preload JS/CSS -- End -->
 
       {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' %}
@@ -33,7 +31,7 @@
 
       <!-- LoudCrowd --> 
       {% if request.path contains '/pages/shop' or request.path contains '/products' %} 
-        <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }} 
+        {{ 'loudcrowd.css' | asset_url | stylesheet_tag: preload: true}} 
       {% endif %}
 
       <!-- Triple Whale Begin -->
@@ -57,7 +55,7 @@
       {% comment %}{% render 'globale-listener' %}{% endcomment %}
       {% comment %}
           <!-- Global-e CSS Start-->
-          {% render 'hs-defer-css' with filename: '//gex.global-e.com/gempro/css/10000545', pages: 'collection,index,product' | split: ',', local: false, linkId: 'GEPIStyles' %}
+          {% render 'render-css' with filename: '//gex.global-e.com/gempro/css/10000545', local: false, linkId: 'GEPIStyles' %}
           <!-- Global-e CSS End-->
       {% endcomment %}
       <title>
@@ -251,7 +249,7 @@
         }
       {% endstyle %}
 
-      {% render 'hs-defer-css' with filename: 'base.css', pages: 'collection,index,product' | split: ',', local: true %}
+      {% render 'render-css' with filename: 'base.css', local: true %}
 
       {%- unless settings.type_body_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -270,8 +268,8 @@
       }
       </script>
 
-      {% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
-      {% render 'hs-defer-css' with filename: 'quick-add.css', pages: 'collection,index,product' | split: ',', local: true %}
+      {% render 'render-css' with filename: 'component-card.css', local: true %}
+      {% render 'render-css' with filename: 'quick-add.css', local: true %}
 
       {% unless template contains 'product' %}
         <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
@@ -365,7 +363,7 @@
       </script>
 
       <script defer src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
-      {% render 'hs-defer-css' with filename: 'swiper-bundle.min.css', pages: 'collection,index,product' | split: ',', local: true %}
+      {% render 'render-css' with filename: 'swiper-bundle.min.css', local: true %}
 
       {%- if settings.predictive_search_enabled -%}
         <script defer src="{{ 'predictive-search.min.js' | asset_url }}"></script>
@@ -388,10 +386,23 @@
 
       <script defer src="{{ 'main.js' | asset_url }}"></script>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
 
       <script>
+        function wrapRebuyElement(el) {
+          if (!el.querySelector('.rebuy-product-wrapper')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'rebuy-product-wrapper';
+            const info = el.querySelector('.rebuy-product-info');
+            const actions = el.querySelector('.rebuy-product-actions');
+            const options = el.querySelector('.rebuy-product-options');
+            if (info) wrapper.appendChild(info);
+            if (actions) wrapper.appendChild(actions);
+            if (options) wrapper.appendChild(options);
+            el.appendChild(wrapper);
+          }
+        }
+
         function addWrapperRebuy(){
           const targetNode = document.body;
           const config = { attributes: true, childList: true, subtree: true };
@@ -400,29 +411,13 @@
                   if (mutation.type === 'childList') {
                       for (const addedNode of mutation.addedNodes) {
                           if (addedNode.nodeType === 1 && addedNode.classList.contains('rebuy-product-block')) {
-                              $('.rebuy-product-block').each(function(){
-                                if (!$(this).find('.rebuy-product-wrapper').length) {
-                                  $(this).find('.rebuy-product-wrapper').contents().unwrap();
-                                  $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
-                                }
-                                
-                              })
-                              // Disconnect the observer if the class is found
-                              // observer.disconnect();
+                              document.querySelectorAll('.rebuy-product-block').forEach(el => wrapRebuyElement(el));
                               return;
                           }
                       }
                   }
-                  // Check if the attributes of any node are changed to have the class "rebuy-product-block"
                   else if (mutation.type === 'attributes' && mutation.target.classList.contains('rebuy-product-block')) {
-                      $('.rebuy-product-block').each(function(){
-                        if (!$(this).find('.rebuy-product-wrapper').length) {
-                          $(this).find('.rebuy-product-wrapper').contents().unwrap();
-                          $(this).find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
-                        }
-                      })
-                      // Disconnect the observer if the class is found
-                      // observer.disconnect();
+                      document.querySelectorAll('.rebuy-product-block').forEach(el => wrapRebuyElement(el));
                       return;
                   }
               }
@@ -436,11 +431,12 @@
             updateCart();
           });
 
-          $(document).on('click', '.rebuy-button', function(){
-              var $this = $(this);
-              $this.closest('.rebuy-product-wrapper').contents().unwrap();
-              $this.closest('.rebuy-product-block').find('.rebuy-product-info, .rebuy-product-actions, .rebuy-product-options').wrapAll('<div class="rebuy-product-wrapper"></div>');
-          })
+          document.addEventListener('click', function(e) {
+            if (e.target.closest('.rebuy-button')) {
+              const rebuyBlock = e.target.closest('.rebuy-product-block');
+              wrapRebuyElement(rebuyBlock);
+            }
+          });
           addWrapperRebuy();
         });
       </script>

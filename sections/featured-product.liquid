@@ -1,9 +1,9 @@
-{% render 'hs-defer-css' with filename: 'section-main-product.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'section-featured-product.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-accordion.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-rte.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'render-css' with filename: 'section-main-product.css', local: true %}
+{% render 'render-css' with filename: 'section-featured-product.css', local: true %}
+{% render 'render-css' with filename: 'component-accordion.css', local: true %}
+{% render 'render-css' with filename: 'component-price.css', local: true %}
+{% render 'render-css' with filename: 'component-rte.css', local: true %}
+{% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -19,15 +19,15 @@
   }
 {%- endstyle -%}
 
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+{% render 'render-css' with filename: 'component-deferred-media.css', local: true %}
 
 {%- assign product = section.settings.product -%}
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
-  {% render 'hs-defer-css' with filename: 'component-product-model.css', pages: 'collection,index,product' | split: ',', local: true %}
+  {% render 'render-css' with filename: 'component-product-model.css', local: true %}
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
-  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
+  {% render 'render-css' with filename: 'component-model-viewer-ui.css', local: true %}
 {%- endif -%}
 
 <section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">

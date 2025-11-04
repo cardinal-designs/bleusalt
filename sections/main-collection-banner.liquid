@@ -1,4 +1,4 @@
-{% render 'hs-defer-css' with filename: 'component-collection-hero.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'render-css' with filename: 'component-collection-hero.css', local: true %}
 
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}  {% if linklists[collection.handle].links != blank or section.blocks.size > 0 %}collection-hero--with-links{% endif %} color-{{ section.settings.color_scheme }} gradient">

@@ -2253,10 +2253,6 @@ input[type='checkbox'] {
 }
 
 #shopify-section-announcement-bar .swiper {
-  opacity: 0;
-}
-
-#shopify-section-announcement-bar .swiper-initialized {
   opacity: 1;
 }
 

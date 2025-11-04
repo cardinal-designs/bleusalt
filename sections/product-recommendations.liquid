@@ -1,10 +1,6 @@
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'section-product-recommendations.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+{% render 'render-css' with filename: 'component-card.css', local: true %}
+{% render 'render-css' with filename: 'component-price.css', local: true %}
+{% render 'render-css' with filename: 'section-product-recommendations.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

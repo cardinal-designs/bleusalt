@@ -1,8 +1,6 @@
-{% render 'hs-defer-css' with filename: 'section-collection-list.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
-
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{% render 'hs-defer-css' with filename: 'component-slider.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+{% render 'render-css' with filename: 'section-collection-list.css', local: true %}
+{% render 'render-css' with filename: 'component-card.css', local: true %}
+{% render 'render-css' with filename: 'component-slider.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

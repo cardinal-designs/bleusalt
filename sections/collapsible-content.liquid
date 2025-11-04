@@ -1,5 +1,5 @@
-{% render 'hs-defer-css' with filename: 'component-accordion.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'collapsible-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'render-css' with filename: 'component-accordion.css', local: true %}
+{% render 'render-css' with filename: 'collapsible-content.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

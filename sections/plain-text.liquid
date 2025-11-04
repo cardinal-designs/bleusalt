@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ 'plain-text.css' | asset_url }}" media="print" onload="this.media='all'">
+{% render 'render-css' with filename: 'plain-text.css', local: true %}
 
 <div class="page-width">
   <div class="plain-text">

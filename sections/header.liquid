@@ -2,33 +2,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"> -->
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
-<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{% render 'render-css' with filename: 'component-list-menu.css', local: true %}
+{% render 'render-css' with filename: 'component-search.css', local: true %}
+{% render 'render-css' with filename: 'component-menu-drawer.css', local: true %}
+{% render 'render-css' with filename: 'component-cart-notification.css', local: true %}
+{% render 'render-css' with filename: 'component-cart-items.css', local: true %}
 {%- if settings.predictive_search_enabled -%}
-  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+  {% render 'render-css' with filename: 'component-price.css', local: true %}
+  {% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
 {%- endif -%}
 {%- if section.settings.menu_type_desktop == 'mega' -%}
-  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
-  <noscript>{% render 'hs-defer-css' with filename: 'component-mega-menu.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+  {% render 'render-css' with filename: 'component-mega-menu.css', local: true %}
 {%- endif -%}
 {%- if settings.cart_type == "drawer" -%}
-  {% render 'hs-defer-css' with filename: 'component-cart-drawer.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-cart.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-totals.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-discounts.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
+  {% render 'render-css' with filename: 'component-cart-drawer.css', local: true %}
+  {% render 'render-css' with filename: 'component-cart.css', local: true %}
+  {% render 'render-css' with filename: 'component-totals.css', local: true %}
+  {% render 'render-css' with filename: 'component-price.css', local: true %}
+  {% render 'render-css' with filename: 'component-discounts.css', local: true %}
+  {% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
 {%- endif -%}
-
-<noscript>{% render 'hs-defer-css' with filename: 'component-list-menu.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'component-search.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'component-menu-drawer.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'component-cart-notification.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'component-cart-items.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 
 {% assign split_value = ' | ' %}
 

@@ -1,8 +1,16 @@
-<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- liquid
+  assign loading = 'lazy'
+  assign fetchpriority = 'auto'
+  assign preload = false
+  if section.index <= 3
+    assign loading = 'eager'
+    assign fetchpriority = 'high'
+    assign preload = true
+  endif
+-%}
 
-<noscript>{% render 'hs-defer-css' with filename: 'component-rte.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
-<noscript>{% render 'hs-defer-css' with filename: 'section-rich-text.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+{% render 'render-css' with filename: 'component-rte.css', local: true %}
+{% render 'render-css' with filename: 'section-rich-text.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -19,11 +27,23 @@
 
   {% if section.settings.background_image != blank %}
   .section-{{ section.id }}-padding {
-    background-image:url({{ section.settings.background_image | image_url }});
-    background-size:{{ section.settings.background_image_size }};
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: initial;
+    position: relative;
+  }
+
+  .section-{{ section.id }}-padding .rich-text__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: {% if section.settings.background_image_size == 'cover' %}cover{% else %}contain{% endif %};
+    object-position: center;
+  }
+
+  .section-{{ section.id }}-padding .rich-text__content {
+    position: relative;
+    z-index: 1;
   }
   {% endif %}
   
@@ -31,8 +51,19 @@
 
 <div class="{{ section.settings.btextimg }} isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
-      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+    {% if section.settings.background_image != blank %}
+      {{ section.settings.background_image | image_url: width: section.settings.background_image.width | image_tag: 
+        class: 'rich-text__background-image',
+        widths: '375, 750, 1200, 1600, 1920, 2400, 3000, 3600, 4200',
+        sizes: '100vw',
+        loading: loading,
+        fetchpriority: fetchpriority,
+        preload: preload
+      }}
+    {% endif %}
+    <div class="rich-text__content">
+      <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+        <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
@@ -60,6 +91,7 @@
           {%- endcase -%}
         {%- endfor -%}
       </div>
+    </div>
     </div>
   </div>
 </div>

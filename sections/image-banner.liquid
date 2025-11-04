@@ -1,4 +1,4 @@
-{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'render-css' with filename: 'section-image-banner.css', local: true %}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}

@@ -1,4 +1,4 @@
-{% render 'hs-defer-css' with filename: 'section-blog-post.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'render-css' with filename: 'section-blog-post.css', local: true %}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}

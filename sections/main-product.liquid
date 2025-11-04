@@ -4,14 +4,14 @@
 
   {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
 
-  {% render 'hs-defer-css' with filename: 'section-main-product.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-accordion.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-rte.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-slider.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-rating.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
-  {% render 'hs-defer-css' with filename: 'component-deferred-media.css', pages: 'collection,index,product' | split: ',', local: true %}
+  {% render 'render-css' with filename: 'section-main-product.css', local: true %}
+  {% render 'render-css' with filename: 'component-accordion.css', local: true %}
+  {% render 'render-css' with filename: 'component-price.css', local: true %}
+  {% render 'render-css' with filename: 'component-rte.css', local: true %}
+  {% render 'render-css' with filename: 'component-slider.css', local: true %}
+  {% render 'render-css' with filename: 'component-rating.css', local: true %}
+  {% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
+  {% render 'render-css' with filename: 'component-deferred-media.css', local: true %}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -78,9 +78,9 @@
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}
-    {% render 'hs-defer-css' with filename: 'component-product-model.css', pages: 'collection,index,product' | split: ',', local: true %}
+    {% render 'render-css' with filename: 'component-product-model.css', local: true %}
     <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
-    <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
+    {% render 'render-css' with filename: 'component-model-viewer-ui.css', local: true %}
   {%- endif -%}
 
   {% if section.settings.show_breadcrumb %}
@@ -605,10 +605,10 @@
                 </div>
                 <div class="flex product__app-buttons">
                   <a target="_blank" class="app-button__apple" href="https://apps.apple.com/us/app/bleusalt/id1618014255" aria-describedby="a11y-external-message">
-                    <img alt="Download on the App Store" class="lazyload hs-lazyload hs-id-36f74ad2" data-src="{{ 'bleusalt-button-apple-app.png' | asset_url }}" height="60" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="206"/>
+                    <img alt="Download on the App Store" src="{{ 'bleusalt-button-apple-app.png' | asset_url }}" height="60" loading="lazy" width="206"/>
                   </a>
                   <a target="_blank" class="app-button__google" href="https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI" aria-describedby="a11y-external-message">
-                    <img alt="Get it on Google Play" class="lazyload hs-lazyload hs-id-d8b6a3f1" data-src="{{ 'bleusalt-button-google-play.png' | asset_url }}" height="60" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="206"/>
+                    <img alt="Get it on Google Play" src="{{ 'bleusalt-button-google-play.png' | asset_url }}" height="60" loading="lazy" width="206"/>
                   </a>
                 </div>
                 <div class="rte product__app-buttons"><small>Not in the U.S.?  <a href="/pages/contact">Contact Customer Service</a> to Purchase</small></div>
@@ -694,7 +694,7 @@
               <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: none;{% else %}display: block;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
               {% comment %}
-              {% render 'hs-defer-css' with filename: 'component-pickup-availability.css', pages: 'collection,index,product' | split: ',', local: true %}
+              {% render 'render-css' with filename: 'component-pickup-availability.css', local: true %}
 
               {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 

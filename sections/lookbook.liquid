@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="{{ 'complete-the-look.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{% render 'hs-defer-css' with filename: 'complete-the-look.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+{% render 'render-css' with filename: 'complete-the-look.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

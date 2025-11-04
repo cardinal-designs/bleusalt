@@ -1,0 +1,20 @@
+{%- liquid
+  assign preload = true
+
+  if section and section.index > 1
+    assign preload = false
+  endif
+-%}
+
+{%- if local -%}
+  {{- filename | asset_url | stylesheet_tag: preload: preload -}}
+{%- else -%}
+  <link
+    rel="stylesheet"
+    href="{{ filename }}"
+    {% unless preload %}
+      onload="this.media='all'; this.onload = null"
+      media="print"
+    {% endunless %}
+  >
+{%- endif -%}

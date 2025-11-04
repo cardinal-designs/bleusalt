@@ -1,5 +1,6 @@
 (() => {
   const userActivityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart', 'keypress', 'touchmove'];
+  const SCRIPTS_LOADED_FLAG = 'bleusalt-third-party-scripts-loaded';
 
   async function onUserActivity() {
     for (const event of userActivityEvents) {
@@ -24,6 +25,9 @@
     window.dispatchEvent(new CustomEvent('load-head-scripts'));
 
     await Promise.all(scriptsLoad);
+    
+    localStorage.setItem(SCRIPTS_LOADED_FLAG, 'true');
+    
     window.dispatchEvent(new CustomEvent('third-party-scripts-loaded'));
 
     document.documentElement.classList.add('third-party-scripts-loaded');
@@ -35,5 +39,11 @@
     }
   }
 
-  window.addEventListener('load', startListenUserActivity);
+  window.addEventListener('load', () => {
+    if (localStorage.getItem(SCRIPTS_LOADED_FLAG)) {
+      onUserActivity();
+    } else {
+      startListenUserActivity();
+    }
+  });
 })();

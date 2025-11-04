@@ -12,7 +12,7 @@
 {% endcomment %}
 
 <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{% render 'hs-defer-css' with filename: 'component-pagination.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+<noscript>{% render 'render-css' with filename: 'component-pagination.css', local: true %}</noscript>
 
 {%- if paginate.parts.size > 0 -%}
   <div class="pagination-wrapper">

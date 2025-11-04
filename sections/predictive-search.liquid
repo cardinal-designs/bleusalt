@@ -20,7 +20,7 @@
         <li id="predictive-search-option-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
           <a href="{{ product.url }}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1">
             {%- if product.featured_media != blank -%}
-              <img alt="{{ product.featured_media.alt }}" class="predictive-search__image lazyload hs-lazyload hs-id-690b653f" data-src="{{ product.featured_media | image_url: width: 150 }}" height="{{ 50 | divided_by: product.featured_media.preview_image.aspect_ratio }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="50">
+              <img alt="{{ product.featured_media.alt }}" class="predictive-search__image" src="{{ product.featured_media | image_url: width: 150 }}" height="{{ 50 | divided_by: product.featured_media.preview_image.aspect_ratio }}" width="50">
             {%- endif -%}
             <div class="predictive-search__item-content{% unless settings.predictive_search_show_vendor or settings.predictive_search_show_price %} predictive-search__item-content--centered{% endunless %}">
               {%- if settings.predictive_search_show_vendor -%} 
