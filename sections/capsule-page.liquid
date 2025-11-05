@@ -1,4 +1,4 @@
-{% render 'render-css', filename: 'capsule.css', local: true %}
+{% render 'hs-defer-css' with filename: 'capsule.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% assign product_types = section.settings.collection.products | map: 'type' | uniq %}
 <capsule-page data-product-types='{{ product_types | json }}'>
 <div class="page-width page-width--narrow">

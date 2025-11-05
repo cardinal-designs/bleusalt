@@ -1,4 +1,4 @@
-{% render 'render-css', filename: 'styling.css', local: true %}
+{% render 'hs-defer-css' with filename: 'styling.css', pages: 'collection,index,product' | split: ',', local: true %}
 <div class="page-width">
   <div class="section-header center">
     <h1>{{ page.title }}</h1>

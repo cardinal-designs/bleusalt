@@ -1,7 +1,13 @@
-{% render 'render-css', filename: 'component-slider.css', local: true %}
-{% render 'render-css', filename: 'component-card.css', local: true %}
-{% render 'render-css', filename: 'component-article-card.css', local: true %}
-{% render 'render-css', filename: 'section-featured-blog.css', local: true %}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{% render 'hs-defer-css' with filename: 'component-slider.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+<noscript>{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+<noscript>{% render 'hs-defer-css' with filename: 'component-article-card.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+
+{% render 'hs-defer-css' with filename: 'section-featured-blog.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

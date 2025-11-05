@@ -1,4 +1,4 @@
-{% render 'render-css', filename: 'customer.css', local: true %}
+{% render 'hs-defer-css' with filename: 'customer.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 <div class="customer login">
   <h1 id="recover" tabindex="-1">

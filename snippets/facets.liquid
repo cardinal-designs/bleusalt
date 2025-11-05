@@ -12,7 +12,7 @@
     {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
 {% endcomment %}
 
-{% render 'render-css', filename: 'component-show-more.css', local: true %}
+{% render 'hs-defer-css' with filename: 'component-show-more.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by

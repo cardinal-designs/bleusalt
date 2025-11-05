@@ -10,5 +10,5 @@ THIS IS A GENERATED ASSET OF INCLUDES FOR INSTALLED BOLD APPLICATIONS SO DO NOT 
 <script>
     window.BOLD.common.cacheParams.options = 1762011248;
 </script>
-{% render 'render-css', filename: 'bold-options.css', local: true %}
-<script defer data-lazy-src="https://option.boldapps.net/js/options.js"></script>
+{% render 'hs-defer-css' with filename: 'bold-options.css', pages: 'collection,index,product' | split: ',', local: true %}
+<script src="https://option.boldapps.net/js/options.js"></script>

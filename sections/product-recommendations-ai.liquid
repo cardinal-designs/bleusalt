@@ -1,7 +1,12 @@
-{% render 'render-css', filename: 'component-card.css', local: true %}
-{% render 'render-css', filename: 'component-price.css', local: true %}
-{% render 'render-css', filename: 'section-product-recommendations.css', local: true %}
-{% render 'render-css', filename: 'quick-add.css', local: true %}
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+<noscript>{% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+<noscript>{% render 'hs-defer-css' with filename: 'section-product-recommendations.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
 
 
 {%- style -%}

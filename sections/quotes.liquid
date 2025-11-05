@@ -1,4 +1,5 @@
-{% render 'render-css', filename: 'section-testimonials.css', local: true %}
+<link rel="stylesheet" href="{{ 'section-testimonials.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{% render 'hs-defer-css' with filename: 'section-testimonials.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 
 <style>
   [data-section-id="{{ section.id }}"] .quote-block + .quote-block {

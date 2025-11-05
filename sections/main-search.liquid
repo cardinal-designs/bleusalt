@@ -1,10 +1,13 @@
-{% render 'render-css', filename: 'template-collection.css', local: true %}
-{% render 'render-css', filename: 'component-card.css', local: true %}
-{% render 'render-css', filename: 'component-price.css', local: true %}
-{% render 'render-css', filename: 'component-search.css', local: true %}
+{% render 'hs-defer-css' with filename: 'template-collection.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{% render 'hs-defer-css' with filename: 'component-search.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-  {% render 'render-css', filename: 'component-facets.css', local: true %}
+  {% render 'hs-defer-css' with filename: 'component-facets.css', pages: 'collection,index,product' | split: ',', local: true %}
   <script defer src="{{ 'facets.min.js' | asset_url }}"></script>
 {%- endif -%}
 

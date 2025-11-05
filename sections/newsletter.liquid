@@ -1,5 +1,5 @@
-{% render 'render-css', filename: 'component-newsletter.css', local: true %}
-{% render 'render-css', filename: 'newsletter-section.css', local: true %}
+{% render 'hs-defer-css' with filename: 'component-newsletter.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'newsletter-section.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

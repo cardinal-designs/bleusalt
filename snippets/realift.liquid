@@ -143,5 +143,5 @@
     </div>
 
 </div>
-{% render 'render-css', filename: 'realift.css', local: true %}
+{% render 'hs-defer-css' with filename: 'realift.css', pages: 'collection,index,product' | split: ',', local: true %}
 <script src="{{ 'realift.min.js' | asset_url }}"></script>

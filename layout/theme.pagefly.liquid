@@ -48,7 +48,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
       {% comment %}{% render 'globale-listener' %}{% endcomment %}
       {% comment %}
           <!-- Global-e CSS Start-->
-          {% render 'render-css', filename: '//gex.global-e.com/gempro/css/10000545', local: false, linkId: 'GEPIStyles' %}
+          {% render 'hs-defer-css' with filename: '//gex.global-e.com/gempro/css/10000545', pages: 'collection,index,product' | split: ',', local: false, linkId: 'GEPIStyles' %}
           <!-- Global-e CSS End-->
       {% endcomment %}
       <title>
@@ -238,7 +238,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
         }
       {% endstyle %}
 
-      {% render 'render-css', filename: 'base.css', local: true %}
+      {% render 'hs-defer-css' with filename: 'base.css', pages: 'collection,index,product' | split: ',', local: true %}
 
       {%- unless settings.type_body_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -257,8 +257,8 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
       }
       </script>
 
-      {% render 'render-css', filename: 'component-card.css', local: true %}
-      {% render 'render-css', filename: 'quick-add.css', local: true %}
+      {% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
+      {% render 'hs-defer-css' with filename: 'quick-add.css', pages: 'collection,index,product' | split: ',', local: true %}
 
       <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
 

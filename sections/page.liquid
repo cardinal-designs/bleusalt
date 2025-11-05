@@ -1,5 +1,8 @@
-{% render 'render-css', filename: 'component-rte.css', local: true %}
-{% render 'render-css', filename: 'section-main-page.css', local: true %}
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{% render 'hs-defer-css' with filename: 'component-rte.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+<noscript>{% render 'hs-defer-css' with filename: 'section-main-page.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
 
 {%- style -%}
   .section-{{ section.id }}-padding {

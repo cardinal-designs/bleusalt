@@ -1,4 +1,4 @@
-{% render 'render-css', filename: 'component-image-with-text.css', local: true %}
+{% render 'hs-defer-css' with filename: 'component-image-with-text.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -59,7 +59,7 @@
               {% capture src %}https://player.vimeo.com/video/{{ video.id }}?loop=1&title=0&byline=0&portrait=0&muted=1&autoplay=1&background=1{% endcapture %}
             {% endif %}   
             <div class="media media--{{ section.settings.height }}">
-                <iframe title="{{ section.settings.description }}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen src="{{ src }}"></iframe>
+                <iframe title="{{ section.settings.description }}" class="lazyload lazyfade" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen data-src="{{ src }}"></iframe>
             </div>
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -74,7 +74,7 @@
                   {% capture src %}https://player.vimeo.com/video/{{ video.id }}?loop=1&title=0&byline=0&portrait=0&muted=1&autoplay=1&background=1{% endcapture %}
                 {% endif %}   
                 <div class="media media--{{ section.settings.height }}">
-                    <iframe title="{{ section.settings.description }}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen src="{{ src }}"></iframe>
+                    <iframe title="{{ section.settings.description }}" class="lazyload lazyfade" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen data-src="{{ src }}"></iframe>
                 </div>
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}

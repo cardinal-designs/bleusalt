@@ -1,6 +1,6 @@
-{% render 'render-css', filename: 'section-image-banner.css', local: true %}
-{% render 'render-css', filename: 'component-slider.css', local: true %}
-{% render 'render-css', filename: 'component-slideshow.css', local: true %}
+{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-slider.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-slideshow.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}

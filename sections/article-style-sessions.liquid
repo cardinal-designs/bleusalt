@@ -1,4 +1,4 @@
-{% render 'render-css', filename: 'image-text-video.css', local: true %}
+<link rel="stylesheet" href="{{ 'image-text-video.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'play-video.js' | asset_url }}" defer="defer"></script>
 
 {%- assign description = article.metafields.custom.style_sessions_description.value -%}

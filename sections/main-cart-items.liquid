@@ -1,9 +1,9 @@
-{% render 'render-css', filename: 'component-cart.css', local: true %}
-{% render 'render-css', filename: 'component-cart-items.css', local: true %}
-{% render 'render-css', filename: 'component-totals.css', local: true %}
-{% render 'render-css', filename: 'component-price.css', local: true %}
-{% render 'render-css', filename: 'component-discounts.css', local: true %}
-{% render 'render-css', filename: 'component-loading-overlay.css', local: true %}
+{% render 'hs-defer-css' with filename: 'component-cart.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-cart-items.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-totals.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-discounts.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

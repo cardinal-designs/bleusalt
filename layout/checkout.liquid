@@ -22,7 +22,7 @@
     {{ checkout_scripts }}
 {% comment %}
     <!-- Global-e CSS Start-->
-    {% render 'render-css', filename: '//gex.global-e.com/gempro/css/10000545', local: false, linkId: 'GEPIStyles' %}
+    {% render 'hs-defer-css' with filename: '//gex.global-e.com/gempro/css/10000545', pages: 'collection,index,product' | split: ',', local: false, linkId: 'GEPIStyles' %}
     <!-- Global-e CSS End-->
 
     {% include "loyaltylion" %}

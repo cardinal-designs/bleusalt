@@ -25,9 +25,9 @@
     window.dispatchEvent(new CustomEvent('load-head-scripts'));
 
     await Promise.all(scriptsLoad);
-    
+
     localStorage.setItem(SCRIPTS_LOADED_FLAG, 'true');
-    
+
     window.dispatchEvent(new CustomEvent('third-party-scripts-loaded'));
 
     document.documentElement.classList.add('third-party-scripts-loaded');
