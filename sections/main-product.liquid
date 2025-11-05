@@ -164,8 +164,14 @@
                 >
                   {% case media.media_type %}
                     {% when 'image' %}
-                      {% render 'image-element', image: media.preview_image %}
-                    {% when 'video'%}
+                      {%- liquid
+                      assign prioritize_loading = false
+                      if hide_image == false
+                        assign prioritize_loading = true
+                      endif
+                    -%}
+                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
+                  {% when 'video'%}
                       {% assign ratio =  1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                       <div class="media" style="padding-top:{{ ratio }}%;">
                         {{ media | video_tag: autoplay: true, playsinline: true, loop: true, autoplay: true, muted: true, controls: false }}
@@ -227,7 +233,13 @@
               >
                 {% case media.media_type %}
                   {% when 'image' %}
-                    {% render 'image-element', image: media.preview_image %}
+                    {%- liquid
+                      assign prioritize_loading = false
+                      if hide_image == false
+                        assign prioritize_loading = true
+                      endif
+                    -%}
+                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
                   {% when 'video' %}
                     {% assign ratio = 1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                     <div class="media" style="padding-top:{{ ratio }}%;">
