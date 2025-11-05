@@ -254,10 +254,10 @@
       {% render 'hs-defer-css' with filename: 'base.css', pages: 'collection,index,product' | split: ',', local: true %}
 
       {%- unless settings.type_body_font.system? -%}
-        {{ settings.type_body_font | font_url | preload_tag: as: 'font' }}
+        <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
       {%- endunless -%}
       {%- unless settings.type_header_font.system? -%}
-        {{ settings.type_header_font | font_url | preload_tag: as: 'font' }}
+        <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
       {%- endunless -%}
 
       {%- if settings.predictive_search_enabled -%}
