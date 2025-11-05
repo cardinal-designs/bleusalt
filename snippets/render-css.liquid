@@ -1,20 +1,42 @@
-{%- liquid
-  assign preload = true
+{%- doc -%}
+  Renders a CSS file either from local assets or an external URL.
 
-  if section and section.index > 1
-    assign preload = false
+  @param {string} filename - The name of the CSS file or the full URL.
+  @param {boolean} local - If true, loads the CSS from local assets. If false, treats filename as a full URL.
+  @param {boolean} [defer] - If true, defers the loading of the CSS until after the page has loaded.
+  @param {boolean} [preload] - If true, preloads the CSS file for faster rendering.
+
+  @example {%- render 'render-css', filename: 'styles.css', local: true -%}
+{%- enddoc -%}
+
+{%- liquid
+  if preload == blank and defer != true
+    if section and section.index < 2
+      assign preload = true
+    endif
   endif
+  assign preload = preload | default: false
+  assign defer = defer | default: false
 -%}
 
 {%- if local -%}
-  {{- filename | asset_url | stylesheet_tag: preload: preload -}}
+  {%- if defer -%}
+    <link
+      rel="stylesheet"
+      href="{{ filename | asset_url }}"
+      onload="this.media='all'; this.onload = null"
+      media="print"
+    >
+  {%- else -%}
+    {{- filename | asset_url | stylesheet_tag: preload: preload -}}
+  {%- endif -%}
 {%- else -%}
   <link
     rel="stylesheet"
     href="{{ filename }}"
-    {% unless preload %}
+    {% if defer %}
       onload="this.media='all'; this.onload = null"
       media="print"
-    {% endunless %}
+    {% endif %}
   >
 {%- endif -%}

@@ -9,8 +9,8 @@
   endif
 -%}
 
-{% render 'render-css' with filename: 'component-rte.css', local: true %}
-{% render 'render-css' with filename: 'section-rich-text.css', local: true %}
+{% render 'render-css', filename: 'component-rte.css', local: true %}
+{% render 'render-css', filename: 'section-rich-text.css', local: true %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

@@ -1,10 +1,10 @@
-{% render 'render-css' with filename: 'template-collection.css', local: true %}
-{% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
-{% render 'render-css' with filename: 'component-card.css', local: true %}
-{% render 'render-css' with filename: 'component-price.css', local: true %}
+{% render 'render-css', filename: 'template-collection.css', local: true %}
+{% render 'render-css', filename: 'component-loading-overlay.css', local: true %}
+{% render 'render-css', filename: 'component-card.css', local: true %}
+{% render 'render-css', filename: 'component-price.css', local: true %}
 
 {%- if section.settings.enable_quick_add -%}
-  {% render 'render-css' with filename: 'quick-add.css', local: true %}
+  {% render 'render-css', filename: 'quick-add.css', local: true %}
   <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
   <script defer src="{{ 'product-form.js' | asset_url }}"></script>
 {%- endif -%}
@@ -82,7 +82,7 @@
   {%- endif -%}
 
   <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-    {% render 'render-css' with filename: 'component-facets.css', local: true %}
+    {% render 'render-css', filename: 'component-facets.css', local: true %}
     <script defer src="{{ 'facets.min.js' | asset_url }}"></script>
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">

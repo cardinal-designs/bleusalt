@@ -2,25 +2,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"> -->
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
-{% render 'render-css' with filename: 'component-list-menu.css', local: true %}
-{% render 'render-css' with filename: 'component-search.css', local: true %}
-{% render 'render-css' with filename: 'component-menu-drawer.css', local: true %}
-{% render 'render-css' with filename: 'component-cart-notification.css', local: true %}
-{% render 'render-css' with filename: 'component-cart-items.css', local: true %}
+{% render 'render-css', filename: 'component-list-menu.css', local: true %}
+{% render 'render-css', filename: 'component-search.css', local: true %}
+{% render 'render-css', filename: 'component-menu-drawer.css', local: true %}
+{% render 'render-css', filename: 'component-cart-notification.css', local: true %}
+{% render 'render-css', filename: 'component-cart-items.css', local: true %}
 {%- if settings.predictive_search_enabled -%}
-  {% render 'render-css' with filename: 'component-price.css', local: true %}
-  {% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
+  {% render 'render-css', filename: 'component-price.css', local: true %}
+  {% render 'render-css', filename: 'component-loading-overlay.css', local: true %}
 {%- endif -%}
 {%- if section.settings.menu_type_desktop == 'mega' -%}
-  {% render 'render-css' with filename: 'component-mega-menu.css', local: true %}
+  {% render 'render-css', filename: 'component-mega-menu.css', local: true %}
 {%- endif -%}
 {%- if settings.cart_type == "drawer" -%}
-  {% render 'render-css' with filename: 'component-cart-drawer.css', local: true %}
-  {% render 'render-css' with filename: 'component-cart.css', local: true %}
-  {% render 'render-css' with filename: 'component-totals.css', local: true %}
-  {% render 'render-css' with filename: 'component-price.css', local: true %}
-  {% render 'render-css' with filename: 'component-discounts.css', local: true %}
-  {% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
+  {% render 'render-css', filename: 'component-cart-drawer.css', local: true %}
+  {% render 'render-css', filename: 'component-cart.css', local: true %}
+  {% render 'render-css', filename: 'component-totals.css', local: true %}
+  {% render 'render-css', filename: 'component-price.css', local: true %}
+  {% render 'render-css', filename: 'component-discounts.css', local: true %}
+  {% render 'render-css', filename: 'component-loading-overlay.css', local: true %}
 {%- endif -%}
 
 {% assign split_value = ' | ' %}

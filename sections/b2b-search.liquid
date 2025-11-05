@@ -1,10 +1,10 @@
-{% render 'render-css' with filename: 'template-collection.css', local: true %}
-{% render 'render-css' with filename: 'component-card.css', local: true %}
-{% render 'render-css' with filename: 'component-price.css', local: true %}
-{% render 'render-css' with filename: 'component-search.css', local: true %}
+{% render 'render-css', filename: 'template-collection.css', local: true %}
+{% render 'render-css', filename: 'component-card.css', local: true %}
+{% render 'render-css', filename: 'component-price.css', local: true %}
+{% render 'render-css', filename: 'component-search.css', local: true %}
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-  {% render 'render-css' with filename: 'component-facets.css', local: true %}
+  {% render 'render-css', filename: 'component-facets.css', local: true %}
   <script defer src="{{ 'facets.min.js' | asset_url }}"></script>
 {%- endif -%}
 

@@ -92,7 +92,7 @@
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
-    {% render 'render-css' with filename: 'template-giftcard.css', local: true %}
+    {% render 'render-css', filename: 'template-giftcard.css', local: true %}
   </head>
 
   <body class="gradient">

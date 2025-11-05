@@ -2,16 +2,14 @@
 {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- break -%}{%- endif -%}
 <section id="MainProduct-{{ section.id }}" class="product__main page-width small-full-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
 
-  {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
-
-  {% render 'render-css' with filename: 'section-main-product.css', local: true %}
-  {% render 'render-css' with filename: 'component-accordion.css', local: true %}
-  {% render 'render-css' with filename: 'component-price.css', local: true %}
-  {% render 'render-css' with filename: 'component-rte.css', local: true %}
-  {% render 'render-css' with filename: 'component-slider.css', local: true %}
-  {% render 'render-css' with filename: 'component-rating.css', local: true %}
-  {% render 'render-css' with filename: 'component-loading-overlay.css', local: true %}
-  {% render 'render-css' with filename: 'component-deferred-media.css', local: true %}
+  {% render 'render-css', filename: 'section-main-product.css', local: true %}
+  {% render 'render-css', filename: 'component-accordion.css', local: true %}
+  {% render 'render-css', filename: 'component-price.css', local: true %}
+  {% render 'render-css', filename: 'component-rte.css', local: true %}
+  {% render 'render-css', filename: 'component-slider.css', local: true %}
+  {% render 'render-css', filename: 'component-rating.css', local: true %}
+  {% render 'render-css', filename: 'component-loading-overlay.css', local: true %}
+  {% render 'render-css', filename: 'component-deferred-media.css', local: true %}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -78,9 +76,9 @@
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}
-    {% render 'render-css' with filename: 'component-product-model.css', local: true %}
+    {% render 'render-css', filename: 'component-product-model.css', local: true %}
     <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
-    {% render 'render-css' with filename: 'component-model-viewer-ui.css', local: true %}
+    {% render 'render-css', filename: 'component-model-viewer-ui.css', local: true %}
   {%- endif -%}
 
   {% if section.settings.show_breadcrumb %}
@@ -164,8 +162,14 @@
                 >
                   {% case media.media_type %}
                     {% when 'image' %}
-                      {% render 'image-element', image: media.preview_image %}
-                    {% when 'video'%}
+                      {%- liquid
+                      assign prioritize_loading = false
+                      if hide_image == false
+                        assign prioritize_loading = true
+                      endif
+                    -%}
+                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
+                  {% when 'video'%}
                       {% assign ratio =  1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                       <div class="media" style="padding-top:{{ ratio }}%;">
                         {{ media | video_tag: autoplay: true, playsinline: true, loop: true, autoplay: true, muted: true, controls: false }}
@@ -227,7 +231,13 @@
               >
                 {% case media.media_type %}
                   {% when 'image' %}
-                    {% render 'image-element', image: media.preview_image %}
+                    {%- liquid
+                      assign prioritize_loading = false
+                      if hide_image == false
+                        assign prioritize_loading = true
+                      endif
+                    -%}
+                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
                   {% when 'video' %}
                     {% assign ratio = 1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                     <div class="media" style="padding-top:{{ ratio }}%;">
@@ -694,7 +704,7 @@
               <p style="{% if product.selected_or_first_available_variant.inventory_quantity > 10 %}display: none;{% else %}display: block;{% endif %}" id="show-low-messaging">Our popular items tend to sell out often, complete your purchase now to ensure availability.</p>    
 
               {% comment %}
-              {% render 'render-css' with filename: 'component-pickup-availability.css', local: true %}
+              {% render 'render-css', filename: 'component-pickup-availability.css', local: true %}
 
               {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 

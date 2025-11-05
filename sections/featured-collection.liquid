@@ -1,9 +1,9 @@
-{% render 'render-css' with filename: 'component-card.css', local: true %}
-{% render 'render-css' with filename: 'component-price.css', local: true %}
-{% render 'render-css' with filename: 'component-slider.css', local: true %}
-{% render 'render-css' with filename: 'template-collection.css', local: true %}
+{% render 'render-css', filename: 'component-card.css', local: true %}
+{% render 'render-css', filename: 'component-price.css', local: true %}
+{% render 'render-css', filename: 'component-slider.css', local: true %}
+{% render 'render-css', filename: 'template-collection.css', local: true %}
 {%- if section.settings.enable_quick_add -%}
-  {% render 'render-css' with filename: 'quick-add.css', local: true %}
+  {% render 'render-css', filename: 'quick-add.css', local: true %}
   <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
 {%- endif -%}
 

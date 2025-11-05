@@ -1,6 +1,6 @@
-{% render 'render-css' with filename: 'section-image-banner.css', local: true %}
-{% render 'render-css' with filename: 'component-slider.css', local: true %}
-{% render 'render-css' with filename: 'component-slideshow.css', local: true %}
+{% render 'render-css', filename: 'section-image-banner.css', local: true %}
+{% render 'render-css', filename: 'component-slider.css', local: true %}
+{% render 'render-css', filename: 'component-slideshow.css', local: true %}
 
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
