@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Experience",
+            "text": "The Veterans Day Event",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Sustainable Luxury",
+            "heading": "Up to 45% Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -30,7 +30,7 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Made from the Softest Fibers on Earth",
+            "text": "Enjoy an Additional 10% Off In our App + 2x VIP Points",
             "text_color": "#ffffff"
           }
         },
@@ -470,43 +470,6 @@
         "title": ""
       }
     },
-    "image_with_text_XqniFF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_6FWmWW": {
-          "type": "heading",
-          "settings": {
-            "heading": "Get The App",
-            "heading_size": "h1"
-          }
-        },
-        "svg_qxQ83m": {
-          "type": "svg",
-          "settings": {
-            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get early VIP access<br> to new product arrivals & app-exclusive discounts<br>available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_6FWmWW",
-        "svg_qxQ83m"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/download.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6": {
       "type": "image-with-text",
       "blocks": {
@@ -542,6 +505,43 @@
       ],
       "settings": {
         "image": "shopify://shop_images/bleusalt-malibu-store-interior.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_XqniFF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6FWmWW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get The App",
+            "heading_size": "h1"
+          }
+        },
+        "svg_qxQ83m": {
+          "type": "svg",
+          "settings": {
+            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get early VIP access<br> to new product arrivals & app-exclusive discounts<br>available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6FWmWW",
+        "svg_qxQ83m"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/download.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
