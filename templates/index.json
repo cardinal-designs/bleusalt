@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Experience",
+            "text": "The Veterans Day Event",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Sustainable Luxury",
+            "heading": "Up to 45% off Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -30,15 +30,15 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Made from the Softest Fibers on Earth",
+            "text": "Enjoy an Extra 10% off and 2x VIP Points when you shop on our App",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop New Arrivals",
-            "button_link_1": "shopify://collections/womens-new-arrivals",
+            "button_label_1": "Shop Sale",
+            "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
