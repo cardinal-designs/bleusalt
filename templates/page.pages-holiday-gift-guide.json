@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "1663795698389bd2f1": {
+      "type": "video-banner",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/9141dce828b1474680519928252d2988.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/9141dce828b1474680519928252d2988.mp4",
+        "description": "",
+        "image_overlay_opacity": 0,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "100",
+        "show_text_below": true
+      }
+    },
+    "16618951073dd5fa7a": {
+      "type": "rich-text",
+      "blocks": {
+        "16618951072671241e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>OUR STORY</p>",
+            "heading_size": "h2"
+          }
+        },
+        "16618951072671241e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a seasonless line of elevated luxury basics made in the USA from the softest fibers on Earth. Bleusalt is a female-founded luxury lifestyle brand born in Malibu and built on the principles of sustainability, elevated comfort and timeless design. Founded by Lyndie Benson, a photographer, creative director and mother of two, Bleusalt emerged from a vision to create consciously-made wardrobe essentials that feel as beautiful as they look.</p><p>Every Bleusalt piece is handmade in the USA, working closely with local Los Angeles partners in cut-and-sew production and fulfillment to ensure ethical craftsmanship and exceptional quality at every step. Our famously soft fabric is developed specially for Bleusalt from TENCEL™ fibers sustainably derived from tree fibers, creating a luxuriously soft and breathable material that embodies the ease of Malibu living.</p><p>Loved by icons including Meghan Markle, Cindy Crawford, Kaia Gerber and Patrick Dempsey, Bleusalt has become a symbol of relaxed elegance with timeless pieces that elevate daily life and make people feel their best.</p><p>With a Malibu heart and a global reach, Bleusalt continues to grow through curated capsule collections that bring the feeling of coastal Malibu luxury to the world.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "16618951072671241e-0",
+        "16618951072671241e-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "btextimg": "story-page",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_yyjC4A": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_G3cMnx": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT LYNDIE BENSON",
+            "heading_size": "h2"
+          }
+        },
+        "text_rrgNWE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After dedicating nearly three decades to building a life and legacy alongside her former husband—supporting his rise while raising their two sons—Lyndie Benson found herself starting over at age 50. With no roadmap, but a lifetime of experience, creativity, and resilience, she began again—this time on her own terms. What followed was a bold reinvention: the launch of a luxury lifestyle brand rooted in sustainability, style, and the spirit of Malibu.</p><p>A lifelong lover of the ocean and elevated living, Lyndie created Bleusalt to offer wardrobe essentials that reflect the beauty and ease of coastal life. She brings an artist’s eye to every detail, photographing and directing the brand’s campaigns while overseeing its creative and strategic direction.</p><p>As a founder, mother, and visionary, Lyndie is committed to building a legacy of independence, impact, and refinement—proof that it’s never too late to begin again and create something extraordinary.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_G3cMnx",
+        "text_rrgNWE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_4215.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663795698389bd2f1",
+    "16618951073dd5fa7a",
+    "image_with_text_yyjC4A"
+  ]
+}
