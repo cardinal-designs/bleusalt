@@ -23,88 +23,417 @@
     },
     "1663795698389bd2f1": {
       "type": "video-banner",
+      "blocks": {
+        "text_BCpXbC": {
+          "type": "text",
+          "settings": {
+            "text": "2 0 2 5",
+            "text_color": "#ffffff"
+          }
+        },
+        "heading_dpRfRh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Holiday Gift Guide",
+            "heading_color": "#ffffff",
+            "heading_size": "h1"
+          }
+        },
+        "text_two_8Xfyw8": {
+          "type": "text-two",
+          "settings": {
+            "text": "Making holiday gifting effortless.",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "text_BCpXbC",
+        "heading_dpRfRh",
+        "text_two_8Xfyw8"
+      ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/9141dce828b1474680519928252d2988.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/9141dce828b1474680519928252d2988.mp4",
-        "description": "",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/34ec17af0ad24bf19f8d1c658648ad7d.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/1ed4c1dd15f54e01aa064d27252050bf.mp4",
+        "description": "Bleusalt Holiday Gift Guide",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "none",
         "mobile_content_alignment": "center",
         "video_height_mobile": "100",
-        "show_text_below": true
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": ""
       }
     },
-    "16618951073dd5fa7a": {
-      "type": "rich-text",
+    "featured_collection_WC4LMX": {
+      "type": "featured-collection",
       "blocks": {
-        "16618951072671241e-0": {
-          "type": "heading",
+        "collection_V3y4d3": {
+          "type": "collection",
           "settings": {
-            "heading": "<p>OUR STORY</p>",
-            "heading_size": "h2"
-          }
-        },
-        "16618951072671241e-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Bleusalt is a seasonless line of elevated luxury basics made in the USA from the softest fibers on Earth. Bleusalt is a female-founded luxury lifestyle brand born in Malibu and built on the principles of sustainability, elevated comfort and timeless design. Founded by Lyndie Benson, a photographer, creative director and mother of two, Bleusalt emerged from a vision to create consciously-made wardrobe essentials that feel as beautiful as they look.</p><p>Every Bleusalt piece is handmade in the USA, working closely with local Los Angeles partners in cut-and-sew production and fulfillment to ensure ethical craftsmanship and exceptional quality at every step. Our famously soft fabric is developed specially for Bleusalt from TENCEL™ fibers sustainably derived from tree fibers, creating a luxuriously soft and breathable material that embodies the ease of Malibu living.</p><p>Loved by icons including Meghan Markle, Cindy Crawford, Kaia Gerber and Patrick Dempsey, Bleusalt has become a symbol of relaxed elegance with timeless pieces that elevate daily life and make people feel their best.</p><p>With a Malibu heart and a global reach, Bleusalt continues to grow through curated capsule collections that bring the feeling of coastal Malibu luxury to the world.<br/></p>"
+            "heading": "",
+            "collection": "womens-best-sellers"
           }
         }
       },
       "block_order": [
-        "16618951072671241e-0",
-        "16618951072671241e-1"
+        "collection_V3y4d3"
       ],
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "btextimg": "story-page",
-        "background_image_size": "cover",
+        "title": "Essentials for Every Style",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 60
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "image_with_text_yyjC4A": {
-      "type": "image-with-text",
+    "featured_collection_FFraLk": {
+      "type": "featured-collection",
       "blocks": {
-        "heading_G3cMnx": {
-          "type": "heading",
+        "collection_zabemK": {
+          "type": "collection",
           "settings": {
-            "heading": "ABOUT LYNDIE BENSON",
-            "heading_size": "h2"
-          }
-        },
-        "text_rrgNWE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>After dedicating nearly three decades to building a life and legacy alongside her former husband—supporting his rise while raising their two sons—Lyndie Benson found herself starting over at age 50. With no roadmap, but a lifetime of experience, creativity, and resilience, she began again—this time on her own terms. What followed was a bold reinvention: the launch of a luxury lifestyle brand rooted in sustainability, style, and the spirit of Malibu.</p><p>A lifelong lover of the ocean and elevated living, Lyndie created Bleusalt to offer wardrobe essentials that reflect the beauty and ease of coastal life. She brings an artist’s eye to every detail, photographing and directing the brand’s campaigns while overseeing its creative and strategic direction.</p><p>As a founder, mother, and visionary, Lyndie is committed to building a legacy of independence, impact, and refinement—proof that it’s never too late to begin again and create something extraordinary.</p>",
-            "text_style": "body"
+            "heading": "",
+            "collection": "the-oversized-collection"
           }
         }
       },
       "block_order": [
-        "heading_G3cMnx",
-        "text_rrgNWE"
+        "collection_zabemK"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "image": "shopify://shop_images/IMG_4215.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "title": "Oversized & Effortless",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PXfeLV": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_UW7mQ6": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "the-turtleneck-collection"
+          }
+        }
+      },
+      "block_order": [
+        "collection_UW7mQ6"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "The Turtleneck Lover",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_MtTHJd": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_pgWWB8": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-business-travelers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_pgWWB8"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "The Jet-Set Edit",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_9npNn4": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_PLYxjw": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "luxurious-layers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PLYxjw"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Luxurious Layers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PaFEzN": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_CRxtaa": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "mens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CRxtaa"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Gifts for Him",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_XxeeaG": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_k3HfwA": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "under-100"
+          }
+        }
+      },
+      "block_order": [
+        "collection_k3HfwA"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Under $100",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_xrJidG": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_TKqVhN": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "under-250"
+          }
+        }
+      },
+      "block_order": [
+        "collection_TKqVhN"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "$250 and Under",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_iwCTRC": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_KcmXak": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "under-450"
+          }
+        }
+      },
+      "block_order": [
+        "collection_KcmXak"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "$450 and Under",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -113,7 +442,14 @@
   "order": [
     "main",
     "1663795698389bd2f1",
-    "16618951073dd5fa7a",
-    "image_with_text_yyjC4A"
+    "featured_collection_WC4LMX",
+    "featured_collection_FFraLk",
+    "featured_collection_PXfeLV",
+    "featured_collection_MtTHJd",
+    "featured_collection_9npNn4",
+    "featured_collection_PaFEzN",
+    "featured_collection_XxeeaG",
+    "featured_collection_xrJidG",
+    "featured_collection_iwCTRC"
   ]
 }
