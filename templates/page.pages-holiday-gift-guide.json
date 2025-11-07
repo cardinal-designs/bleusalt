@@ -23,6 +23,7 @@
     },
     "otto_image_7VPBbW": {
       "type": "otto-image",
+      "disabled": true,
       "name": "Otto Image",
       "settings": {
         "image_name": "gift_guide_header",
@@ -74,14 +75,25 @@
             "text": "Making holiday gifting effortless.",
             "text_color": "#ffffff"
           }
+        },
+        "buttons_TDTcCh": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
         }
       },
       "block_order": [
         "text_BCpXbC",
         "heading_dpRfRh",
-        "text_two_8Xfyw8"
+        "text_two_8Xfyw8",
+        "buttons_TDTcCh"
       ],
-      "disabled": true,
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/34ec17af0ad24bf19f8d1c658648ad7d.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/1ed4c1dd15f54e01aa064d27252050bf.mp4",
@@ -501,7 +513,6 @@
   "order": [
     "main",
     "otto_image_7VPBbW",
-    "otto_image_LJjENB",
     "1663795698389bd2f1",
     "featured_collection_WC4LMX",
     "featured_collection_FFraLk",
@@ -511,6 +522,7 @@
     "featured_collection_PaFEzN",
     "featured_collection_XxeeaG",
     "featured_collection_xrJidG",
-    "featured_collection_iwCTRC"
+    "featured_collection_iwCTRC",
+    "otto_image_LJjENB"
   ]
 }
