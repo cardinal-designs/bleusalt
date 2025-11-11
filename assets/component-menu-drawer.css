@@ -300,7 +300,12 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 12px 0;
   text-align: center;
   justify-content: center; 
+  background: #0d1c29;
+  color: white;
+  border-radius: 3px;
+}
+
+body.template--index .menu-drawer__menu .menu-drawer__download-button a {
   background: white;
   color: #0d1c29;
-  border-radius: 3px;
 }
