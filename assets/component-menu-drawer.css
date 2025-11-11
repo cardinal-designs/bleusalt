@@ -292,7 +292,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 220px;
   margin-left: 20px;
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 }
 
 .menu-drawer__menu .menu-drawer__download-button a {
