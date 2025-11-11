@@ -171,23 +171,6 @@ details[open].menu-opening > .menu-drawer__submenu {
   transform: translateY(-50%) rotate(-90deg);
 }
 
-.menu-drawer__menu .menu-drawer__download-button {
-  width: 220px;
-  margin-left: 20px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.menu-drawer__menu .menu-drawer__download-button a {
-  width: 100%;
-  padding: 12px 0;
-  text-align: center;
-  justify-content: center; 
-  background: white;
-  color: #0d1c29;
-  border-radius: 3px;
-}
-
 .js .menu-drawer__submenu {
   position: absolute;
   top: 0;
@@ -303,4 +286,21 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: block;
   text-decoration: none;
   padding: 0.5rem 2rem;
+}
+
+.menu-drawer__menu .menu-drawer__download-button {
+  width: 220px;
+  margin-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.menu-drawer__menu .menu-drawer__download-button a {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  justify-content: center; 
+  background: white;
+  color: #0d1c29;
+  border-radius: 3px;
 }
