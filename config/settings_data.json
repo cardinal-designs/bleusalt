@@ -125,6 +125,7 @@
           "logo_position": "middle-center",
           "menu": "main-menu-2022",
           "menu_mobile": "main-menu-2022",
+          "download_button": true,
           "menu_type_desktop": "mega",
           "no_full_megamenu": true,
           "show_line_separator": true,
