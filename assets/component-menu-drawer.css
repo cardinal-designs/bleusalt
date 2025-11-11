@@ -304,8 +304,3 @@ details[open].menu-opening > .menu-drawer__submenu {
   color: #0d1c29;
   border-radius: 3px;
 }
-
-body:not(.template--index) .menu-drawer__menu .menu-drawer__download-button a {
-  background: #0d1c29;
-  color: white;
-}
