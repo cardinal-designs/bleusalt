@@ -67,6 +67,13 @@
               "link": "shopify://collections/the-bleusalt-collection"
             }
           },
+          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c": {
+            "type": "announcement",
+            "settings": {
+              "text": "Holiday Purchases Return/Exchange through 1/10/2026",
+              "link": "shopify://pages/help"
+            }
+          },
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c": {
             "type": "announcement",
             "settings": {
@@ -81,13 +88,6 @@
               "link": "shopify://policies/shipping-policy"
             }
           },
-          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c": {
-            "type": "announcement",
-            "settings": {
-              "text": "Holiday Return Window Extended",
-              "link": "shopify://pages/help"
-            }
-          },
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
@@ -98,9 +98,9 @@
         },
         "block_order": [
           "336f71c7-6dea-48b7-8135-be37d2e09472",
+          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c",
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327",
-          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "announcement-bar-0"
         ],
         "custom_css": [],
