@@ -15,20 +15,21 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "The Veterans Day Event",
+            "text": "The Holiday Event",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Up to 45% Sitewide",
+            "heading": "30% Off Our Gift Guide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
         },
         "text_two_NHhmBc": {
           "type": "text-two",
+          "disabled": true,
           "settings": {
             "text": "Enjoy an Additional 10% Off In our App + 2x VIP Points",
             "text_color": "#ffffff"
@@ -38,10 +39,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_link_1": "shopify://pages/holiday-gift-guide",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop Best Sellers",
+            "button_label_2": "",
             "button_link_2": "shopify://collections/womens-best-sellers"
           }
         }
@@ -67,7 +68,7 @@
         "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": true,
-        "video_overlay_link": "shopify://collections/the-bleusalt-collection"
+        "video_overlay_link": "shopify://pages/holiday-gift-guide"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
