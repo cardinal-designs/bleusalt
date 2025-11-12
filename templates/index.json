@@ -39,7 +39,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://pages/holiday-gift-guide",
+            "button_link_1": "/pages/holiday-gift-guide#shopify-section-template--17744166223985__featured_collection_WC4LMX",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "",
