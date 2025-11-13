@@ -210,48 +210,6 @@
         "padding_bottom": 36
       }
     },
-    "1660226720e02964f9": {
-      "type": "rich-text",
-      "blocks": {
-        "16602267200642e541-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth.</span></p>",
-            "heading_size": "h1"
-          }
-        },
-        "16602267200642e541-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
-          }
-        },
-        "741ab444-8276-4e02-99e1-f5a96c4c2307": {
-          "type": "caption",
-          "settings": {
-            "caption": "[value-props]",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        }
-      },
-      "block_order": [
-        "16602267200642e541-0",
-        "16602267200642e541-1",
-        "741ab444-8276-4e02-99e1-f5a96c4c2307"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "btextimg": "home-learn-more",
-        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
-        "background_image_size": "cover",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 72,
-        "padding_bottom": 76
-      }
-    },
     "1660227726ff0f6237": {
       "type": "foursixty",
       "blocks": {
@@ -300,6 +258,48 @@
         "margins": 14,
         "border_top": true,
         "text_align": "center"
+      }
+    },
+    "1660226720e02964f9": {
+      "type": "rich-text",
+      "blocks": {
+        "16602267200642e541-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth.</span></p>",
+            "heading_size": "h1"
+          }
+        },
+        "16602267200642e541-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
+          }
+        },
+        "741ab444-8276-4e02-99e1-f5a96c4c2307": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "16602267200642e541-0",
+        "16602267200642e541-1",
+        "741ab444-8276-4e02-99e1-f5a96c4c2307"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "home-learn-more",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "166022784081bd0071": {
@@ -589,11 +589,11 @@
     "16636186953571c8bf",
     "175815468017ca5ea6",
     "1659735210e064d864",
-    "1660226720e02964f9",
-    "1660227726ff0f6237",
     "166022784081bd0071",
-    "featured_collection",
+    "1660227726ff0f6237",
     "16637947412bca5d08",
+    "featured_collection",
+    "1660226720e02964f9",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
     "image_with_text_XqniFF",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
