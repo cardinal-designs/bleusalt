@@ -45,7 +45,7 @@
     "cart_type": "drawer",
     "show_cart_note": true,
     "cart_drawer_collection": "bottoms-skimpy",
-    "cart_drawer_text": "Holiday Returns/Exchanges through 1/10/26.  <a href=\"https://bleusalt.com/pages/help\" target=\"_blank\">See Terms</a>",
+    "cart_drawer_text": "Holiday Returns through 1/10/26.   <small><a href=\"https://bleusalt.com/pages/help\" target=\"_blank\">See Terms</a></small>",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
     "discount_promo_bar": false,
