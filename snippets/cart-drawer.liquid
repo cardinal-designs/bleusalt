@@ -65,7 +65,7 @@
       endif
     -%}
 
-    <div class="wear-with wear-with__desktop color-inverse medium-down-hide">
+    {% comment %} <div class="wear-with wear-with__desktop color-inverse medium-down-hide">
       <button type="button" class="close-overlay" onclick="this.closest('cart-drawer').close()">
         <span class="visually-hidden">Close overlay</span>
       </button>
@@ -90,7 +90,7 @@
           </div>
         {%- endif -%}
       </wear-with>
-    </div>
+    </div> {% endcomment %}
 
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
 
@@ -451,7 +451,7 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
 
-        {% if wear_with_url %}
+        {% comment %} {% if wear_with_url %}
           <div class="wear-with wear-with__mobile color-background-2 medium-hide large-up-hide">
             <wear-with data-url="{{ wear_with_url }}" data-product-id="{{ first_item.product.id }}">
               <h4 class="h3 center">Wear With</h4>
@@ -460,7 +460,7 @@
               </div>
             </wear-with>
           </div>
-        {% endif %}
+        {% endif %} {% endcomment %}
 
         {% if settings.cart_rebuy %}
           <div class="cart-upsell">
