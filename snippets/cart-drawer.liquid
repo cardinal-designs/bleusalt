@@ -65,7 +65,7 @@
       endif
     -%}
 
-    <div class="wear-with wear-with__desktop color-inverse medium-down-hide">
+    {% comment %} <div class="wear-with wear-with__desktop color-inverse medium-down-hide">
       <button type="button" class="close-overlay" onclick="this.closest('cart-drawer').close()">
         <span class="visually-hidden">Close overlay</span>
       </button>
@@ -90,7 +90,7 @@
           </div>
         {%- endif -%}
       </wear-with>
-    </div>
+    </div> {% endcomment %}
 
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
 
@@ -311,7 +311,7 @@
                             <span class="bold_load_cart_item_properties"></span>
 
                             <p class="product-option selling_plan">{{ item.selling_plan_allocation.selling_plan.name }}</p>
-                            <p class="product-option">Qty: {{ item.quantity }}</p>
+                            {% comment %} <p class="product-option">Qty: {{ item.quantity }}</p> {% endcomment %}
                           {%- endif -%}
 
                           {%- if item.original_price != item.final_price -%}
@@ -448,10 +448,10 @@
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
             <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
           </div>
-          <div id="CartDrawer-CartErrors" role="alert"></div>
+          <div id="CartDrawer-CartErrors" class="visually-hidden" role="alert"></div>
         </form>
 
-        {% if wear_with_url %}
+        {% comment %} {% if wear_with_url %}
           <div class="wear-with wear-with__mobile color-background-2 medium-hide large-up-hide">
             <wear-with data-url="{{ wear_with_url }}" data-product-id="{{ first_item.product.id }}">
               <h4 class="h3 center">Wear With</h4>
@@ -460,7 +460,7 @@
               </div>
             </wear-with>
           </div>
-        {% endif %}
+        {% endif %} {% endcomment %}
 
         {% if settings.cart_rebuy %}
           <div class="cart-upsell">
@@ -605,7 +605,7 @@
             Continue
           </button>
         </div>
-        <p class="cart__safe-secure center">Safe &amp; Secure Checkout</p>
+        <a href="/checkout" class="cart__cart-link center">Go to Full Cart</a>
       </div>
     </div>
   </div>
