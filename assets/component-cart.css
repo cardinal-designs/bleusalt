@@ -198,6 +198,7 @@ cart-items {
 }
 
 .cart__cart-link {
+  color: rgb(var(--color-foreground));
   font-size: 1.3rem;
   text-decoration: underline;
 }
