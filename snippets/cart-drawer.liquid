@@ -311,7 +311,7 @@
                             <span class="bold_load_cart_item_properties"></span>
 
                             <p class="product-option selling_plan">{{ item.selling_plan_allocation.selling_plan.name }}</p>
-                            <p class="product-option">Qty: {{ item.quantity }}</p>
+                            {% comment %} <p class="product-option">Qty: {{ item.quantity }}</p> {% endcomment %}
                           {%- endif -%}
 
                           {%- if item.original_price != item.final_price -%}
