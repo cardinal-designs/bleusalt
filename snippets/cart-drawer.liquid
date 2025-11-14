@@ -606,6 +606,9 @@
           </button>
         </div>
         <a href="/checkout" class="cart__cart-link center">Go to Full Cart</a>
+        {% if settings.cart_notice != blank %}
+          <p class="cart__notice">{{ settings.cart_notice }}</p>
+        {% endif %}
       </div>
     </div>
   </div>
