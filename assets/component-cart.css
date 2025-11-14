@@ -197,6 +197,11 @@ cart-items {
   text-align: center;
 }
 
+.cart-text__additional {
+  font-size: 1rem;
+  font-style: italic;
+}
+
 .cart__cart-link {
   margin-top: 5px;
   display: block;
