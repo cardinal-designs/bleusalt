@@ -432,6 +432,10 @@
                             </cart-remove-button>
                           </div>
 
+                          {% if item.product.tags.contains 'Popular' %}
+                            <p class="cart-item__few-left">Only a Few Left!</p>
+                          {% endif %}
+
                           <div id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error" role="alert">
                             <small class="cart-item__error-text"></small>
                             <svg aria-hidden="true" focusable="false"   class="icon icon-error" viewBox="0 0 13 13">
