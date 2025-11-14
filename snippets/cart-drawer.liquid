@@ -190,7 +190,7 @@
                         {% if price_needed > 0 %}
                           <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
                         {% else %}
-                          <p class="cart-freeshipping">Free shipping enabled</p>
+                          <p class="cart-freeshipping">You've Earned Free Shipping!</p>
                         {% endif %}
                         <div class="free-shipping__bar-container">
                           <div style="width: {{ shipping_percentage }}%;" class="free-shipping__bar"></div>
