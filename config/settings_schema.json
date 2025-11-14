@@ -1246,6 +1246,16 @@
         "label": "Cart Drawer Text"
       },
       {
+        "type": "text",
+        "id": "additional_cart_drawer_text",
+        "label": "Additional Cart Drawer Text"
+      },
+      {
+        "type": "text",
+        "id": "cart_notice",
+        "label": "Cart Notice"
+      },
+      {
         "type": "number",
         "id": "free_shipping_threshold",
         "label": "Free Shipping Threshold"
