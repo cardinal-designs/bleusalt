@@ -198,7 +198,8 @@ cart-items {
 }
 
 .cart-text__additional {
-  font-size: 1rem;
+  margin-top: 5px;
+  font-size: 1.1rem;
   font-style: italic;
 }
 
