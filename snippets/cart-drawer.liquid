@@ -415,7 +415,7 @@
                                 name="updates[]"
                                 value="{{ item.quantity }}"
                                 min="0"
-                                {% if item.product.tags contains 'Popular' or item.product.tags contains 'popular' %}max="3"{% endif %}
+                                {% if item.product.tags contains 'badge:Popular' %}max="3"{% endif %}
                                 aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                 id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}"
@@ -433,7 +433,7 @@
                             </cart-remove-button>
                           </div>
 
-                          {% if item.product.tags contains 'Popular' or item.product.tags contains 'popular' %}
+                          {% if item.product.tags contains 'badge:Popular' %}
                             <p class="cart-item__few-left">Only a Few Left!</p>
                           {% endif %}
 
