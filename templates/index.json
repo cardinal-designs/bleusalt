@@ -15,20 +15,21 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "The Holiday Event",
+            "text": "Introducing",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Up to 55% Off Sitewide",
+            "heading": "The Puffer",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
         },
         "text_two_NHhmBc": {
           "type": "text-two",
+          "disabled": true,
           "settings": {
             "text": "Enjoy an Additional 10% Off In our App",
             "text_color": "#ffffff"
@@ -37,8 +38,8 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_label_1": "Shop The Puffer",
+            "button_link_1": "shopify://products/the-puffer",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
@@ -54,8 +55,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/34ec17af0ad24bf19f8d1c658648ad7d.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/1ed4c1dd15f54e01aa064d27252050bf.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/b2a5d3c4681743c2947ac9870f4e4aef.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/f015df5a3899406fb8b9239cf784aa01.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -66,8 +67,8 @@
         "mobile_content_alignment": "center",
         "video_height_mobile": "100",
         "show_text_below": true,
-        "button_overlay": true,
-        "video_overlay_link": "shopify://collections/the-bleusalt-collection"
+        "button_overlay": false,
+        "video_overlay_link": "shopify://products/the-puffer"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
