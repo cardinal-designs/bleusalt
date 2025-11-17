@@ -541,7 +541,9 @@
                                   
                                   {% for size_conversion in size_conversion_arr %}
                                     {% assign size_split = size_conversion | split: '/' %}
-                                    {{ size_split[0] }},{{value}}!
+                                    {% if size_split[0] == value %}
+                                      {{ value }}
+                                    {% endif %}
                                   {% endfor %}
                                   {{ size_text }}
                                 {% else %}
