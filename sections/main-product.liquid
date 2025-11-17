@@ -530,7 +530,7 @@
                                 {% if option.name == 'Size' %}
                                   {% liquid
                                     assign size_text = value
-                                    assign size_conversion_arr = settings.variant_pills_size_conversions | newline_to_br | split: '<br>'
+                                    assign size_conversion_arr = settings.variant_pills_size_conversions | newline_to_br | split: '<br />'
                                     for size_conversion in size_conversion_arr
                                       assign size_split = size_conversion | split: ','
                                       if size_split[0] == value
