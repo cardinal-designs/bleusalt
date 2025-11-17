@@ -538,6 +538,10 @@
                                       endif
                                     endfor
                                   %}
+                                  
+                                  {% for size_conversion in size_conversion_arr %}
+                                    {{ size_conversion }}!
+                                  {% endfor %}
                                   {{ size_text }}
                                 {% else %}
                                   {{ value }}
