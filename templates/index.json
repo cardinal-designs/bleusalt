@@ -29,9 +29,8 @@
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Enjoy an Additional 10% Off In our App",
+            "text": "",
             "text_color": "#ffffff"
           }
         },
