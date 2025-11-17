@@ -22,16 +22,15 @@
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "30% Off Our Gift Guide",
+            "heading": "Up to 55% Off Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Enjoy an Additional 10% Off In our App + 2x VIP Points",
+            "text": "Enjoy an Additional 10% Off In our App",
             "text_color": "#ffffff"
           }
         },
@@ -39,7 +38,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Sale",
-            "button_link_1": "/pages/holiday-gift-guide#shopify-section-template--17744166223985__featured_collection_WC4LMX",
+            "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "",
@@ -68,7 +67,7 @@
         "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": true,
-        "video_overlay_link": "shopify://pages/holiday-gift-guide"
+        "video_overlay_link": "shopify://collections/the-bleusalt-collection"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
