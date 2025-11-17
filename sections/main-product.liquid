@@ -534,7 +534,7 @@
                                     for size_conversion in size_conversion_arr
                                       assign size_split = size_conversion | split: ','
                                       if size_split[0] == value
-                                        assign size_text = value | append: ' ' | append: size_split[1]
+                                        assign size_text = value | append: ' / ' | append: size_split[1]
                                       endif
                                     endfor
                                   %}
