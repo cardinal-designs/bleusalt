@@ -540,7 +540,8 @@
                                   %}
                                   
                                   {% for size_conversion in size_conversion_arr %}
-                                    {{ size_conversion }}!
+                                    {% assign size_split = size_conversion | split: '/' %}
+                                    {{ size_split[0] }}!
                                   {% endfor %}
                                   {{ size_text }}
                                 {% else %}
