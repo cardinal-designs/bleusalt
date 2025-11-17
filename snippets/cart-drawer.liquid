@@ -190,7 +190,7 @@
                         {% if price_needed > 0 %}
                           <p class="cart-freeshipping">{{ price_needed | times: 100 | money_without_trailing_zeros }} needed for free shipping.</p>
                         {% else %}
-                          <p class="cart-freeshipping">Free shipping enabled</p>
+                          <p class="cart-freeshipping">You've Earned Free Shipping!</p>
                         {% endif %}
                         <div class="free-shipping__bar-container">
                           <div style="width: {{ shipping_percentage }}%;" class="free-shipping__bar"></div>
@@ -199,6 +199,10 @@
 
                       {% if settings.cart_drawer_text != blank %}
                         <p class="cart-text">{{ settings.cart_drawer_text }}</p>
+                      {% endif %}
+
+                      {% if settings.additional_cart_drawer_text != blank %}
+                        <p class="cart-text cart-text__additional">{{ settings.additional_cart_drawer_text }}</p>
                       {% endif %}
                     {% endif %}
 
@@ -411,6 +415,7 @@
                                 name="updates[]"
                                 value="{{ item.quantity }}"
                                 min="0"
+                                {% if item.product.tags contains 'badge:Popular' %}max="3"{% endif %}
                                 aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                 id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}"
@@ -427,6 +432,10 @@
                               </button>
                             </cart-remove-button>
                           </div>
+
+                          {% if item.product.tags contains 'badge:Popular' %}
+                            <p class="cart-item__few-left">Only a Few Left!</p>
+                          {% endif %}
 
                           <div id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error" role="alert">
                             <small class="cart-item__error-text"></small>
@@ -606,6 +615,9 @@
           </button>
         </div>
         <a href="/checkout" class="cart__cart-link center">Go to Full Cart</a>
+        {% if settings.cart_notice != blank %}
+          <p class="cart__notice">{{ settings.cart_notice }}</p>
+        {% endif %}
       </div>
     </div>
   </div>

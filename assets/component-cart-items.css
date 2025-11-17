@@ -19,6 +19,11 @@ cart-items .cart-item__media {
   display: flex;
 }
 
+.cart-item__few-left {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
 .cart-item__totals {
   position: relative;
 }
