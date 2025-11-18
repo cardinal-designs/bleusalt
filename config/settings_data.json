@@ -20,6 +20,7 @@
     "spacing_grid_horizontal": 32,
     "spacing_grid_vertical": 32,
     "buttons_radius": 2,
+    "variant_pills_size_conversions": "00/XXS\n0/XS\n1/S\n2/M\n3/L\n4/XL\n5/XXL\n6/XXXL",
     "variant_pills_radius": 0,
     "inputs_border_opacity": 20,
     "inputs_radius": 2,

@@ -527,7 +527,22 @@
                             >
                             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ swatch_url }});background-size: 3.0rem;"{% endif %}>
                               <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
-                                {{ value }}
+                                {% if option.name == 'Size' %}
+                                  {% liquid
+                                    assign size_text = value
+                                    assign size_conversion_arr = settings.variant_pills_size_conversions | newline_to_br | split: '<br />'
+                                    for size_conversion in size_conversion_arr
+                                      assign size_split = size_conversion | split: '/'
+                                      assign size_number = size_split[0] | strip
+                                      if size_number == value
+                                        assign size_text = value | append: ' / ' | append: size_split[1]
+                                      endif
+                                    endfor
+                                  %}
+                                  {{ size_text }}
+                                {% else %}
+                                  {{ value }}
+                                {% endif %}
                               </span>
                             </label>
                           </div>
