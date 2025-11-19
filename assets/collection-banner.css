@@ -59,4 +59,12 @@
   #shopify-section-header header .header__icon {
     color: rgb(var(--color-base-text));
   }
+
+  #shopify-section-header .header__heading-logo.logo-light {
+    display: none;
+  }
+
+  #shopify-section-header .header__heading-logo.logo-dark {
+    display: flex;
+  }
 }
