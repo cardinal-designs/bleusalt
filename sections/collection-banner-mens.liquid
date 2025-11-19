@@ -1,0 +1,35 @@
+{{ 'collection-banner.css' | asset_url | stylesheet_tag }}
+
+{% render 'collection-banner' section: section %}
+
+{% schema %}
+{
+  "name": "Collection Banner Mens",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Banner Mens"
+    }
+  ]
+}
+{% endschema %}
