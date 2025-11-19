@@ -3,7 +3,7 @@
 <div class="collection-banner">
   <div class="collection-banner__container">
     {% for block in section.blocks %}
-      {% assign current_collection = collection[block.settings.collection] %}
+      {% assign current_collection = collections[block.settings.collection] %}
       <a class="collection-banner__item" {{ block.shopify_attributes }}>
         <div class="collection-banner__item-image">
           {{ current_collection.image | image_url: width: 600 | image_tag:
