@@ -50,9 +50,13 @@
 }
 
 @media screen and (max-width: 749px) { 
-  .header-wrapper {
+  header .header-wrapper {
     position: static;
     background: white;
     width: 100%;
+  }
+
+  header .header__icon {
+    color: rgb(var(--color-foreground));
   }
 }
