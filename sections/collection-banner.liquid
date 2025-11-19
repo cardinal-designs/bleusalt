@@ -9,10 +9,9 @@
           {{ current_collection.image | image_url: width: 600 | image_tag:
             loading: 'lazy',
             width: current_collection.image.width,
-            height: image_height_2,
-            sizes: sizes,
+            sizes: '375px',
             widths: '375, 550',
-            alt: current_collection.image.alt | escape
+            alt: current_collection.title | escape
           }}
         </div>
       </a>
