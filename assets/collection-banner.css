@@ -49,11 +49,8 @@
   }
 }
 
-.template--index .header-wrapper {
-  position: absolute;
-  background: transparent;
+.header-wrapper {
+  position: static;
+  background: white;
   width: 100%;
-  top: 0;
-  padding-top: 0;
-  transition: all 0.3s;
 }
