@@ -12,10 +12,10 @@
 .collection-banner__container {
   padding: 0 16px;
   display: flex;
-  gap: 16px;
 }
 
 .collection-banner__item {
+  padding-right: 16px;
   display: block;
 }
 
