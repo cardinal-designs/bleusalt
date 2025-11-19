@@ -328,10 +328,10 @@
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
         {% if template == 'index' %}
           {% section 'collection-banner-womens' %}
-        {% elsif template == 'collection' and collection.handle contains 'women' %}
+        {% elsif template.prefix == 'collection' and collection.handle contains 'women' %}
           test1
           {% section 'collection-banner-womens' %}
-        {% elsif template == 'collection' and collection.handle contains 'men' %}
+        {% elsif template.prefix == 'collection' and collection.handle contains 'men' %}
           test2
           {% section 'collection-banner-mens' %}
         {% else %}
