@@ -1,0 +1,10 @@
+.collection-banner {
+  margin: 10px 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+  
+.collection-banner::-webkit-scrollbar {
+  display: none;
+}
