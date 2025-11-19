@@ -50,7 +50,7 @@
 }
 
 @media screen and (max-width: 749px) { 
-  header .header-wrapper {
+  .header-wrapper {
     position: static;
     background: white;
     width: 100%;
