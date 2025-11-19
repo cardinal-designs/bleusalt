@@ -328,14 +328,11 @@
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
         {% if template == 'index' %}
           {% section 'collection-banner-womens' %}
-        {% elsif template.prefix == 'collection' and collection.handle contains 'women' %}
-          test1
+        {% elsif template.name == 'collection' and collection.handle contains 'women' %}
           {% section 'collection-banner-womens' %}
-        {% elsif template.prefix == 'collection' and collection.handle contains 'men' %}
-          test2
+        {% elsif template.name == 'collection' and collection.handle contains 'men' %}
           {% section 'collection-banner-mens' %}
         {% else %}
-          test3
           {% section 'collection-banner-womens' %}
         {% endif %}
         {{ content_for_layout }}
