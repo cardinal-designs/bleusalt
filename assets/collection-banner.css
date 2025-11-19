@@ -36,3 +36,9 @@
   left: 0;
   object-fit: cover;
 }
+
+.collection-banner__item-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+}
