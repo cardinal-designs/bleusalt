@@ -50,13 +50,13 @@
 }
 
 @media screen and (max-width: 749px) { 
-  .header-wrapper {
+  #shopify-section-header .header-wrapper {
     position: static;
     background: white;
     width: 100%;
   }
 
-  header .header__icon {
+  #shopify-section-header header .header__icon {
     color: rgb(var(--color-base-text));
   }
 }
