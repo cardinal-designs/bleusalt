@@ -479,6 +479,54 @@
           "block_4XfKyJ"
         ],
         "settings": {}
+      },
+      "collection-banner-mens": {
+        "type": "collection-banner-mens",
+        "blocks": {
+          "block_HQFhEQ": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-tops",
+              "title": "Tops"
+            }
+          },
+          "block_KhQG8y": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-bottoms",
+              "title": "Bottoms"
+            }
+          },
+          "block_czpwDN": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-accessories",
+              "title": "Accessories"
+            }
+          },
+          "block_pKcpjw": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-new-arrivals",
+              "title": "New Arrivals"
+            }
+          },
+          "block_PYmKnC": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-best-sellers",
+              "title": "Best Sellers"
+            }
+          }
+        },
+        "block_order": [
+          "block_HQFhEQ",
+          "block_KhQG8y",
+          "block_czpwDN",
+          "block_pKcpjw",
+          "block_PYmKnC"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
