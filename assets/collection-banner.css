@@ -66,5 +66,7 @@
 
   #shopify-section-header .header-wrapper:not(.sticky-header-wrapper) .header__heading svg *, #shopify-section-header .header-wrapper:not(.sticky-header-wrapper) .header__icon svg *, #shopify-section-header:not(.sticky-header-enabled) #icon-search * {
     color: rgb(var(--color-base-text));
+    fill: rgb(var(--color-base-text));
+    stroke: rgb(var(--color-base-text));
   }
 }
