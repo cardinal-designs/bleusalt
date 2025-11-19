@@ -42,3 +42,9 @@
   text-align: center;
   font-size: 12px;
 }
+
+@media screen and (min-width: 750px) { 
+  .collection-banner.mobile-only {
+    display: none;
+  }
+}
