@@ -75,7 +75,7 @@
   }
 
   #shopify-section-header .cart-count-bubble {
-    background-color: rgb(var(--color-button));
-    color: rgb(var(--color-button-text));
+    background-color: var(--color-base-text);
+    color: #FFFFFF;
   }
 }
