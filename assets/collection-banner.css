@@ -70,7 +70,7 @@
     stroke: rgb(var(--color-base-text));
   }
 
-  .cart-count-bubble {
+  #shopify-section-header .cart-count-bubble {
     color: rgb(var(--color-button));
     background-color: rgb(var(--color-button-text));
   }
