@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ 'collection-banner.css' | asset_url }}">
 
-<div class="collection-banner{% if section.settings.mobile_only %} mobile-only{% endif %}">
+<div class="collection-banner">
   <div class="collection-banner__container">
     {% for block in section.blocks %}
       {% assign current_collection = collection[section.settings.collection] %}
@@ -22,14 +22,9 @@
 
 {% schema %}
 {
-  "name": "Collection Banner",
+  "name": "Collection Banner Mobile",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "mobile_only",
-      "label": "Mobile only",
-      "default": true
-    }
+
   ],
   "blocks": [
     {
@@ -46,7 +41,7 @@
   ],
   "presets": [
     {
-      "name": "Collection Banner"
+      "name": "Collection Banner Mobile"
     }
   ]
 }
