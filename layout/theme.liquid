@@ -329,11 +329,13 @@
         {% if template == 'index' %}
           {% section 'collection-banner-womens' %}
         {% elsif template == 'collection' and collection.handle contains 'women' %}
+          test1
           {% section 'collection-banner-womens' %}
         {% elsif template == 'collection' and collection.handle contains 'men' %}
-          test
+          test2
           {% section 'collection-banner-mens' %}
         {% else %}
+          test3
           {% section 'collection-banner-womens' %}
         {% endif %}
         {{ content_for_layout }}
