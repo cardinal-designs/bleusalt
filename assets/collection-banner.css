@@ -69,4 +69,9 @@
     fill: rgb(var(--color-base-text));
     stroke: rgb(var(--color-base-text));
   }
+
+  .cart-count-bubble {
+    color: rgb(var(--color-button));
+    background-color: rgb(var(--color-button-text));
+  }
 }
