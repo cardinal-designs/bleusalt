@@ -1,25 +1,47 @@
+<link rel="stylesheet" href="{{ 'collection-banner.css' | asset_url }}">
+
+<div class="collection-banner">
+  <div class="collection-banner__container">
+    {% for block in section.blocks %}
+      {% assign current_collection = collection[section.settings.collection] %}
+      <a class="collection-banner__item" {{ block.shopify_attributes }}>
+        <div class="collection-banner__item-image">
+          {{ current_collection.image | image_url: width: 600 | image_tag:
+            loading: 'lazy',
+            width: current_collection.image.width,
+            height: image_height_2,
+            sizes: sizes,
+            widths: '375, 550',
+            alt: current_collection.image.alt | escape
+          }}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Collection Banner",
   "settings": [
     {
-      "type": "header", 
-      "content": "Article Header"
-    },
+      "type": "checkbox",
+      "id": "mobile_only",
+      "label": "Mobile only",
+      "default": true
+    }
+  ],
+  "blocks": [
     {
-      "type": "article",
-      "id": "featured_article",
-      "label": "Featured Article"
-    },
-    {
-      "type": "header", 
-      "content": "Filters"
-    },
-    {
-      "type": "text",
-      "id": "article_categories",
-      "label": "Article Categories",
-      "info": "All tags are used as categories by default. To filter to specific tags, enter a comma separated list: \"News, Lifestyle, Beauty\"."
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
     }
   ],
   "presets": [
