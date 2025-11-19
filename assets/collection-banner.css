@@ -49,8 +49,10 @@
   }
 }
 
-.header-wrapper {
-  position: static;
-  background: white;
-  width: 100%;
+@media screen and (max-width: 749px) { 
+  .header-wrapper {
+    position: static;
+    background: white;
+    width: 100%;
+  }
 }
