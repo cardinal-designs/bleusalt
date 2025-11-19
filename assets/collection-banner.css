@@ -19,14 +19,14 @@
   display: block;
 }
 
-.collection-banner__item--image {
+.collection-banner__item-image {
   height: 100px;
   width: 100px;
   position: relative;
   overflow: hidden;
 }
 
-.collection-banner__item--image img {
+.collection-banner__item-image img {
   height: 100%;
   width: 100%;
   position: absolute;
