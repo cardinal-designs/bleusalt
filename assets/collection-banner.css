@@ -56,15 +56,15 @@
     width: 100%;
   }
 
-  #shopify-section-header header .header__icon {
-    color: rgb(var(--color-base-text));
-  }
-
   #shopify-section-header .header__heading-logo.logo-light {
     display: none;
   }
 
   #shopify-section-header .header__heading-logo.logo-dark {
     display: flex;
+  }
+
+  #shopify-section-header .header-wrapper:not(.sticky-header-wrapper) .header__heading svg *, #shopify-section-header .header-wrapper:not(.sticky-header-wrapper) .header__icon svg *, #shopify-section-header:not(.sticky-header-enabled) #icon-search * {
+    color: rgb(var(--color-base-text));
   }
 }
