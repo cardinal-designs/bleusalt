@@ -1,0 +1,31 @@
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": [
+    {
+      "type": "header", 
+      "content": "Article Header"
+    },
+    {
+      "type": "article",
+      "id": "featured_article",
+      "label": "Featured Article"
+    },
+    {
+      "type": "header", 
+      "content": "Filters"
+    },
+    {
+      "type": "text",
+      "id": "article_categories",
+      "label": "Article Categories",
+      "info": "All tags are used as categories by default. To filter to specific tags, enter a comma separated list: \"News, Lifestyle, Beauty\"."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Banner"
+    }
+  ]
+}
+{% endschema %}
