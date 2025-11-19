@@ -2,7 +2,7 @@
   <div class="collection-banner__container">
     {% for block in section.blocks %}
       {% assign current_collection = collections[block.settings.collection] %}
-      <a class="collection-banner__item" {{ block.shopify_attributes }}>
+      <a href="{{ current_collection.url }}" class="collection-banner__item" {{ block.shopify_attributes }}>
         <div class="collection-banner__item-image">
           {% if current_collection.image != blank %}
             {{ current_collection.image | image_url: width: 600 | image_tag:
