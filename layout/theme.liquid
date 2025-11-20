@@ -19,7 +19,7 @@
       <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
       <!-- Preload JS/CSS -- End -->
 
-      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' %}
+      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' or collection.handle == 'sale' %}
         <meta name="robots" content="noindex">
       {% endif %}
 
@@ -30,7 +30,6 @@
           full: "{{ template }}"
         };
       </script>
-
 
       <!-- Triple Whale Begin -->
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
