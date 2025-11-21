@@ -490,7 +490,7 @@
         "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Find a Store",
+            "button_label": "Visit Our Store",
             "button_link": "shopify://pages/visit-our-store"
           }
         }
