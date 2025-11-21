@@ -141,7 +141,6 @@
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
-              {{settings.enable_gwp_bar }}-settings.enable_gwp_bar
               {% if settings.enable_gwp_bar %}
                 {% render 'cart-gwp-bar' %}
               {% endif %}
