@@ -21,7 +21,7 @@
     
     if settings.gwp_item_1_product != blank
       assign item_1_threshold = settings.gwp_item_1_threshold | times: 1.0
-      if current_total >= item_1_threshold and item_1_threshold > 0
+      if item_1_threshold > 0 and current_total >= item_1_threshold
         assign gwp_product_1 = all_products[settings.gwp_item_1_product]
         assign gwp_in_cart_1 = false
         for item in cart.items
@@ -38,7 +38,7 @@
     
     if settings.gwp_item_2_product != blank
       assign item_2_threshold = settings.gwp_item_2_threshold | times: 1.0
-      if current_total >= item_2_threshold and item_2_threshold > 0
+      if item_2_threshold > 0 and current_total >= item_2_threshold
         assign gwp_product_2 = all_products[settings.gwp_item_2_product]
         assign gwp_in_cart_2 = false
         for item in cart.items
@@ -55,7 +55,7 @@
     
     if settings.gwp_item_3_product != blank
       assign item_3_threshold = settings.gwp_item_3_threshold | times: 1.0
-      if current_total >= item_3_threshold and item_3_threshold > 0
+      if item_3_threshold > 0 and current_total >= item_3_threshold
         assign gwp_product_3 = all_products[settings.gwp_item_3_product]
         assign gwp_in_cart_3 = false
         for item in cart.items

@@ -26,41 +26,26 @@ class GWPCartManager {
     // Get GWP settings from the page
     this.loadGWPSettings();
     
-    // Store instance globally for access from other scripts
-    window.gwpCartManager = this;
-    
     // Listen for cart updates
-    const handleCartUpdate = debounce(() => {
-      setTimeout(() => this.checkGWPThresholds(), 600);
-    }, 300);
-    
-    document.addEventListener('cart:updated', handleCartUpdate);
+    document.addEventListener('cart:updated', () => {
+      setTimeout(() => this.checkGWPThresholds(), 300);
+    });
 
     // Listen for cart drawer updates
     const cartDrawer = document.querySelector('cart-drawer');
     if (cartDrawer) {
-      cartDrawer.addEventListener('cart:updated', handleCartUpdate);
-    }
-    
-    // Observe cart drawer for DOM changes (when items are added/removed)
-    const cartDrawerItems = document.querySelector('cart-drawer-items');
-    if (cartDrawerItems) {
-      const observer = new MutationObserver(debounce(() => {
-        setTimeout(() => this.checkGWPThresholds(), 600);
-      }, 500));
-      
-      observer.observe(cartDrawerItems, {
-        childList: true,
-        subtree: true
+      cartDrawer.addEventListener('cart:updated', () => {
+        setTimeout(() => this.checkGWPThresholds(), 500);
       });
     }
     
-    // Listen for quantity input changes
-    document.addEventListener('change', (e) => {
-      if (e.target.matches('input[name="updates[]"]') || e.target.closest('input[name="updates[]"]')) {
-        setTimeout(() => this.checkGWPThresholds(), 800);
-      }
-    });
+    // Listen for quantity changes in cart items
+    const cartDrawerItems = document.querySelector('cart-drawer-items');
+    if (cartDrawerItems) {
+      cartDrawerItems.addEventListener('change', debounce(() => {
+        setTimeout(() => this.checkGWPThresholds(), 500);
+      }, 500));
+    }
 
     // Handle add button clicks
     document.addEventListener('click', (e) => {
@@ -71,8 +56,8 @@ class GWPCartManager {
       }
     });
 
-    // Initial check after a delay to ensure cart is loaded
-    setTimeout(() => this.checkGWPThresholds(), 1000);
+    // Initial check
+    setTimeout(() => this.checkGWPThresholds(), 500);
   }
 
   loadGWPSettings() {
@@ -117,33 +102,55 @@ class GWPCartManager {
   }
 
   async checkGWPThresholds() {
-    try {
-      // Get current cart
-      const cartResponse = await fetch('/cart.js');
-      const cart = await cartResponse.json();
-      const cartTotal = cart.total_price / 100;
+    const cartTotal = await this.getCartTotal();
+    
+    // Get current cart items
+    const cartResponse = await fetch('/cart.js');
+    const cart = await cartResponse.json();
+    
+    // Find all GWP items in cart (items with _gwp property)
+    const gwpItemsInCart = cart.items.filter(item => 
+      item.properties && 
+      item.properties._gwp === 'true'
+    );
+    
+    // Check each GWP item in cart
+    for (const cartItem of gwpItemsInCart) {
+      let threshold = 0;
       
-      // Find all GWP items in cart (items with _gwp property)
-      const gwpItemsInCart = cart.items.filter(item => 
-        item.properties && 
-        item.properties._gwp === 'true'
-      );
+      // First, try to get threshold from item properties (stored when added)
+      if (cartItem.properties._gwp_threshold) {
+        threshold = parseFloat(cartItem.properties._gwp_threshold) || 0;
+      }
       
-      // Check each GWP item in cart
-      for (const cartItem of gwpItemsInCart) {
-        // Get threshold from item properties (stored when added)
-        const threshold = parseFloat(cartItem.properties._gwp_threshold) || 0;
-        
-        // If cart total is below threshold, remove the GWP product
-        if (threshold > 0 && cartTotal < threshold) {
-          await this.removeGWPProduct(cartItem.product_id, cart);
-          // Return after removing to avoid multiple removals
-          // The cart update will trigger another check
-          return;
+      // If no threshold in properties, try to find it from DOM
+      if (threshold === 0) {
+        // Try to find matching upsell item
+        const upsellItem = document.querySelector(`.gwp-upsell__item[data-product-id="${cartItem.product_id}"]`);
+        if (upsellItem && upsellItem.dataset.threshold) {
+          threshold = parseFloat(upsellItem.dataset.threshold) || 0;
+        } else {
+          // Try to find from GWP bar items
+          const gwpBarItems = document.querySelectorAll('.gwp-bar__item[data-threshold]');
+          for (const barItem of gwpBarItems) {
+            const barThreshold = parseFloat(barItem.dataset.threshold) || 0;
+            // Check if there's a matching upsell item for this threshold and product
+            const matchingUpsell = document.querySelector(`.gwp-upsell__item[data-threshold="${barThreshold}"][data-product-id="${cartItem.product_id}"]`);
+            if (matchingUpsell) {
+              threshold = barThreshold;
+              break;
+            }
+          }
         }
       }
-    } catch (error) {
-      console.error('Error checking GWP thresholds:', error);
+      
+      // If cart total is below threshold and threshold is valid, remove the GWP product
+      if (threshold > 0 && cartTotal < threshold) {
+        await this.removeGWPProduct(cartItem.product_id, cart);
+        // Return after removing to avoid multiple removals in one cycle
+        // The cart update will trigger another check
+        return;
+      }
     }
   }
 

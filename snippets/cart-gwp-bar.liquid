@@ -27,17 +27,19 @@
             assign item_1_achieved = true
           endif
         -%}
-        <div class="gwp-bar__item" data-threshold="{{ item_1_threshold }}">
-          <div class="gwp-bar__icon {% if item_1_achieved %}gwp-bar__icon--achieved{% endif %}">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="11" fill="{% if item_1_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
-              {%- if item_1_achieved -%}
-                <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              {%- endif -%}
-            </svg>
+        {%- if item_1_threshold > 0 -%}
+          <div class="gwp-bar__item" data-threshold="{{ item_1_threshold }}">
+            <div class="gwp-bar__icon {% if item_1_achieved %}gwp-bar__icon--achieved{% endif %}">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" fill="{% if item_1_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
+                {%- if item_1_achieved -%}
+                  <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                {%- endif -%}
+              </svg>
+            </div>
+            <p class="gwp-bar__text">{{ settings.gwp_item_1_text }}</p>
           </div>
-          <p class="gwp-bar__text">{{ settings.gwp_item_1_text }}</p>
-        </div>
+        {%- endif -%}
       {%- endif -%}
       {%- if settings.gwp_item_2_text != blank -%}
         {%- liquid
@@ -47,17 +49,19 @@
             assign item_2_achieved = true
           endif
         -%}
-        <div class="gwp-bar__item" data-threshold="{{ item_2_threshold }}">
-          <div class="gwp-bar__icon {% if item_2_achieved %}gwp-bar__icon--achieved{% endif %}">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="11" fill="{% if item_2_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
-              {%- if item_2_achieved -%}
-                <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              {%- endif -%}
-            </svg>
+        {%- if item_2_threshold > 0 -%}
+          <div class="gwp-bar__item" data-threshold="{{ item_2_threshold }}">
+            <div class="gwp-bar__icon {% if item_2_achieved %}gwp-bar__icon--achieved{% endif %}">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" fill="{% if item_2_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
+                {%- if item_2_achieved -%}
+                  <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                {%- endif -%}
+              </svg>
+            </div>
+            <p class="gwp-bar__text">{{ settings.gwp_item_2_text }}</p>
           </div>
-          <p class="gwp-bar__text">{{ settings.gwp_item_2_text }}</p>
-        </div>
+        {%- endif -%}
       {%- endif -%}
       {%- if settings.gwp_item_3_text != blank -%}
         {%- liquid
@@ -67,17 +71,19 @@
             assign item_3_achieved = true
           endif
         -%}
-        <div class="gwp-bar__item" data-threshold="{{ item_3_threshold }}">
-          <div class="gwp-bar__icon {% if item_3_achieved %}gwp-bar__icon--achieved{% endif %}">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="11" fill="{% if item_3_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
-              {%- if item_3_achieved -%}
-                <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              {%- endif -%}
-            </svg>
+        {%- if item_3_threshold > 0 -%}
+          <div class="gwp-bar__item" data-threshold="{{ item_3_threshold }}">
+            <div class="gwp-bar__icon {% if item_3_achieved %}gwp-bar__icon--achieved{% endif %}">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" fill="{% if item_3_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
+                {%- if item_3_achieved -%}
+                  <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                {%- endif -%}
+              </svg>
+            </div>
+            <p class="gwp-bar__text">{{ settings.gwp_item_3_text }}</p>
           </div>
-          <p class="gwp-bar__text">{{ settings.gwp_item_3_text }}</p>
-        </div>
+        {%- endif -%}
       {%- endif -%}
     </div>
 
@@ -87,13 +93,13 @@
       assign item_2_threshold = settings.gwp_item_2_threshold | times: 1.0
       assign item_3_threshold = settings.gwp_item_3_threshold | times: 1.0
       
-      if item_1_threshold > max_threshold
+      if item_1_threshold > 0 and item_1_threshold > max_threshold
         assign max_threshold = item_1_threshold
       endif
-      if item_2_threshold > max_threshold
+      if item_2_threshold > 0 and item_2_threshold > max_threshold
         assign max_threshold = item_2_threshold
       endif
-      if item_3_threshold > max_threshold
+      if item_3_threshold > 0 and item_3_threshold > max_threshold
         assign max_threshold = item_3_threshold
       endif
       
