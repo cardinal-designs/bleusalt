@@ -29,9 +29,8 @@
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Enjoy an Additional 10% Off on Our App + Free Gift over $250",
+            "text": "Receive a Special Gift on orders $250+",
             "text_color": "#ffffff"
           }
         },
