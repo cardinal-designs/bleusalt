@@ -55,7 +55,7 @@
       "custom_css": [],
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/7373756fa44d4732af99daf4d18b7ef6.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/7373756fa44d4732af99daf4d18b7ef6.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b7dd923955cd4781a4b5b0a3cceb8606.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -66,7 +66,7 @@
         "mobile_content_alignment": "center",
         "video_height_mobile": "100",
         "show_text_below": true,
-        "button_overlay": true,
+        "button_overlay": false,
         "video_overlay_link": "shopify://collections/the-bleusalt-collection"
       }
     },
