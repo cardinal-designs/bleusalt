@@ -1,0 +1,145 @@
+{% comment %}
+  Renders GWP (Gift With Purchase) Bar
+
+  Usage:
+  {% render 'cart-gwp-bar' %}
+{% endcomment %}
+
+{%- if settings.enable_gwp_bar -%}
+  {%- liquid
+    assign icon_color = settings.gwp_bar_icon_color | default: '#121212'
+    assign text_color = settings.gwp_bar_text_color | default: '#121212'
+    assign divider_color = settings.gwp_bar_divider_color | default: '#121212'
+    assign icon_size = settings.gwp_bar_icon_size | default: 48
+    assign spacing = settings.gwp_bar_spacing | default: 15
+    assign divider_thickness = settings.gwp_bar_divider_thickness | default: 2
+    
+    assign current_total = cart.total_price | divided_by: 100.0
+  -%}
+
+  <div class="gwp-bar" style="--gwp-icon-color: {{ icon_color }}; --gwp-text-color: {{ text_color }}; --gwp-divider-color: {{ divider_color }}; --gwp-icon-size: {{ icon_size }}px; --gwp-spacing: {{ spacing }}px; --gwp-divider-thickness: {{ divider_thickness }}px;" data-cart-total="{{ current_total }}">
+    <div class="gwp-bar__items">
+      {%- if settings.gwp_item_1_text != blank -%}
+        {%- liquid
+          assign item_1_threshold = settings.gwp_item_1_threshold | times: 1.0
+          assign item_1_achieved = false
+          if current_total >= item_1_threshold and item_1_threshold > 0
+            assign item_1_achieved = true
+          endif
+        -%}
+        <div class="gwp-bar__item" data-threshold="{{ item_1_threshold }}">
+          <div class="gwp-bar__icon {% if item_1_achieved %}gwp-bar__icon--achieved{% endif %}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="11" fill="{% if item_1_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
+              {%- if item_1_achieved -%}
+                <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              {%- endif -%}
+            </svg>
+          </div>
+          <p class="gwp-bar__text">{{ settings.gwp_item_1_text }}</p>
+        </div>
+      {%- endif -%}
+      {%- if settings.gwp_item_2_text != blank -%}
+        {%- liquid
+          assign item_2_threshold = settings.gwp_item_2_threshold | times: 1.0
+          assign item_2_achieved = false
+          if current_total >= item_2_threshold and item_2_threshold > 0
+            assign item_2_achieved = true
+          endif
+        -%}
+        <div class="gwp-bar__item" data-threshold="{{ item_2_threshold }}">
+          <div class="gwp-bar__icon {% if item_2_achieved %}gwp-bar__icon--achieved{% endif %}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="11" fill="{% if item_2_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
+              {%- if item_2_achieved -%}
+                <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              {%- endif -%}
+            </svg>
+          </div>
+          <p class="gwp-bar__text">{{ settings.gwp_item_2_text }}</p>
+        </div>
+      {%- endif -%}
+      {%- if settings.gwp_item_3_text != blank -%}
+        {%- liquid
+          assign item_3_threshold = settings.gwp_item_3_threshold | times: 1.0
+          assign item_3_achieved = false
+          if current_total >= item_3_threshold and item_3_threshold > 0
+            assign item_3_achieved = true
+          endif
+        -%}
+        <div class="gwp-bar__item" data-threshold="{{ item_3_threshold }}">
+          <div class="gwp-bar__icon {% if item_3_achieved %}gwp-bar__icon--achieved{% endif %}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="11" fill="{% if item_3_achieved %}currentColor{% else %}transparent{% endif %}" stroke="currentColor" stroke-width="2"/>
+              {%- if item_3_achieved -%}
+                <path d="M7 12L10 15L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              {%- endif -%}
+            </svg>
+          </div>
+          <p class="gwp-bar__text">{{ settings.gwp_item_3_text }}</p>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- liquid
+      assign max_threshold = 0
+      assign item_1_threshold = settings.gwp_item_1_threshold | times: 1.0
+      assign item_2_threshold = settings.gwp_item_2_threshold | times: 1.0
+      assign item_3_threshold = settings.gwp_item_3_threshold | times: 1.0
+      
+      if item_1_threshold > max_threshold
+        assign max_threshold = item_1_threshold
+      endif
+      if item_2_threshold > max_threshold
+        assign max_threshold = item_2_threshold
+      endif
+      if item_3_threshold > max_threshold
+        assign max_threshold = item_3_threshold
+      endif
+      
+      assign gwp_percentage = 0
+      if max_threshold > 0
+        assign gwp_percentage = current_total | divided_by: max_threshold | times: 100 | round
+        if gwp_percentage > 100
+          assign gwp_percentage = 100
+        endif
+      endif
+      
+      comment
+        Find next unachieved GWP item
+      endcomment
+      assign next_item_text = ''
+      assign amount_needed = 0
+      
+      if settings.gwp_item_1_text != blank and item_1_threshold > 0 and current_total < item_1_threshold
+        assign next_item_text = settings.gwp_item_1_text
+        assign amount_needed = item_1_threshold | minus: current_total
+      elsif settings.gwp_item_2_text != blank and item_2_threshold > 0 and current_total < item_2_threshold
+        assign next_item_text = settings.gwp_item_2_text
+        assign amount_needed = item_2_threshold | minus: current_total
+      elsif settings.gwp_item_3_text != blank and item_3_threshold > 0 and current_total < item_3_threshold
+        assign next_item_text = settings.gwp_item_3_text
+        assign amount_needed = item_3_threshold | minus: current_total
+      endif
+    -%}
+
+    {%- if max_threshold > 0 -%}
+      <div class="gwp__bar-container">
+        <div style="width: {{ gwp_percentage }}%;" class="gwp__bar"></div>
+      </div>
+      {%- if next_item_text != blank and amount_needed > 0 -%}
+        <p class="gwp__bar-text">Spend {{ amount_needed | times: 100 | money_without_trailing_zeros }} more to get {{ next_item_text }}</p>
+      {%- elsif gwp_percentage >= 100 -%}
+        <p class="gwp__bar-text">You've unlocked all gifts!</p>
+      {%- else -%}
+        <p class="gwp__bar-text">{{ cart.total_price | times: 100 | money_without_trailing_zeros }} of the way to the next gift</p>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if max_threshold > 0 -%}
+      {% render 'cart-gwp-upsell' %}
+    {%- endif -%}
+    
+  </div>
+{%- endif -%}
+
