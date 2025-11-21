@@ -9,77 +9,20 @@
  */
 {
   "sections": {
-    "collection_banner_UkMfnV": {
-      "type": "collection-banner",
-      "blocks": {
-        "block_pRNya4": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-tops",
-            "title": "Tops"
-          }
-        },
-        "block_ynW7TD": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-bottoms",
-            "title": "Bottoms"
-          }
-        },
-        "block_rrXTL9": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-dresses",
-            "title": "Dresses"
-          }
-        },
-        "block_cYB9iA": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-accessories-outerwear",
-            "title": "Accessories"
-          }
-        },
-        "block_HqUfcX": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-new-arrivals",
-            "title": "New Arrivals"
-          }
-        },
-        "block_tYDqJV": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-best-sellers",
-            "title": "Best Sellers"
-          }
-        }
-      },
-      "block_order": [
-        "block_pRNya4",
-        "block_ynW7TD",
-        "block_rrXTL9",
-        "block_cYB9iA",
-        "block_HqUfcX",
-        "block_tYDqJV"
-      ],
-      "name": "Collection Banner",
-      "settings": {}
-    },
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "Black Friday Starts Now",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Puffer",
+            "heading": "Up to 60% Off Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -87,15 +30,15 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "",
+            "text": "Enjoy an Additional 10% Off on Our App",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop The Puffer",
-            "button_link_1": "shopify://products/the-puffer",
+            "button_label_1": "Shop Sale",
+            "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
@@ -111,8 +54,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/b2a5d3c4681743c2947ac9870f4e4aef.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/f015df5a3899406fb8b9239cf784aa01.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/7373756fa44d4732af99daf4d18b7ef6.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b7dd923955cd4781a4b5b0a3cceb8606.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -124,7 +67,7 @@
         "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": false,
-        "video_overlay_link": "shopify://products/the-puffer"
+        "video_overlay_link": "shopify://collections/the-bleusalt-collection"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
@@ -640,7 +583,6 @@
     }
   },
   "order": [
-    "collection_banner_UkMfnV",
     "16597180576b9dbb68",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
