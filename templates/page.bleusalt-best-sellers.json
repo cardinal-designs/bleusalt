@@ -80,7 +80,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "#shopify-section-template--17744166223985__featured_collection_WC4LMX",
+            "button_link_1": "#shopify-section-template--17860016210033__featured_collection_WC4LMX",
             "button_bg_color": "#ffffff",
             "button_text_color": "#000000",
             "button_label_2": "",
@@ -108,7 +108,7 @@
         "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": false,
-        "video_overlay_link": "#shopify-section-template--17744166223985__featured_collection_WC4LMX"
+        "video_overlay_link": "#shopify-section-template--17860016210033__featured_collection_WC4LMX"
       }
     },
     "featured_collection_WC4LMX": {
