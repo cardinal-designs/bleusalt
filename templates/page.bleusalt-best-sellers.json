@@ -57,14 +57,14 @@
         "text_BCpXbC": {
           "type": "text",
           "settings": {
-            "text": "THE BLEUSALT",
+            "text": "The Black Friday Event",
             "text_color": "#ffffff"
           }
         },
         "heading_dpRfRh": {
           "type": "heading",
           "settings": {
-            "heading": "Holiday Gift Guide",
+            "heading": "Up to 60% Off",
             "heading_color": "#ffffff",
             "heading_size": "h1"
           }
@@ -72,7 +72,7 @@
         "text_two_8Xfyw8": {
           "type": "text-two",
           "settings": {
-            "text": "Making holiday gifting effortless.",
+            "text": "Free Gift Over $250",
             "text_color": "#ffffff"
           }
         },
@@ -95,9 +95,9 @@
         "buttons_TDTcCh"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/34ec17af0ad24bf19f8d1c658648ad7d.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/1ed4c1dd15f54e01aa064d27252050bf.mp4",
-        "description": "Bleusalt Holiday Gift Guide",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/592c6fa01610450aacf758b389bca3ba.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b7dd923955cd4781a4b5b0a3cceb8606.mp4",
+        "description": "Bleusalt Best Sellers",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
@@ -107,8 +107,8 @@
         "mobile_content_alignment": "center",
         "video_height_mobile": "100",
         "show_text_below": true,
-        "button_overlay": true,
-        "video_overlay_link": ""
+        "button_overlay": false,
+        "video_overlay_link": "#shopify-section-template--17744166223985__featured_collection_WC4LMX"
       }
     },
     "featured_collection_WC4LMX": {
@@ -127,7 +127,7 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Essentials for Every Style",
+        "title": "Best Sellers",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -168,12 +168,12 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Oversized & Effortless",
+        "title": "New Arrivals",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "the-oversized-collection",
+        "collection": "womens-new-arrivals",
         "products_to_show": 12,
         "columns_desktop": 4,
         "full_width": false,
@@ -209,12 +209,12 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "The Turtleneck Lover",
+        "title": "Women's Tops",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "the-oversized-collection",
+        "collection": "womens-tops",
         "products_to_show": 12,
         "columns_desktop": 4,
         "full_width": false,
@@ -250,12 +250,12 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "The Jet-Set Edit",
+        "title": "Women's Bottoms",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "the-oversized-collection",
+        "collection": "womens-bottoms",
         "products_to_show": 12,
         "columns_desktop": 4,
         "full_width": false,
@@ -291,12 +291,12 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Luxurious Layers",
+        "title": "Dresses & Skirts",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "the-oversized-collection",
+        "collection": "bleusalt-dresses-skirts",
         "products_to_show": 12,
         "columns_desktop": 4,
         "full_width": false,
