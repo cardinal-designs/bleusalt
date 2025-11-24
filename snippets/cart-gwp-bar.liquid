@@ -141,7 +141,7 @@
         <p class="gwp__bar-text">{{ cart.total_price | times: 100 | money_without_trailing_zeros }} of the way to the next gift</p>
       {%- endif -%}
     {%- endif -%}
-
+    
     {%- if max_threshold > 0 -%}
       {% render 'cart-gwp-upsell' %}
     {%- endif -%}

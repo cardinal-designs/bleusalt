@@ -169,6 +169,9 @@ class CartItems extends HTMLElement {
     }else{
       this.disableLoading();
     }
+    console.log("window.gwpCartManager", window.gwpCartManager);
+    if (!window.gwpCartManager) window.gwpCartManager = new GWPCartManager().init() || new GWPCartManager();
+    if (window.gwpCartManager) window.gwpCartManager.checkGWPThresholds();
   }
 
   updateLiveRegions(line, itemCount) {
