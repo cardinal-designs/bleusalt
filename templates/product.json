@@ -145,6 +145,7 @@
         },
         "collapsible_tab_NhfNPp": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Additional Info",
             "use_product_description": false,
