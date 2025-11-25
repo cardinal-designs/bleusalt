@@ -908,7 +908,7 @@ cart-note:after {
 
 /* GWP Upsell Widget Styles */
 .gwp-upsell {
-  padding: 0;
+  padding: 20px 0 0;
   margin-bottom: 0;
   background-color: rgba(var(--color-background-2), 1);
   border-radius: 8px;
