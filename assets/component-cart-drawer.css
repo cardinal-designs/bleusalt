@@ -1145,6 +1145,12 @@ tbody .gwp-bar {
   max-width: 100px;
 }
 
+.gwp-bar .gwp__bar-text {
+  text-align: center;
+  margin: 5px 0 0;
+  color: #0d1c29;
+}
+
 @media (min-width: 768px) {
   .gwp-bar__text {
     font-size: 14px;
