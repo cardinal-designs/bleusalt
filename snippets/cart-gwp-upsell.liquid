@@ -31,7 +31,7 @@
       if item_1_threshold > 0 and current_total >= item_1_threshold
         assign gwp_in_cart_1 = false
         for item in cart.items
-          if item.variant_id == gwp_product_1.selected_or_first_available_variant.id and item.properties._gwp == 'true'
+          if item.product_id == gwp_product_1.id and item.properties._gwp == 'true'
             assign gwp_in_cart_1 = true
             break
           endif
@@ -48,7 +48,7 @@
         if gwp_product_2 != blank
           assign gwp_in_cart_2 = false
           for item in cart.items
-            if item.variant_id == gwp_product_2.selected_or_first_available_variant.id and item.properties._gwp == 'true'
+            if item.product_id == gwp_product_2.id and item.properties._gwp == 'true'
               assign gwp_in_cart_2 = true
               break
             endif
@@ -64,7 +64,7 @@
       if item_3_threshold > 0 and current_total >= item_3_threshold
         assign gwp_in_cart_3 = false
         for item in cart.items
-          if item.variant_id == gwp_product_3.selected_or_first_available_variant.id and item.properties._gwp == 'true'
+          if item.product_id == gwp_product_3.id and item.properties._gwp == 'true'
             assign gwp_in_cart_3 = true
             break
           endif

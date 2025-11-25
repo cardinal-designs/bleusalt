@@ -19,6 +19,7 @@ function debounce(func, wait) {
 class GWPCartManager {
   constructor() {
     this.gwpProducts = [];
+    this.isAdding = false; // Flag to prevent multiple simultaneous add operations
     this.init();
   }
 
@@ -51,7 +52,12 @@ class GWPCartManager {
     document.addEventListener('click', (e) => {
       if (e.target.classList.contains('gwp-upsell__add-button') || e.target.closest('.gwp-upsell__add-button')) {
         e.preventDefault();
+        e.stopPropagation();
         const button = e.target.classList.contains('gwp-upsell__add-button') ? e.target : e.target.closest('.gwp-upsell__add-button');
+        // Prevent multiple clicks
+        if (button.disabled || this.isAdding) {
+          return;
+        }
         this.addGWPProduct(button);
       }
     });
@@ -102,8 +108,7 @@ class GWPCartManager {
   }
 
   async checkGWPThresholds() {
-    const cartTotal = await this.getCartTotal();
-    
+
     // Get current cart items
     const cartResponse = await fetch('/cart.js');
     const cart = await cartResponse.json();
@@ -114,12 +119,20 @@ class GWPCartManager {
       item.properties._gwp === 'true'
     );
 
-    console.log("gwpItemsInCart", gwpItemsInCart);
-    console.log("cartTotal", cartTotal);
-    console.log("cart", cart);
-    console.log("cartItems", cart.items);
-    console.log("cartItemsInCart", gwpItemsInCart);
-    console.log("cartItemsInCart", gwpItemsInCart);
+    let cartTotalWithoutGWP = cart.total_price / 100;
+    for (const cartItem of cart.items) {
+      if (cartItem.properties && cartItem.properties._gwp === 'true') {
+        cartTotalWithoutGWP -= cartItem.price / 100 * cartItem.quantity;
+      }
+    }
+
+    // console.log("cartTotalWithoutGWP", cartTotalWithoutGWP);
+
+   
+    // console.log("cart", cart);
+    // console.log("cartItems", cart.items);
+    // console.log("cartItemsInCart", gwpItemsInCart);
+    // console.log("cartItemsInCart", gwpItemsInCart);
     
     // Check each GWP item in cart
     for (const cartItem of gwpItemsInCart) {
@@ -151,15 +164,22 @@ class GWPCartManager {
         }
       }
 
-      console.log("threshold", threshold);
+      // console.log("threshold", threshold);
    
       
       // If cart total is below threshold and threshold is valid, remove the GWP product
 
-      console.log("cartItem.product_id", cartItem);
+      // console.log("cartItem.product_id", cartItem);
 
-      if (threshold > 0 && cartTotal < threshold) {
-        await this.removeGWPProduct(cartItem.key, cart);
+      console.log("cart====", cart)
+
+      console.log("threshold--===", threshold);
+      console.log("cartTotalWithoutGWP--===", cartTotalWithoutGWP);
+      let cartTotal = cart.total_price / 100;
+      console.log("cartTotal--===", cartTotal);
+      if (threshold > 0 && cartTotalWithoutGWP < threshold) {
+        console.log("removing GWP product");
+        await this.removeGWPProduct(cartItem, cart);
         // Return after removing to avoid multiple removals in one cycle
         // The cart update will trigger another check
         return;
@@ -168,6 +188,17 @@ class GWPCartManager {
   }
 
   async addGWPProduct(button) {
+    // Prevent multiple simultaneous calls
+    if (this.isAdding) {
+      console.log('Add operation already in progress');
+      return;
+    }
+
+    // Check if button is already disabled
+    if (button.disabled) {
+      return;
+    }
+
     const productId = button.dataset.productId;
     if (!productId) {
       console.error('No product selected');
@@ -181,28 +212,12 @@ class GWPCartManager {
       return;
     }
 
-    const cartResponse = await fetch('/cart.js');
-    const cart = await cartResponse.json();
-    
-    // Check if any variant of the same product with GWP properties already exists in cart
-    const existingGWPItem = cart.items.find(item => 
-      item.product_id === parseInt(productId) && 
-      item.properties && 
-      item.properties._gwp === 'true'
-    );
-    
-    if (existingGWPItem) {
-      // Product already exists with GWP properties (any variant), don't add again
-      return false;
-    }
-
-    console.log("existingGWPItem", existingGWPItem);
-    console.log("variantId", variantId);
-
+    // Disable button immediately to prevent multiple clicks
     const buttonText = button.querySelector('.gwp-upsell__button-text') || button;
     const originalText = buttonText.innerHTML;
-    
     button.disabled = true;
+    this.isAdding = true;
+    
     if (buttonText) {
       buttonText.innerHTML = 'Adding...';
     } else {
@@ -210,6 +225,28 @@ class GWPCartManager {
     }
 
     try {
+      const cartResponse = await fetch('/cart.js');
+      const cart = await cartResponse.json();
+      
+      // Check if any variant of the same product with GWP properties already exists in cart
+      const existingGWPItem = cart.items.find(item => 
+        item.product_id === parseInt(productId) && 
+        item.properties && 
+        item.properties._gwp === 'true'
+      );
+      
+      if (existingGWPItem) {
+        // Product already exists with GWP properties (any variant), don't add again
+        console.log('GWP product already in cart');
+        this.isAdding = false;
+        button.disabled = false;
+        if (buttonText) {
+          buttonText.innerHTML = originalText;
+        } else {
+          button.textContent = 'Add Free Gift';
+        }
+        return false;
+      }
       // Get cart drawer items to access getSectionsToRender method
       const cartDrawerItems = document.querySelector('cart-drawer-items');
       const sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
@@ -313,6 +350,7 @@ class GWPCartManager {
       console.error('Error adding GWP product:', error);
       alert('Unable to add free gift. Please try again.');
     } finally {
+      this.isAdding = false;
       button.disabled = false;
       if (buttonText) {
         buttonText.innerHTML = originalText;
@@ -322,17 +360,20 @@ class GWPCartManager {
     }
   }
 
-  async removeGWPProduct(key, cart) {
-    // Find the line item for this GWP product
-    // const gwpItem = cart.items.find(item => 
-    //   item.key === key && 
-    //   item.properties && 
-    //   item.properties._gwp === 'true'
-    // );
+  async removeGWPProduct(cartItem, cart) {
+    // Validate cart item
+    if (!cartItem || !cartItem.key) {
+      console.error('Invalid cart item for removal');
+      return;
+    }
 
-    // if (!gwpItem) return;
+    // Verify it's a GWP item
+    if (!cartItem.properties || cartItem.properties._gwp !== 'true') {
+      console.error('Item is not a GWP product');
+      return;
+    }
 
-    if (!key) return;
+    console.log("Removing GWP product--===", cartItem);
 
     try {
       const cartDrawerItems = document.querySelector('cart-drawer-items');
@@ -346,14 +387,17 @@ class GWPCartManager {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          line: key,
-          quantity: 0,
+          updates: {
+            [cartItem.key]: 0
+          },
           sections: sections,
           sections_url: window.location.pathname
         })
       });
 
       if (response.ok) {
+
+        console.log("response--===", response);
         const state = await response.text();
         const parsedState = JSON.parse(state);
         

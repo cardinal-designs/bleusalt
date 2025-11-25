@@ -170,8 +170,15 @@ class CartItems extends HTMLElement {
       this.disableLoading();
     }
     console.log("window.gwpCartManager", window.gwpCartManager);
-    if (!window.gwpCartManager) window.gwpCartManager = new GWPCartManager().init() || new GWPCartManager();
-    if (window.gwpCartManager) window.gwpCartManager.checkGWPThresholds();
+    // Check if GWPCartManager is defined before using it
+    if (typeof GWPCartManager !== 'undefined') {
+      if (!window.gwpCartManager) {
+        window.gwpCartManager = new GWPCartManager();
+      }
+      if (window.gwpCartManager && typeof window.gwpCartManager.checkGWPThresholds === 'function') {
+        window.gwpCartManager.checkGWPThresholds();
+      }
+    }
   }
 
   updateLiveRegions(line, itemCount) {
