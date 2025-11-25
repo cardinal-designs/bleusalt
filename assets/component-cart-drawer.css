@@ -954,7 +954,7 @@ cart-note:after {
 }
 
 .gwp-upsell__variant-select {
-  padding: 10px 12px;
+  padding: 7px 10px;
   border: 1px solid rgba(var(--color-foreground), 0.2);
   border-radius: 4px;
   font-size: 14px;
