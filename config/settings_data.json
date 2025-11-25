@@ -47,7 +47,7 @@
     "show_cart_note": true,
     "cart_drawer_collection": "bottoms-skimpy",
     "cart_drawer_text": "Holiday Returns through 1/10/26.   <small><a href=\"https://bleusalt.com/pages/help\" target=\"_blank\">See Terms</a></small>",
-    "additional_cart_drawer_text": "Our popular items tend to sell out often, complete your purchase now to ensure availability",
+    "additional_cart_drawer_text": "Our popular items tend to sell out often, complete your purchase now to ensure availability.  Free Gift on orders $250+ will automatically be shipped with your order.",
     "cart_notice": "Orders Placed Today ship within 1 business day.",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
@@ -144,7 +144,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
+              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt Flagship</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
               "show_logo": true
             }
           },
@@ -425,6 +425,110 @@
           "discount_bar_text": "#ffffff",
           "discount_bar_bg": "#0d1c29"
         }
+      },
+      "collection-banner-womens": {
+        "type": "collection-banner-womens",
+        "blocks": {
+          "block_7GNrA9": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-tops",
+              "title": "Tops"
+            }
+          },
+          "block_fgLVyW": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-bottoms",
+              "title": "Bottoms"
+            }
+          },
+          "block_bC6iXz": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-dresses",
+              "title": "Dresses"
+            }
+          },
+          "block_br3ERt": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-accessories-outerwear",
+              "title": "Accessories"
+            }
+          },
+          "block_J3JbNG": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-new-arrivals",
+              "title": "New Arrivals"
+            }
+          },
+          "block_4XfKyJ": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-best-sellers",
+              "title": "Best Sellers"
+            }
+          }
+        },
+        "block_order": [
+          "block_7GNrA9",
+          "block_fgLVyW",
+          "block_bC6iXz",
+          "block_br3ERt",
+          "block_J3JbNG",
+          "block_4XfKyJ"
+        ],
+        "settings": {}
+      },
+      "collection-banner-mens": {
+        "type": "collection-banner-mens",
+        "blocks": {
+          "block_HQFhEQ": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-tops",
+              "title": "Tops"
+            }
+          },
+          "block_KhQG8y": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-bottoms",
+              "title": "Bottoms"
+            }
+          },
+          "block_czpwDN": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-accessories",
+              "title": "Accessories"
+            }
+          },
+          "block_pKcpjw": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-new-arrivals",
+              "title": "New Arrivals"
+            }
+          },
+          "block_PYmKnC": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-best-sellers",
+              "title": "Best Sellers"
+            }
+          }
+        },
+        "block_order": [
+          "block_HQFhEQ",
+          "block_KhQG8y",
+          "block_czpwDN",
+          "block_pKcpjw",
+          "block_PYmKnC"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
@@ -497,11 +601,6 @@
       "16985609443196360602": {
         "type": "shopify://apps/wair-size-fit-recommendation/blocks/app-embed/68b6dfc9-7d29-46dc-8820-cbcd3543e806",
         "disabled": false,
-        "settings": {}
-      },
-      "11809892702313333283": {
-        "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-header/347a2e4c-f5cb-410d-8354-490d1e80558c",
-        "disabled": true,
         "settings": {}
       },
       "15426571166493967512": {

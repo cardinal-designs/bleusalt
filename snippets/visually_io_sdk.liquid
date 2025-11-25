@@ -3,13 +3,14 @@
 <link rel="preconnect"  href="https://live.visually-io.com/" crossorigin data-em-disable>
 <link rel="dns-prefetch" href="https://live.visually-io.com/" data-em-disable>
 <script>
-(()=> {
-    const env = 2;
-    var store = "{{ shop.permanent_domain }}";
-    var alias = store.replace(".myshopify.com", "").replaceAll("-", "_").toUpperCase();
-    var jitsuKey =  "js.{{ shop.id }}";
-    window.loomi_ctx = {...(window.loomi_ctx || {}),storeAlias:alias,jitsuKey,env};
-    
+    (()=> {
+        const env = 2;
+        var store = "{{ shop.permanent_domain }}";
+        var alias = store.replace(".myshopify.com", "").replaceAll("-", "_").toUpperCase();
+        var jitsuKey =  "js.{{ shop.id }}";
+        window.loomi_ctx = {...(window.loomi_ctx || {}),storeAlias:alias,jitsuKey,env};
+        
+        
     {% if customer %}
       window.loomi_ctx.ctags = []
       {% for t in customer.tags %}
@@ -31,7 +32,7 @@
 	window.loomi_ctx.variantId = {{ product.selected_or_first_available_variant.id  }};
 	{%- endif %}
 	{% endif %}
-})()
+    })()
 </script>
 <link href="https://live.visually-io.com/widgets/vsly-preact.min.js?k=js.14073982&e=2&s=BLEUSALT" rel="preload" as="script" data-em-disable>
 <script type="text/javascript" src="https://live.visually-io.com/widgets/vsly-preact.min.js?k=js.14073982&e=2&s=BLEUSALT" data-em-disable></script>

@@ -19,7 +19,7 @@
       <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
       <!-- Preload JS/CSS -- End -->
 
-      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' %}
+      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' or collection.handle == 'sale' %}
         <meta name="robots" content="noindex">
       {% endif %}
 
@@ -30,7 +30,6 @@
           full: "{{ template }}"
         };
       </script>
-
 
       <!-- Triple Whale Begin -->
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
@@ -329,6 +328,15 @@
       {% section 'header' %}
 
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+        {% if template == 'index' %}
+          {% section 'collection-banner-womens' %}
+        {% elsif template.name == 'collection' and collection.handle contains 'women' %}
+          {% section 'collection-banner-womens' %}
+        {% elsif template.name == 'collection' and collection.handle contains 'men' %}
+          {% section 'collection-banner-mens' %}
+        {% else %}
+          {% section 'collection-banner-womens' %}
+        {% endif %}
         {{ content_for_layout }}
       </main>
 

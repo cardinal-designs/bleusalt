@@ -1,0 +1,528 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "otto_image_7VPBbW": {
+      "type": "otto-image",
+      "disabled": true,
+      "name": "Otto Image",
+      "settings": {
+        "image_name": "gift_guide_header",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "image_margin_bottom": 0,
+        "show_content": false,
+        "content_width": 10,
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_text_color": "#000000",
+        "content_horizontal_alignment": "center",
+        "content_vertical_alignment": "center",
+        "header_font_tag": "h1",
+        "header_font_size": 2,
+        "header_font_size_mobile": 2,
+        "subheader_font_tag": "h2",
+        "subheader_font_size": 1,
+        "subheader_font_size_mobile": 1,
+        "body_font_tag": "p",
+        "body_font_size": 1,
+        "body_font_size_mobile": 1,
+        "button_background_color": "#000000",
+        "button_background_hover_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_text_hover_color": "#000000"
+      }
+    },
+    "1663795698389bd2f1": {
+      "type": "video-banner",
+      "blocks": {
+        "text_BCpXbC": {
+          "type": "text",
+          "settings": {
+            "text": "The Black Friday Event",
+            "text_color": "#ffffff"
+          }
+        },
+        "heading_dpRfRh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Up to 60% Off",
+            "heading_color": "#ffffff",
+            "heading_size": "h1"
+          }
+        },
+        "text_two_8Xfyw8": {
+          "type": "text-two",
+          "settings": {
+            "text": "Free Gift Over $250",
+            "text_color": "#ffffff"
+          }
+        },
+        "buttons_TDTcCh": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "#shopify-section-template--17860016210033__featured_collection_WC4LMX",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_BCpXbC",
+        "heading_dpRfRh",
+        "text_two_8Xfyw8",
+        "buttons_TDTcCh"
+      ],
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/592c6fa01610450aacf758b389bca3ba.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b7dd923955cd4781a4b5b0a3cceb8606.mp4",
+        "description": "Bleusalt Best Sellers",
+        "image_overlay_opacity": 0,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "100",
+        "show_text_below": true,
+        "button_overlay": false,
+        "video_overlay_link": "#shopify-section-template--17860016210033__featured_collection_WC4LMX"
+      }
+    },
+    "featured_collection_WC4LMX": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_V3y4d3": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_V3y4d3"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Best Sellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-best-sellers",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_FFraLk": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_zabemK": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "collection_zabemK"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-new-arrivals",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PXfeLV": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_UW7mQ6": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-tops"
+          }
+        }
+      },
+      "block_order": [
+        "collection_UW7mQ6"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Women's Tops",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-tops",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_MtTHJd": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_pgWWB8": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-bottoms"
+          }
+        }
+      },
+      "block_order": [
+        "collection_pgWWB8"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Women's Bottoms",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-bottoms",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_9npNn4": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_PLYxjw": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "bleusalt-dresses-skirts"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PLYxjw"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Dresses & Skirts",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bleusalt-dresses-skirts",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PaFEzN": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_CRxtaa": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "mens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CRxtaa"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Gifts for Him",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_XxeeaG": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_k3HfwA": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "under-100"
+          }
+        }
+      },
+      "block_order": [
+        "collection_k3HfwA"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Under $100",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_xrJidG": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_TKqVhN": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "under-250"
+          }
+        }
+      },
+      "block_order": [
+        "collection_TKqVhN"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "$250 and Under",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_iwCTRC": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_KcmXak": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "under-450"
+          }
+        }
+      },
+      "block_order": [
+        "collection_KcmXak"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "$450 and Under",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "the-oversized-collection",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "otto_image_LJjENB": {
+      "type": "otto-image",
+      "name": "Otto Image",
+      "settings": {
+        "image_name": "download_app",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "image_margin_bottom": 0,
+        "show_content": false,
+        "content_width": 10,
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_text_color": "#000000",
+        "content_horizontal_alignment": "center",
+        "content_vertical_alignment": "center",
+        "header_font_tag": "h1",
+        "header_font_size": 2,
+        "header_font_size_mobile": 2,
+        "subheader_font_tag": "h2",
+        "subheader_font_size": 1,
+        "subheader_font_size_mobile": 1,
+        "body_font_tag": "p",
+        "body_font_size": 1,
+        "body_font_size_mobile": 1,
+        "button_background_color": "#000000",
+        "button_background_hover_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_text_hover_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "otto_image_7VPBbW",
+    "1663795698389bd2f1",
+    "featured_collection_WC4LMX",
+    "featured_collection_FFraLk",
+    "featured_collection_PXfeLV",
+    "featured_collection_MtTHJd",
+    "featured_collection_9npNn4",
+    "featured_collection_PaFEzN",
+    "featured_collection_XxeeaG",
+    "featured_collection_xrJidG",
+    "featured_collection_iwCTRC",
+    "otto_image_LJjENB"
+  ]
+}
