@@ -54,6 +54,7 @@
     "discount_promo_bar": false,
     "cart_rebuy": true,
     "enable_gwp_bar": true,
+    "gwp_bar_icon_color": "#334FB4",
     "gwp_item_1_threshold": 175,
     "gwp_item_1_product": "kids-shorty-polo",
     "gwp_item_2_product": "the-signature-wraps",
