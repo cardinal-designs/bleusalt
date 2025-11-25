@@ -963,6 +963,15 @@ cart-note:after {
   cursor: pointer;
 }
 
+.gwp-upsell__variant-select {
+  appearance: none;
+  padding-right: 30px;
+  background: linear-gradient(45deg, transparent 50%, #555 50%) right 12px center,
+              linear-gradient(135deg, #555 50%, transparent 50%) right 6px center;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+}
+
 .gwp-upsell__variant-select:focus {
   outline: none;
   border-color: rgb(var(--color-foreground));
