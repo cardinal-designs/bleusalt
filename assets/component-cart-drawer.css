@@ -965,11 +965,17 @@ cart-note:after {
 
 .gwp-upsell__variant-select {
   appearance: none;
-  padding-right: 30px;
-  background: linear-gradient(45deg, transparent 50%, #555 50%) right 12px center,
-              linear-gradient(135deg, #555 50%, transparent 50%) right 6px center;
-  background-size: 8px 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding-right: 35px;       /* space for arrow */
+  height: 40px;
+  border-radius: 6px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='14' viewBox='0 0 20 20' width='14' xmlns='http://www.w3.org/2000/svg'><polygon points='0,0 20,0 10,10'/></svg>");
   background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
 }
 
 .gwp-upsell__variant-select:focus {
