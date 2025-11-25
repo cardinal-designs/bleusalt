@@ -1180,10 +1180,6 @@ tbody .gwp-bar {
   min-height: auto;
 }
 
-.gwp-upsell__image {
-  line-height: 0;
-}
-
 @media (min-width: 768px) {
   .gwp-bar__text {
     font-size: 14px;
