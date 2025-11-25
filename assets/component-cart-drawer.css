@@ -1152,6 +1152,17 @@ tbody .gwp-bar {
   color: #0d1c29;
 }
 
+.gwp-upsell__content {
+  align-items: flex-start;
+}
+
+.gwp-upsell__content .gwp-upsell__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
 @media (min-width: 768px) {
   .gwp-bar__text {
     font-size: 14px;
