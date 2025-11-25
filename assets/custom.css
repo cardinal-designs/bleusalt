@@ -473,3 +473,11 @@ html:not(.third-party-scripts-loaded) #shopify-pc__banner,
 html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
   display: none !important;
 }
+
+.gwp-disabled-quantity {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+}

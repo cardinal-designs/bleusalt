@@ -119,20 +119,12 @@ class GWPCartManager {
       item.properties._gwp === 'true'
     );
 
-    let cartTotalWithoutGWP = cart.total_price / 100;
+    let cartTotalWithoutGWP = cart.original_total_price / 100;
     for (const cartItem of cart.items) {
       if (cartItem.properties && cartItem.properties._gwp === 'true') {
         cartTotalWithoutGWP -= cartItem.price / 100 * cartItem.quantity;
       }
     }
-
-    // console.log("cartTotalWithoutGWP", cartTotalWithoutGWP);
-
-   
-    // console.log("cart", cart);
-    // console.log("cartItems", cart.items);
-    // console.log("cartItemsInCart", gwpItemsInCart);
-    // console.log("cartItemsInCart", gwpItemsInCart);
     
     // Check each GWP item in cart
     for (const cartItem of gwpItemsInCart) {
@@ -164,25 +156,8 @@ class GWPCartManager {
         }
       }
 
-      // console.log("threshold", threshold);
-   
-      
-      // If cart total is below threshold and threshold is valid, remove the GWP product
-
-      // console.log("cartItem.product_id", cartItem);
-
-      console.log("cart====", cart)
-
-      console.log("threshold--===", threshold);
-      console.log("cartTotalWithoutGWP--===", cartTotalWithoutGWP);
-      let cartTotal = cart.total_price / 100;
-      console.log("cartTotal--===", cartTotal);
       if (threshold > 0 && cartTotalWithoutGWP < threshold) {
-        console.log("removing GWP product");
         await this.removeGWPProduct(cartItem, cart);
-        // Return after removing to avoid multiple removals in one cycle
-        // The cart update will trigger another check
-        return;
       }
     }
   }
@@ -190,7 +165,6 @@ class GWPCartManager {
   async addGWPProduct(button) {
     // Prevent multiple simultaneous calls
     if (this.isAdding) {
-      console.log('Add operation already in progress');
       return;
     }
 
@@ -237,7 +211,6 @@ class GWPCartManager {
       
       if (existingGWPItem) {
         // Product already exists with GWP properties (any variant), don't add again
-        console.log('GWP product already in cart');
         this.isAdding = false;
         button.disabled = false;
         if (buttonText) {
@@ -249,9 +222,15 @@ class GWPCartManager {
       }
       // Get cart drawer items to access getSectionsToRender method
       const cartDrawerItems = document.querySelector('cart-drawer-items');
-      const sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
+      let sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
         ? cartDrawerItems.getSectionsToRender().map((section) => section.section).join(',')
         : 'cart-drawer,cart-icon-bubble';
+      
+      // If on cart page, add cart page sections
+      const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+      if (isCartPage) {
+        sections += ',template--17854003249265__cart-footer,template--17854003249265__cart-items';
+      }
 
       const response = await fetch('/cart/add.js', {
         method: 'POST',
@@ -331,12 +310,84 @@ class GWPCartManager {
               typeof window.BOLD.common.eventEmitter.emit === 'function') {
             window.BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded', data);
           }
+          
+          // Update cart page sections if on cart page
+          const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+          if (isCartPage && parsedState.sections) {
+            // Update cart footer
+            const cartFooterSection = 'template--17854003249265__cart-footer';
+            if (parsedState.sections[cartFooterSection]) {
+              const cartFooter = document.getElementById('main-cart-footer');
+              if (cartFooter) {
+                const footerContent = cartFooter.querySelector('.js-contents');
+                if (footerContent) {
+                  const doc = new DOMParser().parseFromString(parsedState.sections[cartFooterSection], 'text/html');
+                  const newFooterContent = doc.querySelector('.js-contents');
+                  if (newFooterContent) {
+                    footerContent.innerHTML = newFooterContent.innerHTML;
+                  }
+                }
+              }
+            }
+            
+            // Update cart items
+            const cartItemsSection = 'template--17854003249265__cart-items';
+            if (parsedState.sections[cartItemsSection]) {
+              const cartItems = document.getElementById('main-cart-items');
+              if (cartItems) {
+                const itemsContent = cartItems.querySelector('.js-contents');
+                if (itemsContent) {
+                  const doc = new DOMParser().parseFromString(parsedState.sections[cartItemsSection], 'text/html');
+                  const newItemsContent = doc.querySelector('.js-contents');
+                  if (newItemsContent) {
+                    itemsContent.innerHTML = newItemsContent.innerHTML;
+                  }
+                }
+              }
+            }
+          }
         } else {
           // Fallback to forceUpdateCartDrawer
           if (cartDrawerItems && cartDrawerItems.forceUpdateCartDrawer) {
             cartDrawerItems.forceUpdateCartDrawer();
           } else if (typeof updateCart === 'function') {
             updateCart();
+          }
+          
+          // Update cart page sections if on cart page (fallback using data.sections)
+          const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+          if (isCartPage && data && data.sections) {
+            // Update cart footer
+            const cartFooterSection = 'template--17854003249265__cart-footer';
+            if (data.sections[cartFooterSection]) {
+              const cartFooter = document.getElementById('main-cart-footer');
+              if (cartFooter) {
+                const footerContent = cartFooter.querySelector('.js-contents');
+                if (footerContent) {
+                  const doc = new DOMParser().parseFromString(data.sections[cartFooterSection], 'text/html');
+                  const newFooterContent = doc.querySelector('.js-contents');
+                  if (newFooterContent) {
+                    footerContent.innerHTML = newFooterContent.innerHTML;
+                  }
+                }
+              }
+            }
+            
+            // Update cart items
+            const cartItemsSection = 'template--17854003249265__cart-items';
+            if (data.sections[cartItemsSection]) {
+              const cartItems = document.getElementById('main-cart-items');
+              if (cartItems) {
+                const itemsContent = cartItems.querySelector('.js-contents');
+                if (itemsContent) {
+                  const doc = new DOMParser().parseFromString(data.sections[cartItemsSection], 'text/html');
+                  const newItemsContent = doc.querySelector('.js-contents');
+                  if (newItemsContent) {
+                    itemsContent.innerHTML = newItemsContent.innerHTML;
+                  }
+                }
+              }
+            }
           }
         }
         
@@ -373,13 +424,17 @@ class GWPCartManager {
       return;
     }
 
-    console.log("Removing GWP product--===", cartItem);
-
     try {
       const cartDrawerItems = document.querySelector('cart-drawer-items');
-      const sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
+      let sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
         ? cartDrawerItems.getSectionsToRender().map((section) => section.section).join(',')
         : 'cart-drawer,cart-icon-bubble';
+      
+      // If on cart page, add cart page sections
+      const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+      if (isCartPage) {
+        sections += ',template--17854003249265__cart-footer,template--17854003249265__cart-items';
+      }
 
       const response = await fetch('/cart/update.js', {
         method: 'POST',
@@ -397,7 +452,6 @@ class GWPCartManager {
 
       if (response.ok) {
 
-        console.log("response--===", response);
         const state = await response.text();
         const parsedState = JSON.parse(state);
         
@@ -454,6 +508,42 @@ class GWPCartManager {
             cartDrawerItems.forceUpdateCartDrawer();
           } else if (typeof updateCart === 'function') {
             updateCart();
+          }
+        }
+        
+        // Update cart page sections if on cart page
+        const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+        if (isCartPage && parsedState.sections) {
+          // Update cart footer
+          const cartFooterSection = 'template--17854003249265__cart-footer';
+          if (parsedState.sections[cartFooterSection]) {
+            const cartFooter = document.getElementById('main-cart-footer');
+            if (cartFooter) {
+              const footerContent = cartFooter.querySelector('.js-contents');
+              if (footerContent) {
+                const doc = new DOMParser().parseFromString(parsedState.sections[cartFooterSection], 'text/html');
+                const newFooterContent = doc.querySelector('.js-contents');
+                if (newFooterContent) {
+                  footerContent.innerHTML = newFooterContent.innerHTML;
+                }
+              }
+            }
+          }
+          
+          // Update cart items
+          const cartItemsSection = 'template--17854003249265__cart-items';
+          if (parsedState.sections[cartItemsSection]) {
+            const cartItems = document.getElementById('main-cart-items');
+            if (cartItems) {
+              const itemsContent = cartItems.querySelector('.js-contents');
+              if (itemsContent) {
+                const doc = new DOMParser().parseFromString(parsedState.sections[cartItemsSection], 'text/html');
+                const newItemsContent = doc.querySelector('.js-contents');
+                if (newItemsContent) {
+                  itemsContent.innerHTML = newItemsContent.innerHTML;
+                }
+              }
+            }
           }
         }
         

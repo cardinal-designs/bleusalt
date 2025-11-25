@@ -994,15 +994,15 @@ cart-note:after {
   cursor: not-allowed;
 }
 
+.gwp-upsell__content {
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
 @media (min-width: 768px) {
   .gwp-upsell__title {
     font-size: 20px;
-  }
-  
-  .gwp-upsell__content {
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
   }
   
   .gwp-upsell__variants {
