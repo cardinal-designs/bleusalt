@@ -57,7 +57,7 @@
     "gwp_item_1_threshold": 175,
     "gwp_item_1_product": "kids-shorty-polo",
     "gwp_item_2_product": "the-signature-wraps",
-    "gwp_item_3_threshold": 400,
+    "gwp_item_3_threshold": 0,
     "gwp_item_3_product": "the-signature-wraps",
     "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
