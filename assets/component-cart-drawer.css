@@ -1146,6 +1146,7 @@ tbody .gwp-bar {
 }
 
 .gwp-bar .gwp__bar-text {
+  font-size: 14px;
   text-align: center;
   margin: 5px 0 0;
   color: #0d1c29;
