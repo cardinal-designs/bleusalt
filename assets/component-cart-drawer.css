@@ -1163,6 +1163,10 @@ tbody .gwp-bar {
   gap: 10px;
 }
 
+.gwp-upsell__content .gwp-upsell__add-button {
+  margin-left: 0;
+}
+
 @media (min-width: 768px) {
   .gwp-bar__text {
     font-size: 14px;
