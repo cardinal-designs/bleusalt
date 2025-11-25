@@ -1007,8 +1007,8 @@ cart-note:after {
 
 /* GWP Bar Styles */
 .gwp-bar {
-  padding: 20px 15px;
-  margin-bottom: 15px;
+  padding: 20px 15px 0;
+  margin-bottom: 0;
   width: 100%;
   display: block;
   background-color: transparent;
