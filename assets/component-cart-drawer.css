@@ -1025,7 +1025,7 @@ tbody .gwp-bar {
   justify-content: space-around;
   align-items: center;
   gap: var(--gwp-spacing, 15px);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
