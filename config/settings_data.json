@@ -57,6 +57,7 @@
     "gwp_bar_icon_color": "#0d1c29",
     "gwp_bar_text_color": "#0d1c29",
     "gwp_bar_divider_color": "#0d1c29",
+    "gwp_bar_divider_thickness": 5,
     "gwp_item_1_text": "Free Shipping",
     "gwp_item_1_threshold": 175,
     "gwp_item_1_product": "the-mens-raglan",
