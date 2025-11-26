@@ -1034,7 +1034,7 @@ tbody .gwp-bar {
 .gwp-bar__items {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
   margin-bottom: 10px;
   width: 100%;
