@@ -1035,7 +1035,7 @@ tbody .gwp-bar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: var(--gwp-spacing, 15px);
+  gap: 15px;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -1172,6 +1172,7 @@ tbody .gwp-bar {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 10px;
+  flex-direction: column;
 }
 
 .gwp-upsell__content .gwp-upsell__add-button {

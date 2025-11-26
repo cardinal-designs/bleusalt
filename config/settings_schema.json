@@ -1318,16 +1318,6 @@
       },
       {
         "type": "range",
-        "id": "gwp_bar_spacing",
-        "min": 10,
-        "max": 40,
-        "step": 2,
-        "unit": "px",
-        "label": "Item Spacing",
-        "default": 16
-      },
-      {
-        "type": "range",
         "id": "gwp_bar_divider_thickness",
         "min": 1,
         "max": 5,
