@@ -17,7 +17,7 @@
     assign current_total = cart.total_price | divided_by: 100.0
   -%}
 
-  <div class="gwp-bar" style="--gwp-icon-color: {{ icon_color }}; --gwp-text-color: {{ text_color }}; --gwp-divider-color: {{ divider_color }}; --gwp-icon-size: {{ icon_size }}px; --gwp-spacing: {{ spacing }}px; --gwp-divider-thickness: {{ divider_thickness }}px;" data-cart-total="{{ current_total }}">
+  <div class="gwp-bar" style="--gwp-icon-color: {{ icon_color }}; --gwp-text-color: {{ text_color }};" data-cart-total="{{ current_total }}">
     <div class="gwp-bar__items">
       {%- if settings.gwp_item_1_text != blank -%}
         {%- liquid
