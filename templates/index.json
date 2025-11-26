@@ -15,35 +15,34 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing The Oversized T Dress",
+            "text": "Black Friday Starts Now",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Our Newest Arrival",
+            "heading": "Up to 60% Off Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Lorem ipsum dolor sit amet, consectetur",
+            "text": "Free Gift on Orders over $250 and $500",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/the-oversized-t-dress",
+            "button_label_1": "Shop Sale",
+            "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop New Arrivals",
-            "button_link_2": "shopify://collections/newest-products"
+            "button_label_2": "Shop Best Sellers",
+            "button_link_2": "shopify://collections/womens-best-sellers"
           }
         }
       },
@@ -53,19 +52,22 @@
         "text_two_NHhmBc",
         "buttons_fCtqBt"
       ],
+      "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/758019c039d8402fbe57cae250821ab5.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/758019c039d8402fbe57cae250821ab5.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/7373756fa44d4732af99daf4d18b7ef6.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b7dd923955cd4781a4b5b0a3cceb8606.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "none",
         "mobile_content_alignment": "center",
-        "video_height_mobile": "125",
-        "show_text_below": true
+        "video_height_mobile": "100",
+        "show_text_below": true,
+        "button_overlay": false,
+        "video_overlay_link": "shopify://collections/the-bleusalt-collection"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
@@ -121,6 +123,7 @@
         "1663618695fc7e0630-1",
         "1663618695fc7e0630-2"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -139,144 +142,71 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "175815468017ca5ea6": {
+      "type": "apps",
       "blocks": {
-        "49238d89-463e-419a-8643-42f4463ad2dd": {
-          "type": "collection",
+        "nosto_nosto_placements_block_adcqUP": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
-            "heading": "Womens",
-            "collection": "newest-products"
-          }
-        },
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
-          "type": "collection",
-          "settings": {
-            "heading": "Mens",
-            "collection": "mens-new-arrivals"
+            "placement": "frontpage-nosto-1"
           }
         }
       },
       "block_order": [
-        "49238d89-463e-419a-8643-42f4463ad2dd",
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
+        "nosto_nosto_placements_block_adcqUP"
       ],
       "settings": {
-        "title": "Explore.",
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "1659735210e064d864": {
+      "type": "featured-collection",
+      "blocks": {
+        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f": {
+          "type": "collection",
+          "settings": {
+            "heading": "Womens",
+            "collection": "womens-best-sellers"
+          }
+        },
+        "e4d64483-b722-41bc-b780-ce75dc52abed": {
+          "type": "collection",
+          "settings": {
+            "heading": "Mens",
+            "collection": "mens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
+        "e4d64483-b722-41bc-b780-ce75dc52abed"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Must Haves",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "",
+        "collection": "bottoms-skimpy",
         "products_to_show": 8,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_life_image": true,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 28,
+        "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "1660226720e02964f9": {
-      "type": "rich-text",
-      "blocks": {
-        "16602267200642e541-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth.</span></p>",
-            "heading_size": "h1"
-          }
-        },
-        "16602267200642e541-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably in the USA from the softest fibers on earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
-          }
-        },
-        "741ab444-8276-4e02-99e1-f5a96c4c2307": {
-          "type": "caption",
-          "settings": {
-            "caption": "[value-props]",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        }
-      },
-      "block_order": [
-        "16602267200642e541-0",
-        "16602267200642e541-1",
-        "741ab444-8276-4e02-99e1-f5a96c4c2307"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "btextimg": "home-learn-more",
-        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
-        "background_image_size": "cover",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 72,
-        "padding_bottom": 76
-      }
-    },
-    "1660227726ff0f6237": {
-      "type": "foursixty",
-      "blocks": {
-        "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
-          "type": "title",
-          "settings": {
-            "title": "Shop Our Instagram"
-          }
-        },
-        "88d72792-7b35-451c-bf9a-b7f887cde26f": {
-          "type": "paragraph",
-          "settings": {
-            "title": "<p>Click the photos below to shop the look! <a href=\"https://www.instagram.com/bleusalt/\">@bleusalt</a></p>"
-          }
-        },
-        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed": {
-          "type": "feed",
-          "settings": {
-            "feed_id": "bleusalt",
-            "total_images": 10,
-            "big_first_image": true,
-            "per_row": 5,
-            "image_margin": 4,
-            "feed_type": "grid"
-          }
-        },
-        "45d95e55-eabb-474a-81e3-9b60083b3f79": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/shop-our-instagram",
-            "link_text": "Shop Our Instagram",
-            "button_style": "button--secondary"
-          }
-        }
-      },
-      "block_order": [
-        "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
-        "88d72792-7b35-451c-bf9a-b7f887cde26f",
-        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
-        "45d95e55-eabb-474a-81e3-9b60083b3f79"
-      ],
-      "settings": {
-        "width": "page-width",
-        "padding_top": 25,
-        "padding_bottom": 45,
-        "margins": 14,
-        "border_top": true,
-        "text_align": "center"
       }
     },
     "166022784081bd0071": {
@@ -285,9 +215,9 @@
         "1660227840989441a3-0": {
           "type": "quote_press",
           "settings": {
-            "quote": "<p>This is how to create a styling WFH wardrobe in 2021.</p>",
-            "author": "Vogue",
-            "logo": "shopify://shop_images/vogue_2x-8.png"
+            "quote": "<p>Duchess Meghan Does Quiet Luxury in a Shimmering Beige Turtleneck Dress</p>",
+            "author": "Country Living",
+            "logo": "shopify://shop_images/logo.42faf13.svg"
           }
         },
         "1660227840989441a3-1": {
@@ -342,52 +272,54 @@
         "title": ""
       }
     },
-    "1659735210e064d864": {
-      "type": "featured-collection",
+    "1660227726ff0f6237": {
+      "type": "foursixty",
       "blocks": {
-        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f": {
-          "type": "collection",
+        "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
+          "type": "title",
           "settings": {
-            "heading": "Womens",
-            "collection": "womens-best-sellers"
+            "title": "Shop Our Instagram"
           }
         },
-        "e4d64483-b722-41bc-b780-ce75dc52abed": {
-          "type": "collection",
+        "88d72792-7b35-451c-bf9a-b7f887cde26f": {
+          "type": "paragraph",
           "settings": {
-            "heading": "Mens",
-            "collection": "mens-best-sellers"
+            "title": "<p>Click the photos below to shop the look! <a href=\"https://www.instagram.com/bleusalt/\">@bleusalt</a></p>"
+          }
+        },
+        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed": {
+          "type": "feed",
+          "settings": {
+            "feed_id": "bleusalt",
+            "total_images": 10,
+            "big_first_image": true,
+            "per_row": 5,
+            "image_margin": 4,
+            "feed_type": "grid"
+          }
+        },
+        "45d95e55-eabb-474a-81e3-9b60083b3f79": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/shop-our-instagram",
+            "link_text": "Shop Our Instagram",
+            "button_style": "button--secondary"
           }
         }
       },
       "block_order": [
-        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
-        "e4d64483-b722-41bc-b780-ce75dc52abed"
+        "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
+        "88d72792-7b35-451c-bf9a-b7f887cde26f",
+        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
+        "45d95e55-eabb-474a-81e3-9b60083b3f79"
       ],
       "settings": {
-        "title": "Must Haves",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "bottoms-skimpy",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": false,
-        "show_life_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "width": "page-width",
+        "padding_top": 25,
+        "padding_bottom": 45,
+        "margins": 14,
+        "border_top": true,
+        "text_align": "center"
       }
     },
     "16637947412bca5d08": {
@@ -448,41 +380,94 @@
         "title": ""
       }
     },
-    "image_with_text_XqniFF": {
-      "type": "image-with-text",
+    "featured_collection": {
+      "type": "featured-collection",
       "blocks": {
-        "heading_6FWmWW": {
-          "type": "heading",
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
+          "type": "collection",
           "settings": {
-            "heading": "Get The App",
-            "heading_size": "h1"
+            "heading": "Womens",
+            "collection": "newest-products"
           }
         },
-        "svg_qxQ83m": {
-          "type": "svg",
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
+          "type": "collection",
           "settings": {
-            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get a free scarf and<br>10% off every order you place through our app!</p>\n<p>Plus get early VIP access to new product arrivals<br>& app-exclusive discounts available only<br>through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+            "heading": "Mens",
+            "collection": "mens-new-arrivals"
           }
         }
       },
       "block_order": [
-        "heading_6FWmWW",
-        "svg_qxQ83m"
+        "49238d89-463e-419a-8643-42f4463ad2dd",
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
       ],
       "settings": {
-        "image": "shopify://shop_images/download.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "title": "Newest Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
         "padding_bottom": 36
+      }
+    },
+    "1660226720e02964f9": {
+      "type": "rich-text",
+      "blocks": {
+        "16602267200642e541-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth.</span></p>",
+            "heading_size": "h1"
+          }
+        },
+        "16602267200642e541-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
+          }
+        },
+        "741ab444-8276-4e02-99e1-f5a96c4c2307": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "16602267200642e541-0",
+        "16602267200642e541-1",
+        "741ab444-8276-4e02-99e1-f5a96c4c2307"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "home-learn-more",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6": {
@@ -505,7 +490,7 @@
         "template--14667686969457__5e04b2e1-4fa0-45bd-a4cb-77f983867ff6-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Find a Store",
+            "button_label": "Visit Our Store",
             "button_link": "shopify://pages/visit-our-store"
           }
         }
@@ -520,6 +505,43 @@
       ],
       "settings": {
         "image": "shopify://shop_images/bleusalt-malibu-store-interior.jpg",
+        "border_top": false,
+        "page_width": "page-width",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_XqniFF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6FWmWW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop On The App",
+            "heading_size": "h1"
+          }
+        },
+        "svg_qxQ83m": {
+          "type": "svg",
+          "settings": {
+            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get early VIP access<br> to new product arrivals & app-exclusive discounts<br>available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6FWmWW",
+        "svg_qxQ83m"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/download.jpg",
         "border_top": false,
         "page_width": "page-width",
         "height": "adapt",
@@ -564,14 +586,15 @@
     "16597180576b9dbb68",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
+    "175815468017ca5ea6",
+    "1659735210e064d864",
+    "166022784081bd0071",
+    "1660227726ff0f6237",
+    "16637947412bca5d08",
     "featured_collection",
     "1660226720e02964f9",
-    "1660227726ff0f6237",
-    "166022784081bd0071",
-    "1659735210e064d864",
-    "16637947412bca5d08",
-    "image_with_text_XqniFF",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
+    "image_with_text_XqniFF",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
   ]
 }

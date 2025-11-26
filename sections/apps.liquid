@@ -1,4 +1,4 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %} {{ section.settings.custom_class }}">
   {%- for block in section.blocks -%}
     {% render block %}
   {%- endfor -%}
@@ -10,6 +10,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    },
     {
       "type": "checkbox",
       "id": "include_margins",

@@ -1,5 +1,5 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% comment %} <link rel="preconnect" href="https://fonts.googleapis.com"> {% endcomment %}
+{% comment %} <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> {% endcomment %}
 <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"> -->
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -309,7 +309,8 @@
                 <nav class="menu-drawer__navigation">
                   <ul class="menu-drawer__menu has-submenu list-menu" >
                     {%- for link in linklists.mobile-menu.links -%}
-                      <li>
+                      {% assign link_title = link.title | downcase %}
+                      <li {% if section.settings.download_button %}{% if link_title contains 'download' or link_title contains 'app' %}class="menu-drawer__download-button"{% endif %}{% endif %}>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
@@ -1103,6 +1104,12 @@
       "type": "link_list",
       "id": "menu_mobile",
       "label": "Mobile menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "download_button",
+      "label": "Download app link button styling?",
+      "default": false
     },
     {
       "type": "select",

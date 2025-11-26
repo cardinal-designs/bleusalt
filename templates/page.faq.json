@@ -35,9 +35,12 @@
       "block_order": [
         "16612662323d23b877-0"
       ],
+      "custom_css": [
+        ".banner__heading > span {background: none !important;}"
+      ],
       "settings": {
-        "image": "shopify://shop_images/CollectionPage_WomensTops_dc378f86-4a0e-4125-aba1-97cb4145189f.jpg",
-        "image_mobile": "shopify://shop_images/CollectionPage_WomensTops_dc378f86-4a0e-4125-aba1-97cb4145189f.jpg",
+        "image": "shopify://shop_images/bleusalt-faq-desktop.jpg",
+        "image_mobile": "shopify://shop_images/bleusalt-faq-desktop.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -80,7 +83,7 @@
           "settings": {
             "category": "Product & Care",
             "title": "Does Bleusalt shrink?",
-            "text": "<p>No, Bleusalt does not shrink.  All of our products are made from Tencel™ fabric, and are preshrunk.</p>",
+            "text": "<p>No, Bleusalt does not shrink.  All of our products are made from Tencel™ fabric, and do not shrink.</p>",
             "page": ""
           }
         },

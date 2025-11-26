@@ -94,6 +94,7 @@
         },
         "3cbca740-3858-4794-a06d-86306c2065df": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Material",
             "use_product_description": true,

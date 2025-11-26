@@ -18,8 +18,51 @@
         "color_scheme": "inverse"
       }
     },
+    "rich_text_NirfgQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QyH9tV": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Lite Fabric</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_i3NHwq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Lite Fabric is a lighter, more breathable and silkier variation of our Signature Fabric. This fabric maintains our signature softness and sustainability without the softly brushed interior, offering enhanced airflow and a featherweight feel and making it perfect for warmer weather.</p>"
+          }
+        },
+        "caption_hAQmwA": {
+          "type": "caption",
+          "settings": {
+            "caption": "[value-props]",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QyH9tV",
+        "text_i3NHwq",
+        "caption_hAQmwA"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "otto_image_8wPW6g": {
       "type": "otto-image",
+      "disabled": true,
       "settings": {
         "image_name": "bleusalt-lite",
         "image_width_desktop": 100,
@@ -117,20 +160,38 @@
         "padding_bottom": 36
       }
     },
+    "17564010315919f8c1": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_HVAmyC": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_HVAmyC"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
     "1660937591af29c294": {
       "type": "rich-text",
       "blocks": {
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth</span>.</p>",
             "heading_size": "h1"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -173,14 +234,17 @@
         "firework_shoppable_video_ugc_firework_pro_embed_fxwk7J"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
   },
   "order": [
     "banner",
+    "rich_text_NirfgQ",
     "otto_image_8wPW6g",
     "product-grid",
+    "17564010315919f8c1",
     "1660937591af29c294",
     "175269609969217923"
   ]

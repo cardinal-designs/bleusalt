@@ -247,8 +247,8 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type="radio"][name="Color"] + label {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   background-color: #f0f0f0;
 }
@@ -1683,10 +1683,6 @@ table[data-in-to-cm] td {
 
 }
 
-.product-form__submit[data-join-list] {
-  display: block !important;
-}
-
 .template--product .klaviyo-bis__wrapper {
   display: none !important;
 }
@@ -1887,3 +1883,25 @@ table[data-in-to-cm] td {
 }
 
 /* Gift Card Form design end */
+
+.button_flex-container {
+  display: flex;
+  gap: 10px;
+  /* flex-wrap: wrap; */
+}
+
+.button_flex-container button {
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.button_flex-container a button {
+  background-color: white;
+  color: #0d1c29;
+}
+
+@media (max-width: 749px){
+  .button_flex-container {
+    justify-content: center;
+  }
+}

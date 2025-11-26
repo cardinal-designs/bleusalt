@@ -15,10 +15,12 @@
     "colors_outline_button_labels": "#0d1c29",
     "type_header_font": "dm_sans_n4",
     "type_body_font": "inter_n4",
+    "type_hero_font": "ebgaramond_n4",
     "page_width": 2000,
     "spacing_grid_horizontal": 32,
     "spacing_grid_vertical": 32,
     "buttons_radius": 2,
+    "variant_pills_size_conversions": "00/XXS\n0/XS\n1/S\n2/M\n3/L\n4/XL\n5/XXL\n6/XXXL",
     "variant_pills_radius": 0,
     "inputs_border_opacity": 20,
     "inputs_radius": 2,
@@ -44,10 +46,12 @@
     "cart_type": "drawer",
     "show_cart_note": true,
     "cart_drawer_collection": "bottoms-skimpy",
-    "cart_drawer_text": "",
+    "cart_drawer_text": "Holiday Returns through 1/10/26.   <small><a href=\"https://bleusalt.com/pages/help\" target=\"_blank\">See Terms</a></small>",
+    "additional_cart_drawer_text": "Our popular items tend to sell out often, complete your purchase now to ensure availability.  Free Gift on orders $250+ will automatically be shipped with your order.",
+    "cart_notice": "Orders Placed Today ship within 1 business day.",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
-    "discount_promo_bar": true,
+    "discount_promo_bar": false,
     "cart_rebuy": true,
     "checkout_logo_image": "shopify://shop_images/Bleusalt-Logo_618af57d-bdc6-4525-ae3d-32496e1dfb5c.png",
     "checkout_logo_position": "center",
@@ -66,6 +70,13 @@
               "link": "shopify://collections/the-bleusalt-collection"
             }
           },
+          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c": {
+            "type": "announcement",
+            "settings": {
+              "text": "Holiday Returns through 1/10/26",
+              "link": "shopify://pages/help"
+            }
+          },
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c": {
             "type": "announcement",
             "settings": {
@@ -80,13 +91,6 @@
               "link": "shopify://policies/shipping-policy"
             }
           },
-          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c": {
-            "type": "announcement",
-            "settings": {
-              "text": "Get The Bleusalt App for Special Savings & In-App Exclusives",
-              "link": "shopify://pages/download-the-bleusalt-app"
-            }
-          },
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
@@ -97,9 +101,9 @@
         },
         "block_order": [
           "336f71c7-6dea-48b7-8135-be37d2e09472",
+          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c",
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327",
-          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "announcement-bar-0"
         ],
         "custom_css": [],
@@ -116,12 +120,14 @@
         "custom_css": [],
         "settings": {
           "below_logo": true,
-          "color_scheme": "inverse",
-          "logo": "shopify://shop_images/bleusalt-site-logo-usa-black_971958f1-9ca0-4e77-b53b-56ba97aef361.svg",
+          "color_scheme": "accent-1",
+          "logo": "shopify://shop_images/site-logo.svg",
+          "white_logo": "shopify://shop_images/site-logo-white.svg",
           "logo_width": 160,
           "logo_position": "middle-center",
           "menu": "main-menu-2022",
           "menu_mobile": "main-menu-2022",
+          "download_button": true,
           "menu_type_desktop": "mega",
           "no_full_megamenu": true,
           "show_line_separator": true,
@@ -138,7 +144,7 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt HQ</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
+              "subtext": "<span class=\"visuallyhideen\">Address</span>\n<p>The Malibu Country Mart</p>\n<p>Bleusalt Flagship</p>\n<p>3835 Cross Creek Rd -19</p>\n<p>Malibu, California 90265</p>\n\n<p> </p><p>For Customer Service Call: <a aria-label=\"call us on, +18666086490\" href=\"tel:+18666086490\">(866) 608-6490</a></p>\n<p>Mon - Fri 8am - 4:30pm PST</p>",
               "show_logo": true
             }
           },
@@ -419,6 +425,110 @@
           "discount_bar_text": "#ffffff",
           "discount_bar_bg": "#0d1c29"
         }
+      },
+      "collection-banner-womens": {
+        "type": "collection-banner-womens",
+        "blocks": {
+          "block_7GNrA9": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-tops",
+              "title": "Tops"
+            }
+          },
+          "block_fgLVyW": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-bottoms",
+              "title": "Bottoms"
+            }
+          },
+          "block_bC6iXz": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-dresses",
+              "title": "Dresses"
+            }
+          },
+          "block_br3ERt": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-accessories-outerwear",
+              "title": "Accessories"
+            }
+          },
+          "block_J3JbNG": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-new-arrivals",
+              "title": "New Arrivals"
+            }
+          },
+          "block_4XfKyJ": {
+            "type": "block",
+            "settings": {
+              "collection": "womens-best-sellers",
+              "title": "Best Sellers"
+            }
+          }
+        },
+        "block_order": [
+          "block_7GNrA9",
+          "block_fgLVyW",
+          "block_bC6iXz",
+          "block_br3ERt",
+          "block_J3JbNG",
+          "block_4XfKyJ"
+        ],
+        "settings": {}
+      },
+      "collection-banner-mens": {
+        "type": "collection-banner-mens",
+        "blocks": {
+          "block_HQFhEQ": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-tops",
+              "title": "Tops"
+            }
+          },
+          "block_KhQG8y": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-bottoms",
+              "title": "Bottoms"
+            }
+          },
+          "block_czpwDN": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-accessories",
+              "title": "Accessories"
+            }
+          },
+          "block_pKcpjw": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-new-arrivals",
+              "title": "New Arrivals"
+            }
+          },
+          "block_PYmKnC": {
+            "type": "block",
+            "settings": {
+              "collection": "mens-best-sellers",
+              "title": "Best Sellers"
+            }
+          }
+        },
+        "block_order": [
+          "block_HQFhEQ",
+          "block_KhQG8y",
+          "block_czpwDN",
+          "block_pKcpjw",
+          "block_PYmKnC"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
@@ -441,11 +551,6 @@
       "10864971697205422121": {
         "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": true,
-        "settings": {}
-      },
-      "10641372206048101839": {
-        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-        "disabled": false,
         "settings": {}
       },
       "15685250022964305326": {
@@ -478,13 +583,18 @@
         "disabled": false,
         "settings": {}
       },
-      "11809892702313333283": {
-        "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-header/347a2e4c-f5cb-410d-8354-490d1e80558c",
+      "6279071938380501511": {
+        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {}
       },
-      "6279071938380501511": {
-        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+      "5017882195547572635": {
+        "type": "shopify://apps/sc-easy-redirects/blocks/app/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {}
+      },
+      "14724428607702905366": {
+        "type": "shopify://apps/webrex-ai-seo-optimizer/blocks/webrexSeoEmbed/b26797ad-bb4d-48f5-8ef3-7c561521049c",
         "disabled": false,
         "settings": {}
       },
@@ -492,6 +602,13 @@
         "type": "shopify://apps/wair-size-fit-recommendation/blocks/app-embed/68b6dfc9-7d29-46dc-8820-cbcd3543e806",
         "disabled": false,
         "settings": {}
+      },
+      "15426571166493967512": {
+        "type": "shopify://apps/loudcrowd/blocks/embed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
+        "disabled": false,
+        "settings": {
+          "lc_secret": ""
+        }
       }
     }
   },

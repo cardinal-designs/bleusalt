@@ -27,6 +27,14 @@
     }
   {%- endstyle -%}
 
+  {% if product.options.size > 1 %}
+    {% style %}
+      .product-form__submit[data-join-list] {
+        display: block !important;
+      }
+    {% endstyle %}
+  {% endif %}
+
 {% assign sizing_popups = 'Sizing Guide,Measuring Guide' | split: ',' %}
 
   <script defer src="{{ 'product-form.js' | asset_url }}"></script>
@@ -51,6 +59,9 @@
     for option in product.options_with_values
       if option.name == "Color"
         assign selected_color = option.selected_value
+      endif
+      if option.name == "Size"
+        assign selected_size = option.selected_value
       endif
     endfor
     for tag in product.tags 
@@ -104,21 +115,63 @@
               endif
             -%}
             {%- for media in product.media -%}
-              {%- assign media_color =  media.alt | split: ' | ' | first -%}
+              {%- assign media_parts = media.alt | split: ' | ' -%}
+
+              {%- if media_parts.size == 3 -%}
+                {%- assign media_color = media_parts[0] | strip -%}
+                {%- assign media_size  = media_parts[1] | strip -%}
+              {%- elsif media_parts.size == 2 -%}
+                {%- assign media_color = media_parts[0] | strip -%}
+                {%- assign media_size  = "" -%}
+              {%- endif -%}
+
+              {%- assign has_color_option = false -%}
+              {%- assign has_size_option  = false -%}
+              
+              {%- if product.options_by_name['Color'] -%}
+                {%- assign has_color_option = true -%}
+              {%- endif -%}
+              
+              {%- if product.options_by_name['Size'] -%}
+                {%- assign has_size_option = true -%}
+              {%- endif -%}
+              
+              {%- assign hide_image = false -%}
+              
+              {%- if has_color_option and has_size_option -%}
+                {%- if media_color != selected_color and media_size != selected_size -%}
+                  {%- assign hide_image = true -%}
+                {%- endif -%}
+              {%- elsif has_color_option and has_size_option == false -%}
+                {%- if media_color != selected_color -%}
+                  {%- assign hide_image = true -%}
+                {%- endif -%}
+              {%- elsif has_color_option == false and has_size_option -%}
+                {%- if media_size != selected_size -%}
+                  {%- assign hide_image = true -%}
+                {%- endif -%}
+              {%- endif -%}
+
               {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
                 <div 
                   class="swiper-slide product__main-image {% if section.settings.enable_zoom %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
                   data-filter="{{ media_color  }}"
-                  {% if media_color != selected_color and product.options_by_name['Color'].values.size > 1 %}  style="display: none;"
-                  {% endif %} 
+                  data-size="{{ media_size }}"
+                  {% if hide_image %} style="display: none;" {% endif %} 
                   {% if section.settings.enable_zoom %}
                     data-bg="{{ media.preview_image | image_url: width: 2000 }}"
                   {% endif %}
                 >
                   {% case media.media_type %}
                     {% when 'image' %}
-                      {% render 'image-element', image: media.preview_image %}
-                    {% when 'video'%}
+                      {%- liquid
+                      assign prioritize_loading = false
+                      if hide_image == false
+                        assign prioritize_loading = true
+                      endif
+                    -%}
+                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
+                  {% when 'video'%}
                       {% assign ratio =  1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                       <div class="media" style="padding-top:{{ ratio }}%;">
                         {{ media | video_tag: autoplay: true, playsinline: true, loop: true, autoplay: true, muted: true, controls: false }}
@@ -131,19 +184,62 @@
           {%- comment -%} Desktop Images (no slider) {%- endcomment -%}
           <div class="product__gallery small-hide">
             {%- for media in product.media -%}
-              {%- assign media_color = media.alt | split: ' | ' | first -%}
+              {%- assign media_parts = media.alt | split: ' | ' -%}
+
+              {%- if media_parts.size == 3 -%}
+                {%- assign media_color = media_parts[0] | strip -%}
+                {%- assign media_size  = media_parts[1] | strip -%}
+              {%- elsif media_parts.size == 2 -%}
+                {%- assign media_color = media_parts[0] | strip -%}
+                {%- assign media_size  = "" -%}
+              {%- endif -%}
+
+              {%- assign has_color_option = false -%}
+              {%- assign has_size_option  = false -%}
+              
+              {%- if product.options_by_name['Color'] -%}
+                {%- assign has_color_option = true -%}
+              {%- endif -%}
+              
+              {%- if product.options_by_name['Size'] -%}
+                {%- assign has_size_option = true -%}
+              {%- endif -%}
+              
+              {%- assign hide_image = false -%}
+              
+              {%- if has_color_option and has_size_option -%}
+                {%- if media_color != selected_color and media_size != selected_size -%}
+                  {%- assign hide_image = true -%}
+                {%- endif -%}
+              {%- elsif has_color_option and has_size_option == false -%}
+                {%- if media_color != selected_color -%}
+                  {%- assign hide_image = true -%}
+                {%- endif -%}
+              {%- elsif has_color_option == false and has_size_option -%}
+                {%- if media_size != selected_size -%}
+                  {%- assign hide_image = true -%}
+                {%- endif -%}
+              {%- endif -%}
+
               {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+
               <div 
                 class="product__main-image {% if section.settings.enable_zoom and media.media_type != 'video' %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
-                data-filter="{{ media_color }}"
-                {% if media_color != selected_color and product.options_by_name['Color'].values.size > 1 %} style="display: none;" {% endif %} 
+                data-filter="{{ media_color }}" data-size="{{ media_size }}"
+                {% if hide_image %} style="display: none;" {% endif %} 
                 {% if section.settings.enable_zoom and media.media_type != 'video' %}
                   data-bg="{{ media.preview_image | image_url: width: 2000 }}"
                 {% endif %}
               >
                 {% case media.media_type %}
                   {% when 'image' %}
-                    {% render 'image-element', image: media.preview_image %}
+                    {%- liquid
+                      assign prioritize_loading = false
+                      if hide_image == false
+                        assign prioritize_loading = true
+                      endif
+                    -%}
+                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
                   {% when 'video' %}
                     {% assign ratio = 1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                     <div class="media" style="padding-top:{{ ratio }}%;">
@@ -281,14 +377,27 @@
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
-
-            <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-              <details id="Details-{{ block.id }}-{{ section.id }}" {% if first_tab %}open{% endif %}>
-                <summary>
-                  <div class="summary__title">
-                    <h2 class="h4 accordion__title">
-                      {{ block.settings.heading | default: block.settings.page.title }}
-                    </h2>
+            {%- liquid 
+              if block.settings.use_product_description
+                assign content = product.description | split: block.settings.product_description_split_value
+                assign content = content[block.settings.product_description_index]
+              endif 
+            -%}
+            {% if block.settings.content != blank or block.settings.page.content != blank or content != blank %}
+              <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                <details id="Details-{{ block.id }}-{{ section.id }}" {% if first_tab %}open{% endif %}>
+                  <summary>
+                    <div class="summary__title">
+                      <h2 class="h4 accordion__title">
+                        {{ block.settings.heading | default: block.settings.page.title }}
+                      </h2>
+                    </div>
+                    {% render 'icon-caret' %}
+                  </summary>
+                  <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                    {{ content }}
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
                   </div>
                   {% render 'icon-caret' %}
                 </summary>
@@ -316,6 +425,7 @@
               </details>
             </div>
             {%- assign first_tab = false -%}
+
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
@@ -383,7 +493,28 @@
               </details>
             </share-button>
             <script defer src="{{ 'share.min.js' | asset_url }}"></script>
-          {%- when 'variant_picker' -%}
+          {%- when 'similar_product' -%}
+            {% if block.settings.similar_product != blank %}
+            <div class="button_flex-container">
+              <button class="button">
+                {% if product.title contains 'Lite' %}
+                  Lite Fabric
+                {% else %}
+                  Signature Fabric
+                {% endif %}
+              </button>
+              <a href="{{ block.settings.similar_product.url }}">
+                <button class="button">
+                  {% if block.settings.similar_product.title contains 'Lite' %}
+                    Lite Fabric
+                  {% else %}
+                    Signature Fabric
+                  {% endif %}
+                </button>
+              </a>
+            </div>
+          {% endif %}
+          {%- when 'variant_picker' -%}         
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -424,9 +555,24 @@
                                   form="{{ product_form_id }}"
                                   {% if option.selected_value == value %}checked{% endif %}
                             >
-                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ swatch_url }});"{% endif %}>
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ swatch_url }});background-size: 3.0rem;"{% endif %}>
                               <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
-                                {{ value }}
+                                {% if option.name == 'Size' %}
+                                  {% liquid
+                                    assign size_text = value
+                                    assign size_conversion_arr = settings.variant_pills_size_conversions | newline_to_br | split: '<br />'
+                                    for size_conversion in size_conversion_arr
+                                      assign size_split = size_conversion | split: '/'
+                                      assign size_number = size_split[0] | strip
+                                      if size_number == value
+                                        assign size_text = value | append: ' / ' | append: size_split[1]
+                                      endif
+                                    endfor
+                                  %}
+                                  {{ size_text }}
+                                {% else %}
+                                  {{ value }}
+                                {% endif %}
                               </span>
                             </label>
                           </div>
@@ -1127,6 +1273,18 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        }
+      ]
+    },
+    {
+      "type": "similar_product",
+      "name": "Similar Product",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product",
+          "id": "similar_product",
+          "label": "Show Similar Product buttons (metafield)?"
         }
       ]
     },

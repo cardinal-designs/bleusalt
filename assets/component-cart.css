@@ -197,6 +197,27 @@ cart-items {
   text-align: center;
 }
 
+.cart-text__additional {
+  max-width: 360px;
+  margin: 10px auto 0;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.cart__cart-link {
+  margin-top: 5px;
+  display: block;
+  color: rgb(var(--color-foreground));
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.cart__notice {
+  margin: 5px 0 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 @media screen and (min-width: 750px) {
   .cart-note {
     max-width: 35rem;

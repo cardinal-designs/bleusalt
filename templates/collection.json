@@ -9,6 +9,63 @@
  */
 {
   "sections": {
+    "collection_banner_akUkh6": {
+      "type": "collection-banner",
+      "blocks": {
+        "block_jYTjY6": {
+          "type": "block",
+          "settings": {
+            "collection": "womens-tops",
+            "title": "Tops"
+          }
+        },
+        "block_PDa4CD": {
+          "type": "block",
+          "settings": {
+            "collection": "womens-bottoms",
+            "title": "Bottoms"
+          }
+        },
+        "block_XGemLQ": {
+          "type": "block",
+          "settings": {
+            "collection": "womens-dresses",
+            "title": "Dresses"
+          }
+        },
+        "block_F9yKdn": {
+          "type": "block",
+          "settings": {
+            "collection": "womens-accessories-outerwear",
+            "title": "Accessories"
+          }
+        },
+        "block_VAmUXb": {
+          "type": "block",
+          "settings": {
+            "collection": "womens-new-arrivals",
+            "title": "New Arrivals"
+          }
+        },
+        "block_dpCeL3": {
+          "type": "block",
+          "settings": {
+            "collection": "womens-best-sellers",
+            "title": "Best Sellers"
+          }
+        }
+      },
+      "block_order": [
+        "block_jYTjY6",
+        "block_PDa4CD",
+        "block_XGemLQ",
+        "block_F9yKdn",
+        "block_VAmUXb",
+        "block_dpCeL3"
+      ],
+      "name": "Collection Banner",
+      "settings": {}
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -89,20 +146,38 @@
         "padding_bottom": 36
       }
     },
+    "17562293552938ec51": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_TKwzAh": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_TKwzAh"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
     "1660937591af29c294": {
       "type": "rich-text",
       "blocks": {
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth</span>.</p>",
             "heading_size": "h1"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -133,8 +208,10 @@
     }
   },
   "order": [
+    "collection_banner_akUkh6",
     "banner",
     "product-grid",
+    "17562293552938ec51",
     "1660937591af29c294"
   ]
 }

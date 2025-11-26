@@ -1,0 +1,92 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "app_blocks_section": {
+      "type": "apps",
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "17545987092ede07cf": {
+      "type": "apps",
+      "blocks": {
+        "loudcrowd_ambassador_featured_product_byAK9A": {
+          "type": "shopify://apps/loudcrowd/blocks/ambassador-featured-product/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
+          "settings": {
+            "sizeMarginTop": 0,
+            "sizeMarginBottom": 0,
+            "fontSizeTitle": 0,
+            "fontSizeSubtitle": 0,
+            "aspectRatio": "square",
+            "customContainerCss": "",
+            "shareButtonColor": "#ffffff",
+            "shareButtonBackgroundColor": "#000000",
+            "buyButtonColor": "#ffffff",
+            "buyButtonBackgroundColor": "#000000",
+            "buttonCallToAction": "BUY NOW"
+          }
+        },
+        "loudcrowd_ambassador_hero_v2_zni9xi": {
+          "type": "shopify://apps/loudcrowd/blocks/ambassador-hero-v2/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
+          "settings": {
+            "bannerBackgroundColor": "#0d1c29",
+            "collapsed": false,
+            "bioButtonFontSize": 1,
+            "shareButtonBorderRadious": 5,
+            "cancelBioButtonFontColor": "#000000",
+            "cancelBioButtonBackgroundColor": "#ffffff",
+            "saveBioButtonFontColor": "#ffffff",
+            "saveBioButtonBackgroundColor": "#23395b"
+          }
+        },
+        "loudcrowd_ambassador_feed_gDVG6e": {
+          "type": "shopify://apps/loudcrowd/blocks/ambassador-feed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
+          "settings": {
+            "primaryBrandColor": "#23395b",
+            "productPickerBackgroundColor": "#ffffff",
+            "titleTextColor": "#121212",
+            "secondaryTextColor": "#4a4a4a",
+            "heartIconColor": "#121212",
+            "pinEditProductsButton": false,
+            "showProductBrands": false,
+            "addToCartButton": "hidden",
+            "addToCartButtonLabel": "Add To Basket",
+            "discountPriceColor": "#e51010",
+            "priceColor": "#121212",
+            "titleTextSize": 0.9,
+            "titleTextWeight": 500,
+            "priceTextSize": 0.9,
+            "priceTextWeight": 400,
+            "cardBorderRadius": 0,
+            "productCardBackgroundOpacity": 0,
+            "hideDiscountCard": false,
+            "discountCardBackgroundColor": "#212121",
+            "discountCardFontColor": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "loudcrowd_ambassador_featured_product_byAK9A",
+        "loudcrowd_ambassador_hero_v2_zni9xi",
+        "loudcrowd_ambassador_feed_gDVG6e"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "app_blocks_section",
+    "17545987092ede07cf"
+  ]
+}

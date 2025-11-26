@@ -420,10 +420,6 @@ cart-drawer-items .cart-item__quantity-wrapper {
   justify-content: space-between;
 }
 
-cart-drawer-items .cart-item__quantity-wrapper .quantity {
-  visibility: hidden;
-}
-
 .wear-with__desktop {
   display: flex;
   position: absolute;

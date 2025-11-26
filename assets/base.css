@@ -2253,10 +2253,6 @@ input[type='checkbox'] {
 }
 
 #shopify-section-announcement-bar .swiper {
-  opacity: 0;
-}
-
-#shopify-section-announcement-bar .swiper-initialized {
   opacity: 1;
 }
 
@@ -3309,7 +3305,7 @@ details-disclosure > details {
   color: #424242 !important;
 }
 *:focus {
-  outline: 2px dashed #323232 !important;
+  /* outline: 2px dashed #323232 !important; */
 }
 *:focus:not(:focus-visible) { 
   outline: none !important; 

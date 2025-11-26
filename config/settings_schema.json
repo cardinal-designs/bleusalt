@@ -145,6 +145,17 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Hero Font"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_hero_font",
+        "default": "assistant_n4",
+        "label": "Video Hero Font",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
       }
     ]
   },
@@ -287,6 +298,11 @@
   {
     "name": "t:settings_schema.variant_pills.name",
     "settings": [
+      {
+        "type": "textarea",
+        "id": "variant_pills_size_conversions",
+        "label": "Size Conversions"
+      },
       {
         "type": "header",
         "content": "t:settings_schema.global.settings.header__border.content"
@@ -1235,6 +1251,16 @@
         "label": "Cart Drawer Text"
       },
       {
+        "type": "text",
+        "id": "additional_cart_drawer_text",
+        "label": "Additional Cart Drawer Text"
+      },
+      {
+        "type": "text",
+        "id": "cart_notice",
+        "label": "Cart Notice"
+      },
+      {
         "type": "number",
         "id": "free_shipping_threshold",
         "label": "Free Shipping Threshold"
@@ -1242,19 +1268,19 @@
       {
         "type": "checkbox",
         "id": "cart_promo_bar",
-        "label": "Enable cart promo bar?",
+        "label": "Enable Free Shipping Bar?",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "discount_promo_bar",
-        "label": "Enable cart discount bar?",
+        "label": "Enable Capsule Discount Bar?",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "cart_rebuy",
-        "label": "Enable Rebuy in cart?",
+        "label": "Enable Cart Recommendations?",
         "default": false
       }
     ]

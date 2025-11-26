@@ -57,20 +57,38 @@
         "padding_bottom": 36
       }
     },
+    "175640167526b29d0c": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_CfiXK9": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_CfiXK9"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
     "1660937591af29c294": {
       "type": "rich-text",
       "blocks": {
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth</span>.</p>",
             "heading_size": "h1"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http://127.0.0.1:9292/pages/materials\" title=\"Materials\">Learn more</a></p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -112,6 +130,7 @@
       "block_order": [
         "d2397f4b-4ca1-46bf-b4f0-93799cf5b7fa"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -137,6 +156,7 @@
         "firework_shoppable_video_ugc_firework_pro_embed_YVzn8K"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
@@ -144,6 +164,7 @@
   "order": [
     "banner",
     "product-grid",
+    "175640167526b29d0c",
     "1660937591af29c294",
     "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
     "1752693104d0ec3e08"

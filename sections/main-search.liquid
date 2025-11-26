@@ -16,6 +16,10 @@
     margin-bottom: 3rem;
   }
 
+  .template-search__header .search--empty {
+    display: none;
+  }
+
   .template-search__search {
     margin: 0 auto 3.5rem;
     max-width: 47.8rem;
@@ -27,12 +31,6 @@
 
   .template-search--empty {
     padding-bottom: 18rem;
-  }
-
-  @media screen and (min-width: 750px) {
-    .template-search__header {
-      margin-bottom: 5rem;
-    }
   }
 
   .search__button .icon {
@@ -130,7 +128,7 @@
         {%- endif -%}
       {%- endunless -%}
       {%- if search.results_count == 0 and search.filters == empty -%}
-        <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+        <p class="search--empty" role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
       {%- endif -%}
     {%- endif -%}
   </div>

@@ -247,7 +247,7 @@
 
   .close-announcement {
     right: 3px;
-    top: 18px;
+    top: 9px;
   }
 
   body .hc_cd.at_top .hc_cd_heading {
@@ -468,4 +468,8 @@
   border-radius: 3px !important;
 }
 
-
+html:not(.third-party-scripts-loaded) body.template--index [id*="nosto_nosto_placements_block"],
+html:not(.third-party-scripts-loaded) #shopify-pc__banner,
+html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
+  display: none !important;
+}

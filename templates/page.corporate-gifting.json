@@ -28,13 +28,13 @@
           "type": "heading",
           "settings": {
             "heading": "<p>Bleusalt Corporate Gifting</p>",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "text_g4V4mQ": {
           "type": "text",
           "settings": {
-            "text": "<p>Timeless. Sizeless. Effortless Luxury.</p>"
+            "text": "<p><em>Timeless. Sizeless. Effortless Luxury.</em></p>"
           }
         },
         "heading_F4MepD": {
@@ -117,6 +117,39 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_KaNKmy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jANkrP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Bleusalt Experience</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_4wRbmU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Corporate gifting with Bleusalt is effortless and elevated. Whether you're sending a single gift or hundreds, our team will guide you through every step, offering creative ideas and concierge-level service to help you create an unforgettable gesture.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jANkrP",
+        "text_4wRbmU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_dk6JdV": {
       "type": "image-with-text",
       "blocks": {
@@ -139,6 +172,7 @@
         "heading_ENQ8mp",
         "text_7w7mxA"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text {max-width: 1200px;}"
       ],
@@ -342,8 +376,43 @@
       "block_order": [
         "powerful_form_builder_app_block_gPT9rE"
       ],
+      "custom_css": [],
       "settings": {
+        "custom_class": "",
         "include_margins": true
+      }
+    },
+    "rich_text_cKkRWw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_y4Beib": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bleusalt Corporate & Wholesale Return Policy</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_YRTBG6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Bleusalt, we are committed to offering an elevated, seamless experience for our corporate and wholesale partners. Our policy is designed to ensure clarity and peace of mind while protecting the integrity of our bespoke creations.</p><h3>Custom & Corporate Orders</h3><p>All customized corporate orders—including embroidery, monogramming, specialty packaging, or made-to-order styles—are considered Final Sale. Each order is crafted uniquely and exclusively, reflecting the client’s vision, and therefore cannot be resold.</p><h3>Quality Guarantee</h3><p>We stand behind the craftsmanship of every Bleusalt piece. In the rare event that an item arrives with a manufacturing defect or is damaged in transit, we will promptly replace or repair the affected items at no cost. This assurance underscores our dedication to exceptional quality.</p><h3>Non-Custom Wholesale Orders</h3><p>For non-custom bulk orders, returns may be accepted within 30 days of delivery, provided the items remain unused, in their original condition, and in original packaging. Such returns are subject to a 15% restocking fee. As an alternative, we are pleased to offer exchanges or store credit.</p><h3>Our Commitment</h3><p>Our goal is to make every corporate and wholesale order a premium experience that reflects the values of Bleusalt: elegance, integrity, and care. We look forward to creating lasting partnerships built on trust and excellence.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_y4Beib",
+        "text_YRTBG6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -351,12 +420,14 @@
     "main",
     "rich_text_aMrPbY",
     "rich_text_XwGMxX",
+    "rich_text_KaNKmy",
     "image_with_text_dk6JdV",
     "image_with_text_JRfzHY",
     "image_with_text_FRjnUQ",
     "image_with_text_HCF48T",
     "rich_text_hzaCpn",
     "custom_liquid_88JTXy",
-    "17529574500028a36f"
+    "17529574500028a36f",
+    "rich_text_cKkRWw"
   ]
 }

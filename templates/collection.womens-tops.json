@@ -59,21 +59,27 @@
     },
     "1734416630f7a21117": {
       "type": "apps",
+      "disabled": true,
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "17562306089958ff32": {
+      "type": "apps",
       "blocks": {
-        "rebuy_personalization_engine_rebuy_widget_CGFKUN": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+        "nosto_nosto_placements_block_GTRpWj": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
-            "enabled": true,
-            "id": "{{ collection.metafields.custom.rebuy_widget_id.value }}",
-            "product_id_enabled": true,
-            "collection_id_enabled": true
+            "placement": "categorypage-nosto-1"
           }
         }
       },
       "block_order": [
-        "rebuy_personalization_engine_rebuy_widget_CGFKUN"
+        "nosto_nosto_placements_block_GTRpWj"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     },
@@ -83,14 +89,14 @@
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.</p>",
+            "heading": "<p>Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth</span>.</p>",
             "heading_size": "h1"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"http://127.0.0.1:9292/pages/materials\" title=\"Materials\">Learn more</a></p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on Earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -147,6 +153,7 @@
         "heading_6iA4DF",
         "text_WtDcDf"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -221,7 +228,7 @@
         "text_block_V8CnNA"
       ],
       "custom_css": [
-        "ul {text-align: center; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center;}"
+        "ul {font-family: inherit; text-align: center; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center;}"
       ],
       "name": "FAQ NEW",
       "settings": {
@@ -243,6 +250,7 @@
         "firework_shoppable_video_ugc_firework_pro_embed_6WYePa"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
@@ -251,6 +259,7 @@
     "banner",
     "product-grid",
     "1734416630f7a21117",
+    "17562306089958ff32",
     "1660937591af29c294",
     "aa41b3b6-ee72-40cb-9596-20aee70eed9b",
     "faq_new_VxmFhr",

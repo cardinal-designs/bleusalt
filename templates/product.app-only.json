@@ -69,7 +69,7 @@
         "3cbca740-3858-4794-a06d-86306c2065df": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Material",
+            "heading": "Fabric & Care",
             "use_product_description": true,
             "product_description_split_value": "<!--split-->",
             "product_description_index": 1,
@@ -92,6 +92,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "show_breadcrumb": false,
         "gallery_layout": "thumbnail",
         "media_size": "small",
         "mobile_thumbnails": "hide",
@@ -201,7 +202,7 @@
     "1662737421ca8ebddf": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{{ shop.metafields.okendo.ReviewsWidgetStyleTag }}\n    {{ shop.metafields.okendo.StyleCustomizations }}\n<div class=\"page-width\"><div class=\"okeReviews-widget-holder\" data-oke-reviews-widget-holder data-oke-reviews-product-id=\"shopify-{{ product.id }}\">\n  <div data-oke-reviews-nav-bar><\/div>\n  <div data-oke-reviews-widget>{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}<\/div>\n  <div data-oke-reviews-qanda><\/div>\n<\/div><\/div>",
+        "custom_liquid": "{{ shop.metafields.okendo.ReviewsWidgetStyleTag }}\n    {{ shop.metafields.okendo.StyleCustomizations }}\n<div class=\"page-width\"><div class=\"okeReviews-widget-holder\" data-oke-reviews-widget-holder data-oke-reviews-product-id=\"shopify-{{ product.id }}\">\n  <div data-oke-reviews-nav-bar></div>\n  <div data-oke-reviews-widget>{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>\n  <div data-oke-reviews-qanda></div>\n</div></div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52

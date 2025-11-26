@@ -89,7 +89,7 @@
         "3cbca740-3858-4794-a06d-86306c2065df": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Material",
+            "heading": "Fabric & Care",
             "use_product_description": true,
             "product_description_split_value": "<!--split-->",
             "product_description_index": 1,
@@ -287,32 +287,6 @@
     },
     "17436175840c1ee6c6": {
       "type": "apps",
-      "blocks": {
-        "trynow_try_before_you_buy_trynow_cta_button_JHY4EP": {
-          "type": "shopify://apps/trynow-try-before-you-buy/blocks/trynow-cta-button/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
-          "settings": {
-            "button_title": "Try Before You Buy",
-            "cta_button_custom_css": "",
-            "button_classes": "",
-            "button_margin": "0px 0px 5px 0px",
-            "description": "Try up to [cart_limit_suggested_cart_size] items at home for [trial_period] days",
-            "description_font_size": 12,
-            "view_collection_text": "View TryNow collection",
-            "collection": "",
-            "add_to_cart_container_selector": "",
-            "gated_toggle_font_size": 12,
-            "gated_toggle_size": 0.7,
-            "logo_color": "black",
-            "logo_vertical_alignment": 1,
-            "logo_horizontal_alignment": 0,
-            "logo_width": 46,
-            "autoposition": true
-          }
-        }
-      },
-      "block_order": [
-        "trynow_try_before_you_buy_trynow_cta_button_JHY4EP"
-      ],
       "settings": {
         "include_margins": true
       }
