@@ -1311,22 +1311,6 @@
         "default": "#121212"
       },
       {
-        "type": "color",
-        "id": "gwp_bar_divider_color",
-        "label": "Divider Color",
-        "default": "#121212"
-      },
-      {
-        "type": "range",
-        "id": "gwp_bar_divider_thickness",
-        "min": 1,
-        "max": 5,
-        "step": 1,
-        "unit": "px",
-        "label": "Divider Thickness",
-        "default": 2
-      },
-      {
         "type": "header",
         "content": "GWP Items"
       },
