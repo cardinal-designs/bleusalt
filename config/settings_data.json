@@ -60,7 +60,7 @@
     "gwp_item_1_threshold": 100,
     "gwp_item_1_product": "the-signature-wraps",
     "gwp_item_2_text": "Free The Signature Wraps",
-    "gwp_item_2_threshold": 300,
+    "gwp_item_2_threshold": 0,
     "gwp_item_2_product": "the-signature-wraps",
     "gwp_item_3_text": "Free Lite Wraps",
     "gwp_item_3_threshold": 400,
