@@ -1,0 +1,196 @@
+{% comment %}
+  Renders GWP (Gift With Purchase) Upsell Widget
+  
+  Shows when cart total meets threshold and allows variant selection
+  
+  Usage:
+  {% render 'cart-gwp-upsell' %}
+{% endcomment %}
+
+{% assign item_1_threshold = settings.gwp_item_1_threshold | times: 1.0 %}
+{% assign item_2_threshold = settings.gwp_item_2_threshold | times: 1.0 %}
+{% assign item_3_threshold = settings.gwp_item_3_threshold | times: 1.0 %}
+
+{% assign gwp_product_1 = all_products[settings.gwp_item_1_product] %}
+{% assign gwp_product_2 = all_products[settings.gwp_item_2_product] %}
+{% assign gwp_product_3 = all_products[settings.gwp_item_3_product] %}
+
+{%- if settings.enable_gwp_bar -%}
+  {%- liquid
+    assign current_total = cart.total_price | divided_by: 100.0
+    
+    comment
+      Check which GWP items are available based on thresholds
+    endcomment
+    
+    assign show_gwp_1 = false
+    assign show_gwp_2 = false
+    assign show_gwp_3 = false
+    
+    if settings.gwp_item_1_product != blank
+      if item_1_threshold > 0 and current_total >= item_1_threshold
+        assign gwp_in_cart_1 = false
+        for item in cart.items
+          if item.product_id == gwp_product_1.id and item.properties._gwp == 'true'
+            assign gwp_in_cart_1 = true
+            break
+          endif
+        endfor
+        unless gwp_in_cart_1
+          assign show_gwp_1 = true
+        endunless
+      endif
+    endif
+    
+    if settings.gwp_item_2_product != blank
+      if item_2_threshold > 0 and current_total >= item_2_threshold
+        
+        if gwp_product_2 != blank
+          assign gwp_in_cart_2 = false
+          for item in cart.items
+            if item.product_id == gwp_product_2.id and item.properties._gwp == 'true'
+              assign gwp_in_cart_2 = true
+              break
+            endif
+          endfor
+          unless gwp_in_cart_2
+            assign show_gwp_2 = true
+          endunless
+        endif
+      endif
+    endif
+    
+    if settings.gwp_item_3_product != blank
+      if item_3_threshold > 0 and current_total >= item_3_threshold
+        assign gwp_in_cart_3 = false
+        for item in cart.items
+          if item.product_id == gwp_product_3.id and item.properties._gwp == 'true'
+            assign gwp_in_cart_3 = true
+            break
+          endif
+        endfor
+        unless gwp_in_cart_3
+          assign show_gwp_3 = true
+        endunless
+      endif
+    endif
+  -%}
+ 
+  {%- if show_gwp_1 or show_gwp_2 or show_gwp_3 -%}
+    <div class="gwp-upsell" data-cart-total="{{ current_total }}">
+      {%- if show_gwp_1 -%}
+        <div class="gwp-upsell__item" data-product-id="{{ gwp_product_1.id }}" data-threshold="{{ item_1_threshold }}" data-gwp-item="1">
+          <div class="gwp-upsell__content">
+            {%- if gwp_product_1.featured_image -%}
+              <div class="gwp-upsell__image">
+                <a href="{{gwp_product_1.url}}">
+                  <img src="{{ gwp_product_1.featured_image | image_url: width: 120 }}" 
+                       alt="{{ gwp_product_1.title | escape }}" 
+                       class="gwp-upsell__product-image"
+                       loading="lazy"
+                       width="120"
+                       height="{{ 120 | divided_by: gwp_product_1.featured_image.aspect_ratio | ceil }}">
+                </a>
+              </div>
+            {%- endif -%}
+            <div class="gwp-upsell__details">
+              <a class="cart-item__name h4 break" href="{{gwp_product_1.url}}">{{gwp_product_1.title}}</a>
+              {%- if gwp_product_1.variants.size > 1 -%}
+                <div class="gwp-upsell__variants">
+                  <select class="gwp-upsell__variant-select" data-product-id="{{ gwp_product_1.id }}">
+                    {%- for variant in gwp_product_1.variants -%}
+                      <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                        {{ variant.title }} {% unless variant.available %}(Sold out){% endunless %}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
+              {%- else -%}
+                <input type="hidden" class="gwp-upsell__variant-select" value="{{ gwp_product_1.first_available_variant.id }}" data-product-id="{{ gwp_product_1.id }}">
+              {%- endif -%}
+              <button type="button" class="gwp-upsell__add-button button" data-product-id="{{ gwp_product_1.id }}" data-variant-id="{{ gwp_product_1.selected_or_first_available_variant.id }}" data-threshold="{{ item_1_threshold }}">
+                <span class="gwp-upsell__button-text">ADD FREE GIFT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+      
+      {%- if show_gwp_2 -%}
+        <div class="gwp-upsell__item" data-product-id="{{ gwp_product_2.id }}" data-threshold="{{ item_2_threshold }}" data-gwp-item="2">
+          <div class="gwp-upsell__content">
+            {%- if gwp_product_2.featured_image -%}
+              <div class="gwp-upsell__image">
+                <a href="{{gwp_product_2.url}}">
+                  <img src="{{ gwp_product_2.featured_image | image_url: width: 120 }}" 
+                        alt="{{ gwp_product_2.title | escape }}" 
+                        class="gwp-upsell__product-image"
+                        loading="lazy"
+                        width="120"
+                        height="{{ 120 | divided_by: gwp_product_2.featured_image.aspect_ratio | ceil }}">
+                </a>
+              </div>
+            {%- endif -%}
+            <div class="gwp-upsell__details">
+              <a class="cart-item__name h4 break" href="{{gwp_product_2.url}}">{{gwp_product_2.title}}</a>
+              {%- if gwp_product_2.variants.size > 1 -%}
+                <div class="gwp-upsell__variants">
+                  <select class="gwp-upsell__variant-select" data-product-id="{{ gwp_product_2.id }}">
+                    {%- for variant in gwp_product_2.variants -%}
+                      <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                        {{ variant.title }} {% unless variant.available %}(Sold out){% endunless %}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
+              {%- else -%}
+                <input type="hidden" class="gwp-upsell__variant-select" value="{{ gwp_product_2.first_available_variant.id }}" data-product-id="{{ gwp_product_2.id }}">
+              {%- endif -%}
+              <button type="button" class="gwp-upsell__add-button button" data-product-id="{{ gwp_product_2.id }}" data-variant-id="{{ gwp_product_2.selected_or_first_available_variant.id }}" data-threshold="{{ item_2_threshold }}">
+                <span class="gwp-upsell__button-text">ADD FREE GIFT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+      
+      {%- if show_gwp_3 -%}
+        <div class="gwp-upsell__item" data-product-id="{{ gwp_product_3.id }}" data-threshold="{{ item_3_threshold }}" data-gwp-item="3">
+          <div class="gwp-upsell__content">
+            {%- if gwp_product_3.featured_image -%}
+              <div class="gwp-upsell__image">
+                <a href="{{gwp_product_3.url}}">
+                <img src="{{ gwp_product_3.featured_image | image_url: width: 120 }}" 
+                     alt="{{ gwp_product_3.title | escape }}" 
+                     class="gwp-upsell__product-image"
+                     loading="lazy"
+                     width="120"
+                     height="{{ 120 | divided_by: gwp_product_3.featured_image.aspect_ratio | ceil }}">
+                </a>
+              </div>
+            {%- endif -%}
+            <div class="gwp-upsell__details">
+              <a class="cart-item__name h4 break" href="{{gwp_product_3.url}}">{{gwp_product_3.title}}</a>
+              {%- if gwp_product_3.variants.size > 1 -%}
+                <div class="gwp-upsell__variants">
+                  <select class="gwp-upsell__variant-select" data-product-id="{{ gwp_product_3.id }}">
+                    {%- for variant in gwp_product_3.variants -%}
+                      <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                        {{ variant.title }} {% unless variant.available %}(Sold out){% endunless %}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
+              {%- else -%}
+                <input type="hidden" class="gwp-upsell__variant-select" value="{{ gwp_product_3.first_available_variant.id }}" data-product-id="{{ gwp_product_3.id }}">
+              {%- endif -%}
+              <button type="button" class="gwp-upsell__add-button button" data-product-id="{{ gwp_product_3.id }}" data-variant-id="{{ gwp_product_3.selected_or_first_available_variant.id }}" data-threshold="{{ item_3_threshold }}">
+                <span class="gwp-upsell__button-text">ADD FREE GIFT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{%- endif -%}

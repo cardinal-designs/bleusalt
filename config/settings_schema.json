@@ -1286,6 +1286,94 @@
     ]
   },
   {
+    "name": "GWP",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Gift With Purchase Bar Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_gwp_bar",
+        "label": "Enable GWP Bar?",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "gwp_bar_icon_color",
+        "label": "Icon Color",
+        "default": "#121212"
+      },
+      {
+        "type": "color",
+        "id": "gwp_bar_text_color",
+        "label": "Text Color",
+        "default": "#121212"
+      },
+      {
+        "type": "header",
+        "content": "GWP Items"
+      },
+      {
+        "type": "text",
+        "id": "gwp_item_1_text",
+        "label": "GWP Item 1 Text",
+        "default": "Free Shipping"
+      },
+      {
+        "type": "number",
+        "id": "gwp_item_1_threshold",
+        "label": "GWP Item 1 Threshold ($)",
+        "default": 0,
+        "info": "Cart total in dollars needed to unlock this item"
+      },
+      {
+        "type": "product",
+        "id": "gwp_item_1_product",
+        "label": "GWP Item 1 Product",
+        "info": "Product to offer as free gift when threshold is met"
+      },
+      {
+        "type": "text",
+        "id": "gwp_item_2_text",
+        "label": "GWP Item 2 Text",
+        "default": "Free Scarf"
+      },
+      {
+        "type": "number",
+        "id": "gwp_item_2_threshold",
+        "label": "GWP Item 2 Threshold ($)",
+        "default": 300,
+        "info": "Cart total in dollars needed to unlock this item"
+      },
+      {
+        "type": "product",
+        "id": "gwp_item_2_product",
+        "label": "GWP Item 2 Product",
+        "info": "Product to offer as free gift when threshold is met"
+      },
+      {
+        "type": "text",
+        "id": "gwp_item_3_text",
+        "label": "GWP Item 3 Text",
+        "default": "Free Perfect T"
+      },
+      {
+        "type": "number",
+        "id": "gwp_item_3_threshold",
+        "label": "GWP Item 3 Threshold ($)",
+        "default": 0,
+        "info": "Cart total in dollars needed to unlock this item"
+      },
+      {
+        "type": "product",
+        "id": "gwp_item_3_product",
+        "label": "GWP Item 3 Product",
+        "info": "Product to offer as free gift when threshold is met"
+      }
+    ]
+  },
+  {
     "name": "Dev",
     "settings": [
       {

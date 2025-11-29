@@ -264,7 +264,7 @@
                         <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                           {{ 'products.product.quantity.label' | t }}
                         </label>
-                        <quantity-input class="quantity">
+                        <quantity-input class="quantity {% if item.properties._gwp == 'true' %}gwp-disabled-quantity{% endif %}">
                           <button class="quantity__button no-js-hidden" name="minus" type="button">
                             <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
                             {% render 'icon-minus' %}

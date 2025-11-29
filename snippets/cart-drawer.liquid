@@ -6,6 +6,7 @@
 {% endcomment %}
 
 <script defer src="{{ 'cart.js' | asset_url }}"></script>
+<script defer src="{{ 'gwp-cart.js' | asset_url }}"></script>
 
 <style>
   .drawer {
@@ -140,6 +141,10 @@
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
+              {% if settings.enable_gwp_bar %}
+                {% render 'cart-gwp-bar' %}
+              {% endif %}
+
               <div class="drawer__cart-items-wrapper" {% if cart == empty %}style="display: none;"{% endif %}>
                 <table class="cart-items">
                   <thead>
@@ -159,6 +164,7 @@
                     {% if shipping_percentage > 100 %}
                       {% assign shipping_percentage = 100 %}
                     {% endif %}
+                    
                     {% if settings.discount_promo_bar %}
                     <div class="discount-progress" id="discount-progress">
                       <div class="discount-progress__container">
@@ -185,6 +191,7 @@
                       </div>
                     </div>
                     {% endif %}
+
                     {% if settings.cart_promo_bar %}
                       <div class="cart-drawer-header-info"> 
                         {% if price_needed > 0 %}
@@ -405,7 +412,7 @@
 
                         <td class="cart-item__quantity" role="cell" headers="CartDrawer-ColumnQuantity">
                           <div class="cart-item__quantity-wrapper">
-                            <quantity-input class="quantity">
+                            <quantity-input class="quantity  {% if item.properties._gwp == 'true' %}gwp-disabled-quantity{% endif %}">
                               <button class="quantity__button no-js-hidden" name="minus" type="button">
                                 <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
                                 {% render 'icon-minus' %}

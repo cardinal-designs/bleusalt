@@ -159,12 +159,26 @@ class CartItems extends HTMLElement {
   
           this.disableLoading();
           (typeof window.BOLD !== 'undefined' && typeof window.BOLD.common !== 'undefined' && typeof window.BOLD.common.eventEmitter !== 'undefined' && typeof window.BOLD.common.eventEmitter.emit !== 'undefined' && (BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded')));
+          
         }).catch((error) => {
           console.log(error);
           this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
           const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
           errors.textContent = window.cartStrings.error;
           this.disableLoading();
+        }).finally(() => {
+          // Check GWP thresholds after cart update is complete
+          if (typeof GWPCartManager !== 'undefined') {
+            if (!window.gwpCartManager) {
+              window.gwpCartManager = new GWPCartManager();
+            }
+            if (window.gwpCartManager && typeof window.gwpCartManager.checkGWPThresholds === 'function') {
+              // Use setTimeout to ensure DOM updates are complete
+              setTimeout(() => {
+                window.gwpCartManager.checkGWPThresholds();
+              }, 100);
+            }
+          }
         });
     }else{
       this.disableLoading();
