@@ -8,6 +8,16 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Global",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "main_logo_image",
+        "label": "Store Logo"
+      }
+    ]
+  },
+  {
     "name": "Gift Card",
     "settings": [
       {

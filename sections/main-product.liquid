@@ -926,100 +926,31 @@
     {
       "@context": "http://schema.org/",
       "@type": "Product",
-      "name": {{ product.title | json }},
-      "url": {{ request.origin | append: product.url | json }},
-      {% if seo_media -%}
-        "image": [
-          {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
-        ],
+      "name": "{{ product.title }}",
+      "url": "{{ shop.url }}",
+      {% if product.images.size > 0 -%}
+      "image": [
+        {% for image in product.images -%}
+        "{{ image.src | img_url: 'master' }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
       {%- endif %}
-      "description": {{ product.description | strip_html | json }},
-      {% if product.selected_or_first_available_variant.sku != blank -%}
-        "sku": {{ product.selected_or_first_available_variant.sku | json }},
-      {%- endif %}
+      "description": "{{- product.description | strip_html -}}",
       "brand": {
         "@type": "Brand",
-        "name": {{ product.vendor | json }}
+        "name": "{{ product.vendor }}"
       },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 4,
-          "bestRating": 5
-        },
-        "author": {
-          "@type": "Person",
-          "name": "{{ shop.name }}"
-        }
-      },
-      {% if okendo_data.reviewCount > 0 %}
-      "aggregateRating": {
-      "@type": "AggregateRating",
-        "ratingValue": "{% if okendo_data.reviewAverageValue != blank %}{{ okendo_data.reviewAverageValue }}{% else %}5{% endif %}",
-        "reviewCount": "{% if okendo_data.reviewCount != blank %}{{ okendo_data.reviewCount }}{% else %}1{% endif %}"
-      },
-      {% endif %}
+      {% if product.selected_or_first_available_variant.sku != blank -%}
+      "sku": "{{ product.selected_or_first_available_variant.sku }}",
+      {%- endif %}
       "offers": [
-        {%- for variant in product.variants -%}
-          {
-            "@type" : "Offer",
-            {% if variant.sku != blank %}
-              "sku": {{ variant.sku | json }},
-            {% endif %}
-            {% if variant.barcode.size == 12 %}
-              "gtin12": "{{ variant.barcode }}",
-            {% endif %}
-            {% if variant.barcode.size == 13 %}
-              "gtin13": "{{ variant.barcode }}",
-            {% endif %}
-            {% if variant.barcode.size == 14 %}
-              "gtin14": "{{ variant.barcode }}",
-            {% endif %}
-            "price" : {{ variant.price | divided_by: 100.00 | json }},
-            "priceCurrency" : {{ cart.currency.iso_code | json }},
-            "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d'}}",
-            "availability" : "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "US",
-              "returnPolicyCountry": "US",
-              "url": "{{ shop.url }}/pages/help",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-              "merchantReturnDays": 30,
-              "returnMethod": "https://schema.org/ReturnByMail",
-              "returnFees": "https://schema.org/FreeReturn"
-            },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": "10.00",
-                "currency": "{{ shop.currency | escape }}"
-              },
-              "shippingDestination": {
-                "@type": "DefinedRegion",
-                "addressCountry": "US"
-              },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                },
-                "transitTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 1,
-                  "maxValue": 5,
-                  "unitCode": "DAY"
-                }
-              }
-            },
-            "url" : {{ request.origin | append: variant.url | json }}
-          }{% unless forloop.last %},{% endunless %}
-        {%- endfor -%}
+        {
+          "@type" : "Offer",
+          "priceCurrency" : "{{ cart.currency.iso_code }}",
+          "price" : "{{ product.selected_or_first_available_variant.price | money_without_currency }}",
+          "url": "{{ shop.url }}{{ product.url }}",
+          "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}"
+        }
       ]
     }
   </script>
