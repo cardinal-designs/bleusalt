@@ -8,6 +8,26 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Global",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "main_logo_image",
+        "label": "Store Logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_image_max_width",
+        "label": "Logo Image Max Width",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "unit": "px",
+        "default": 200
+      }
+    ]
+  },
+  {
     "name": "Gift Card",
     "settings": [
       {
