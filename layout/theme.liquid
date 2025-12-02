@@ -85,7 +85,6 @@
           "name": "{{ shop.name }}",
           "url": "{{ shop.url }}",
           {%- if settings.main_logo_image -%}
-            {% assign image_size = settings.logo_image_max_width | append: 'x' %}
           "logo": "{{ settings.main_logo_image | image_url: width: , height:  | prepend: "https:" }}",
           {%- endif -%}
           {%- assign sameas_array = sameas_urls | split: ',' -%}
