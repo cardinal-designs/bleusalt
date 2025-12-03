@@ -57,7 +57,7 @@
         "text_BCpXbC": {
           "type": "text",
           "settings": {
-            "text": "The Black Friday Event",
+            "text": "The Cyber Event",
             "text_color": "#ffffff"
           }
         },
@@ -72,7 +72,7 @@
         "text_two_8Xfyw8": {
           "type": "text-two",
           "settings": {
-            "text": "Free Gift Over $250",
+            "text": "Free Gift Over $250 and $500",
             "text_color": "#ffffff"
           }
         },
