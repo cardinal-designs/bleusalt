@@ -57,7 +57,7 @@
         "text_BCpXbC": {
           "type": "text",
           "settings": {
-            "text": "The Cyber Event",
+            "text": "Bleu Friday Encore",
             "text_color": "#ffffff"
           }
         },
@@ -72,7 +72,7 @@
         "text_two_8Xfyw8": {
           "type": "text-two",
           "settings": {
-            "text": "Free Gift Over $250 and $500",
+            "text": "Enjoy an Extra 10% Off on Our App",
             "text_color": "#ffffff"
           }
         },
@@ -83,8 +83,8 @@
             "button_link_1": "#shopify-section-template--17860016210033__featured_collection_WC4LMX",
             "button_bg_color": "#ffffff",
             "button_text_color": "#000000",
-            "button_label_2": "",
-            "button_link_2": ""
+            "button_label_2": "Get The App",
+            "button_link_2": "shopify://pages/download-the-bleusalt-app"
           }
         }
       },
