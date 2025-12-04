@@ -41,8 +41,8 @@
             "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop Best Sellers",
-            "button_link_2": "shopify://collections/womens-best-sellers"
+            "button_label_2": "Get The App",
+            "button_link_2": "shopify://pages/download-the-bleusalt-app"
           }
         }
       },
