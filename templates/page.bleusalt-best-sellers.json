@@ -79,7 +79,7 @@
         "buttons_TDTcCh": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
+            "button_label_1": "Shop Sale",
             "button_link_1": "#shopify-section-template--17860016210033__featured_collection_WC4LMX",
             "button_bg_color": "#ffffff",
             "button_text_color": "#000000",
