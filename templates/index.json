@@ -15,7 +15,7 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Bleu Friday Encore",
+            "text": "The Holiday Event",
             "text_color": "#ffffff"
           }
         },
@@ -30,19 +30,19 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Enjoy an Extra 10% Off in Our App",
+            "text": "Plus 25% Off Our Holiday Gift Guide",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_label_1": "Shop Gift Guide",
+            "button_link_1": "shopify://pages/holiday-gift-guide",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Get The App",
-            "button_link_2": "shopify://pages/download-the-bleusalt-app"
+            "button_label_2": "Shop All",
+            "button_link_2": "shopify://collections/the-bleusalt-collection"
           }
         }
       },
