@@ -936,7 +936,7 @@
         {% endfor %}
       ],
       {%- endif %}
-      "description": "{{- product.description | strip_html | replace: '"', "'"  -}}",
+      "description": "{{- product.description | strip_html | replace: '"', "'" -}}",
       "brand": {
         "@type": "Brand",
         "name": "{{ product.vendor }}"
