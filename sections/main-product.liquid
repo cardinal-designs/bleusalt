@@ -399,10 +399,33 @@
                     {{ block.settings.content }}
                     {{ block.settings.page.content }}
                   </div>
-                </details>
-              </div>
-              {%- assign first_tab = false -%}
-            {% endif %}
+                  {% render 'icon-caret' %}
+                </summary>
+                <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                  {% if block.settings.heading == 'Measuring Guide' %}
+                    {%- for popup in sizing_popups -%}
+                      {% if popup == 'Measuring Guide' %}
+                      <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                        <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
+                      </modal-opener>
+                      {% endif %}
+                    {%- endfor -%}
+                  {% else %}
+                    {%- liquid 
+                      if block.settings.use_product_description
+                        assign content = product.description | split: block.settings.product_description_split_value
+                        assign content = content[block.settings.product_description_index]
+                        echo content
+                      endif 
+                    -%}
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
+                  {% endif %}
+                </div>
+              </details>
+            </div>
+            {%- assign first_tab = false -%}
+
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
@@ -497,16 +520,22 @@
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
-                      <fieldset class="js product-form__input">
+                      <fieldset class="js product-form__input" data-wair-option-name="{{ option.name }}">
                         <div class="size__guide--grid">
                           <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
                           {% if option.name == 'Size' %}
                             <div class="product__size-popups">
-                            {%- for popup in sizing_popups -%}
-                              <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
-                                <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
-                              </modal-opener>
-                            {%- endfor -%}
+                              <div class="wair-modal__wrapper">
+                                <!-- WAIR PDP CTA -->
+                                {% render 'wair' %}
+                                {%- for popup in sizing_popups -%}
+                                  {% if popup == 'Sizing Guide' %}
+                                  <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                                    <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
+                                  </modal-opener>
+                                  {% endif %}
+                                {%- endfor -%}
+                              </div>
                             </div>
                           {% endif %}
                         </div>

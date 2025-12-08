@@ -153,6 +153,17 @@
             "content": "",
             "page": ""
           }
+        },
+        "collapsible_tab_p67RW3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Measuring Guide",
+            "use_product_description": false,
+            "product_description_split_value": "",
+            "product_description_index": 0,
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
