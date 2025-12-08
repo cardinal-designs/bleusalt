@@ -15,7 +15,7 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "The Cyber Event",
+            "text": "The Holiday Event",
             "text_color": "#ffffff"
           }
         },
@@ -30,19 +30,19 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Free Gift on Orders over $250 and $500",
+            "text": "Plus 25% Off Our Holiday Gift Guide",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_label_1": "Shop Gift Guide",
+            "button_link_1": "shopify://pages/holiday-gift-guide",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop Best Sellers",
-            "button_link_2": "shopify://collections/womens-best-sellers"
+            "button_label_2": "Shop All",
+            "button_link_2": "shopify://collections/the-bleusalt-collection"
           }
         }
       },
@@ -257,69 +257,6 @@
         "padding_bottom": 36
       }
     },
-    "166022784081bd0071": {
-      "type": "quotes",
-      "blocks": {
-        "1660227840989441a3-0": {
-          "type": "quote_press",
-          "settings": {
-            "quote": "<p>Duchess Meghan Does Quiet Luxury in a Shimmering Beige Turtleneck Dress</p>",
-            "author": "Country Living",
-            "logo": "shopify://shop_images/logo.42faf13.svg"
-          }
-        },
-        "1660227840989441a3-1": {
-          "type": "quote_press",
-          "settings": {
-            "quote": "<p>What BAZAAR editors are shopping this week</p>",
-            "author": "Elle",
-            "logo": "shopify://shop_images/elle.png"
-          }
-        },
-        "b27eae8f-e3c9-46a0-83e9-9149a0c33109": {
-          "type": "quote_press",
-          "settings": {
-            "quote": "<p>28 Sustainable Brands That Will Completely Change the Way You Shop!</p>",
-            "author": "Pop Sugar",
-            "logo": "shopify://shop_images/pop-sugar.png"
-          }
-        },
-        "a4a3927e-7a35-47f0-aded-be8ced7e8657": {
-          "type": "quote_press",
-          "settings": {
-            "quote": "<p>I Gave Up Fast Fashion. Here’s What I’m Wearing Instead.</p>",
-            "author": "The Cut",
-            "logo": "shopify://shop_images/the-cut_2x-8.png"
-          }
-        },
-        "48b412b1-5560-4ade-98e9-f59f9f79abdd": {
-          "type": "quote_press",
-          "settings": {
-            "quote": "<p>Good Company: Bleusalt’s Environmentally Responsible Fashion</p>",
-            "author": "Barron's",
-            "logo": "shopify://shop_images/barrons_2x-8.png"
-          }
-        }
-      },
-      "block_order": [
-        "1660227840989441a3-0",
-        "1660227840989441a3-1",
-        "b27eae8f-e3c9-46a0-83e9-9149a0c33109",
-        "a4a3927e-7a35-47f0-aded-be8ced7e8657",
-        "48b412b1-5560-4ade-98e9-f59f9f79abdd"
-      ],
-      "settings": {
-        "full_width": false,
-        "hide_desktop": false,
-        "hide_mobile": false,
-        "color_background": "#f1f1f1",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "press_link": "",
-        "reviews_link": "",
-        "title": ""
-      }
-    },
     "1660227726ff0f6237": {
       "type": "foursixty",
       "blocks": {
@@ -470,6 +407,69 @@
         "padding_bottom": 76
       }
     },
+    "166022784081bd0071": {
+      "type": "quotes",
+      "blocks": {
+        "1660227840989441a3-0": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>Duchess Meghan Does Quiet Luxury in a Shimmering Beige Turtleneck Dress</p>",
+            "author": "Country Living",
+            "logo": "shopify://shop_images/logo.42faf13.svg"
+          }
+        },
+        "1660227840989441a3-1": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>What BAZAAR editors are shopping this week</p>",
+            "author": "Elle",
+            "logo": "shopify://shop_images/elle.png"
+          }
+        },
+        "b27eae8f-e3c9-46a0-83e9-9149a0c33109": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>28 Sustainable Brands That Will Completely Change the Way You Shop!</p>",
+            "author": "Pop Sugar",
+            "logo": "shopify://shop_images/pop-sugar.png"
+          }
+        },
+        "a4a3927e-7a35-47f0-aded-be8ced7e8657": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>I Gave Up Fast Fashion. Here’s What I’m Wearing Instead.</p>",
+            "author": "The Cut",
+            "logo": "shopify://shop_images/the-cut_2x-8.png"
+          }
+        },
+        "48b412b1-5560-4ade-98e9-f59f9f79abdd": {
+          "type": "quote_press",
+          "settings": {
+            "quote": "<p>Good Company: Bleusalt’s Environmentally Responsible Fashion</p>",
+            "author": "Barron's",
+            "logo": "shopify://shop_images/barrons_2x-8.png"
+          }
+        }
+      },
+      "block_order": [
+        "1660227840989441a3-0",
+        "1660227840989441a3-1",
+        "b27eae8f-e3c9-46a0-83e9-9149a0c33109",
+        "a4a3927e-7a35-47f0-aded-be8ced7e8657",
+        "48b412b1-5560-4ade-98e9-f59f9f79abdd"
+      ],
+      "settings": {
+        "full_width": false,
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "color_background": "#f1f1f1",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "press_link": "",
+        "reviews_link": "",
+        "title": ""
+      }
+    },
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6": {
       "type": "image-with-text",
       "blocks": {
@@ -589,10 +589,10 @@
     "175815468017ca5ea6",
     "featured_collection",
     "1659735210e064d864",
-    "166022784081bd0071",
     "1660227726ff0f6237",
     "16637947412bca5d08",
     "1660226720e02964f9",
+    "166022784081bd0071",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
     "image_with_text_XqniFF",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
