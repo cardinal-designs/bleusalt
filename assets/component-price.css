@@ -86,7 +86,11 @@
   text-decoration: line-through;
   color: rgba(var(--color-foreground), 0.65);
   font-weight: 500;
-  margin: 0 6px 0 0;
+  margin: 0;
+}
+
+.template--product .price--on-sale .price-item--regular {
+  margin-right: 6px;
 }
 
 .unit-price {
