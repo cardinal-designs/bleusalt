@@ -493,6 +493,12 @@ html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
   padding-bottom: 5px !important;
 }
 
+@media (max-width: 749px) {
+  .wair-css {
+    padding-bottom: 3px !important;
+  }
+}
+
 #wair-fit-advisor:hover {
   opacity: 1 !important;
 }
