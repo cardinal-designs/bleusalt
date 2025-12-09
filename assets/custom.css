@@ -483,6 +483,10 @@ html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
 }
 
 /* WAIR */
+.wair-modal__wrapper {
+  align-items: flex-end !important;
+}
+
 .wair-css {
   display: flex !important;
   align-items: flex-end !important;
