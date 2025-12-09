@@ -86,7 +86,7 @@
   text-decoration: line-through;
   color: rgba(var(--color-foreground), 0.65);
   font-weight: 500;
-  margin: 0;
+  margin: 0 6px 0 0;
 }
 
 .unit-price {
