@@ -94,7 +94,7 @@
 }
 
 .template--collection .price--on-sale .price-item--sale {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 
 .unit-price {
