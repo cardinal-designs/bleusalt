@@ -481,3 +481,24 @@ html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
   cursor: not-allowed;
   user-select: none;
 }
+
+/* WAIR */
+.predict-placement.wair-css {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+
+.wair-launch-btn {
+  height: 17.5px;
+}
+
+button#wair-fit-advisor > span,
+button#wair-fit-advisor > span > span {
+  font-size: 1.3rem !important;
+  font-family: Inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  text-underline-offset: 0.3rem !important;
+  text-decoration-thickness: 0.1rem !important;
+}
