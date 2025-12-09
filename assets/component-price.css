@@ -89,11 +89,7 @@
   margin: 0;
 }
 
-.template--product .price--on-sale .price-item--regular {
-  margin-right: 6px;
-}
-
-.template--collection .price--on-sale .price-item--sale {
+.price--on-sale .price-item--sale {
   margin-left: 5px !important;
 }
 
