@@ -506,3 +506,8 @@ button#wair-fit-advisor > span > span {
   text-underline-offset: 0.3rem !important;
   text-decoration-thickness: 0.1rem !important;
 }
+
+button#wair-fit-advisor > span:hover,
+button#wair-fit-advisor > span > span:hover {
+  text-decoration-thickness: 0.2rem !important;
+}
