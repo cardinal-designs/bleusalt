@@ -493,6 +493,10 @@ html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
   padding-bottom: 5px !important;
 }
 
+.wair-css:hover {
+  opacity: 1 !important;
+}
+
 .wair-launch-btn {
   height: 17.5px !important;
 }
