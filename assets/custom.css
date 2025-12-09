@@ -509,5 +509,6 @@ button#wair-fit-advisor > span > span {
 
 button#wair-fit-advisor > span:hover,
 button#wair-fit-advisor > span > span:hover {
+  color: inherit !important;
   text-decoration-thickness: 0.2rem !important;
 }
