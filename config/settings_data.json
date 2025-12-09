@@ -857,6 +857,8 @@
   },
   "platform_customizations": {
     "custom_css": [
+      ".predict-placement.wair-css {display: flex; align-items: flex-end; padding-bottom: 5px;}",
+      ".wair-launch-btn {height: 17.5px;}",
       ".wr-border-none {font-size: 1.3rem; font-family: Inter, sans-serif; font-style: normal; font-weight: 400; text-underline-offset: 0.3rem; text-decoration-thickness: 0.1rem;}"
     ]
   }
