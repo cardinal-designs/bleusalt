@@ -483,14 +483,14 @@ html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
 }
 
 /* WAIR */
-.predict-placement.wair-css {
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 5px;
+.wair-css {
+  display: flex !important;
+  align-items: flex-end !important;
+  padding-bottom: 5px !important;
 }
 
 .wair-launch-btn {
-  height: 17.5px;
+  height: 17.5px !important;
 }
 
 button#wair-fit-advisor > span,
