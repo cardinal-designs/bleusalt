@@ -856,6 +856,8 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".wr-border-none {font-size: 1.3rem; font-family: Inter, sans-serif; font-style: normal; font-weight: 400; text-underline-offset: .3rem; text-decoration-thickness: .1rem; }"
+    ]
   }
 }
