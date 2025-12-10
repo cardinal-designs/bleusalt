@@ -48,7 +48,7 @@
     "show_cart_note": true,
     "cart_drawer_collection": "bottoms-skimpy",
     "cart_drawer_text": "Holiday Returns through 1/10/26.   <small><a href=\"https://bleusalt.com/pages/help\" target=\"_blank\">See Terms</a></small>",
-    "additional_cart_drawer_text": "Our popular items tend to sell out often, complete your purchase now to ensure availability.  Free Gift on orders $250+ will automatically be shipped with your order.",
+    "additional_cart_drawer_text": "Last Days for guaranteed Christmas deliveries are 12/13 for Ground, 12/19 Expedited, and 12/22 Next Day.",
     "cart_notice": "Orders Placed Today ship within 1 business day.",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
@@ -77,6 +77,13 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "announcement_DQ4WrP": {
+            "type": "announcement",
+            "settings": {
+              "text": "Last Days for Guaranteed Christmas Deliveries are 12/13 for Ground, 12/19 Expedited, 12/22 Next Day!",
+              "link": "shopify://collections/the-bleusalt-collection"
+            }
+          },
           "336f71c7-6dea-48b7-8135-be37d2e09472": {
             "type": "announcement",
             "disabled": true,
@@ -94,6 +101,7 @@
           },
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Shop Our Newest Arrivals",
               "link": "https://bleusalt.com/collections/womens-new-arrivals"
@@ -108,6 +116,7 @@
           },
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Home of the Signature Bleusalt Wrap",
               "link": "https://bleusalt.com/collections/the-signature-bleusalt-wrap"
@@ -115,6 +124,7 @@
           }
         },
         "block_order": [
+          "announcement_DQ4WrP",
           "336f71c7-6dea-48b7-8135-be37d2e09472",
           "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c",
