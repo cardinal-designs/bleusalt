@@ -48,7 +48,7 @@
     "show_cart_note": true,
     "cart_drawer_collection": "bottoms-skimpy",
     "cart_drawer_text": "Holiday Returns through 1/10/26.   <small><a href=\"https://bleusalt.com/pages/help\" target=\"_blank\">See Terms</a></small>",
-    "additional_cart_drawer_text": "Last Days for guaranteed Christmas delivery: 12/13 Ground<br>• 12/19 Expedited • 12/22 Next Day",
+    "additional_cart_drawer_text": "Last Days for guaranteed Christmas delivery<br>• 12/13 Ground • 12/19 Expedited • 12/22 Next Day",
     "cart_notice": "Orders Placed Today ship within 1 business day.",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
@@ -80,7 +80,7 @@
           "announcement_DQ4WrP": {
             "type": "announcement",
             "settings": {
-              "text": "Last Days for Guaranteed Christmas Delivery: 12/13 Ground • 12/19 Expedited • 12/22 Next Day",
+              "text": "Last Days for Guaranteed Christmas Delivery • 12/13 Ground • 12/19 Expedited • 12/22 Next Day",
               "link": "shopify://collections/the-bleusalt-collection"
             }
           },
