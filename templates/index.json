@@ -30,15 +30,15 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Extra 25% off Founder's Favorites",
+            "text": "Extra 25% off All Tops",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Founder's Favorites",
-            "button_link_1": "shopify://collections/lyndies-favorites",
+            "button_label_1": "Shop Tops",
+            "button_link_1": "https://bleusalt.com/collections/tops?filter.customFields.custom-bleusalt_fabric=Signature",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop All",
