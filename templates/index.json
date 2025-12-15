@@ -30,15 +30,15 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Extra 25% off Best Sellers",
+            "text": "Extra 25% off Dresses",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Best Sellers",
-            "button_link_1": "shopify://collections/womens-best-sellers",
+            "button_label_1": "Shop Dresses",
+            "button_link_1": "shopify://collections/bleusalt-dresses-skirts",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop All",
