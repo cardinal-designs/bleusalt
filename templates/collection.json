@@ -9,63 +9,6 @@
  */
 {
   "sections": {
-    "collection_banner_akUkh6": {
-      "type": "collection-banner",
-      "blocks": {
-        "block_jYTjY6": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-tops",
-            "title": "Tops"
-          }
-        },
-        "block_PDa4CD": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-bottoms",
-            "title": "Bottoms"
-          }
-        },
-        "block_XGemLQ": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-dresses",
-            "title": "Dresses"
-          }
-        },
-        "block_F9yKdn": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-accessories-outerwear",
-            "title": "Accessories"
-          }
-        },
-        "block_VAmUXb": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-new-arrivals",
-            "title": "New Arrivals"
-          }
-        },
-        "block_dpCeL3": {
-          "type": "block",
-          "settings": {
-            "collection": "womens-best-sellers",
-            "title": "Best Sellers"
-          }
-        }
-      },
-      "block_order": [
-        "block_jYTjY6",
-        "block_PDa4CD",
-        "block_XGemLQ",
-        "block_F9yKdn",
-        "block_VAmUXb",
-        "block_dpCeL3"
-      ],
-      "name": "Collection Banner",
-      "settings": {}
-    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -208,7 +151,6 @@
     }
   },
   "order": [
-    "collection_banner_akUkh6",
     "banner",
     "product-grid",
     "17562293552938ec51",
