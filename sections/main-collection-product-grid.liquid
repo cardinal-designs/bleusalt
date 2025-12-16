@@ -2,7 +2,6 @@
 {% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-ns-skeleton-loader.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -92,9 +91,7 @@
       </aside>
     {%- endif -%}
 
-    <div class="product-grid-container" id="ProductGridContainer">
-      {% render 'ns-skeleton-loader' %}
-      
+    <div class="product-grid-container" id="ProductGridContainer">      
       {%- paginate collection.products by products_per_page -%}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width small-full-width" id="product-grid" data-id="{{ section.id }}">
