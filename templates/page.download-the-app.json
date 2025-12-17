@@ -35,7 +35,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Get a Free Scarf on the Bleusalt App.  Receive a Free<br/>signature Bleusalt scarf when you shop on the Bleusalt<br/>App.  Simply add your favorite scarf to your cart and<br/>check out with code: FREESCARFXMAS</p>",
+            "text": "<p>Get a Free Scarf on the Bleusalt App!  Receive a Free<br/>signature Bleusalt scarf when you shop on the Bleusalt<br/>App.  Simply add your favorite scarf to your cart and<br/>check out with code: FREESCARFXMAS</p>",
             "text_style": "body"
           }
         },
