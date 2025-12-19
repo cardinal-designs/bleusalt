@@ -14,6 +14,7 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "The Free Scarf Event",
             "text_color": "#ffffff"
@@ -21,6 +22,7 @@
         },
         "heading_9qBHw9": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Exclusively On The App",
             "heading_color": "#ffffff",
@@ -29,6 +31,7 @@
         },
         "text_two_NHhmBc": {
           "type": "text-two",
+          "disabled": true,
           "settings": {
             "text": "Download & Shop Today Only",
             "text_color": "#ffffff"
@@ -36,6 +39,7 @@
         },
         "buttons_fCtqBt": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Download the App",
             "button_link_1": "shopify://pages/download-the-bleusalt-app",
