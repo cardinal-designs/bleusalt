@@ -56,6 +56,7 @@
       "blocks": {
         "text_BCpXbC": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "The Holiday Event",
             "text_color": "#ffffff"
@@ -63,6 +64,7 @@
         },
         "heading_dpRfRh": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Up to 60% Off",
             "heading_color": "#ffffff",
@@ -71,6 +73,7 @@
         },
         "text_two_8Xfyw8": {
           "type": "text-two",
+          "disabled": true,
           "settings": {
             "text": "Enjoy an Extra 10% Off on Our App",
             "text_color": "#ffffff"
@@ -78,6 +81,7 @@
         },
         "buttons_TDTcCh": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop Sale",
             "button_link_1": "#shopify-section-template--17860016210033__featured_collection_WC4LMX",
