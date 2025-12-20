@@ -56,39 +56,35 @@
       "blocks": {
         "text_BCpXbC": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "The Holiday Event",
+            "text": "Two Days Only",
             "text_color": "#ffffff"
           }
         },
         "heading_dpRfRh": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "Up to 60% Off",
+            "heading": "35% Off",
             "heading_color": "#ffffff",
             "heading_size": "h1"
           }
         },
         "text_two_8Xfyw8": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Enjoy an Extra 10% Off on Our App",
+            "text": "Everything On The App",
             "text_color": "#ffffff"
           }
         },
         "buttons_TDTcCh": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
-            "button_label_1": "Shop Sale",
-            "button_link_1": "#shopify-section-template--17860016210033__featured_collection_WC4LMX",
+            "button_label_1": "Shop the App",
+            "button_link_1": "shopify://pages/download-the-bleusalt-app",
             "button_bg_color": "#ffffff",
             "button_text_color": "#000000",
-            "button_label_2": "Get The App",
-            "button_link_2": "shopify://pages/download-the-bleusalt-app"
+            "button_label_2": "Shop Online",
+            "button_link_2": "shopify://collections/the-bleusalt-collection"
           }
         }
       },
