@@ -14,7 +14,6 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "Two Days Only",
             "text_color": "#ffffff"
@@ -22,9 +21,8 @@
         },
         "heading_9qBHw9": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "35% Off",
+            "heading": "10% off E-Gift Cards",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -40,12 +38,12 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Best Sellers",
-            "button_link_1": "shopify://collections/womens-best-sellers",
+            "button_label_1": "Shop Gift Cards",
+            "button_link_1": "shopify://products/gift-card",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
-            "button_label_2": "Shop New Arrivals",
-            "button_link_2": "shopify://collections/womens-new-arrivals"
+            "button_label_2": "Shop Best Sellers",
+            "button_link_2": "shopify://collections/womens-best-sellers"
           }
         }
       },
