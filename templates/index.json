@@ -14,6 +14,7 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Two Days Only",
             "text_color": "#ffffff"
@@ -21,6 +22,7 @@
         },
         "heading_9qBHw9": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "10% off E-Gift Cards",
             "heading_color": "#ffffff",
