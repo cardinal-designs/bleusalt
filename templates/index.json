@@ -14,17 +14,15 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Two Days Only",
+            "text": "The Year End Event",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "10% off E-Gift Cards",
+            "heading": "Up to 60% Off Sitewide",
             "heading_color": "#ffffff",
             "heading_size": "h0"
           }
@@ -40,8 +38,8 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Gift Cards",
-            "button_link_1": "shopify://products/gift-card",
+            "button_label_1": "Shop Sale",
+            "button_link_1": "shopify://collections/the-bleusalt-collection",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
