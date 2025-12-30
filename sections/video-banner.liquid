@@ -153,20 +153,50 @@
   id="Banner-{{ section.id }}" 
   class="video-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}"
 >
-  {%- if section.settings.video_url != blank -%}
+  {% assign video = section.settings.video %}
+  {%- if section.settings.video_url != blank or video != blank -%}
     <div class="small-hide">
       <div class="banner__media media media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
-        <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto"   aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url }}#t=0.1" data-expand="-10" width="100%"></video>
+        {% if video != blank %}
+          {{ video
+            | video_tag:
+              id: video_id,
+              class: 'banner__video',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              playsinline: true,
+              preload: 'auto',
+              aria_label: section.settings.description
+          }}
+        {% else %}
+          <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto"   aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url }}#t=0.1" data-expand="-10" width="100%"></video>
+        {% endif %}
         {% render 'video-controls', id: video_id %}
       </div>
     </div>
   {%- endif -%}
-  {%- if section.settings.video_url_mobile != blank -%}
+  {% assign video_mobile = section.settings.video_mobile %}
+  {%- if section.settings.video_url_mobile != blank or video_mobile != blank -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
       {% if section.settings.video_overlay_link != blank %}<a href="{{ section.settings.video_overlay_link }}" class="banner__video-overlay-link"></a>{% endif %}
-      <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto" aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url_mobile }}#t=0.1" data-expand="-10" width="100%"></video>
+      {% if video_mobile != blank %}
+        {{ video_mobile
+          | video_tag:
+            id: video_id,
+            class: 'banner__video',
+            autoplay: true,
+            loop: true,
+            muted: true,
+            playsinline: true,
+            preload: 'auto',
+            aria_label: section.settings.description
+        }}
+      {% else %}
+        <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto" aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url_mobile }}#t=0.1" data-expand="-10" width="100%"></video>
+      {% endif %}
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
@@ -177,13 +207,13 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2 
+            <{{block.settings.heading_tag}} 
               class="video-banner__heading" 
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.heading_color }}"
             >
               <span>{{ block.settings.heading | escape }}</span>
-            </h2>
+            </{{block.settings.heading_tag}}>
           {%- when 'text' -%}
             <div 
               class="video-banner__text" 
@@ -246,10 +276,20 @@
   "class": "section section--video-banner",
   "settings": [
     {
+      "type": "video",
+      "id": "video",
+      "label": "Banner video"
+    },
+    {
       "type": "url",
       "id": "video_url",
       "label": "Video URL"
     },
+    {
+      "type": "video",
+      "id": "video_mobile",
+      "label": "Banner mobile video"
+    },    
     {
       "type": "url",
       "id": "video_url_mobile",
@@ -482,6 +522,22 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "options": [            
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            }
+          ],
+          "default": "h2",
+          "label": "Heading tag"
         }
       ]
     },

@@ -20,28 +20,6 @@
     },
     "1743652631e0c80c09": {
       "type": "apps",
-      "blocks": {
-        "trynow_try_before_you_buy_how_it_works_zTcpA8": {
-          "type": "shopify://apps/trynow-try-before-you-buy/blocks/how-it-works/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
-          "settings": {
-            "title": "Try Before You Buy",
-            "title_font_size": 20,
-            "subtitle_1": "Try up to [cart_limit_suggested_cart_size] items",
-            "copy_1": "Fill your cart to find something you love.",
-            "subtitle_2": "[trial_period]-day trial",
-            "copy_2": "Try it on in the comfort of your home.",
-            "subtitle_3": "Returns are easy",
-            "copy_3": "Only pay for what you keep.",
-            "subtitle_font_size": 16,
-            "copy_font_size": 14,
-            "image_size": 40,
-            "custom_css": ""
-          }
-        }
-      },
-      "block_order": [
-        "trynow_try_before_you_buy_how_it_works_zTcpA8"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -160,35 +138,6 @@
     },
     "17436520493b7bc0e9": {
       "type": "apps",
-      "blocks": {
-        "trynow_try_before_you_buy_faqs_7kGMa3": {
-          "type": "shopify://apps/trynow-try-before-you-buy/blocks/faqs/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
-          "settings": {
-            "title_text": "FAQs",
-            "title_font_family": "avenir_next_n3",
-            "title_font_size": 20,
-            "enable_title": true,
-            "questions_font_family": "avenir_next_n3",
-            "questions_font_size": 14,
-            "answers_font_family": "avenir_next_n3",
-            "answers_font_size": 13,
-            "question_1": "<p>When do I have to return my items by?</p>",
-            "answer_1": "<p>Initiate your return before your trial ends.</p>",
-            "question_2": "<p>Why is there an authorization on my card?</p>",
-            "answer_2": "<p>Similar to booking a hotel or rideshare, we reserve the funds in case you decide to keep all your items. An authorization is not a charge - you'll only be charged for what you keep.</p>",
-            "question_3": "<p>Do I get free shipping or free returns?</p>",
-            "answer_3": "<p>Please refer to our <a href=\"https://bleusalt.com/pages/help\" title=\"https://bleusalt.com/pages/help\">shipping and returns policy</a>.</p>",
-            "question_4": "<p>I initiated my return, why is my card being re-authorized?</p>",
-            "answer_4": "<p>Banks have limits for how long a hold can be valid. We are likely still processing your return. As soon as your return is approved, your card will be charged only for what you kept and will no longer require re-authorizations.</p>",
-            "question_5": "<p>My trial ended and I was charged, but now I want to return something. Is this still possible?</p>",
-            "answer_5": "<p>Yes, you can still return eligible items within our return window. Check out our <a href=\"https://bleusalt.com/pages/help\" title=\"https://bleusalt.com/pages/help\">returns policy</a> for more details.</p>",
-            "custom_css": ""
-          }
-        }
-      },
-      "block_order": [
-        "trynow_try_before_you_buy_faqs_7kGMa3"
-      ],
       "settings": {
         "include_margins": true
       }

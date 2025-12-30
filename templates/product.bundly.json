@@ -11,32 +11,6 @@
   "sections": {
     "175387233062831bb2": {
       "type": "apps",
-      "blocks": {
-        "bundly_bundle_information_WNtLWh": {
-          "type": "shopify://apps/bundly/blocks/bundle_information/1cabc354-c7f9-42e9-8322-7655396b33b7",
-          "settings": {
-            "show_bundle_images": true,
-            "show_vendor": false,
-            "show_title": true,
-            "show_discount_type": false,
-            "show_original_price": true,
-            "show_new_price": true,
-            "show_component_images": true,
-            "show_component_prices": true,
-            "show_component_unit_prices": false,
-            "product_click_action": "show_dialog",
-            "page_size": 12,
-            "redirect_to_cart": true,
-            "custom_data_metafield": "",
-            "liquid": "",
-            "theme": "shopify",
-            "css": ""
-          }
-        }
-      },
-      "block_order": [
-        "bundly_bundle_information_WNtLWh"
-      ],
       "settings": {
         "custom_class": "",
         "include_margins": true
@@ -269,20 +243,6 @@
     },
     "product_recommendations_ai_mCkeP9": {
       "type": "product-recommendations-ai",
-      "blocks": {
-        "rebuy_personalization_engine_rebuy_widget_AqqLzD": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "settings": {
-            "enabled": true,
-            "id": "208412",
-            "product_id_enabled": true,
-            "collection_id_enabled": false
-          }
-        }
-      },
-      "block_order": [
-        "rebuy_personalization_engine_rebuy_widget_AqqLzD"
-      ],
       "settings": {
         "heading": "We pulled these for you.",
         "heading_size": "h1",

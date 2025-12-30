@@ -59,20 +59,6 @@
     },
     "1734417528fe4e6c1e": {
       "type": "apps",
-      "blocks": {
-        "rebuy_personalization_engine_rebuy_widget_Q3g3nz": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "settings": {
-            "enabled": true,
-            "id": "{{ collection.metafields.custom.rebuy_widget_id.value }}",
-            "product_id_enabled": true,
-            "collection_id_enabled": true
-          }
-        }
-      },
-      "block_order": [
-        "rebuy_personalization_engine_rebuy_widget_Q3g3nz"
-      ],
       "disabled": true,
       "settings": {
         "custom_class": "",
@@ -166,17 +152,6 @@
     },
     "17526931841394370c": {
       "type": "apps",
-      "blocks": {
-        "firework_shoppable_video_ugc_firework_pro_embed_QD4CeF": {
-          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-pro-embed/347a2e4c-f5cb-410d-8354-490d1e80558c",
-          "settings": {
-            "embedConfigId": "wgkDkv_fp"
-          }
-        }
-      },
-      "block_order": [
-        "firework_shoppable_video_ugc_firework_pro_embed_QD4CeF"
-      ],
       "settings": {
         "custom_class": "",
         "include_margins": true

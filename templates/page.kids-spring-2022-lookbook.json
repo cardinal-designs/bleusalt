@@ -1,1 +1,59 @@
-{"sections":{"ed30e261-ecdb-4920-9dac-d822841ea8e6":{"type":"rich-text","blocks":{"template--14657944322161__ed30e261-ecdb-4920-9dac-d822841ea8e6-text-1":{"type":"text","settings":{"text":"<h1>Kids Spring 2022 - Quiet Luxury for Your Little Ones<\/h1><p>Introducing the Bleusalt Kids Spring 2022 Collection – a delightful range of quiet luxury basics designed specifically for your little ones. It's time to refresh your child's wardrobe with our sophisticated clothing line.<\/p><h2>Create a Luxurious Capsule Wardrobe for Your Child<\/h2><p>With this season's collection, your child's wardrobe will be effortlessly elevated with a versatile selection of clothing made from the softest fibers on Earth. Children of all ages will love the Kids Spring 2022 Collection, which comes in several pieces and colors.<br\/><br\/>These seasonless basics will become the heart of your child's capsule wardrobe thanks to their neutral colors and elegant designs.<br\/><\/p>"}}},"block_order":["template--14657944322161__ed30e261-ecdb-4920-9dac-d822841ea8e6-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"main":{"type":"main-page","settings":{"show_heading":false,"heading_size":"h1","heading_alignment":"center","padding_top":36,"padding_bottom":36,"page_width":"page-width--narrow"}},"1676492971e2872bb9":{"type":"apps","blocks":{"958767c2-116f-4a62-a3d0-7bb62dbf695b":{"type":"shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","disabled":true,"settings":{"product":"","widget_type":"reviews_widget"}}},"block_order":["958767c2-116f-4a62-a3d0-7bb62dbf695b"],"settings":{"include_margins":true}}},"order":["ed30e261-ecdb-4920-9dac-d822841ea8e6","main","1676492971e2872bb9"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ed30e261-ecdb-4920-9dac-d822841ea8e6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14657944322161__ed30e261-ecdb-4920-9dac-d822841ea8e6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Kids Spring 2022 - Quiet Luxury for Your Little Ones</h1><p>Introducing the Bleusalt Kids Spring 2022 Collection – a delightful range of quiet luxury basics designed specifically for your little ones. It's time to refresh your child's wardrobe with our sophisticated clothing line.</p><h2>Create a Luxurious Capsule Wardrobe for Your Child</h2><p>With this season's collection, your child's wardrobe will be effortlessly elevated with a versatile selection of clothing made from the softest fibers on Earth. Children of all ages will love the Kids Spring 2022 Collection, which comes in several pieces and colors.<br/><br/>These seasonless basics will become the heart of your child's capsule wardrobe thanks to their neutral colors and elegant designs.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14657944322161__ed30e261-ecdb-4920-9dac-d822841ea8e6-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_heading": false,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "1676492971e2872bb9": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "ed30e261-ecdb-4920-9dac-d822841ea8e6",
+    "main",
+    "1676492971e2872bb9"
+  ]
+}
