@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.card--media a {
+  width: 100%;
+}
+
 .card:not(.ratio) {
   display: flex;
   flex-direction: column;
