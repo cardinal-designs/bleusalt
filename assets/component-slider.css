@@ -120,7 +120,7 @@ slider-component.slider-component-full-width {
   scroll-snap-align: center;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .slider-component-desktop.page-width {
     max-width: none;
   }
