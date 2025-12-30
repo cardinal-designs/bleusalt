@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.nosto-slick .grid__item {
+  display: block;
+}
+
 .card:not(.ratio) {
   display: flex;
   flex-direction: column;
