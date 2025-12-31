@@ -177,7 +177,7 @@
 
   .product-grid-container #product-grid,
   .ns-serp .ns-product-grid {
-    column-gap: 20px;
+    --grid-desktop-horizontal-spacing: 20px;
   }
 
 }
