@@ -23,29 +23,28 @@
     {%- endif -%}
     <div class="collection-hero__text-wrapper">
       <div class="collection-hero__text">
-      <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h1>
+        <h1 class="collection-hero__title">
+          <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+          {{- collection.title | escape -}}
+        </h1>
 
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {%- endif -%}
+        {%- if section.settings.show_collection_description -%}
+          <div class="collection-hero__description rte">{{ collection.description }}</div>
+        {%- endif -%}
 
-      {%- if linklists[collection.handle].links != blank -%}
-        <div class="collection-hero__links">
-        {% for link in linklists[collection.handle].links %}
-          <a class="collection-hero__link link" href="{{ link.url }}">{{ link.title }}</a>
-        {% endfor %}
-        </div>
-      {%- endif -%}
+        {%- if linklists[collection.handle].links != blank -%}
+          <div class="collection-hero__links">
+          {% for link in linklists[collection.handle].links %}
+            <a class="collection-hero__link link" href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
+          </div>
+        {%- endif -%}
 
-      {%- for block in section.blocks -%}
-        <a class="link" href="{{ block.settings.quick_link.url }}">{{ block.settings. quick_link.title }}</a>
-      {%- endfor -%}
+        {%- for block in section.blocks -%}
+          <a class="link" href="{{ block.settings.quick_link.url }}">{{ block.settings. quick_link.title }}</a>
+        {%- endfor -%}
+      </div>
     </div>
-    </div>
-
     
   </div>
 </div>
@@ -56,7 +55,7 @@
   "class": "section",
   "settings": [
     {
-      "type": "paragraph",
+      "type": "header",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
     },
     {
