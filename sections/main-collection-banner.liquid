@@ -5,6 +5,13 @@
   .collection-hero__title {
     margin: 0;
   }
+
+  {% if section.settings.align_left %}
+    .collection-hero__text {
+      max-width: 100%;
+      text-align: left;
+    }
+  {% endif %}
 {%- endstyle -%}
 {% endunless %}
 
@@ -74,6 +81,11 @@
       "default": false,
       "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
       "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "align_left",
+      "label": "Align header left (only applies when image & deascription hidden)"
     },
     {
       "type": "select",
