@@ -382,8 +382,8 @@
       {% include "globale-js" %}
       {% include 'pagefly-app-header' %}
 
-      {{ 'custom.css' | asset_url | stylesheet_tag }}
-      {{ 'bundly-custom.css' | asset_url | stylesheet_tag }}
+      {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
+      {{ 'bundly-custom.css' | asset_url | stylesheet_tag: preload: true }}
 
       {%- render 'head-scripts' -%}
 
