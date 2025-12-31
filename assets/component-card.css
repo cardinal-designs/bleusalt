@@ -175,7 +175,7 @@
 
 @media screen and (min-width: 750px) {
 
-  .product-grid-container .product-grid,
+  .product-grid-container #product-grid,
   .ns-serp .ns-product-grid {
     column-gap: 20px;
   }
