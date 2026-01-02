@@ -440,7 +440,7 @@
         "button_Lte7re"
       ],
       "settings": {
-        "image": "shopify://shop_images/original-hero.jpg",
+        "image": "shopify://shop_images/signature-fabric-hero.jpg",
         "border_top": true,
         "page_width": "page-width--narrow",
         "height": "adapt",
@@ -486,12 +486,12 @@
         "button_PtrN9D"
       ],
       "settings": {
-        "image": "shopify://shop_images/lite-hero.jpg",
+        "image": "shopify://shop_images/lite-fabric-hero.jpg",
         "border_top": true,
         "page_width": "page-width--narrow",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -532,7 +532,7 @@
         "button_KYJpnW"
       ],
       "settings": {
-        "image": "shopify://shop_images/luxe-hero.jpg",
+        "image": "shopify://shop_images/luxe-fabric-hero.jpg",
         "border_top": true,
         "page_width": "page-width--narrow",
         "height": "adapt",
@@ -622,7 +622,7 @@
         "page_width": "page-width--narrow",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
