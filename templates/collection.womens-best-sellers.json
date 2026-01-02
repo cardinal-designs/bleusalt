@@ -48,7 +48,7 @@
         "show_life_image": true,
         "show_vendor": false,
         "show_rating": true,
-        "enable_quick_add": true,
+        "enable_quick_add": false,
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
@@ -144,17 +144,6 @@
     },
     "1752693104d0ec3e08": {
       "type": "apps",
-      "blocks": {
-        "firework_shoppable_video_ugc_firework_pro_embed_YVzn8K": {
-          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-pro-embed/347a2e4c-f5cb-410d-8354-490d1e80558c",
-          "settings": {
-            "embedConfigId": "GoNk1g_fp"
-          }
-        }
-      },
-      "block_order": [
-        "firework_shoppable_video_ugc_firework_pro_embed_YVzn8K"
-      ],
       "settings": {
         "custom_class": "",
         "include_margins": true
