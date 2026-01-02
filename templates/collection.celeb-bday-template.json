@@ -11,10 +11,10 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "align_left": true,
         "color_scheme": "background-1"
       }
     },
@@ -27,12 +27,12 @@
           "settings": {
             "tile_size": "2x",
             "media_type": "image",
-            "image": "shopify:\/\/shop_images\/womens-wraps.jpg",
+            "image": "shopify://shop_images/womens-wraps.jpg",
             "video_url": "",
-            "link": "shopify:\/\/pages\/bleusalt-styling",
+            "link": "shopify://pages/bleusalt-styling",
             "position": 5,
             "title": "Style Tips",
-            "paragraph": "<p>Watch our style tips videos and create the perfect look<\/p>",
+            "paragraph": "<p>Watch our style tips videos and create the perfect look</p>",
             "button_text": "Watch Now"
           }
         },
@@ -41,12 +41,12 @@
           "settings": {
             "tile_size": "1x",
             "media_type": "image",
-            "image": "shopify:\/\/shop_images\/124AECF1-98B2-48CB-950E-7E13B7F047B2.jpg",
+            "image": "shopify://shop_images/124AECF1-98B2-48CB-950E-7E13B7F047B2.jpg",
             "video_url": "",
             "link": "",
             "position": 2,
             "title": "Happy Birthday Kaia!",
-            "paragraph": "<p>Thanks for the styles you've inspired for us.<\/p>",
+            "paragraph": "<p>Thanks for the styles you've inspired for us.</p>",
             "button_text": ""
           }
         },
@@ -56,12 +56,12 @@
           "settings": {
             "tile_size": "1x",
             "media_type": "image",
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
+            "image": "shopify://shop_images/Screen_Shot_2022-09-19_at_1.23.29_PM.png",
             "video_url": "",
-            "link": "shopify:\/\/collections\/the-signature-bleusalt-wrap",
+            "link": "shopify://collections/the-signature-bleusalt-wrap",
             "position": 6,
             "title": "Bleusalt Wraps",
-            "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.<\/p>",
+            "paragraph": "<p>any outfit, any color. add a matching wrap to comeplete any outfit.</p>",
             "button_text": ""
           }
         }
@@ -76,6 +76,7 @@
         "columns_desktop": 3,
         "image_ratio": "portrait",
         "show_secondary_image": false,
+        "show_life_image": true,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
@@ -93,14 +94,15 @@
         "1660937591138d0f9f-0": {
           "type": "heading",
           "settings": {
-            "heading": "Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth<\/span>.",
-            "heading_size": "h1"
+            "heading": "Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on earth</span>.",
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "1660937591138d0f9f-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"\/pages\/materials\" title=\"Materials\">Learn more<\/a><\/p>"
+            "text": "<p>Bleusalt is a luxurious line of seasonless basics made sustainably 100% in the USA from the softest fibers on earth. <a href=\"/pages/materials\" title=\"Materials\">Learn more</a></p>"
           }
         },
         "70b3749d-0024-40ad-b6a7-6ef19124d692": {
@@ -121,7 +123,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "btextimg": "",
-        "background_image": "shopify:\/\/shop_images\/sustainable-grunge.jpg",
+        "background_image": "shopify://shop_images/sustainable-grunge.jpg",
         "background_image_size": "cover",
         "color_scheme": "background-1",
         "full_width": true,
