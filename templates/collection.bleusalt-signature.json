@@ -15,6 +15,7 @@
       "settings": {
         "show_collection_description": false,
         "show_collection_image": true,
+        "align_left": false,
         "color_scheme": "inverse"
       }
     },
@@ -25,7 +26,8 @@
           "type": "heading",
           "settings": {
             "heading": "Bleusalt Signature Fabric",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h1"
           }
         },
         "text_i3NHwq": {
@@ -185,7 +187,8 @@
           "type": "heading",
           "settings": {
             "heading": "Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth</span>.",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "1660937591138d0f9f-1": {
