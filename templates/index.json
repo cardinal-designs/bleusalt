@@ -24,8 +24,7 @@
           "settings": {
             "heading": "25% Off Sitewide",
             "heading_color": "#ffffff",
-            "heading_size": "h0",
-            "heading_tag": "h2"
+            "heading_size": "h0"
           }
         },
         "text_two_NHhmBc": {
@@ -374,8 +373,7 @@
           "type": "heading",
           "settings": {
             "heading": "Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth.</span>",
-            "heading_size": "h1",
-            "heading_tag": "h2"
+            "heading_size": "h1"
           }
         },
         "16602267200642e541-1": {

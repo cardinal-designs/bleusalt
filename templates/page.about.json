@@ -35,9 +35,7 @@
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "video_height_mobile": "100",
-        "show_text_below": true,
-        "button_overlay": false,
-        "video_overlay_link": ""
+        "show_text_below": true
       }
     },
     "16618951073dd5fa7a": {
@@ -47,8 +45,7 @@
           "type": "heading",
           "settings": {
             "heading": "OUR STORY",
-            "heading_size": "h2",
-            "heading_tag": "h1"
+            "heading_size": "h2"
           }
         },
         "16618951072671241e-1": {
