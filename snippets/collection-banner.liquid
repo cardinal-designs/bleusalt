@@ -2,24 +2,26 @@
   <div class="collection-banner__container">
     {% for block in section.blocks %}
       {% assign current_collection = collections[block.settings.collection] %}
-      <div class="collection-banner__item-image">
-        {% if current_collection.image != blank %}
-          {{ current_collection.image | image_url: width: 600 | image_tag:
-            loading: 'lazy',
-            width: current_collection.image.width,
-            sizes: '375px',
-            widths: '375, 550',
-            alt: current_collection.title | escape
-          }}
-        {% endif %}
-      </div>
-      <h1 class="collection-banner__item-title">
-        {% if block.settings.title != blank %}
-          {{ block.settings.title }}
-        {% else %}
-          {{ current_collection.title }}
-        {% endif %}
-      </h1>
+      <a href="{{ current_collection.url }}" class="collection-banner__item" {{ block.shopify_attributes }}>
+        <div class="collection-banner__item-image">
+          {% if current_collection.image != blank %}
+            {{ current_collection.image | image_url: width: 600 | image_tag:
+              loading: 'lazy',
+              width: current_collection.image.width,
+              sizes: '375px',
+              widths: '375, 550',
+              alt: current_collection.title | escape
+            }}
+          {% endif %}
+        </div>
+        <p class="collection-banner__item-title">
+          {% if block.settings.title != blank %}
+            {{ block.settings.title }}
+          {% else %}
+            {{ current_collection.title }}
+          {% endif %}
+        </p>
+      </a>
     {% endfor %}
   </div>
 </div>
