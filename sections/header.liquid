@@ -669,7 +669,7 @@
       </div>
     {%- endunless -%}
 
-    {%- if request.page_type == 'index' -%}
+    {%- if request.page_type == 'index' or request.page_type == 'collection' -%}
       <h1 class="header__heading">
     {%- endif -%}
         <a 
@@ -713,7 +713,7 @@
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
         </a>
-    {%- if request.page_type == 'index' -%}
+    {%- if request.page_type == 'index' or request.page_type == 'collection' -%}
       </h1>
     {%- endif -%}
 

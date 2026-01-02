@@ -27,8 +27,9 @@
         "heading_MUntnM": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Bleusalt Corporate Gifting</p>",
-            "heading_size": "h1"
+            "heading": "Bleusalt Corporate Gifting",
+            "heading_size": "h1",
+            "heading_tag": "h1"
           }
         },
         "text_g4V4mQ": {
@@ -40,8 +41,9 @@
         "heading_F4MepD": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Elevated Gifting, Thoughtfully Delivered</p>",
-            "heading_size": "h2"
+            "heading": "Elevated Gifting, Thoughtfully Delivered",
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_RQdqHW": {
@@ -75,8 +77,9 @@
         "heading_gpxCka": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Why Bleusalt Gifts Make a Lasting Impression</p>",
-            "heading_size": "h2"
+            "heading": "Why Bleusalt Gifts Make a Lasting Impression",
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_rNTCpa": {
@@ -88,8 +91,9 @@
         "heading_3GGwNn": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Popular Sizeless Gift Options </p>",
-            "heading_size": "h2"
+            "heading": "Popular Sizeless Gift Options",
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_MBWWzw": {
@@ -123,8 +127,9 @@
         "heading_jANkrP": {
           "type": "heading",
           "settings": {
-            "heading": "<p>The Bleusalt Experience</p>",
-            "heading_size": "h2"
+            "heading": "The Bleusalt Experience",
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_4wRbmU": {
@@ -325,8 +330,9 @@
         "heading_d6JneJ": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Effortless Ordering and Concierge Support </p>",
-            "heading_size": "h2"
+            "heading": "Effortless Ordering and Concierge Support",
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_rgxXtp": {
@@ -388,8 +394,9 @@
         "heading_y4Beib": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Bleusalt Corporate & Wholesale Return Policy</p>",
-            "heading_size": "h2"
+            "heading": "Bleusalt Corporate & Wholesale Return Policy",
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_YRTBG6": {

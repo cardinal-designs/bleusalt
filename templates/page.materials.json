@@ -10,8 +10,10 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
-      "disabled": true,
+      "type": "materials-main-page",
+      "custom_css": [
+        ".main-page-header {display: none !important;}"
+      ],
       "settings": {
         "show_heading": true,
         "heading_size": "h1",
@@ -53,8 +55,9 @@
         "16618895639d21bbee-0": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Sustainable, Luxurious, and Made to Last.</h2>",
-            "heading_size": "h1"
+            "heading": "Sustainable, Luxurious, and Made to Last.",
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_874t3f": {
@@ -105,7 +108,8 @@
           "settings": {
             "heading": "NATURAL LUXURY",
             "heading_color": "",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "text_bPEUzN": {
