@@ -11,10 +11,10 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "align_left": true,
         "color_scheme": "background-1"
       }
     },
@@ -82,7 +82,8 @@
           "type": "heading",
           "settings": {
             "heading": "Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth</span>.",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "1660937591138d0f9f-1": {
