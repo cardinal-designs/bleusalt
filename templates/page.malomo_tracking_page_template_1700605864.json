@@ -1,1 +1,143 @@
-{"order":["a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b","main","a0fe3504-5f5b-414e-83fa-12ff655c8abc"],"sections":{"a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b":{"type":"rich-text","blocks":{"template--14808720900209__a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b-heading-1":{"type":"heading","settings":{"heading":"<p>Bleusalt Order Tracking<\/p>","heading_size":"h1"}}},"block_order":["template--14808720900209__a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"main":{"type":"malomo_order_tracking","blocks":{"malomo_shipment_tracker":{"type":"shopify:\/\/apps\/malomo-order-tracking\/blocks\/shipment-tracker\/5cb158a1-dc52-4d21-aac7-e017083c11e2","settings":{"publishable_api_key":"pk_bbe36445eb99a8313b3b26eb18e76f5d","element":"shipmentTracker","block_width":350,"button_background_color":"#DEE4E7","button_border_color":"","button_border_radius":3,"button_border_width":0,"button_capitalization":"capitalize","button_height":48,"button_text_color":"#222222","input_background_color":"#FFFFFF","input_border_color":"#DDDDDD","input_border_radius":3,"input_border_width":1,"input_height":42}},"image":{"type":"image","settings":{"image_horizontal_alignment":"center","image_link_url":"","image_width":""}}},"block_order":["malomo_shipment_tracker","image"],"settings":{"background_image_enabled":false,"background_image":"shopify:\/\/shop_images\/BLOG_capsule_feature_2_-_holiday_b.png","background_repeat":"no-repeat","background_size":"cover","mobile_image":"shopify:\/\/shop_images\/BLOG_capsule_feature_2_-_holiday_b.png","background_color":"#e3e3e3","height":"","padding":"20","header_background_color":"transparent","header_font":"sans-serif","header_font_size":"40","header_horizontal_alignment":"center","header_padding_top":"20","header_padding_bottom":"20","header_level":"h2","header_text":"","malomo_background_color":"#ffffff","malomo_border_color":"","malomo_border_radius":"0","malomo_border_style":"none","malomo_border_width":"0","malomo_padding":"40"}},"a0fe3504-5f5b-414e-83fa-12ff655c8abc":{"type":"featured-collection","blocks":{"b7350b80-fbdd-41d2-8be8-cf11a29fdf9b":{"type":"collection","settings":{"heading":"","collection":"newest-products"}}},"block_order":["b7350b80-fbdd-41d2-8be8-cf11a29fdf9b"],"settings":{"title":"Shop Our Newest Arrivals","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"newest-products","products_to_show":12,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b",
+    "main",
+    "a0fe3504-5f5b-414e-83fa-12ff655c8abc"
+  ],
+  "sections": {
+    "a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14808720900209__a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bleusalt Order Tracking",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--14808720900209__a7b1a88e-93d1-4e8b-bfb8-f3d4b9cdd56b-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "malomo_order_tracking",
+      "blocks": {
+        "malomo_shipment_tracker": {
+          "type": "shopify://apps/malomo-order-tracking/blocks/shipment-tracker/5cb158a1-dc52-4d21-aac7-e017083c11e2",
+          "settings": {
+            "publishable_api_key": "pk_bbe36445eb99a8313b3b26eb18e76f5d",
+            "element": "shipmentTracker",
+            "block_width": 350,
+            "button_background_color": "#DEE4E7",
+            "button_border_color": "",
+            "button_border_radius": 3,
+            "button_border_width": 0,
+            "button_capitalization": "capitalize",
+            "button_height": 48,
+            "button_text_color": "#222222",
+            "input_background_color": "#FFFFFF",
+            "input_border_color": "#DDDDDD",
+            "input_border_radius": 3,
+            "input_border_width": 1,
+            "input_height": 42
+          }
+        },
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_horizontal_alignment": "center",
+            "image_link_url": "",
+            "image_width": ""
+          }
+        }
+      },
+      "block_order": [
+        "malomo_shipment_tracker",
+        "image"
+      ],
+      "settings": {
+        "background_image_enabled": false,
+        "background_image": "shopify://shop_images/BLOG_capsule_feature_2_-_holiday_b.png",
+        "background_repeat": "no-repeat",
+        "background_size": "cover",
+        "mobile_image": "shopify://shop_images/BLOG_capsule_feature_2_-_holiday_b.png",
+        "background_color": "#e3e3e3",
+        "height": "",
+        "padding": "20",
+        "header_background_color": "transparent",
+        "header_font": "sans-serif",
+        "header_font_size": "40",
+        "header_horizontal_alignment": "center",
+        "header_padding_top": "20",
+        "header_padding_bottom": "20",
+        "header_level": "h2",
+        "header_text": "",
+        "malomo_background_color": "#ffffff",
+        "malomo_border_color": "",
+        "malomo_border_radius": "0",
+        "malomo_border_style": "none",
+        "malomo_border_width": "0",
+        "malomo_padding": "40"
+      }
+    },
+    "a0fe3504-5f5b-414e-83fa-12ff655c8abc": {
+      "type": "featured-collection",
+      "blocks": {
+        "b7350b80-fbdd-41d2-8be8-cf11a29fdf9b": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "newest-products"
+          }
+        }
+      },
+      "block_order": [
+        "b7350b80-fbdd-41d2-8be8-cf11a29fdf9b"
+      ],
+      "settings": {
+        "title": "Shop Our Newest Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "newest-products",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  }
+}
