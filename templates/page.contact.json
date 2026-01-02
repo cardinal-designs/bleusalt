@@ -1,1 +1,72 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"show_heading":true,"heading_size":"h1","heading_alignment":"center","padding_top":36,"padding_bottom":36,"page_width":"page-width--narrow"}},"eee1d9b6-5c3d-4c85-a549-58adc204a69c":{"type":"rich-text","blocks":{"template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-heading-1":{"type":"heading","settings":{"heading":"<p>Contact Us<\/p>","heading_size":"h1"}},"template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-text-1":{"type":"text","settings":{"text":"<p>We're here to answer any questions about our luxury fashion. Whether you're looking for more information about our materials, sizing, or shipping, our team is here to help. Contact us today and experience the quiet luxury of Bleusalt <a href=\"\/collections\/mens-collection\" title=\"\/collections\/mens-collection\">men’s clothing<\/a>, <a href=\"\/collections\/womens-shop-all\" title=\"\/collections\/womens-shop-all\">women’s clothing<\/a>, <a href=\"\/collections\/unisex-collection\" title=\"\/collections\/unisex-collection\">unisex clothing<\/a>, and <a href=\"\/collections\/kids\" title=\"\/collections\/kids\">kids’ clothing<\/a>.<\/p><p>For Customer Service Call: <a href=\"tel:+3237396057\">(323) 739-6057<br\/><\/a>Mon - Fri 8am - 4:30pm PST<\/p><p>For General Questions or Comments, please use the form below.<\/p>"}}},"block_order":["template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-heading-1","template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"form":{"type":"contact-form","settings":{"heading":"","heading_size":"h1","color_scheme":"background-1","padding_top":36,"padding_bottom":36}}},"order":["main","eee1d9b6-5c3d-4c85-a549-58adc204a69c","form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "page_width": "page-width--narrow"
+      }
+    },
+    "eee1d9b6-5c3d-4c85-a549-58adc204a69c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "h1"
+          }
+        },
+        "template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're here to answer any questions about our luxury fashion. Whether you're looking for more information about our materials, sizing, or shipping, our team is here to help. Contact us today and experience the quiet luxury of Bleusalt <a href=\"/collections/mens-collection\" title=\"/collections/mens-collection\">men’s clothing</a>, <a href=\"/collections/womens-shop-all\" title=\"/collections/womens-shop-all\">women’s clothing</a>, <a href=\"/collections/unisex-collection\" title=\"/collections/unisex-collection\">unisex clothing</a>, and <a href=\"/collections/kids\" title=\"/collections/kids\">kids’ clothing</a>.</p><p>For Customer Service Call: <a href=\"tel:+3237396057\">(323) 739-6057<br/></a>Mon - Fri 8am - 4:30pm PST</p><p>For General Questions or Comments, please use the form below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-heading-1",
+        "template--14657443954801__eee1d9b6-5c3d-4c85-a549-58adc204a69c-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "eee1d9b6-5c3d-4c85-a549-58adc204a69c",
+    "form"
+  ]
+}
