@@ -525,6 +525,7 @@ button#wair-fit-advisor > span > span:hover {
 
 @media screen and (max-width: 749px) {
 
+  .card-product quick-add,
   .ns-product .card-product .ns-quick-add {
     opacity: 1;
     visibility: visible;
