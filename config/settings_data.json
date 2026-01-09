@@ -52,7 +52,7 @@
     "cart_notice": "Orders Placed Today ship within 1 business day.",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
-    "discount_promo_bar": false,
+    "discount_promo_bar": true,
     "cart_rebuy": true,
     "enable_gwp_bar": false,
     "gwp_bar_icon_color": "#0d1c29",
@@ -627,13 +627,6 @@
         "type": "shopify://apps/wair-size-fit-recommendation/blocks/app-embed/68b6dfc9-7d29-46dc-8820-cbcd3543e806",
         "disabled": false,
         "settings": {}
-      },
-      "15426571166493967512": {
-        "type": "shopify://apps/loudcrowd/blocks/embed/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
-        "disabled": false,
-        "settings": {
-          "lc_secret": ""
-        }
       }
     }
   },
