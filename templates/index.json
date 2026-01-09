@@ -14,24 +14,25 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "The New Year Event",
+            "text": "The Layers & Outerwear Event",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "25% Off Sitewide",
+            "heading": "Layers & Outerwear",
             "heading_color": "#ffffff",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_tag": "h2"
           }
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Everything On The App",
+            "text": "30% Off Limited Time Only",
             "text_color": "#ffffff"
           }
         },
@@ -39,7 +40,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/the-bleusalt-collection",
+            "button_link_1": "shopify://collections/luxurious-layers",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
@@ -55,8 +56,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/b248f1f9c00d448f88ea3df7815259f3.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/42435e88883843e7ad1e632ebe1b10b1.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/4fa97b21968e42bdb812f79d314d51b7.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/ddf6b92e37bd486b8f442c65bd710452.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -373,7 +374,8 @@
           "type": "heading",
           "settings": {
             "heading": "Essentials sustainably made in the USA from the <span style=\"text-decoration:underline\">softest fibers on Earth.</span>",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "16602267200642e541-1": {
