@@ -14,16 +14,15 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Limited Time Only",
+            "text": "Introducing",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "Layers & Outerwear",
+            "heading": "The Cindy Bootcut Pant",
             "heading_color": "#ffffff",
             "heading_size": "h0",
             "heading_tag": "h2"
@@ -31,6 +30,7 @@
         },
         "text_two_NHhmBc": {
           "type": "text-two",
+          "disabled": true,
           "settings": {
             "text": "30% Off Limited Time Only",
             "text_color": "#ffffff"
@@ -56,8 +56,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/4fa97b21968e42bdb812f79d314d51b7.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/ddf6b92e37bd486b8f442c65bd710452.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/cc8dcc24e8b74628b51d83b79b0be604.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/092ef61786264c39b9705ba8c95fc0d6.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
