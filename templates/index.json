@@ -30,17 +30,16 @@
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "30% Off Limited Time Only",
+            "text": "Designed with a Flare",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Sale",
-            "button_link_1": "shopify://collections/luxurious-layers",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/womens-new-arrivals",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
@@ -69,7 +68,7 @@
         "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": false,
-        "video_overlay_link": "shopify://collections/the-bleusalt-collection"
+        "video_overlay_link": "shopify://products/the-cindy-bootcut-pant"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
