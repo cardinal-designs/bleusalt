@@ -550,7 +550,10 @@
                             >
                             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ swatch_url }});"{% endif %}>
                               <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
-                                {{ value }} / XXS
+                                {% if value == '00' %}
+                                  {% assign size = 'XXS' %}
+                                {% endif %}
+                                {{ value }} / {{ size }}
                               </span>
                             </label>
                           </div>
