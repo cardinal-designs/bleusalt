@@ -552,6 +552,8 @@
                               <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
                                 {% if value == '00' %}
                                   {% assign size = 'XXS' %}
+                                {% elsif value == '0' %}
+                                  {% assign size = 'XS' %}
                                 {% endif %}
                                 {{ value }} / {{ size }}
                               </span>
