@@ -554,6 +554,18 @@
                                   {% assign size = 'XXS' %}
                                 {% elsif value == '0' %}
                                   {% assign size = 'XS' %}
+                                {% elsif value == '1' %}
+                                  {% assign size = 'S' %}
+                                {% elsif value == '2' %}
+                                  {% assign size = 'M' %}
+                                {% elsif value == '3' %}
+                                  {% assign size = 'L' %}
+                                {% elsif value == '4' %}
+                                  {% assign size = 'XL' %}
+                                {% elsif value == '5' %}
+                                  {% assign size = 'XXL' %}
+                                {% elsif value == '6' %}
+                                  {% assign size = 'XXXL' %}
                                 {% endif %}
                                 {{ value }} / {{ size }}
                               </span>
