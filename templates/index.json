@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "Introducing The",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Cindy Bootcut Pant",
+            "heading": "Long Barbra Top",
             "heading_color": "#ffffff",
             "heading_size": "h0",
             "heading_tag": "h2"
@@ -31,15 +31,15 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "An Iconic Twist",
+            "text": "Launching Monday",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/the-cindy-bootcut-pant",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/womens-new-arrivals",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
@@ -55,8 +55,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/0d8ea56e25dc45ff8e2c00787b5f3137.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/092ef61786264c39b9705ba8c95fc0d6.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/dd0cddc9dbc0482f8e85ccfd04d1775b.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/fded6b0e61dc4e3bbcbd112e39dd3f1a.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -68,7 +68,7 @@
         "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": false,
-        "video_overlay_link": "shopify://products/the-cindy-bootcut-pant"
+        "video_overlay_link": "shopify://collections/womens-new-arrivals"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
