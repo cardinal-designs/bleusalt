@@ -11,8 +11,12 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        "h1 {margin-bottom: 30px; text-align: center; font-family: serif;}",
+        "p {font-family: serif; text-align: center; font-size: 0.9em;}"
+      ],
       "settings": {
-        "show_collection_description": false,
+        "show_collection_description": true,
         "show_collection_image": false,
         "align_left": true,
         "color_scheme": "background-1"
