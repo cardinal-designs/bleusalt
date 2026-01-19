@@ -13,7 +13,7 @@
       "type": "main-collection-banner",
       "custom_css": [
         "h1 {margin-bottom: 30px; text-align: center; font-family: serif;}",
-        "p {font-family: serif; text-align: center; font-size: 0.9em;}"
+        "p {font-family: serif; text-align: center; font-size: 0.9em; padding: 0 50px;}"
       ],
       "settings": {
         "show_collection_description": true,
