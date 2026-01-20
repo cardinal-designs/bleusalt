@@ -634,6 +634,11 @@
         "settings": {
           "lc_secret": ""
         }
+      },
+      "11735696852170848367": {
+        "type": "shopify://apps/loudcrowd/blocks/embed.shopwith-widget/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
