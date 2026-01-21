@@ -13,7 +13,8 @@
       "type": "main-collection-banner",
       "custom_css": [
         "h1 {margin: 30px 0; text-align: center; font-family: serif;}",
-        "p {font-family: serif; text-align: center; font-size: 0.9em; padding: 0 50px;}"
+        "p {font-family: serif; text-align: center; font-size: 0.9em; padding: 0 50px;}",
+        ".collection-hero__description {padding: 0 10%;}"
       ],
       "settings": {
         "show_collection_description": true,
