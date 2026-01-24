@@ -26,14 +26,14 @@
       }
     }
   {%- endstyle -%}
-{{product.options | json }}
-  {% if product.options.size > 1 %}
+
+  {% comment %} {% if product.options.size > 1 %}
     {% style %}
       .product-form__submit[data-join-list] {
         display: block !important;
       }
     {% endstyle %}
-  {% endif %}
+  {% endif %} {% endcomment %}
 
 {% assign sizing_popups = 'Sizing Guide,Measuring Guide' | split: ',' %}
 
