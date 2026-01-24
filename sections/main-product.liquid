@@ -26,7 +26,7 @@
       }
     }
   {%- endstyle -%}
-
+{{product.options | json }}
   {% if product.options.size > 1 %}
     {% style %}
       .product-form__submit[data-join-list] {
