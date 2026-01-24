@@ -235,7 +235,7 @@ class VariantSelects extends HTMLElement {
           button.removeAttribute('data-join-list'); // Remove the attribute
         }
       } else {
-        // button.disabled = true;
+        button.disabled = true;
         button.setAttribute('data-join-list', 'true');
         button.querySelector('span').textContent = 'Join The Waitlist';
       }
