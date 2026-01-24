@@ -280,7 +280,7 @@ class VariantSelects extends HTMLElement {
     bisInput.style.maxHeight = productSubmitButton.offsetHeight + 'px';
 
     bisEl.style.display = this.currentVariant.available ? 'none' : 'block';
-    productSubmitButton.style.display = this.currentVariant.available ? 'block' : 'none';
+    productSubmitButton.style.display = this.currentVariant.available ? 'block' : '';
 
 
 
