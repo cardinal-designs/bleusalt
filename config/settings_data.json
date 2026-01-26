@@ -52,7 +52,7 @@
     "cart_notice": "Orders Placed Today ship within 1 business day.",
     "free_shipping_threshold": 175,
     "cart_promo_bar": true,
-    "discount_promo_bar": true,
+    "discount_promo_bar": false,
     "cart_rebuy": true,
     "enable_gwp_bar": false,
     "gwp_bar_icon_color": "#0d1c29",
