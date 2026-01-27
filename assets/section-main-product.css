@@ -1636,7 +1636,8 @@ table[data-in-to-cm] td {
   .size__guide--grid {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px;
   }
   
   .size__guide--grid .product-popup-modal__button {
