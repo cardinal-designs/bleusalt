@@ -1835,6 +1835,7 @@ table[data-in-to-cm] td {
 @media (max-width: 767px){
   .product-discount__message {
     display: flex;
+    justify-content: center;
   }
 }
 
