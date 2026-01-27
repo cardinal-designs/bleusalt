@@ -1760,6 +1760,7 @@ table[data-in-to-cm] td {
   cursor: pointer;
   position: relative;
 }
+
 .product-discount-title {
   text-align: left;
   line-height: 1.2;
@@ -1768,6 +1769,7 @@ table[data-in-to-cm] td {
   gap: 5px;
   align-items: center;
 }
+
 .product-discount-over {
   display: none;
   font-size: 15px;
@@ -1807,22 +1809,32 @@ table[data-in-to-cm] td {
 .product-discount__message.active .product-discount-over {
   display: block;
 }
+
 @media (min-width: 768px){
   .product-discount-over {
     max-width: 255px;
     font-size: 14px;
   }
+
   .product-discount-title {
     font-size: 14px;
   }
 }
+
 @media (min-width: 1440px){
   .product-discount-over {
     max-width: 300px;
     font-size: 15px;
   }
+
   .product-discount-title {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 767px){
+  .product-discount__message {
+    display: flex;
   }
 }
 
