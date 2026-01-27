@@ -1656,6 +1656,8 @@ table[data-in-to-cm] td {
   .product-form__buttons {
     margin-left: auto;
     margin-right: auto;
+    width: 44rem;
+    max-width: 44rem;
   }
   
   .breadcrumb {
@@ -1810,7 +1812,7 @@ table[data-in-to-cm] td {
   display: block;
 }
 
-@media (min-width: 768px){
+@media (min-width: 750px){
   .product-discount-over {
     max-width: 255px;
     font-size: 14px;
@@ -1832,7 +1834,12 @@ table[data-in-to-cm] td {
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 749px){
+  form.form {
+    display: flex;
+    justify-content: center;
+  }
+
   .product-discount__message {
     display: flex;
     justify-content: center;
