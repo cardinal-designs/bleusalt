@@ -18,6 +18,7 @@
         },
         "64e78a2b-33a6-4f1d-80b6-5976f0db1bc2": {
           "type": "rating",
+          "disabled": true,
           "settings": {}
         },
         "inquires_button_89UtPW": {
@@ -256,12 +257,14 @@
     "16899109760dd19e0a": {
       "type": "apps",
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     },
     "17436175840c1ee6c6": {
       "type": "apps",
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
