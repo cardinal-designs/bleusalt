@@ -5,13 +5,11 @@
       <a href="{{ current_collection.url }}" class="collection-banner__item" {{ block.shopify_attributes }}>
         <div class="collection-banner__item-image">
           {% if current_collection.image != blank %}
-            {{ current_collection.image | image_url: width: 600 | image_tag:
-              loading: 'lazy',
-              width: current_collection.image.width,
-              sizes: '375px',
-              widths: '375, 550',
-              alt: current_collection.title | escape
-            }}
+            {%- render 'image',
+              image: current_collection.image,
+              sizes: '(min-width: 750px) 0, 375px',
+              prioritize_loading: true
+            -%}
           {% endif %}
         </div>
         <p class="collection-banner__item-title">

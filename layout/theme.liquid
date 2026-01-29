@@ -157,7 +157,10 @@
       <script defer src="{{ 'global.js' | asset_url }}"></script>
       <script defer src="{{ 'custom.js' | asset_url }}"></script>
       {% # theme-check-disable %}
-      {%- assign content_for_header = content_for_header | replace: "window.addEventListener('load'", "window.addEventListener('load-head-scripts'" -%}
+      {%- liquid
+        assign content_for_header = content_for_header | replace_first: "window.addEventListener('load'", "window.addEventListener('load-head-scripts'"
+        assign content_for_header = content_for_header | replace_first: "src='https://cdn.shopify.com/shopifycloud/preview-bar/preview-bar-modules.js'", "data-lazy-src='https://cdn.shopify.com/shopifycloud/preview-bar/preview-bar-modules.js'"
+      -%}
       {{ content_for_header }}
       {% # theme-check-enable %}
 
@@ -361,7 +364,7 @@
       {% render 'gsf-conversion-pixels' %}
       <script defer data-lazy-src="https://www.dwin1.com/19038.js" type="text/javascript"></script>
 
-      <script type="text/javascript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "gq4xpc5raz"); </script>
+      <script type="text/javascript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.dataset.lazySrc="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "gq4xpc5raz"); </script>
 
       <style>[ge-active="true"] .product__info-wrapper .payment-plan, [ge-active="true"] .product__info-wrapper .product__tax, [ge-active="true"] .product__text--freeshipping { display: none; }</style>
 
@@ -385,7 +388,6 @@
       {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
       {{ 'bundly-custom.css' | asset_url | stylesheet_tag: preload: true }}
 
-      {%- render 'head-scripts' -%}
 
       
       <!-- LoudCrowd -->
@@ -393,6 +395,7 @@
   <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
+      {%- render 'head-scripts-loader' -%}
     </head>
 
     <body class="gradient template--{{ template.name }} template--{{ template.suffix }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">

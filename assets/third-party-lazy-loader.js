@@ -1,22 +1,38 @@
 (() => {
-  const userActivityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart', 'keypress', 'touchmove'];
-  const SCRIPTS_LOADED_FLAG = 'bleusalt-third-party-scripts-loaded';
+  const userActivityEvents = [
+    'mousedown',
+    'mousemove',
+    'keydown',
+    'scroll',
+    'touchstart',
+    'keypress',
+    'touchmove',
+  ];
+  const SCRIPTS_LOADED_FLAG = 'third-party-scripts-loaded';
 
   async function onUserActivity() {
     for (const event of userActivityEvents) {
       window.removeEventListener(event, onUserActivity);
     }
 
-    const scriptTagsForLoad = Array.from(document.querySelectorAll('script[data-lazy-src]'));
+    const scriptTagsForLoad = Array.from(
+      document.querySelectorAll('script[data-lazy-src]'),
+    );
 
     const scriptsLoad = [];
 
     for (const scriptTag of scriptTagsForLoad) {
-      scriptTag.src = scriptTag.dataset.lazySrc;
-
       const scriptLoad = new Promise((resolve) => {
-        scriptTag.onload = resolve;
-        scriptTag.onerror = resolve;
+        const timeoutId = setTimeout(resolve, 2000);
+
+        const complete = () => {
+          clearTimeout(timeoutId);
+          resolve();
+        };
+        scriptTag.addEventListener('load', complete, { once: true });
+        scriptTag.addEventListener('error', complete, { once: true });
+
+        scriptTag.src = scriptTag.dataset.lazySrc;
       });
 
       scriptsLoad.push(scriptLoad);
