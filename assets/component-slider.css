@@ -397,6 +397,8 @@ slider-component h2.title {
   }
   slider-component .collection__title .title:not(:only-child) {
     margin-bottom: 0;
+    margin-right: 10px;
+    font-size: 26px;
   }
   .slider-button {
     width: 3rem;
