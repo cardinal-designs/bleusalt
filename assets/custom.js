@@ -218,3 +218,10 @@ window.addEventListener('scroll', function () {
 
 // // Observe the containers for content injection
 // elements.forEach(el => observer.observe(el, { childList: true, subtree: true }));
+
+nostojs(api => {
+  api.listen('postrender', event => {
+    console.log(event.filledElements);
+    console.log(event.unFilledElements); 
+  });
+});
