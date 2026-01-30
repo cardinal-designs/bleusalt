@@ -562,7 +562,14 @@ button#wair-fit-advisor > span > span:hover {
   }
 }
 @media screen and (min-width: 750px) and (max-width: 989px) {
-  .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
+  .template--index .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
     width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .template--index .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item, .grid--peek .grid__item {
+    width: 100%;
+    max-width: 100%;
   }
 }
