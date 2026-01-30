@@ -575,6 +575,11 @@ button#wair-fit-advisor > span > span:hover {
   .slider-mobile-gutter .button-wrapper {
     margin-right: 3rem !important;
   }
+  .quick-add__button--color {
+    padding: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
 }
 
 .page-width.homepage-nosto-custom {
