@@ -549,3 +549,12 @@ button#wair-fit-advisor > span > span:hover {
     padding: 5px !important;
   }
 }
+
+@media screen and (min-width: 990px) {
+  .template--index .slider--desktop .slider__slide:first-child {
+    margin-left: 0;
+  }
+  .template--index .slider--desktop.grid--3-col-desktop .grid__item {
+    width: calc(33.33% - 16px);
+  }
+}
