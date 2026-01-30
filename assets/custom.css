@@ -572,8 +572,8 @@ button#wair-fit-advisor > span > span:hover {
     width: 100%;
     max-width: 100%;
   }
-  .button-wrapper {
-    
+  .slider-mobile-gutter .button-wrapper {
+    margin-right: 3rem;
   }
 }
 
