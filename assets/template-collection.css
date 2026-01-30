@@ -65,7 +65,7 @@
     padding: 0 5rem;
   }
 
-  .collection slider-component:not(.page-width-desktop) {
+  body:not(.template--index) .collection slider-component:not(.page-width-desktop) {
     padding: 0;
   }
 
