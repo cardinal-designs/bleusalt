@@ -557,4 +557,7 @@ button#wair-fit-advisor > span > span:hover {
   .template--index .slider--desktop.grid--3-col-desktop .grid__item {
     width: calc(33.33% - 16px);
   }
+  .template--index .slider--desktop {
+    scroll-padding-left: 0;
+  }
 }
