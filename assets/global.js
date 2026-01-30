@@ -677,15 +677,13 @@ class SliderComponent extends HTMLElement {
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
+    if (this.sliderItemsToShow.length < 1) return;
+
+    // Use the actual container width divided by 3 to ensure perfect alignment
+    this.sliderItemOffset = this.slider.clientWidth / 3; 
     
-    // Calculate offset based on actual element width
-    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-    
-    // FORCE 3 ITEMS
-    this.slidesPerPage = 3; 
+    this.slidesPerPage = 3;
     this.totalPages = Math.max(1, this.sliderItemsToShow.length - this.slidesPerPage + 1);
-    
     this.update();
   }
 
@@ -753,10 +751,15 @@ class SliderComponent extends HTMLElement {
 
   onButtonClick(event) {
     event.preventDefault();
-    const step = event.currentTarget.dataset.step || 1;
-    this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
+    const step = parseInt(event.currentTarget.dataset.step) || 1;
+    
+    // Calculate the next "slot" precisely
+    const direction = event.currentTarget.name === 'next' ? 1 : -1;
+    const targetScroll = this.slider.scrollLeft + (direction * step * this.sliderItemOffset);
+
     this.slider.scrollTo({
-      left: this.slideScrollPosition
+      left: Math.round(targetScroll), // Round to prevent sub-pixel slivers
+      behavior: 'smooth'
     });
   }
 }
