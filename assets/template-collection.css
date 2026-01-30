@@ -65,6 +65,10 @@
     /* padding: 0 5rem; */
   }
 
+  .collection__title.title-wrapper {
+    max-width: 100%;
+  }
+
   body:not(.template--index) .collection slider-component:not(.page-width-desktop) {
     padding: 0;
   }
