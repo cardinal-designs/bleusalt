@@ -157,7 +157,7 @@
         "nosto_nosto_placements_block_adcqUP"
       ],
       "settings": {
-        "custom_class": "",
+        "custom_class": "homepage-nosto-custom",
         "include_margins": true
       }
     },
