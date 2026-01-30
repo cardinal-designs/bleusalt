@@ -183,8 +183,8 @@ window.addEventListener('scroll', function () {
 /* Bundly App Swatch Custom Code - End */
 
 // 4. THE HIJACKER: Watch for Nosto rendering the slider
+const elements = document.querySelectorAll('.nosto_element');
 const observer = new MutationObserver((mutations) => {
-    const elements = document.querySelectorAll('.nosto_element');
     elements.forEach(el => {
         const $slider = $(el).find('.nosto-slick');
         
