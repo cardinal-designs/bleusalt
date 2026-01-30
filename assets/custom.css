@@ -561,3 +561,8 @@ button#wair-fit-advisor > span > span:hover {
     scroll-padding-left: 0;
   }
 }
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
+    width: calc(50% - 16px);
+  }
+}
