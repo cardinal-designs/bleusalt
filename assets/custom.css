@@ -574,6 +574,6 @@ button#wair-fit-advisor > span > span:hover {
   }
 }
 
-.homepage-nosto-custom .page-width {
+.page-width.homepage-nosto-custom {
   max-width: 100%;
 }
