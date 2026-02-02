@@ -1,1 +1,298 @@
-{"sections":{"main":{"type":"main-list-collections","settings":{"image_ratio":"square"}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      }
+    },
+    "177006437041331469": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_RmGHme": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "frontpage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_RmGHme"
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    },
+    "featured_collection_Mm4pDy": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_QAXWWm": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QAXWWm"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 11,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_GWyR7F": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_WG6Pjt": {
+          "type": "collection",
+          "settings": {
+            "heading": "Luxurious Layers",
+            "collection": "luxurious-layers"
+          }
+        }
+      },
+      "block_order": [
+        "collection_WG6Pjt"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Luxurious Layers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_NYHy3n": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_AaFhen": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-tops"
+          }
+        }
+      },
+      "block_order": [
+        "collection_AaFhen"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Women's Tops",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_UFMfEL": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_fWttKV": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-bottoms"
+          }
+        }
+      },
+      "block_order": [
+        "collection_fWttKV"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Women's Bottoms",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_ED3dAU": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_CYLABM": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-dresses"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CYLABM"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Women's Dresses",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_UPrkqW": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_8367jJ": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "womens-accessories-outerwear"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8367jJ"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Women's Accessories",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "177006437041331469",
+    "featured_collection_Mm4pDy",
+    "featured_collection_GWyR7F",
+    "featured_collection_NYHy3n",
+    "featured_collection_UFMfEL",
+    "featured_collection_ED3dAU",
+    "featured_collection_UPrkqW"
+  ]
+}
