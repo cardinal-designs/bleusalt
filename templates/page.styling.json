@@ -1,1 +1,129 @@
-{"sections":{"page-styling":{"type":"page-styling","blocks":{"60b5aa06-f7c0-4029-92dd-ee89054d1932":{"type":"look","settings":{"collection":"bright-fresh","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=1eE-psrVXaQ"}},"d0ecbd4d-18b6-45f9-95fb-b5001629905e":{"type":"look","settings":{"collection":"light-pink-tone-on-tone","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=nnODCRSD-OQ"}},"9e5ad9bf-bd83-4b6b-a356-a84f77aa169d":{"type":"look","settings":{"collection":"3-ways-to-wear-the-classic-crew","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=IYNkmY8bHHM"}},"09f6b27c-5267-445b-9cc0-8fd0ec91acf5":{"type":"look","settings":{"collection":"unique-ways-to-wear-the-3-yard-wrap","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=1MD96pOnDe4"}},"16b2c59c-473c-406d-aaca-7a9ab249b946":{"type":"look","settings":{"collection":"3-ways-to-wear-the-crop-pant","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=26WMmsAIfQY"}},"17a00f9a-5a13-4353-b4f7-cc565c85ae1a":{"type":"look","settings":{"collection":"3-ways-to-wear-the-schoolboy-blazer","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=Q8ToPpeywCg"}},"ef53732d-25f2-4303-b85d-7beb14e14385":{"type":"look","settings":{"collection":"3-ways-to-wear-the-kaia-crop-hoodie","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=XAe9k51OluQ"}},"7ef8f06c-32a1-4712-bc34-ad8bbbb7567d":{"type":"look","settings":{"collection":"3-ways-to-wear-the-paperbag-skirt","title":"","percentage":20,"video_url":"https:\/\/www.youtube.com\/watch?v=Lf2HwBLO84w"}}},"block_order":["60b5aa06-f7c0-4029-92dd-ee89054d1932","d0ecbd4d-18b6-45f9-95fb-b5001629905e","9e5ad9bf-bd83-4b6b-a356-a84f77aa169d","09f6b27c-5267-445b-9cc0-8fd0ec91acf5","16b2c59c-473c-406d-aaca-7a9ab249b946","17a00f9a-5a13-4353-b4f7-cc565c85ae1a","ef53732d-25f2-4303-b85d-7beb14e14385","7ef8f06c-32a1-4712-bc34-ad8bbbb7567d"],"settings":{}},"bec55dc0-24a0-49c6-a1a5-906e179d90b2":{"type":"rich-text","blocks":{"ca9f7e7c-3c26-4f9b-950c-f2eb2ec6ca06":{"type":"text","settings":{"text":"<h2>How To Wear Our Luxury Clothing<\/h2><p>Follow our expert guidance for styling your favorite luxury clothing from Bleusalt. Our collection of versatile and seasonless basics is designed to elevate every look, making them perfect for any occasion.<\/p><p>We have the expertise needed to refine any look. Whether you want to figure out how to take a basic piece from day to night or you are inspired to create an outfit based on The Latte Trend, our styling guide features a range of looks that can be achieved with just a few key pieces.<\/p><h2>The Importance of Sustainability in Fashion <\/h2><p>At Bleusalt, we believe sustainability and luxury go hand in hand. By investing in high-quality basics that are versatile enough to elevate every look, you can create a more sustainable wardrobe that exudes quiet luxury.<\/p><h2>Look Your Best at Every Occasion<\/h2><p>Shop our collection today and discover the versatility of sustainable luxury fashion with Bleusalt. Whether you're dressing up or dressing down, our pieces are designed to help you look your best.<br\/><\/p>"}}},"block_order":["ca9f7e7c-3c26-4f9b-950c-f2eb2ec6ca06"],"settings":{"desktop_content_position":"center","content_alignment":"center","btextimg":"","background_image_size":"cover","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["page-styling","bec55dc0-24a0-49c6-a1a5-906e179d90b2"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page-styling": {
+      "type": "page-styling",
+      "blocks": {
+        "60b5aa06-f7c0-4029-92dd-ee89054d1932": {
+          "type": "look",
+          "settings": {
+            "collection": "bright-fresh",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=1eE-psrVXaQ"
+          }
+        },
+        "d0ecbd4d-18b6-45f9-95fb-b5001629905e": {
+          "type": "look",
+          "settings": {
+            "collection": "light-pink-tone-on-tone",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=nnODCRSD-OQ"
+          }
+        },
+        "9e5ad9bf-bd83-4b6b-a356-a84f77aa169d": {
+          "type": "look",
+          "settings": {
+            "collection": "3-ways-to-wear-the-classic-crew",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=IYNkmY8bHHM"
+          }
+        },
+        "09f6b27c-5267-445b-9cc0-8fd0ec91acf5": {
+          "type": "look",
+          "settings": {
+            "collection": "unique-ways-to-wear-the-3-yard-wrap",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=1MD96pOnDe4"
+          }
+        },
+        "16b2c59c-473c-406d-aaca-7a9ab249b946": {
+          "type": "look",
+          "settings": {
+            "collection": "3-ways-to-wear-the-crop-pant",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=26WMmsAIfQY"
+          }
+        },
+        "17a00f9a-5a13-4353-b4f7-cc565c85ae1a": {
+          "type": "look",
+          "settings": {
+            "collection": "3-ways-to-wear-the-schoolboy-blazer",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=Q8ToPpeywCg"
+          }
+        },
+        "ef53732d-25f2-4303-b85d-7beb14e14385": {
+          "type": "look",
+          "settings": {
+            "collection": "3-ways-to-wear-the-kaia-crop-hoodie",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=XAe9k51OluQ"
+          }
+        },
+        "7ef8f06c-32a1-4712-bc34-ad8bbbb7567d": {
+          "type": "look",
+          "settings": {
+            "collection": "3-ways-to-wear-the-paperbag-skirt",
+            "title": "",
+            "percentage": 20,
+            "video_url": "https://www.youtube.com/watch?v=Lf2HwBLO84w"
+          }
+        }
+      },
+      "block_order": [
+        "60b5aa06-f7c0-4029-92dd-ee89054d1932",
+        "d0ecbd4d-18b6-45f9-95fb-b5001629905e",
+        "9e5ad9bf-bd83-4b6b-a356-a84f77aa169d",
+        "09f6b27c-5267-445b-9cc0-8fd0ec91acf5",
+        "16b2c59c-473c-406d-aaca-7a9ab249b946",
+        "17a00f9a-5a13-4353-b4f7-cc565c85ae1a",
+        "ef53732d-25f2-4303-b85d-7beb14e14385",
+        "7ef8f06c-32a1-4712-bc34-ad8bbbb7567d"
+      ],
+      "settings": {}
+    },
+    "bec55dc0-24a0-49c6-a1a5-906e179d90b2": {
+      "type": "rich-text",
+      "blocks": {
+        "ca9f7e7c-3c26-4f9b-950c-f2eb2ec6ca06": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>How To Wear Our Luxury Clothing</h2><p>Follow our expert guidance for styling your favorite luxury clothing from Bleusalt. Our collection of versatile and seasonless basics is designed to elevate every look, making them perfect for any occasion.</p><p>We have the expertise needed to refine any look. Whether you want to figure out how to take a basic piece from day to night or you are inspired to create an outfit based on The Latte Trend, our styling guide features a range of looks that can be achieved with just a few key pieces.</p><h2>The Importance of Sustainability in Fashion </h2><p>At Bleusalt, we believe sustainability and luxury go hand in hand. By investing in high-quality basics that are versatile enough to elevate every look, you can create a more sustainable wardrobe that exudes quiet luxury.</p><h2>Look Your Best at Every Occasion</h2><p>Shop our collection today and discover the versatility of sustainable luxury fashion with Bleusalt. Whether you're dressing up or dressing down, our pieces are designed to help you look your best.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "ca9f7e7c-3c26-4f9b-950c-f2eb2ec6ca06"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "btextimg": "",
+        "background_image_size": "cover",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "page-styling",
+    "bec55dc0-24a0-49c6-a1a5-906e179d90b2"
+  ]
+}

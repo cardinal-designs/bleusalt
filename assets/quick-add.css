@@ -13,12 +13,10 @@ quick-add {
   transition: opacity 0.3s ease;
 }
 
-
 .card-product:hover quick-add {
   opacity: 1;
   visibility: visible;
 }
-
 
 .quick-add__colors {
   position: relative;
@@ -36,6 +34,7 @@ quick-add {
   padding: 5px;
   cursor: pointer;
 }
+
 .quick-add__button[selected] {
   border: var(--inputs-border-width) solid rgba(var(--color-foreground),var(--inputs-border-opacity));
 }

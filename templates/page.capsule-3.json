@@ -1,1 +1,25 @@
-{"sections":{"main":{"type":"capsule-page","settings":{"title":"12 Piece Wardrobe","image":"shopify:\/\/shop_images\/bs-12-piece.jpg","collection":"12-piece-wardrobe","discount_percentage":"23.66412213740458"}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "capsule-page",
+      "settings": {
+        "title": "12 Piece Wardrobe",
+        "image": "shopify://shop_images/bs-12-piece.jpg",
+        "collection": "12-piece-wardrobe",
+        "discount_percentage": "23.66412213740458"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,1 +1,46 @@
-{"sections":{"16627468697f82c02d":{"type":"lookbook","blocks":{"775c7ba4-a208-4e2e-bd0a-6e52a2f988b2":{"type":"lookbook","settings":{"image":"shopify:\/\/shop_images\/DALL_E_2022-09-06_13.33.25_-_a_giraffe_wearing_a_suit_with_a_scarf_and_sunglasses_with_a_smirk_oil_painting.png","link":""}},"feac1ef1-8ab3-4f3a-9324-e455cedc3284":{"type":"lookbook","settings":{"image":"shopify:\/\/shop_images\/DALL_E_2022-07-29_13.47.14_-_The_ephemeral_delight_of_a_distorted_divine_Lives_off_of_hope_just_to_die_on_the_vine_digital_art.png","link":""}}},"block_order":["775c7ba4-a208-4e2e-bd0a-6e52a2f988b2","feac1ef1-8ab3-4f3a-9324-e455cedc3284"],"settings":{"heading":"I'm a lookbook","heading_size":"h1","heading_alignment":"center","padding_top":36,"padding_bottom":36}}},"order":["16627468697f82c02d"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "16627468697f82c02d": {
+      "type": "lookbook",
+      "blocks": {
+        "775c7ba4-a208-4e2e-bd0a-6e52a2f988b2": {
+          "type": "lookbook",
+          "settings": {
+            "image": "shopify://shop_images/DALL_E_2022-09-06_13.33.25_-_a_giraffe_wearing_a_suit_with_a_scarf_and_sunglasses_with_a_smirk_oil_painting.png",
+            "link": ""
+          }
+        },
+        "feac1ef1-8ab3-4f3a-9324-e455cedc3284": {
+          "type": "lookbook",
+          "settings": {
+            "image": "shopify://shop_images/DALL_E_2022-07-29_13.47.14_-_The_ephemeral_delight_of_a_distorted_divine_Lives_off_of_hope_just_to_die_on_the_vine_digital_art.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "775c7ba4-a208-4e2e-bd0a-6e52a2f988b2",
+        "feac1ef1-8ab3-4f3a-9324-e455cedc3284"
+      ],
+      "settings": {
+        "heading": "I'm a lookbook",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16627468697f82c02d"
+  ]
+}

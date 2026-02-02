@@ -1,1 +1,115 @@
-{"sections":{"main":{"type":"main-404","settings":{}},"65a3ce24-9a18-4b0a-b4e6-bb5c04255b63":{"type":"main-search","settings":{"columns_desktop":4,"image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"article_show_date":true,"article_show_author":false,"columns_mobile":"2","padding_top":36,"padding_bottom":36}},"82eafba3-60da-4ef8-888c-2347628c197c":{"type":"featured-collection","blocks":{"41a78f99-80a0-4f45-b20b-74995f43e85c":{"type":"collection","settings":{"heading":"Womens","collection":"womens-best-sellers"}},"3b739b6d-1144-40db-9e67-730b63aebebd":{"type":"collection","settings":{"heading":"Mens","collection":"mens-best-sellers"}}},"block_order":["41a78f99-80a0-4f45-b20b-74995f43e85c","3b739b6d-1144-40db-9e67-730b63aebebd"],"settings":{"title":"Must Haves","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"","products_to_show":12,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"e0f7b6a4-7e9f-4b71-8b12-796b9e341e49":{"type":"foursixty","blocks":{"3ca74b53-b814-4b6a-8946-0491d3967a5f":{"type":"feed","settings":{"feed_id":"bleusalt","total_images":8,"big_first_image":false,"per_row":4,"image_margin":5,"feed_type":"grid"}}},"block_order":["3ca74b53-b814-4b6a-8946-0491d3967a5f"],"settings":{"width":"page-width","padding_top":0,"padding_bottom":0,"margins":50,"border_top":true,"text_align":"center"}}},"order":["main","65a3ce24-9a18-4b0a-b4e6-bb5c04255b63","82eafba3-60da-4ef8-888c-2347628c197c","e0f7b6a4-7e9f-4b71-8b12-796b9e341e49"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {}
+    },
+    "65a3ce24-9a18-4b0a-b4e6-bb5c04255b63": {
+      "type": "main-search",
+      "settings": {
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "article_show_date": true,
+        "article_show_author": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "82eafba3-60da-4ef8-888c-2347628c197c": {
+      "type": "featured-collection",
+      "blocks": {
+        "41a78f99-80a0-4f45-b20b-74995f43e85c": {
+          "type": "collection",
+          "settings": {
+            "heading": "Womens",
+            "collection": "womens-best-sellers"
+          }
+        },
+        "3b739b6d-1144-40db-9e67-730b63aebebd": {
+          "type": "collection",
+          "settings": {
+            "heading": "Mens",
+            "collection": "mens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "41a78f99-80a0-4f45-b20b-74995f43e85c",
+        "3b739b6d-1144-40db-9e67-730b63aebebd"
+      ],
+      "settings": {
+        "title": "Must Haves",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e0f7b6a4-7e9f-4b71-8b12-796b9e341e49": {
+      "type": "foursixty",
+      "blocks": {
+        "3ca74b53-b814-4b6a-8946-0491d3967a5f": {
+          "type": "feed",
+          "settings": {
+            "feed_id": "bleusalt",
+            "total_images": 8,
+            "big_first_image": false,
+            "per_row": 4,
+            "image_margin": 5,
+            "feed_type": "grid"
+          }
+        }
+      },
+      "block_order": [
+        "3ca74b53-b814-4b6a-8946-0491d3967a5f"
+      ],
+      "settings": {
+        "width": "page-width",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margins": 50,
+        "border_top": true,
+        "text_align": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "65a3ce24-9a18-4b0a-b4e6-bb5c04255b63",
+    "82eafba3-60da-4ef8-888c-2347628c197c",
+    "e0f7b6a4-7e9f-4b71-8b12-796b9e341e49"
+  ]
+}

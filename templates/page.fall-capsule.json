@@ -1,1 +1,81 @@
-{"sections":{"8af459e2-8f01-4555-b985-a2e183c9f1e9":{"type":"multicolumn","blocks":{"template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/fall-23-capsule-hero.jpg","title":"","text":"","html":"","link_label":"","link":""}},"6e752db5-b4b1-4fbe-aa22-bc5471584a20":{"type":"column","settings":{"title":"7 PIECE FALL WARDROBE","text":"<p><br\/>The Sleeveless Turtleneck<br\/>The Elevated Crew<br\/>The Tube Skirt<br\/>The Womens Quarter Zip<br\/>The Palazzo Sailor Pant<br\/>The Turtleneck Dress<br\/>The 3 Yard Wrap<br\/><br\/><strong>$1,000<br\/><br\/><\/strong><br\/>Save 20% when you buy a Wardrobe<\/p>","html":"","link_label":"","link":""}}},"block_order":["template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2","6e752db5-b4b1-4fbe-aa22-bc5471584a20"],"custom_css":["h2 {text-align: center;}",".title-wrapper-with-link {display: block;}",".cat-hding {top: 50%; transform: translate(0, -50%); position: relative;}"],"settings":{"title":"THE FALL CAPSULE WARDROBE","heading_size":"h2","image_width":"full","image_ratio":"portrait","columns_desktop":2,"btextimg":"","column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"main":{"type":"capsule-page","custom_css":["h1 {font-size: 1.2em;}",".capsule-type,.capsule-highlights__price {display: none;}"],"settings":{"title":"SELECT YOUR SIZES","collection":"fall-capsule-wardrobe","discount_percentage":"20.128"}}},"order":["8af459e2-8f01-4555-b985-a2e183c9f1e9","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "8af459e2-8f01-4555-b985-a2e183c9f1e9": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fall-23-capsule-hero.jpg",
+            "title": "",
+            "text": "",
+            "html": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "6e752db5-b4b1-4fbe-aa22-bc5471584a20": {
+          "type": "column",
+          "settings": {
+            "title": "7 PIECE FALL WARDROBE",
+            "text": "<p><br/>The Sleeveless Turtleneck<br/>The Elevated Crew<br/>The Tube Skirt<br/>The Womens Quarter Zip<br/>The Palazzo Sailor Pant<br/>The Turtleneck Dress<br/>The 3 Yard Wrap<br/><br/><strong>$1,000<br/><br/></strong><br/>Save 20% when you buy a Wardrobe</p>",
+            "html": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14706884214897__8af459e2-8f01-4555-b985-a2e183c9f1e9-column-2",
+        "6e752db5-b4b1-4fbe-aa22-bc5471584a20"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".title-wrapper-with-link {display: block;}",
+        ".cat-hding {top: 50%; transform: translate(0, -50%); position: relative;}"
+      ],
+      "settings": {
+        "title": "THE FALL CAPSULE WARDROBE",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "btextimg": "",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "capsule-page",
+      "custom_css": [
+        "h1 {font-size: 1.2em;}",
+        ".capsule-type,.capsule-highlights__price {display: none;}"
+      ],
+      "settings": {
+        "title": "SELECT YOUR SIZES",
+        "collection": "fall-capsule-wardrobe",
+        "discount_percentage": "20.128"
+      }
+    }
+  },
+  "order": [
+    "8af459e2-8f01-4555-b985-a2e183c9f1e9",
+    "main"
+  ]
+}

@@ -1,0 +1,116 @@
+{% comment %}
+  Renders Collection-Based GWP (Gift With Purchase) Upsell Widget
+  
+  Shows when products from a specific collection are in cart
+  No minimum amount required - just based on products in cart
+  
+  Usage:
+  {% render 'cart-collection-gwp-upsell' %}
+{% endcomment %}
+
+{%- if settings.enable_collection_gwp and settings.collection_gwp_trigger_collection != blank and settings.collection_gwp_free_product != blank -%}
+  {%- liquid
+    assign trigger_collection = collections[settings.collection_gwp_trigger_collection]
+    assign free_gift_product = all_products[settings.collection_gwp_free_product]
+    
+    comment
+      Check if any product from the trigger collection is in cart
+    endcomment
+    assign has_trigger_product = false
+    assign show_collection_gwp = false
+    
+    if trigger_collection != blank and free_gift_product != blank
+      for item in cart.items
+        for collection_product in trigger_collection.products
+          if item.product_id == collection_product.id
+            assign has_trigger_product = true
+            break
+          endif
+        endfor
+        if has_trigger_product
+          break
+        endif
+      endfor
+      
+      comment
+        Set keep_gwp_product based on whether trigger products are in cart
+      endcomment
+      assign keep_gwp_product = has_trigger_product
+      comment
+        Check if free gift is already in cart
+      endcomment
+      
+      assign free_gift_in_cart = false
+      if has_trigger_product
+        for item in cart.items
+          if item.product_id == free_gift_product.id and item.properties._gwp == 'true'
+            assign free_gift_in_cart = true
+            break
+          endif
+        endfor
+        
+        unless free_gift_in_cart
+          assign show_collection_gwp = true
+        endunless
+      endif
+    endif
+  -%}
+
+  <input type="hidden" name="keep_gwp_product" value="{{ keep_gwp_product }}">
+  <input type="hidden" name="has_trigger_product" value="{{ has_trigger_product }}">
+  {%- if show_collection_gwp -%}
+    {%- liquid
+      comment
+        Build a comma-separated list of trigger collection product IDs for JavaScript
+      endcomment
+      assign trigger_product_ids = ''
+      if trigger_collection != blank
+        for collection_product in trigger_collection.products
+          if trigger_product_ids == ''
+            assign trigger_product_ids = collection_product.id | append: ''
+          else
+            assign trigger_product_ids = trigger_product_ids | append: ',' | append: collection_product.id
+          endif
+        endfor
+      endif
+    -%}
+    <div class="gwp-upsell collection-gwp-upsell" data-gwp-type="collection" data-trigger-product-ids="{{ trigger_product_ids }}" data-free-gift-product-id="{{ free_gift_product.id }}">
+      <div class="gwp-upsell__item" data-product-id="{{ free_gift_product.id }}" data-gwp-item="collection">
+        <div class="gwp-upsell__content">
+          {%- if free_gift_product.featured_image -%}
+            <div class="gwp-upsell__image">
+              <a href="{{ free_gift_product.url }}">
+                <img src="{{ free_gift_product.featured_image | image_url: width: 120 }}" 
+                     alt="{{ free_gift_product.title | escape }}" 
+                     class="gwp-upsell__product-image"
+                     loading="lazy"
+                     width="120"
+                     height="{{ 120 | divided_by: free_gift_product.featured_image.aspect_ratio | ceil }}">
+              </a>
+            </div>
+          {%- endif -%}
+          <div class="gwp-upsell__details">
+            <a class="cart-item__name h4 break" href="{{ free_gift_product.url }}">{{ free_gift_product.title }}</a>
+            {%- if free_gift_product.variants.size > 1 -%}
+              <div class="gwp-upsell__variants">
+                <select class="gwp-upsell__variant-select" data-product-id="{{ free_gift_product.id }}">
+                  {%- for variant in free_gift_product.variants -%}
+                    <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                      {{ variant.title }} {% unless variant.available %}(Sold out){% endunless %}
+                    </option>
+                  {%- endfor -%}
+                </select>
+              </div>
+            {%- else -%}
+              <input type="hidden" class="gwp-upsell__variant-select" value="{{ free_gift_product.first_available_variant.id }}" data-product-id="{{ free_gift_product.id }}">
+            {%- endif -%}
+            <button type="button" class="gwp-upsell__add-button button" data-product-id="{{ free_gift_product.id }}" data-variant-id="{{ free_gift_product.selected_or_first_available_variant.id }}">
+              <span class="gwp-upsell__button-text">ADD FREE GIFT</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}
+

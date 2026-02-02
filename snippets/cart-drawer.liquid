@@ -461,6 +461,12 @@
                   </tbody>
                 </table>
               </div>
+              
+              {%- comment -%} Collection-Based GWP Upsell {%- endcomment -%}
+              {% if settings.enable_collection_gwp %}
+                {% render 'cart-collection-gwp-upsell' %}
+              {% endif %}
+              
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
             <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
           </div>

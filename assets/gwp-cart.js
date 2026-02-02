@@ -157,7 +157,67 @@ class GWPCartManager {
       }
 
       if (threshold > 0 && cartTotalWithoutGWP < threshold) {
+        console.log("ifff");
         await this.removeGWPProduct(cartItem, cart);
+      }
+
+      let keepGwpProduct = document.querySelector('input[name="keep_gwp_product"]').value;
+      let hasTriggerProduct = document.querySelector('input[name="has_trigger_product"]').value;
+
+      console.log("keepGwpProduct", keepGwpProduct)
+      console.log("hasTriggerProduct", hasTriggerProduct)
+      console.log("threshold", threshold)
+      console.log("cartItem", cartItem)
+      if(keepGwpProduct == false && hasTriggerProduct == false) {
+        console.log("removeGWPProduct here==")
+        await this.removeGWPProduct(cartItem, cart);
+      }
+    }
+    
+    // Check collection-based GWP items
+    await this.checkCollectionGWP(cart);
+  }
+
+  async checkCollectionGWP(cart) {
+    // Find collection-based GWP upsell element
+    const collectionGWPUpsell = document.querySelector('.collection-gwp-upsell[data-trigger-product-ids]');
+    
+    if (!collectionGWPUpsell) {
+      return; // No collection-based GWP configured
+    }
+
+    const triggerProductIdsStr = collectionGWPUpsell.dataset.triggerProductIds;
+    const freeGiftProductId = parseInt(collectionGWPUpsell.dataset.freeGiftProductId);
+    
+    if (!triggerProductIdsStr || !freeGiftProductId || isNaN(freeGiftProductId)) {
+      return; // Invalid configuration
+    }
+
+    // Parse trigger product IDs
+    const triggerProductIds = triggerProductIdsStr.split(',').map(id => parseInt(id.trim())).filter(id => !isNaN(id));
+    
+    if (triggerProductIds.length === 0) {
+      return; // No trigger products
+    }
+
+    // Check if any trigger collection product is in cart
+    const hasTriggerProduct = cart.items.some(item => 
+      triggerProductIds.includes(item.product_id)
+    );
+
+    // Find collection-based GWP items in cart
+    // Check by product ID and either _gwp_type property or just _gwp property
+    const collectionGWPItems = cart.items.filter(item => 
+      item.product_id === freeGiftProductId &&
+      item.properties && 
+      item.properties._gwp === 'true' &&
+      (item.properties._gwp_type === 'collection' || !item.properties._gwp_threshold)
+    );
+
+    // If no trigger products in cart, remove all collection-based GWP items
+    if (!hasTriggerProduct && collectionGWPItems.length > 0) {
+      for (const gwpItem of collectionGWPItems) {
+        await this.removeGWPProduct(gwpItem, cart);
       }
     }
   }
@@ -179,47 +239,51 @@ class GWPCartManager {
       return;
     }
 
-    const variantSelect = button.closest('.gwp-upsell__item').querySelector('.gwp-upsell__variant-select');
-    const variantId = variantSelect ? parseInt(variantSelect.value) : null;
-    if (!variantId) {
-      console.error('No variant selected');
-      return;
-    }
-
-    // Disable button immediately to prevent multiple clicks
-    const buttonText = button.querySelector('.gwp-upsell__button-text') || button;
-    const originalText = buttonText.innerHTML;
-    button.disabled = true;
-    this.isAdding = true;
-    
-    if (buttonText) {
-      buttonText.innerHTML = 'Adding...';
-    } else {
-      button.textContent = 'Adding...';
-    }
-
-    try {
-      const cartResponse = await fetch('/cart.js');
-      const cart = await cartResponse.json();
-      
-      // Check if any variant of the same product with GWP properties already exists in cart
-      const existingGWPItem = cart.items.find(item => 
-        item.product_id === parseInt(productId) && 
-        item.properties && 
-        item.properties._gwp === 'true'
-      );
-      
-      if (existingGWPItem) {
-        // Product already exists with GWP properties (any variant), don't add again
-        this.isAdding = false;
-        button.disabled = false;
-        if (buttonText) {
-          buttonText.innerHTML = originalText;
-        } else {
-          button.textContent = 'Add Free Gift';
-        }
-        return false;
+      const variantSelect = button.closest('.gwp-upsell__item').querySelector('.gwp-upsell__variant-select');
+      const variantId = variantSelect ? parseInt(variantSelect.value) : null;
+      if (!variantId) {
+        console.error('No variant selected');
+        return;
       }
+
+      // Check if this is a collection-based GWP
+      const gwpUpsellContainer = button.closest('.gwp-upsell');
+      const isCollectionGWP = gwpUpsellContainer && gwpUpsellContainer.classList.contains('collection-gwp-upsell');
+
+      // Disable button immediately to prevent multiple clicks
+      const buttonText = button.querySelector('.gwp-upsell__button-text') || button;
+      const originalText = buttonText.innerHTML;
+      button.disabled = true;
+      this.isAdding = true;
+      
+      if (buttonText) {
+        buttonText.innerHTML = 'Adding...';
+      } else {
+        button.textContent = 'Adding...';
+      }
+
+      try {
+        const cartResponse = await fetch('/cart.js');
+        const cart = await cartResponse.json();
+        
+        // Check if any variant of the same product with GWP properties already exists in cart
+        const existingGWPItem = cart.items.find(item => 
+          item.product_id === parseInt(productId) && 
+          item.properties && 
+          item.properties._gwp === 'true'
+        );
+        
+        if (existingGWPItem) {
+          // Product already exists with GWP properties (any variant), don't add again
+          this.isAdding = false;
+          button.disabled = false;
+          if (buttonText) {
+            buttonText.innerHTML = originalText;
+          } else {
+            button.textContent = 'Add Free Gift';
+          }
+          return false;
+        }
       // Get cart drawer items to access getSectionsToRender method
       const cartDrawerItems = document.querySelector('cart-drawer-items');
       let sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
@@ -232,6 +296,18 @@ class GWPCartManager {
         sections += ',template--17854003249265__cart-footer,template--17854003249265__cart-items';
       }
 
+      // Build properties object
+      const properties = {
+        '_gwp': 'true'
+      };
+      
+      if (isCollectionGWP) {
+        properties['_gwp_type'] = 'collection';
+        properties['_gwp_threshold'] = button.dataset.threshold || 0;
+      } else {
+        properties['_gwp_threshold'] = button.dataset.threshold;
+      }
+
       const response = await fetch('/cart/add.js', {
         method: 'POST',
         headers: {
@@ -241,10 +317,7 @@ class GWPCartManager {
           items: [{
             id: variantId,
             quantity: 1,
-            properties: {
-              '_gwp': 'true',
-              '_gwp_threshold': button.dataset.threshold
-            }
+            properties: properties
           }],
           sections: sections
         })

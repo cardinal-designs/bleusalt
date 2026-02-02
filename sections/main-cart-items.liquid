@@ -357,6 +357,11 @@
               {%- endfor -%}
             </tbody>
           </table>
+          
+          {%- comment -%} Collection-Based GWP Upsell {%- endcomment -%}
+          {% if settings.enable_collection_gwp %}
+            {% render 'cart-collection-gwp-upsell' %}
+          {% endif %}
         {%- endif -%}
       </div>
     </div>

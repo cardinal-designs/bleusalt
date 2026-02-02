@@ -1380,6 +1380,29 @@
         "id": "gwp_item_3_product",
         "label": "GWP Item 3 Product",
         "info": "Product to offer as free gift when threshold is met"
+      },
+      {
+        "type": "header",
+        "content": "Collection-Based GWP (Simple)"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_collection_gwp",
+        "label": "Enable Collection-Based GWP?",
+        "default": false,
+        "info": "Show free gift when products from a specific collection are in cart"
+      },
+      {
+        "type": "collection",
+        "id": "collection_gwp_trigger_collection",
+        "label": "Trigger Collection",
+        "info": "Collection that triggers the free gift offer"
+      },
+      {
+        "type": "product",
+        "id": "collection_gwp_free_product",
+        "label": "Free Gift Product",
+        "info": "Product to offer as free gift (e.g., Cindy V Lite)"
       }
     ]
   },
