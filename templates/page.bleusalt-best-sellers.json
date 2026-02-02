@@ -56,39 +56,36 @@
       "blocks": {
         "text_BCpXbC": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Two Days Only",
+            "text": "Introducing",
             "text_color": "#ffffff"
           }
         },
         "heading_dpRfRh": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "35% Off",
+            "heading": "The Long Barbra Top",
             "heading_color": "#ffffff",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_two_8Xfyw8": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Everything On The App",
+            "text": "Our Newest Arrival",
             "text_color": "#ffffff"
           }
         },
         "buttons_TDTcCh": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
-            "button_label_1": "Shop the App",
-            "button_link_1": "shopify://pages/download-the-bleusalt-app",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/womens-new-arrivals",
             "button_bg_color": "#ffffff",
             "button_text_color": "#000000",
-            "button_label_2": "Shop Online",
-            "button_link_2": "shopify://collections/the-bleusalt-collection"
+            "button_label_2": "Shop Best Sellers",
+            "button_link_2": "shopify://collections/womens-best-sellers"
           }
         }
       },
@@ -99,8 +96,8 @@
         "buttons_TDTcCh"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/592c6fa01610450aacf758b389bca3ba.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/b7dd923955cd4781a4b5b0a3cceb8606.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/610e09ad039d49b185edb02c2da73d5e.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/154876a07a704be49dfe1fbee6ab84ec.mp4",
         "description": "Bleusalt Best Sellers",
         "image_overlay_opacity": 0,
         "video_height": "56.25",
