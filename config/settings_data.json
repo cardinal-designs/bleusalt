@@ -627,17 +627,17 @@
       },
       "6990797075511561578": {
         "type": "shopify://apps/nosto/blocks/nosto-tagging-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       },
       "10812935154079970445": {
         "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       },
       "2046743146925785077": {
         "type": "shopify://apps/nosto/blocks/nosto-mc-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
