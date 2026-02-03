@@ -1,0 +1,42 @@
+.load-more__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.load-more__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: load-more-spin 0.5s linear infinite;
+    display: none;
+}
+
+.load-more__button--loading .load-more__spinner {
+    display: block;
+}
+
+.load-more__button--loading .load-more__text {
+    opacity: 0.6;
+}
+
+@keyframes load-more-spin {
+    to { transform: rotate(360deg); }
+}
+
+.load-more__item--new {
+    animation: load-more-fadein 0.35s ease both;
+}
+
+@keyframes load-more-fadein {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}

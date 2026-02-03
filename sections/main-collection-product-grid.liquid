@@ -2,6 +2,7 @@
 {% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'load-more.css', pages: 'collection', local: true %}
 
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -9,6 +10,10 @@
   <script defer src="{{ 'product-form.js' | asset_url }}"></script>
 {%- endif -%}
 <noscript>{% render 'hs-defer-css' with filename: 'component-rte.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>
+
+{%- if section.settings.enable_load_more -%}
+  <script defer src="{{ 'load-more.js' | asset_url }}"></script>
+{%- endif -%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -107,7 +112,13 @@
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width small-full-width{% endif %}">
             <div class="loading-overlay gradient"></div>
             {% assign myIndex = 1 %}
-            <ul id="product-grid" data-id="{{ section.id }}" class="
+            <ul id="product-grid"
+                data-id="{{ section.id }}"
+                {%- if section.settings.enable_load_more -%}
+                  data-load-more-current-page="1"
+                  data-load-more-total-pages="{{ paginate.pages }}"
+                {%- endif -%}
+                class="
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop">
               {%- for product in collection.products -%}
@@ -147,9 +158,18 @@
                 -%}
               {%- endfor -%}
             </ul>
-    
+
             {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
+              {%- if section.settings.enable_load_more -%}
+                <div class="load-more__wrapper" id="LoadMoreWrapper">
+                  <button type="button" class="load-more__button button button--primary" id="LoadMoreButton" aria-label="Load more products">
+                    <span class="load-more__spinner" aria-hidden="true"></span>
+                    <span class="load-more__text">Load More</span>
+                  </button>
+                </div>
+              {%- else -%}
+                {% render 'pagination', paginate: paginate, anchor: '' %}
+              {%- endif -%}
             {%- endif -%}
           </div>
         {%- endif -%}
@@ -183,6 +203,12 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_load_more",
+      "label" : "Enable Load More Pagination",
+      "default" : false
+    },
     {
       "type": "range",
       "id": "products_per_page",
