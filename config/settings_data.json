@@ -54,7 +54,7 @@
     "cart_promo_bar": false,
     "discount_promo_bar": false,
     "cart_rebuy": true,
-    "enable_gwp_bar": true,
+    "enable_gwp_bar": false,
     "gwp_bar_icon_color": "#0d1c29",
     "gwp_bar_text_color": "#0d1c29",
     "gwp_item_1_text": "Free Ground Shipping",
