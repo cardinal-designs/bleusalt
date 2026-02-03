@@ -73,7 +73,7 @@
         "e832fc10-de4c-40a0-af3d-5596883c7716"
       ],
       "settings": {
-        "enable_load_more": false,
+        "enable_load_more": true,
         "products_per_page": 60,
         "columns_desktop": 3,
         "image_ratio": "portrait",
