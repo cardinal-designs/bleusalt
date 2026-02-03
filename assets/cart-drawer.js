@@ -52,7 +52,6 @@ class CartDrawer extends HTMLElement {
         a.parentElement.addEventListener("keyup", onKeyUpEscape);
     }
     forceUpdateCartDrawer() {
-        console.log("forceUpdateCartDrawer");
         fetch("/cart")
             .then((a) => a.text())
             .then((a) => {
@@ -128,7 +127,37 @@ class CartDrawer extends HTMLElement {
         return new DOMParser().parseFromString(a, "text/html").querySelector(b).innerHTML;
     }
     getSectionsToRender() {
-        return [{ id: "cart-drawer", selector: "#CartDrawer" }, { id: "cart-icon-bubble" }];
+        const sections = [
+            { id: "cart-drawer", selector: "#CartDrawer" }, 
+            { id: "cart-icon-bubble" },
+            { id: window.cartFooterSectionId, selector: ".js-contents" },
+            { id: window.cartItemsSectionId, selector: ".cart__contents" },
+        ];
+        
+        // If on cart page, include cart page sections
+        const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+        if (isCartPage) {
+            const mainCartFooter = document.getElementById('main-cart-footer');
+            const mainCartItems = document.getElementById('main-cart-items');
+            
+            if (mainCartFooter && mainCartFooter.dataset.id) {
+                sections.push({
+                    id: window.cartFooterSectionId,
+                    section: window.cartFooterSectionId,
+                    selector: '.js-contents'
+                });
+            }
+            
+            if (mainCartItems && mainCartItems.dataset.id) {
+                sections.push({
+                    id: window.cartItemsSectionId,
+                    section: window.cartItemsSectionId,
+                    selector: '.cart__items'
+                });
+            }
+        }
+        
+        return sections;
     }
     getSectionDOM(a, b = ".shopify-section") {
         return new DOMParser().parseFromString(a, "text/html").querySelector(b);
@@ -140,10 +169,32 @@ class CartDrawer extends HTMLElement {
 customElements.define("cart-drawer", CartDrawer);
 class CartDrawerItems extends CartItems {
     getSectionsToRender() {
-        return [
+        const sections = [
             { id: "CartDrawer", section: "cart-drawer", selector: ".drawer__inner" },
             { id: "cart-icon-bubble", section: "cart-icon-bubble", selector: ".shopify-section" },
         ];
+        
+        // Always check if cart page sections exist (they might be on the page even if drawer is open)
+        const mainCartFooter = document.getElementById('main-cart-footer');
+        const mainCartItems = document.getElementById('main-cart-items');
+        
+        if (mainCartFooter && mainCartFooter.dataset.id) {
+            sections.push({
+                id: 'main-cart-footer',
+                section: mainCartFooter.dataset.id,
+                selector: '.js-contents'
+            });
+        }
+        
+        if (mainCartItems && mainCartItems.dataset.id) {
+            sections.push({
+                id: 'main-cart-items',
+                section: mainCartItems.dataset.id,
+                selector: '.cart__items'
+            });
+        }
+        
+        return sections;
     }
 }
 customElements.define("cart-drawer-items", CartDrawerItems);

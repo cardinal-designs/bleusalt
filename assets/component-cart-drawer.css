@@ -1172,6 +1172,10 @@ tbody .gwp-bar {
   min-height: auto;
 }
 
+.collection-gwp-upsell .gwp-upsell__item {
+  padding: 0px 15px;
+}
+
 @media (min-width: 768px) {
   .gwp-bar__text {
     font-size: 14px;

@@ -5,6 +5,7 @@ class CartRemoveButton extends HTMLElement {
       event.preventDefault();
       const cartItems = this.closest('cart-items') || this.closest('cart-drawer-items');
       cartItems.updateQuantity(this.dataset.index, 0);
+
     });
   }
 }
@@ -29,7 +30,7 @@ class CartItems extends HTMLElement {
   }
 
   getSectionsToRender() {
-    return [
+    let sections = [
       {
         id: 'cart-icon-bubble',
         section: 'cart-icon-bubble',
@@ -41,48 +42,94 @@ class CartItems extends HTMLElement {
         selector: '.shopify-section'
       },
       {
-        id: 'main-cart-footer',
-        section: document.getElementById('main-cart-footer').dataset.id,
+        id: window.cartFooterSectionId,
+        section: window.cartFooterSectionId,
         selector: '.js-contents',
       },
       {
-        id: 'main-cart-items',
-        section: document.getElementById('main-cart-items').dataset.id,
-        selector: '.js-contents',
+        id: window.cartItemsSectionId,
+        section: window.cartItemsSectionId,
+        selector: '.cart__items',
       },
-      {
-        id: 'CartDrawer',
-        section: 'cart-drawer',
-        selector: '.drawer__inner'
-      }
     ];
+    
+    // Add cart page sections if they exist
+    const mainCartFooter = document.getElementById('main-cart-footer');
+    const mainCartItems = document.getElementById('main-cart-items');
+    
+    if (mainCartFooter && mainCartFooter.dataset.id) {
+      sections.push({
+        id: 'main-cart-footer',
+        section: mainCartFooter.dataset.id,
+        selector: '.js-contents',
+      });
+    }
+    
+    if (mainCartItems && mainCartItems.dataset.id) {
+      sections.push({
+        id: 'main-cart-items',
+        section: mainCartItems.dataset.id,
+        selector: '.js-contents',
+      });
+    }
+    
+    // Add cart drawer section
+    sections.push({
+      id: 'CartDrawer',
+      section: 'cart-drawer',
+      selector: '.drawer__inner'
+    });
+    
+    return sections;
   }
 
   forceUpdateCartDrawer() {
-    fetch(`${routes.cart_url}?sections=${this.getSectionsToRender().map(section => section.section)}`)
+    let sections = this.getSectionsToRender().map(section => section.section).join(',');
+    if(window.isCartPage) {
+      sections += `,${window.cartFooterSectionId},${window.cartItemsSectionId}`;
+    }
+
+    fetch(`${routes.cart_url}?sections=${sections}`)
     .then((response) => {
       return response.text();
     })
     .then((state) => {
       const parsedState = JSON.parse(state);
-      this.getSectionsToRender().forEach((section => {
+      let sectionsToRender = this.getSectionsToRender();
+      if(window.isCartPage) {
+        sectionsToRender = sectionsToRender.concat([{
+          id: window.cartFooterSectionId,
+          section: window.cartFooterSectionId,
+          selector: '.js-contents',
+        }, {
+          id: window.cartItemsSectionId,
+          section: window.cartItemsSectionId,
+          selector: '.cart__contents',
+        }]);
+      }
+      sectionsToRender.forEach((section) => {
         if(section.section === 'cart-drawer') {
           document.querySelector('cart-drawer').updateWearWith(parsedState['cart-drawer']);
         }
-        const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-        if(!elementToReplace) return true;
+        const elementToReplace = document.getElementById(section.id)?.querySelector(section.selector) || document.getElementById(section.id) || document.querySelector("[data-id='" + section.section + "']");
+        if(!elementToReplace) return; // Skip only this iteration, continue with next
         elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState[section.section], section.selector);
-      }));
+      });
     });
   }
 
   updateQuantity(line, quantity, name) {
     this.enableLoading(line);
 
+    let sections = this.getSectionsToRender().map((section) => section.section).join(',');
+    if(window.isCartPage) {
+      sections += `,${window.cartFooterSectionId},${window.cartItemsSectionId}`;
+    }
+
     const body = JSON.stringify({
       line,
       quantity,
-      sections: this.getSectionsToRender().map((section) => section.section).join(','),
+      sections: sections,
       sections_url: window.location.pathname
     });
     if(line){
@@ -94,6 +141,11 @@ class CartItems extends HTMLElement {
           updateCart();
           // return;
           const parsedState = JSON.parse(state);
+
+          if(location.pathname.includes('/cart')) {
+            this.forceUpdateCartDrawer();
+            return;
+          }
           if (!parsedState.sections) {
             this.forceUpdateCartDrawer();
             return;
@@ -106,12 +158,23 @@ class CartItems extends HTMLElement {
           // if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
           // if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
   
-          this.getSectionsToRender().forEach((section => {
+          let sectionsToRender = this.getSectionsToRender();
+          if(window.isCartPage) {
+            sectionsToRender = sectionsToRender.concat([{
+              id: window.cartFooterSectionId,
+              section: window.cartFooterSectionId,
+              selector: '.js-contents',
+            }, {
+              id: window.cartItemsSectionId,
+              section: window.cartItemsSectionId,
+              selector: '.cart__contents',
+            }]);
+          }
+          sectionsToRender.forEach((section => {
             const elementToReplace = document.getElementById(section?.id).querySelector(section.selector) || document.getElementById(section.id);
             if(!elementToReplace) return true;
             elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
           }));
-  
   
           BOLD.common.themeCartCallback = function(){
             let sections = (this.getSectionsToRender().map((section) => section.section)).join();

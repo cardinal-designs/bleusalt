@@ -16,6 +16,18 @@ function debounce(func, wait) {
   };
 }
 
+window.isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+if (window.isCartPage) {
+  let mainCartFooter = document.getElementById('main-cart-footer');
+  let mainCartItems = document.getElementById('main-cart-items');
+  if(mainCartFooter){
+    window.cartFooterSectionId = mainCartFooter.dataset.id;
+  }
+  if(mainCartItems){
+    window.cartItemsSectionId = mainCartItems.dataset.id;
+  }
+}
+
 class GWPCartManager {
   constructor() {
     this.gwpProducts = [];
@@ -54,11 +66,72 @@ class GWPCartManager {
         e.preventDefault();
         e.stopPropagation();
         const button = e.target.classList.contains('gwp-upsell__add-button') ? e.target : e.target.closest('.gwp-upsell__add-button');
+        
+        // Check if this is a collection GWP button that needs to show variants first
+        // if (button.classList.contains('collection-gwp-toggle-variants')) {
+        //   const variantsContainer = button.closest('.gwp-upsell__item').querySelector('.collection-gwp-variants');
+        //   if (variantsContainer) {
+        //     // Check if variants are currently hidden (handle inline style, empty string, or computed style)
+        //     const computedStyle = window.getComputedStyle(variantsContainer);
+        //     const isHidden = variantsContainer.style.display === 'none' || 
+        //                     variantsContainer.style.display === '' ||
+        //                     computedStyle.display === 'none';
+            
+        //     if (isHidden) {
+        //       // Show variant selection
+        //       variantsContainer.style.display = 'block';
+        //       const buttonText = button.querySelector('.gwp-upsell__button-text');
+        //       if (buttonText) {
+        //         buttonText.textContent = 'ADD FREE GIFT';
+        //       }
+        //       // Update button's variant-id based on selected variant
+        //       const variantSelect = variantsContainer.querySelector('.gwp-upsell__variant-select');
+        //       if (variantSelect) {
+        //         button.dataset.variantId = variantSelect.value;
+        //       }
+        //       // Remove the toggle class so next click will add to cart
+        //       button.classList.remove('collection-gwp-toggle-variants');
+        //       return; // Don't add product yet, just show variants
+        //     }
+        //     // Variants are already visible, so proceed to add product (fall through)
+        //     // Remove the class to prevent this check on future clicks
+        //     button.classList.remove('collection-gwp-toggle-variants');
+        //   }
+        // }
+        
         // Prevent multiple clicks
         if (button.disabled || this.isAdding) {
           return;
         }
         this.addGWPProduct(button);
+      }
+
+      if (e.target.classList.contains('collection-gwp-toggle-variants') || e.target.closest('.collection-gwp-toggle-variants')) {
+        e.preventDefault();
+        e.stopPropagation();
+        let button = e.target.classList.contains('collection-gwp-toggle-variants') ? e.target : e.target.closest('.collection-gwp-toggle-variants');
+        let gwpUpsellDetails = e.target.closest('.gwp-upsell__details');
+        button.classList.add('hidden');
+        if(gwpUpsellDetails){
+          let buttonAtc = gwpUpsellDetails.querySelector('.gwp-upsell__add-button');
+          if(buttonAtc){
+            buttonAtc.classList.remove('hidden');
+          }
+        }
+        let variantsContainer = button.closest('.gwp-upsell__item').querySelector('.collection-gwp-variants');
+        if (variantsContainer) {
+          variantsContainer.style.display = 'block';
+        }
+      }
+    });
+    
+    // Handle variant selection changes for collection GWP
+    document.addEventListener('change', (e) => {
+      if (e.target.classList.contains('gwp-upsell__variant-select') && e.target.closest('.collection-gwp-variants')) {
+        const button = e.target.closest('.gwp-upsell__item').querySelector('.collection-gwp-toggle-variants');
+        if (button) {
+          button.dataset.variantId = e.target.value;
+        }
       }
     });
 
@@ -157,67 +230,26 @@ class GWPCartManager {
       }
 
       if (threshold > 0 && cartTotalWithoutGWP < threshold) {
-        console.log("ifff");
         await this.removeGWPProduct(cartItem, cart);
+        continue; // Skip to next item
       }
 
-      let keepGwpProduct = document.querySelector('input[name="keep_gwp_product"]').value;
-      let hasTriggerProduct = document.querySelector('input[name="has_trigger_product"]').value;
-
-      console.log("keepGwpProduct", keepGwpProduct)
-      console.log("hasTriggerProduct", hasTriggerProduct)
-      console.log("threshold", threshold)
-      console.log("cartItem", cartItem)
-      if(keepGwpProduct == false && hasTriggerProduct == false) {
-        console.log("removeGWPProduct here==")
-        await this.removeGWPProduct(cartItem, cart);
-      }
-    }
-    
-    // Check collection-based GWP items
-    await this.checkCollectionGWP(cart);
-  }
-
-  async checkCollectionGWP(cart) {
-    // Find collection-based GWP upsell element
-    const collectionGWPUpsell = document.querySelector('.collection-gwp-upsell[data-trigger-product-ids]');
-    
-    if (!collectionGWPUpsell) {
-      return; // No collection-based GWP configured
-    }
-
-    const triggerProductIdsStr = collectionGWPUpsell.dataset.triggerProductIds;
-    const freeGiftProductId = parseInt(collectionGWPUpsell.dataset.freeGiftProductId);
-    
-    if (!triggerProductIdsStr || !freeGiftProductId || isNaN(freeGiftProductId)) {
-      return; // Invalid configuration
-    }
-
-    // Parse trigger product IDs
-    const triggerProductIds = triggerProductIdsStr.split(',').map(id => parseInt(id.trim())).filter(id => !isNaN(id));
-    
-    if (triggerProductIds.length === 0) {
-      return; // No trigger products
-    }
-
-    // Check if any trigger collection product is in cart
-    const hasTriggerProduct = cart.items.some(item => 
-      triggerProductIds.includes(item.product_id)
-    );
-
-    // Find collection-based GWP items in cart
-    // Check by product ID and either _gwp_type property or just _gwp property
-    const collectionGWPItems = cart.items.filter(item => 
-      item.product_id === freeGiftProductId &&
-      item.properties && 
-      item.properties._gwp === 'true' &&
-      (item.properties._gwp_type === 'collection' || !item.properties._gwp_threshold)
-    );
-
-    // If no trigger products in cart, remove all collection-based GWP items
-    if (!hasTriggerProduct && collectionGWPItems.length > 0) {
-      for (const gwpItem of collectionGWPItems) {
-        await this.removeGWPProduct(gwpItem, cart);
+      // Check if this is a collection-based GWP item
+      const isCollectionGWP = cartItem.properties._gwp_type === 'collection';
+      if (isCollectionGWP) {
+        // Get values from hidden inputs (they are strings, so convert to boolean)
+        const keepGwpProductInput = document.querySelector('input[name="keep_gwp_product"]');
+        const hasTriggerProductInput = document.querySelector('input[name="has_trigger_product"]');
+        
+        if (keepGwpProductInput && hasTriggerProductInput) {
+          // Convert string values to booleans
+          const keepGwpProduct = keepGwpProductInput.value === 'true';
+          const hasTriggerProduct = hasTriggerProductInput.value === 'true';
+          // If keepGwpProduct is false AND hasTriggerProduct is false, remove the GWP item
+          if (!keepGwpProduct && !hasTriggerProduct) {
+            const removeResult = await this.removeGWPProduct(cartItem, cart);
+          }
+        }
       }
     }
   }
@@ -288,12 +320,26 @@ class GWPCartManager {
       const cartDrawerItems = document.querySelector('cart-drawer-items');
       let sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
         ? cartDrawerItems.getSectionsToRender().map((section) => section.section).join(',')
-        : 'cart-drawer,cart-icon-bubble';
+        : 'cart-drawer,cart-icon-bubble,main-cart-footer,main-cart-items';
       
       // If on cart page, add cart page sections
-      const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+      let isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
       if (isCartPage) {
-        sections += ',template--17854003249265__cart-footer,template--17854003249265__cart-items';
+        // let mainCartFooter = document.getElementById('main-cart-footer');
+        // let mainCartItems = document.getElementById('main-cart-items');
+        // if(mainCartFooter){
+        //   let sectionId = mainCartFooter.dataset.id;
+        //   if(sectionId){
+        //     sections += `,${sectionId}`;
+        //   }
+        // }
+        // if(mainCartItems){
+        //   let sectionId = mainCartItems.dataset.id;
+        //   if(sectionId){
+        //     sections += `,${sectionId}`;
+        //   }
+        // }
+        sections += `,${window.cartFooterSectionId},${window.cartItemsSectionId}`;
       }
 
       // Build properties object
@@ -386,9 +432,10 @@ class GWPCartManager {
           
           // Update cart page sections if on cart page
           const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
+
           if (isCartPage && parsedState.sections) {
             // Update cart footer
-            const cartFooterSection = 'template--17854003249265__cart-footer';
+            const cartFooterSection = window.cartFooterSectionId;
             if (parsedState.sections[cartFooterSection]) {
               const cartFooter = document.getElementById('main-cart-footer');
               if (cartFooter) {
@@ -404,7 +451,7 @@ class GWPCartManager {
             }
             
             // Update cart items
-            const cartItemsSection = 'template--17854003249265__cart-items';
+            const cartItemsSection = window.cartItemsSectionId;
             if (parsedState.sections[cartItemsSection]) {
               const cartItems = document.getElementById('main-cart-items');
               if (cartItems) {
@@ -431,7 +478,7 @@ class GWPCartManager {
           const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
           if (isCartPage && data && data.sections) {
             // Update cart footer
-            const cartFooterSection = 'template--17854003249265__cart-footer';
+            const cartFooterSection = window.cartFooterSectionId;
             if (data.sections[cartFooterSection]) {
               const cartFooter = document.getElementById('main-cart-footer');
               if (cartFooter) {
@@ -447,7 +494,7 @@ class GWPCartManager {
             }
             
             // Update cart items
-            const cartItemsSection = 'template--17854003249265__cart-items';
+            const cartItemsSection = window.cartItemsSectionId;
             if (data.sections[cartItemsSection]) {
               const cartItems = document.getElementById('main-cart-items');
               if (cartItems) {
@@ -487,26 +534,26 @@ class GWPCartManager {
   async removeGWPProduct(cartItem, cart) {
     // Validate cart item
     if (!cartItem || !cartItem.key) {
-      console.error('Invalid cart item for removal');
-      return;
+      console.error('Invalid cart item for removal - cartItem:', cartItem, 'key:', cartItem?.key);
+      return false;
     }
 
     // Verify it's a GWP item
     if (!cartItem.properties || cartItem.properties._gwp !== 'true') {
-      console.error('Item is not a GWP product');
-      return;
+      console.error('Item is not a GWP product - properties:', cartItem.properties);
+      return false;
     }
 
     try {
       const cartDrawerItems = document.querySelector('cart-drawer-items');
       let sections = cartDrawerItems && cartDrawerItems.getSectionsToRender 
         ? cartDrawerItems.getSectionsToRender().map((section) => section.section).join(',')
-        : 'cart-drawer,cart-icon-bubble';
+        : 'cart-drawer,cart-icon-bubble,main-cart-footer,main-cart-items';
       
       // If on cart page, add cart page sections
       const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
       if (isCartPage) {
-        sections += ',template--17854003249265__cart-footer,template--17854003249265__cart-items';
+        sections += `,${window.cartFooterSectionId},${window.cartItemsSectionId}`;
       }
 
       const response = await fetch('/cart/update.js', {
@@ -524,7 +571,6 @@ class GWPCartManager {
       });
 
       if (response.ok) {
-
         const state = await response.text();
         const parsedState = JSON.parse(state);
         
@@ -540,7 +586,9 @@ class GWPCartManager {
             if (cartDrawerItems.forceUpdateCartDrawer) {
               cartDrawerItems.forceUpdateCartDrawer();
             }
-            return;
+            // Trigger cart update event even if no sections
+            document.dispatchEvent(new CustomEvent('cart:updated'));
+            return true;
           }
 
           cartDrawerItems.classList.toggle('is-empty', parsedState.item_count === 0);
@@ -588,7 +636,7 @@ class GWPCartManager {
         const isCartPage = window.location.pathname === '/cart' || window.location.pathname.includes('/cart');
         if (isCartPage && parsedState.sections) {
           // Update cart footer
-          const cartFooterSection = 'template--17854003249265__cart-footer';
+          const cartFooterSection = window.cartFooterSectionId;
           if (parsedState.sections[cartFooterSection]) {
             const cartFooter = document.getElementById('main-cart-footer');
             if (cartFooter) {
@@ -604,7 +652,7 @@ class GWPCartManager {
           }
           
           // Update cart items
-          const cartItemsSection = 'template--17854003249265__cart-items';
+          const cartItemsSection = window.cartItemsSectionId;
           if (parsedState.sections[cartItemsSection]) {
             const cartItems = document.getElementById('main-cart-items');
             if (cartItems) {
@@ -619,12 +667,18 @@ class GWPCartManager {
             }
           }
         }
-        
+      
         // Trigger cart update event
         document.dispatchEvent(new CustomEvent('cart:updated'));
+        return true;
+      } else {
+        const errorText = await response.text().catch(() => 'Unknown error');
+        console.error('Failed to remove GWP product - response not ok:', response.status, errorText);
+        return false;
       }
     } catch (error) {
       console.error('Error removing GWP product:', error);
+      return false;
     }
   }
 }

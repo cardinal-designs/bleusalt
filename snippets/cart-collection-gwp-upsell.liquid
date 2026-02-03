@@ -91,8 +91,9 @@
           {%- endif -%}
           <div class="gwp-upsell__details">
             <a class="cart-item__name h4 break" href="{{ free_gift_product.url }}">{{ free_gift_product.title }}</a>
+
             {%- if free_gift_product.variants.size > 1 -%}
-              <div class="gwp-upsell__variants">
+              <div class="gwp-upsell__variants collection-gwp-variants">
                 <select class="gwp-upsell__variant-select" data-product-id="{{ free_gift_product.id }}">
                   {%- for variant in free_gift_product.variants -%}
                     <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
@@ -104,6 +105,12 @@
             {%- else -%}
               <input type="hidden" class="gwp-upsell__variant-select" value="{{ free_gift_product.first_available_variant.id }}" data-product-id="{{ free_gift_product.id }}">
             {%- endif -%}
+            {% comment %} {% if free_gift_product.variants.size > 1 %}
+              <button type="button" class="button collection-gwp-toggle-variants">
+                <span class="gwp-upsell__button-text">Options</span>
+              </button>
+            {% endif %} {% endcomment %}
+
             <button type="button" class="gwp-upsell__add-button button" data-product-id="{{ free_gift_product.id }}" data-variant-id="{{ free_gift_product.selected_or_first_available_variant.id }}">
               <span class="gwp-upsell__button-text">ADD FREE GIFT</span>
             </button>
