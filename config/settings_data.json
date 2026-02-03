@@ -66,7 +66,7 @@
     "gwp_item_3_text": "",
     "gwp_item_3_threshold": 0,
     "gwp_item_3_product": "",
-    "enable_collection_gwp": false,
+    "enable_collection_gwp": true,
     "collection_gwp_trigger_collection": "cindy",
     "collection_gwp_free_product": "the-cindy-v-lite",
     "gwp_bar_divider_color": "#dd1d1d",
