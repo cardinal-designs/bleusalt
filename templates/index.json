@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "Launching Monday",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Long Barbra Top",
+            "heading": "The Elevated Legging",
             "heading_color": "#ffffff",
             "heading_size": "h0",
             "heading_tag": "h2"
@@ -31,15 +31,15 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "Our Newest Arrival",
+            "text": "The Legging Reimagined",
             "text_color": "#ffffff"
           }
         },
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/the-long-barbra-top",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/womens-new-arrivals",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
@@ -55,8 +55,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/610e09ad039d49b185edb02c2da73d5e.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/154876a07a704be49dfe1fbee6ab84ec.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/caa1f84d17a747f1a332280cde2273f9.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/653bab056e664508b79ff5658a8de2cb.mp4",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
