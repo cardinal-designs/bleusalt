@@ -647,7 +647,7 @@
       },
       "10727672529976264282": {
         "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless-1124/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
