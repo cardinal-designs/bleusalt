@@ -511,6 +511,22 @@
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                  {%- liquid
+                    # Logic to parse seasonal colors from block settings
+                    assign seasonal_colors_raw = block.settings.seasonal_colors | replace: ' and ', ',' | split: ','
+                    assign seasonal_colors_normalized = ''
+                    for color_name in seasonal_colors_raw
+                      assign color_name_down = color_name | strip | downcase
+                      if color_name_down != blank
+                        assign seasonal_colors_normalized = seasonal_colors_normalized | append: color_name_down | append: '|'
+                      endif
+                    endfor
+                    assign seasonal_colors_array = seasonal_colors_normalized | split: '|'
+
+                    # Map for size abbreviations
+                    assign size_abbreviations = '00:XXS,0:XS,1:S,2:M,3:L,4:XL,5:XXL,6:XXXL,7:XXXXL' | split: ','
+                  -%}
+
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__option" data-option="{{ option.name }}" data-option-index="{{ forloop.index0 }}">
                       <fieldset class="js product-form__input" data-wair-option-name="{{ option.name }}">
@@ -532,48 +548,135 @@
                             </div>
                           {% endif %}
                         </div>
-                        {%- for value in option.values -%}
-                          {%- liquid 
-                            if option.name == 'Color'
-                              assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x'
-                            endif
-                            if value contains 'hide' or value contains 'Hide'
-                             continue
-                            endif
-                          -%}
-                          <div class="product-form__radio-wrapper" data-value="{{ value }}">
-                            <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                  name="{{ option.name }}"
-                                  value="{{ value | escape }}"
-                                  form="{{ product_form_id }}"
-                                  {% if option.selected_value == value %}checked{% endif %}
-                            >
-                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if option.name == 'Color' %}style="background-image: url({{ swatch_url }});"{% endif %}>
-                              <span {% if option.name == 'Color' %}class="visually-hidden"{% endif %}>
-                                {% if value == '00' %}
-                                  {% assign size = 'XXS' %}
-                                {% elsif value == '0' %}
-                                  {% assign size = 'XS' %}
-                                {% elsif value == '1' %}
-                                  {% assign size = 'S' %}
-                                {% elsif value == '2' %}
-                                  {% assign size = 'M' %}
-                                {% elsif value == '3' %}
-                                  {% assign size = 'L' %}
-                                {% elsif value == '4' %}
-                                  {% assign size = 'XL' %}
-                                {% elsif value == '5' %}
-                                  {% assign size = 'XXL' %}
-                                {% elsif value == '6' %}
-                                  {% assign size = 'XXXL' %}
-                                {% elsif value == '7' %}
-                                  {% assign size = 'XXXXL' %}
-                                {% endif %}
-                                {{ value }} / {{ size }}
-                              </span>
-                            </label>
-                          </div>
-                        {%- endfor -%}
+
+                        {%- liquid
+                          assign is_color_option = false
+                          assign option_name_downcase = option.name | downcase
+                          if option_name_downcase == 'color' or option_name_downcase == 'colour'
+                            assign is_color_option = true
+                          endif
+
+                          # Check if grouping is active for this product
+                          assign grouping_active = false
+                          if is_color_option and block.settings.enable_swatch_grouping
+                            for value in option.values
+                              assign val_lower = value | downcase
+                              if seasonal_colors_array contains val_lower
+                                assign grouping_active = true
+                                break
+                              endif
+                            endfor
+                          endif
+                        -%}
+
+                        <div class="product-form__values-container{% if grouping_active %} has-swatch-grouping{% endif %}">
+                          {%- if grouping_active -%}
+                            {%- liquid
+                              # Separate values into category loops
+                              assign classic_vals = ''
+                              assign seasonal_vals = ''
+                              for value in option.values
+                                assign val_lower = value | downcase
+                                if seasonal_colors_array contains val_lower
+                                  assign seasonal_vals = seasonal_vals | append: value | append: '::'
+                                else
+                                  assign classic_vals = classic_vals | append: value | append: '::'
+                                endif
+                              endfor
+                              assign classic_arr = classic_vals | split: '::'
+                              assign seasonal_arr = seasonal_vals | split: '::'
+                            -%}
+
+                            {%- if classic_arr.size > 0 -%}
+                              <div class="swatch-group-wrapper classics">
+                                {%- if block.settings.classic_group_label != blank -%}
+                                  <h4 class="swatch-group-label">{{ block.settings.classic_group_label }}</h4>
+                                {%- endif -%}
+                                <div class="swatch-group-items">
+                                  {%- for value in classic_arr -%}
+                                    {%- if value == blank -%}{%- continue -%}{%- endif -%}
+                                    {%- liquid 
+                                      assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x'
+                                    -%}
+                                    <div class="product-form__radio-wrapper" data-value="{{ value }}">
+                                      <input type="radio" id="{{ section.id }}-{{ option.position }}-classic-{{ forloop.index0 }}"
+                                            name="{{ option.name }}"
+                                            value="{{ value | escape }}"
+                                            form="{{ product_form_id }}"
+                                            {% if option.selected_value == value %}checked{% endif %}
+                                      >
+                                      <label for="{{ section.id }}-{{ option.position }}-classic-{{ forloop.index0 }}" style="background-image: url({{ swatch_url }});">
+                                        <span class="visually-hidden">{{ value }}</span>
+                                      </label>
+                                    </div>
+                                  {%- endfor -%}
+                                </div>
+                              </div>
+                            {%- endif -%}
+
+                            {%- if seasonal_arr.size > 0 -%}
+                              <div class="swatch-group-wrapper seasonal">
+                                {%- if block.settings.seasonal_group_label != blank -%}
+                                  <h4 class="swatch-group-label">{{ block.settings.seasonal_group_label }}</h4>
+                                {%- endif -%}
+                                <div class="swatch-group-items">
+                                  {%- for value in seasonal_arr -%}
+                                    {%- if value == blank -%}{%- continue -%}{%- endif -%}
+                                    {%- liquid 
+                                      assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x'
+                                    -%}
+                                    <div class="product-form__radio-wrapper" data-value="{{ value }}">
+                                      <input type="radio" id="{{ section.id }}-{{ option.position }}-seasonal-{{ forloop.index0 }}"
+                                            name="{{ option.name }}"
+                                            value="{{ value | escape }}"
+                                            form="{{ product_form_id }}"
+                                            {% if option.selected_value == value %}checked{% endif %}
+                                      >
+                                      <label for="{{ section.id }}-{{ option.position }}-seasonal-{{ forloop.index0 }}" style="background-image: url({{ swatch_url }});">
+                                        <span class="visually-hidden">{{ value }}</span>
+                                      </label>
+                                    </div>
+                                  {%- endfor -%}
+                                </div>
+                              </div>
+                            {%- endif -%}
+
+                          {%- else -%}
+                            {%- for value in option.values -%}
+                              {%- liquid 
+                                if value contains 'hide' or value contains 'Hide'
+                                 continue
+                                endif
+                                if is_color_option
+                                  assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x'
+                                endif
+                              -%}
+                              <div class="product-form__radio-wrapper" data-value="{{ value }}">
+                                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                      name="{{ option.name }}"
+                                      value="{{ value | escape }}"
+                                      form="{{ product_form_id }}"
+                                      {% if option.selected_value == value %}checked{% endif %}
+                                >
+                                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if is_color_option %}style="background-image: url({{ swatch_url }});"{% endif %}>
+                                  <span {% if is_color_option %}class="visually-hidden"{% endif %}>
+                                    {%- liquid
+                                      assign size_abbrev = ''
+                                      for abbrev in size_abbreviations
+                                        assign parts = abbrev | split: ':'
+                                        if parts[0] == value
+                                          assign size_abbrev = parts[1]
+                                          break
+                                        endif
+                                      endfor
+                                    -%}
+                                    {{ value }}{% if size_abbrev != blank %} / {{ size_abbrev }}{% endif %}
+                                  </span>
+                                </label>
+                              </div>
+                            {%- endfor -%}
+                          {%- endif -%}
+                        </div>
                       </fieldset>
                     </div>
                   {%- endfor -%}
@@ -1187,6 +1290,35 @@
           ],
           "default": "button",
           "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        },
+        {
+          "type": "header",
+          "content": "Color Swatch Grouping"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_swatch_grouping",
+          "default": true,
+          "label": "Enable Swatch Grouping",
+          "info": "Groups colors into 'Classics' and 'Seasonal' categories."
+        },
+        {
+          "type": "text",
+          "id": "classic_group_label",
+          "default": "Classics",
+          "label": "Classic Group Label"
+        },
+        {
+          "type": "text",
+          "id": "seasonal_group_label",
+          "default": "Seasonal",
+          "label": "Seasonal Group Label"
+        },
+        {
+          "type": "text",
+          "id": "seasonal_colors",
+          "label": "Seasonal Colors List",
+          "info": "Enter color names separated by commas (e.g., Bordeaux, Coco, Unbleached)."
         }
       ]
     },

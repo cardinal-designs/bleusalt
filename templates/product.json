@@ -47,7 +47,11 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "enable_swatch_grouping": true,
+            "classic_group_label": "Classics",
+            "seasonal_group_label": "Seasonal",
+            "seasonal_colors": "{{ product.metafields.custom.seasonal_colors_list | metafield_text }},Unbleached"
           }
         },
         "quantity_selector": {
