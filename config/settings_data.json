@@ -639,6 +639,11 @@
         "type": "shopify://apps/loudcrowd/blocks/embed.shopwith-widget/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
         "disabled": false,
         "settings": {}
+      },
+      "13027630495364635475": {
+        "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
