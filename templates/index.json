@@ -366,6 +366,47 @@
         "title": ""
       }
     },
+    "featured_collection_WKJ43w": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_CcH4Je": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "the-signature-bleusalt-wrap"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CcH4Je"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Bleusalt Signature Wraps",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_life_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1660226720e02964f9": {
       "type": "rich-text",
       "blocks": {
@@ -593,6 +634,7 @@
     "1659735210e064d864",
     "1660227726ff0f6237",
     "16637947412bca5d08",
+    "featured_collection_WKJ43w",
     "1660226720e02964f9",
     "166022784081bd0071",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
