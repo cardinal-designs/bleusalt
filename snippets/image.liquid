@@ -1,0 +1,50 @@
+{% doc %}
+  Renders a responsive image using Shopify's image_tag filter.
+
+  @param {image} image - The image object to be rendered (required)
+  @param {string} [sizes] - Responsive image sizes for the 'sizes' attribute (defaults to '100vw')
+  @param {string} [widths] - Comma-separated list of widths for the 'srcset' attribute (defaults to '200,400,600,800,1200,1600,2000,2600,3200,4000')
+  @param {string} [classes] - Custom classes applied to the <img> element
+  @param {boolean} [prioritize_loading] - If true, sets loading="eager", fetchpriority="high", and preload=true. If not provided, automatically prioritizes loading for the first section (section.index == 1)
+  @param {section} [section] - The section object is globally available in all section snippets and does not need to be passed explicitly. Used for automatic priority determination.
+
+  @example
+  {% render 'image',
+    image: section.settings.image,
+    classes: 'section__image',
+    sizes: '(min-width: 768px) 50vw, 100vw',
+    prioritize_loading: true
+  %}
+{% enddoc %}
+
+{%- liquid
+  assign sizes = sizes | default: '100vw'
+  assign widths = widths | default: '1,200,375,400,600,800,1200,1600,2000,2600,3200,4000' | append: ', ' | append: image.width
+
+  if prioritize_loading == blank
+    if section and section.index == 1
+      assign prioritize_loading = true
+    endif
+  endif
+
+  assign loading = 'lazy'
+  assign fetchpriority = 'low'
+  assign preload = false
+
+  if prioritize_loading
+    assign loading = 'eager'
+    assign fetchpriority = 'high'
+    assign preload = true
+  endif
+-%}
+{{-
+  image
+  | image_url: width: image.width
+  | image_tag:
+    class: classes,
+    loading: loading,
+    fetchpriority: fetchpriority,
+    preload: preload,
+    sizes: sizes,
+    widths: widths
+-}}

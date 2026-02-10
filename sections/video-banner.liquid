@@ -1,4 +1,10 @@
-{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: 'collection,index,product' | split: ',', local: true %}
+{%- liquid
+  assign pages_to_defer_css = 'collection,index,product' | split: ','
+  if section.index == 1
+    assign pages_to_defer_css = ''
+  endif
+-%}
+{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: pages_to_defer_css, local: true %}
 
 {%- if section.settings.video_url != blank and section.settings.video_url_mobile != blank -%}
 
@@ -149,7 +155,7 @@
   {% endif %}
 {%- endstyle -%}
 
-<div 
+<vide-banner 
   id="Banner-{{ section.id }}" 
   class="video-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}"
 >
@@ -171,7 +177,20 @@
               aria_label: section.settings.description
           }}
         {% else %}
-          <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto"   aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url }}#t=0.1" data-expand="-10" width="100%"></video>
+          <video
+            aria-label="{{ section.settings.description }}"
+            id="{{ video_id }}"
+            class="banner__video"
+            preload="metadata"
+            aria-hidden="true"
+            data-autoplay=""
+            muted=""
+            loop=""
+            playsinline=""
+            src="{{ section.settings.video_url }}#t=0.1"
+            data-expand="-10"
+            width="100%"
+          ></video>
         {% endif %}
         {% render 'video-controls', id: video_id %}
       </div>
@@ -195,7 +214,20 @@
             aria_label: section.settings.description
         }}
       {% else %}
-        <video aria-label="{{ section.settings.description }}" id="{{ video_id }}" class="banner__video" preload="auto" aria-hidden="true" data-autoplay="" muted="" autoplay="" loop="" playsinline="" src="{{ section.settings.video_url_mobile }}#t=0.1" data-expand="-10" width="100%"></video>
+        <video
+          aria-label="{{ section.settings.description }}"
+          id="{{ video_id }}"
+          class="banner__video"
+          preload="metadata"
+          aria-hidden="true"
+          data-autoplay=""
+          muted=""
+          loop=""
+          playsinline=""
+          src="{{ section.settings.video_url_mobile }}#t=0.1"
+          data-expand="-10"
+          width="100%"
+        ></video>
       {% endif %}
       {% render 'video-controls', id: video_id %}
     </div>
@@ -267,7 +299,7 @@
         </div>
     {%- endcase -%}
   {%- endfor -%}
-</div>
+</vide-banner>
 
 {% schema %}
 {
