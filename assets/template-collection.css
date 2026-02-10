@@ -41,6 +41,7 @@
 @media screen and (max-width: 989px) {
   .collection .slider--tablet.product-grid {
     scroll-padding-left: 1.5rem;
+    scroll-padding-left: 0;
   }
 }
 
@@ -50,6 +51,7 @@
 
 .collection__title.title-wrapper {
   margin-bottom: 2.5rem;
+  padding: 0;
 }
 
 .collection__title .title:not(:only-child) {
@@ -62,10 +64,14 @@
   }
 
   .collection__title.title-wrapper--self-padded-tablet-down {
-    padding: 0 5rem;
+    /* padding: 0 5rem; */
   }
 
-  .collection slider-component:not(.page-width-desktop) {
+  .collection__title.title-wrapper {
+    max-width: 100%;
+  }
+
+  body:not(.template--index) .collection slider-component:not(.page-width-desktop) {
     padding: 0;
   }
 

@@ -138,6 +138,14 @@
   display: flex !important;
 }
 
+.card__content-custom .card__badge {
+  margin: 0 !important;
+}
+
+.card__content-custom .card__information {
+  padding-bottom: 0;
+}
+
 
 .card__badge.top {
   align-self: flex-start;
@@ -197,6 +205,7 @@
     top: 0;
     left: -3px;
     margin: 10px;
+    padding-left: 10px;
   }
   
 }

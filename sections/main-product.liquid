@@ -516,6 +516,7 @@
                       <fieldset class="js product-form__input" data-wair-option-name="{{ option.name }}">
                         <div class="size__guide--grid">
                           <legend class="form__label">Select a {{ option.name }}: <span class="current-value">{{ option.selected_value }}</span></legend>
+                          {% comment %}
                           {% if option.name == 'Size' %}
                             <div class="product__size-popups">
                               <div class="wair-modal__wrapper">
@@ -531,6 +532,7 @@
                               </div>
                             </div>
                           {% endif %}
+                          {% endcomment %}
                         </div>
                         {%- for value in option.values -%}
                           {%- liquid 
@@ -575,6 +577,22 @@
                           </div>
                         {%- endfor -%}
                       </fieldset>
+
+                      {% if option.name == 'Size' %}
+                            <div class="product__size-popups">
+                              <div class="wair-modal__wrapper">
+                                <!-- WAIR PDP CTA -->
+                                {% render 'wair' %}
+                                {%- for popup in sizing_popups -%}
+                                  {% if popup == 'Sizing Guide' %}
+                                  <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ popup | handle }}">
+                                    <button id="ProductPopup-{{ popup | handle }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ popup }}</button>
+                                  </modal-opener>
+                                  {% endif %}
+                                {%- endfor -%}
+                              </div>
+                            </div>
+                          {% endif %}
                     </div>
                   {%- endfor -%}
                   
