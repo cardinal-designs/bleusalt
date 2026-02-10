@@ -51,7 +51,7 @@
             "enable_swatch_grouping": true,
             "classic_group_label": "Classics",
             "seasonal_group_label": "Seasonal",
-            "seasonal_colors": "{{ product.metafields.custom.seasonal_colors_list | metafield_text }},Unbleached"
+            "seasonal_colors": ""
           }
         },
         "quantity_selector": {
