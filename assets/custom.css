@@ -524,8 +524,8 @@ button#wair-fit-advisor > span > span:hover {
 }
 
 .product-form__input input[type=radio][name=Color]+label {
-  width: 2.5rem !important;
-  height: 2.6rem !important;
+  /* width: 2.5rem !important; */
+  /* height: 2.6rem !important; */
 }
 
 .product-form__input input[type=radio]+label {
@@ -535,9 +535,9 @@ button#wair-fit-advisor > span > span:hover {
 
 @media screen and (max-width: 749px) {
   .product-form__input input[type=radio][name=Color]+label {
-    width: 1.5rem !important;
-    height: 1.5rem !important;
-    min-width: 1.5rem !important;
+    /* width: 1.5rem !important; */
+    /* height: 1.5rem !important; */
+    /* min-width: 1.5rem !important; */
   }
 
   .product-form__input input[type=radio]+label {
