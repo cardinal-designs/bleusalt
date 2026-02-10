@@ -1009,6 +1009,7 @@ a.product__text {
 
 .product-popup-modal__opener {
   display: inline-block;
+  margin-bottom: 1px;
 }
 
 .product-popup-modal__button {
