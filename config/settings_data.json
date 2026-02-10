@@ -111,7 +111,7 @@
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327": {
             "type": "announcement",
             "settings": {
-              "text": "Free ground shipping on all orders over $175",
+              "text": "Free ground shipping on all orders over $200",
               "link": "shopify://policies/shipping-policy"
             }
           },
@@ -638,16 +638,6 @@
       "11735696852170848367": {
         "type": "shopify://apps/loudcrowd/blocks/embed.shopwith-widget/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
         "disabled": false,
-        "settings": {}
-      },
-      "13027630495364635475": {
-        "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-        "disabled": true,
-        "settings": {}
-      },
-      "10727672529976264282": {
-        "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless-1124/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-        "disabled": true,
         "settings": {}
       }
     }
