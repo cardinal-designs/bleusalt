@@ -1417,3 +1417,29 @@ document.addEventListener('call_widget_closed', (e) => {
   updateCart();
 });
 
+class VideoBanner extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.autoplay = true;
+        entry.target.play();
+        this.observer.unobserve(entry.target);
+      });
+    });
+    
+    window.addEventListener('third-party-scripts-loaded', () => {
+      this.lazyAutoplayVideos = this.querySelectorAll('video[data-autoplay]:not([autoplay])');
+
+      this.lazyAutoplayVideos.forEach(video => {
+        this.observer.observe(video);
+      });
+    });
+  }
+}
+
+customElements.define('vide-banner', VideoBanner);

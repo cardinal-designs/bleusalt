@@ -1,0 +1,48 @@
+<script>
+  (() => {
+    const scriptsToDefer = [
+      'b5303c62bw494ab25dp0d72f2dcm48e21f5am.js',
+      '/cdn/wpm/',
+      '/gtag/js',
+      'gtm.js',
+      'cdn.attn.tv',
+      'static.hotjar.com',
+      'clarity.ms',
+      'googletagmanager.com',
+      'google-analytics.com',
+      'analytics.google.com',
+      'facebook.net/tr',
+      'snapchat.com',
+      'pinterest.com',
+      'tiktok.com',
+      'linkedin.com/px',
+      'ads.yahoo.com',
+      'adsystem.com',
+      'doubleclick.net',
+      'googlesyndication.com',
+    ];
+    let isScriptsLoaded = false;
+
+    window.addEventListener('third-party-scripts-loaded', () => {
+      isScriptsLoaded = true;
+    });
+
+    const originalAppendChild = document.head.appendChild;
+
+    document.head.appendChild = function (element) {
+      if (!isScriptsLoaded && element.tagName === 'SCRIPT') {
+        const src = element.getAttribute('src') || '';
+
+        for (const scriptName of scriptsToDefer) {
+          if (src.includes(scriptName)) {
+            element.dataset.lazySrc = src;
+            element.removeAttribute('src');
+            break;
+          }
+        }
+      }
+
+      return originalAppendChild.call(this, element);
+    };
+  })();
+</script>

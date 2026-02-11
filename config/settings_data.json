@@ -50,7 +50,7 @@
     "cart_drawer_text": "",
     "additional_cart_drawer_text": "",
     "cart_notice": "Orders Placed Today ship within 1 business day.<br><span style=\"font-size: 9px; line-height: 1.2 !important;\">Please note: only one promotion can be applied per order. If two promotions are available, the higher value promotion will automatically be applied. Points and promotions cannot be applied together. To receive a free scarf, please place your order on The Bleusalt App.</span>",
-    "free_shipping_threshold": 175,
+    "free_shipping_threshold": 200,
     "cart_promo_bar": true,
     "discount_promo_bar": true,
     "cart_rebuy": true,
@@ -58,7 +58,7 @@
     "gwp_bar_icon_color": "#0d1c29",
     "gwp_bar_text_color": "#0d1c29",
     "gwp_item_1_text": "Free Ground Shipping",
-    "gwp_item_1_threshold": 175,
+    "gwp_item_1_threshold": 200,
     "gwp_item_1_product": "",
     "gwp_item_2_text": "Free 2 Day Shipping",
     "gwp_item_2_threshold": 600,
@@ -111,7 +111,7 @@
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327": {
             "type": "announcement",
             "settings": {
-              "text": "Free ground shipping on all orders over $175",
+              "text": "Free ground shipping on all orders over $200",
               "link": "shopify://policies/shipping-policy"
             }
           },
@@ -638,16 +638,6 @@
       "11735696852170848367": {
         "type": "shopify://apps/loudcrowd/blocks/embed.shopwith-widget/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
         "disabled": false,
-        "settings": {}
-      },
-      "13027630495364635475": {
-        "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-        "disabled": true,
-        "settings": {}
-      },
-      "10727672529976264282": {
-        "type": "shopify://apps/discount-ninja/blocks/la-dn-app-embed-core-v5-assetless-1124/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
-        "disabled": true,
         "settings": {}
       }
     }

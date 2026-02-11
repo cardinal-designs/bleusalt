@@ -57,6 +57,7 @@ quick-add {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
+  padding: 0;
 }
 
 .quick-add__button--color[selected] {
@@ -85,6 +86,7 @@ quick-add {
     width: 2rem;
     height: 2rem;
     margin: 0.1rem;
+    padding: 0;
   }
 }
 

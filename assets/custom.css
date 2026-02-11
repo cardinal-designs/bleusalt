@@ -557,3 +557,39 @@ button#wair-fit-advisor > span > span:hover {
 .swatch-group-wrapper.seasonal {
   margin-top: 0.5rem;
 }
+
+@media screen and (min-width: 990px) {
+  .template--index .slider--desktop .slider__slide:first-child {
+    margin-left: 0;
+  }
+  .template--index .slider--desktop.grid--3-col-desktop .grid__item {
+    width: calc(33.33% - 16px);
+  }
+  .template--index .slider--desktop {
+    scroll-padding-left: 0;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .template--index .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
+    width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .template--index .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item, .grid--peek .grid__item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .slider-mobile-gutter .button-wrapper {
+    margin-right: 3rem !important;
+  }
+  .quick-add__colors .quick-add__button--color {
+    padding: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+.page-width.homepage-nosto-custom {
+  max-width: 100%;
+}

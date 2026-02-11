@@ -1009,6 +1009,7 @@ a.product__text {
 
 .product-popup-modal__opener {
   display: inline-block;
+  margin-bottom: 1px;
 }
 
 .product-popup-modal__button {
@@ -1034,6 +1035,10 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  .product-popup-modal__opener {
+    margin-bottom: -1px;
+  }
+
   .product-popup-modal__content-info > * {
     max-height: 100%;
   }
