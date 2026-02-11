@@ -523,6 +523,41 @@ button#wair-fit-advisor > span > span:hover {
   text-decoration-thickness: 0.2rem !important;
 }
 
+/* Color Swatch Grouping */
+.product-form__values-container.has-swatch-grouping {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.swatch-group-label {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  font-family: var(--font-heading-family);
+  color: rgba(var(--color-foreground), .8);
+  text-align: left;
+}
+
+.swatch-group-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 749px) {
+  .swatch-group-label {
+    text-align: center;
+  }
+  .swatch-group-items {
+    justify-content: center;
+  }
+}
+
+.swatch-group-wrapper.seasonal {
+  margin-top: 0.5rem;
+}
+
 @media screen and (min-width: 990px) {
   .template--index .slider--desktop .slider__slide:first-child {
     margin-left: 0;
