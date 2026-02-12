@@ -52,7 +52,7 @@
     "cart_notice": "Orders Placed Today ship within 1 business day.<br><span style=\"font-size: 9px; line-height: 1.2 !important;\">Please note: only one promotion can be applied per order. If two promotions are available, the higher value promotion will automatically be applied. Points and promotions cannot be applied together. To receive a free scarf, please place your order on The Bleusalt App.</span>",
     "free_shipping_threshold": 200,
     "cart_promo_bar": true,
-    "discount_promo_bar": true,
+    "discount_promo_bar": false,
     "cart_rebuy": true,
     "enable_gwp_bar": false,
     "gwp_bar_icon_color": "#0d1c29",

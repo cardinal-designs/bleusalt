@@ -51,7 +51,7 @@
             "enable_swatch_grouping": true,
             "classic_group_label": "Classics",
             "seasonal_group_label": "Seasonal",
-            "seasonal_colors": ""
+            "seasonal_colors": "Bordeaux, Coco, Unbleached, Red Stripe, Stripe"
           }
         },
         "quantity_selector": {
@@ -61,6 +61,7 @@
         },
         "discount_message_z7Vrwz": {
           "type": "discount_message",
+          "disabled": true,
           "settings": {
             "product_discount_title": "Curate a Custom Wardrobe & Unlock Special Savings",
             "product_discount_message": "<p>Buy 3 or more items and save 10% on your entire order. Buy 5 or more and save 15%. Buy 7 or more and get 20% Off!</p>"
