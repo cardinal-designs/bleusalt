@@ -9,17 +9,46 @@
  */
 {
   "sections": {
+    "otto_image_MNhLUr": {
+      "type": "otto-image",
+      "name": "Otto Image",
+      "settings": {
+        "image_name": "",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "image_margin_bottom": 20,
+        "show_content": false,
+        "content_width": 60,
+        "content_background_color": "#ffffff",
+        "content_text_color": "#000000",
+        "content_horizontal_alignment": "center",
+        "content_vertical_alignment": "center",
+        "header_font_tag": "h1",
+        "header_font_size": 2,
+        "header_font_size_mobile": 2,
+        "subheader_font_tag": "h2",
+        "subheader_font_size": 1,
+        "subheader_font_size_mobile": 1,
+        "body_font_tag": "p",
+        "body_font_size": 1,
+        "body_font_size_mobile": 1,
+        "button_background_color": "#000000",
+        "button_background_hover_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_text_hover_color": "#000000"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
-        "h1 {margin: 30px 0; text-align: center; font-size: 2.4rem;}",
-        "p {font-family: serif; text-align: center; font-size: 1.5rem; padding: 0 50px;}",
+        "h1 {margin: 30px 0; font-size: 2.4rem;}",
+        "p {font-family: serif; font-size: 1.5rem; padding: 0 50px;}",
         ".collection-hero__description {padding: 0 4%;}"
       ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
-        "align_left": true,
+        "align_left": false,
         "color_scheme": "background-1"
       }
     },
@@ -153,35 +182,6 @@
         "full_width": true,
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "otto_image_MNhLUr": {
-      "type": "otto-image",
-      "name": "Otto Image",
-      "settings": {
-        "image_name": "",
-        "image_width_desktop": 100,
-        "image_width_mobile": 100,
-        "image_margin_bottom": 20,
-        "show_content": false,
-        "content_width": 60,
-        "content_background_color": "#ffffff",
-        "content_text_color": "#000000",
-        "content_horizontal_alignment": "center",
-        "content_vertical_alignment": "center",
-        "header_font_tag": "h1",
-        "header_font_size": 2,
-        "header_font_size_mobile": 2,
-        "subheader_font_tag": "h2",
-        "subheader_font_size": 1,
-        "subheader_font_size_mobile": 1,
-        "body_font_tag": "p",
-        "body_font_size": 1,
-        "body_font_size_mobile": 1,
-        "button_background_color": "#000000",
-        "button_background_hover_color": "#ffffff",
-        "button_text_color": "#ffffff",
-        "button_text_hover_color": "#000000"
       }
     }
   },
