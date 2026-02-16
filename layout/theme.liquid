@@ -13,6 +13,9 @@
       <meta name="google-site-verification" content="dW9JygpNiA3CxV_Ct50EQ7ozDR1NvtxzckIZmI511HQ" />
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+      {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}
+        <meta name='robots' content='noindex, nofollow'>
+      {% endif %}
 
       <!-- Preload JS/CSS -- Start -->
       <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'">
@@ -165,9 +168,7 @@
       {% # theme-check-enable %}
 
       {%- render 'bold-options-hybrid' -%}
-      {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}
-        <meta name='robots' content='noindex, nofollow'>
-      {% endif %}
+      
       {%- render 'bold-common' -%}
       {%- render 'sc-includes' -%}
 
