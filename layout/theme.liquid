@@ -20,7 +20,7 @@
       <!-- Preload JS/CSS -- End -->
 
       {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' or collection.handle == 'sale' %}
-        <meta name="robots" content="noindex">
+        <meta name="robots" content="noindex, nofollow">
       {% endif %}
 
       <script>
@@ -166,7 +166,7 @@
 
       {%- render 'bold-options-hybrid' -%}
       {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}
-        <meta name='robots' content='noindex'>
+        <meta name='robots' content='noindex, nofollow'>
       {% endif %}
       {%- render 'bold-common' -%}
       {%- render 'sc-includes' -%}
@@ -385,14 +385,17 @@
       {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
       {{ 'bundly-custom.css' | asset_url | stylesheet_tag: preload: true }}
 
-
-      
       <!-- LoudCrowd -->
-{% if request.path contains '/pages/shop' or request.path contains '/products' %}
-  <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }}
-{% endif %}
+      {% if request.path contains '/pages/shop' or request.path contains '/products' %}
+        <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }}
+      {% endif %}
 
       {%- render 'head-scripts-loader' -%}
+
+      {% if template contains 'product' and product.tags contains 'noindex' %}
+        <meta name="robots" content="noindex, nofollow">
+      {% endif %}
+
     </head>
 
     <body class="gradient template--{{ template.name }} template--{{ template.suffix }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
