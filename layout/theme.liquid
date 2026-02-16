@@ -385,14 +385,17 @@
       {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
       {{ 'bundly-custom.css' | asset_url | stylesheet_tag: preload: true }}
 
-
-      
       <!-- LoudCrowd -->
-{% if request.path contains '/pages/shop' or request.path contains '/products' %}
-  <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }}
-{% endif %}
+      {% if request.path contains '/pages/shop' or request.path contains '/products' %}
+        <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }}
+      {% endif %}
 
       {%- render 'head-scripts-loader' -%}
+
+      {% if template contains 'product' and product.tags contains 'noindex' %}
+  <meta name="robots" content="noindex,nofollow">
+{% endif %}
+
     </head>
 
     <body class="gradient template--{{ template.name }} template--{{ template.suffix }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
