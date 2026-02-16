@@ -13,18 +13,15 @@
       <meta name="google-site-verification" content="dW9JygpNiA3CxV_Ct50EQ7ozDR1NvtxzckIZmI511HQ" />
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-      {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}
-        <meta name='robots' content='noindex, nofollow'>
-      {% endif %}
-
-      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' or collection.handle == 'sale' %}
-        <meta name="robots" content="noindex, nofollow">
-      {% endif %}
 
       <!-- Preload JS/CSS -- Start -->
       <link rel="preload" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css" as="style" onload="this.rel='stylesheet'">
       <link rel="preload" href="https://options.shopapps.site/js/options.js" as="script">
-      <!-- Preload JS/CSS -- End -->      
+      <!-- Preload JS/CSS -- End -->
+
+      {% if product.template_suffix == 'app-only' or product.template_suffix == 'couture' or product.template_suffix == 'evg-pdp' or product.template_suffix == 'capsule-pdp' or collection.handle == 'sale' %}
+        <meta name="robots" content="noindex">
+      {% endif %}
 
       <script>
         window.ShopifyTemplate = {
@@ -168,7 +165,9 @@
       {% # theme-check-enable %}
 
       {%- render 'bold-options-hybrid' -%}
-      
+      {% if template == 'product' and product.metafields.inventory.ShappifyHidden or product.type contains '_HIDDEN_' %}
+        <meta name='robots' content='noindex'>
+      {% endif %}
       {%- render 'bold-common' -%}
       {%- render 'sc-includes' -%}
 
