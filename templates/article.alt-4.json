@@ -10,66 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-article",
-      "blocks": {
-        "featured_image": {
-          "type": "featured_image",
-          "settings": {
-            "image_height": "adapt"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-            "blog_show_date": true,
-            "blog_show_author": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "content": {
-          "type": "content",
-          "settings": {}
-        },
-        "foursixty_shoppable_social_ugc_custom_minifeed_3TGz3f": {
-          "type": "shopify:\/\/apps\/foursixty-shoppable-social-ugc\/blocks\/custom_minifeed\/e2616dfe-fbb6-4e7d-874d-d250b973556d",
-          "settings": {
-            "foreground_color": "#ffffff",
-            "background_color": "#000000",
-            "background_color_alpha": 90,
-            "post_spacing": 1,
-            "hover_margin": 0,
-            "rows": 2,
-            "columns": 6,
-            "target_blank": false,
-            "show_icon": true,
-            "show_text": false,
-            "show_date": false,
-            "call_to_action": "SHOP IT",
-            "shop_type": "button",
-            "body_font_size": 14,
-            "body_font": "helvetica_n4",
-            "accent_font_size": 14,
-            "accent_font": "helvetica_n4",
-            "disable_filter": false,
-            "override_feed_id": "",
-            "arbitrary_attributes": "",
-            "custom_css": "",
-            "custom_js": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_image",
-        "title",
-        "share",
-        "content",
-        "foursixty_shoppable_social_ugc_custom_minifeed_3TGz3f"
-      ],
+      "type": "main-article-alt-4",
       "settings": {}
     }
   },
