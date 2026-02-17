@@ -2,6 +2,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 0 60px;
+    margin-bottom: 80px;
 }
 
 .alt__article--title {
@@ -51,6 +52,7 @@
 
     .article-container {
         padding: 0 30px;
+        margin-bottom: 40px;
     }
 
     .alt__article--title h1 {
