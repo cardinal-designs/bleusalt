@@ -12,7 +12,7 @@
     "main": {
       "type": "main-article-alt-1",
       "settings": {
-        "image_height": "adapt"
+        "image_height": "large"
       }
     }
   },
