@@ -66,11 +66,12 @@
         "top_quote_conetnt": "",
         "image_caption": "",
         "bottom_title": "",
-        "bottom_sub_title": "",
-        "bottom_conetnt": "",
+        "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
-        "bottom_image_caption": ""
+        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_image.value }}",
+        "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_image_caption.value }}"
       }
     },
     "alt_article_image_grid_byRQep": {
