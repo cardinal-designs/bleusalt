@@ -204,6 +204,10 @@
     font-size: 28px;
 }
 
+.context-section p {
+    text-align: left;
+}
+
 @media (max-width: 768px) {
 
     .article-container {
