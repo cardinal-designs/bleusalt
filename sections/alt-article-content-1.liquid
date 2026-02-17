@@ -41,12 +41,12 @@
         {% if section.settings.bottom_image != blank %}
             <div class="article-image-full">
                 {%- render 'image',
-                image: section.settings.image,
+                image: section.settings.bottom_image,
                 sizes: '(min-width: 768px) 50vw, 100vw',
                 prioritize_loading: true
                 -%}
             </div>
-            {% if section.settings.image_caption != blank %}
+            {% if section.settings.bottom_image_caption != blank %}
             <div class="image-caption">{{ section.settings.bottom_image_caption }}</div>
             {% endif %}
         {% endif %}
