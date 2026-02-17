@@ -127,3 +127,10 @@
     margin-bottom: 8px;
     letter-spacing: 1px;
 }
+
+.day-outfit + .article-rte {
+    text-align: center;
+    font-style: italic;
+    font-size: 19px;
+    margin: 60px 0;
+}
