@@ -28,12 +28,14 @@
       "type": "alt-article-content-1",
       "settings": {
         "top_title": "",
+        "top_sub_title": "",
         "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
         "top_quote_conetnt": "",
         "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
+        "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}",
@@ -143,15 +145,15 @@
       "name": "Article Content 2",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_title.value }}",
-        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.top_content | metafield_tag }}",
+        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_5.value.top_content | metafield_tag }}</p>",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_title.value }}",
         "image": "{{ article.metafields.custom.alt_article_content_part_5.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_5.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_sub_title.value }}",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_title.value }}",
-        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_content | metafield_tag }}",
+        "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_5.value.bottom_content | metafield_tag }}</p>",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_quote_title.value }}",
-        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_quote_text | metafield_tag }}"
+        "bottom_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_5.value.bottom_quote_text | metafield_tag }}</p>"
       }
     },
     "alt_article_content_3_YradaH": {
@@ -177,12 +179,14 @@
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_6.value.title_top.value }}",
+        "top_sub_title": "",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_6.value.top_quote_title.value }}",
         "top_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.top_quote_content | metafield_tag }}",
         "image": "{{ article.metafields.custom.alt_article_content_part_6.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_6.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_title.value }}",
+        "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_quote_text | metafield_tag }}",
@@ -201,8 +205,8 @@
       "type": "alt-article-content-2",
       "name": "Article Content 2",
       "settings": {
-        "top_title": "",
-        "top_conetnt": "",
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_7.value.top_title.value }}",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_7.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "image_caption": "",
         "bottom_title": "",
