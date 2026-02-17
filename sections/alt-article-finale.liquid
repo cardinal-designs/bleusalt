@@ -2,32 +2,19 @@
 
 <div class="alt__article--content">
     <div class="article-container">
-        {% if section.settings.title != blank %}
-            <h2>{{ section.settings.title }}</h2>
-        {% endif %}
-        {% if section.settings.sub_text != blank %}
-            <div class="article-rte">{{ section.settings.sub_text }}</div>
-        {% endif %}
 
-        {% if section.settings.outfit_formula_title_1 != blank or section.settings.outfit_formula_list_1 or section.settings.outfit_formula_title_2 != blank or section.settings.outfit_formula_list_2 != blank %}
-            <div class="outfit-formula">
-                {% if section.settings.outfit_formula_title_1 != blank %}
-                <h3>{{ section.settings.outfit_formula_title_1 }}</h3>
+        {% if section.settings.title != blank or section.settings.content or section.settings.sub_text != blank %}
+            <div class="finale">
+                {% if section.settings.title != blank %}
+                    <h2>{{ section.settings.title }}</h2>
                 {% endif %}
-                {% if section.settings.outfit_formula_list_1 != blank %}
-                <div class="article-rte">{{ section.settings.outfit_formula_list_1 }}</div>
+                {% if section.settings.content != blank %}
+                    <div class="article-rte">{{ section.settings.content }}</div>
                 {% endif %}
-                {% if section.settings.outfit_formula_title_2 != blank %}
-                <h3 style="margin-top: 50px;">{{section.settings.outfit_formula_title_2 }}</h3>
-                {% endif %}
-                {% if section.settings.outfit_formula_list_2 != blank %}
-                <div class="article-rte">{{ section.settings.outfit_formula_list_2 }}</div>
+                {% if section.settings.sub_text != blank %}
+                    <div class="article-rte">{{ section.settings.sub_text }}</div>
                 {% endif %}
             </div>
-        {% endif %}
-
-        {% if section.settings.content != blank %}
-            <div class="article-rte">{{ section.settings.content }}</div>
         {% endif %}
 
         {% if section.settings.image != blank %}
