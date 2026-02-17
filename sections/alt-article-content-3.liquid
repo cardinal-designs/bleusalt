@@ -20,9 +20,10 @@
         {% assign key = metafield_parts[1] %}
 
         {% assign day_outfit = article.metafields[namespace][key].value %}
+        {% assign article_day_outfit = day_outfit.article_day_outfit.value %}
 
-        {% if day_outfit != blank %}
-            
+        {% if article_day_outfit != blank %}
+
         {% endif %}
 
         {% if section.settings.sub_text != blank %}
