@@ -5,7 +5,7 @@
     text-align: justify;
 }
 
-.alt__article--content p::first-child::first-letter {
+.alt__article--content .article-rte:first-child p:first-child::first-letter {
     float: left;
     font-size: 75px;
     line-height: 60px;
