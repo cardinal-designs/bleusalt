@@ -19,10 +19,10 @@
   assign preload = 'none'
 
   assign image = video.preview_image
-  assign image_sizes = '(min-width: 750px) 100vw, 0vw'
+  assign image_sizes = '(min-width: 750px) 60vw, 0vw'
 
   if is_mobile
-    assign image_sizes = '(min-width: 750px) 0vw, 100vw'
+    assign image_sizes = '(min-width: 750px) 0vw, 60vw'
   endif
 -%}
 
@@ -42,6 +42,6 @@
   -}}
 {%- endcapture -%}
 
-{%- render 'image', image: image, sizes: image_sizes, prioritize_loading: true -%}
+{%- render 'image', image: image, classes: 'opacity-none', sizes: image_sizes, prioritize_loading: true -%}
 
 {{- video_layout | replace: '<img src', '<img data-src' -}}

@@ -596,3 +596,18 @@ html:not(.third-party-scripts-loaded) .homepage-nosto-custom {
   transform: translateY(-100%);
   visibility: hidden;
 }
+
+/* Hide third-party service elements until their scripts are loaded */
+html:not(.third-party-scripts-loaded) #shopify-pc__banner,
+html:not(.third-party-scripts-loaded) #attentive_overlay,
+html:not(.third-party-scripts-loaded) #onetrust-consent-sdk,
+html:not(.third-party-scripts-loaded) #CybotCookiebotDialog,
+html:not(.third-party-scripts-loaded) #alia-root-141181,
+html:not(.third-party-scripts-loaded) #alia-root-151516,
+html:not(.third-party-scripts-loaded) .needsclick[aria-modal='true'] {
+  display: none !important;
+}
+
+.opacity-none {
+  opacity: 1 !important;
+}
