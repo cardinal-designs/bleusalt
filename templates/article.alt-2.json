@@ -191,14 +191,14 @@
         "top_conetnt": "",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_title.value }}",
         "top_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_content | metafield_tag }}",
-        "image_caption": "",
+        "image": "{{ article.metafields.custom.alt_article_content_part_5.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_content_part_5.value.image_caption.value }}",
         "bottom_title": "",
         "bottom_sub_title": "",
         "bottom_conetnt": "",
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
-        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_image.value }}",
-        "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_image_caption.value }}"
+        "bottom_image_caption": ""
       }
     }
   },
