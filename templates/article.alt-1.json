@@ -239,6 +239,17 @@
         "bottom_quote_conetnt": "",
         "bottom_image_caption": ""
       }
+    },
+    "alt_article_finale_dHyCKd": {
+      "type": "alt-article-finale",
+      "name": "Article Finale",
+      "settings": {
+        "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
+        "content": "{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_finale.value.sub_text.value }}",
+        "image": "{{ article.metafields.custom.alt_article_finale.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_finale.value.image_caption.value }}"
+      }
     }
   },
   "order": [
@@ -262,6 +273,7 @@
     "alt_article_image_grid_TckjzR",
     "alt_article_content_2_t4xqEP",
     "alt_article_divider_xmJadQ",
-    "alt_article_content_1_cL4xpF"
+    "alt_article_content_1_cL4xpF",
+    "alt_article_finale_dHyCKd"
   ]
 }
