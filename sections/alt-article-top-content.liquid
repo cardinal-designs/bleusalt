@@ -9,7 +9,7 @@
             <div class="pullquote">{{ section.settings.top_quote_title }}</div>
         {% endif %}
         {% if section.settings.image != blank %}
-            <div class="article-image">
+            <div class="article-image-full">
                 {%- render 'image',
                 image: section.settings.image,
                 sizes: '(min-width: 768px) 50vw, 100vw',
