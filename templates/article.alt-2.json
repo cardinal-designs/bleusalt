@@ -43,11 +43,6 @@
         "bottom_image_caption": "{{ article.metafields.custom.alt_article_top_content.value.bottom_image_caption.value }}"
       }
     },
-    "alt_article_divider_8mEtRg": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
     "alt_article_image_grid_zkCizw": {
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
@@ -266,7 +261,6 @@
     "main",
     "alt_article_title_X9L49H",
     "alt-article-content-1",
-    "alt_article_divider_8mEtRg",
     "alt_article_image_grid_zkCizw",
     "alt_article_content_1_bdTHXD",
     "alt_article_content_2_UAhabG",
