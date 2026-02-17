@@ -21,6 +21,10 @@
 
         {% assign day_outfit = article.metafields[namespace][key].value %}
 
+        {% if day_outfit != blank %}
+            
+        {% endif %}
+
         {% if section.settings.sub_text != blank %}
             <div class="article-rte">{{ section.settings.sub_text }}</div>
         {% endif %}
