@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "image_banner_jhDQEt": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_F4jHBV": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_Gm9kNM": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_6U7cLq": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_F4jHBV",
+        "text_Gm9kNM",
+        "buttons_6U7cLq"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/otto-lp-new.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
@@ -53,6 +101,7 @@
         "text_two_NHhmBc",
         "buttons_fCtqBt"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "video_url": "",
@@ -627,6 +676,7 @@
     }
   },
   "order": [
+    "image_banner_jhDQEt",
     "16597180576b9dbb68",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
