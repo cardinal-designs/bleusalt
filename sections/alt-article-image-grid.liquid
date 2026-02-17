@@ -7,7 +7,13 @@
         <div class="article-container">
             <div class="image-grid">
                 {% for image in image_meta.images.value %}
-                <div class="image-grid-item">{{ image }}</div>
+                <div class="image-grid-item">
+                    {%- render 'image',
+                    image: image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
                 {% endfor %}            
             </div>
         </div>
