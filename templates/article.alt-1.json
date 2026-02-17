@@ -41,12 +41,18 @@
       "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {}
+    },
+    "alt_article_image_grid_zkCizw": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "alt_article_title_X9L49H",
     "alt-article-top-content",
-    "alt_article_divider_8mEtRg"
+    "alt_article_divider_8mEtRg",
+    "alt_article_image_grid_zkCizw"
   ]
 }
