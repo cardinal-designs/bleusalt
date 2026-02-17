@@ -16,7 +16,7 @@
                 <h2>{{ image_meta.title }}</h2>
             {% endif %}
             {% if image_meta.content != blank %}
-                <div class="article-rte">{{ image_meta.content }}</div>
+                <div class="article-rte">{{ image_meta.content | metafield_tag }}</div>
             {% endif %}
             <div class="image-grid">
                 {% for image in image_meta.images.value %}

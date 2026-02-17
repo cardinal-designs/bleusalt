@@ -96,14 +96,26 @@
       "name": "Article Outfit Formula",
       "settings": {
         "title": "{{ article.metafields.custom.article_outfit_formula.value.title.value }}",
-        "sub_text": "{{ article.metafields.custom.article_outfit_formula.value.sub_text | metafield_tag }}",
+        "sub_text": "<p>{{ article.metafields.custom.article_outfit_formula.value.sub_text | metafield_tag }}</p>",
         "outfit_formula_title_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_1.value }}",
-        "outfit_formula_list_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_1 | metafield_tag }}",
+        "outfit_formula_list_1": "<p>{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_1 | metafield_tag }}</p>",
         "outfit_formula_title_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_2.value }}",
-        "outfit_formula_list_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_2 | metafield_tag }}",
-        "content": "{{ article.metafields.custom.article_outfit_formula.value.content | metafield_tag }}",
+        "outfit_formula_list_2": "<p>{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_2 | metafield_tag }}</p>",
+        "content": "<p>{{ article.metafields.custom.article_outfit_formula.value.content | metafield_tag }}</p>",
         "image": "{{ article.metafields.custom.article_outfit_formula.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.article_outfit_formula.value.image_caption.value }}"
+      }
+    },
+    "alt_article_divider_kYEKhk": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
+    "alt_article_image_grid_BjrdbC": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_3"
       }
     }
   },
@@ -117,6 +129,8 @@
     "alt_article_image_grid_byRQep",
     "alt_article_content_2_UAhabG",
     "alt_article_divider_8izgbw",
-    "alt_article_formula_ab7TYx"
+    "alt_article_formula_ab7TYx",
+    "alt_article_divider_kYEKhk",
+    "alt_article_image_grid_BjrdbC"
   ]
 }
