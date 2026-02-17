@@ -26,9 +26,10 @@
             </div>
         {% endif %}
 
-        {% if section.settings.top_quote_title != blank %}
-            <div class="pullquote">{{ section.settings.top_quote_title }}</div>
+        {% if section.settings.content != blank %}
+            <div class="article-rte">{{ section.settings.content }}</div>
         {% endif %}
+
         {% if section.settings.image != blank %}
             <div class="article-image-full">
                 {%- render 'image',
@@ -41,6 +42,11 @@
             <div class="image-caption">{{ section.settings.image_caption }}</div>
             {% endif %}
         {% endif %}
+
+        {% if section.settings.top_quote_title != blank %}
+            <div class="pullquote">{{ section.settings.top_quote_title }}</div>
+        {% endif %}
+        
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
         {% endif %}
@@ -93,46 +99,15 @@
             "id": "outfit_formula_list_2",
             "label": "Outfit Formula List 2"
         },
-
         {
-            "type": "text",
-            "id": "top_quote_title",
-            "label": "Top quote title"
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
         },
         {
             "type": "image_picker",
             "id": "image",
             "label": "Image"
-        },
-        {
-            "type": "text",
-            "id": "image_caption",
-            "label": "Image caption"
-        },
-        {
-            "type": "text",
-            "id": "bottom_title",
-            "label": "Bottom sub title"
-        },
-        {
-            "type": "text",
-            "id": "bottom_sub_title",
-            "label": "Bottom title"
-        },        
-        {
-            "type": "richtext",
-            "id": "bottom_conetnt",
-            "label": "Bottom content"
-        },
-        {
-            "type": "text",
-            "id": "bottom_quote_title",
-            "label": "Bottom quote title"
-        },
-        {
-            "type": "richtext",
-            "id": "bottom_quote_conetnt",
-            "label": "Bottom quote content"
         }
     ],
     "presets": [
