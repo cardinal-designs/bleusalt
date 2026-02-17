@@ -13,6 +13,10 @@
   margin: 0 auto;
 }
 
+.alt__article--template {
+  max-width: 100%;
+}
+
 .article-template__hero-container .media>img {
   opacity: 1!important;
 }
