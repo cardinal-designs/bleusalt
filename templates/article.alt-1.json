@@ -196,6 +196,21 @@
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_4"
       }
+    },
+    "alt_article_content_2_4rJ94i": {
+      "type": "alt-article-content-2",
+      "name": "Article Content 2",
+      "settings": {
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_7.value.title_top.value }}",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_7.value.top_content | metafield_tag }}",
+        "top_quote_title": "",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": ""
+      }
     }
   },
   "order": [
@@ -216,6 +231,7 @@
     "alt_article_content_3_YradaH",
     "alt_article_divider_9KFhEB",
     "alt_article_content_1_CJNHeQ",
-    "alt_article_image_grid_TckjzR"
+    "alt_article_image_grid_TckjzR",
+    "alt_article_content_2_4rJ94i"
   ]
 }
