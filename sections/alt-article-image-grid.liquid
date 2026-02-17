@@ -12,7 +12,12 @@
 {% if image_meta != blank %}
     <div class="alt__article--content">
         <div class="article-container">
-            <h2>{{ image_meta.title }}</h2>
+            {% if image_meta.title != blank %}
+                <h2>{{ image_meta.title }}</h2>
+            {% endif %}
+            {% if image_meta.title != blank %}
+                <div class="article-rte">{{ image_meta.title }}</div>
+            {% endif %}
             <div class="image-grid">
                 {% for image in image_meta.images.value %}
                 <div class="image-grid-item">
