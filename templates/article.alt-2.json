@@ -145,6 +145,7 @@
     },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
+      "disabled": true,
       "name": "Article Outfit Formula",
       "settings": {
         "title": "{{ article.metafields.custom.article_outfit_formula.value.title.value }}",
@@ -160,11 +161,13 @@
     },
     "alt_article_divider_kYEKhk": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_content_2_BJ4EwV": {
       "type": "alt-article-content-2",
+      "disabled": true,
       "name": "Article Content 2",
       "settings": {
         "title_top": "",
@@ -182,6 +185,7 @@
     },
     "alt_article_content_3_YradaH": {
       "type": "alt-article-content-3",
+      "disabled": true,
       "name": "Article Content 3",
       "settings": {
         "title": "{{ article.metafields.custom.article_week_schedule.value.title.value }}",
@@ -195,11 +199,13 @@
     },
     "alt_article_divider_9KFhEB": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_content_1_CJNHeQ": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_6.value.title_top.value }}",
@@ -220,6 +226,7 @@
     },
     "alt_article_content_2_t4xqEP": {
       "type": "alt-article-content-2",
+      "disabled": true,
       "name": "Article Content 2",
       "settings": {
         "title_top": "",
@@ -237,11 +244,13 @@
     },
     "alt_article_divider_xmJadQ": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_content_1_cL4xpF": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_8.value.title_top.value }}",
@@ -261,6 +270,7 @@
     },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
+      "disabled": true,
       "name": "Article Finale",
       "settings": {
         "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
