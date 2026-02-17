@@ -4,6 +4,10 @@
     padding: 0 60px;
 }
 
+.alt__article--title {
+    margin-top: 80px;
+}
+
 .category-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 10px;
