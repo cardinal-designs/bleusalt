@@ -7,7 +7,7 @@
           {% if current_collection.image != blank %}
             {%- render 'image',
               image: current_collection.image,
-              sizes: '(min-width: 750px) 0, 375px',
+              sizes: '(min-width: 750px) 0, 100px',
               prioritize_loading: true
             -%}
           {% endif %}

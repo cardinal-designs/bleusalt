@@ -5,6 +5,7 @@
   @param {string} [sizes] - Responsive image sizes for the 'sizes' attribute (defaults to '100vw')
   @param {string} [widths] - Comma-separated list of widths for the 'srcset' attribute (defaults to '200,400,600,800,1200,1600,2000,2600,3200,4000')
   @param {string} [classes] - Custom classes applied to the <img> element
+  @param {string} [data_alt] - Custom data-alt attribute for the image (used for media filtering)
   @param {boolean} [prioritize_loading] - If true, sets loading="eager", fetchpriority="high", and preload=true. If not provided, automatically prioritizes loading for the first section (section.index == 1)
   @param {section} [section] - The section object is globally available in all section snippets and does not need to be passed explicitly. Used for automatic priority determination.
 
@@ -19,7 +20,7 @@
 
 {%- liquid
   assign sizes = sizes | default: '100vw'
-  assign widths = widths | default: '1,200,375,400,600,800,1200,1600,2000,2600,3200,4000' | append: ', ' | append: image.width
+  assign widths = widths | default: '1,100,200,375,400,600,800,1200,1600,2000,2600,3200,4000' | append: ', ' | append: image.width
 
   if prioritize_loading == blank
     if section and section.index == 1
@@ -46,5 +47,6 @@
     fetchpriority: fetchpriority,
     preload: preload,
     sizes: sizes,
-    widths: widths
+    widths: widths,
+    data-alt: data_alt
 -}}

@@ -9,19 +9,13 @@ else
     assign ratio =  1 | divided_by: image.aspect_ratio | times: 100
 endif
 
+assign data_alt = image.alt | escape | split: ' | ' | first
 -%}
 <div style="padding-top:{{ ratio }}%;" class="media {% if class != blank %}{{ class }}{% endif %}">
-    <img
-        srcset="{% if image.width >= 288 %}{{ image | image_url: width: 288 }} 288w,{% endif %}
-                {% if image.width >= 576 %}{{ image | image_url: width: 576 }} 576w,{% endif %}
-                {% if image.width >= 550 %}{{ image | image_url: width: 550 }} 550w,{% endif %}
-                {% if image.width >= 1100 %}{{ image | image_url: width: 1100 }} 1100w,{% endif %}
-                {{ image | image_url }} {{ image.width }}w"
-        src="{{ image | image_url: width: 550, height: 550 }}"
-        sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-        loading="lazy"
-        width="576"
-        height="{{ 576 | divided_by: image.aspect_ratio }}"
-        data-alt="{{  image.alt | escape | split: ' | ' | first }}"
-        alt="{{ image.alt }}" />
+    {% render 'image',
+        image: image,
+        sizes: "(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)",
+        widths: '288,550,576,1100',
+        data_alt: data_alt
+    %}
 </div>

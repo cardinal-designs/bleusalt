@@ -1,0 +1,47 @@
+{%- doc -%}
+  Renders a video element for the video banner section.
+
+  @param {video} video - The video object.
+  @param {string} [video_id] - The unique identifier for the video element.
+  @param {string} [class] - Additional CSS classes for the video element.
+  @param {boolean} [autoplay] - Whether the video should autoplay.
+  @param {boolean} [loop] - Whether the video should loop.
+  @param {boolean} [muted] - Whether the video should be muted.
+  @param {boolean} [playsinline] - Whether the video should play inline on mobile devices.
+  @param {string} [aria_label] - The ARIA label for accessibility purposes.
+  @param {boolean} [is_mobile] - Whether the video is for mobile devices.
+
+  @example
+  {%- render 'video-banner-video', video: video, video_id: 'video-banner', class: 'video-banner__video', autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', aria_label: 'Video Banner', is_mobile: false -%}
+{%- enddoc -%}
+
+{%- liquid
+  assign preload = 'none'
+
+  assign image = video.preview_image
+  assign image_sizes = '(min-width: 750px) 60vw, 0vw'
+
+  if is_mobile
+    assign image_sizes = '(min-width: 750px) 0vw, 60vw'
+  endif
+-%}
+
+{%- capture video_layout -%}
+  {{-
+    video
+    | video_tag:
+      id: video_id,
+      class: class,
+      data-autoplay: autoplay,
+      loop: loop,
+      muted: muted,
+      playsinline: playsinline,
+      preload: preload,
+      aria_label: aria_label,
+      poster: blank
+  -}}
+{%- endcapture -%}
+
+{%- render 'image', image: image, classes: 'opacity-none', sizes: image_sizes, prioritize_loading: true -%}
+
+{{- video_layout | replace: '<img src', '<img data-src' -}}
