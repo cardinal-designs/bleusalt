@@ -13,6 +13,10 @@
     font-weight: 300;
 }
 
+.article-image-full {
+    line-height: 0;
+}
+
 .article-image-full img {
     width: 100%;
     height: auto;
