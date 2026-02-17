@@ -1,3 +1,5 @@
+{% render 'hs-defer-css' with filename: 'alt-article-title.css', pages: 'collection,index,product' | split: ',', local: true %}
+
 <div class="article-template__hero-container">
     <div class="category-label">Fashion / Style Intelligence</div>
     <h1>{{ article.title }}</h1>
