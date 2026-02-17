@@ -120,6 +120,14 @@
         "metafield_key": "custom.alt_article_image_grid_3"
       }
     },
+    "alt_article_context_bDtqMd": {
+      "type": "alt-article-context",
+      "name": "Article Context",
+      "settings": {
+        "title": "{{ article.metafields.custom.article_context.value.title.value }}",
+        "content": "{{ article.metafields.custom.article_context.value.content | metafield_tag }}"
+      }
+    },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
       "name": "Article Outfit Formula",
@@ -266,6 +274,7 @@
     "alt_article_content_2_tj4Gzn",
     "alt_article_divider_8izgbw",
     "alt_article_image_grid_BjrdbC",
+    "alt_article_context_bDtqMd",
     "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
     "alt_article_content_2_BJ4EwV",
