@@ -9,7 +9,9 @@
         {% if section.settings.subtitle != blank %}
             <div class="subtitle">{{ section.settings.subtitle }}</div>
         {% endif %}
-        <div class="byline">By Lyndie Irons for Bleusalt</div>
+        {% if section.settings.byline != blank %}
+            <div class="byline">{{ section.settings.byline }}</div>
+        {% endif %}
     </div>
 </div>
 
