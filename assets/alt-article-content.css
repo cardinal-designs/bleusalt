@@ -61,6 +61,13 @@
     letter-spacing: 1px;
 }
 
+.alt__article--content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 50px 0 25px;
+    font-style: italic;
+}
+
 .alt__article--content .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
