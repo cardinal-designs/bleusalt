@@ -2,6 +2,9 @@
 
 <div class="alt__article--content">
     <div class="article-container">
+        {% if section.settings.top_title != blank %}
+            <h2>{{ section.settings.top_title }}</h2>
+        {% endif %}
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte">{{ section.settings.top_conetnt }}</div>
         {% endif %}
@@ -32,6 +35,18 @@
         {% if section.settings.bottom_quote_conetnt != blank %}
             <div class="article-rte">{{ section.settings.bottom_quote_conetnt }}</div>
         {% endif %}
+        {% if section.settings.bottom_image != blank %}
+            <div class="article-image-full">
+                {%- render 'image',
+                image: section.settings.image,
+                sizes: '(min-width: 768px) 50vw, 100vw',
+                prioritize_loading: true
+                -%}
+            </div>
+            {% if section.settings.image_caption != blank %}
+            <div class="image-caption">{{ section.settings.bottom_image_caption }}</div>
+            {% endif %}
+        {% endif %}
     </div>
 </div>
 
@@ -39,6 +54,11 @@
 {
     "name": "Article Content",
     "settings": [
+        {
+            "type": "text",
+            "id": "top_title",
+            "label": "Top title"
+        },
         {
             "type": "richtext",
             "id": "top_conetnt",
@@ -78,7 +98,17 @@
             "type": "richtext",
             "id": "bottom_quote_conetnt",
             "label": "Bottom quote content"
-        }
+        },
+        {
+            "type": "image_picker",
+            "id": "bottom_image",
+            "label": "Bottom image"
+        },
+        {
+            "type": "text",
+            "id": "bottom_image_caption",
+            "label": "Bottom image caption"
+        },
     ],
     "presets": [
         {
