@@ -136,6 +136,13 @@
         "content": "{{ article.metafields.custom.article_context_2.value.content | metafield_tag }}"
       }
     },
+    "alt_article_image_grid_TckjzR": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_4"
+      }
+    },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
       "name": "Article Outfit Formula",
@@ -211,13 +218,6 @@
         "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_image_caption.value }}"
       }
     },
-    "alt_article_image_grid_TckjzR": {
-      "type": "alt-article-image-grid",
-      "name": "Article Image Grid",
-      "settings": {
-        "metafield_key": "custom.alt_article_image_grid_4"
-      }
-    },
     "alt_article_content_2_t4xqEP": {
       "type": "alt-article-content-2",
       "name": "Article Content 2",
@@ -284,13 +284,13 @@
     "alt_article_image_grid_BjrdbC",
     "alt_article_context_bDtqMd",
     "alt_article_context_PN8VEw",
+    "alt_article_image_grid_TckjzR",
     "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
     "alt_article_content_2_BJ4EwV",
     "alt_article_content_3_YradaH",
     "alt_article_divider_9KFhEB",
     "alt_article_content_1_CJNHeQ",
-    "alt_article_image_grid_TckjzR",
     "alt_article_content_2_t4xqEP",
     "alt_article_divider_xmJadQ",
     "alt_article_content_1_cL4xpF",
