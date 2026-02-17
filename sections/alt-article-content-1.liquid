@@ -5,6 +5,9 @@
         {% if section.settings.top_title != blank %}
             <h2>{{ section.settings.top_title }}</h2>
         {% endif %}
+        {% if section.settings.top_sub_title != blank %}
+            <h3>{{ section.settings.top_sub_title }}</h3>
+        {% endif %}
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte">{{ section.settings.top_conetnt }}</div>
         {% endif %}
@@ -63,6 +66,11 @@
             "type": "text",
             "id": "top_title",
             "label": "Top title"
+        },
+        {
+            "type": "text",
+            "id": "top_sub_title",
+            "label": "Top sub title"
         },
         {
             "type": "richtext",
