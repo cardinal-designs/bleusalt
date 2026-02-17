@@ -2,6 +2,9 @@
 
 <div class="alt__article--content">
     <div class="article-container">
+        {% if section.settings.top_title != blank %}
+            <h3>{{ section.settings.top_title }}</h3>
+        {% endif %}
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte">{{ section.settings.top_conetnt }}</div>
         {% endif %}
