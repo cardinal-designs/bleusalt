@@ -26,6 +26,9 @@
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
         {% endif %}
+        {% if section.settings.bottom_sub_title != blank %}
+            <h3>{{ section.settings.bottom_sub_title }}</h3>
+        {% endif %}
         {% if section.settings.bottom_conetnt != blank %}
             <div class="article-rte">{{ section.settings.bottom_conetnt }}</div>
         {% endif %}
