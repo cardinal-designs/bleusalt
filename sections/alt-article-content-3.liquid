@@ -13,22 +13,13 @@
             <h3>{{ section.settings.sub_title }}</h3>
         {% endif %}
 
-        {% if section.settings.outfit_formula_title_1 != blank or section.settings.outfit_formula_list_1 or section.settings.outfit_formula_title_2 != blank or section.settings.outfit_formula_list_2 != blank %}
-            <div class="outfit-formula">
-                {% if section.settings.outfit_formula_title_1 != blank %}
-                <h3>{{ section.settings.outfit_formula_title_1 }}</h3>
-                {% endif %}
-                {% if section.settings.outfit_formula_list_1 != blank %}
-                <div class="article-rte">{{ section.settings.outfit_formula_list_1 }}</div>
-                {% endif %}
-                {% if section.settings.outfit_formula_title_2 != blank %}
-                <h3 style="margin-top: 50px;">{{section.settings.outfit_formula_title_2 }}</h3>
-                {% endif %}
-                {% if section.settings.outfit_formula_list_2 != blank %}
-                <div class="article-rte">{{ section.settings.outfit_formula_list_2 }}</div>
-                {% endif %}
-            </div>
-        {% endif %}
+        {% assign metafield_full = section.settings.metafield_key %}
+
+        {% assign metafield_parts = metafield_full | split: '.' %}
+        {% assign namespace = metafield_parts[0] %}
+        {% assign key = metafield_parts[1] %}
+
+        {% assign day_outfit = article.metafields[namespace][key].value %}
 
         {% if section.settings.sub_text != blank %}
             <div class="article-rte">{{ section.settings.sub_text }}</div>
