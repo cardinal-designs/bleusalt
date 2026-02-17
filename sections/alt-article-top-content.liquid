@@ -2,10 +2,12 @@
 
 <div class="alt__article--top-content">
     <div class="article-container">
-        {% if section.settings.category != blank %}
-            <div class="category-label">{{ section.settings.category }}</div>
+        {% if section.settings.top_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.top_conetnt }}</div>
         {% endif %}
-        <h1>{{ article.title }}</h1>
+        {% if section.settings.top_quote_title != blank %}
+            <div class="pullquote">{{ section.settings.top_quote_title }}</div>
+        {% endif %}
         {% if section.settings.subtitle != blank %}
             <div class="subtitle">{{ section.settings.subtitle }}</div>
         {% endif %}
