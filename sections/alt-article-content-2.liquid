@@ -2,6 +2,9 @@
 
 <div class="alt__article--content">
     <div class="article-container">
+        {% if section.settings.title_top != blank %}
+            <h2>{{ section.settings.title_top }}</h2>
+        {% endif %}
         {% if section.settings.top_title != blank %}
             <h3>{{ section.settings.top_title }}</h3>
         {% endif %}
@@ -48,6 +51,11 @@
 {
     "name": "Article Content 2",
     "settings": [
+        {
+            "type": "text",
+            "id": "title_top",
+            "label": "Top title"
+        },
         {
             "type": "text",
             "id": "top_title",
