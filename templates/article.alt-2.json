@@ -165,6 +165,22 @@
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_5"
       }
+    },
+    "alt_article_context_yQm7GN": {
+      "type": "alt-article-context",
+      "name": "Article Context",
+      "settings": {
+        "title": "{{ article.metafields.custom.article_context_5.value.title.value }}",
+        "content": "{{ article.metafields.custom.article_context_5.value.content | metafield_tag }}"
+      }
+    },
+    "alt_article_context_dYiJXt": {
+      "type": "alt-article-context",
+      "name": "Article Context",
+      "settings": {
+        "title": "{{ article.metafields.custom.article_context_6.value.title.value }}",
+        "content": "{{ article.metafields.custom.article_context_6.value.content | metafield_tag }}"
+      }
     }
   },
   "order": [
@@ -183,6 +199,8 @@
     "alt_article_image_grid_TckjzR",
     "alt_article_context_mNywpC",
     "alt_article_context_ei3hDw",
-    "alt_article_image_grid_aLHgVL"
+    "alt_article_image_grid_aLHgVL",
+    "alt_article_context_yQm7GN",
+    "alt_article_context_dYiJXt"
   ]
 }
