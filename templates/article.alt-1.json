@@ -11,7 +11,9 @@
   "sections": {
     "main": {
       "type": "main-article-alt-1",
-      "settings": {}
+      "settings": {
+        "image_height": "large"
+      }
     }
   },
   "order": [
