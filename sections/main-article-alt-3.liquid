@@ -1,3 +1,5 @@
+{% render 'hs-defer-css' with filename: 'section-blog-post.css', pages: 'collection,index,product' | split: ',', local: true %}
+
 {%- if article.image -%}
     <div class="article-template__hero-container">
     <div class="article-template__hero-{{ section.settings.image_height }} media"
