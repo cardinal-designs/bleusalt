@@ -56,6 +56,7 @@
         "image": "{{ article.metafields.custom.alt_article_content_part_2.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
+        "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
         "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}</p>",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.bottom_quote_text | metafield_tag }}</p>"
