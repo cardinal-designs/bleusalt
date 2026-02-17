@@ -1,14 +1,18 @@
 {% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {% assign images = article.metafields.custom.image_grid.value %}
-images -- {{ images }}
-<div class="alt__article--content">
-    <div class="article-container">
-        <div class="image-grid">
-            <div class="image-grid-item">[IMAGE: The Signature Wrap draped on model - 5 different styling options shown in sequence]</div>
+
+{% if images != blank %}
+    <div class="alt__article--content">
+        <div class="article-container">
+            <div class="image-grid">
+                {% for image in images %}
+                <div class="image-grid-item">{{ image }}</div>
+                {% endfor %}            
+            </div>
         </div>
     </div>
-</div>
+{% endif %}
 
 {% schema %}
 {
