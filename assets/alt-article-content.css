@@ -15,6 +15,10 @@
 
 .article-image-full {
     line-height: 0;
+    width: 100%;
+    margin: 80px 0;
+    background: #f5f5f5;
+    position: relative;
 }
 
 .article-image-full img {
