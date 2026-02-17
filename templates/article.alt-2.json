@@ -59,9 +59,9 @@
       "type": "alt-article-content-1",
       "name": "Article Content",
       "settings": {
-        "top_title": "",
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.title_top.value }}",
         "top_sub_title": "",
-        "top_conetnt": "",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "top_quote_conetnt": "",
         "image_caption": "",
