@@ -2,9 +2,13 @@
 
 <div class="alt__article--title">
     <div class="article-container">
-        <div class="category-label">Fashion / Style Intelligence</div>
+        {% if section.settings.category != blank %}
+            <div class="category-label">{{ section.settings.category }}</div>
+        {% endif %}
         <h1>{{ article.title }}</h1>
-        <div class="subtitle">Building Your Bleusalt Foundation</div>
+        {% if section.settings.subtitle != blank %}
+            <div class="subtitle">{{ section.settings.subtitle }}</div>
+        {% endif %}
         <div class="byline">By Lyndie Irons for Bleusalt</div>
     </div>
 </div>
