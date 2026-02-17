@@ -1,6 +1,6 @@
-{% render 'hs-defer-css' with filename: 'alt-article-title.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'alt-article-top-content.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-<div class="alt__article--title">
+<div class="alt__article--top-content">
     <div class="article-container">
         {% if section.settings.category != blank %}
             <div class="category-label">{{ section.settings.category }}</div>
