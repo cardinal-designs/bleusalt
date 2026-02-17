@@ -21,10 +21,11 @@
                 sizes: '(min-width: 768px) 50vw, 100vw',
                 prioritize_loading: true
                 -%}
+                {% if section.settings.image_caption != blank %}
+                <div class="image-caption">{{ section.settings.image_caption }}</div>
+                {% endif %}
             </div>
-            {% if section.settings.image_caption != blank %}
-            <div class="image-caption">{{ section.settings.image_caption }}</div>
-            {% endif %}
+            
         {% endif %}
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
@@ -45,10 +46,11 @@
                 sizes: '(min-width: 768px) 50vw, 100vw',
                 prioritize_loading: true
                 -%}
+                {% if section.settings.bottom_image_caption != blank %}
+                <div class="image-caption">{{ section.settings.bottom_image_caption }}</div>
+                {% endif %}
             </div>
-            {% if section.settings.bottom_image_caption != blank %}
-            <div class="image-caption">{{ section.settings.bottom_image_caption }}</div>
-            {% endif %}
+            
         {% endif %}
     </div>
 </div>
