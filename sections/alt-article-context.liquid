@@ -1,0 +1,71 @@
+{% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<div class="alt__article--content">
+    <div class="article-container">
+        {% if section.settings.title != blank or section.settings.content != blank or section.settings.sub_text != blank %}
+            <div class="finale">
+                {% if section.settings.title != blank %}
+                    <h3>{{ section.settings.title }}</h3>
+                {% endif %}
+                {% if section.settings.content != blank %}
+                    <div class="article-rte">{{ section.settings.content }}</div>
+                {% endif %}
+                {% if section.settings.sub_text != blank %}
+                    <div class="article-rte">{{ section.settings.sub_text }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if section.settings.image != blank %}
+            <div class="article-image-block">
+                <div class="article-image-full">
+                    {%- render 'image',
+                    image: section.settings.image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
+                {% if section.settings.image_caption != blank %}
+                <div class="image-caption">{{ section.settings.image_caption }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Article Finale",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "text",
+            "id": "sub_text",
+            "label": "Sub text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "image_caption",
+            "label": "Image caption"
+        },
+    ],
+    "presets": [
+        {
+            "name": "Article Finale"
+        }
+    ]
+}
+{% endschema %}
