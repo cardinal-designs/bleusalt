@@ -36,11 +36,17 @@
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}</p>"
       }
+    },
+    "alt_article_divider_8mEtRg": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "alt_article_title_X9L49H",
-    "alt-article-top-content"
+    "alt-article-top-content",
+    "alt_article_divider_8mEtRg"
   ]
 }
