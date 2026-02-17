@@ -18,10 +18,11 @@
                 sizes: '(min-width: 768px) 50vw, 100vw',
                 prioritize_loading: true
                 -%}
+                {% if section.settings.image_caption != blank %}
+                <div class="image-caption">{{ section.settings.image_caption }}</div>
+                {% endif %}
             </div>
-            {% if section.settings.image_caption != blank %}
-            <div class="image-caption">{{ section.settings.image_caption }}</div>
-            {% endif %}
+            
         {% endif %}
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
