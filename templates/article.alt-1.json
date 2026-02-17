@@ -220,6 +220,24 @@
       "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {}
+    },
+    "alt_article_content_1_cL4xpF": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_8.value.title_top.value }}",
+        "top_sub_title": "{{ article.metafields.custom.alt_article_content_part_8.value.top_title.value }}",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_8.value.top_content | metafield_tag }}",
+        "top_quote_title": "",
+        "top_quote_conetnt": "",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "bottom_image_caption": ""
+      }
     }
   },
   "order": [
@@ -242,6 +260,7 @@
     "alt_article_content_1_CJNHeQ",
     "alt_article_image_grid_TckjzR",
     "alt_article_content_2_t4xqEP",
-    "alt_article_divider_xmJadQ"
+    "alt_article_divider_xmJadQ",
+    "alt_article_content_1_cL4xpF"
   ]
 }
