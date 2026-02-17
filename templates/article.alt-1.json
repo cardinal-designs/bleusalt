@@ -27,27 +27,14 @@
     "alt-article-content-1": {
       "type": "alt-article-content-1",
       "settings": {
-        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}</p>",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
         "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
-        "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}</p>",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
-        "bottom_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}</p>"
-      }
-    },
-    "alt-article-content-2": {
-      "type": "alt-article-content-2",
-      "settings": {
-        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}</p>",
-        "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
-        "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
-        "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
-        "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
-        "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}</p>",
-        "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
-        "bottom_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}</p>"
+        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}"
       }
     },
     "alt_article_divider_8mEtRg": {
@@ -59,14 +46,27 @@
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
       "settings": {}
+    },
+    "alt-article-content-2": {
+      "type": "alt-article-content-2",
+      "settings": {
+        "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
+        "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
+        "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
+        "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}",
+        "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
+        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}"
+      }
     }
   },
   "order": [
     "main",
     "alt_article_title_X9L49H",
     "alt-article-content-1",
-    "alt-article-content-2",
     "alt_article_divider_8mEtRg",
-    "alt_article_image_grid_zkCizw"
+    "alt_article_image_grid_zkCizw",
+    "alt-article-content-2"
   ]
 }
