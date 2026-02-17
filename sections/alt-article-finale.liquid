@@ -2,7 +2,7 @@
 
 <div class="alt__article--content">
     <div class="article-container">
-        {% if section.settings.title != blank or section.settings.content or section.settings.sub_text != blank %}
+        {% if section.settings.title != blank or section.settings.content != blank or section.settings.sub_text != blank %}
             <div class="finale">
                 {% if section.settings.title != blank %}
                     <h2>{{ section.settings.title }}</h2>
