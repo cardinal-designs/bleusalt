@@ -203,6 +203,7 @@
     },
     "alt_article_divider_z4mJWf": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     }
