@@ -2,8 +2,8 @@
 
 <div class="alt__article--content">
     <div class="article-container">
-        {% if section.settings.top_title != blank %}
-            <h3>{{ section.settings.top_title }}</h3>
+        {% if section.settings.title != blank %}
+            <h2>{{ section.settings.title }}</h2>
         {% endif %}
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte">{{ section.settings.top_conetnt }}</div>
@@ -47,8 +47,8 @@
     "settings": [
         {
             "type": "text",
-            "id": "top_title",
-            "label": "Top title"
+            "id": "title",
+            "label": "Title"
         },
         {
             "type": "richtext",
