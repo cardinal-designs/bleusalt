@@ -85,6 +85,11 @@
         "bottom_quote_title": "",
         "bottom_quote_conetnt": ""
       }
+    },
+    "alt_article_divider_8izgbw": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
     }
   },
   "order": [
@@ -95,6 +100,7 @@
     "alt_article_image_grid_zkCizw",
     "alt-article-content-2",
     "alt_article_image_grid_byRQep",
-    "alt_article_content_2_UAhabG"
+    "alt_article_content_2_UAhabG",
+    "alt_article_divider_8izgbw"
   ]
 }
