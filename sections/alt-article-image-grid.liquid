@@ -2,7 +2,7 @@
 
 
 {% capture metafield_key %}{{section.settings.metafield_key}}{% endcapture %}
-metafield_key -- {{ metafield_key }}
+metafield_key -- {{ article.metafields[metafield_key] }}
 {% assign image_meta = article.metafields[metafield_key].value %}
 
 {% if image_meta != blank %}
