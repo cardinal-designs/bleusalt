@@ -11,8 +11,14 @@
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
         {% endif %}
-        {% if section.settings.byline != blank %}
-            <div class="byline">{{ section.settings.byline }}</div>
+        {% if section.settings.bottom_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.bottom_conetnt }}</div>
+        {% endif %}
+        {% if section.settings.bottom_quote_title != blank %}
+            <div class="pullquote">{{ section.settings.bottom_quote_title }}</div>
+        {% endif %}
+        {% if section.settings.bottom_quote_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.bottom_quote_conetnt }}</div>
         {% endif %}
     </div>
 </div>
