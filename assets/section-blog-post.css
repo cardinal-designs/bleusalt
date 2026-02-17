@@ -29,6 +29,10 @@
   height: 33rem;
 }
 
+.article-template__hero-container img {
+  object-position: top;
+}
+
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .article-template__hero-small {
     height: 22rem;
