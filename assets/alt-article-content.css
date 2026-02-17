@@ -60,3 +60,19 @@
     text-align: center;
     letter-spacing: 1px;
 }
+
+.alt__article--content .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 80px 0;
+}
+
+.alt__article--content .image-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.image-grid-item {
+    line-height: 0;
+}
