@@ -84,3 +84,23 @@
 .image-grid-item {
     line-height: 0;
 }
+
+.outfit-formula {
+    background: #fafafa;
+    padding: 60px;
+    margin: 80px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.outfit-formula ul li {
+    list-style: none;
+    padding-left: 30px;
+    position: relative;
+}
+
+.outfit-formula ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+}
