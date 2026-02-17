@@ -113,6 +113,13 @@
       "name": "Article Divider",
       "settings": {}
     },
+    "alt_article_image_grid_BjrdbC": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_3"
+      }
+    },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
       "name": "Article Outfit Formula",
@@ -132,13 +139,6 @@
       "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {}
-    },
-    "alt_article_image_grid_BjrdbC": {
-      "type": "alt-article-image-grid",
-      "name": "Article Image Grid",
-      "settings": {
-        "metafield_key": "custom.alt_article_image_grid_3"
-      }
     },
     "alt_article_content_2_BJ4EwV": {
       "type": "alt-article-content-2",
@@ -265,9 +265,9 @@
     "alt_article_image_grid_byRQep",
     "alt_article_content_2_tj4Gzn",
     "alt_article_divider_8izgbw",
+    "alt_article_image_grid_BjrdbC",
     "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
-    "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_BJ4EwV",
     "alt_article_content_3_YradaH",
     "alt_article_divider_9KFhEB",
