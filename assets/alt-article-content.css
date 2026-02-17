@@ -117,3 +117,9 @@
     margin-bottom: 25px;
     padding-left: 40px;
 }
+
+.day-outfit strong {
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
