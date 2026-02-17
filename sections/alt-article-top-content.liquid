@@ -9,7 +9,11 @@
             <div class="pullquote">{{ section.settings.top_quote_title }}</div>
         {% endif %}
         {% if section.settings.image != blank %}
-            
+            {%- render 'image',
+              image: section.settings.image,
+              sizes: '(min-width: 750px) 0, 375px',
+              prioritize_loading: true
+            -%}
         {% endif %}
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
