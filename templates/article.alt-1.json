@@ -24,7 +24,7 @@
         "byline": "{{ article.metafields.custom.alt_article_title.value.by_line.value }}"
       }
     },
-    "alt-article-top-content": {
+    "alt-article-content-1": {
       "type": "alt-article-content-1",
       "settings": {
         "top_conetnt": "<p>{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}</p>",
@@ -51,7 +51,7 @@
   "order": [
     "main",
     "alt_article_title_X9L49H",
-    "alt-article-top-content",
+    "alt-article-content-1",
     "alt_article_divider_8mEtRg",
     "alt_article_image_grid_zkCizw"
   ]
