@@ -45,7 +45,9 @@
     "alt_article_image_grid_zkCizw": {
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
-      "settings": {}
+      "settings": {
+        "metafield_key": "custom.image_grid"
+      }
     },
     "alt-article-content-2": {
       "type": "alt-article-content-2",
@@ -65,7 +67,9 @@
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
-      "settings": {}
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_2"
+      }
     }
   },
   "order": [
