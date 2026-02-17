@@ -104,3 +104,9 @@
     position: absolute;
     left: 0;
 }
+
+.outfit-formula h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
