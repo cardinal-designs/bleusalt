@@ -66,8 +66,8 @@
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
-        "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_quote_title.value }}",
-        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_quote_text | metafield_tag }}"
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": ""
       }
     },
     "alt_article_image_grid_byRQep": {
