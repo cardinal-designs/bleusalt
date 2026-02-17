@@ -468,12 +468,6 @@
   border-radius: 3px !important;
 }
 
-html:not(.third-party-scripts-loaded) body.template--index [id*="nosto_nosto_placements_block"],
-html:not(.third-party-scripts-loaded) #shopify-pc__banner,
-html:not(.third-party-scripts-loaded) [aria-label="Alia popup"] {
-  display: none !important;
-}
-
 .gwp-disabled-quantity {
   opacity: 0;
   visibility: hidden;
@@ -592,4 +586,13 @@ button#wair-fit-advisor > span > span:hover {
 
 .page-width.homepage-nosto-custom {
   max-width: 100%;
+}
+
+html:not(.third-party-scripts-loaded) .homepage-nosto-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  visibility: hidden;
 }

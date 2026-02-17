@@ -1433,7 +1433,7 @@ class VideoBanner extends HTMLElement {
     });
     
     window.addEventListener('third-party-scripts-loaded', () => {
-      this.lazyAutoplayVideos = this.querySelectorAll('video[data-autoplay]:not([autoplay])');
+      this.lazyAutoplayVideos = this.querySelectorAll('video[data-autoplay]:not([autoplay], [data-autoplay="false"])');
 
       this.lazyAutoplayVideos.forEach(video => {
         this.observer.observe(video);
@@ -1442,4 +1442,4 @@ class VideoBanner extends HTMLElement {
   }
 }
 
-customElements.define('vide-banner', VideoBanner);
+customElements.define('video-banner', VideoBanner);

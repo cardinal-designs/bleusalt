@@ -1,19 +1,21 @@
-{%- liquid
+{% comment %} {%- liquid
   assign pages_to_defer_css = 'collection,index,product' | split: ','
   if section.index == 1
     assign pages_to_defer_css = ''
   endif
 -%}
-{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: pages_to_defer_css, local: true %}
+{% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: pages_to_defer_css, local: true %} {% endcomment %}
 
-{%- if section.settings.video_url != blank and section.settings.video_url_mobile != blank -%}
+{%- liquid
+  assign video_height_mobile = section.settings.video_height_mobile
+  if section.settings.video_height_mobile == 'square'
+    assign video_height_mobile = 100
+  endif
+-%}
 
-{% assign video_height_mobile = section.settings.video_height_mobile %}
-{% if section.settings.video_height_mobile == 'square' %}
-  {% assign video_height_mobile = 100 %}
-{% endif %}
-  
-  {%- style -%}
+{%- style -%}
+  {{- 'section-image-banner.css' | inline_asset_content -}}
+
   @media screen and (max-width: 749px) {
     #Banner-{{ section.id }}::before,
     #Banner-{{ section.id }} .banner__media::before,
@@ -50,8 +52,7 @@
       display: block;
     }
   }
-  {%- endstyle -%}
-{%- endif -%}
+{%- endstyle -%}
 
 {%- style -%}
   #Banner-{{ section.id }}::after {
@@ -83,7 +84,7 @@
   .banner__box > * + * {
     margin-top: 1rem;
   }
-  
+
   .banner__box > * + .banner__buttons {
     margin-top: 2rem;
   }
@@ -155,27 +156,27 @@
   {% endif %}
 {%- endstyle -%}
 
-<vide-banner 
-  id="Banner-{{ section.id }}" 
+<video-banner
+  id="Banner-{{ section.id }}"
   class="video-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}"
 >
   {% assign video = section.settings.video %}
   {%- if section.settings.video_url != blank or video != blank -%}
     <div class="small-hide">
-      <div class="banner__media media media--{{ section.settings.video_height }}">
+      <div class="banner__media media loaded media--{{ section.settings.video_height }}">
         {% assign video_id = section.id | prepend: 'video-desktop--' %}
         {% if video != blank %}
-          {{ video
-            | video_tag:
-              id: video_id,
-              class: 'banner__video',
-              autoplay: true,
-              loop: true,
-              muted: true,
-              playsinline: true,
-              preload: 'auto',
-              aria_label: section.settings.description
-          }}
+          {%- render 'video-banner-video',
+            video: video,
+            video_id: video_id,
+            class: 'banner__video',
+            autoplay: true,
+            loop: true,
+            muted: true,
+            playsinline: true,
+            aria_label: section.settings.description,
+            is_mobile: false
+          -%}
         {% else %}
           <video
             aria-label="{{ section.settings.description }}"
@@ -199,20 +200,22 @@
   {% assign video_mobile = section.settings.video_mobile %}
   {%- if section.settings.video_url_mobile != blank or video_mobile != blank -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
-    <div class="medium-up-hide banner__media media media--{{ section.settings.video_height_mobile }}">
-      {% if section.settings.video_overlay_link != blank %}<a href="{{ section.settings.video_overlay_link }}" class="banner__video-overlay-link"></a>{% endif %}
+    <div class="medium-up-hide banner__media media loaded media--{{ section.settings.video_height_mobile }}">
+      {% if section.settings.video_overlay_link != blank -%}
+        <a href="{{ section.settings.video_overlay_link }}" class="banner__video-overlay-link"></a>
+      {%- endif %}
       {% if video_mobile != blank %}
-        {{ video_mobile
-          | video_tag:
-            id: video_id,
-            class: 'banner__video',
-            autoplay: true,
-            loop: true,
-            muted: true,
-            playsinline: true,
-            preload: 'auto',
-            aria_label: section.settings.description
-        }}
+        {%- render 'video-banner-video',
+          video: video_mobile,
+          video_id: video_id,
+          class: 'banner__video',
+          autoplay: true,
+          loop: true,
+          muted: true,
+          playsinline: true,
+          aria_label: section.settings.description,
+          is_mobile: true
+        -%}
       {% else %}
         <video
           aria-label="{{ section.settings.description }}"
@@ -232,31 +235,31 @@
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
-  <div 
+  <div
     class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} page-width"
   >
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <{{block.settings.heading_tag}} 
-              class="video-banner__heading" 
+            <{{ block.settings.heading_tag }}
+              class="video-banner__heading"
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.heading_color }}"
             >
               <span>{{ block.settings.heading | escape }}</span>
-            </{{block.settings.heading_tag}}>
+            </{{ block.settings.heading_tag }}>
           {%- when 'text' -%}
-            <div 
-              class="video-banner__text" 
+            <div
+              class="video-banner__text"
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.text_color }}"
             >
               <span>{{ block.settings.text | escape }}</span>
             </div>
           {%- when 'text-two' -%}
-            <div 
-              class="video-banner__text" 
+            <div
+              class="video-banner__text"
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.text_color }}"
             >
@@ -266,12 +269,28 @@
             {%- comment -%} Desktop Banner Buttons {%- endcomment -%}
             <div class="small-hide banner__buttons" {{ block.shopify_attributes }}>
               {%- if block.settings.button_label_1 != blank -%}
-                <a {% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button video-banner__button" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};">
+                <a
+                  {% if block.settings.button_link_1 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_1 }}"
+                  {% endif %}
+                  class="button video-banner__button"
+                  style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};"
+                >
                   {{ block.settings.button_label_1 | escape }}
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
-                <a {% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button video-banner__button" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};">
+                <a
+                  {% if block.settings.button_link_2 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_2 }}"
+                  {% endif %}
+                  class="button video-banner__button"
+                  style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};"
+                >
                   {{ block.settings.button_label_2 | escape }}
                 </a>
               {%- endif -%}
@@ -287,19 +306,35 @@
       {%- when 'buttons' -%}
         <div class="medium-up-hide banner__buttons--mobile" {{ block.shopify_attributes }}>
           {%- if block.settings.button_label_1 != blank -%}
-            <a {% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button video-banner__button" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};">
+            <a
+              {% if block.settings.button_link_1 == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.button_link_1 }}"
+              {% endif %}
+              class="button video-banner__button"
+              style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};"
+            >
               {{ block.settings.button_label_1 | escape }}
             </a>
           {%- endif -%}
           {%- if block.settings.button_label_2 != blank -%}
-            <a {% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button video-banner__button" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};">
+            <a
+              {% if block.settings.button_link_2 == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.button_link_2 }}"
+              {% endif %}
+              class="button video-banner__button"
+              style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};"
+            >
               {{ block.settings.button_label_2 | escape }}
             </a>
           {%- endif -%}
         </div>
     {%- endcase -%}
   {%- endfor -%}
-</vide-banner>
+</video-banner>
 
 {% schema %}
 {
@@ -321,7 +356,7 @@
       "type": "video",
       "id": "video_mobile",
       "label": "Banner mobile video"
-    },    
+    },
     {
       "type": "url",
       "id": "video_url_mobile",
@@ -558,7 +593,7 @@
         {
           "type": "select",
           "id": "heading_tag",
-          "options": [            
+          "options": [
             {
               "value": "h1",
               "label": "H1"
@@ -656,10 +691,6 @@
       "name": "Video Banner"
     }
   ],
-  "templates": [
-    "index",
-    "page",
-    "article"
-  ]
+  "templates": ["index", "page", "article"]
 }
 {% endschema %}
