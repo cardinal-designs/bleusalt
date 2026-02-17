@@ -16,6 +16,7 @@
 .article-image-full img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .image-caption {
