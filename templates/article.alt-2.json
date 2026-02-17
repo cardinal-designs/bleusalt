@@ -143,6 +143,13 @@
         "metafield_key": "custom.alt_article_image_grid_4"
       }
     },
+    "alt_article_image_grid_aLHgVL": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_5"
+      }
+    },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
       "disabled": true,
@@ -295,6 +302,7 @@
     "alt_article_context_bDtqMd",
     "alt_article_context_PN8VEw",
     "alt_article_image_grid_TckjzR",
+    "alt_article_image_grid_aLHgVL",
     "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
     "alt_article_content_2_BJ4EwV",
