@@ -1,6 +1,6 @@
 {% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-<div class="alt__article--top-content">
+<div class="alt__article--content">
     <div class="article-container">
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte">{{ section.settings.top_conetnt }}</div>
