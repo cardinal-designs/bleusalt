@@ -23,10 +23,15 @@
         "subtitle": "{{ article.metafields.custom.alt_article_title.value.sub_title.value }}",
         "byline": "{{ article.metafields.custom.alt_article_title.value.by_line.value }}"
       }
+    },
+    "alt-article-top-content": {
+      "type": "alt-article-top-content",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "alt_article_title_qcjYwa"
+    "alt_article_title_qcjYwa",
+    "alt-article-top-content"
   ]
 }
