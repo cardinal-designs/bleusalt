@@ -14,9 +14,15 @@
       "settings": {
         "image_height": "large"
       }
+    },
+    "alt_article_title_nAgtHH": {
+      "type": "alt-article-title",
+      "name": "Article Title Section",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "alt_article_title_nAgtHH"
   ]
 }
