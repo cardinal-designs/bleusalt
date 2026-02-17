@@ -1,0 +1,104 @@
+{% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<div class="alt__article--content">
+    <div class="article-container">
+        {% if section.settings.title != blank %}
+            <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.sub_text != blank %}
+            <div class="article-rte">{{ section.settings.sub_text }}</div>
+        {% endif %}
+
+        {% if section.settings.outfit_formula_title_1 != blank or section.settings.outfit_formula_list_1 or section.settings.outfit_formula_title_2 != blank or section.settings.outfit_formula_list_2 != blank %}
+            <div class="outfit-formula">
+                {% if section.settings.outfit_formula_title_1 != blank %}
+                <h3>{{ section.settings.outfit_formula_title_1 }}</h3>
+                {% endif %}
+                {% if section.settings.outfit_formula_list_1 != blank %}
+                <div class="article-rte">{{ section.settings.outfit_formula_list_1 }}</div>
+                {% endif %}
+                {% if section.settings.outfit_formula_title_2 != blank %}
+                <h3 style="margin-top: 50px;">{{section.settings.outfit_formula_title_2 }}</h3>
+                {% endif %}
+                {% if section.settings.outfit_formula_list_2 != blank %}
+                <div class="article-rte">{{ section.settings.outfit_formula_list_2 }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {% if section.settings.content != blank %}
+            <div class="article-rte">{{ section.settings.content }}</div>
+        {% endif %}
+
+        {% if section.settings.image != blank %}
+            <div class="article-image-full">
+                {%- render 'image',
+                image: section.settings.image,
+                sizes: '(min-width: 768px) 50vw, 100vw',
+                prioritize_loading: true
+                -%}
+            </div>
+            {% if section.settings.image_caption != blank %}
+            <div class="image-caption">{{ section.settings.image_caption }}</div>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Article Outfit Formula",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "sub_text",
+            "label": "Sub text"
+        },
+        {
+            "type": "text",
+            "id": "outfit_formula_title_1",
+            "label": "Outfit Formula Title 1"
+        },
+        {
+            "type": "richtext",
+            "id": "outfit_formula_list_1",
+            "label": "Outfit Formula List 1"
+        },
+        {
+            "type": "text",
+            "id": "outfit_formula_title_2",
+            "label": "Outfit Formula Title 2"
+        },
+        {
+            "type": "richtext",
+            "id": "outfit_formula_list_2",
+            "label": "Outfit Formula List 2"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "image_caption",
+            "label": "Image caption"
+        },
+    ],
+    "presets": [
+        {
+            "name": "Article Outfit Formula"
+        }
+    ]
+}
+{% endschema %}
