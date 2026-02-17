@@ -18,7 +18,11 @@
     "alt_article_title_X9L49H": {
       "type": "alt-article-title",
       "name": "Article Title Section",
-      "settings": {}
+      "settings": {
+        "category": "{{ article.metafields.custom.alt_article_title.value.category.value }}",
+        "subtitle": "{{ article.metafields.custom.alt_article_title.value.sub_title.value }}",
+        "byline": "{{ article.metafields.custom.alt_article_title.value.by_line.value }}"
+      }
     }
   },
   "order": [
