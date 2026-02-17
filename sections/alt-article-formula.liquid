@@ -31,12 +31,14 @@
         {% endif %}
 
         {% if section.settings.image != blank %}
-            <div class="article-image-full">
-                {%- render 'image',
-                image: section.settings.image,
-                sizes: '(min-width: 768px) 50vw, 100vw',
-                prioritize_loading: true
-                -%}
+            <div class="article-image-block">
+                <div class="article-image-full">
+                    {%- render 'image',
+                    image: section.settings.image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
                 {% if section.settings.image_caption != blank %}
                 <div class="image-caption">{{ section.settings.image_caption }}</div>
                 {% endif %}
