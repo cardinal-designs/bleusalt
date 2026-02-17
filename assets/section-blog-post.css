@@ -180,7 +180,7 @@
 
 
 .alt__article--template img {
-  object-position: 100% !important;
+  object-position: contain !important;
 }
 
 .alt__article--template {
