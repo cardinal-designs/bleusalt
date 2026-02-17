@@ -61,24 +61,17 @@
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.title_top.value }}",
         "top_sub_title": "",
-        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
+        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}</p>",
         "top_quote_title": "",
         "top_quote_conetnt": "",
         "image_caption": "",
         "bottom_title": "",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
-        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
+        "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}</p>",
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
         "bottom_image": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_image.value }}",
         "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_image_caption.value }}"
-      }
-    },
-    "alt_article_image_grid_byRQep": {
-      "type": "alt-article-image-grid",
-      "name": "Article Image Grid",
-      "settings": {
-        "metafield_key": "custom.alt_article_image_grid_2"
       }
     },
     "alt_article_content_2_UAhabG": {
@@ -96,6 +89,13 @@
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_quote_text | metafield_tag }}"
+      }
+    },
+    "alt_article_image_grid_byRQep": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_2"
       }
     },
     "alt_article_divider_8izgbw": {
@@ -269,8 +269,8 @@
     "alt_article_divider_8mEtRg",
     "alt_article_image_grid_zkCizw",
     "alt_article_content_1_bdTHXD",
-    "alt_article_image_grid_byRQep",
     "alt_article_content_2_UAhabG",
+    "alt_article_image_grid_byRQep",
     "alt_article_divider_8izgbw",
     "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
