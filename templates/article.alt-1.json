@@ -117,6 +117,21 @@
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_3"
       }
+    },
+    "alt_article_content_2_tj4Gzn": {
+      "type": "alt-article-content-2",
+      "name": "Article Content 2",
+      "settings": {
+        "top_title": "",
+        "top_conetnt": "",
+        "top_quote_title": "",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": ""
+      }
     }
   },
   "order": [
@@ -131,6 +146,7 @@
     "alt_article_divider_8izgbw",
     "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
-    "alt_article_image_grid_BjrdbC"
+    "alt_article_image_grid_BjrdbC",
+    "alt_article_content_2_tj4Gzn"
   ]
 }
