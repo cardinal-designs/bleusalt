@@ -187,3 +187,7 @@
 .alt__article--template {
   max-width: 100%;
 }
+
+.alt__article--template .media {
+  background: transparent;
+}
