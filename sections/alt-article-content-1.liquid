@@ -11,6 +11,9 @@
         {% if section.settings.top_quote_title != blank %}
             <div class="pullquote">{{ section.settings.top_quote_title }}</div>
         {% endif %}
+        {% if section.settings.top_quote_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.top_quote_conetnt }}</div>
+        {% endif %}
         {% if section.settings.image != blank %}
             <div class="article-image-full">
                 {%- render 'image',
