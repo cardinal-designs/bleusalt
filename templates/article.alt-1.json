@@ -61,6 +61,11 @@
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.bottom_quote_text | metafield_tag }}</p>"
       }
+    },
+    "alt_article_image_grid_byRQep": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {}
     }
   },
   "order": [
@@ -69,6 +74,7 @@
     "alt-article-content-1",
     "alt_article_divider_8mEtRg",
     "alt_article_image_grid_zkCizw",
-    "alt-article-content-2"
+    "alt-article-content-2",
+    "alt_article_image_grid_byRQep"
   ]
 }
