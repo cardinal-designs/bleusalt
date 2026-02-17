@@ -1,6 +1,8 @@
 {% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-{% assign image_meta = article.metafields[section.settings.metafield_key].value %}
+
+{% assign metafield_key = section.settings.metafield_key %}
+{% assign image_meta = article.metafields[metafield_key].value %}
 
 {% if image_meta != blank %}
     <div class="alt__article--content">
