@@ -156,6 +156,7 @@
       "block_order": [
         "nosto_nosto_placements_block_adcqUP"
       ],
+      "disabled": true,
       "settings": {
         "custom_class": "homepage-nosto-custom",
         "include_margins": true
@@ -209,52 +210,51 @@
         "padding_bottom": 36
       }
     },
-    "1659735210e064d864": {
+    "featured_collection_LtrBy6": {
       "type": "featured-collection",
       "blocks": {
-        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f": {
+        "collection_8Kqq96": {
           "type": "collection",
           "settings": {
             "heading": "Womens",
-            "collection": "womens-best-sellers"
+            "collection": "newest-products"
           }
         },
-        "e4d64483-b722-41bc-b780-ce75dc52abed": {
+        "collection_9HyzAE": {
           "type": "collection",
           "settings": {
             "heading": "Mens",
-            "collection": "mens-best-sellers"
+            "collection": "mens-new-arrivals"
           }
         }
       },
       "block_order": [
-        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
-        "e4d64483-b722-41bc-b780-ce75dc52abed"
+        "collection_8Kqq96",
+        "collection_9HyzAE"
       ],
-      "disabled": true,
       "settings": {
-        "title": "Must Haves",
+        "title": "Newest Arrivals",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "bottoms-skimpy",
+        "collection": "",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_life_image": true,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 28,
         "padding_bottom": 36
       }
     },
@@ -299,6 +299,7 @@
         "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
         "45d95e55-eabb-474a-81e3-9b60083b3f79"
       ],
+      "disabled": true,
       "settings": {
         "width": "page-width",
         "padding_top": 25,
@@ -631,7 +632,7 @@
     "16636186953571c8bf",
     "175815468017ca5ea6",
     "featured_collection",
-    "1659735210e064d864",
+    "featured_collection_LtrBy6",
     "1660227726ff0f6237",
     "16637947412bca5d08",
     "featured_collection_WKJ43w",
