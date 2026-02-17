@@ -55,19 +55,22 @@
         "metafield_key": "custom.image_grid"
       }
     },
-    "alt-article-content-2": {
-      "type": "alt-article-content-2",
+    "alt_article_content_1_bdTHXD": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
       "settings": {
-        "title_top": "{{ article.metafields.custom.alt_article_content_part_2.value.title_top.value }}",
-        "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.top_title.value }}",
-        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
+        "top_title": "",
+        "top_sub_title": "",
+        "top_conetnt": "",
         "top_quote_title": "",
+        "top_quote_conetnt": "",
         "image_caption": "",
-        "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
-        "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
-        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
         "bottom_quote_title": "",
-        "bottom_quote_conetnt": ""
+        "bottom_quote_conetnt": "",
+        "bottom_image_caption": ""
       }
     },
     "alt_article_image_grid_byRQep": {
@@ -264,7 +267,7 @@
     "alt-article-content-1",
     "alt_article_divider_8mEtRg",
     "alt_article_image_grid_zkCizw",
-    "alt-article-content-2",
+    "alt_article_content_1_bdTHXD",
     "alt_article_image_grid_byRQep",
     "alt_article_content_2_UAhabG",
     "alt_article_divider_8izgbw",
