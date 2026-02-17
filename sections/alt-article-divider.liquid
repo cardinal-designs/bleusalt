@@ -1,17 +1,5 @@
-{% render 'hs-defer-css' with filename: 'alt-article-title.css', pages: 'collection,index,product' | split: ',', local: true %}
-
-<div class="alt__article--title">
+<div class="alt__article--divider">
     <div class="article-container">
-        {% if section.settings.category != blank %}
-            <div class="category-label">{{ section.settings.category }}</div>
-        {% endif %}
-        <h1>{{ article.title }}</h1>
-        {% if section.settings.subtitle != blank %}
-            <div class="subtitle">{{ section.settings.subtitle }}</div>
-        {% endif %}
-        {% if section.settings.byline != blank %}
-            <div class="byline">{{ section.settings.byline }}</div>
-        {% endif %}
     </div>
 </div>
 
