@@ -26,7 +26,15 @@
     },
     "alt-article-top-content": {
       "type": "alt-article-top-content",
-      "settings": {}
+      "settings": {
+        "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
+        "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
+        "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
+        "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}",
+        "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
+        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}"
+      }
     }
   },
   "order": [
