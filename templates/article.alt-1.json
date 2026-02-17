@@ -70,6 +70,21 @@
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_2"
       }
+    },
+    "alt_article_content_2_UAhabG": {
+      "type": "alt-article-content-2",
+      "name": "Article Content 2",
+      "settings": {
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_3.value.top_title.value }}",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.top_content | metafield_tag }}",
+        "top_quote_title": "",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": ""
+      }
     }
   },
   "order": [
@@ -79,6 +94,7 @@
     "alt_article_divider_8mEtRg",
     "alt_article_image_grid_zkCizw",
     "alt-article-content-2",
-    "alt_article_image_grid_byRQep"
+    "alt_article_image_grid_byRQep",
+    "alt_article_content_2_UAhabG"
   ]
 }
