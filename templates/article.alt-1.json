@@ -194,7 +194,7 @@
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
       "settings": {
-        "metafield_key": ""
+        "metafield_key": "custom.alt_article_image_grid_4"
       }
     }
   },
