@@ -8,8 +8,9 @@
         {% if section.settings.content != blank %}
             <div class="article-rte">{{ section.settings.content }}</div>
         {% endif %}
+
         {% if section.settings.sub_text != blank %}
-            <div class="article-rte">{{ section.settings.sub_text }}</div>
+            <h3>{{ section.settings.sub_text }}</h3>
         {% endif %}
 
         {% if section.settings.outfit_formula_title_1 != blank or section.settings.outfit_formula_list_1 or section.settings.outfit_formula_title_2 != blank or section.settings.outfit_formula_list_2 != blank %}
@@ -59,8 +60,13 @@
         },
         {
             "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "text",
             "id": "sub_text",
-            "label": "Sub text"
+            "label": "Sub title"
         },
         {
             "type": "text",
@@ -82,11 +88,7 @@
             "id": "outfit_formula_list_2",
             "label": "Outfit Formula List 2"
         },
-        {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content"
-        },
+        
         {
             "type": "image_picker",
             "id": "image",
