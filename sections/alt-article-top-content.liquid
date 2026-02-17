@@ -11,7 +11,7 @@
         {% if section.settings.image != blank %}
             {%- render 'image',
               image: section.settings.image,
-              sizes: '(min-width: 750px) 0, 375px',
+              sizes: '(min-width: 768px) 50vw, 100vw',
               prioritize_loading: true
             -%}
         {% endif %}
