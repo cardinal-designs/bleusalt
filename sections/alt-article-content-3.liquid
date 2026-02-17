@@ -23,7 +23,11 @@
         {% assign article_day_outfit = day_outfit.article_day_outfit.value %}
 
         {% if article_day_outfit != blank %}
-
+            {% for data in article_day_outfit %}
+                <div class="day-outfit">
+                    {{ data.day_outfit }}
+                </div>
+            {% endfor %}
         {% endif %}
 
         {% if section.settings.sub_text != blank %}
