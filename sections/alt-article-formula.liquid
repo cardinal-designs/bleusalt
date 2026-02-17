@@ -1,0 +1,105 @@
+{% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<div class="alt__article--content">
+    <div class="article-container">
+        {% if section.settings.top_title != blank %}
+            <h3>{{ section.settings.top_title }}</h3>
+        {% endif %}
+        {% if section.settings.top_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.top_conetnt }}</div>
+        {% endif %}
+        {% if section.settings.top_quote_title != blank %}
+            <div class="pullquote">{{ section.settings.top_quote_title }}</div>
+        {% endif %}
+        {% if section.settings.image != blank %}
+            <div class="article-image-full">
+                {%- render 'image',
+                image: section.settings.image,
+                sizes: '(min-width: 768px) 50vw, 100vw',
+                prioritize_loading: true
+                -%}
+            </div>
+            {% if section.settings.image_caption != blank %}
+            <div class="image-caption">{{ section.settings.image_caption }}</div>
+            {% endif %}
+        {% endif %}
+        {% if section.settings.bottom_title != blank %}
+            <h2>{{ section.settings.bottom_title }}</h2>
+        {% endif %}
+        {% if section.settings.bottom_sub_title != blank %}
+            <h3>{{ section.settings.bottom_sub_title }}</h3>
+        {% endif %}
+        {% if section.settings.bottom_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.bottom_conetnt }}</div>
+        {% endif %}
+        {% if section.settings.bottom_quote_title != blank %}
+            <div class="pullquote">{{ section.settings.bottom_quote_title }}</div>
+        {% endif %}
+        {% if section.settings.bottom_quote_conetnt != blank %}
+            <div class="article-rte">{{ section.settings.bottom_quote_conetnt }}</div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Article Content 2",
+    "settings": [
+        {
+            "type": "text",
+            "id": "top_title",
+            "label": "Top title"
+        },
+        {
+            "type": "richtext",
+            "id": "top_conetnt",
+            "label": "Top Content"
+        },
+        {
+            "type": "text",
+            "id": "top_quote_title",
+            "label": "Top quote title"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "image_caption",
+            "label": "Image caption"
+        },
+        {
+            "type": "text",
+            "id": "bottom_title",
+            "label": "Bottom sub title"
+        },
+        {
+            "type": "text",
+            "id": "bottom_sub_title",
+            "label": "Bottom title"
+        },        
+        {
+            "type": "richtext",
+            "id": "bottom_conetnt",
+            "label": "Bottom content"
+        },
+        {
+            "type": "text",
+            "id": "bottom_quote_title",
+            "label": "Bottom quote title"
+        },
+        {
+            "type": "richtext",
+            "id": "bottom_quote_conetnt",
+            "label": "Bottom quote content"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Article Content 2"
+        }
+    ]
+}
+{% endschema %}
