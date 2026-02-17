@@ -56,13 +56,13 @@
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.title_top.value }}",
         "top_sub_title": "",
-        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}</p>",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "top_quote_conetnt": "",
         "image_caption": "",
         "bottom_title": "",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
-        "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}</p>",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
         "bottom_image": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_image.value }}",
@@ -181,6 +181,25 @@
         "title": "{{ article.metafields.custom.article_context_6.value.title.value }}",
         "content": "{{ article.metafields.custom.article_context_6.value.content | metafield_tag }}"
       }
+    },
+    "alt_article_content_1_gcYTMJ": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "top_title": "",
+        "top_sub_title": "",
+        "top_conetnt": "",
+        "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_title.value }}",
+        "top_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_content | metafield_tag }}",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_image.value }}",
+        "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_image_caption.value }}"
+      }
     }
   },
   "order": [
@@ -201,6 +220,7 @@
     "alt_article_context_ei3hDw",
     "alt_article_image_grid_aLHgVL",
     "alt_article_context_yQm7GN",
-    "alt_article_context_dYiJXt"
+    "alt_article_context_dYiJXt",
+    "alt_article_content_1_gcYTMJ"
   ]
 }
