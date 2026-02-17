@@ -16,6 +16,9 @@
                 prioritize_loading: true
                 -%}
             </div>
+            {% if section.settings.image_caption != blank %}
+            <div class="image-caption">{{ section.settings.image_caption }}</div>
+            {% endif %}
         {% endif %}
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
@@ -50,6 +53,11 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "image_caption",
+            "label": "Image caption"
         },
         {
             "type": "text",
