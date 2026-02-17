@@ -8,7 +8,7 @@
     margin-top: 80px;
 }
 
-.category-label {
+.alt__article--title .category-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 10px;
     letter-spacing: 3px;
@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-h1 {
+.alt__article--title h1 {
     font-size: 56px;
     font-weight: 300;
     letter-spacing: -1px;
@@ -27,7 +27,7 @@ h1 {
     text-align: center;
 }
 
-.subtitle {
+.alt__article--title .subtitle {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -37,7 +37,7 @@ h1 {
     font-style: italic;
 }
 
-.byline {
+.alt__article--title .byline {
     text-align: center;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 11px;
