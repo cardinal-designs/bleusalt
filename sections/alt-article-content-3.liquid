@@ -9,8 +9,8 @@
             <div class="article-rte">{{ section.settings.content }}</div>
         {% endif %}
 
-        {% if section.settings.sub_text != blank %}
-            <h3>{{ section.settings.sub_text }}</h3>
+        {% if section.settings.sub_title != blank %}
+            <h3>{{ section.settings.sub_title }}</h3>
         {% endif %}
 
         {% if section.settings.outfit_formula_title_1 != blank or section.settings.outfit_formula_list_1 or section.settings.outfit_formula_title_2 != blank or section.settings.outfit_formula_list_2 != blank %}
@@ -65,35 +65,19 @@
         },
         {
             "type": "text",
-            "id": "sub_text",
+            "id": "sub_title",
             "label": "Sub title"
         },
         {
             "type": "textarea",
             "id": "metafield_key",
             "label": "Metafield key"
-        },
+        },   
         {
             "type": "text",
-            "id": "outfit_formula_title_1",
-            "label": "Outfit Formula Title 1"
-        },
-        {
-            "type": "richtext",
-            "id": "outfit_formula_list_1",
-            "label": "Outfit Formula List 1"
-        },
-        {
-            "type": "text",
-            "id": "outfit_formula_title_2",
-            "label": "Outfit Formula Title 2"
-        },
-        {
-            "type": "richtext",
-            "id": "outfit_formula_list_2",
-            "label": "Outfit Formula List 2"
-        },
-        
+            "id": "sub_text",
+            "label": "Sub title"
+        },     
         {
             "type": "image_picker",
             "id": "image",
