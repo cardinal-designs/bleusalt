@@ -5,8 +5,8 @@
         {% if section.settings.title != blank %}
             <h2>{{ section.settings.title }}</h2>
         {% endif %}
-        {% if section.settings.top_conetnt != blank %}
-            <div class="article-rte">{{ section.settings.top_conetnt }}</div>
+        {% if section.settings.sub_text != blank %}
+            <div class="article-rte">{{ section.settings.sub_text }}</div>
         {% endif %}
         {% if section.settings.top_quote_title != blank %}
             <div class="pullquote">{{ section.settings.top_quote_title }}</div>
@@ -52,8 +52,8 @@
         },
         {
             "type": "richtext",
-            "id": "top_conetnt",
-            "label": "Top Content"
+            "id": "sub_text",
+            "label": "Sub text"
         },
         {
             "type": "text",
