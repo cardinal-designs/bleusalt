@@ -90,6 +90,20 @@
       "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {}
+    },
+    "alt_article_formula_ab7TYx": {
+      "type": "alt-article-formula",
+      "name": "Article Outfit Formula",
+      "settings": {
+        "title": "{{ article.metafields.custom.article_outfit_formula.value.title.value }}",
+        "sub_text": "",
+        "outfit_formula_title_1": "",
+        "outfit_formula_list_1": "",
+        "outfit_formula_title_2": "",
+        "outfit_formula_list_2": "",
+        "content": "",
+        "image_caption": ""
+      }
     }
   },
   "order": [
@@ -101,6 +115,7 @@
     "alt-article-content-2",
     "alt_article_image_grid_byRQep",
     "alt_article_content_2_UAhabG",
-    "alt_article_divider_8izgbw"
+    "alt_article_divider_8izgbw",
+    "alt_article_formula_ab7TYx"
   ]
 }
