@@ -46,3 +46,15 @@
     margin-bottom: 80px;
     color: #000;
 }
+
+@media (max-width: 768px) {
+
+    .article-container {
+        padding: 0 30px;
+    }
+
+    .alt__article--title h1 {
+        font-size: 36px;
+    }
+
+}
