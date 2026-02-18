@@ -186,7 +186,8 @@
     margin: 20px auto;
 }
 
-.finale .article-rte + .article-rte{
+.finale .article-rte + .article-rte,
+.manifesto-section .article-rte + .article-rte {
     font-size: 22px;
     margin-top: 60px;
 }
