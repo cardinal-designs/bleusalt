@@ -22,6 +22,11 @@
     line-height: 1.7;
 }
 
+.article-rte p em {
+    font-size: 13px;
+    color: #666;
+}
+
 .article-rte ul {
     font-size: 15px;
     line-height: 2;
