@@ -96,7 +96,8 @@
         "outfit_formula_title_2": "",
         "outfit_formula_list_2": "",
         "content": "",
-        "image_caption": ""
+        "image": "{{ article.metafields.custom.article_outfit_formula_2.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.article_outfit_formula_2.value.image_caption.value }}"
       }
     },
     "alt_article_content_2_UAhabG": {
