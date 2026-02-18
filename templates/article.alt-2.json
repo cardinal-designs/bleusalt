@@ -240,6 +240,21 @@
         "bottom_quote_conetnt": "",
         "bottom_image_caption": ""
       }
+    },
+    "alt_article_divider_3JD4XM": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
+    "alt_article_finale_CEdY4g": {
+      "type": "alt-article-finale",
+      "name": "Article Finale",
+      "settings": {
+        "title": "",
+        "content": "",
+        "sub_text": "",
+        "image_caption": ""
+      }
     }
   },
   "order": [
@@ -264,6 +279,8 @@
     "alt_article_content_1_mGk9cN",
     "alt_article_image_grid_tahceg",
     "alt_article_divider_8CGQUQ",
-    "alt_article_content_1_wkfD6c"
+    "alt_article_content_1_wkfD6c",
+    "alt_article_divider_3JD4XM",
+    "alt_article_finale_CEdY4g"
   ]
 }
