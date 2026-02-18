@@ -20,6 +20,9 @@
         height="{{ article.image.height }}"
         alt="{{ article.image.alt | escape }}">
     </div>
+    {% if section.settings.image_text != blank %}
+    <div class="article-template__hero-text">{{ section.settings.image_text }}</div>
+    {% endif %}
     </div>
 {%- endif -%}
 
