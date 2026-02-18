@@ -115,6 +115,13 @@
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_quote_text | metafield_tag }}"
       }
     },
+    "alt_article_outfit_image_grid_RhAHaR": {
+      "type": "alt-article-outfit-image-grid",
+      "name": "Article Outfit Image Grid",
+      "settings": {
+        "metafield_key": "custom.article_outfit_image_grid"
+      }
+    },
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
       "disabled": true,
@@ -270,6 +277,7 @@
     "alt-article-content-2",
     "alt_article_formula_RJpAnR",
     "alt_article_content_2_UAhabG",
+    "alt_article_outfit_image_grid_RhAHaR",
     "alt_article_image_grid_byRQep",
     "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_tj4Gzn",
