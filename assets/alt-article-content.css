@@ -298,6 +298,10 @@
 
 @media (max-width: 768px) {
 
+    .outfit-formula {
+        padding: 40px 30px;
+    }
+
     .alt__article--content .image-grid, 
     .alt__article--content .outfit-grid {
         grid-template-columns: 1fr;
