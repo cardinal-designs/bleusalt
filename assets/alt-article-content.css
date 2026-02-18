@@ -298,7 +298,8 @@
 
 @media (max-width: 768px) {
 
-    .outfit-formula {
+    .outfit-formula,
+    .context-section {
         padding: 40px 30px;
     }
 
