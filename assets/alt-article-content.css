@@ -258,6 +258,12 @@
     margin: 30px auto;
 }
 
+.alt__article--content .manifesto-section .article-rte + p {
+    font-size: 19px;
+    font-style: italic;
+    margin-top: 40px;
+}
+
 @media (max-width: 768px) {
 
     .alt__article--content .image-grid, 
