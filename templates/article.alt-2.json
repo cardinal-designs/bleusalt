@@ -250,10 +250,11 @@
       "type": "alt-article-finale",
       "name": "Article Finale",
       "settings": {
-        "title": "",
-        "content": "",
-        "sub_text": "",
-        "image_caption": ""
+        "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
+        "content": "{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_finale.value.sub_text.value }}",
+        "image": "{{ article.metafields.custom.alt_article_finale.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_finale.value.image_caption.value }}"
       }
     }
   },
