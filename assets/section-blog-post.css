@@ -186,6 +186,7 @@
 
 .alt__article--template {
   max-width: 100%;
+  position: relative;
 }
 
 .alt__article--template .media {
