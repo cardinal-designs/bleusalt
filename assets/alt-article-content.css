@@ -213,7 +213,7 @@
 }
 
 .finale .article-rte + .article-rte,
-.manifesto-section .article-rte + .article-rte {
+.manifesto-section .manifesto-content + .article-rte {
     font-size: 22px;
     margin-top: 60px;
 }
