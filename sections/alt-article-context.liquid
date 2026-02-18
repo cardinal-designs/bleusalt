@@ -20,7 +20,7 @@ context -- {{ context }}
                         <h3>{{ data.title }}</h3>
                     {% endif %}
                     {% if data.content != blank %}
-                        <div class="article-rte">{{ data.content }}</div>
+                        <div class="article-rte">{{ data.content | metafield_tag }}</div>
                     {% endif %}
                 </div>
             {% endif %}
