@@ -174,6 +174,22 @@
         "bottom_image_caption": ""
       }
     },
+    "alt_article_content_2_9rgaTV": {
+      "type": "alt-article-content-2",
+      "name": "Article Content 2",
+      "settings": {
+        "title_top": "",
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_title.value }}",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.top_content | metafield_tag }}",
+        "top_quote_title": "",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_sub_title.value }}",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_4.value.bottom_content | metafield_tag }}",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": ""
+      }
+    },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
       "name": "Article Finale",
@@ -202,6 +218,7 @@
     "alt_article_image_grid_byRQep",
     "alt_article_divider_8CDQyh",
     "alt_article_content_1_cL4xpF",
+    "alt_article_content_2_9rgaTV",
     "alt_article_finale_dHyCKd"
   ]
 }
