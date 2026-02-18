@@ -272,6 +272,11 @@
         "bottom_image_caption": ""
       }
     },
+    "alt_article_divider_fVexPk": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
       "name": "Article Finale",
@@ -308,6 +313,7 @@
     "alt_article_content_1_88j3Ht",
     "alt_article_divider_LT33fj",
     "alt_article_content_1_YXUkft",
+    "alt_article_divider_fVexPk",
     "alt_article_finale_dHyCKd"
   ]
 }
