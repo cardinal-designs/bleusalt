@@ -122,6 +122,11 @@
         "metafield_key": "custom.article_outfit_image_grid"
       }
     },
+    "alt_article_divider_hpDV8i": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
       "disabled": true,
@@ -278,6 +283,7 @@
     "alt_article_formula_RJpAnR",
     "alt_article_content_2_UAhabG",
     "alt_article_outfit_image_grid_RhAHaR",
+    "alt_article_divider_hpDV8i",
     "alt_article_image_grid_byRQep",
     "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_tj4Gzn",
