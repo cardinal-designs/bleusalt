@@ -235,7 +235,11 @@
     },
     "alt_article_divider_z4mJWf": {
       "type": "alt-article-divider",
-      "disabled": true,
+      "name": "Article Divider",
+      "settings": {}
+    },
+    "alt_article_divider_8CGQUQ": {
+      "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {}
     }
@@ -261,8 +265,9 @@
     "alt_article_context_dYiJXt",
     "alt_article_content_1_gcYTMJ",
     "alt_article_image_grid_P9qhdh",
+    "alt_article_divider_z4mJWf",
     "alt_article_content_1_mGk9cN",
     "alt_article_image_grid_tahceg",
-    "alt_article_divider_z4mJWf"
+    "alt_article_divider_8CGQUQ"
   ]
 }
