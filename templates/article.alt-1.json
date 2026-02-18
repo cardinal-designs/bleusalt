@@ -202,6 +202,11 @@
         "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_image_caption.value }}"
       }
     },
+    "alt_article_divider_n9XqaP": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
     "alt_article_image_grid_TckjzR": {
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
@@ -282,6 +287,7 @@
     "alt_article_content_3_YradaH",
     "alt_article_divider_9KFhEB",
     "alt_article_content_1_CJNHeQ",
+    "alt_article_divider_n9XqaP",
     "alt_article_image_grid_TckjzR",
     "alt_article_content_2_t4xqEP",
     "alt_article_divider_xmJadQ",
