@@ -14,7 +14,7 @@ context -- {{ context }}
 <div class="alt__article--content">
     <div class="article-container">
         {% for data in context %}
-            {% if section.settings.title != blank or section.settings.content != blank %}
+            {% if data.title != blank or data.content != blank %}
                 <div class="context-section">
                     {% if section.settings.title != blank %}
                         <h3>{{ section.settings.title }}</h3>
