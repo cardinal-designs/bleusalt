@@ -140,7 +140,7 @@
       "type": "alt-article-context",
       "name": "Article Context",
       "settings": {
-        "metafield_key": "",
+        "metafield_key": "custom.article_context_2",
         "title": "",
         "content": ""
       }
@@ -156,7 +156,7 @@
       "type": "alt-article-context",
       "name": "Article Context",
       "settings": {
-        "metafield_key": "",
+        "metafield_key": "custom.article_context_3",
         "title": "",
         "content": ""
       }
