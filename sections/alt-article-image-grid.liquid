@@ -32,6 +32,20 @@
             {% if image_meta.bottom_content != blank %}
                 <div class="article-rte">{{ image_meta.bottom_content | metafield_tag }}</div>
             {% endif %}
+            {% if image_meta.image != blank %}
+            <div class="article-image-block">
+                <div class="article-image-full">
+                    {%- render 'image',
+                    image: image_meta.image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
+                {% if image_meta.image_caption != blank %}
+                <div class="image-caption">{{ image_meta.image_caption }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
         </div>
     </div>
 {% endif %}
