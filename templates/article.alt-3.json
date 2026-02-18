@@ -148,6 +148,11 @@
         "metafield_key": "custom.alt_article_image_grid_2"
       }
     },
+    "alt_article_divider_8CDQyh": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
     "alt_article_image_grid_BjrdbC": {
       "type": "alt-article-image-grid",
       "disabled": true,
@@ -299,6 +304,7 @@
     "alt_article_divider_hpDV8i",
     "alt_article_formula_CVRUze",
     "alt_article_image_grid_byRQep",
+    "alt_article_divider_8CDQyh",
     "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_tj4Gzn",
     "alt_article_content_2_BJ4EwV",
