@@ -5,6 +5,10 @@
     margin-bottom: 80px;
 }
 
+.alt__article--content {
+    color: #1a1a1a;
+}
+
 .article-rte p {
     font-family: var(--font-body-family);
     font-size: 17px;
@@ -88,6 +92,7 @@
     margin: 80px 0 40px;
     text-align: center;
     letter-spacing: 1px;
+    color: #1a1a1a;
 }
 
 .alt__article--content h3 {
@@ -95,6 +100,7 @@
     font-weight: 400;
     margin: 50px 0 25px;
     font-style: italic;
+    color: #1a1a1a;
 }
 
 .alt__article--content .image-grid-item {
