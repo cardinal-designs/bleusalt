@@ -13,28 +13,35 @@
         {% if section.settings.manifesto_content != blank %}
             <div class="manifesto-section">
                 <div class="article-rte">{{ section.settings.manifesto_content }}</div>
+                {% if section.settings.sub_text != blank %}
+                    <div class="article-rte">{{ section.settings.sub_text }}</div>
+                {% endif %}
+                {% if section.settings.by_line != blank %}
+                    <p>{{ section.settings.by_line }}</p>
+                {% endif %}
+                {% if section.settings.image != blank %}
+                    <div class="article-image-block">
+                        <div class="article-image-full">
+                            {%- render 'image',
+                            image: section.settings.image,
+                            sizes: '(min-width: 768px) 50vw, 100vw',
+                            prioritize_loading: true
+                            -%}
+                        </div>
+                        {% if section.settings.image_caption != blank %}
+                        <div class="image-caption">{{ section.settings.image_caption }}</div>
+                        {% endif %}
+                    </div>
+                {% endif %}
             </div>        
         {% endif %}
-        {% if section.settings.image != blank %}
-            <div class="article-image-block">
-                <div class="article-image-full">
-                    {%- render 'image',
-                    image: section.settings.image,
-                    sizes: '(min-width: 768px) 50vw, 100vw',
-                    prioritize_loading: true
-                    -%}
-                </div>
-                {% if section.settings.image_caption != blank %}
-                <div class="image-caption">{{ section.settings.image_caption }}</div>
-                {% endif %}
-            </div>
-        {% endif %}
+        
     </div>
 </div>
 
 {% schema %}
 {
-    "name": "Article Finale",
+    "name": "Article Manifesto",
     "settings": [
         {
             "type": "text",
@@ -69,7 +76,7 @@
     ],
     "presets": [
         {
-            "name": "Article Finale"
+            "name": "Article Manifesto"
         }
     ]
 }
