@@ -248,6 +248,7 @@
     margin: 80px 0;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 .alt__article--content .manifesto-section p {
