@@ -133,6 +133,7 @@
     list-style: none;
     padding-left: 30px;
     position: relative;
+    margin-bottom: 15px;
 }
 
 .outfit-formula ul li::before {
