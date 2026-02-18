@@ -1,0 +1,69 @@
+{% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+
+{% assign metafield_full = section.settings.metafield_key %}
+
+{% assign metafield_parts = metafield_full | split: '.' %}
+{% assign namespace = metafield_parts[0] %}
+{% assign key = metafield_parts[1] %}
+
+{% assign image_meta = article.metafields[namespace][key].value %}
+
+{% if image_meta != blank %}
+    <div class="alt__article--content">
+        <div class="article-container">
+            {% if image_meta.title != blank %}
+                <h2>{{ image_meta.title }}</h2>
+            {% endif %}
+            {% if image_meta.content != blank %}
+                <div class="article-rte">{{ image_meta.content | metafield_tag }}</div>
+            {% endif %}
+            <div class="image-grid">
+                {% for image in image_meta.images.value %}
+                <div class="image-grid-item">
+                    {%- render 'image',
+                    image: image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
+                {% endfor %}            
+            </div>
+            {% if image_meta.bottom_content != blank %}
+                <div class="article-rte">{{ image_meta.bottom_content | metafield_tag }}</div>
+            {% endif %}
+            {% if image_meta.bottom_image != blank %}
+            <div class="article-image-block">
+                <div class="article-image-full">
+                    {%- render 'image',
+                    image: image_meta.bottom_image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
+                {% if image_meta.bottom_image_caption != blank %}
+                <div class="image-caption">{{ image_meta.bottom_image_caption }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Article Image Grid",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "metafield_key",
+            "label": "Metafield key"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Article Image Grid"
+        }
+    ]
+}
+{% endschema %}
