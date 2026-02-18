@@ -12,6 +12,12 @@
 {% if image_meta != blank %}
     <div class="alt__article--content">
         <div class="article-container">
+            {% if image_meta.title != blank %}
+                <h2>{{ image_meta.title }}</h2>
+            {% endif %}
+            {% if image_meta.content != blank %}
+                <div class="article-rte">{{ image_meta.content | metafield_tag }}</div>
+            {% endif %}
             <div class="image-grid">
                 {% for image in image_meta.images.value %}
                 <div class="image-grid-item">
@@ -23,6 +29,9 @@
                 </div>
                 {% endfor %}            
             </div>
+            {% if image_meta.bottom_content != blank %}
+                <div class="image-caption">{{ image_meta.bottom_content | metafield_tag }}</div>
+            {% endif %}
         </div>
     </div>
 {% endif %}
