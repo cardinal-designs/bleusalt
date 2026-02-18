@@ -28,12 +28,12 @@
                     -%}
                 </div>
                 {% endfor %}            
-            </div>
-            {% if image_meta.quote_title != blank %}
-                <div class="pullquote">{{ image_meta.quote_title }}</div>
-            {% endif %}
+            </div>            
             {% if image_meta.bottom_content != blank %}
                 <div class="article-rte">{{ image_meta.bottom_content | metafield_tag }}</div>
+            {% endif %}
+            {% if image_meta.quote_title != blank %}
+                <div class="pullquote">{{ image_meta.quote_title }}</div>
             {% endif %}
             {% if image_meta.bottom_image != blank %}
             <div class="article-image-block">
