@@ -284,6 +284,10 @@
     margin-top: 40px;
 }
 
+.template--alt-1 .outfit-formula ul li {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
 
     .alt__article--content .image-grid, 
