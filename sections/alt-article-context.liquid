@@ -16,11 +16,11 @@ context -- {{ context }}
         {% for data in context %}
             {% if data.title != blank or data.content != blank %}
                 <div class="context-section">
-                    {% if section.settings.title != blank %}
-                        <h3>{{ section.settings.title }}</h3>
+                    {% if data.title != blank %}
+                        <h3>{{ data.title }}</h3>
                     {% endif %}
-                    {% if section.settings.content != blank %}
-                        <div class="article-rte">{{ section.settings.content }}</div>
+                    {% if data.content != blank %}
+                        <div class="article-rte">{{ data.content }}</div>
                     {% endif %}
                 </div>
             {% endif %}
