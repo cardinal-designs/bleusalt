@@ -161,9 +161,9 @@
         "top_title": "{{ article.metafields.custom.alt_article_content_part_4.value.title_top.value }}",
         "sub_text": "{{ article.metafields.custom.alt_article_content_part_4.value.sub_text | metafield_tag }}",
         "top_sub_title": "{{ article.metafields.custom.alt_article_content_part_4.value.top_title.value }}",
-        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_4.value.top_content | metafield_tag }}</p>",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_4.value.top_content | metafield_tag }}",
         "top_quote_title": "",
-        "top_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_4.value.top_quote_content | metafield_tag }}</p>",
+        "top_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_4.value.top_quote_content | metafield_tag }}",
         "image": "{{ article.metafields.custom.alt_article_content_part_4.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_4.value.image_caption.value }}",
         "bottom_title": "",
@@ -202,6 +202,26 @@
       "name": "Article Divider",
       "settings": {}
     },
+    "alt_article_content_1_VTthhD": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_4.value.title_top.value }}",
+        "sub_text": "<p>{{ article.metafields.custom.alt_article_content_part_4.value.sub_text | metafield_tag }}</p>",
+        "top_sub_title": "{{ article.metafields.custom.alt_article_content_part_4.value.top_title.value }}",
+        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_4.value.top_content | metafield_tag }}</p>",
+        "top_quote_title": "",
+        "top_quote_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_4.value.top_quote_content | metafield_tag }}</p>",
+        "image": "{{ article.metafields.custom.alt_article_content_part_4.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_content_part_4.value.image_caption.value }}",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "bottom_image_caption": ""
+      }
+    },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
       "name": "Article Finale",
@@ -233,6 +253,7 @@
     "alt_article_content_2_9rgaTV",
     "alt_article_image_grid_GK6CFz",
     "alt_article_divider_VYph3h",
+    "alt_article_content_1_VTthhD",
     "alt_article_finale_dHyCKd"
   ]
 }
