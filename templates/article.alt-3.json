@@ -86,12 +86,13 @@
     },
     "alt_article_formula_RJpAnR": {
       "type": "alt-article-formula",
+      "disabled": true,
       "name": "Article Outfit Formula",
       "settings": {
         "title": "{{ article.metafields.custom.article_outfit_formula.value.title.value }}",
-        "sub_text": "<p>{{ article.metafields.custom.article_outfit_formula.value.sub_text | metafield_tag }}</p>",
+        "sub_text": "{{ article.metafields.custom.article_outfit_formula.value.sub_text | metafield_tag }}",
         "outfit_formula_title_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_1.value }}",
-        "outfit_formula_list_1": "<p>{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_1 | metafield_tag }}</p>",
+        "outfit_formula_list_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_1 | metafield_tag }}",
         "outfit_formula_title_2": "",
         "outfit_formula_list_2": "",
         "content": "",
@@ -100,6 +101,7 @@
     },
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_2"
@@ -107,6 +109,7 @@
     },
     "alt_article_content_2_UAhabG": {
       "type": "alt-article-content-2",
+      "disabled": true,
       "name": "Article Content 2",
       "settings": {
         "title_top": "",
@@ -122,18 +125,9 @@
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_quote_text | metafield_tag }}"
       }
     },
-    "alt_article_divider_8izgbw": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
-    "alt_article_divider_kYEKhk": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
     "alt_article_image_grid_BjrdbC": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_3"
@@ -141,6 +135,7 @@
     },
     "alt_article_content_2_tj4Gzn": {
       "type": "alt-article-content-2",
+      "disabled": true,
       "name": "Article Content 2",
       "settings": {
         "title_top": "",
@@ -158,6 +153,7 @@
     },
     "alt_article_content_2_BJ4EwV": {
       "type": "alt-article-content-2",
+      "disabled": true,
       "name": "Article Content 2",
       "settings": {
         "title_top": "",
@@ -175,6 +171,7 @@
     },
     "alt_article_content_3_YradaH": {
       "type": "alt-article-content-3",
+      "disabled": true,
       "name": "Article Content 3",
       "settings": {
         "title": "{{ article.metafields.custom.article_week_schedule.value.title.value }}",
@@ -186,13 +183,9 @@
         "image_caption": "{{ article.metafields.custom.article_week_schedule.value.image_caption.value }}"
       }
     },
-    "alt_article_divider_9KFhEB": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
     "alt_article_content_1_CJNHeQ": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_6.value.title_top.value }}",
@@ -213,6 +206,7 @@
     },
     "alt_article_image_grid_TckjzR": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_4"
@@ -220,6 +214,7 @@
     },
     "alt_article_content_2_t4xqEP": {
       "type": "alt-article-content-2",
+      "disabled": true,
       "name": "Article Content 2",
       "settings": {
         "title_top": "",
@@ -235,13 +230,9 @@
         "bottom_quote_conetnt": ""
       }
     },
-    "alt_article_divider_xmJadQ": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
     "alt_article_content_1_cL4xpF": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_8.value.title_top.value }}",
@@ -282,17 +273,13 @@
     "alt_article_formula_RJpAnR",
     "alt_article_image_grid_byRQep",
     "alt_article_content_2_UAhabG",
-    "alt_article_divider_8izgbw",
-    "alt_article_divider_kYEKhk",
     "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_tj4Gzn",
     "alt_article_content_2_BJ4EwV",
     "alt_article_content_3_YradaH",
-    "alt_article_divider_9KFhEB",
     "alt_article_content_1_CJNHeQ",
     "alt_article_image_grid_TckjzR",
     "alt_article_content_2_t4xqEP",
-    "alt_article_divider_xmJadQ",
     "alt_article_content_1_cL4xpF",
     "alt_article_finale_dHyCKd"
   ]
