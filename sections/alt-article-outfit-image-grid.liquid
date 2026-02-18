@@ -18,9 +18,9 @@
             {% if image_meta.content != blank %}
                 <div class="article-rte">{{ image_meta.content | metafield_tag }}</div>
             {% endif %}
-            <div class="image-grid">
+            <div class="outfit-grid">
                 {% for image in image_meta.images.value %}
-                <div class="image-grid-item">
+                <div class="outfit-item">
                     {%- render 'image',
                     image: image,
                     sizes: '(min-width: 768px) 50vw, 100vw',
