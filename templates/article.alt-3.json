@@ -143,7 +143,6 @@
     },
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
-      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_2"
