@@ -29,6 +29,9 @@
                 </div>
                 {% endfor %}            
             </div>
+            {% if image_meta.bottom_content != blank %}
+                <div class="article-rte">{{ image_meta.bottom_content | metafield_tag }}</div>
+            {% endif %}
         </div>
     </div>
 {% endif %}
