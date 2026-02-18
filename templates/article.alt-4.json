@@ -136,6 +136,11 @@
         "bottom_quote_conetnt": "",
         "bottom_image_caption": ""
       }
+    },
+    "alt_article_divider_8jV3Ug": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
     }
   },
   "order": [
@@ -150,6 +155,7 @@
     "alt_article_divider_Fj8R6z",
     "alt_article_content_1_ykLFCK",
     "alt_article_divider_YChiR6",
-    "alt_article_content_1_wnQMbd"
+    "alt_article_content_1_wnQMbd",
+    "alt_article_divider_8jV3Ug"
   ]
 }
