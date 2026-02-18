@@ -27,6 +27,8 @@
     line-height: 2;
     color: #333;
     font-family: var(--font-body-family);
+    padding: 0;
+    margin: 0;
 }
 
 .alt__article--content .article-rte:first-child p:first-child::first-letter {
