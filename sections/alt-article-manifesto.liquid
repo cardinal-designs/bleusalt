@@ -10,9 +10,11 @@
                 <div class="article-rte">{{ section.settings.content }}</div>
             {% endif %}
         {% endif %}
-        {% if section.settings.manifesto_content != blank %}
+        {% if section.settings.manifesto_content != blank or section.settings.image != blank %}
             <div class="manifesto-section">
-                <div class="article-rte">{{ section.settings.manifesto_content }}</div>
+                {% if section.settings.manifesto_content != blank %}
+                    <div class="">{{ section.settings.manifesto_content }}</div>
+                {% endif %}
                 {% if section.settings.sub_text != blank %}
                     <div class="article-rte">{{ section.settings.sub_text }}</div>
                 {% endif %}
@@ -52,6 +54,11 @@
             "type": "richtext",
             "id": "content",
             "label": "Content"
+        },
+        {
+            "type": "richtext",
+            "id": "manifesto_content",
+            "label": "Manifesto content"
         },
         {
             "type": "text",
