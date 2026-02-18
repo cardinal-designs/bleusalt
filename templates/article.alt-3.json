@@ -127,6 +127,20 @@
       "name": "Article Divider",
       "settings": {}
     },
+    "alt_article_formula_CVRUze": {
+      "type": "alt-article-formula",
+      "name": "Article Outfit Formula",
+      "settings": {
+        "title": "{{ article.metafields.custom.article_outfit_formula_3.value.title.value }}",
+        "sub_text": "{{ article.metafields.custom.article_outfit_formula_3.value.sub_text | metafield_tag }}",
+        "outfit_formula_title_1": "{{ article.metafields.custom.article_outfit_formula_3.value.outfit_formula_title_1.value }}",
+        "outfit_formula_list_1": "{{ article.metafields.custom.article_outfit_formula_3.value.outfit_formula_list_1 | metafield_tag }}",
+        "outfit_formula_title_2": "",
+        "outfit_formula_list_2": "",
+        "content": "",
+        "image_caption": ""
+      }
+    },
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
       "disabled": true,
@@ -284,6 +298,7 @@
     "alt_article_content_2_UAhabG",
     "alt_article_outfit_image_grid_RhAHaR",
     "alt_article_divider_hpDV8i",
+    "alt_article_formula_CVRUze",
     "alt_article_image_grid_byRQep",
     "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_tj4Gzn",
