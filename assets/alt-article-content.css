@@ -9,6 +9,11 @@
     color: #1a1a1a;
 }
 
+.alt__article--content strong {
+    font-weight: 600;
+    color: #000;
+}
+
 .article-rte p {
     font-family: var(--font-body-family);
     font-size: 17px;
