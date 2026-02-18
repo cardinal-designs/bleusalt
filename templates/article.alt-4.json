@@ -43,11 +43,6 @@
         "bottom_image_caption": ""
       }
     },
-    "alt_article_divider_8mEtRg": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
       "name": "Article Outfit Formula",
@@ -295,9 +290,8 @@
     "main",
     "alt_article_title_X9L49H",
     "alt-article-content-1",
-    "alt_article_divider_8mEtRg",
-    "alt_article_formula_ab7TYx",
     "alt_article_image_grid_zkCizw",
+    "alt_article_formula_ab7TYx",
     "alt-article-content-2",
     "alt_article_formula_RJpAnR",
     "alt_article_content_2_UAhabG",
