@@ -299,7 +299,8 @@
 @media (max-width: 768px) {
 
     .outfit-formula,
-    .context-section {
+    .context-section,
+    .manifesto-section {
         padding: 40px 30px;
     }
 
