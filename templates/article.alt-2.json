@@ -226,6 +226,13 @@
         "bottom_image_caption": ""
       }
     },
+    "alt_article_image_grid_tahceg": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_7"
+      }
+    },
     "alt_article_divider_z4mJWf": {
       "type": "alt-article-divider",
       "disabled": true,
@@ -255,6 +262,7 @@
     "alt_article_content_1_gcYTMJ",
     "alt_article_image_grid_P9qhdh",
     "alt_article_content_1_mGk9cN",
+    "alt_article_image_grid_tahceg",
     "alt_article_divider_z4mJWf"
   ]
 }
