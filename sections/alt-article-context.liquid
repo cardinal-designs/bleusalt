@@ -9,16 +9,18 @@
 
 <div class="alt__article--content">
     <div class="article-container">
-        {% if section.settings.title != blank or section.settings.content != blank %}
-            <div class="context-section">
-                {% if section.settings.title != blank %}
-                    <h3>{{ section.settings.title }}</h3>
-                {% endif %}
-                {% if section.settings.content != blank %}
-                    <div class="article-rte">{{ section.settings.content }}</div>
-                {% endif %}
-            </div>
-        {% endif %}
+        {% for data in image_meta.images.value %}
+            {% if section.settings.title != blank or section.settings.content != blank %}
+                <div class="context-section">
+                    {% if section.settings.title != blank %}
+                        <h3>{{ section.settings.title }}</h3>
+                    {% endif %}
+                    {% if section.settings.content != blank %}
+                        <div class="article-rte">{{ section.settings.content }}</div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
 
