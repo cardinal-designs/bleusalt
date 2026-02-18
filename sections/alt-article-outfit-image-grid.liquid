@@ -29,8 +29,8 @@
                 </div>
                 {% endfor %}            
             </div>
-            {% if image_meta.bottom_content != blank %}
-                <div class="image-caption">{{ image_meta.bottom_content | metafield_tag }}</div>
+            {% if image_meta.sub_title != blank %}
+                <div class="image-caption">{{ image_meta.sub_title | metafield_tag }}</div>
             {% endif %}
         </div>
     </div>
