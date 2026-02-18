@@ -59,19 +59,32 @@
       "type": "alt-article-content-1",
       "name": "Article Content",
       "settings": {
-        "top_title": "",
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.title_top.value }}",
         "sub_text": "",
         "top_sub_title": "",
-        "top_conetnt": "",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "top_quote_conetnt": "",
-        "image_caption": "",
-        "bottom_title": "",
+        "image": "{{ article.metafields.custom.alt_article_content_part_2.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.image_caption.value }}",
+        "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_sub_title": "",
-        "bottom_conetnt": "",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
         "bottom_image_caption": ""
+      }
+    },
+    "alt_article_divider_jcJyzz": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
+    "alt_article_image_grid_KHUUCN": {
+      "type": "alt-article-image-grid",
+      "name": "Article Image Grid",
+      "settings": {
+        "metafield_key": "custom.alt_article_image_grid_2"
       }
     }
   },
@@ -81,6 +94,8 @@
     "alt-article-content-1",
     "alt_article_image_grid_zkCizw",
     "alt_article_divider_qwWGhk",
-    "alt_article_content_1_cL4xpF"
+    "alt_article_content_1_cL4xpF",
+    "alt_article_divider_jcJyzz",
+    "alt_article_image_grid_KHUUCN"
   ]
 }
