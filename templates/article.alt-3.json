@@ -48,6 +48,21 @@
       "name": "Article Divider",
       "settings": {}
     },
+    "alt_article_formula_ab7TYx": {
+      "type": "alt-article-formula",
+      "name": "Article Outfit Formula",
+      "settings": {
+        "title": "{{ article.metafields.custom.article_outfit_formula.value.title.value }}",
+        "sub_text": "{{ article.metafields.custom.article_outfit_formula.value.sub_text | metafield_tag }}",
+        "outfit_formula_title_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_1.value }}",
+        "outfit_formula_list_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_1 | metafield_tag }}",
+        "outfit_formula_title_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_2.value }}",
+        "outfit_formula_list_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_2 | metafield_tag }}",
+        "content": "{{ article.metafields.custom.article_outfit_formula.value.content | metafield_tag }}",
+        "image": "{{ article.metafields.custom.article_outfit_formula.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.article_outfit_formula.value.image_caption.value }}"
+      }
+    },
     "alt_article_image_grid_zkCizw": {
       "type": "alt-article-image-grid",
       "name": "Article Image Grid",
@@ -58,6 +73,7 @@
     "alt-article-content-2": {
       "type": "alt-article-content-2",
       "settings": {
+        "title_top": "",
         "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_2.value.top_quote_title.value }}",
@@ -81,6 +97,7 @@
       "type": "alt-article-content-2",
       "name": "Article Content 2",
       "settings": {
+        "title_top": "",
         "top_title": "{{ article.metafields.custom.alt_article_content_part_3.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_3.value.top_quote_title.value }}",
@@ -98,21 +115,6 @@
       "name": "Article Divider",
       "settings": {}
     },
-    "alt_article_formula_ab7TYx": {
-      "type": "alt-article-formula",
-      "name": "Article Outfit Formula",
-      "settings": {
-        "title": "{{ article.metafields.custom.article_outfit_formula.value.title.value }}",
-        "sub_text": "{{ article.metafields.custom.article_outfit_formula.value.sub_text | metafield_tag }}",
-        "outfit_formula_title_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_1.value }}",
-        "outfit_formula_list_1": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_1 | metafield_tag }}",
-        "outfit_formula_title_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_2.value }}",
-        "outfit_formula_list_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_2 | metafield_tag }}",
-        "content": "{{ article.metafields.custom.article_outfit_formula.value.content | metafield_tag }}",
-        "image": "{{ article.metafields.custom.article_outfit_formula.value.image.value }}",
-        "image_caption": "{{ article.metafields.custom.article_outfit_formula.value.image_caption.value }}"
-      }
-    },
     "alt_article_divider_kYEKhk": {
       "type": "alt-article-divider",
       "name": "Article Divider",
@@ -129,6 +131,7 @@
       "type": "alt-article-content-2",
       "name": "Article Content 2",
       "settings": {
+        "title_top": "",
         "top_title": "{{ article.metafields.custom.alt_article_content_part_4.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_4.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_4.value.top_quote_title.value }}",
@@ -145,6 +148,7 @@
       "type": "alt-article-content-2",
       "name": "Article Content 2",
       "settings": {
+        "title_top": "",
         "top_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_title.value }}",
@@ -206,6 +210,7 @@
       "type": "alt-article-content-2",
       "name": "Article Content 2",
       "settings": {
+        "title_top": "",
         "top_title": "{{ article.metafields.custom.alt_article_content_part_7.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_7.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_7.value.top_quote_title.value }}",
@@ -259,12 +264,12 @@
     "alt_article_title_X9L49H",
     "alt-article-content-1",
     "alt_article_divider_8mEtRg",
+    "alt_article_formula_ab7TYx",
     "alt_article_image_grid_zkCizw",
     "alt-article-content-2",
     "alt_article_image_grid_byRQep",
     "alt_article_content_2_UAhabG",
     "alt_article_divider_8izgbw",
-    "alt_article_formula_ab7TYx",
     "alt_article_divider_kYEKhk",
     "alt_article_image_grid_BjrdbC",
     "alt_article_content_2_tj4Gzn",
