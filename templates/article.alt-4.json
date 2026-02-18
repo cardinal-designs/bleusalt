@@ -141,6 +141,17 @@
       "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {}
+    },
+    "alt_article_manifesto_XQDJHL": {
+      "type": "alt-article-manifesto",
+      "name": "Article Manifesto",
+      "settings": {
+        "title": "{{ article.metafields.custom.alt_article_manifesto.value.heading.value }}",
+        "content": "{{ article.metafields.custom.alt_article_manifesto.value.content | metafield_tag }}",
+        "sub_text": "",
+        "by_line": "",
+        "image_caption": ""
+      }
     }
   },
   "order": [
@@ -156,6 +167,7 @@
     "alt_article_content_1_ykLFCK",
     "alt_article_divider_YChiR6",
     "alt_article_content_1_wnQMbd",
-    "alt_article_divider_8jV3Ug"
+    "alt_article_divider_8jV3Ug",
+    "alt_article_manifesto_XQDJHL"
   ]
 }
