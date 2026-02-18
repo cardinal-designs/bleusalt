@@ -197,6 +197,11 @@
         "metafield_key": "custom.alt_article_image_grid_3"
       }
     },
+    "alt_article_divider_VYph3h": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
       "name": "Article Finale",
@@ -227,6 +232,7 @@
     "alt_article_content_1_cL4xpF",
     "alt_article_content_2_9rgaTV",
     "alt_article_image_grid_GK6CFz",
+    "alt_article_divider_VYph3h",
     "alt_article_finale_dHyCKd"
   ]
 }
