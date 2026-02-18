@@ -124,16 +124,9 @@
       "type": "alt-article-context",
       "name": "Article Context",
       "settings": {
-        "title": "{{ article.metafields.custom.article_context.value.title.value }}",
-        "content": "{{ article.metafields.custom.article_context.value.content | metafield_tag }}"
-      }
-    },
-    "alt_article_context_PN8VEw": {
-      "type": "alt-article-context",
-      "name": "Article Context",
-      "settings": {
-        "title": "{{ article.metafields.custom.article_context_2.value.title.value }}",
-        "content": "{{ article.metafields.custom.article_context_2.value.content | metafield_tag }}"
+        "metafield_key": "custom.article_context_1",
+        "title": "",
+        "content": ""
       }
     },
     "alt_article_image_grid_TckjzR": {
@@ -147,16 +140,9 @@
       "type": "alt-article-context",
       "name": "Article Context",
       "settings": {
-        "title": "{{ article.metafields.custom.article_context_3.value.title.value }}",
-        "content": "{{ article.metafields.custom.article_context_3.value.content | metafield_tag }}"
-      }
-    },
-    "alt_article_context_ei3hDw": {
-      "type": "alt-article-context",
-      "name": "Article Context",
-      "settings": {
-        "title": "{{ article.metafields.custom.article_context_4.value.title.value }}",
-        "content": "{{ article.metafields.custom.article_context_4.value.content | metafield_tag }}"
+        "metafield_key": "",
+        "title": "",
+        "content": ""
       }
     },
     "alt_article_image_grid_aLHgVL": {
@@ -170,16 +156,9 @@
       "type": "alt-article-context",
       "name": "Article Context",
       "settings": {
-        "title": "{{ article.metafields.custom.article_context_5.value.title.value }}",
-        "content": "{{ article.metafields.custom.article_context_5.value.content | metafield_tag }}"
-      }
-    },
-    "alt_article_context_dYiJXt": {
-      "type": "alt-article-context",
-      "name": "Article Context",
-      "settings": {
-        "title": "{{ article.metafields.custom.article_context_6.value.title.value }}",
-        "content": "{{ article.metafields.custom.article_context_6.value.content | metafield_tag }}"
+        "metafield_key": "",
+        "title": "",
+        "content": ""
       }
     },
     "alt_article_content_1_gcYTMJ": {
@@ -275,13 +254,10 @@
     "alt_article_divider_8izgbw",
     "alt_article_image_grid_BjrdbC",
     "alt_article_context_bDtqMd",
-    "alt_article_context_PN8VEw",
     "alt_article_image_grid_TckjzR",
     "alt_article_context_mNywpC",
-    "alt_article_context_ei3hDw",
     "alt_article_image_grid_aLHgVL",
     "alt_article_context_yQm7GN",
-    "alt_article_context_dYiJXt",
     "alt_article_content_1_gcYTMJ",
     "alt_article_image_grid_P9qhdh",
     "alt_article_divider_z4mJWf",
