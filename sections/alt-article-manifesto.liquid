@@ -10,9 +10,11 @@
                 <div class="article-rte">{{ section.settings.content }}</div>
             {% endif %}
         {% endif %}
-        <div class="manifesto-section">
-            
-        </div>        
+        {% if section.settings.manifesto_content != blank %}
+            <div class="manifesto-section">
+                <div class="article-rte">{{ section.settings.manifesto_content }}</div>
+            </div>        
+        {% endif %}
         {% if section.settings.image != blank %}
             <div class="article-image-block">
                 <div class="article-image-full">
