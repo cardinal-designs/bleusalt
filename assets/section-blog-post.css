@@ -191,3 +191,16 @@
 .alt__article--template .media {
   background: transparent;
 }
+
+.article-template__hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 40px;
+  font-size: 11px;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.6;
+}
