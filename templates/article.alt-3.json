@@ -247,6 +247,31 @@
         "bottom_image_caption": ""
       }
     },
+    "alt_article_divider_LT33fj": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {}
+    },
+    "alt_article_content_1_YXUkft": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_8.value.title_top.value }}",
+        "sub_text": "",
+        "top_sub_title": "",
+        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_8.value.top_content | metafield_tag }}",
+        "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_8.value.top_quote_title.value }}",
+        "top_quote_conetnt": "",
+        "image": "{{ article.metafields.custom.alt_article_content_part_8.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_content_part_8.value.image_caption.value }}",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "bottom_image_caption": ""
+      }
+    },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
       "name": "Article Finale",
@@ -281,6 +306,8 @@
     "alt_article_content_1_VTthhD",
     "alt_article_divider_y3keBx",
     "alt_article_content_1_88j3Ht",
+    "alt_article_divider_LT33fj",
+    "alt_article_content_1_YXUkft",
     "alt_article_finale_dHyCKd"
   ]
 }
