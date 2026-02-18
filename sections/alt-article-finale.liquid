@@ -13,6 +13,9 @@
                 {% if section.settings.sub_text != blank %}
                     <div class="article-rte">{{ section.settings.sub_text }}</div>
                 {% endif %}
+                {% if section.settings.by_line != blank %}
+                    <p>{{ section.settings.by_line }}</p>
+                {% endif %}
             </div>
         {% endif %}
         {% if section.settings.image != blank %}
@@ -50,6 +53,11 @@
             "type": "text",
             "id": "sub_text",
             "label": "Sub text"
+        },
+        {
+            "type": "text",
+            "id": "by_line",
+            "label": "By line"
         },
         {
             "type": "image_picker",
