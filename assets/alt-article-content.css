@@ -308,4 +308,8 @@
         padding: 0 20px;
     }
 
+    .article-rte p {
+        text-align: left;
+    }
+
 }
