@@ -147,10 +147,12 @@
       "name": "Article Manifesto",
       "settings": {
         "title": "{{ article.metafields.custom.alt_article_manifesto.value.heading.value }}",
-        "content": "{{ article.metafields.custom.alt_article_manifesto.value.content | metafield_tag }}",
-        "sub_text": "",
-        "by_line": "",
-        "image_caption": ""
+        "content": "<p>{{ article.metafields.custom.alt_article_manifesto.value.content | metafield_tag }}</p>",
+        "manifesto_content": "{{ article.metafields.custom.alt_article_manifesto.value.manifesto_content | metafield_tag }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_manifesto.value.manifesto_text.value }}",
+        "by_line": "{{ article.metafields.custom.alt_article_manifesto.value.manifesto_by_line.value }}",
+        "image": "{{ article.metafields.custom.alt_article_manifesto.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.alt_article_manifesto.value.image_caption.value }}"
       }
     }
   },
