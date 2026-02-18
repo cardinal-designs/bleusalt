@@ -2,16 +2,17 @@
 
 <div class="alt__article--content">
     <div class="article-container">
-        {% if section.settings.title != blank or section.settings.content != blank or section.settings.sub_text != blank %}
-            <div class="finale">
-                {% if section.settings.title != blank %}
-                    <h2>{{ section.settings.title }}</h2>
-                {% endif %}
-                {% if section.settings.content != blank %}
-                    <div class="article-rte">{{ section.settings.content }}</div>
-                {% endif %}
-            </div>
+        {% if section.settings.title != blank or section.settings.content != blank %}
+            {% if section.settings.title != blank %}
+                <h2>{{ section.settings.title }}</h2>
+            {% endif %}
+            {% if section.settings.content != blank %}
+                <div class="article-rte">{{ section.settings.content }}</div>
+            {% endif %}
         {% endif %}
+        <div class="manifesto-section">
+            
+        </div>        
         {% if section.settings.image != blank %}
             <div class="article-image-block">
                 <div class="article-image-full">
