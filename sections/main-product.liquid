@@ -1261,6 +1261,29 @@
   })
 </script>
 
+<style>
+  /* Updated CSS using theme settings */
+.product-media-item {
+  order: {{ section.settings.product_images_order | default: 99 }}; /* Default order */
+}
+
+/* Lifestyle image */
+.product-media-item.is-all {
+  order: {{ section.settings.lifestyle_image_order | default: 999 }};
+}
+
+/* First image always show first */
+.product-media-item.pdp-first-image {
+  order: {{ section.settings.first_image_order | default: 49 }};
+}
+
+/* Lifestyle video */
+.product-media-item.is-video {
+  order: {{ section.settings.featured_video_order | default: 1 }};
+}
+
+</style>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -1551,6 +1574,30 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
+    },
+    {
+      "type": "number",
+      "id": "featured_video_order",
+      "label": "Order for Lifestyle Video",
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "first_image_order",
+      "label": "Order for First Image",
+      "default": 49
+    },
+    {
+      "type": "number",
+      "id": "product_images_order",
+      "label": "Order for Product Images",
+      "default": 99
+    },
+    {
+      "type": "number",
+      "id": "lifestyle_image_order",
+      "label": "Order for Lifestyle Image",
+      "default": 999
     },
     {
       "type": "checkbox",
