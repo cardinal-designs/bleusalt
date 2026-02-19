@@ -1731,22 +1731,22 @@ table[data-in-to-cm] td {
 
 /* Default order for all items */
 .product-media-item {
-  order: 999;
+  order: 99;
 }
 
 /* Image with "All" in the alt text will show second */
 .product-media-item.is-all {
-  order: 2;
+  order: 999;
 }
 
 /* First image always show in first position */
 .product-media-item.pdp-first-image {
-  order: 1;
+  order: 49;
 }
 
 /* No order change for videos */
 .product-media-item.is-video {
-  order: 3;
+  order: 1;
 } 
 
 .product__info-container .inquires__btn {
@@ -1931,4 +1931,32 @@ table[data-in-to-cm] td {
   .button_flex-container {
     justify-content: center;
   }
+}
+
+
+@media screen and (max-width: 749px) {
+
+  form.sticky-add-to-cart.is-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #ffffff;
+    padding: 10px 10px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  }
+
+  form.sticky-add-to-cart.is-sticky .product-form__submit {
+    margin-bottom: 0;
+  }
+
+  body.sticky-atc-active {
+    padding-bottom: 80px;
+  }
+
+  form.sticky-add-to-cart .product-form__buttons {
+    margin: 0;
+  }
+  
 }
