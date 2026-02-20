@@ -13,7 +13,7 @@
       "type": "main-article-alt-1",
       "settings": {
         "image_text": "HERO IMAGE: Woman in complete Bleusalt outfit (Wrap, Cindy Pant, Classic Crew) in minimal setting - architectural background, natural light",
-        "image_height": "large"
+        "image_height": "medium"
       }
     },
     "alt_article_title_X9L49H": {
@@ -34,7 +34,6 @@
         "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
         "top_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_content | metafield_tag }}",
-        "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_sub_title.value }}",
@@ -47,11 +46,13 @@
     },
     "alt_article_divider_8mEtRg": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_image_grid_zkCizw": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.image_grid"
@@ -64,7 +65,6 @@
         "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_2.value.top_quote_title.value }}",
-        "image": "{{ article.metafields.custom.alt_article_content_part_2.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_sub_title.value }}",
@@ -75,6 +75,7 @@
     },
     "alt_article_image_grid_byRQep": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_2"
@@ -113,7 +114,6 @@
         "outfit_formula_title_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_title_2.value }}",
         "outfit_formula_list_2": "{{ article.metafields.custom.article_outfit_formula.value.outfit_formula_list_2 | metafield_tag }}",
         "content": "{{ article.metafields.custom.article_outfit_formula.value.content | metafield_tag }}",
-        "image": "{{ article.metafields.custom.article_outfit_formula.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.article_outfit_formula.value.image_caption.value }}"
       }
     },
@@ -124,6 +124,7 @@
     },
     "alt_article_image_grid_BjrdbC": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_3"
@@ -154,7 +155,6 @@
         "top_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_title.value }}",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_5.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_5.value.top_quote_title.value }}",
-        "image": "{{ article.metafields.custom.alt_article_content_part_5.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_5.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_sub_title.value }}",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_5.value.bottom_title.value }}",
@@ -172,7 +172,6 @@
         "sub_title": "{{ article.metafields.custom.article_week_schedule.value.sub_title.value }}",
         "metafield_key": "custom.article_week_schedule",
         "sub_text": "{{ article.metafields.custom.article_week_schedule.value.sub_text.value }}",
-        "image": "{{ article.metafields.custom.article_week_schedule.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.article_week_schedule.value.image_caption.value }}"
       }
     },
@@ -191,14 +190,12 @@
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_6.value.top_quote_title.value }}",
         "top_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.top_quote_content | metafield_tag }}",
-        "image": "{{ article.metafields.custom.alt_article_content_part_6.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_6.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_title.value }}",
         "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_sub_title.value }}",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_content | metafield_tag }}",
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_quote_text | metafield_tag }}",
-        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_image.value }}",
         "bottom_image_caption": "{{ article.metafields.custom.alt_article_content_part_6.value.bottom_image_caption.value }}"
       }
     },
@@ -209,6 +206,7 @@
     },
     "alt_article_image_grid_TckjzR": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_4"
@@ -246,7 +244,6 @@
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_8.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "top_quote_conetnt": "",
-        "image": "{{ article.metafields.custom.alt_article_content_part_8.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_8.value.image_caption.value }}",
         "bottom_title": "",
         "bottom_sub_title": "",
@@ -264,7 +261,6 @@
         "content": "{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}",
         "sub_text": "{{ article.metafields.custom.alt_article_finale.value.sub_text.value }}",
         "by_line": "",
-        "image": "{{ article.metafields.custom.alt_article_finale.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_finale.value.image_caption.value }}"
       }
     }
