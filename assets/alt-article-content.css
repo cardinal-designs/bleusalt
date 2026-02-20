@@ -203,13 +203,19 @@
 }
 
 .article-table table td, .article-table table th {
-    padding: 5px;
+    padding: 5px 8px;
     text-align: left;
 }
 
 .article-table table th {
     background: #1F3F4D;
     color: #fff;
+    font-weight: bold;
+}
+
+.article-table table tr td:first-child {
+    background: #D4D4D4;
+    color: #1F3F4D;
     font-weight: bold;
 }
 
