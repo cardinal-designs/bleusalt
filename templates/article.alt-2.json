@@ -259,11 +259,13 @@
     },
     "alt_article_divider_3JD4XM": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_finale_CEdY4g": {
       "type": "alt-article-finale",
+      "disabled": true,
       "name": "Article Finale",
       "settings": {
         "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
