@@ -34,6 +34,7 @@
     font-family: var(--font-body-family);
     padding: 0;
     margin: 0;
+    list-style: inside;
 }
 
 .alt__article--content .article-rte:first-child p:first-child::first-letter {
