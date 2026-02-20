@@ -32,6 +32,7 @@
 .alt__article--title h1 {
     font-size: 56px;
     font-weight: 300;
+    font-family: 'Georgia', 'Times New Roman', serif;
     letter-spacing: -1px;
     line-height: 1.1;
     margin-bottom: 30px;
