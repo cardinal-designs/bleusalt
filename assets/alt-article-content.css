@@ -14,7 +14,8 @@
     color: #000;
 }
 
-.article-rte p {
+.article-rte p,
+div.article-rte {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 17px;
     margin-bottom: 28px;
