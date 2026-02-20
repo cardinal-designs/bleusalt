@@ -55,10 +55,10 @@
       ],
       "custom_css": [],
       "settings": {
-        "video": "shopify://files/videos/home-hero-desktop.mp4",
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/caa1f84d17a747f1a332280cde2273f9.mp4",
-        "video_mobile": "shopify://files/videos/home-video-mobile.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/653bab056e664508b79ff5658a8de2cb.mp4",
+        "video": "shopify://files/videos/True Cardigan Wide.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/True Cardigan Square.mp4",
+        "video_url_mobile": "",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -145,24 +145,6 @@
         "padding_bottom": 36
       }
     },
-    "175815468017ca5ea6": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_adcqUP": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "frontpage-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_adcqUP"
-      ],
-      "settings": {
-        "custom_class": "homepage-nosto-custom",
-        "include_margins": true
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "blocks": {
@@ -209,6 +191,24 @@
         "swipe_on_mobile": true,
         "padding_top": 28,
         "padding_bottom": 36
+      }
+    },
+    "175815468017ca5ea6": {
+      "type": "apps",
+      "blocks": {
+        "nosto_nosto_placements_block_adcqUP": {
+          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+          "settings": {
+            "placement": "frontpage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "nosto_nosto_placements_block_adcqUP"
+      ],
+      "settings": {
+        "custom_class": "homepage-nosto-custom",
+        "include_margins": true
       }
     },
     "1659735210e064d864": {
@@ -631,8 +631,8 @@
     "16597180576b9dbb68",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
-    "175815468017ca5ea6",
     "featured_collection",
+    "175815468017ca5ea6",
     "1659735210e064d864",
     "1660227726ff0f6237",
     "16637947412bca5d08",
