@@ -101,21 +101,17 @@
         "image_caption": "{{ article.metafields.custom.article_outfit_formula_2.value.image_caption.value }}"
       }
     },
-    "alt_article_content_2_UAhabG": {
-      "type": "alt-article-content-2",
-      "name": "Article Content 2",
+    "alt_article_content_3_YradaH": {
+      "type": "alt-article-content-3",
+      "name": "Article Content 3",
       "settings": {
-        "title_top": "",
-        "top_title": "{{ article.metafields.custom.alt_article_content_part_3.value.top_title.value }}",
-        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.top_content | metafield_tag }}",
-        "top_quote_title": "{{ article.metafields.custom.alt_article_content_part_3.value.top_quote_title.value }}",
-        "image": "{{ article.metafields.custom.alt_article_content_part_3.value.image.value }}",
-        "image_caption": "{{ article.metafields.custom.alt_article_content_part_3.value.image_caption.value }}",
-        "bottom_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_sub_title.value }}",
-        "bottom_sub_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_title.value }}",
-        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_content | metafield_tag }}",
-        "bottom_quote_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_quote_title.value }}",
-        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_quote_text | metafield_tag }}"
+        "title": "{{ article.metafields.custom.article_week_schedule.value.title.value }}",
+        "content": "{{ article.metafields.custom.article_week_schedule.value.content | metafield_tag }}",
+        "sub_title": "{{ article.metafields.custom.article_week_schedule.value.sub_title.value }}",
+        "metafield_key": "custom.article_week_schedule",
+        "sub_text": "{{ article.metafields.custom.article_week_schedule.value.sub_text.value }}",
+        "image": "{{ article.metafields.custom.article_week_schedule.value.image.value }}",
+        "image_caption": "{{ article.metafields.custom.article_week_schedule.value.image_caption.value }}"
       }
     },
     "alt_article_outfit_image_grid_RhAHaR": {
@@ -301,7 +297,7 @@
     "alt_article_image_grid_zkCizw",
     "alt-article-content-2",
     "alt_article_formula_RJpAnR",
-    "alt_article_content_2_UAhabG",
+    "alt_article_content_3_YradaH",
     "alt_article_outfit_image_grid_RhAHaR",
     "alt_article_divider_hpDV8i",
     "alt_article_formula_CVRUze",
