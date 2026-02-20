@@ -41,6 +41,8 @@
     margin-top: 0;
 }
 
+.alt__article--title .article-header
+
 .alt__article--title .subtitle {
     font-family: var(--font-body-family);
     font-size: 18px;
