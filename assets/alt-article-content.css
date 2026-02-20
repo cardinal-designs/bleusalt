@@ -356,7 +356,7 @@
 
     .article-table table tr td:first-child,
     .article-table table tr th:first-child {
-        width: auto;
+        width: 100px;
     }
 
 }
