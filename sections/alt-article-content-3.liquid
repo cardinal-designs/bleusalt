@@ -29,10 +29,12 @@
                 </div>
             {% endfor %}
         {% endif %}
-        day_outfit -- {{ day_outfit }}
-        <div class="article-table">
-
-        </div>
+        
+        {% if day_outfit.table_structure != blank %}
+            <div class="article-table">
+                {{ day_outfit.table_structure }}
+            </div>
+        {% endif %}
 
         {% if section.settings.sub_text != blank %}
             <div class="article-rte">{{ section.settings.sub_text }}</div>
