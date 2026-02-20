@@ -15,7 +15,7 @@
 }
 
 .article-rte p {
-    font-family: var(--font-body-family);
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 17px;
     margin-bottom: 28px;
     text-align: justify;
