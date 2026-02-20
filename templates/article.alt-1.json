@@ -11,10 +11,9 @@
   "sections": {
     "main": {
       "type": "main-article-alt-1",
-      "disabled": true,
       "settings": {
         "image_text": "HERO IMAGE: Woman in complete Bleusalt outfit (Wrap, Cindy Pant, Classic Crew) in minimal setting - architectural background, natural light",
-        "image_height": "medium"
+        "image_height": "adapt"
       }
     },
     "alt_article_title_X9L49H": {
