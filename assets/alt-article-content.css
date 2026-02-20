@@ -202,6 +202,11 @@
     margin-bottom: 25px;
 }
 
+.article-table table td, .article-table table th {
+    padding: 10px;
+    text-align: left;
+}
+
 .finale {
     text-align: center;
     margin: 100px 0;
