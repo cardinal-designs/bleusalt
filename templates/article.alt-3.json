@@ -216,7 +216,7 @@
         "top_title": "{{ article.metafields.custom.alt_article_content_part_7.value.title_top.value }}",
         "sub_text": "",
         "top_sub_title": "",
-        "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_7.value.top_content | metafield_tag }}",
+        "top_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_7.value.top_content | metafield_tag }}</p>",
         "top_quote_title": "",
         "top_quote_conetnt": "",
         "image": "{{ article.metafields.custom.alt_article_content_part_7.value.image.value }}",
@@ -231,11 +231,13 @@
     },
     "alt_article_divider_LT33fj": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_content_1_YXUkft": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_8.value.title_top.value }}",
@@ -256,11 +258,13 @@
     },
     "alt_article_divider_fVexPk": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
+      "disabled": true,
       "name": "Article Finale",
       "settings": {
         "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
