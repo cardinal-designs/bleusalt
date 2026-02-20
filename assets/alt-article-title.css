@@ -1,7 +1,3 @@
-.alt__article--header {
-    padding: 60px 0 40px;
-}
-
 .article-container {
     max-width: 900px;
     margin: 0 auto;
@@ -21,6 +17,11 @@
 
 .alt__article--title {
     margin-top: 80px;
+}
+
+.alt__article--header {
+    padding: 60px 0 40px;
+    margin: 0;
 }
 
 .alt__article--title .category-label {
