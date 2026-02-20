@@ -5,6 +5,16 @@
     margin-bottom: 80px;
 }
 
+.alt__article--title .tags {
+    text-align: center;
+    font-family: var(--font-body-family);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #000;
+}
+
 .alt__article--title {
     margin-top: 80px;
 }
