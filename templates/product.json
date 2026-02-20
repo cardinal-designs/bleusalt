@@ -181,7 +181,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "featured_video_order": 10,
+        "featured_video_order": 1,
         "first_image_order": 49,
         "product_images_order": 99,
         "lifestyle_image_order": 999,
