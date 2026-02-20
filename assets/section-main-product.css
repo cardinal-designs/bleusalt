@@ -1941,7 +1941,7 @@ table[data-in-to-cm] td {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     background: #ffffff;
     padding: 10px 10px;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
