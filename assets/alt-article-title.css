@@ -1,3 +1,7 @@
+.alt__article--header {
+    padding: 60px 0 40px;
+}
+
 .article-container {
     max-width: 900px;
     margin: 0 auto;
@@ -64,6 +68,10 @@
     text-transform: uppercase;
     margin-bottom: 80px;
     color: #000;
+}
+
+.alt__article--title .header-byline {
+    color: #666;
 }
 
 @media (max-width: 768px) {
