@@ -2,6 +2,9 @@
 
 <div class="alt__article--title">
     <div class="article-container">
+        {% if article.tags != blank %}
+            <div class="byline">{{ article.tags }}</div>
+        {% endif %}
         {% if section.settings.category != blank %}
             <div class="category-label">{{ section.settings.category }}</div>
         {% endif %}
