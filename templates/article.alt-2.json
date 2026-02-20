@@ -171,6 +171,7 @@
     },
     "alt_article_content_1_gcYTMJ": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "",
@@ -191,6 +192,7 @@
     },
     "alt_article_image_grid_P9qhdh": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_6"
@@ -198,11 +200,13 @@
     },
     "alt_article_divider_z4mJWf": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_content_1_mGk9cN": {
       "type": "alt-article-content-1",
+      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_6.value.title_top.value }}",
@@ -222,6 +226,7 @@
     },
     "alt_article_image_grid_tahceg": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_7"
