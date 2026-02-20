@@ -101,6 +101,7 @@
 }
 
 .alt__article--content h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 36px;
     font-weight: 300;
     margin: 80px 0 40px;
@@ -110,10 +111,10 @@
 }
 
 .alt__article--content h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 24px;
     font-weight: 400;
     margin: 50px 0 25px;
-    font-style: italic;
     color: #1a1a1a;
 }
 
