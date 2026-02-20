@@ -247,6 +247,7 @@
 
 .finale .article-rte + .article-rte,
 .manifesto-section .manifesto-content + .article-rte {
+    font-family: Didot, Bodoni MT, Playfair Display, serif;
     font-size: 22px;
     margin-top: 60px;
 }
