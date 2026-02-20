@@ -21,6 +21,7 @@
 
 .alt__article--header {
     margin-top: 60px;
+    border-bottom: 1px solid black;
 }
 
 .alt__article--title .category-label {
