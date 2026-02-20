@@ -182,9 +182,9 @@
       "settings": {
         "enable_sticky_info": true,
         "featured_video_order": 1,
-        "first_image_order": 49,
+        "first_image_order": 3,
         "product_images_order": 99,
-        "lifestyle_image_order": 999,
+        "lifestyle_image_order": 2,
         "show_breadcrumb": false,
         "gallery_layout": "thumbnail",
         "media_size": "small",
