@@ -217,6 +217,7 @@
     background: #f5f5f5;
     color: #1F3F4D;
     font-weight: bold;
+    width: 150px;
 }
 
 .finale {
@@ -342,6 +343,10 @@
 
     .article-rte p {
         text-align: left;
+    }
+
+    .article-table table tr td:first-child {
+        width: auto;
     }
 
 }
