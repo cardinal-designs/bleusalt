@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "alt_article_header_4JUHTP": {
+      "type": "alt-article-header",
+      "name": "Article Header",
+      "settings": {
+        "byline": "THE EDIT / FEBRUARY 2026"
+      }
+    },
     "main": {
       "type": "main-article-alt-1",
       "settings": {
@@ -262,13 +269,6 @@
         "sub_text": "{{ article.metafields.custom.alt_article_finale.value.sub_text.value }}",
         "by_line": "",
         "image_caption": "{{ article.metafields.custom.alt_article_finale.value.image_caption.value }}"
-      }
-    },
-    "alt_article_header_4JUHTP": {
-      "type": "alt-article-header",
-      "name": "Article Header",
-      "settings": {
-        "byline": ""
       }
     }
   },
