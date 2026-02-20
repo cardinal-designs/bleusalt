@@ -208,7 +208,9 @@
             width="100%"
           ></video>
         {% endif %}
-        {% render 'video-controls', id: video_id %}
+        {% unless section.settings.image != blank %}
+          {% render 'video-controls', id: video_id %}
+        {% endunless %}
       </div>
     </div>
   {%- endif -%}
@@ -263,7 +265,9 @@
           width="100%"
         ></video>
       {% endif %}
-      {% render 'video-controls', id: video_id %}
+      {% unless section.settings.image != blank %}
+        {% render 'video-controls', id: video_id %}
+      {% endunless %}
     </div>
   {%- endif -%}
   <div
