@@ -3,7 +3,9 @@
 <div class="alt__article--title">
     <div class="article-container">
         {% if article.tags != blank %}
+            {% for tag in article.tags %}
             <div class="tags">{{ article.tags }}</div>
+            {% endfor %}
         {% endif %}
         {% if section.settings.category != blank %}
             <div class="category-label">{{ section.settings.category }}</div>
