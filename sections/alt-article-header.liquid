@@ -2,9 +2,6 @@
 
 <div class="alt__article--title">
     <div class="article-container">
-        {% if section.settings.category != blank %}
-            <div class="category-label">{{ section.settings.category }}</div>
-        {% endif %}
         <h1>BLEUSALT</h1>
         {% if section.settings.byline != blank %}
             <div class="byline">{{ section.settings.byline }}</div>
@@ -16,11 +13,6 @@
 {
     "name": "Article Title Section",
     "settings": [
-        {
-            "type": "text",
-            "id": "category",
-            "label": "Category"
-        },
         {
             "type": "text",
             "id": "byline",
