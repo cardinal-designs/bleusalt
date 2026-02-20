@@ -26,7 +26,8 @@
 }
 
 .alt__article--header {
-    margin-top: 60px;
+    margin-top: 0;
+    padding-top: 60px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
