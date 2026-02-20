@@ -263,9 +263,17 @@
         "by_line": "",
         "image_caption": "{{ article.metafields.custom.alt_article_finale.value.image_caption.value }}"
       }
+    },
+    "alt_article_header_4JUHTP": {
+      "type": "alt-article-header",
+      "name": "Article Header",
+      "settings": {
+        "byline": ""
+      }
     }
   },
   "order": [
+    "alt_article_header_4JUHTP",
     "main",
     "alt_article_title_X9L49H",
     "alt-article-content-1",
