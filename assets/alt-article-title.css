@@ -5,6 +5,11 @@
     margin-bottom: 80px;
 }
 
+.alt__article--title .tag-container {
+    display: flex;
+    justify-content: center;
+}
+
 .alt__article--title .tags {
     text-align: center;
     font-family: var(--font-body-family);
