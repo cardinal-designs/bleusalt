@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-article-alt-1",
+      "disabled": true,
       "settings": {
         "image_text": "",
         "image_height": "large"
@@ -34,7 +35,6 @@
         "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
         "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
         "top_quote_conetnt": "",
-        "image": "{{ article.metafields.custom.alt_article_top_content.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
         "bottom_sub_title": "",
@@ -46,6 +46,7 @@
     },
     "alt_article_image_grid_zkCizw": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.image_grid"
@@ -66,7 +67,6 @@
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "top_quote_conetnt": "",
-        "image": "{{ article.metafields.custom.alt_article_content_part_2.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_sub_title": "",
@@ -76,13 +76,9 @@
         "bottom_image_caption": ""
       }
     },
-    "alt_article_divider_jcJyzz": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {}
-    },
     "alt_article_image_grid_KHUUCN": {
       "type": "alt-article-image-grid",
+      "disabled": true,
       "name": "Article Image Grid",
       "settings": {
         "metafield_key": "custom.alt_article_image_grid_2"
@@ -103,7 +99,6 @@
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.top_content | metafield_tag }}",
         "top_quote_title": "",
         "top_quote_conetnt": "",
-        "image": "{{ article.metafields.custom.alt_article_content_part_3.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_content_part_3.value.image_caption.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_title.value }}",
         "bottom_sub_title": "",
@@ -115,6 +110,7 @@
     },
     "alt_article_divider_YChiR6": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
@@ -147,14 +143,14 @@
     },
     "alt_article_manifesto_XQDJHL": {
       "type": "alt-article-manifesto",
+      "disabled": true,
       "name": "Article Manifesto",
       "settings": {
         "title": "{{ article.metafields.custom.alt_article_manifesto.value.heading.value }}",
-        "content": "<p>{{ article.metafields.custom.alt_article_manifesto.value.content | metafield_tag }}</p>",
+        "content": "{{ article.metafields.custom.alt_article_manifesto.value.content | metafield_tag }}",
         "manifesto_content": "{{ article.metafields.custom.alt_article_manifesto.value.manifesto_content | metafield_tag }}",
         "sub_text": "{{ article.metafields.custom.alt_article_manifesto.value.manifesto_text.value }}",
         "by_line": "{{ article.metafields.custom.alt_article_manifesto.value.manifesto_by_line.value }}",
-        "image": "{{ article.metafields.custom.alt_article_manifesto.value.image.value }}",
         "image_caption": "{{ article.metafields.custom.alt_article_manifesto.value.image_caption.value }}"
       }
     }
@@ -166,7 +162,6 @@
     "alt_article_image_grid_zkCizw",
     "alt_article_divider_qwWGhk",
     "alt_article_content_1_cL4xpF",
-    "alt_article_divider_jcJyzz",
     "alt_article_image_grid_KHUUCN",
     "alt_article_divider_Fj8R6z",
     "alt_article_content_1_ykLFCK",
