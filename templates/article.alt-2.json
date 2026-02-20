@@ -200,13 +200,11 @@
     },
     "alt_article_divider_z4mJWf": {
       "type": "alt-article-divider",
-      "disabled": true,
       "name": "Article Divider",
       "settings": {}
     },
     "alt_article_content_1_mGk9cN": {
       "type": "alt-article-content-1",
-      "disabled": true,
       "name": "Article Content",
       "settings": {
         "top_title": "{{ article.metafields.custom.alt_article_content_part_6.value.title_top.value }}",
