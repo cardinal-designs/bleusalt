@@ -206,6 +206,7 @@
       "block_order": [
         "nosto_nosto_placements_block_adcqUP"
       ],
+      "disabled": true,
       "settings": {
         "custom_class": "homepage-nosto-custom",
         "include_margins": true
@@ -233,7 +234,6 @@
         "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
         "e4d64483-b722-41bc-b780-ce75dc52abed"
       ],
-      "disabled": true,
       "settings": {
         "title": "Must Haves",
         "heading_size": "h1",
@@ -242,7 +242,7 @@
         "description_style": "body",
         "collection": "bottoms-skimpy",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
