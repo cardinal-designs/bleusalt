@@ -15,7 +15,7 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "Launching Monday",
             "text_color": "#ffffff"
           }
         },
@@ -38,8 +38,8 @@
         "buttons_fCtqBt": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "/products/the-true-cardigan",
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/womens-new-arrivals",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "Shop Best Sellers",
