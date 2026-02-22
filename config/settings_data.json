@@ -563,11 +563,6 @@
         "disabled": false,
         "settings": {}
       },
-      "320593021044489861": {
-        "type": "shopify://apps/sales-discounts/blocks/countdown/29205fb1-2e68-4d81-a905-d828a51c8413",
-        "disabled": false,
-        "settings": {}
-      },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
@@ -638,6 +633,11 @@
       "11735696852170848367": {
         "type": "shopify://apps/loudcrowd/blocks/embed.shopwith-widget/0afc7a0d-9f70-43a2-81e1-c20306ea13bd",
         "disabled": false,
+        "settings": {}
+      },
+      "320593021044489861": {
+        "type": "shopify://apps/sales-discounts/blocks/countdown/29205fb1-2e68-4d81-a905-d828a51c8413",
+        "disabled": true,
         "settings": {}
       }
     }
