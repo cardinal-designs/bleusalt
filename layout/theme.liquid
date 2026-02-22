@@ -427,6 +427,7 @@
       {% section 'header' %}
 
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+        {% comment %}
         {% if template == 'index' %}
           {% section 'collection-banner-womens' %}
         {% elsif template.name == 'collection' and collection.handle contains 'women' %}
@@ -436,6 +437,7 @@
         {% else %}
           {% section 'collection-banner-womens' %}
         {% endif %}
+         {% endcomment %}
         {{ content_for_layout }}
       </main>
 
