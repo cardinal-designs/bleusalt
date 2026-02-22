@@ -55,10 +55,10 @@
       ],
       "custom_css": [],
       "settings": {
-        "video": "shopify://files/videos/home-hero-desktop.mp4",
+        "image": "shopify://shop_images/IMG_9304.jpg",
         "video_url": "https://cdn.shopify.com/videos/c/o/v/caa1f84d17a747f1a332280cde2273f9.mp4",
-        "video_mobile": "shopify://files/videos/home-video-mobile.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/653bab056e664508b79ff5658a8de2cb.mp4",
+        "image_mobile": "shopify://shop_images/womens-raglan.jpg",
+        "video_url_mobile": "",
         "description": "Bleusalt | Experience Sustainable Luxury",
         "image_overlay_opacity": 10,
         "video_height": "56.25",
@@ -158,6 +158,7 @@
       "block_order": [
         "nosto_nosto_placements_block_adcqUP"
       ],
+      "disabled": true,
       "settings": {
         "custom_class": "homepage-nosto-custom",
         "include_margins": true
@@ -634,13 +635,13 @@
     "175815468017ca5ea6",
     "featured_collection",
     "1659735210e064d864",
-    "1660227726ff0f6237",
     "16637947412bca5d08",
     "featured_collection_WKJ43w",
     "1660226720e02964f9",
     "166022784081bd0071",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
     "image_with_text_XqniFF",
+    "1660227726ff0f6237",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
   ]
 }
