@@ -386,7 +386,9 @@
       <!-- End VWO Async SmartCode -->
     
       {% include "globale-js" %}
+      {% comment %}
       {% include 'pagefly-app-header' %}
+      {% endcomment %}
 
       {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
       {{ 'bundly-custom.css' | asset_url | stylesheet_tag: preload: true }}
@@ -405,9 +407,11 @@
     </head>
 
     <body class="gradient template--{{ template.name }} template--{{ template.suffix }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
+      {% comment %}
       <noscript>
         <link rel="stylesheet" href="{{ shop.url }}/portable-wallets/latest/accelerated-checkout-backwards-compat.css">
       </noscript>
+      {% endcomment %}
       
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ "accessibility.skip_to_text" | t }}
