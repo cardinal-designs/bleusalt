@@ -1,8 +1,12 @@
 <!doctype html>
   <html class="no-js" lang="{{ request.locale.iso_code }}">
     <head>
+      {% comment %}
       {% render 'visually_io_sdk' %}
+      {% endcomment %}
+      {% comment %}
       {% include 'hyperspeed-imports' %}
+      {% endcomment %}
       {% render 'hs-critical-css' %}  
       
       <meta charset="utf-8">
