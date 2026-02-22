@@ -261,56 +261,6 @@
         "padding_bottom": 36
       }
     },
-    "1660227726ff0f6237": {
-      "type": "foursixty",
-      "blocks": {
-        "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
-          "type": "title",
-          "settings": {
-            "title": "Shop Our Instagram"
-          }
-        },
-        "88d72792-7b35-451c-bf9a-b7f887cde26f": {
-          "type": "paragraph",
-          "settings": {
-            "title": "<p>Click the photos below to shop the look! <a href=\"https://www.instagram.com/bleusalt/\">@bleusalt</a></p>"
-          }
-        },
-        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed": {
-          "type": "feed",
-          "settings": {
-            "feed_id": "bleusalt",
-            "total_images": 10,
-            "big_first_image": true,
-            "per_row": 5,
-            "image_margin": 4,
-            "feed_type": "grid"
-          }
-        },
-        "45d95e55-eabb-474a-81e3-9b60083b3f79": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://pages/shop-our-instagram",
-            "link_text": "Shop Our Instagram",
-            "button_style": "button--secondary"
-          }
-        }
-      },
-      "block_order": [
-        "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
-        "88d72792-7b35-451c-bf9a-b7f887cde26f",
-        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
-        "45d95e55-eabb-474a-81e3-9b60083b3f79"
-      ],
-      "settings": {
-        "width": "page-width",
-        "padding_top": 25,
-        "padding_bottom": 45,
-        "margins": 14,
-        "border_top": true,
-        "text_align": "center"
-      }
-    },
     "16637947412bca5d08": {
       "type": "quotes",
       "blocks": {
@@ -600,6 +550,56 @@
         "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1660227726ff0f6237": {
+      "type": "foursixty",
+      "blocks": {
+        "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
+          "type": "title",
+          "settings": {
+            "title": "Shop Our Instagram"
+          }
+        },
+        "88d72792-7b35-451c-bf9a-b7f887cde26f": {
+          "type": "paragraph",
+          "settings": {
+            "title": "<p>Click the photos below to shop the look! <a href=\"https://www.instagram.com/bleusalt/\">@bleusalt</a></p>"
+          }
+        },
+        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed": {
+          "type": "feed",
+          "settings": {
+            "feed_id": "bleusalt",
+            "total_images": 10,
+            "big_first_image": true,
+            "per_row": 5,
+            "image_margin": 4,
+            "feed_type": "grid"
+          }
+        },
+        "45d95e55-eabb-474a-81e3-9b60083b3f79": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/shop-our-instagram",
+            "link_text": "Shop Our Instagram",
+            "button_style": "button--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
+        "88d72792-7b35-451c-bf9a-b7f887cde26f",
+        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
+        "45d95e55-eabb-474a-81e3-9b60083b3f79"
+      ],
+      "settings": {
+        "width": "page-width",
+        "padding_top": 25,
+        "padding_bottom": 45,
+        "margins": 14,
+        "border_top": true,
+        "text_align": "center"
       }
     },
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045": {
