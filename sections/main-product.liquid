@@ -510,7 +510,7 @@
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
-                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" id="variant-radios-{{ block.id }}" {{ block.shopify_attributes }}>
                   {%- liquid
                     # Logic to parse seasonal colors from block settings
                     assign seasonal_colors_raw = block.settings.seasonal_colors | replace: ' and ', ',' | split: ','
@@ -801,7 +801,7 @@
                   <span class="product-form__error-message"></span>
                 </div>
 
-                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                {%- form 'product', product, id: product_form_id, class: 'form sticky-add-to-cart', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   {% for block in section.blocks %}
                   {%- if block.type == 'discount_message' -%}
@@ -925,8 +925,6 @@
       </div>
     </div>
   </div>
-
-  
 
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
@@ -1103,6 +1101,10 @@
   </script>
 </section>
 
+<div class="product-sticky-bar">
+  <a href="#variant-radios-variant_picker" class="button">Select Color/Size</a>
+</div>
+
 <script>
   window.productJSON = {{ product | json }};
   window.currentVariant = {{ product.selected_or_first_available_variant | json }};
@@ -1185,6 +1187,40 @@
     display: block !important;
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    if (window.innerWidth > 749) return;
+
+    const form = document.querySelector('form.sticky-add-to-cart');
+    if (!form) return;
+
+    const observerTarget = form.closest('.product__buttons-wrapper');
+    if (!observerTarget) return;
+
+    const stickyBar = document.querySelector('.product-sticky-bar');
+    if (!stickyBar) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            //form.classList.add('is-sticky');
+            //document.body.classList.add('sticky-atc-active');
+            stickyBar.classList.add('active');
+          } else {
+            //form.classList.remove('is-sticky');
+            //document.body.classList.remove('sticky-atc-active');
+            stickyBar.classList.remove('active');
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(observerTarget);
+  });
+</script>
 
 <script>
   // document.addEventListener("DOMContentLoaded", (event) => {
@@ -1231,6 +1267,29 @@
     }
   })
 </script>
+
+<style>
+  /* Updated CSS using theme settings */
+.product-media-item {
+  order: {{ section.settings.product_images_order | default: 99 }}; /* Default order */
+}
+
+/* Lifestyle image */
+.product-media-item.is-all {
+  order: {{ section.settings.lifestyle_image_order | default: 999 }};
+}
+
+/* First image always show first */
+.product-media-item.pdp-first-image {
+  order: {{ section.settings.first_image_order | default: 49 }};
+}
+
+/* Lifestyle video */
+.product-media-item.is-video {
+  order: {{ section.settings.featured_video_order | default: 1 }};
+}
+
+</style>
 
 {% schema %}
 {
@@ -1522,6 +1581,30 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
+    },
+    {
+      "type": "number",
+      "id": "featured_video_order",
+      "label": "Order for Lifestyle Video",
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "first_image_order",
+      "label": "Order for First Image",
+      "default": 49
+    },
+    {
+      "type": "number",
+      "id": "product_images_order",
+      "label": "Order for Product Images",
+      "default": 99
+    },
+    {
+      "type": "number",
+      "id": "lifestyle_image_order",
+      "label": "Order for Lifestyle Image",
+      "default": 999
     },
     {
       "type": "checkbox",

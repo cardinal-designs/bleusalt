@@ -487,6 +487,14 @@
   padding-bottom: 5px !important;
 }
 
+#alia-root-151529 {
+  z-index: 998 !important;
+}
+
+body.overflow-hidden-tablet form.sticky-add-to-cart.is-sticky {
+  z-index: 0 !important;
+}
+
 @media (max-width: 749px) {
   .wair-css {
     padding-bottom: 3px !important;
