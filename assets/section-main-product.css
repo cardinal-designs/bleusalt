@@ -1974,6 +1974,10 @@ table[data-in-to-cm] td {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
   }
 
+  .product-sticky-bar .button {
+    width: 100%;
+  }
+
   .product-sticky-bar.active {
     display: block;
   }
