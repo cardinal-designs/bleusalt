@@ -510,7 +510,7 @@
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
-                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" id="variant-radios-{{ block.id }}" {{ block.shopify_attributes }}>
                   {%- liquid
                     # Logic to parse seasonal colors from block settings
                     assign seasonal_colors_raw = block.settings.seasonal_colors | replace: ' and ', ',' | split: ','
