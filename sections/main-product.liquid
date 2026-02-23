@@ -926,10 +926,6 @@
     </div>
   </div>
 
-  <div class="product-sticky-bar">
-    <a href="#ProductInfo-template--18551785193585__main" class="button">Select Color/Size</a>
-  </div>
-
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
       <button id="ModalClose-{{ section.id }}" type="button" class="product-media-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
@@ -1104,6 +1100,10 @@
     }
   </script>
 </section>
+
+<div class="product-sticky-bar">
+  <a href="#ProductInfo-template--18551785193585__main" class="button">Select Color/Size</a>
+</div>
 
 <script>
   window.productJSON = {{ product | json }};

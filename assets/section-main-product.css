@@ -1933,6 +1933,9 @@ table[data-in-to-cm] td {
   }
 }
 
+.product-sticky-bar {
+  display: none !important;
+}
 
 @media screen and (max-width: 749px) {
 
@@ -1958,5 +1961,20 @@ table[data-in-to-cm] td {
   form.sticky-add-to-cart .product-form__buttons {
     margin: 0;
   }
-  
+
+  .product-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  }
+
+  .product-sticky-bar.active {
+    display: block;
+  }
 }
