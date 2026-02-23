@@ -1200,11 +1200,13 @@
       (entries) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) {
-            form.classList.add('is-sticky');
-            document.body.classList.add('sticky-atc-active');
+            //form.classList.add('is-sticky');
+            //document.body.classList.add('sticky-atc-active');
+            console.log('hi')
           } else {
-            form.classList.remove('is-sticky');
-            document.body.classList.remove('sticky-atc-active');
+            //form.classList.remove('is-sticky');
+            //document.body.classList.remove('sticky-atc-active');
+            console.log('bye')
           }
         });
       },
