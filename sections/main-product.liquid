@@ -1101,9 +1101,11 @@
   </script>
 </section>
 
-<div class="product-sticky-bar">
-  <a href="#variant-radios-variant_picker" class="button">Select Color/Size</a>
-</div>
+{% unless product.type == 'Gift Card' %}
+  <div class="product-sticky-bar">
+    <a href="#variant-radios-variant_picker" class="button">Select Color/Size</a>
+  </div>
+{% endunless %}
 
 <script>
   window.productJSON = {{ product | json }};
