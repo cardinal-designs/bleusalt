@@ -1934,7 +1934,7 @@ table[data-in-to-cm] td {
 }
 
 .product-sticky-bar {
-  display: none !important;
+  display: none;
 }
 
 @media screen and (max-width: 749px) {
