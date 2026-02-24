@@ -322,7 +322,7 @@
         "nosto_nosto_placements_block_3pDdTV": {
           "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
           "settings": {
-            "placement": "productpage-nosto-1"
+            "placement": "abtest"
           }
         }
       },
