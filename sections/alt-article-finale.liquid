@@ -8,7 +8,7 @@
                     <h2>{{ section.settings.title }}</h2>
                 {% endif %}
                 {% if section.settings.content != blank %}
-                    <div class="article-rte">{{ section.settings.content }}</div>
+                    <div class="article-rte paragraph-{{ section.settings.paragraph_style_1 }}">{{ section.settings.content }}</div>
                 {% endif %}
                 {% if section.settings.sub_text != blank %}
                     <p class="article-rte"><strong>{{ section.settings.sub_text }}</strong></p>
@@ -48,6 +48,30 @@
             "type": "richtext",
             "id": "content",
             "label": "Content"
+        },
+        {
+            "type": "select",
+            "id": "paragraph_style_1",
+            "label": "paragraph split style",
+            "options": [
+                {
+                    "value": "33",
+                    "label": "33%"
+                },
+                {
+                    "value": "25",
+                    "label": "25%"
+                },
+                {
+                    "value": "50",
+                    "label": "50%"
+                },
+                {
+                    "value": "100",
+                    "label": "100%"
+                }
+            ],
+            "default": "100"
         },
         {
             "type": "text",

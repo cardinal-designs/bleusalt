@@ -55,7 +55,9 @@
       "type": "alt-article-divider",
       "disabled": true,
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_image_grid_zkCizw": {
       "type": "alt-article-image-grid",
@@ -108,7 +110,9 @@
     "alt_article_divider_8izgbw": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
@@ -127,7 +131,9 @@
     "alt_article_divider_kYEKhk": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_image_grid_BjrdbC": {
       "type": "alt-article-image-grid",
@@ -185,7 +191,9 @@
     "alt_article_divider_9KFhEB": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_CJNHeQ": {
       "type": "alt-article-content-1",
@@ -209,7 +217,9 @@
     "alt_article_divider_n9XqaP": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_image_grid_TckjzR": {
       "type": "alt-article-image-grid",
@@ -239,7 +249,9 @@
     "alt_article_divider_xmJadQ": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_cL4xpF": {
       "type": "alt-article-content-1",

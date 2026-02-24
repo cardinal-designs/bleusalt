@@ -56,7 +56,9 @@
     "alt_article_divider_mjDGzL": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_bdTHXD": {
       "type": "alt-article-content-1",
@@ -120,7 +122,9 @@
     "alt_article_divider_8izgbw": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_image_grid_BjrdbC": {
       "type": "alt-article-image-grid",
@@ -205,7 +209,9 @@
     "alt_article_divider_z4mJWf": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_mGk9cN": {
       "type": "alt-article-content-1",
@@ -237,7 +243,9 @@
     "alt_article_divider_8CGQUQ": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_wkfD6c": {
       "type": "alt-article-content-1",
@@ -262,7 +270,9 @@
       "type": "alt-article-divider",
       "disabled": true,
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_finale_CEdY4g": {
       "type": "alt-article-finale",

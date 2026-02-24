@@ -47,7 +47,9 @@
     "alt_article_divider_8mEtRg": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_formula_ab7TYx": {
       "type": "alt-article-formula",
@@ -124,7 +126,9 @@
     "alt_article_divider_hpDV8i": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_formula_CVRUze": {
       "type": "alt-article-formula",
@@ -151,7 +155,9 @@
     "alt_article_divider_8CDQyh": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_cL4xpF": {
       "type": "alt-article-content-1",
@@ -183,7 +189,9 @@
     "alt_article_divider_VYph3h": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_VTthhD": {
       "type": "alt-article-content-1",
@@ -207,7 +215,9 @@
     "alt_article_divider_y3keBx": {
       "type": "alt-article-divider",
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_88j3Ht": {
       "type": "alt-article-content-1",
@@ -232,7 +242,9 @@
       "type": "alt-article-divider",
       "disabled": true,
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_content_1_YXUkft": {
       "type": "alt-article-content-1",
@@ -259,7 +271,9 @@
       "type": "alt-article-divider",
       "disabled": true,
       "name": "Article Divider",
-      "settings": {}
+      "settings": {
+        "spacing": 50
+      }
     },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",

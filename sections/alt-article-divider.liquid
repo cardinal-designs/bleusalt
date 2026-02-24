@@ -1,15 +1,15 @@
-<div class="alt__article--divider">
+<div class="{{ section.id }} alt__article--divider">
     <div class="article-container">
         <div class="section-divider"></div>
     </div>
 </div>
 
 <style>
-    .alt__article--divider .section-divider {
+    .{{ section.id }}.alt__article--divider .section-divider {
         width: 100px;
         height: 1px;
         background: #000;
-        margin: 100px auto;
+        margin: {{ section.settings.spacing }}px auto;
         display: block;
     }
 </style>
@@ -17,6 +17,17 @@
 {% schema %}
 {
     "name": "Article Divider",
+    "settings": [
+        {
+            "type": "range",
+            "id": "spacing",
+            "label": "Spacing",
+            "min": 10,
+            "max": 100,
+            "step": 5,
+            "default": 50
+        }
+    ],
     "presets": [
         {
             "name": "Article Divider"

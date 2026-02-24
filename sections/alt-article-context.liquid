@@ -18,7 +18,7 @@
                         <h3>{{ data.title }}</h3>
                     {% endif %}
                     {% if data.content != blank %}
-                        <div class="article-rte">{{ data.content | metafield_tag }}</div>
+                        <div class="article-rte paragraph-{{ section.settings.paragraph_style_1 }}">{{ data.content | metafield_tag }}</div>
                     {% endif %}
                 </div>
             {% endif %}
@@ -45,6 +45,30 @@
             "id": "content",
             "label": "Content"
         },
+        {
+            "type": "select",
+            "id": "paragraph_style_1",
+            "label": "paragraph split style",
+            "options": [
+                {
+                    "value": "33",
+                    "label": "33%"
+                },
+                {
+                    "value": "25",
+                    "label": "25%"
+                },
+                {
+                    "value": "50",
+                    "label": "50%"
+                },
+                {
+                    "value": "100",
+                    "label": "100%"
+                }
+            ],
+            "default": "100"
+        }
     ],
     "presets": [
         {

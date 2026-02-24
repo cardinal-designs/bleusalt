@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "alt_article_header_4JUHTP": {
+      "type": "alt-article-header",
+      "name": "Article Header",
+      "settings": {
+        "byline": "THE EDIT / FEBRUARY 2026"
+      }
+    },
+    "main": {
+      "type": "main-article-alt-1",
+      "settings": {
+        "image_text": "HERO IMAGE: Woman in complete Bleusalt outfit (Wrap, Cindy Pant, Classic Crew) in minimal setting - architectural background, natural light",
+        "image_height": "adapt"
+      }
+    },
+    "alt_article_title_X9L49H": {
+      "type": "alt-article-title",
+      "name": "Article Title Section",
+      "settings": {
+        "category": "",
+        "subtitle": "The Capsule That Actually Works",
+        "byline": "By Lyndie Irons"
+      }
+    },
+    "alt-article-content-1": {
+      "type": "alt-article-content-1",
+      "settings": {
+        "top_title": "Top Title",
+        "sub_text": "<p>Sub title</p>",
+        "paragraph_style_1": "100",
+        "top_sub_title": "Top subtitle",
+        "top_conetnt": "<p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+        "paragraph_style_2": "50",
+        "top_quote_title": "Top quote title",
+        "top_quote_conetnt": "<p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+        "paragraph_style_3": "100",
+        "image_caption": "",
+        "bottom_title": "Bottom title",
+        "bottom_sub_title": "Bottom sub title",
+        "bottom_conetnt": "<p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+        "paragraph_style_4": "100",
+        "bottom_quote_title": "Bottom quote title",
+        "bottom_quote_conetnt": "<p>Bottom quote content</p>",
+        "paragraph_style_5": "100",
+        "bottom_image_caption": ""
+      }
+    }
+  },
+  "order": [
+    "alt_article_header_4JUHTP",
+    "main",
+    "alt_article_title_X9L49H",
+    "alt-article-content-1"
+  ]
+}

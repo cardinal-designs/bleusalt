@@ -21,6 +21,32 @@ div.article-rte {
     margin-bottom: 28px;
     text-align: justify;
     line-height: 1.7;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+div.article-rte {
+    margin-bottom: 10px;
+}
+
+.article-rte.paragraph-25 {
+    column-gap: 40px;
+    column-count: 4;
+}
+
+.article-rte.paragraph-33 {
+    column-gap: 40px;
+    column-count: 3;
+}
+
+.article-rte.paragraph-50 {
+    column-gap: 40px;
+    column-count: 2;
+}
+
+.article-rte.paragraph-100 {
+    column-gap: 0;
+    column-count: 1;
 }
 
 .article-rte p em {
@@ -116,6 +142,7 @@ div.article-rte {
     font-size: 24px;
     font-weight: 400;
     margin: 50px 0 25px;
+    margin: 30px 0 15px;
     color: #1a1a1a;
 }
 
