@@ -139,7 +139,7 @@
       "type": "alt-article-divider",
       "name": "Article Divider",
       "settings": {
-        "spacing": 10
+        "spacing": 100
       }
     },
     "alt_article_image_grid_BjrdbC": {
