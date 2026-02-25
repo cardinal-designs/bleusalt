@@ -11,6 +11,7 @@
   "sections": {
     "otto_image_MNhLUr": {
       "type": "otto-image",
+      "disabled": true,
       "name": "Otto Image",
       "settings": {
         "image_name": "lp-accessories",
