@@ -168,7 +168,7 @@
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
       ],
       "settings": {
-        "title": "",
+        "title": "Shop",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -178,14 +178,14 @@
         "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_life_image": true,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
@@ -573,8 +573,8 @@
         "heading_6FWmWW": {
           "type": "heading",
           "settings": {
-            "heading": "Shop On The App",
-            "heading_size": "h1"
+            "heading": "SHOP ON OUR APP",
+            "heading_size": "h2"
           }
         },
         "svg_qxQ83m": {
@@ -591,7 +591,7 @@
       "settings": {
         "image": "shopify://shop_images/download.jpg",
         "border_top": false,
-        "page_width": "page-width--narrow",
+        "page_width": "page-width",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
