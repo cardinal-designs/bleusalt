@@ -234,6 +234,7 @@
         "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
         "e4d64483-b722-41bc-b780-ce75dc52abed"
       ],
+      "disabled": true,
       "settings": {
         "title": "Must Haves",
         "heading_size": "h1",
@@ -356,6 +357,7 @@
         "0b32d508-6883-48ba-829a-45da3d66a768",
         "47ff77ee-0aeb-4a50-b975-664f35a94a08"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "hide_desktop": false,
@@ -382,6 +384,7 @@
       "block_order": [
         "collection_CcH4Je"
       ],
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "Bleusalt Signature Wraps & Scarves",
@@ -577,7 +580,7 @@
         "svg_qxQ83m": {
           "type": "svg",
           "settings": {
-            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get early VIP access<br> to new product arrivals & app-exclusive discounts<br>available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
+            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get early VIP access<br> to new product arrivals & app-exclusive discounts<br>available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\" height=\"50px\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\" height=\"50px\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
           }
         }
       },
@@ -588,9 +591,9 @@
       "settings": {
         "image": "shopify://shop_images/download.jpg",
         "border_top": false,
-        "page_width": "page-width",
+        "page_width": "page-width--narrow",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
