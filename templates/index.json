@@ -282,7 +282,7 @@
             "feed_id": "bleusalt",
             "total_images": 14,
             "big_first_image": false,
-            "per_row": 1,
+            "per_row": 3,
             "image_margin": 4,
             "feed_type": "slider"
           }
