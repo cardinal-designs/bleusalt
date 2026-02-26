@@ -151,15 +151,15 @@
         "49238d89-463e-419a-8643-42f4463ad2dd": {
           "type": "collection",
           "settings": {
-            "heading": "New Arrivals",
-            "collection": "newest-products"
+            "heading": "Womens",
+            "collection": "womens-new-arrivals"
           }
         },
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
           "type": "collection",
           "settings": {
-            "heading": "Best Sellers",
-            "collection": "womens-best-sellers"
+            "heading": "Mens",
+            "collection": "mens-new-arrivals"
           }
         }
       },
@@ -168,7 +168,7 @@
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
       ],
       "settings": {
-        "title": "Shop",
+        "title": "Newest Arrivals",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -178,7 +178,7 @@
         "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
-        "view_all_style": "link",
+        "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
@@ -234,7 +234,6 @@
         "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
         "e4d64483-b722-41bc-b780-ce75dc52abed"
       ],
-      "disabled": true,
       "settings": {
         "title": "Must Haves",
         "heading_size": "h1",
