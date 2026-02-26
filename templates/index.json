@@ -304,12 +304,12 @@
         "45d95e55-eabb-474a-81e3-9b60083b3f79"
       ],
       "settings": {
-        "width": "page-width",
+        "width": "full-width",
         "padding_top": 25,
         "padding_bottom": 45,
         "margins": 14,
         "border_top": true,
-        "text_align": "center"
+        "text_align": "left"
       }
     },
     "16637947412bca5d08": {
