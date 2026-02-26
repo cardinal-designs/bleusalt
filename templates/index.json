@@ -266,11 +266,12 @@
         "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
           "type": "title",
           "settings": {
-            "title": "Shop Our Instagram"
+            "title": "Shop The Look"
           }
         },
         "88d72792-7b35-451c-bf9a-b7f887cde26f": {
           "type": "paragraph",
+          "disabled": true,
           "settings": {
             "title": "<p>Click the photos below to shop the look! <a href=\"https://www.instagram.com/bleusalt/\">@bleusalt</a></p>"
           }
@@ -283,7 +284,7 @@
             "big_first_image": true,
             "per_row": 5,
             "image_margin": 4,
-            "feed_type": "grid"
+            "feed_type": "slider"
           }
         },
         "45d95e55-eabb-474a-81e3-9b60083b3f79": {
