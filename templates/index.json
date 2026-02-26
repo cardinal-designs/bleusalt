@@ -280,7 +280,7 @@
           "type": "feed",
           "settings": {
             "feed_id": "bleusalt",
-            "total_images": 10,
+            "total_images": 14,
             "big_first_image": false,
             "per_row": 5,
             "image_margin": 4,
