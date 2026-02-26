@@ -281,8 +281,8 @@
           "settings": {
             "feed_id": "bleusalt",
             "total_images": 14,
-            "big_first_image": false,
-            "per_row": 3,
+            "big_first_image": true,
+            "per_row": 5,
             "image_margin": 4,
             "feed_type": "slider"
           }
@@ -304,7 +304,7 @@
         "45d95e55-eabb-474a-81e3-9b60083b3f79"
       ],
       "settings": {
-        "width": "full-width",
+        "width": "page-width",
         "padding_top": 25,
         "padding_bottom": 45,
         "margins": 14,
