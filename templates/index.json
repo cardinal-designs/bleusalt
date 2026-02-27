@@ -313,7 +313,7 @@
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_life_image": true,
         "show_vendor": false,
         "show_rating": true,
