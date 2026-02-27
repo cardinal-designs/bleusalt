@@ -151,15 +151,15 @@
         "49238d89-463e-419a-8643-42f4463ad2dd": {
           "type": "collection",
           "settings": {
-            "heading": "Womens",
+            "heading": "New Arrivals",
             "collection": "womens-new-arrivals"
           }
         },
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
           "type": "collection",
           "settings": {
-            "heading": "Mens",
-            "collection": "mens-new-arrivals"
+            "heading": "Best Sellers",
+            "collection": "womens-best-sellers"
           }
         }
       },
@@ -168,8 +168,8 @@
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5"
       ],
       "settings": {
-        "title": "Newest Arrivals",
-        "heading_size": "h1",
+        "title": "",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
