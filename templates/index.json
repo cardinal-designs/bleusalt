@@ -257,25 +257,6 @@
         "video_overlay_link": "shopify://products/the-elevated-legging"
       }
     },
-    "175815468017ca5ea6": {
-      "type": "apps",
-      "blocks": {
-        "nosto_nosto_placements_block_adcqUP": {
-          "type": "shopify://apps/nosto/blocks/nosto-placements-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-          "settings": {
-            "placement": "frontpage-nosto-1"
-          }
-        }
-      },
-      "block_order": [
-        "nosto_nosto_placements_block_adcqUP"
-      ],
-      "disabled": true,
-      "settings": {
-        "custom_class": "homepage-nosto-custom",
-        "include_margins": true
-      }
-    },
     "1659735210e064d864": {
       "type": "featured-collection",
       "blocks": {
@@ -322,71 +303,6 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "video_banner_KgKULU": {
-      "type": "video-banner",
-      "blocks": {
-        "text_cp4N3A": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Our Best Seller",
-            "text_color": "#ffffff"
-          }
-        },
-        "heading_tjadRH": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Cindy Top",
-            "heading_color": "#ffffff",
-            "heading_size": "h0",
-            "heading_tag": "h2"
-          }
-        },
-        "text_two_xAdFjn": {
-          "type": "text-two",
-          "settings": {
-            "text": "Bleusalt is committed to creating the softest, most sustainable luxury essentials...",
-            "text_color": "#ffffff"
-          }
-        },
-        "buttons_Y43Y8W": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Learn More",
-            "button_link_1": "shopify://pages/materials",
-            "button_bg_color": "#ffffff",
-            "button_text_color": "#0d1c29",
-            "button_label_2": "",
-            "button_link_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_cp4N3A",
-        "heading_tjadRH",
-        "text_two_xAdFjn",
-        "buttons_Y43Y8W"
-      ],
-      "custom_css": [],
-      "settings": {
-        "video": "shopify://files/videos/Materials edit 2-.mp4",
-        "video_url": "",
-        "video_mobile": "shopify://files/videos/Materials edit 2-.mp4",
-        "video_url_mobile": "",
-        "description": "Bleusalt Materials Video",
-        "image_overlay_opacity": 20,
-        "video_height": "56.25",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "none",
-        "mobile_content_alignment": "center",
-        "video_height_mobile": "125",
-        "show_text_below": true,
-        "button_overlay": true,
-        "video_overlay_link": "shopify://pages/materials"
       }
     },
     "video_banner_YmFe9m": {
@@ -506,107 +422,6 @@
         "text_align": "left"
       }
     },
-    "16637947412bca5d08": {
-      "type": "quotes",
-      "blocks": {
-        "16637947411f2692ac-2": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>“I made my first purchase so I got the one yard scarf, I am so pleased with it... actually, I love it! It's comfortable, it's soft and it looks great! My purchase experience was great and shipping was fast. Absolutely recommend!”</p>",
-            "author": ""
-          }
-        },
-        "9ce23cce-4719-4328-b639-f730f57cd3e7": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>\"Perfect comfort - perfect fit\"</p>",
-            "author": "Donna V."
-          }
-        },
-        "58dfb1fb-5090-4fe2-95af-a4bcdaa6162e": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>I have 5 of these in different colors. I love them! I also have a few 1 yard and a few 3 yard wraps. They are so beautiful, chic and soft. Each elevates the look of my outfit</p>",
-            "author": "Patricia L."
-          }
-        },
-        "0b32d508-6883-48ba-829a-45da3d66a768": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>\"I can't get enough of the 3 yard wrap! It's the most luxurious fabric I've ever worn and I've given up cashmere for it, why? Because it's a superior fabric and it's washable!\"</p>",
-            "author": ""
-          }
-        },
-        "47ff77ee-0aeb-4a50-b975-664f35a94a08": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>The fabric is like butter... even better in person! The fit is definitely oversized, but what I expected.</p>",
-            "author": ""
-          }
-        }
-      },
-      "block_order": [
-        "16637947411f2692ac-2",
-        "9ce23cce-4719-4328-b639-f730f57cd3e7",
-        "58dfb1fb-5090-4fe2-95af-a4bcdaa6162e",
-        "0b32d508-6883-48ba-829a-45da3d66a768",
-        "47ff77ee-0aeb-4a50-b975-664f35a94a08"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "hide_desktop": false,
-        "hide_mobile": false,
-        "color_background": "#f1f1f1",
-        "padding_top": 0,
-        "padding_bottom": 65,
-        "press_link": "",
-        "reviews_link": "",
-        "title": ""
-      }
-    },
-    "featured_collection_WKJ43w": {
-      "type": "featured-collection",
-      "blocks": {
-        "collection_CcH4Je": {
-          "type": "collection",
-          "settings": {
-            "heading": "",
-            "collection": "the-signature-bleusalt-wrap"
-          }
-        }
-      },
-      "block_order": [
-        "collection_CcH4Je"
-      ],
-      "disabled": true,
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "title": "Bleusalt Signature Wraps & Scarves",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 12,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_life_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "1660226720e02964f9": {
       "type": "rich-text",
       "blocks": {
@@ -650,68 +465,69 @@
         "padding_bottom": 76
       }
     },
-    "166022784081bd0071": {
-      "type": "quotes",
+    "video_banner_KgKULU": {
+      "type": "video-banner",
       "blocks": {
-        "1660227840989441a3-0": {
-          "type": "quote_press",
+        "text_cp4N3A": {
+          "type": "text",
+          "disabled": true,
           "settings": {
-            "quote": "<p>Duchess Meghan Does Quiet Luxury in a Shimmering Beige Turtleneck Dress</p>",
-            "author": "Country Living",
-            "logo": "shopify://shop_images/logo.42faf13.svg"
+            "text": "Our Best Seller",
+            "text_color": "#ffffff"
           }
         },
-        "1660227840989441a3-1": {
-          "type": "quote_press",
+        "heading_tjadRH": {
+          "type": "heading",
           "settings": {
-            "quote": "<p>What BAZAAR editors are shopping this week</p>",
-            "author": "Elle",
-            "logo": "shopify://shop_images/elle.png"
+            "heading": "The Cindy Top",
+            "heading_color": "#ffffff",
+            "heading_size": "h0",
+            "heading_tag": "h2"
           }
         },
-        "b27eae8f-e3c9-46a0-83e9-9149a0c33109": {
-          "type": "quote_press",
+        "text_two_xAdFjn": {
+          "type": "text-two",
           "settings": {
-            "quote": "<p>28 Sustainable Brands That Will Completely Change the Way You Shop!</p>",
-            "author": "Pop Sugar",
-            "logo": "shopify://shop_images/pop-sugar.png"
+            "text": "Bleusalt is committed to creating the softest, most sustainable luxury essentials...",
+            "text_color": "#ffffff"
           }
         },
-        "a4a3927e-7a35-47f0-aded-be8ced7e8657": {
-          "type": "quote_press",
+        "buttons_Y43Y8W": {
+          "type": "buttons",
           "settings": {
-            "quote": "<p>I Gave Up Fast Fashion. Here’s What I’m Wearing Instead.</p>",
-            "author": "The Cut",
-            "logo": "shopify://shop_images/the-cut_2x-8.png"
-          }
-        },
-        "48b412b1-5560-4ade-98e9-f59f9f79abdd": {
-          "type": "quote_press",
-          "settings": {
-            "quote": "<p>Good Company: Bleusalt’s Environmentally Responsible Fashion</p>",
-            "author": "Barron's",
-            "logo": "shopify://shop_images/barrons_2x-8.png"
+            "button_label_1": "Learn More",
+            "button_link_1": "shopify://pages/materials",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "",
+            "button_link_2": ""
           }
         }
       },
       "block_order": [
-        "1660227840989441a3-0",
-        "1660227840989441a3-1",
-        "b27eae8f-e3c9-46a0-83e9-9149a0c33109",
-        "a4a3927e-7a35-47f0-aded-be8ced7e8657",
-        "48b412b1-5560-4ade-98e9-f59f9f79abdd"
+        "text_cp4N3A",
+        "heading_tjadRH",
+        "text_two_xAdFjn",
+        "buttons_Y43Y8W"
       ],
-      "disabled": true,
+      "custom_css": [],
       "settings": {
-        "full_width": false,
-        "hide_desktop": false,
-        "hide_mobile": false,
-        "color_background": "#f1f1f1",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "press_link": "",
-        "reviews_link": "",
-        "title": ""
+        "video": "shopify://files/videos/Materials edit 2-.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/Materials edit 2-.mp4",
+        "video_url_mobile": "",
+        "description": "Bleusalt Materials Video",
+        "image_overlay_opacity": 20,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "125",
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": "shopify://pages/materials"
       }
     },
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6": {
@@ -832,15 +648,11 @@
     "16636186953571c8bf",
     "featured_collection",
     "video_banner_R7Lagn",
-    "175815468017ca5ea6",
     "1659735210e064d864",
-    "video_banner_KgKULU",
     "video_banner_YmFe9m",
     "1660227726ff0f6237",
-    "16637947412bca5d08",
-    "featured_collection_WKJ43w",
     "1660226720e02964f9",
-    "166022784081bd0071",
+    "video_banner_KgKULU",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
     "image_with_text_XqniFF",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
