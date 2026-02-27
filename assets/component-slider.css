@@ -372,7 +372,7 @@ slider-component.slider-component-full-width {
 }
 
 slider-component .featured-collection__toggle:first-child {
-  margin-left: -2rem;
+  margin-left: -1rem;
   font-family: inherit;
 }
 
