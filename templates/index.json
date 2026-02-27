@@ -329,6 +329,7 @@
       "blocks": {
         "text_cp4N3A": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Our Best Seller",
             "text_color": "#ffffff"
@@ -345,17 +346,16 @@
         },
         "text_two_xAdFjn": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Now in Navy",
+            "text": "Bleusalt is committed to creating the softest, most sustainable luxury essentials...",
             "text_color": "#ffffff"
           }
         },
         "buttons_Y43Y8W": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/the-cindy-top",
+            "button_label_1": "Learn More",
+            "button_link_1": "shopify://pages/materials",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "",
@@ -368,6 +368,71 @@
         "heading_tjadRH",
         "text_two_xAdFjn",
         "buttons_Y43Y8W"
+      ],
+      "custom_css": [],
+      "settings": {
+        "video": "shopify://files/videos/Materials edit 2-.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/Materials edit 2-.mp4",
+        "video_url_mobile": "",
+        "description": "Bleusalt Materials Video",
+        "image_overlay_opacity": 20,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "125",
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": "shopify://pages/materials"
+      }
+    },
+    "video_banner_YmFe9m": {
+      "type": "video-banner",
+      "blocks": {
+        "text_tVhgPa": {
+          "type": "text",
+          "settings": {
+            "text": "Our Best Seller",
+            "text_color": "#ffffff"
+          }
+        },
+        "heading_Ay7XUN": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Cindy Top",
+            "heading_color": "#ffffff",
+            "heading_size": "h0",
+            "heading_tag": "h2"
+          }
+        },
+        "text_two_fQfDFw": {
+          "type": "text-two",
+          "disabled": true,
+          "settings": {
+            "text": "Now in Navy",
+            "text_color": "#ffffff"
+          }
+        },
+        "buttons_RNE36W": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/the-cindy-top",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_tVhgPa",
+        "heading_Ay7XUN",
+        "text_two_fQfDFw",
+        "buttons_RNE36W"
       ],
       "custom_css": [],
       "settings": {
@@ -636,6 +701,7 @@
         "a4a3927e-7a35-47f0-aded-be8ced7e8657",
         "48b412b1-5560-4ade-98e9-f59f9f79abdd"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "hide_desktop": false,
@@ -769,6 +835,7 @@
     "175815468017ca5ea6",
     "1659735210e064d864",
     "video_banner_KgKULU",
+    "video_banner_YmFe9m",
     "1660227726ff0f6237",
     "16637947412bca5d08",
     "featured_collection_WKJ43w",
