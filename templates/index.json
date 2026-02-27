@@ -67,7 +67,7 @@
         "desktop_content_alignment": "center",
         "color_scheme": "none",
         "mobile_content_alignment": "center",
-        "video_height_mobile": "100",
+        "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
         "video_overlay_link": "shopify://collections/womens-new-arrivals"
