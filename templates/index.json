@@ -67,10 +67,10 @@
         "desktop_content_alignment": "center",
         "color_scheme": "none",
         "mobile_content_alignment": "center",
-        "video_height_mobile": "125",
+        "video_height_mobile": "100",
         "show_text_below": true,
         "button_overlay": true,
-        "video_overlay_link": "shopify://collections/womens-new-arrivals"
+        "video_overlay_link": "shopify://products/the-true-cardigan"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
