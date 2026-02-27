@@ -60,7 +60,7 @@
         "video_mobile": "shopify://files/videos/True Cardigan Square.mp4",
         "video_url_mobile": "",
         "description": "Bleusalt | Experience Sustainable Luxury",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -69,7 +69,7 @@
         "mobile_content_alignment": "center",
         "video_height_mobile": "100",
         "show_text_below": true,
-        "button_overlay": false,
+        "button_overlay": true,
         "video_overlay_link": "shopify://collections/womens-new-arrivals"
       }
     },
