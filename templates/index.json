@@ -579,43 +579,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_XqniFF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_6FWmWW": {
-          "type": "heading",
-          "settings": {
-            "heading": "SHOP ON OUR APP",
-            "heading_size": "h2"
-          }
-        },
-        "svg_qxQ83m": {
-          "type": "svg",
-          "settings": {
-            "text": "<p>Download the Bleusalt Mobile App on your iPhone<br> or Android device today and get early VIP access<br> to new product arrivals & app-exclusive discounts<br>available only through the Bleusalt Mobile App!</p>\n<div style=\"text-align: center;\"></div>\n<div style=\"text-align: center;\">  <a href=\"https://apps.apple.com/us/app/bleusalt/id1618014255\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-apple.png?v=1670486387\" alt=\"Download for iPhone\" height=\"40px\"></a>   <a href=\"https://play.google.com/store/apps/details?id=co.tapcart.app.id_bVr2cYddsI&hl=en_US&gl=US\"><img src=\"https://cdn.shopify.com/s/files/1/1407/3982/files/download-google.png?v=1670486415\" alt=\"Download for Android\" height=\"40px\"></a>\n</div>\n<div style=\"text-align: center;\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_6FWmWW",
-        "svg_qxQ83m"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/download.jpg",
-        "border_top": false,
-        "page_width": "page-width",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045": {
       "type": "rich-text",
       "blocks": {
@@ -654,7 +617,6 @@
     "1660226720e02964f9",
     "video_banner_KgKULU",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
-    "image_with_text_XqniFF",
     "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
   ]
 }
