@@ -50,6 +50,15 @@ div.article-rte {
     column-count: 1;
 }
 
+@media (max-width: 768px) {
+    .article-rte.paragraph-25,
+    .article-rte.paragraph-33,
+    .article-rte.paragraph-50 {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
 .article-rte p em {
     font-size: 13px;
     color: #666;
