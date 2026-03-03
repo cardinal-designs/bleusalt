@@ -350,6 +350,7 @@
         "text_two_fQfDFw",
         "buttons_RNE36W"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "video": "shopify://files/videos/Cindy Top Desktop.mp4",
@@ -510,6 +511,7 @@
         "text_two_xAdFjn",
         "buttons_Y43Y8W"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "video": "shopify://files/videos/Materials edit 2-.mp4",
