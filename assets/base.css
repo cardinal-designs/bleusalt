@@ -2501,6 +2501,13 @@ input[type='checkbox'] {
   menu-drawer ~ .header__icons .header__icon--account {
     display: none;
   }
+
+  .header__icon,
+  .header__icon--cart .icon {
+    height: auto;
+    width: auto;
+    padding: 0;
+  }
 }
 
 .header__icon--menu[aria-expanded="true"]::before {
