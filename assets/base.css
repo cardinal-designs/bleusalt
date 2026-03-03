@@ -2519,6 +2519,7 @@ input[type='checkbox'] {
   }
 
   .header__icon .icon.icon-close {
+    height: 18px !important;
     color: black;
   }
 }
