@@ -85,7 +85,7 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 749px) {
 
     .article-container {
         padding: 0 30px;
@@ -94,6 +94,7 @@
 
     .alt__article--title .article-header {
         font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .alt__article--title h1 {
