@@ -152,7 +152,7 @@
                 {%- endif -%}
               {%- endif -%}
 
-              <pre>media_color-- {{ media_color }}</pre>
+              {% comment %} <pre>media_color-- {{ media_color }}</pre> {% endcomment %}
               <pre>selected_color-- {{ selected_color }}</pre>
 
               {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
