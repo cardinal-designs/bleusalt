@@ -22,6 +22,7 @@
 
     assign data_alt = image.alt | escape | split: ' | ' | first
   -%}
+  <div class="swiper-zoom-container">
   {{-
     image
     | image_url: width: image.width
@@ -33,4 +34,5 @@
       preload: preload,
       data-alt: data_alt
   -}}
+  </div>
 </div>

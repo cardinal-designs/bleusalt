@@ -171,9 +171,9 @@
                         assign prioritize_loading = true
                       endif
                     -%}
-                      <div class="swiper-zoom-container">
+                      {% comment %} <div class="swiper-zoom-container"> {% endcomment %}
                         {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading, zoom: true %}
-                      </div>
+                      {% comment %} </div> {% endcomment %}
                   {% when 'video'%}
                       {% assign ratio =  1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                       <div class="media" style="padding-top:{{ ratio }}%;">
