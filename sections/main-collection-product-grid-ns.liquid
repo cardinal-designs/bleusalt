@@ -6,7 +6,7 @@
 
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
+  <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
   <script defer src="{{ 'product-form.js' | asset_url }}"></script>
 {%- endif -%}
 <noscript>{% render 'hs-defer-css' with filename: 'component-rte.css', pages: 'collection,index,product' | split: ',', local: true %}</noscript>

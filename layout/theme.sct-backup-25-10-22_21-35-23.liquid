@@ -299,7 +299,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
     {% render 'hs-defer-css' with filename: 'quick-add.css', pages: 'collection,index,product' | split: ',', local: true %}
 
-    <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
+    <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
 
   
   
