@@ -206,7 +206,7 @@
     left: -3px;
     margin: 10px;
     padding-left: 10px;
-    display: none;
+    display: none !important;
   }
   
 }
