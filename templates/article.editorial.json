@@ -32,6 +32,13 @@
         "byline": "{{ article.metafields.custom.alt_article_title.value.by_line.value }}"
       }
     },
+    "alt_article_divider_XTfMXe": {
+      "type": "alt-article-divider",
+      "name": "Article Divider",
+      "settings": {
+        "spacing": 50
+      }
+    },
     "alt-article-content-1": {
       "type": "alt-article-content-1",
       "settings": {
@@ -138,13 +145,6 @@
         "spacing": 50
       }
     },
-    "alt_article_divider_XTfMXe": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {
-        "spacing": 50
-      }
-    },
     "alt_article_image_grid_BjrdbC": {
       "type": "alt-article-image-grid",
       "disabled": true,
@@ -206,6 +206,7 @@
     },
     "alt_article_divider_n9XqaP": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {
         "spacing": 50
