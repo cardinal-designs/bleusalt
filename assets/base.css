@@ -2513,6 +2513,10 @@ input[type='checkbox'] {
     height: 25px !important;
     width: auto !important;
   }
+
+  .header__icon--cart {
+    margin: 0;
+  }
 }
 
 .header__icon--menu[aria-expanded="true"]::before {
