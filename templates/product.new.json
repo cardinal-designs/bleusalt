@@ -61,6 +61,7 @@
         },
         "discount_message_z7Vrwz": {
           "type": "discount_message",
+          "disabled": true,
           "settings": {
             "product_discount_title": "Curate a Custom Wardrobe & Unlock Special Savings",
             "product_discount_message": "<p>Buy 3 or more items and save 10% on your entire order. Buy 5 or more and save 15%. Buy 7 or more and get 20% Off!</p>"
@@ -80,7 +81,7 @@
         "e41b416a-cc32-40b1-a71e-a81edcd2ea81": {
           "type": "text",
           "settings": {
-            "text": "Free Shipping on orders $175+",
+            "text": "Free Shipping on orders $240+",
             "text_style": "body"
           }
         },
@@ -180,6 +181,10 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "featured_video_order": 1,
+        "first_image_order": 49,
+        "product_images_order": 99,
+        "lifestyle_image_order": 999,
         "show_breadcrumb": false,
         "gallery_layout": "thumbnail",
         "media_size": "small",
