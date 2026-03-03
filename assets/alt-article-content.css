@@ -405,6 +405,14 @@ div.article-rte {
         width: 100px;
     }
 
+    .finale {
+        margin: 40px;
+    }
+
+    .finale h2 {
+        margin-bottom: 20px;
+    }
+
     .finale p {
         text-align: center;
     }
