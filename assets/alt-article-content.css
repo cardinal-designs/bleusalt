@@ -373,12 +373,16 @@ div.article-rte {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 749px) {
 
     .outfit-formula,
     .context-section,
     .manifesto-section {
         padding: 40px 30px;
+    }
+
+    .alt__article--content h2 {
+        font-size: 32px;
     }
 
     .alt__article--content .image-grid, 
