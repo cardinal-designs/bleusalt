@@ -277,6 +277,10 @@ div.article-rte {
     background: #fafafa;
 }
 
+.finale h2 {
+    margin-top: 0;
+}
+
 .finale p {
     text-align: center;
     font-size: 18px;
