@@ -1268,7 +1268,7 @@
   })
 </script>
 
-<style>
+{% comment %} <style>
   /* Updated CSS using theme settings */
 .product-media-item {
   order: {{ section.settings.product_images_order | default: 99 }}; /* Default order */
@@ -1289,7 +1289,7 @@
   order: {{ section.settings.featured_video_order | default: 1 }};
 }
 
-</style>
+</style> {% endcomment %}
 
 {% schema %}
 {
