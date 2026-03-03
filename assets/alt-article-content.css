@@ -50,7 +50,7 @@ div.article-rte {
     column-count: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 749px) {
     .article-rte.paragraph-25,
     .article-rte.paragraph-33,
     .article-rte.paragraph-50 {
