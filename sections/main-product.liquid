@@ -157,7 +157,7 @@
 
               {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
                 <div 
-                  class="swiper-slide product__main-image {% if section.settings.enable_zoom %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
+                  class="swiper-slide product__main-image {% if section.settings.enable_zoom %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains selected_color %}is-video{% endif %} {% if media.alt contains selected_color %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
                   data-filter="{{ media_color  }}"
                   data-size="{{ media_size }}"
                   {% if hide_image %} style="display: none;" {% endif %} 
@@ -227,7 +227,7 @@
               {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
 
               <div 
-                class="product__main-image {% if section.settings.enable_zoom and media.media_type != 'video' %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
+                class="product__main-image {% if section.settings.enable_zoom and media.media_type != 'video' %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains selected_color %}is-video{% endif %} {% if media.alt contains selected_color %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
                 data-filter="{{ media_color }}" data-size="{{ media_size }}"
                 {% if hide_image %} style="display: none;" {% endif %} 
                 {% if section.settings.enable_zoom and media.media_type != 'video' %}
@@ -1271,7 +1271,7 @@
   })
 </script>
 
-{% comment %} <style>
+<style>
   /* Updated CSS using theme settings */
 .product-media-item {
   order: {{ section.settings.product_images_order | default: 99 }}; /* Default order */
@@ -1292,7 +1292,7 @@
   order: {{ section.settings.featured_video_order | default: 1 }};
 }
 
-</style> {% endcomment %}
+</style>
 
 {% schema %}
 {
