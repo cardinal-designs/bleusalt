@@ -1,0 +1,28 @@
+{% render 'hs-defer-css' with filename: 'alt-article-title.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<div class="alt__article--title alt__article--header">
+    <div class="article-container">
+        <h1 class="article-header">BLEUSALT</h1>
+        {% if section.settings.byline != blank %}
+            <div class="byline header-byline">{{ section.settings.byline }}</div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Article Title Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "byline",
+            "label": "By line"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Article Header"
+        }
+    ]
+}
+{% endschema %}

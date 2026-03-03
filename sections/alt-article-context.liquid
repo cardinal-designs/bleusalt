@@ -1,0 +1,79 @@
+{% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+
+{% assign metafield_full = section.settings.metafield_key %}
+
+{% assign metafield_parts = metafield_full | split: '.' %}
+{% assign namespace = metafield_parts[0] %}
+{% assign key = metafield_parts[1] %}
+
+{% assign context = article.metafields[namespace][key].value %}
+
+<div class="alt__article--content">
+    <div class="article-container">
+        {% for data in context %}
+            {% if data.title != blank or data.content != blank %}
+                <div class="context-section">
+                    {% if data.title != blank %}
+                        <h3>{{ data.title }}</h3>
+                    {% endif %}
+                    {% if data.content != blank %}
+                        <div class="article-rte paragraph-{{ section.settings.paragraph_style_1 }}">{{ data.content | metafield_tag }}</div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Article Context",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "metafield_key",
+            "label": "Metafield key"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "select",
+            "id": "paragraph_style_1",
+            "label": "paragraph split style",
+            "options": [
+                {
+                    "value": "33",
+                    "label": "33%"
+                },
+                {
+                    "value": "25",
+                    "label": "25%"
+                },
+                {
+                    "value": "50",
+                    "label": "50%"
+                },
+                {
+                    "value": "100",
+                    "label": "100%"
+                }
+            ],
+            "default": "100"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Article Context"
+        }
+    ]
+}
+{% endschema %}

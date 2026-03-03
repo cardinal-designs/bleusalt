@@ -1,0 +1,99 @@
+.article-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+    margin-bottom: 80px;
+    margin-bottom: 40px;
+}
+
+.alt__article--title .tag-container {
+    display: flex;
+    justify-content: center;
+}
+
+.alt__article--title .tags {
+    text-align: center;
+    font-family: var(--font-body-family);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.alt__article--title {
+    margin-top: 80px;
+}
+
+.alt__article--header {
+    margin-top: 0;
+    padding-top: 60px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.alt__article--title .category-label {
+    font-family: var(--font-body-family);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.alt__article--title h1 {
+    font-size: 56px;
+    font-weight: 300;
+    font-family: 'Didot', 'Bodoni MT', 'Playfair Display', serif;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1a1a1a;
+    margin-top: 0;
+}
+
+.alt__article--title .article-header {
+    font-size: 72px;
+    letter-spacing: 12px;
+}
+
+.alt__article--title .subtitle {
+    font-family: var(--font-body-family);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.alt__article--title .byline {
+    text-align: center;
+    font-family: var(--font-body-family);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    color: #000;
+}
+
+.alt__article--title .header-byline {
+    color: #666;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+    .article-container {
+        padding: 0 30px;
+        margin-bottom: 40px;
+    }
+
+    .alt__article--title h1 {
+        font-size: 36px;
+    }
+
+}

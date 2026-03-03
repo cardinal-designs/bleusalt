@@ -1,0 +1,131 @@
+{% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+<div class="alt__article--content">
+    <div class="article-container">
+        {% if section.settings.title != blank %}
+            <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.content != blank %}
+            <div class="article-rte paragraph-{{ section.settings.paragraph_style_1 }}">{{ section.settings.content }}</div>
+        {% endif %}
+
+        {% if section.settings.sub_title != blank %}
+            <h3>{{ section.settings.sub_title }}</h3>
+        {% endif %}
+
+        {% assign metafield_full = section.settings.metafield_key %}
+
+        {% assign metafield_parts = metafield_full | split: '.' %}
+        {% assign namespace = metafield_parts[0] %}
+        {% assign key = metafield_parts[1] %}
+
+        {% assign day_outfit = article.metafields[namespace][key].value %}
+        {% assign article_day_outfit = day_outfit.article_day_outfit.value %}
+
+        {% if article_day_outfit != blank %}
+            {% for data in article_day_outfit %}
+                <div class="day-outfit">
+                    {{ data.day_outfit }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+        {% if day_outfit.table_structure != blank %}
+            <div class="article-table">
+                {{ day_outfit.table_structure }}
+            </div>
+        {% endif %}
+
+        {% if section.settings.sub_text != blank %}
+            <div class="article-rte">{{ section.settings.sub_text }}</div>
+        {% endif %}
+
+        {% if section.settings.image != blank %}
+            <div class="article-image-block">
+                <div class="article-image-full">
+                    {%- render 'image',
+                    image: section.settings.image,
+                    sizes: '(min-width: 768px) 50vw, 100vw',
+                    prioritize_loading: true
+                    -%}
+                </div>
+                {% if section.settings.image_caption != blank %}
+                <div class="image-caption">{{ section.settings.image_caption }}</div>
+                {% endif %}
+            </div>
+            
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Article Content 3",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "select",
+            "id": "paragraph_style_1",
+            "label": "paragraph split style",
+            "options": [
+                {
+                    "value": "33",
+                    "label": "33%"
+                },
+                {
+                    "value": "25",
+                    "label": "25%"
+                },
+                {
+                    "value": "50",
+                    "label": "50%"
+                },
+                {
+                    "value": "100",
+                    "label": "100%"
+                }
+            ],
+            "default": "100"
+        },
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Sub title"
+        },
+        {
+            "type": "textarea",
+            "id": "metafield_key",
+            "label": "Metafield key"
+        },   
+        {
+            "type": "text",
+            "id": "sub_text",
+            "label": "Sub Text"
+        },     
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "image_caption",
+            "label": "Image caption"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Article Content 3"
+        }
+    ]
+}
+{% endschema %}
