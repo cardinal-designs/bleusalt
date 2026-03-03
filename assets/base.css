@@ -2509,7 +2509,7 @@ input[type='checkbox'] {
   }
 
   .header__icon svg {
-    height: 20px
+    height: 25px;
   }
 }
 
