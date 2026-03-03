@@ -2504,9 +2504,13 @@ input[type='checkbox'] {
 
   .header__icon,
   .header__icon--cart .icon {
-    height: auto;
-    width: auto;
+    height: 20px;
+    width: 20px;
     padding: 0;
+  }
+
+  .header__icon svg {
+    height: 20px
   }
 }
 
