@@ -101,4 +101,8 @@
         font-size: 36px;
     }
 
+    .alt__article--title .byline {
+        margin-bottom: 50px;
+    }
+
 }
