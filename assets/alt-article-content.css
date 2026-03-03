@@ -281,7 +281,7 @@ div.article-rte {
     text-align: center;
     font-size: 18px;
     max-width: 700px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .finale .article-rte + .article-rte,
