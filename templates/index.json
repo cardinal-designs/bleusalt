@@ -413,6 +413,9 @@
         "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
         "45d95e55-eabb-474a-81e3-9b60083b3f79"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.section--template--18658023669873__1660227726ff0f6237 .fs-mobile .fs-entry-container {width: 44% !important; padding-top: 44% !important; }}"
+      ],
       "settings": {
         "width": "page-width",
         "padding_top": 25,
