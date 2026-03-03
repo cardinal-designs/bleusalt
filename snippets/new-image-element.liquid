@@ -9,7 +9,7 @@
     assign ratio = 1 | divided_by: image.aspect_ratio | times: 100
   endif
 -%}
-<div style="padding-top:{{ ratio }}%;" class="media {% if class != blank %}{{ class }}{% endif %}">
+<div style="padding-top:{{ ratio }}%;" class="media {% if class != blank %}{{ class }}{% endif %}{% if zoom %} swiper-zoom-container{% endif %}">
   {%- liquid
     assign loading = 'lazy'
     assign fetchpriority = 'auto'
