@@ -240,7 +240,14 @@
                 endif 
               -%}
               {% assign swatch_url = value | handle | append: '.jpg' | file_img_url: '80x' %}
-              <button data-index="{{ forloop.index }}" aria-label="color, {{ value }}" {% if hide_me %}style="display: none;"{% endif %}  {% if forloop.first %}selected{% endif %} type="button" value="{{ value }}" class="quick-add__button quick-add__button--color button--inline" style="background-image: url({{ swatch_url }});" >
+              <button
+                data-index="{{ forloop.index }}"
+                aria-label="color, {{ value }}"
+                {% if forloop.first %}selected{% endif %} 
+                type="button" value="{{ value }}" 
+                class="quick-add__button quick-add__button--color button--inline" 
+                style="background-image: url({{ swatch_url }});{% if hide_me %}display: none;{% endif %}"
+              >
                 <span class='visually-hidden'>{{ value }}</span>
               </button>
             {% endfor %}
