@@ -256,12 +256,12 @@
             {% comment %}
             {% render 'okendo-reviews-product-rating-summary', product: card_product %}
             {% endcomment %}
-            {% comment %} <div class="klaviyo-star-rating-widget" data-id="{{card_product.id}}" data-product-title="{{card_product.title}}" data-product-type="{{card_product.type}}"></div> {% endcomment %}
+            <div class="klaviyo-star-rating-widget small-hide" data-id="{{card_product.id}}" data-product-title="{{card_product.title}}" data-product-type="{{card_product.type}}"></div>
           {% endunless %}
         </div>
 
         {% comment %} <div class="card__badge {{ settings.badge_position }}"> {% endcomment %}
-        <div class="card__badge">
+        <div class="card__badge small-hide">
           {%- if card_product.available == false -%}
               {%- if settings.show_sold_out -%}
                 <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
