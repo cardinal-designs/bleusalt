@@ -575,6 +575,10 @@ a.product__text {
   height: auto;
 }
 
+.product__main-image .media {
+  width: 100%;
+}
+
 @media screen and (max-width: 749px) {
   .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
     margin-left: -1.5rem;
