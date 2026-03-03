@@ -267,7 +267,7 @@
             </div>
           {%- when 'buttons' -%}
             {%- comment -%} Desktop Banner Buttons {%- endcomment -%}
-            <div class="small-hide banner__buttons" {{ block.shopify_attributes }}>
+            <div class="banner__buttons" {{ block.shopify_attributes }}>
               {%- if block.settings.button_label_1 != blank -%}
                 <a
                   {% if block.settings.button_link_1 == blank %}
@@ -301,7 +301,7 @@
   </div>
 
   {%- comment -%} Mobile Banner Buttons {%- endcomment -%}
-  {%- for block in section.blocks -%}
+  {% comment %} {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'buttons' -%}
         <div class="medium-up-hide banner__buttons--mobile" {{ block.shopify_attributes }}>
@@ -333,7 +333,7 @@
           {%- endif -%}
         </div>
     {%- endcase -%}
-  {%- endfor -%}
+  {%- endfor -%} {% endcomment %}
 </video-banner>
 
 {% schema %}
