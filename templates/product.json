@@ -98,6 +98,33 @@
             "custom_liquid": "<hr>\n<p>As seen on.</p>"
           }
         },
+        "foursixty_shoppable_social_ugc_custom_slider_aE7kpH": {
+          "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_slider/e2616dfe-fbb6-4e7d-874d-d250b973556d",
+          "settings": {
+            "foreground_color": "#ffffff",
+            "background_color": "#000000",
+            "background_color_alpha": 25,
+            "post_spacing": 1,
+            "hover_margin": 0,
+            "cell_size": "33.3334%",
+            "target_blank": false,
+            "arrows_outside": false,
+            "show_icon": false,
+            "show_text": false,
+            "show_date": false,
+            "call_to_action": "SHOP",
+            "shop_type": "underline",
+            "body_font_size": 12,
+            "body_font": "sans_serif_n4",
+            "accent_font_size": 12,
+            "accent_font": "sans_serif_n4",
+            "disable_filter": false,
+            "override_feed_id": "",
+            "arbitrary_attributes": "",
+            "custom_css": "",
+            "custom_js": ""
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -147,6 +174,7 @@
         "e41b416a-cc32-40b1-a71e-a81edcd2ea81",
         "c6536c56-eee9-4466-a47f-7e5ad0fe4d23",
         "custom_liquid_fc3krr",
+        "foursixty_shoppable_social_ugc_custom_slider_aE7kpH",
         "collapsible-row-0",
         "3cbca740-3858-4794-a06d-86306c2065df",
         "collapsible_tab_NhfNPp"
