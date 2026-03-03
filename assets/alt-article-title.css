@@ -92,6 +92,10 @@
         margin-bottom: 40px;
     }
 
+    .alt__article--title .article-header {
+        font-size: 32px;
+    }
+
     .alt__article--title h1 {
         font-size: 36px;
     }
