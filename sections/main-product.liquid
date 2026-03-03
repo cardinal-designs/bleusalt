@@ -152,6 +152,9 @@
                 {%- endif -%}
               {%- endif -%}
 
+              <pre>media_color-- {{ media_color }}</pre>
+              <pre>selected_color-- {{ selected_color }}</pre>
+
               {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
                 <div 
                   class="swiper-slide product__main-image {% if section.settings.enable_zoom %}product__image--zoom{% endif %} product-media-item {% if media.media_type == 'video' and media.alt contains 'All' %}is-video{% endif %} {% if media.alt contains 'All' %}is-all{% endif %}{% if variant_images contains media.src %} pdp-first-image{% endif %}" 
