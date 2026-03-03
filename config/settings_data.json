@@ -456,6 +456,7 @@
         "blocks": {
           "block_7GNrA9": {
             "type": "block",
+            "disabled": true,
             "settings": {
               "collection": "womens-tops",
               "title": "Tops"
@@ -463,6 +464,7 @@
           },
           "block_fgLVyW": {
             "type": "block",
+            "disabled": true,
             "settings": {
               "collection": "womens-bottoms",
               "title": "Bottoms"
@@ -470,6 +472,7 @@
           },
           "block_bC6iXz": {
             "type": "block",
+            "disabled": true,
             "settings": {
               "collection": "womens-dresses",
               "title": "Dresses"
@@ -477,6 +480,7 @@
           },
           "block_br3ERt": {
             "type": "block",
+            "disabled": true,
             "settings": {
               "collection": "womens-accessories-outerwear",
               "title": "Accessories"
@@ -484,6 +488,7 @@
           },
           "block_J3JbNG": {
             "type": "block",
+            "disabled": true,
             "settings": {
               "collection": "womens-new-arrivals",
               "title": "New Arrivals"
@@ -491,6 +496,7 @@
           },
           "block_4XfKyJ": {
             "type": "block",
+            "disabled": true,
             "settings": {
               "collection": "womens-best-sellers",
               "title": "Best Sellers"
@@ -505,6 +511,7 @@
           "block_J3JbNG",
           "block_4XfKyJ"
         ],
+        "custom_css": [],
         "settings": {}
       },
       "collection-banner-mens": {
