@@ -2517,6 +2517,10 @@ input[type='checkbox'] {
   .header__icon--cart {
     margin: 0;
   }
+
+  .header__icon .icon.icon-close {
+    color: black;
+  }
 }
 
 .header__icon--menu[aria-expanded="true"]::before {
