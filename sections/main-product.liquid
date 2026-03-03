@@ -171,12 +171,8 @@
                         assign prioritize_loading = true
                       endif
                     -%}
-                      {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading, zoom: true %}
                       <div class="swiper-zoom-container">
-                        <div
-                          class="swiper-zoom-target"
-                          style="background-image: url({{ media.preview_image | image_url: size: '1000px' }})"
-                        ></div>
+                        {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading, zoom: true %}
                       </div>
                   {% when 'video'%}
                       {% assign ratio =  1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
