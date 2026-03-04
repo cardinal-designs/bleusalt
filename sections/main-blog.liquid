@@ -22,9 +22,14 @@
           >
         </div>
         <div class="blog-articles__featured-content">
-          {% if article.tag[0] %}
-            <p class="blog-articles__featured-tag byline header-byline">{{ article.tag[0] }}</p>
-          {% endif %}
+          <div class="blog-articles__featured-content-top">
+            {% if article.tag[0] %}
+              <p class="blog-articles__featured-tag byline header-byline">{{ article.tag[0] }}</p>
+            {% endif %}
+          </div>
+          <div class="blog-articles__featured-content-bottom">
+
+          </div>
         </div>
       </div>
     {%- endfor -%}
