@@ -1,3 +1,7 @@
+{% render 'hs-defer-css' with filename: 'component-article-card.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'section-main-blog.css', pages: 'collection,index,product' | split: ',', local: true %}
+
 {%- paginate blog.articles by 24 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
