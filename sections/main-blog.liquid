@@ -1,21 +1,3 @@
-{% render 'hs-defer-css' with filename: 'component-article-card.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
-{% render 'hs-defer-css' with filename: 'section-main-blog.css', pages: 'collection,index,product' | split: ',', local: true %}
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
 {%- paginate blog.articles by 24 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary {{ section.settings.header_alignment }}">{{ blog.title | escape }}</h1>
