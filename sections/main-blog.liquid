@@ -8,6 +8,12 @@
     
     {%- for article in blog.articles limit: 1 -%}
       <div class="blog-articles__featured">
+        <div class="blog-articles__featured-content-top medium-up-hide">
+          {% if article.tags[0] %}
+            <p class="blog-articles__featured-tag byline header-byline">{{ article.tags[0] }}</p>
+          {% endif %}
+          <h2 class="blog-articles__featured-title">{{ article.title }}</h2>
+        </div>
         <div class="blog-articles__featured-image card">
           <a href="{{ article.url }}" class="media media--hover-effect" style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
             <img
@@ -28,7 +34,7 @@
           </a>
         </div>
         <div class="blog-articles__featured-content">
-          <div class="blog-articles__featured-content-top">
+          <div class="blog-articles__featured-content-top small-hide">
             {% if article.tags[0] %}
               <p class="blog-articles__featured-tag byline header-byline">{{ article.tags[0] }}</p>
             {% endif %}
