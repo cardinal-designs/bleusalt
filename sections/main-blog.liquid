@@ -1,7 +1,33 @@
 {%- paginate blog.articles by 24 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary {{ section.settings.header_alignment }} visually-hidden">{{ blog.title | escape }}</h1>
+    <h1 class="title--primary">{{ blog.title | escape }}</h1>
     
+    {%- for article in blog.articles limit: 1 -%}
+      <div class="blog-articles__featured">
+        <div class="blog-articles__featured-image">
+          <img
+            srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+              {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+            src="{{ article.image.src | image_url: width: 533 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ article.image.src.alt | escape }}"
+            class="motion-reduce"
+            {% unless lazy_load == false %}loading="lazy"{% endunless %}
+            width="{{ article.image.width }}"
+            height="{{ article.image.height }}"
+          >
+        </div>
+        <div class="blog-articles__featured-content">
+
+        </div>
+      </div>
+    {%- endfor -%}
+
     <div class="blog-articles">
       {%- for article in blog.articles offset: 1 -%}
         {% assign logo = article.metafields.custom.article_logo.value %}
