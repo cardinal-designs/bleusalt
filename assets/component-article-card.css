@@ -169,8 +169,9 @@
 }
 
 .article-card__title {
+  margin: 0 0 20px;
   font-family: Didot, Bodoni MT, Playfair Display, serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 300;
   text-align: center;
   letter-spacing: 1px;
