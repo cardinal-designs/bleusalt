@@ -30,6 +30,7 @@
             {% if article.tags[0] %}
               <p class="blog-articles__featured-tag byline header-byline">{{ article.tags[0] }}</p>
             {% endif %}
+            <h1 class="blog-articles__featured-title">{{ blog.title | escape }}</h1>
           </div>
           <div class="blog-articles__featured-content-bottom">
 
