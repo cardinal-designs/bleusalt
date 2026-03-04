@@ -22,7 +22,9 @@
           >
         </div>
         <div class="blog-articles__featured-content">
-
+          {% if article.tag[0] %}
+            <p class="blog-articles__featured-tag byline header-byline">{{ article.tag[0] }}</p>
+          {% endif %}
         </div>
       </div>
     {%- endfor -%}
