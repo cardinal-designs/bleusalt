@@ -49,3 +49,9 @@
   font-size: 17px;
   line-height: 1.7;
 }
+
+@media screen and (max-width: 1135px) {
+  .blog-articles__featured {
+    gap: 60px;
+  }
+}
