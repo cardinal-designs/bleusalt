@@ -55,3 +55,9 @@
     gap: 60px;
   }
 }
+
+.blog-articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
