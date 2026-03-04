@@ -9,7 +9,7 @@
     {%- for article in blog.articles limit: 1 -%}
       <div class="blog-articles__featured">
         <div class="blog-articles__featured-image">
-          <div class="media media--hover-effect">
+          <div class="media media--hover-effect" style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
             <img
               srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
