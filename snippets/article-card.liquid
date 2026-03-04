@@ -24,7 +24,7 @@
       assign ratio = media_aspect_ratio
     endif
   -%}
-  <div class="card-wrapper underline-links-hover" article-id="{{ article.id }}">
+  <a href="{{ article.url }}" class="card-wrapper underline-links-hover" article-id="{{ article.id }}">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div class="card article-card
       card--{{ settings.card_style }}
@@ -70,5 +70,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </a>
 {%- endif -%}
