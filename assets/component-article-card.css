@@ -152,6 +152,9 @@
   }
 }
 
+.article-card .card__information {
+  padding: 0;
+}
 
 .article-card__tag {
   margin: 10px 0;
