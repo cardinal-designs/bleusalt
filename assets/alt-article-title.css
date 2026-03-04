@@ -92,6 +92,10 @@
         margin-bottom: 40px;
     }
 
+    .alt__article--header {
+        margin-top: 0;
+    }
+
     .alt__article--title {
         margin-top: 0;
     }
