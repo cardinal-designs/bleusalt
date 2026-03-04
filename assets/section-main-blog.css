@@ -66,6 +66,10 @@
   .blog-articles__featured {
     display: block;
   }
+  
+  .blog-articles__featured-content-top {
+    margin-bottom: 30px;
+  }
 }
 
 .blog-articles {
