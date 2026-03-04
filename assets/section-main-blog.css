@@ -9,6 +9,10 @@
   gap: 100px;
 }
 
+.blog-articles__featured-image .media {
+  position: relative;
+}
+
 .blog-articles__featured-image img {
   width: 100%;
   height: auto;

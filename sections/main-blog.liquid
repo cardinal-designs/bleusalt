@@ -7,7 +7,7 @@
     {% comment %} <h1 class="title--primary">{{ blog.title | escape }}</h1> {% endcomment %}
     
     {%- for article in blog.articles limit: 1 -%}
-      <div class="blog-articles__featured">
+      <div class="blog-articles__featured card">
         <div class="blog-articles__featured-image">
           <a href="{{ article.url }}" class="media media--hover-effect" style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
             <img
