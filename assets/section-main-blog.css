@@ -66,3 +66,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
 }
+
+.blog-articles .article {
+  padding: 0 6rem;
+}
