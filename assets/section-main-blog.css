@@ -41,3 +41,8 @@
   letter-spacing: 1px;
   color: #1a1a1a;
 }
+
+.blog-articles__featured-text {
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
