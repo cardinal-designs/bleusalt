@@ -49,3 +49,10 @@
     height: 80px;
   }
 }
+
+/* Featured article */
+.blog-articles__featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
