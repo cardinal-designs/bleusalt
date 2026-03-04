@@ -57,6 +57,11 @@
   gap: 100px;
 }
 
+.blog-articles__featured-image img {
+  width: 100%;
+  height: auto;
+}
+
 .blog-articles__featured-content {
   padding: 40px 0;
   display: flex;
