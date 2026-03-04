@@ -410,7 +410,8 @@ div.article-rte {
     }
 
     .finale {
-        margin: 40px;
+        margin: 0;
+        padding: 30px 40px;
     }
 
     .finale h2 {
