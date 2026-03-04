@@ -23,11 +23,11 @@
 }
 
 .blog-articles__featured-tag {
+  margin: 0 0 15px;
   font-family: var(--font-body-family);
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 20px;
   color: #666;
 }
 
