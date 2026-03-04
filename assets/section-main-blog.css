@@ -30,3 +30,15 @@
   margin-bottom: 20px;
   color: #666;
 }
+
+.blog-articles__featured-title {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Didot, Bodoni MT, Playfair Display, serif;
+  font-size: 36px;
+  font-weight: 300;
+  margin: 40px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+}
