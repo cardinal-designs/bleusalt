@@ -25,7 +25,7 @@
     "variant_pills_radius": 0,
     "inputs_border_opacity": 20,
     "inputs_radius": 2,
-    "card_style": "card",
+    "card_style": "standard",
     "card_color_scheme": "background-2",
     "popup_corner_radius": 8,
     "popup_shadow_blur": 5,
