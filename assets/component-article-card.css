@@ -160,16 +160,17 @@
 
 
 .article-card__tag {
-  margin: 0 0 10px;
+  margin: 10px 0;
   font-family: var(--font-body-family);
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #666;
+  text-align: center;
 }
 
 .article-card__title {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   font-family: Didot, Bodoni MT, Playfair Display, serif;
   font-size: 28px;
   font-weight: 300;
@@ -183,4 +184,5 @@
   font-family: Georgia, Times New Roman, serif;
   font-size: 14px;
   line-height: 1.7;
+  text-align: center;
 }
