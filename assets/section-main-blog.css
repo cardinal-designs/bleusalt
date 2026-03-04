@@ -70,3 +70,9 @@
 .blog-articles .article {
   padding: 2rem 7rem;
 }
+
+@media screen and (max-width: 1135px) {
+  .blog-articles .article {
+    padding: 1rem 3rem;
+  }
+}
