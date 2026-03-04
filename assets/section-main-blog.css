@@ -68,4 +68,14 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 60px;
+  text-align: center;
+}
+
+.blog-articles__featured-tag {
+  font-family: var(--font-body-family);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #666;
 }
