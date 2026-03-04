@@ -199,5 +199,6 @@
 
   .article-card__text {
     margin: 0 auto;
+    font-size: 12px;
   }
 }
