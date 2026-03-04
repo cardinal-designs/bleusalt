@@ -375,8 +375,15 @@
       "blocks": {
         "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "title": "Shop The Look"
+          }
+        },
+        "paragraph_QpGWL7": {
+          "type": "paragraph",
+          "settings": {
+            "title": "<p>Shop The Look</p>"
           }
         },
         "88d72792-7b35-451c-bf9a-b7f887cde26f": {
@@ -409,6 +416,7 @@
       },
       "block_order": [
         "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
+        "paragraph_QpGWL7",
         "88d72792-7b35-451c-bf9a-b7f887cde26f",
         "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
         "45d95e55-eabb-474a-81e3-9b60083b3f79"
