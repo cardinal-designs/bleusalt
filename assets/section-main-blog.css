@@ -91,3 +91,10 @@
     padding: 1rem 3rem;
   }
 }
+
+@media screen and (max-width: 749px) {
+  .blog-articles {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
