@@ -70,6 +70,10 @@
   .blog-articles__featured-content-top {
     margin-bottom: 30px;
   }
+
+  .blog-articles__featured-content {
+    padding: 20px 0 0;
+  }
 }
 
 .blog-articles {
