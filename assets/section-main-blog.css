@@ -4,7 +4,7 @@
 
 .blog-articles__featured {
   margin-bottom: 100px;
-  display: grid !important;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
@@ -58,6 +58,12 @@
 @media screen and (max-width: 1135px) {
   .blog-articles__featured {
     gap: 60px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .blog-articles__featured {
+    display: block;
   }
 }
 
