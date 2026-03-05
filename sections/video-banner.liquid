@@ -5,7 +5,7 @@
   endif
 -%}
 {% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: pages_to_defer_css, local: true %} {% endcomment %}
-{{ section.settings.image_overlay_opacity}}
+
 {%- liquid
   assign video_height_mobile = section.settings.video_height_mobile
   if section.settings.video_height_mobile == 'square'
@@ -233,7 +233,7 @@
   {%- endif -%}
 
   {% if section.settings.image_overlay != 'none' %}
-    <div class="banner__overlay banner__overlay--{{ section.settings.image_overlay }}" style="opacity: {{ section.settings.image_overlay_opacity | divided_by: 100 }};"></div>
+    <div class="banner__overlay banner__overlay--{{ section.settings.image_overlay }}" style="opacity: {{ section.settings.image_overlay_opacity | times: 1.0 | divided_by: 100 }};"></div>
   {% endif %}
   <div
     class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} page-width"
