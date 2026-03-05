@@ -260,11 +260,11 @@
     height: auto;
   }
 
-  .banner--stacked.banner--adapt:not(.banner--mobile-bottom) .banner__content {
+  /* .banner--stacked.banner--adapt:not(.banner--mobile-bottom) .banner__content {
     max-height: 100%;
     overflow: hidden;
     position: absolute;
-  }
+  } */
 
   .banner--stacked:not(.banner--adapt) .banner__media {
     position: relative;
