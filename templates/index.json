@@ -64,7 +64,7 @@
         "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
-        "mobile_content_position": "bottom-right",
+        "mobile_content_position": "bottom-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "none",
