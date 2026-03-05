@@ -15,14 +15,14 @@
         "text_f3gYBW": {
           "type": "text",
           "settings": {
-            "text": "Introducing",
+            "text": "Coming Soon",
             "text_color": "#ffffff"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The True Cardigan",
+            "heading": "The Mock Neck Top",
             "heading_color": "#ffffff",
             "heading_size": "h0",
             "heading_tag": "h2"
@@ -31,7 +31,7 @@
         "text_two_NHhmBc": {
           "type": "text-two",
           "settings": {
-            "text": "A True Classic",
+            "text": "90's Minimal Chic",
             "text_color": "#ffffff"
           }
         },
@@ -55,11 +55,11 @@
       ],
       "custom_css": [],
       "settings": {
-        "video": "shopify://files/videos/True Cardigan Wide.mp4",
+        "video": "shopify://files/videos/The Mock Neck Top (WEB).mp4",
         "video_url": "",
-        "video_mobile": "shopify://files/videos/True Cardigan Square.mp4",
+        "video_mobile": "shopify://files/videos/The Mock Neck Top(mobile).mp4",
         "video_url_mobile": "",
-        "description": "The True Cardigan by Bleusalt",
+        "description": "The Mock Neck Top by Bleusalt",
         "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
@@ -70,7 +70,7 @@
         "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
-        "video_overlay_link": "shopify://products/the-true-cardigan"
+        "video_overlay_link": "shopify://collections/womens-new-arrivals"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {
@@ -193,6 +193,70 @@
         "padding_bottom": 36
       }
     },
+    "video_banner_qBwaKh": {
+      "type": "video-banner",
+      "blocks": {
+        "text_nTbnGe": {
+          "type": "text",
+          "settings": {
+            "text": "Introducing",
+            "text_color": "#ffffff"
+          }
+        },
+        "heading_iBximb": {
+          "type": "heading",
+          "settings": {
+            "heading": "The True Cardigan",
+            "heading_color": "#ffffff",
+            "heading_size": "h0",
+            "heading_tag": "h2"
+          }
+        },
+        "text_two_M4B8bJ": {
+          "type": "text-two",
+          "settings": {
+            "text": "A True Classic",
+            "text_color": "#ffffff"
+          }
+        },
+        "buttons_JHxG4f": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/the-true-cardigan",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "",
+            "button_link_2": "shopify://collections/womens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "text_nTbnGe",
+        "heading_iBximb",
+        "text_two_M4B8bJ",
+        "buttons_JHxG4f"
+      ],
+      "custom_css": [],
+      "settings": {
+        "video": "shopify://files/videos/True Cardigan Wide.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/True Cardigan Square.mp4",
+        "video_url_mobile": "",
+        "description": "The True Cardigan by Bleusalt",
+        "image_overlay_opacity": 20,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_alignment": "center",
+        "video_height_mobile": "125",
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": "shopify://products/the-true-cardigan"
+      }
+    },
     "video_banner_R7Lagn": {
       "type": "video-banner",
       "blocks": {
@@ -237,6 +301,7 @@
         "text_two_3wKY3h",
         "buttons_WQY3Gk"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "video": "shopify://files/videos/Elevated Legging Home Desktop.mp4",
@@ -610,6 +675,7 @@
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
     "featured_collection",
+    "video_banner_qBwaKh",
     "video_banner_R7Lagn",
     "1659735210e064d864",
     "video_banner_YmFe9m",
