@@ -433,6 +433,7 @@
 }
 
 .banner__overlay {
+  display: block !important;
   position: absolute;
   top: 0;
   right: 0;
