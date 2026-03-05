@@ -277,6 +277,14 @@
   .banner--stacked .banner__media-image-half {
     width: 100%;
   }
+
+  .banner__content.video-banner__banner-content {
+    top: 0 !important;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(0) !important;
+  }
 }
 
 .banner__content {
