@@ -23,7 +23,7 @@
           "type": "heading",
           "settings": {
             "heading": "The Mock Neck Top",
-            "heading_color": "#0d1c29",
+            "heading_color": "#FFFFFF",
             "heading_size": "h0",
             "heading_tag": "h2"
           }
@@ -32,7 +32,7 @@
           "type": "text-two",
           "settings": {
             "text": "90's Minimal Chic",
-            "text_color": "#0d1c29"
+            "text_color": "#FFFFFF"
           }
         },
         "buttons_fCtqBt": {
