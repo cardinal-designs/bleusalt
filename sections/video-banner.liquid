@@ -235,6 +235,10 @@
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
+
+  {% if section.settings.image_overlay != 'none' %}
+    <div class="banner__overlay banner__overlay--{{ section.settings.image_overlay }}" style="opacity: {{ section.settings.image_overlay_opacity | divided_by: 100 }};"></div>
+  {% endif %}
   <div
     class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} page-width"
   >
@@ -366,6 +370,26 @@
       "type": "text",
       "id": "description",
       "label": "SEO and ADA description"
+    },
+    {
+      "type": "select",
+      "id": "image_overlay",
+      "options": [
+        {
+          "value": "black",
+          "label": "Black"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "black",
+      "label": "Image Overlay"
     },
     {
       "type": "range",
