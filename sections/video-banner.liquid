@@ -236,7 +236,7 @@
     <div class="banner__overlay banner__overlay--{{ section.settings.image_overlay }}" style="opacity: {{ section.settings.image_overlay_opacity | times: 1.0 | divided_by: 100 }};"></div>
   {% endif %}
   <div
-    class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} banner__content-mobile--{{ section.settings.desktop_content_position }} page-width"
+    class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} banner__content-mobile--{{ section.settings.mobile_content_position }} page-width"
   >
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }}">
       {%- for block in section.blocks -%}
