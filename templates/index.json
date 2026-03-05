@@ -16,14 +16,14 @@
           "type": "text",
           "settings": {
             "text": "Launching Monday",
-            "text_color": "#ffffff"
+            "text_color": "#0d1c29"
           }
         },
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
             "heading": "The Mock Neck Top",
-            "heading_color": "#ffffff",
+            "heading_color": "#0d1c29",
             "heading_size": "h0",
             "heading_tag": "h2"
           }
@@ -32,7 +32,7 @@
           "type": "text-two",
           "settings": {
             "text": "90's Minimal Chic",
-            "text_color": "#ffffff"
+            "text_color": "#0d1c29"
           }
         },
         "buttons_fCtqBt": {
@@ -60,7 +60,7 @@
         "video_mobile": "shopify://files/videos/The Mock Neck Top(mobile).mp4",
         "video_url_mobile": "",
         "description": "The Mock Neck Top by Bleusalt",
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 10,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
