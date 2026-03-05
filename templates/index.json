@@ -148,18 +148,18 @@
     "featured_collection": {
       "type": "featured-collection",
       "blocks": {
-        "49238d89-463e-419a-8643-42f4463ad2dd": {
-          "type": "collection",
-          "settings": {
-            "heading": "New Arrivals",
-            "collection": "womens-new-arrivals"
-          }
-        },
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
           "type": "collection",
           "settings": {
             "heading": "Best Sellers",
             "collection": "womens-best-sellers"
+          }
+        },
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
+          "type": "collection",
+          "settings": {
+            "heading": "New Arrivals",
+            "collection": "womens-new-arrivals"
           }
         },
         "collection_wb9KnW": {
@@ -171,8 +171,8 @@
         }
       },
       "block_order": [
-        "49238d89-463e-419a-8643-42f4463ad2dd",
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
+        "49238d89-463e-419a-8643-42f4463ad2dd",
         "collection_wb9KnW"
       ],
       "settings": {
