@@ -347,18 +347,6 @@
   }
 }
 
-.banner::after,
-.banner__media::after {
-  content: '' !important;
-  position: absolute;
-  top: 0;
-  background: #000000;
-  opacity: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-
 .banner__box > * + .banner__text {
   margin-top: 1.5rem;
 }
@@ -441,4 +429,17 @@
 
 .banner__media video {
   object-fit: cover;
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}
+
+.banner__overlay--white {
+  background-color: white;
 }
