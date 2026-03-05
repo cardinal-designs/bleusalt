@@ -5,7 +5,7 @@
   endif
 -%}
 {% render 'hs-defer-css' with filename: 'section-image-banner.css', pages: pages_to_defer_css, local: true %} {% endcomment %}
-
+{{ section.settings.image_overlay_opacity}}
 {%- liquid
   assign video_height_mobile = section.settings.video_height_mobile
   if section.settings.video_height_mobile == 'square'
