@@ -60,7 +60,7 @@
         "video_mobile": "shopify://files/videos/The Mock Neck Top(mobile).mp4",
         "video_url_mobile": "",
         "description": "The Mock Neck Top by Bleusalt",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
