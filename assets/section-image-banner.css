@@ -371,6 +371,10 @@
   z-index: 1;
 }
 
+.banner__box--shadow > * {
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+}
+
 @media screen and (min-width: 750px) {
   .banner--desktop-transparent .banner__box {
     background: transparent;
