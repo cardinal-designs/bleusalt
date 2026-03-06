@@ -1,5 +1,27 @@
 {% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
 
+{% if section.settings.show_divider %}
+<div class="{{ section.id }} alt__article--divider">
+    <div class="article-container">
+        <div class="section-divider"></div>
+    </div>
+</div>
+
+<style>
+    .{{ section.id }}.alt__article--divider .section-divider {
+        width: 100px;
+        height: 1px;
+        background: #000;
+        margin: {{ section.settings.spacing }}px auto;
+        display: block;
+    }
+
+    .{{ section.id }}.alt__article--divider .article-container {
+        margin-bottom: 0;
+    }
+</style>
+{% endif %}
+
 <div class="alt__article--content">
     <div class="article-container">
         {% if section.settings.title != blank %}
@@ -62,6 +84,21 @@
 {
     "name": "Article Content 3",
     "settings": [
+        {
+            "type": "range",
+            "id": "spacing",
+            "label": "Spacing",
+            "min": 10,
+            "max": 100,
+            "step": 5,
+            "default": 50
+        },
+        {
+            "type": "checkbox",
+            "id": "show_divider",
+            "label": "Enable Divider",
+            "default": false
+        },
         {
             "type": "text",
             "id": "title",
