@@ -60,6 +60,8 @@
         "video_mobile": "shopify://files/videos/The Mock Neck Top(mobile).mp4",
         "video_url_mobile": "",
         "description": "The Mock Neck Top by Bleusalt",
+        "add_text_shadow": false,
+        "image_overlay": "black",
         "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
@@ -161,19 +163,11 @@
             "heading": "New Arrivals",
             "collection": "womens-new-arrivals"
           }
-        },
-        "collection_wb9KnW": {
-          "type": "collection",
-          "settings": {
-            "heading": "Crew Collection",
-            "collection": "the-crew-collection"
-          }
         }
       },
       "block_order": [
         "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
-        "49238d89-463e-419a-8643-42f4463ad2dd",
-        "collection_wb9KnW"
+        "49238d89-463e-419a-8643-42f4463ad2dd"
       ],
       "settings": {
         "title": "",
@@ -252,13 +246,15 @@
         "video_mobile": "shopify://files/videos/True Cardigan Square.mp4",
         "video_url_mobile": "",
         "description": "The True Cardigan by Bleusalt",
+        "add_text_shadow": false,
+        "image_overlay": "black",
         "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "none",
-        "mobile_content_alignment": "center",
+        "mobile_content_position": "middle-center",
         "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
