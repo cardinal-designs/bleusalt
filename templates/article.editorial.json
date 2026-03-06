@@ -111,7 +111,7 @@
         "top_quote_title": "",
         "top_quote_conetnt": "",
         "paragraph_style_3": "100",
-        "image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.image_caption.value }}",
+        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_sub_title": "",
         "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}</p>",
