@@ -59,8 +59,7 @@
         "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
         "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}",
         "paragraph_style_5": "100",
-        "bottom_image": "{{ article.metafields.custom.alt_article_top_content.value.bottom_image.value }}",
-        "bottom_image_caption": "{{ article.metafields.custom.alt_article_top_content.value.bottom_image_caption.value }}"
+        "bottom_image_caption": ""
       }
     },
     "alt_article_content_1_HJXPcX": {
