@@ -147,13 +147,6 @@
         "bottom_image_caption": ""
       }
     },
-    "alt_article_divider_TQTQ7N": {
-      "type": "alt-article-divider",
-      "name": "Article Divider",
-      "settings": {
-        "spacing": 50
-      }
-    },
     "alt_article_content_3_BzTdde": {
       "type": "alt-article-content-3",
       "name": "Article Content 3",
@@ -191,7 +184,6 @@
     "alt_article_content_1_D3gp3g",
     "alt_article_divider_eXM3Kd",
     "alt_article_content_1_PCkeUP",
-    "alt_article_divider_TQTQ7N",
     "alt_article_content_3_BzTdde",
     "alt_article_finale_dHyCKd"
   ]
