@@ -175,7 +175,7 @@
       "name": "Article Content",
       "settings": {
         "spacing": 50,
-        "show_divider": true,
+        "show_divider": false,
         "top_title": "{{ article.metafields.custom.alt_article_content_part_3.value.title_top.value }}",
         "sub_text": "{{ article.metafields.custom.alt_article_content_part_3.value.top_content | metafield_tag }}",
         "paragraph_style_1": "100",
