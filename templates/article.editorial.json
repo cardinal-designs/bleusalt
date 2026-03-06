@@ -158,12 +158,12 @@
       "type": "alt-article-content-3",
       "name": "Article Content 3",
       "settings": {
-        "title": "",
+        "title": "{{ article.metafields.custom.article_week_schedule.value.title.value }}",
         "content": "",
         "paragraph_style_1": "100",
         "sub_title": "",
-        "metafield_key": "",
-        "sub_text": "",
+        "metafield_key": "custom.article_week_schedule",
+        "sub_text": "{{ article.metafields.custom.article_week_schedule.value.sub_text.value }}",
         "image_caption": ""
       }
     },
