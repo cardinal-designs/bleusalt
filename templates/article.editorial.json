@@ -65,8 +65,8 @@
     "alt_article_content_1_HJXPcX": {
       "type": "alt-article-content-1",
       "settings": {
-        "top_title": "She values her time.",
-        "sub_text": "<p>She doesn’t have thirty minutes to get dressed in the morning. And even if she did, she’d spend it on something that actually matters — reading, a real conversation over coffee, a moment of quiet before the day begins.</p><p>She understands that decision fatigue is real. So she’s eliminated the unnecessary decisions. She built a wardrobe that works so well she doesn’t have to think about it.</p><p>This isn’t about caring less about how she looks. It’s about caring more about how she spends her energy.</p>",
+        "top_title": "{{ article.metafields.custom.image_grid.value.title.value }}",
+        "sub_text": "{{ article.metafields.custom.image_grid.value.content | metafield_tag }}",
         "paragraph_style_1": "100",
         "top_sub_title": "",
         "top_conetnt": "",
