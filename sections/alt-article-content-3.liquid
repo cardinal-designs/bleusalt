@@ -1,5 +1,5 @@
 {% render 'hs-defer-css' with filename: 'alt-article-content.css', pages: 'collection,index,product' | split: ',', local: true %}
-
+section.settings.title -- {{ section.settings.title }}
 {% if section.settings.show_divider and section.settings.title != blank %}
 <div class="{{ section.id }} alt__article--divider">
     <div class="article-container">
