@@ -201,9 +201,9 @@
       "name": "Article Finale",
       "settings": {
         "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
-        "content": "{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}",
+        "content": "<p>{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}</p>",
         "paragraph_style_1": "100",
-        "sub_text": "",
+        "sub_text": "{{ article.metafields.custom.alt_article_finale.value.sub_text.value }}",
         "by_line": "",
         "image_caption": ""
       }
