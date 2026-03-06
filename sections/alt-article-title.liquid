@@ -2,13 +2,13 @@
 
 <div class="alt__article--title">
     <div class="article-container">
-        {% if article.tags != blank %}
+        {% comment %} {% if article.tags != blank %}
             <div class="tag-container">
             {% for tag in article.tags %}
                 <p class="tags">{{ tag }}{% unless forloop.last %} /&nbsp;{% endunless %}</p>
             {% endfor %}
             </div>
-        {% endif %}
+        {% endif %} {% endcomment %}
         {% if section.settings.category != blank %}
             <div class="category-label">{{ section.settings.category }}</div>
         {% endif %}
