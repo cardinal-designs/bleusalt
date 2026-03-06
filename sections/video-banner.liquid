@@ -55,10 +55,6 @@
 {%- endstyle -%}
 
 {%- style -%}
-  #Banner-{{ section.id }}::after {
-    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
-  }
-
   .video-banner__heading {
     font-family: {{ settings.type_hero_font.family }}, {{ settings.type_hero_font.fallback_families }};
     font-size: 52px;
@@ -108,7 +104,7 @@
 
   @media screen and (max-width: 749px) {
     .video-banner__text {
-      font-size: 20px;
+      font-size: 14px;
     }
 
     .video-banner__heading {
@@ -235,10 +231,14 @@
       {% render 'video-controls', id: video_id %}
     </div>
   {%- endif -%}
+
+  {% if section.settings.image_overlay != 'none' %}
+    <div class="banner__overlay banner__overlay--{{ section.settings.image_overlay }}" style="opacity: {{ section.settings.image_overlay_opacity | times: 1.0 | divided_by: 100 }};"></div>
+  {% endif %}
   <div
-    class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} page-width"
+    class="banner__content video-banner__banner-content banner__content--{{ section.settings.desktop_content_position }} banner__content-mobile--{{ section.settings.mobile_content_position }} page-width"
   >
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }}">
+    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }}{% if section.settings.add_text_shadow %} banner__box--shadow{% endif %}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -267,7 +267,7 @@
             </div>
           {%- when 'buttons' -%}
             {%- comment -%} Desktop Banner Buttons {%- endcomment -%}
-            <div class="small-hide banner__buttons" {{ block.shopify_attributes }}>
+            <div class="banner__buttons" {{ block.shopify_attributes }}>
               {%- if block.settings.button_label_1 != blank -%}
                 <a
                   {% if block.settings.button_link_1 == blank %}
@@ -301,7 +301,7 @@
   </div>
 
   {%- comment -%} Mobile Banner Buttons {%- endcomment -%}
-  {%- for block in section.blocks -%}
+  {% comment %} {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'buttons' -%}
         <div class="medium-up-hide banner__buttons--mobile" {{ block.shopify_attributes }}>
@@ -333,7 +333,7 @@
           {%- endif -%}
         </div>
     {%- endcase -%}
-  {%- endfor -%}
+  {%- endfor -%} {% endcomment %}
 </video-banner>
 
 {% schema %}
@@ -366,6 +366,31 @@
       "type": "text",
       "id": "description",
       "label": "SEO and ADA description"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_text_shadow",
+      "label": "Add Text Shadow"
+    },
+    {
+      "type": "select",
+      "id": "image_overlay",
+      "options": [
+        {
+          "value": "black",
+          "label": "Black"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "black",
+      "label": "Image Overlay"
     },
     {
       "type": "range",
@@ -502,23 +527,23 @@
     },
     {
       "type": "select",
-      "id": "mobile_content_alignment",
+      "id": "mobile_content_position",
       "options": [
         {
-          "value": "left",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__1.label"
+          "value": "top-center",
+          "label": "Top"
         },
         {
-          "value": "center",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__2.label"
+          "value": "middle-center",
+          "label": "Middle"
         },
         {
-          "value": "right",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__3.label"
+          "value": "bottom-center",
+          "label": "Bottom"
         }
       ],
-      "default": "center",
-      "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
+      "default": "middle-center",
+      "label": "Mobile content position"
     },
     {
       "type": "select",

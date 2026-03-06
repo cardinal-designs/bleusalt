@@ -179,6 +179,9 @@
         "3cbca740-3858-4794-a06d-86306c2065df",
         "collapsible_tab_NhfNPp"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.foursixty-ASExNVGZxaGRNOSs4N__foursixty_shoppable_social_ugc_custom_slider_aE7kpH .fs-entry-container {width: 44% !important; padding-top: 44% !important;}}"
+      ],
       "settings": {
         "enable_sticky_info": true,
         "featured_video_order": 1,

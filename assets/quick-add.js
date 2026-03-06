@@ -57,6 +57,7 @@ if (!customElements.get('quick-add')) {
       this.updateUrl();
       this.sizeAvailabilities();
       this.updateSelectedSize();
+      this.changeImage();
     }
     init() {
       if(!this.selectedColor) return;

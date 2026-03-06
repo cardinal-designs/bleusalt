@@ -2501,6 +2501,27 @@ input[type='checkbox'] {
   menu-drawer ~ .header__icons .header__icon--account {
     display: none;
   }
+
+  .header__icon,
+  .header__icon--cart .icon {
+    height: 25px;
+    width: auto;
+    padding: 0;
+  }
+
+  .header__icon svg {
+    height: 25px !important;
+    width: auto !important;
+  }
+
+  .header__icon--cart {
+    margin: 0;
+  }
+
+  .header__icon .icon.icon-close {
+    height: 18px !important;
+    color: black;
+  }
 }
 
 .header__icon--menu[aria-expanded="true"]::before {
