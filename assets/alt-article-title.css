@@ -92,13 +92,30 @@
         margin-bottom: 40px;
     }
 
+    .alt__article--header {
+        margin-top: 0;
+    }
+
+    .alt__article--title {
+        margin-top: 0;
+    }
+
     .alt__article--title .article-header {
         font-size: 32px;
         margin-bottom: 10px;
     }
 
     .alt__article--title h1 {
+        margin-top: 50px;
         font-size: 36px;
+    }
+
+    .alt__article--header h1 {
+        margin-top: 0;
+    }
+
+    .alt__article--title .byline {
+        margin-bottom: 50px;
     }
 
 }

@@ -51,7 +51,8 @@
     "el": ".swiper-scrollbar",
     "hide": false,
     "draggable": true
-  }
+  },
+  "zoom": true
 }
 {%- endcapture -%}
 
@@ -173,7 +174,16 @@
                         assign prioritize_loading = true
                       endif
                     -%}
-                    {% render 'new-image-element', image: media.preview_image, prioritize_loading: prioritize_loading %}
+                      <div class="swiper-zoom-container">
+                        {{-
+                          media.preview_image
+                          | image_url: width: '1600px'
+                          | image_tag:
+                            sizes: '(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)',
+                            widths: '300,576,550,1100,1600,2048,2560,3840',
+                            loading: 'lazy'
+                        -}}
+                      </div>
                   {% when 'video'%}
                       {% assign ratio =  1 | divided_by: media.preview_image.aspect_ratio | times: 100 %}
                       <div class="media" style="padding-top:{{ ratio }}%;">

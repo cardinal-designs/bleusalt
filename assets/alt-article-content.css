@@ -50,7 +50,7 @@ div.article-rte {
     column-count: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 749px) {
     .article-rte.paragraph-25,
     .article-rte.paragraph-33,
     .article-rte.paragraph-50 {
@@ -272,16 +272,20 @@ div.article-rte {
 
 .finale {
     text-align: center;
-    margin: 100px 0;
+    margin: 40px 0 100px;
     padding: 80px 60px;
     background: #fafafa;
+}
+
+.finale h2 {
+    margin-top: 0;
 }
 
 .finale p {
     text-align: center;
     font-size: 18px;
     max-width: 700px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .finale .article-rte + .article-rte,
@@ -369,12 +373,16 @@ div.article-rte {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 749px) {
 
     .outfit-formula,
     .context-section,
     .manifesto-section {
         padding: 40px 30px;
+    }
+
+    .alt__article--content h2 {
+        font-size: 32px;
     }
 
     .alt__article--content .image-grid, 
@@ -399,6 +407,19 @@ div.article-rte {
     .article-table table tr td:first-child,
     .article-table table tr th:first-child {
         width: 100px;
+    }
+
+    .finale {
+        margin: 0;
+        padding: 30px 40px;
+    }
+
+    .finale h2 {
+        margin-bottom: 20px;
+    }
+
+    .finale p {
+        text-align: center;
     }
 
 }
