@@ -196,6 +196,32 @@
         "bottom_image_caption": ""
       }
     },
+    "alt_article_content_1_NHYTfq": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "spacing": 50,
+        "show_divider": true,
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_4.value.title_top.value }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_content_part_4.value.top_content | metafield_tag }}",
+        "paragraph_style_1": "100",
+        "top_sub_title": "",
+        "top_conetnt": "",
+        "paragraph_style_2": "100",
+        "top_quote_title": "",
+        "top_quote_conetnt": "",
+        "paragraph_style_3": "100",
+        "image_caption": "",
+        "bottom_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_title.value }}",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "<p>{{ article.metafields.custom.alt_article_content_part_3.value.bottom_content | metafield_tag }}</p>",
+        "paragraph_style_4": "100",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "paragraph_style_5": "100",
+        "bottom_image_caption": ""
+      }
+    },
     "alt_article_finale_dHyCKd": {
       "type": "alt-article-finale",
       "name": "Article Finale",
@@ -222,6 +248,7 @@
     "alt_article_content_1_PCkeUP",
     "alt_article_content_3_BzTdde",
     "alt_article_content_1_ykCAcf",
+    "alt_article_content_1_NHYTfq",
     "alt_article_finale_dHyCKd"
   ]
 }
