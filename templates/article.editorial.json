@@ -200,7 +200,7 @@
       "type": "alt-article-finale",
       "name": "Article Finale",
       "settings": {
-        "title": "She's the Bleusalt woman.",
+        "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
         "content": "{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}",
         "paragraph_style_1": "100",
         "sub_text": "",
