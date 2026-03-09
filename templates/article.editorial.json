@@ -34,6 +34,7 @@
     },
     "alt_article_divider_XTfMXe": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {
         "spacing": 50
@@ -42,32 +43,35 @@
     "alt-article-content-1": {
       "type": "alt-article-content-1",
       "settings": {
+        "spacing": 50,
+        "show_divider": true,
         "top_title": "{{ article.metafields.custom.alt_article_top_content.value.title_top.value }}",
         "sub_text": "",
         "paragraph_style_1": "100",
-        "top_sub_title": "{{ article.metafields.custom.alt_article_top_content.value.top_title.value }}",
+        "top_sub_title": "",
         "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
         "paragraph_style_2": "100",
-        "top_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_title.value }}",
-        "top_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_quote_content | metafield_tag }}",
+        "top_quote_title": "",
+        "top_quote_conetnt": "",
         "paragraph_style_3": "100",
-        "image_caption": "{{ article.metafields.custom.alt_article_top_content.value.image_caption.value }}",
+        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
-        "bottom_sub_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_sub_title.value }}",
+        "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}",
         "paragraph_style_4": "100",
-        "bottom_quote_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_title.value }}",
-        "bottom_quote_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_quote_text | metafield_tag }}",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
         "paragraph_style_5": "100",
-        "bottom_image": "{{ article.metafields.custom.alt_article_top_content.value.bottom_image.value }}",
-        "bottom_image_caption": "{{ article.metafields.custom.alt_article_top_content.value.bottom_image_caption.value }}"
+        "bottom_image_caption": ""
       }
     },
     "alt_article_content_1_HJXPcX": {
       "type": "alt-article-content-1",
       "settings": {
-        "top_title": "She values her time.",
-        "sub_text": "<p>She doesn’t have thirty minutes to get dressed in the morning. And even if she did, she’d spend it on something that actually matters — reading, a real conversation over coffee, a moment of quiet before the day begins.</p><p>She understands that decision fatigue is real. So she’s eliminated the unnecessary decisions. She built a wardrobe that works so well she doesn’t have to think about it.</p><p>This isn’t about caring less about how she looks. It’s about caring more about how she spends her energy.</p>",
+        "spacing": 50,
+        "show_divider": true,
+        "top_title": "{{ article.metafields.custom.image_grid.value.title.value }}",
+        "sub_text": "{{ article.metafields.custom.image_grid.value.content | metafield_tag }}",
         "paragraph_style_1": "100",
         "top_sub_title": "",
         "top_conetnt": "",
@@ -88,6 +92,7 @@
     },
     "alt_article_divider_kYEKhk": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {
         "spacing": 50
@@ -97,6 +102,8 @@
       "type": "alt-article-content-1",
       "name": "Article Content",
       "settings": {
+        "spacing": 50,
+        "show_divider": true,
         "top_title": "{{ article.metafields.custom.alt_article_content_part_2.value.title_top.value }}",
         "sub_text": "",
         "paragraph_style_1": "100",
@@ -106,7 +113,7 @@
         "top_quote_title": "",
         "top_quote_conetnt": "",
         "paragraph_style_3": "100",
-        "image_caption": "{{ article.metafields.custom.alt_article_content_part_2.value.image_caption.value }}",
+        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
@@ -119,6 +126,7 @@
     },
     "alt_article_divider_eXM3Kd": {
       "type": "alt-article-divider",
+      "disabled": true,
       "name": "Article Divider",
       "settings": {
         "spacing": 50
@@ -128,8 +136,10 @@
       "type": "alt-article-content-1",
       "name": "Article Content",
       "settings": {
-        "top_title": "She lives a full life.",
-        "sub_text": "<p>She’s a founder and a mother. An executive and a host. She works from coffee shops and leads board meetings. Her life doesn’t happen in compartments — it flows. One meeting turns into lunch with a friend. A work trip becomes an opportunity to explore somewhere new.</p><p>She needs clothes that move with her. That work in all of these contexts without requiring outfit changes or anxiety. She wants to show up as herself everywhere — not a professional version, not a home version. Just herself.</p><p>She built a life she doesn’t need to escape from. And she dresses for that life.</p>",
+        "spacing": 50,
+        "show_divider": true,
+        "top_title": "{{ article.metafields.custom.alt_article_image_grid_2.value.title.value }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_image_grid_2.value.content | metafield_tag }}",
         "paragraph_style_1": "100",
         "top_sub_title": "",
         "top_conetnt": "",
@@ -138,9 +148,102 @@
         "top_quote_conetnt": "",
         "paragraph_style_3": "100",
         "image_caption": "",
-        "bottom_title": "She's past proving anything.",
+        "bottom_title": "{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_heading.value }}",
         "bottom_sub_title": "",
-        "bottom_conetnt": "<p>She doesn’t dress to impress. She doesn’t dress to fit in. She already knows she belongs — wherever she is.</p><p>This changes everything about how she dresses. There’s no performative element. No trying too hard. No second-guessing. She wears what makes her feel like herself, what allows her to be fully present in conversations rather than worried about her outfit.</p><p>The most powerful thing she can wear is her own confidence. Everything else is just support for that.</p>",
+        "bottom_conetnt": "<p></p>{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_content | metafield_tag }}",
+        "paragraph_style_4": "100",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "paragraph_style_5": "100",
+        "bottom_image_caption": ""
+      }
+    },
+    "alt_article_content_3_BzTdde": {
+      "type": "alt-article-content-3",
+      "name": "Article Content 3",
+      "settings": {
+        "spacing": 50,
+        "show_divider": true,
+        "title": "{{ article.metafields.custom.article_week_schedule.value.title.value }}",
+        "content": "",
+        "paragraph_style_1": "100",
+        "sub_title": "",
+        "metafield_key": "custom.article_week_schedule",
+        "sub_text": "{{ article.metafields.custom.article_week_schedule.value.sub_text.value }}",
+        "image_caption": ""
+      }
+    },
+    "alt_article_content_1_ykCAcf": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "spacing": 50,
+        "show_divider": true,
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_3.value.title_top.value }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_content_part_3.value.top_content | metafield_tag }}",
+        "paragraph_style_1": "100",
+        "top_sub_title": "",
+        "top_conetnt": "",
+        "paragraph_style_2": "100",
+        "top_quote_title": "",
+        "top_quote_conetnt": "",
+        "paragraph_style_3": "100",
+        "image_caption": "",
+        "bottom_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_title.value }}",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_content | metafield_tag }}",
+        "paragraph_style_4": "100",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "paragraph_style_5": "100",
+        "bottom_image_caption": ""
+      }
+    },
+    "alt_article_content_1_NHYTfq": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "spacing": 50,
+        "show_divider": true,
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_4.value.title_top.value }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_content_part_4.value.top_content | metafield_tag }}",
+        "paragraph_style_1": "100",
+        "top_sub_title": "",
+        "top_conetnt": "",
+        "paragraph_style_2": "100",
+        "top_quote_title": "",
+        "top_quote_conetnt": "",
+        "paragraph_style_3": "100",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
+        "paragraph_style_4": "100",
+        "bottom_quote_title": "",
+        "bottom_quote_conetnt": "",
+        "paragraph_style_5": "100",
+        "bottom_image_caption": ""
+      }
+    },
+    "alt_article_content_1_6HmEbd": {
+      "type": "alt-article-content-1",
+      "name": "Article Content",
+      "settings": {
+        "spacing": 50,
+        "show_divider": true,
+        "top_title": "{{ article.metafields.custom.alt_article_content_part_5.value.title_top.value }}",
+        "sub_text": "{{ article.metafields.custom.alt_article_content_part_5.value.top_content | metafield_tag }}",
+        "paragraph_style_1": "100",
+        "top_sub_title": "",
+        "top_conetnt": "",
+        "paragraph_style_2": "100",
+        "top_quote_title": "",
+        "top_quote_conetnt": "",
+        "paragraph_style_3": "100",
+        "image_caption": "",
+        "bottom_title": "",
+        "bottom_sub_title": "",
+        "bottom_conetnt": "",
         "paragraph_style_4": "100",
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
@@ -152,10 +255,10 @@
       "type": "alt-article-finale",
       "name": "Article Finale",
       "settings": {
-        "title": "She's the Bleusalt woman.",
-        "content": "<p>And we built this for her.</p>",
+        "title": "{{ article.metafields.custom.alt_article_finale.value.title.value }}",
+        "content": "<p>{{ article.metafields.custom.alt_article_finale.value.content | metafield_tag }}</p>",
         "paragraph_style_1": "100",
-        "sub_text": "",
+        "sub_text": "{{ article.metafields.custom.alt_article_finale.value.sub_text.value }}",
         "by_line": "",
         "image_caption": ""
       }
@@ -172,6 +275,10 @@
     "alt_article_content_1_D3gp3g",
     "alt_article_divider_eXM3Kd",
     "alt_article_content_1_PCkeUP",
+    "alt_article_content_3_BzTdde",
+    "alt_article_content_1_ykCAcf",
+    "alt_article_content_1_NHYTfq",
+    "alt_article_content_1_6HmEbd",
     "alt_article_finale_dHyCKd"
   ]
 }
