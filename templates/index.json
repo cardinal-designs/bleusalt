@@ -26,6 +26,7 @@
           "settings": {
             "heading": "The Mock Neck Top",
             "heading_color": "#ffffff",
+            "heading_size": 52,
             "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
@@ -216,6 +217,7 @@
           "settings": {
             "heading": "The True Cardigan",
             "heading_color": "#ffffff",
+            "heading_size": 52,
             "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
@@ -286,6 +288,7 @@
           "settings": {
             "heading": "The Elevated Legging",
             "heading_color": "#ffffff",
+            "heading_size": 52,
             "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
@@ -370,7 +373,7 @@
         "description_style": "body",
         "collection": "bottoms-skimpy",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
@@ -405,6 +408,7 @@
           "settings": {
             "heading": "The Cindy Top",
             "heading_color": "#ffffff",
+            "heading_size": 52,
             "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
@@ -576,6 +580,7 @@
           "settings": {
             "heading": "Our Materials",
             "heading_color": "#ffffff",
+            "heading_size": 52,
             "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
