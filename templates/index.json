@@ -17,7 +17,7 @@
           "settings": {
             "text": "Introducing",
             "text_color": "#ffffff",
-            "text_size": 22,
+            "text_size": 18,
             "text_size_mobile": 14
           }
         },
@@ -65,7 +65,7 @@
         "video_mobile": "shopify://files/videos/The Mock Neck Top(mobile).mp4",
         "video_url_mobile": "",
         "description": "The Mock Neck Top by Bleusalt",
-        "add_text_shadow": false,
+        "add_text_shadow": true,
         "image_overlay": "black",
         "image_overlay_opacity": 20,
         "video_height": "56.25",
@@ -208,7 +208,7 @@
           "settings": {
             "text": "Introducing",
             "text_color": "#ffffff",
-            "text_size": 22,
+            "text_size": 18,
             "text_size_mobile": 14
           }
         },
@@ -256,7 +256,7 @@
         "video_mobile": "shopify://files/videos/True Cardigan Square.mp4",
         "video_url_mobile": "",
         "description": "The True Cardigan by Bleusalt",
-        "add_text_shadow": false,
+        "add_text_shadow": true,
         "image_overlay": "black",
         "image_overlay_opacity": 20,
         "video_height": "56.25",
@@ -619,7 +619,7 @@
         "video_mobile": "shopify://files/videos/Materials edit 2-.mp4",
         "video_url_mobile": "",
         "description": "Bleusalt Materials Video",
-        "add_text_shadow": false,
+        "add_text_shadow": true,
         "image_overlay": "black",
         "image_overlay_opacity": 20,
         "video_height": "56.25",
