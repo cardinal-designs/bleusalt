@@ -262,20 +262,42 @@
             </style>
           {%- when 'text' -%}
             <div
-              class="video-banner__text"
+              class="video-banner__text video-banner__text--{{ block.id }}"
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.text_color }}"
             >
               <span>{{ block.settings.text | escape }}</span>
             </div>
+
+            <style>
+              .video-banner__text.video-banner__text--{{ block.id }} {
+                font-size: {{ block.settings.text_size }}px;
+              }
+              @media screen and (max-width: 749px) {
+                .video-banner__text.video-banner__text--{{ block.id }} {
+                  font-size: {{ block.settings.text_size_mobile }}px;
+                }
+              }
+            </style>
           {%- when 'text-two' -%}
             <div
-              class="video-banner__text"
+              class="video-banner__text video-banner__text--{{ block.id }}"
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.text_color }}"
             >
               <span>{{ block.settings.text | escape }}</span>
             </div>
+
+            <style>
+              .video-banner__text.video-banner__text--{{ block.id }} {
+                font-size: {{ block.settings.text_size }}px;
+              }
+              @media screen and (max-width: 749px) {
+                .video-banner__text.video-banner__text--{{ block.id }} {
+                  font-size: {{ block.settings.text_size_mobile }}px;
+                }
+              }
+            </style>
           {%- when 'buttons' -%}
             {%- comment -%} Desktop Banner Buttons {%- endcomment -%}
             <div class="banner__buttons" {{ block.shopify_attributes }}>
@@ -651,6 +673,18 @@
           "type": "color",
           "id": "text_color",
           "label": "Text Color"
+        },
+        {
+          "type": "number",
+          "id": "text_size",
+          "default": 22,
+          "label": "Text Size (px)"
+        },
+        {
+          "type": "number",
+          "id": "text_size_mobile",
+          "default": 14,
+          "label": "Text Size Mobile (px)"
         }
       ]
     },
@@ -669,6 +703,18 @@
           "type": "color",
           "id": "text_color",
           "label": "Text Color"
+        },
+        {
+          "type": "number",
+          "id": "text_size",
+          "default": 22,
+          "label": "Text Size (px)"
+        },
+        {
+          "type": "number",
+          "id": "text_size_mobile",
+          "default": 14,
+          "label": "Text Size Mobile (px)"
         }
       ]
     },
