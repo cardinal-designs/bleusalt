@@ -372,7 +372,7 @@
 }
 
 .banner__box--shadow .video-banner__text,
-.banner__box--shadow .video-banner__title {
+.banner__box--shadow .video-banner__heading {
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
 }
 
