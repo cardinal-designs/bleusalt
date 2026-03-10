@@ -243,12 +243,23 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <{{ block.settings.heading_tag }}
-              class="video-banner__heading"
+              class="video-banner__heading video-banner__heading--{{ block.id }}"
               {{ block.shopify_attributes }}
               style="color: {{ block.settings.heading_color }}"
             >
               <span>{{ block.settings.heading | escape }}</span>
             </{{ block.settings.heading_tag }}>
+
+            <style>
+              .video-banner__heading.video-banner__heading--{{ block.id }} {
+                font-size: {{ block.settings.heading_size }}px;
+              }
+              @media screen and (max-width: 749px) {
+                .video-banner__heading.video-banner__heading--{{ block.id }} {
+                  font-size: {{ block.settings.heading_size_mobile }}px;
+                }
+              }
+            </style>
           {%- when 'text' -%}
             <div
               class="video-banner__text"
@@ -596,24 +607,16 @@
           "label": "Header Color"
         },
         {
-          "type": "select",
+          "type": "number",
           "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "default": 52,
+          "label": "Heading Size (px)"
+        },
+        {
+          "type": "number",
+          "id": "heading_size_mobile",
+          "default": 34,
+          "label": "Heading Size Mobile (px)"
         },
         {
           "type": "select",
