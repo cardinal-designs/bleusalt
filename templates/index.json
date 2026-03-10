@@ -16,7 +16,9 @@
           "type": "text",
           "settings": {
             "text": "Introducing",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "heading_9qBHw9": {
@@ -24,7 +26,7 @@
           "settings": {
             "heading": "The Mock Neck Top",
             "heading_color": "#ffffff",
-            "heading_size": "h0",
+            "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
         },
@@ -32,7 +34,9 @@
           "type": "text-two",
           "settings": {
             "text": "90's Minimal Chic",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "buttons_fCtqBt": {
@@ -202,7 +206,9 @@
           "type": "text",
           "settings": {
             "text": "Introducing",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "heading_iBximb": {
@@ -210,7 +216,7 @@
           "settings": {
             "heading": "The True Cardigan",
             "heading_color": "#ffffff",
-            "heading_size": "h0",
+            "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
         },
@@ -218,7 +224,9 @@
           "type": "text-two",
           "settings": {
             "text": "A True Classic",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "buttons_JHxG4f": {
@@ -268,7 +276,9 @@
           "type": "text",
           "settings": {
             "text": "Restocked",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "heading_y9374A": {
@@ -276,7 +286,7 @@
           "settings": {
             "heading": "The Elevated Legging",
             "heading_color": "#ffffff",
-            "heading_size": "h0",
+            "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
         },
@@ -284,7 +294,9 @@
           "type": "text-two",
           "settings": {
             "text": "Now in Navy",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "buttons_WQY3Gk": {
@@ -358,7 +370,7 @@
         "description_style": "body",
         "collection": "bottoms-skimpy",
         "products_to_show": 8,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
@@ -383,7 +395,9 @@
           "type": "text",
           "settings": {
             "text": "Our Best Seller",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "heading_Ay7XUN": {
@@ -391,7 +405,7 @@
           "settings": {
             "heading": "The Cindy Top",
             "heading_color": "#ffffff",
-            "heading_size": "h0",
+            "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
         },
@@ -400,7 +414,9 @@
           "disabled": true,
           "settings": {
             "text": "Now in Navy",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "buttons_RNE36W": {
@@ -550,7 +566,9 @@
           "disabled": true,
           "settings": {
             "text": "Our Best Seller",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "heading_tjadRH": {
@@ -558,7 +576,7 @@
           "settings": {
             "heading": "Our Materials",
             "heading_color": "#ffffff",
-            "heading_size": "h0",
+            "heading_size_mobile": 34,
             "heading_tag": "h2"
           }
         },
@@ -566,7 +584,9 @@
           "type": "text-two",
           "settings": {
             "text": "Bleusalt is committed to creating the softest, most sustainable luxury essentials...",
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "buttons_Y43Y8W": {
