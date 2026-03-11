@@ -211,7 +211,22 @@
     </div>
   {%- endif -%}
   {% assign video_mobile = section.settings.video_mobile %}
-  {%- if section.settings.video_url_mobile != blank or video_mobile != blank -%}
+  {% if section.settings.image_mobile != blank %}
+    <div class="banner__media media medium-up-hide">
+      {%-liquid
+        assign image_height_2 = section.settings.image_mobile.width | divided_by: section.settings.image_mobile.aspect_ratio
+        assign sizes = "100vw"
+      -%}
+      {{ section.settings.image_mobile | image_url: width: 600 | image_tag:
+        loading: 'lazy',
+        width: section.settings.image_mobile.width,
+        height: image_height_2,
+        sizes: sizes,
+        widths: '375, 550',
+        alt: section.settings.image_mobile.alt | escape
+      }}
+    </div>
+  {%- elsif section.settings.video_url_mobile != blank or video_mobile != blank -%}
     {% assign video_id = section.id | prepend: 'video-mobile--' %}
     <div class="medium-up-hide banner__media media loaded media--{{ section.settings.video_height_mobile }}">
       {% if section.settings.video_overlay_link != blank -%}
@@ -245,7 +260,9 @@
           width="100%"
         ></video>
       {% endif %}
-      {% render 'video-controls', id: video_id %}
+      {% unless section.settings.image != blank %}
+        {% render 'video-controls', id: video_id %}
+      {% endunless %}
     </div>
   {%- endif -%}
 
