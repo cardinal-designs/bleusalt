@@ -62,3 +62,13 @@
   bottom: 0;
   left: 0;
 }
+
+.columns__item-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.columns__item-container.text-shadow .title-block,
+.columns__item-container.text-shadow .text-block {
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+}
