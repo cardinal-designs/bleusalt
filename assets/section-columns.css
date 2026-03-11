@@ -17,6 +17,8 @@
   aspect-ratio: 1 / 1;
   padding: 40px;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .columns__item.top-center {
@@ -66,6 +68,9 @@
 .columns__item-container {
   max-width: 400px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .columns__item-container.text-shadow .title-block,
