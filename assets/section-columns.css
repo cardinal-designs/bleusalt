@@ -1,4 +1,4 @@
-.column.add-padding {
+.columns.add-padding {
   margin: 80px 0;
 }
 
@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.column.add-padding .columns__container {
+.columns.add-padding .columns__container {
   max-width: 1200px;
   margin: 0 auto;
   gap: 60px;
