@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 749px) {
   .columns.add-padding {
-    margin: 40px 0;
+    margin: 40px 20px;
   }
 
   .columns__container {
