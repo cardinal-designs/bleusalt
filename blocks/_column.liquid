@@ -29,6 +29,10 @@
     -%}
   {% endif %}
 
+  {% unless block.settings.image != blank %}
+    {% render 'video-controls', id: video_id %}
+  {% endunless %}
+
   {% if block.settings.image_overlay != 'none' %}
     <div class="columns__overlay" style="background-color: {{ block.settings.image_overlay | handleize }};opacity: {{ block.settings.image_overlay_opacity }}"></div>
   {% endif %}
