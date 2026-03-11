@@ -102,7 +102,7 @@
               "name": "Text",
               "settings": {
                 "text": "Text 1",
-                "color": "#FFFFFF",
+                "color": "#ffffff",
                 "font_size": 22,
                 "font_size_mobile": 14
               },
@@ -112,8 +112,8 @@
               "type": "title",
               "name": "Title",
               "settings": {
-                "heading": "Lorem Ipsum Dolor",
-                "color": "#FFFFFF",
+                "heading": "Lorem Ipsum",
+                "color": "#ffffff",
                 "font_size": 52,
                 "font_size_mobile": 34,
                 "heading_tag": "h2"
@@ -125,7 +125,7 @@
               "name": "Text",
               "settings": {
                 "text": "Text 2",
-                "color": "#FFFFFF",
+                "color": "#ffffff",
                 "font_size": 22,
                 "font_size_mobile": 14
               },
