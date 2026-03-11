@@ -1,0 +1,14 @@
+.column.add-padding {
+  margin: 80px 0;
+}
+
+.columns__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.column.add-padding .columns__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+}
