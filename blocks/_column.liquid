@@ -1,4 +1,4 @@
-<div class="columns__item" {{ block.shopify_attributes }}>
+<div class="columns__item columns__item--{{ block.settings.desktop_content_position }}" {{ block.shopify_attributes }}>
   {% if block.settings.image != blank %}
     <div class="banner__media media small-hide">
       {%-liquid
