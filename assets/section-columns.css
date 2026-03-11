@@ -94,3 +94,17 @@
 .columns__item-container.text-shadow .text-block {
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
 }
+
+@media screen and (max-width: 749px) {
+  .columns.add-padding {
+    margin: 40px 0;
+  }
+
+  .columns__container {
+    grid-template-columns: 1fr;
+  }
+
+  .columns.add-padding .columns__container {
+    gap: 40px;
+  }
+}
