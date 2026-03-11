@@ -21,7 +21,7 @@
   overflow: hidden;
 }
 
-.columns__item--square {
+.columns__item.columns__item--portrait {
   aspect-ratio: 3 / 4;
 }
 
