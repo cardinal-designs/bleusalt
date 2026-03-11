@@ -130,12 +130,26 @@
                 "font_size_mobile": 14
               },
               "blocks": {}
+            },
+            "buttons_tYqgR9": {
+              "type": "buttons",
+              "name": "Buttons",
+              "settings": {
+                "button_label_1": "Shop Now",
+                "button_link_1": "",
+                "button_bg_color": "#ffffff",
+                "button_text_color": "#0d1c29",
+                "button_label_2": "",
+                "button_link_2": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_M96eFC",
             "title_AtbfjG",
-            "text_HAERNN"
+            "text_HAERNN",
+            "buttons_tYqgR9"
           ]
         },
         "column_8Ch4UF": {
@@ -185,12 +199,26 @@
                 "font_size_mobile": 14
               },
               "blocks": {}
+            },
+            "buttons_CYWq9c": {
+              "type": "buttons",
+              "name": "Buttons",
+              "settings": {
+                "button_label_1": "Shop Now",
+                "button_link_1": "",
+                "button_bg_color": "#ffffff",
+                "button_text_color": "#0d1c29",
+                "button_label_2": "",
+                "button_link_2": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_PCdihR",
             "title_pyPPW4",
-            "text_TWyhXW"
+            "text_TWyhXW",
+            "buttons_CYWq9c"
           ]
         }
       },
