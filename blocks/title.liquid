@@ -1,3 +1,22 @@
+<{{ block.settings.heading_tag }}
+  class="title-block title-block--{{ block.id }}"
+  {{ block.shopify_attributes }}
+  style="color: {{ block.settings.heading_color }}"
+>
+  <span>{{ block.settings.heading | escape }}</span>
+</{{ block.settings.heading_tag }}>
+
+<style>
+  .title-block.title-block--{{ block.id }} {
+    font-size: {{ block.settings.heading_size }}px;
+  }
+  @media screen and (max-width: 749px) {
+    .title-block.title-block--{{ block.id }} {
+      font-size: {{ block.settings.heading_size_mobile }}px;
+    }
+  }
+</style>
+
 {% schema %}
   {
     "name": "Title",
