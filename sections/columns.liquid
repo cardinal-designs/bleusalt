@@ -2,9 +2,11 @@
   {{- 'section-columns.css' | inline_asset_content -}}
 {%- endstyle -%}
 
-<div class="columns">
+<div class="columns{% if section.settings.add_padding %} add-padding{% endif %}">
   <div class="{% if section.settings.add_padding %}page-width{% endif %}">
-    {% content_for 'blocks' %}
+    <div class="columns__container">
+      {% content_for 'blocks' %}
+    </div>
   </div>
 </div>
 
