@@ -1,6 +1,6 @@
 <div class="columns__item columns__item--{{ section.settings.media_ratio }} columns__item--{{ block.settings.desktop_content_position }}" {{ block.shopify_attributes }}>
   {% if block.settings.image != blank %}
-    <div class="banner__media media small-hide">
+    <div class="banner__media media">
       {%-liquid
         assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio 
         assign sizes = "100vw"
@@ -16,7 +16,7 @@
     </div>
   {% elsif block.settings.video != blank %}
     {% assign video_id = block.id | prepend: 'video-desktop--' %}
-    <div class="banner__media media medium-up-hide">
+    <div class="banner__media media">
       {%- render 'video-banner-video',
         video: block.settings.video,
         video_id: video_id,
