@@ -89,9 +89,9 @@
           "settings": {
             "image": "shopify://shop_images/the-cindy-short-sleeve-top-navy.jpg",
             "description": "",
-            "add_text_shadow": false,
+            "add_text_shadow": true,
             "image_overlay": "black",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 20,
             "desktop_content_alignment": "center",
             "desktop_content_position": "middle-center",
             "mobile_content_position": "middle-center"
@@ -137,10 +137,66 @@
             "title_AtbfjG",
             "text_HAERNN"
           ]
+        },
+        "column_8Ch4UF": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "video": "shopify://files/videos/Cindy Top Mobile.mp4",
+            "description": "",
+            "add_text_shadow": true,
+            "image_overlay": "black",
+            "image_overlay_opacity": 20,
+            "desktop_content_alignment": "center",
+            "desktop_content_position": "middle-center",
+            "mobile_content_position": "middle-center"
+          },
+          "blocks": {
+            "text_PCdihR": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "Text 1",
+                "color": "#ffffff",
+                "font_size": 22,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            },
+            "title_pyPPW4": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading": "Lorem Ipsum",
+                "color": "#ffffff",
+                "font_size": 52,
+                "font_size_mobile": 34,
+                "heading_tag": "h2"
+              },
+              "blocks": {}
+            },
+            "text_TWyhXW": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "Text 2",
+                "color": "#ffffff",
+                "font_size": 22,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_PCdihR",
+            "title_pyPPW4",
+            "text_TWyhXW"
+          ]
         }
       },
       "block_order": [
-        "column_Rd8hAc"
+        "column_Rd8hAc",
+        "column_8Ch4UF"
       ],
       "name": "Columns",
       "settings": {
