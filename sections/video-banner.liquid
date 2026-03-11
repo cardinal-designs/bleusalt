@@ -173,7 +173,7 @@
               height: image_height,
               sizes: sizes,
               widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-              alt: section.settings.image.alt | escape
+              alt: section.settings.description | default: section.settings.image.alt
             }}
           </div>
         {% elsif video != blank %}
@@ -223,7 +223,7 @@
         height: image_height_2,
         sizes: sizes,
         widths: '375, 550',
-        alt: section.settings.image_mobile.alt | escape
+        alt: section.settings.description | default: section.settings.image_mobile.alt
       }}
     </div>
   {%- elsif section.settings.video_url_mobile != blank or video_mobile != blank -%}
