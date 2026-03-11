@@ -1,17 +1,17 @@
-<{{ block.settings.heading_tag }}
-  class="title-block title-block--{{ block.id }}"
+<p
+  class="text-block text-block--{{ block.id }}"
   {{ block.shopify_attributes }}
-  style="color: {{ block.settings.heading_color }}"
+  style="color: {{ block.settings.color }}"
 >
   <span>{{ block.settings.heading | escape }}</span>
-</{{ block.settings.heading_tag }}>
+</p>
 
 <style>
-  .title-block.title-block--{{ block.id }} {
+  .text-block.text-block--{{ block.id }} {
     font-size: {{ block.settings.heading_size }}px;
   }
   @media screen and (max-width: 749px) {
-    .title-block.title-block--{{ block.id }} {
+    .text-block.text-block--{{ block.id }} {
       font-size: {{ block.settings.heading_size_mobile }}px;
     }
   }
@@ -19,7 +19,7 @@
 
 {% schema %}
   {
-    "name": "Title",
+    "name": "Text",
     "settings": [
       {
         "type": "inline_richtext",
@@ -47,7 +47,7 @@
     ],
     "presets": [
       {
-        "name": "Title"
+        "name": "Text"
       }
     ]
   }
