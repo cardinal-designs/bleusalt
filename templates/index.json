@@ -200,8 +200,8 @@
       ],
       "name": "Columns",
       "settings": {
-        "add_padding": false,
-        "media_ratio": "square"
+        "add_padding": true,
+        "media_ratio": "portrait"
       }
     },
     "d2140650-9af9-4246-8dce-94740740313a": {

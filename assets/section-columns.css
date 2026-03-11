@@ -21,6 +21,10 @@
   overflow: hidden;
 }
 
+.columns__item--square {
+  aspect-ratio: 3 / 4;
+}
+
 .columns__item.columns__item--top-center {
   justify-content: center;
 }
