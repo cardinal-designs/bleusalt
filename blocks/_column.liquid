@@ -16,17 +16,19 @@
     </div>
   {% elsif block.settings.video != blank %}
     {% assign video_id = block.id | prepend: 'video-desktop--' %}
-    {%- render 'video-banner-video',
-      video: block.settings.video,
-      video_id: video_id,
-      class: 'banner__video',
-      autoplay: true,
-      loop: true,
-      muted: true,
-      playsinline: true,
-      aria_label: block.settings.description,
-      is_mobile: false
-    -%}
+    <div class="banner__media media medium-up-hide">
+      {%- render 'video-banner-video',
+        video: block.settings.video,
+        video_id: video_id,
+        class: 'banner__video',
+        autoplay: true,
+        loop: true,
+        muted: true,
+        playsinline: true,
+        aria_label: block.settings.description,
+        is_mobile: false
+      -%}
+    </div>
   {% endif %}
 
   {% unless block.settings.image != blank %}
