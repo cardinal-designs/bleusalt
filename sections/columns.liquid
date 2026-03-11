@@ -1,3 +1,13 @@
+{%- style -%}
+  {{- 'section-columns.css' | inline_asset_content -}}
+{%- endstyle -%}
+
+<div class="columns">
+  <div class="{% if section.settings.add_padding %}page-width{% endif %}">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Columns",
@@ -8,19 +18,7 @@
         "label": "Add Padding"
       }
     ],
-    "blocks": [
-      {
-        "type": "block",
-        "name": "Block",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          }
-        ]
-      }
-    ],
+    "blocks": [{ "type": "_column" }],
     "presets": [
       {
         "name": "Columns"
