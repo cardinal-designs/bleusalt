@@ -4,8 +4,42 @@
     "settings": [
       {
         "type": "text",
-        "id": "title",
-        "label": "Title"
+        "id": "heading",
+        "default": "Lorem Ipsun",
+        "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color"
+      },
+      {
+        "type": "number",
+        "id": "font_size",
+        "default": 52,
+        "label": "Font Size (px)"
+      },
+      {
+        "type": "number",
+        "id": "font_size_mobile",
+        "default": 34,
+        "label": "Font Size Mobile (px)"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          }
+        ],
+        "default": "h2",
+        "label": "Heading tag"
       }
     ],
     "presets": [

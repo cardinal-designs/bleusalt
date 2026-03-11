@@ -1,3 +1,39 @@
+<div class="columns__item" {{ block.shopify_attributes }}>
+  {% if block.settings.image != blank %}
+    <div class="banner__media media small-hide">
+      {%-liquid
+        assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio 
+        assign sizes = "100vw"
+      -%}
+      {{ block.settings.image | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: block.settings.image.width,
+        height: image_height,
+        sizes: sizes,
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+        alt: block.settings.description | default: block.settings.image.alt
+      }}
+    </div>
+  {% elsif block.settings.video != blank %}
+    {% assign video_id = block.id | prepend: 'video-desktop--' %}
+    {%- render 'video-banner-video',
+      video: block.settings.video,
+      video_id: video_id,
+      class: 'banner__video',
+      autoplay: true,
+      loop: true,
+      muted: true,
+      playsinline: true,
+      aria_label: block.settings.description,
+      is_mobile: false
+    -%}
+  {% endif %}
+
+  <div class="columns__item__container">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Column",
@@ -11,7 +47,111 @@
         "type": "video",
         "id": "video",
         "label": "Video"
-      }
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "SEO and ADA description"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_text_shadow",
+        "label": "Add Text Shadow"
+      },
+      {
+        "type": "select",
+        "id": "image_overlay",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "black",
+        "label": "Image Overlay"
+      },
+      {
+        "type": "range",
+        "id": "image_overlay_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+        "default": 0
+      },
+      {
+        "type": "select",
+        "id": "desktop_content_position",
+        "options": [
+          {
+            "value": "top-left",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
+          },
+          {
+            "value": "top-center",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
+          },
+          {
+            "value": "top-right",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+          },
+          {
+            "value": "middle-left",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+          },
+          {
+            "value": "middle-center",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+          },
+          {
+            "value": "middle-right",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+          },
+          {
+            "value": "bottom-left",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+          },
+          {
+            "value": "bottom-center",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+          },
+          {
+            "value": "bottom-right",
+            "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
+          }
+        ],
+        "default": "middle-center",
+        "label": "t:sections.image-banner.settings.desktop_content_position.label"
+      },
+      {
+        "type": "select",
+        "id": "mobile_content_position",
+        "options": [
+          {
+            "value": "top-center",
+            "label": "Top"
+          },
+          {
+            "value": "middle-center",
+            "label": "Middle"
+          },
+          {
+            "value": "bottom-center",
+            "label": "Bottom"
+          }
+        ],
+        "default": "middle-center",
+        "label": "Mobile content position"
+      },
     ],
     "blocks": [{ "type": "@theme" }],
     "presets": [
