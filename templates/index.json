@@ -80,6 +80,74 @@
         "video_overlay_link": "shopify://collections/womens-new-arrivals"
       }
     },
+    "columns_d3EcBp": {
+      "type": "columns",
+      "blocks": {
+        "column_Rd8hAc": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "image": "shopify://shop_images/the-cindy-short-sleeve-top-navy.jpg",
+            "description": "",
+            "add_text_shadow": false,
+            "image_overlay": "black",
+            "image_overlay_opacity": 0,
+            "desktop_content_alignment": "center",
+            "desktop_content_position": "middle-center",
+            "mobile_content_position": "middle-center"
+          },
+          "blocks": {
+            "text_M96eFC": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "Text 1",
+                "color": "#FFFFFF",
+                "font_size": 22,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            },
+            "title_AtbfjG": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading": "Lorem Ipsum Dolor",
+                "color": "#FFFFFF",
+                "font_size": 52,
+                "font_size_mobile": 34,
+                "heading_tag": "h2"
+              },
+              "blocks": {}
+            },
+            "text_HAERNN": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "Text 2",
+                "color": "#FFFFFF",
+                "font_size": 22,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_M96eFC",
+            "title_AtbfjG",
+            "text_HAERNN"
+          ]
+        }
+      },
+      "block_order": [
+        "column_Rd8hAc"
+      ],
+      "name": "Columns",
+      "settings": {
+        "add_padding": false,
+        "media_ratio": "square"
+      }
+    },
     "d2140650-9af9-4246-8dce-94740740313a": {
       "type": "custom-liquid",
       "disabled": true,
@@ -711,6 +779,7 @@
   },
   "order": [
     "16597180576b9dbb68",
+    "columns_d3EcBp",
     "d2140650-9af9-4246-8dce-94740740313a",
     "16636186953571c8bf",
     "featured_collection",
