@@ -113,7 +113,7 @@
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327": {
             "type": "announcement",
             "settings": {
-              "text": "Free ground shipping on all orders over $240",
+              "text": "Free ground shipping on all orders over $200",
               "link": "shopify://policies/shipping-policy"
             }
           },
