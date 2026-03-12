@@ -80,8 +80,9 @@
         },
         "e41b416a-cc32-40b1-a71e-a81edcd2ea81": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "Free Shipping on orders $240+",
+            "text": "Free Shipping on orders $200",
             "text_style": "body"
           }
         },
@@ -180,7 +181,7 @@
         "collapsible_tab_NhfNPp"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) {.foursixty-ASExNVGZxaGRNOSs4N__foursixty_shoppable_social_ugc_custom_slider_aE7kpH .fs-entry-container {width: 44% !important; padding-top: 44% !important;}}"
+        "@media screen and (max-width: 749px) {.foursixty-ASExNVGZxaGRNOSs4N__foursixty_shoppable_social_ugc_custom_slider_aE7kpH .fs-entry-container {width: 44% !important; padding-top: 44% !important; }}"
       ],
       "settings": {
         "enable_sticky_info": true,
