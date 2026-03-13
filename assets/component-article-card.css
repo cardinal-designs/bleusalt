@@ -189,6 +189,7 @@
   display: inline-block;
   text-align: center;
   font-size: 14px;
+  text-decoration: underline;
   color: rgba(var(--color-link), var(--alpha-link));
   text-underline-offset: .3rem;
   text-decoration-thickness: .1rem;
