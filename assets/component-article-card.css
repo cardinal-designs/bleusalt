@@ -185,9 +185,10 @@
 }
 
 .article-card__link {
-  margin: 0;
+  margin: 0 auto !important;
   display: inline-block;
   text-align: center;
+  font-size: 14px;
   color: rgba(var(--color-link), var(--alpha-link));
   text-underline-offset: .3rem;
   text-decoration-thickness: .1rem;
