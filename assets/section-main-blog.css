@@ -86,6 +86,10 @@
   .blog-articles__featured-content {
     padding: 20px 0 0;
   }
+
+  .blog-articles__featured-text {
+    font-size: 15px;
+  }
 }
 
 .blog-articles {
