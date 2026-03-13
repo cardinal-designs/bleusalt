@@ -186,7 +186,6 @@
 
 .article-card__link {
   margin: 0 auto !important;
-  display: inline-block;
   text-align: center;
   font-size: 14px;
   text-decoration: underline;
