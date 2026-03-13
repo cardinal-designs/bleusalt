@@ -63,6 +63,11 @@
   transition: text-decoration-thickness var(--duration-short) ease;
 }
 
+.blog-articles__featured-link:hover {
+  color: rgb(var(--color-link));
+  text-decoration-thickness: .2rem;
+}
+
 @media screen and (max-width: 1135px) {
   .blog-articles__featured {
     gap: 60px;
