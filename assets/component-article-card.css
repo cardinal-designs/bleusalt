@@ -184,6 +184,18 @@
   text-align: center;
 }
 
+.article-card__link {
+  color: rgba(var(--color-link), var(--alpha-link));
+  text-underline-offset: .3rem;
+  text-decoration-thickness: .1rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
+}
+
+.article-card__link:hover {
+  color: rgb(var(--color-link));
+  text-decoration-thickness: .2rem;
+}
+
 @media screen and (max-width: 749px) {
   .article-card__tag {
     margin: 5px 0 0;
