@@ -57,8 +57,10 @@
 }
 
 .blog-articles__featured-link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  color: rgba(var(--color-link), var(--alpha-link));
+  text-underline-offset: .3rem;
+  text-decoration-thickness: .1rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
 }
 
 @media screen and (max-width: 1135px) {
