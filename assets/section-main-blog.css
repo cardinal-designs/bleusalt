@@ -56,6 +56,11 @@
   line-height: 1.7;
 }
 
+.blog-articles__featured-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 @media screen and (max-width: 1135px) {
   .blog-articles__featured {
     gap: 60px;
