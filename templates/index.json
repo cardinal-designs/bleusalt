@@ -103,7 +103,7 @@
               "settings": {
                 "text": "Text 1",
                 "color": "#ffffff",
-                "font_size": 22,
+                "font_size": 16,
                 "font_size_mobile": 14
               },
               "blocks": {}
@@ -114,7 +114,7 @@
               "settings": {
                 "heading": "Lorem Ipsum",
                 "color": "#ffffff",
-                "font_size": 52,
+                "font_size": 36,
                 "font_size_mobile": 34,
                 "heading_tag": "h2"
               },
@@ -126,7 +126,7 @@
               "settings": {
                 "text": "Text 2",
                 "color": "#ffffff",
-                "font_size": 22,
+                "font_size": 16,
                 "font_size_mobile": 14
               },
               "blocks": {}
@@ -183,7 +183,7 @@
               "settings": {
                 "heading": "Lorem Ipsum",
                 "color": "#ffffff",
-                "font_size": 52,
+                "font_size": 36,
                 "font_size_mobile": 34,
                 "heading_tag": "h2"
               },
