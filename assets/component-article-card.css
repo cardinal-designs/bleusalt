@@ -7,8 +7,7 @@
 .article {
   display: flex;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,12 +56,6 @@
 
 .article-card .card__heading {
   margin-bottom: 0.6rem;
-}
-
-.blog-articles .article-card .card__information,
-.blog__posts .article-card .card__information {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .article-card__info {
@@ -156,5 +149,68 @@
     .articles-wrapper.grid {
       margin-bottom: 7rem;
     }
+  }
+}
+
+.article-card .card__information {
+  padding: 10px 0 0 !important;
+}
+
+.article-card__tag {
+  margin: 10px 0;
+  font-family: var(--font-body-family);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  text-align: center;
+}
+
+.article-card__title {
+  margin: 0 0 10px;
+  font-family: Didot, Bodoni MT, Playfair Display, serif;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.article-card__text {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.article-card__link {
+  margin: 0 auto !important;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: underline;
+  color: rgba(var(--color-link), var(--alpha-link));
+  text-underline-offset: .3rem;
+  text-decoration-thickness: .1rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
+}
+
+.article-card__link:hover {
+  color: rgb(var(--color-link));
+  text-decoration-thickness: .2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .article-card__tag {
+    margin: 5px 0 0;
+  }
+
+  .article-card__title {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .article-card__text {
+    margin: 0 auto;
   }
 }

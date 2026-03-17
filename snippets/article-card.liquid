@@ -24,7 +24,7 @@
       assign ratio = media_aspect_ratio
     endif
   -%}
-  <div class="card-wrapper underline-links-hover" article-id="{{ article.id }}">
+  <a href="{{ article.url }}" class="card-wrapper underline-links-hover" article-id="{{ article.id }}">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div class="card article-card
       card--{{ settings.card_style }}
@@ -35,7 +35,7 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-        {%- if show_image == true and article.image -%}
+        {%- if article.image -%}
           <div class="article-card__image-wrapper card__media">
             <div class="article-card__image media media--hover-effect" {% if section.settings.media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
@@ -61,48 +61,15 @@
         {%- endif -%}
       </div>
       <div class="card__content">
-        {%- if show_logo != blank -%}
-          <div class="blog-articles__logo-main">
-            <img class="blog-articles__logo" src="{{ show_logo | img_url: 'master' }}">
-          </div>
-        {%- endif -%}
         <div class="card__information">
-          <h2 class="card__heading{% if show_excerpt %} h2{% endif %}">
-            <a href="{{ article.url }}" class="full-unstyled-link">
-              {{ article.title | truncate: 45 | escape }}
-            </a>
-          </h2>
-          <div class="article-card__info caption-with-letter-spacing h5">
-            {%- if show_date -%}
-              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
-            {%- endif -%}
-            {%- if show_author -%}
-              <span>{{ article.author }}</span>
-            {%- endif -%}
-          </div>
-          {%- if show_excerpt -%}
-            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
-                {%- if article.excerpt.size > 0 -%}
-                  {{ article.excerpt | strip_html | truncatewords: 30 }}
-                {%- else -%}
-                  {{ article.content | strip_html | truncatewords: 30 }}
-                {%- endif -%}
-              </p>
-            {%- endif -%}
-            <div class="article-card__footer">
-              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
-                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
+          {% if article.tags[0] %}
+            <p class="article-card__tag byline header-byline">{{ article.tags[0] }}</p>
+          {% endif %}
+          <p class="article-card__title">{{ article.title }}</p>
+          <div class="article-card__text">{{ article.excerpt }}</div>
+          <p class="article-card__link">Read More</p>
         </div>
-        {%- if show_badge -%}
-          <div class="card__badge {{ settings.badge_position }}">
-            <span class="badge color-background-1">{{ 'blogs.article.blog' | t }}</span>
-          </div>
-        {%- endif -%}  
       </div>
     </div>
-  </div>
+  </a>
 {%- endif -%}
