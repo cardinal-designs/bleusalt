@@ -23,6 +23,7 @@
     if media_aspect_ratio != nil
       assign ratio = media_aspect_ratio
     endif
+    assign ratio = 1
   -%}
   <a href="{{ article.url }}" class="card-wrapper underline-links-hover" article-id="{{ article.id }}">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
