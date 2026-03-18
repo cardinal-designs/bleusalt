@@ -192,6 +192,8 @@
 
 .alt__article--template .media {
   background: transparent;
+  padding-bottom: 0 !important;
+  height: 400px;
 }
 
 .article-template__hero-text {
@@ -207,4 +209,10 @@
   width: 100%;
   line-height: 1.6;
   color: #999;
+}
+
+@media screen and (min-width: 749px) {
+  .alt__article--template .media {
+    height: 300px;
+  }
 }
