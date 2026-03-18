@@ -18,13 +18,13 @@
 {% endcomment %}
 
 {%- if article and article != empty -%}
-  {%- liquid
+  {% comment %} {%- liquid
     assign ratio = 1
     if media_aspect_ratio != nil
       assign ratio = media_aspect_ratio
     endif
     assign ratio = 1
-  -%}
+  -%} {% endcomment %}
   <a href="{{ article.url }}" class="card-wrapper underline-links-hover" article-id="{{ article.id }}">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div class="card article-card
@@ -53,8 +53,8 @@
                   alt="{{ article.metafields.custom.alt_article_card_image.value.alt | escape }}"
                   class="motion-reduce"
                   {% unless lazy_load == false %}loading="lazy"{% endunless %}
-                  width="{{ image_meta.width }}"
-                  height="{{ image_meta.height }}"
+                  width="{{ article.metafields.custom.alt_article_card_image.value.width }}"
+                  height="{{ article.metafields.custom.alt_article_card_image.value.height }}"
                 >
                 {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
               </div>
