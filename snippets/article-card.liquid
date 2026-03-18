@@ -36,7 +36,7 @@
     >
       <div class="card__inner {% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         {% if article.metafields.custom.alt_article_card_image != blank %}
-          {% assign image_meta = article.metafields.namespace.key %}
+          {% assign image_meta = article.metafields.custom.alt_article_card_image.key %}
           <div class="article-card__image-wrapper card__media">
               <div class="article-card__image media media--hover-effect" {% if section.settings.media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: image_meta.aspect_ratio | times: 100 }}%;"{% endif %}>
                 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
