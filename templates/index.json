@@ -226,6 +226,7 @@
         "column_Rd8hAc",
         "column_8Ch4UF"
       ],
+      "disabled": true,
       "name": "Columns",
       "settings": {
         "add_padding": true,
