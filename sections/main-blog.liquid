@@ -51,7 +51,7 @@
     <div class="blog-articles">
       {%- for article in blog.articles offset: 1 -%}
         {% assign logo = article.metafields.custom.article_logo.value %}
-        <div class="blog-articles__article article">
+        <div class="blog-articles__article">
           {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
