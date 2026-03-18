@@ -93,6 +93,8 @@
 }
 
 .blog-articles {
+  width: 85%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
@@ -110,6 +112,7 @@
 
 @media screen and (max-width: 749px) {
   .blog-articles {
+    width: 100%;
     grid-template-columns: 1fr;
     gap: 40px;
   }
