@@ -1,0 +1,55 @@
+<p
+  class="text-block text-block--{{ block.id }}"
+  {{ block.shopify_attributes }}
+  style="color: {{ block.settings.color }}"
+>
+  <span>{{ block.settings.text }}</span>
+</p>
+
+<style>
+  .text-block.text-block--{{ block.id }} {
+    font-size: {{ block.settings.font_size }}px;
+  }
+  @media screen and (max-width: 749px) {
+    .text-block.text-block--{{ block.id }} {
+      font-size: {{ block.settings.font_size_mobile }}px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Text",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "text",
+        "default": "Lorem Ipsum Dolor",
+        "label": "Text"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "number",
+        "id": "font_size",
+        "default": 22,
+        "label": "Font Size (px)"
+      },
+      {
+        "type": "number",
+        "id": "font_size_mobile",
+        "default": 14,
+        "label": "Font Size Mobile (px)"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text"
+      }
+    ]
+  }
+{% endschema %}
