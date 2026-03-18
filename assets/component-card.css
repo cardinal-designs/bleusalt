@@ -478,3 +478,31 @@
 .template--search .grid__item--page .card__content .card__information {
   padding: 0;
 }
+
+
+.article-card .card__inner {
+  position: relative;
+}
+
+.article-card .article-card__image-wrapper.card__media {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.article-card .article-card__image-fixed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* slightly taller than wide */
+  overflow: hidden;
+}
+
+.article-card .article-card__image-fixed img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
