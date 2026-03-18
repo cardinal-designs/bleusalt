@@ -60,7 +60,7 @@
             </div>
         {% else %}
           {%- if article.image -%}
-            <div class="111 article-card__image-wrapper card__media">
+            <div class="article-card__image-wrapper card__media">
               <div class="article-card__image media media--hover-effect" {% if section.settings.media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
                 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                 <img
