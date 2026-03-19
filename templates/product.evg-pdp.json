@@ -41,7 +41,11 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "enable_swatch_grouping": true,
+            "classic_group_label": "Classics",
+            "seasonal_group_label": "Seasonal",
+            "seasonal_colors": ""
           }
         },
         "quantity_selector": {
@@ -123,6 +127,10 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "featured_video_order": 99,
+        "first_image_order": 1,
+        "product_images_order": 5,
+        "lifestyle_image_order": 2,
         "show_breadcrumb": false,
         "gallery_layout": "thumbnail",
         "media_size": "small",
@@ -274,6 +282,7 @@
         "klaviyo_reviews_product_reviews_wmTp4d"
       ],
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
