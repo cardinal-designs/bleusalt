@@ -37,7 +37,11 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "enable_swatch_grouping": true,
+            "classic_group_label": "Classics",
+            "seasonal_group_label": "Seasonal",
+            "seasonal_colors": ""
           }
         },
         "quantity_selector": {
@@ -106,12 +110,25 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "featured_video_order": 99,
+        "first_image_order": 1,
+        "product_images_order": 5,
+        "lifestyle_image_order": 2,
+        "show_breadcrumb": false,
         "gallery_layout": "thumbnail",
         "media_size": "small",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": true,
         "enable_zoom": true,
+        "international_chart_title": "Size Conversion",
+        "international_chart": "",
+        "international_chart_title_dresses": "Dresses Size Conversion",
+        "dresses_international_chart": "",
+        "international_chart_title_tops": "Tops Size Conversion",
+        "tops_international_chart": "",
+        "international_chart_title_bottom": "Bottom Size Conversion",
+        "bottom_international_chart": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -221,6 +238,7 @@
       "type": "apps",
       "disabled": true,
       "settings": {
+        "custom_class": "",
         "include_margins": true
       }
     }
