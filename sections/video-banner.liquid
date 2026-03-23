@@ -21,7 +21,7 @@
     #Banner-{{ section.id }} .banner__media::before,
     #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
       padding-bottom: {{ video_height_mobile }}%;
-      content: '';
+      content: '' !important;
       display: block;
     }
   }
