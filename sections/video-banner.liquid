@@ -28,7 +28,7 @@
 
   {% if section.settings.button_overlay %}
     @media screen and (max-width: 749px) {
-      .banner__media {
+      #Banner-{{ section.id }} .banner__media {
         {% if section.settings.video_height_mobile == 'square' %}
         height: 100vh;
         {%  else %}
