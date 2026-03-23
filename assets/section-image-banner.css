@@ -270,9 +270,9 @@
     position: relative;
   }
 
-  .banner::before {
+  /* .banner::before {
     display: none !important;
-  }
+  } */
 
   .banner--stacked .banner__media-image-half {
     width: 100%;
