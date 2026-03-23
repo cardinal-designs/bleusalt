@@ -8,7 +8,7 @@
 
 {%- liquid
   assign video_height_mobile = section.settings.video_height_mobile
-  if section.settings.video_height_mobile == 100
+  if section.settings.video_height_mobile == '100'
     assign video_height_mobile = 100
   endif
 -%}
@@ -29,7 +29,7 @@
   {% if section.settings.button_overlay %}
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }} .banner__media {
-        {% if section.settings.video_height_mobile == 100 %}height: 100vw;{%  else %}height: 75vh;{% endif %}
+        {% if section.settings.video_height_mobile == '100' %}height: 100vw;{%  else %}height: 75vh;{% endif %}
       }
 
       .banner__content {
