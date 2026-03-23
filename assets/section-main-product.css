@@ -1982,3 +1982,8 @@ table[data-in-to-cm] td {
     display: block;
   }
 }
+
+/* Force Swiper container to be visible */
+.product__media-list.swiper {
+  opacity: 1 !important;
+}
