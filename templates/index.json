@@ -401,7 +401,7 @@
           "name": "Column",
           "settings": {
             "image": "shopify://shop_images/lyndies-spring-hero.jpg",
-            "description": "",
+            "description": "Shop Lyndie's Spring Edit",
             "link": "shopify://collections/lyndies-spring-edit",
             "add_text_shadow": true,
             "image_overlay": "black",
