@@ -330,6 +330,7 @@
           "settings": {
             "image": "shopify://shop_images/the-cindy-short-sleeve-top-navy.jpg",
             "description": "Shop The Cindy Collection",
+            "link": "shopify://collections/the-cindy-collection",
             "add_text_shadow": true,
             "image_overlay": "black",
             "image_overlay_opacity": 20,
@@ -401,6 +402,7 @@
           "settings": {
             "image": "shopify://shop_images/lyndies-spring-hero.jpg",
             "description": "",
+            "link": "shopify://collections/lyndies-spring-edit",
             "add_text_shadow": true,
             "image_overlay": "black",
             "image_overlay_opacity": 20,
