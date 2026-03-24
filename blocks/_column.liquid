@@ -34,7 +34,7 @@
   {% endif %}
 
   {% if block.settings.image_overlay != 'none' %}
-    <div class="columns__overlay" style="background-color: {{ block.settings.image_overlay | handleize }};opacity: {{ block.settings.image_overlay_opacity }}"></div>
+    <div class="columns__overlay" style="background-color: {{ block.settings.image_overlay | handleize }};opacity: {{ block.settings.image_overlay_opacity }}%;"></div>
   {% endif %}
 
   {% if block.settings.link != blank %}
