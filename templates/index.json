@@ -9,231 +9,6 @@
  */
 {
   "sections": {
-    "columns_d3EcBp": {
-      "type": "columns",
-      "blocks": {
-        "column_Rd8hAc": {
-          "type": "_column",
-          "name": "Column",
-          "settings": {
-            "image": "shopify://shop_images/the-cindy-short-sleeve-top-navy.jpg",
-            "description": "",
-            "add_text_shadow": true,
-            "image_overlay": "black",
-            "image_overlay_opacity": 20,
-            "desktop_content_alignment": "center",
-            "desktop_content_position": "middle-center",
-            "mobile_content_position": "middle-center"
-          },
-          "blocks": {
-            "text_M96eFC": {
-              "type": "text",
-              "name": "Text",
-              "settings": {
-                "text": "Text 1",
-                "color": "#ffffff",
-                "font_size": 16,
-                "font_size_mobile": 14
-              },
-              "blocks": {}
-            },
-            "title_AtbfjG": {
-              "type": "title",
-              "name": "Title",
-              "settings": {
-                "heading": "Lorem Ipsum",
-                "color": "#ffffff",
-                "font_size": 36,
-                "font_size_mobile": 34,
-                "heading_tag": "h2"
-              },
-              "blocks": {}
-            },
-            "text_HAERNN": {
-              "type": "text",
-              "name": "Text",
-              "settings": {
-                "text": "Text 2",
-                "color": "#ffffff",
-                "font_size": 16,
-                "font_size_mobile": 14
-              },
-              "blocks": {}
-            },
-            "buttons_tYqgR9": {
-              "type": "buttons",
-              "name": "Buttons",
-              "settings": {
-                "button_label_1": "Shop Now",
-                "button_link_1": "",
-                "button_bg_color": "#ffffff",
-                "button_text_color": "#0d1c29",
-                "button_label_2": "",
-                "button_link_2": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_M96eFC",
-            "title_AtbfjG",
-            "text_HAERNN",
-            "buttons_tYqgR9"
-          ]
-        },
-        "column_8Ch4UF": {
-          "type": "_column",
-          "name": "Column",
-          "settings": {
-            "video": "shopify://files/videos/Cindy Top Mobile.mp4",
-            "description": "",
-            "add_text_shadow": true,
-            "image_overlay": "black",
-            "image_overlay_opacity": 20,
-            "desktop_content_alignment": "center",
-            "desktop_content_position": "middle-center",
-            "mobile_content_position": "middle-center"
-          },
-          "blocks": {
-            "text_PCdihR": {
-              "type": "text",
-              "name": "Text",
-              "settings": {
-                "text": "Text 1",
-                "color": "#ffffff",
-                "font_size": 22,
-                "font_size_mobile": 14
-              },
-              "blocks": {}
-            },
-            "title_pyPPW4": {
-              "type": "title",
-              "name": "Title",
-              "settings": {
-                "heading": "Lorem Ipsum",
-                "color": "#ffffff",
-                "font_size": 36,
-                "font_size_mobile": 34,
-                "heading_tag": "h2"
-              },
-              "blocks": {}
-            },
-            "text_TWyhXW": {
-              "type": "text",
-              "name": "Text",
-              "settings": {
-                "text": "Text 2",
-                "color": "#ffffff",
-                "font_size": 22,
-                "font_size_mobile": 14
-              },
-              "blocks": {}
-            },
-            "buttons_CYWq9c": {
-              "type": "buttons",
-              "name": "Buttons",
-              "settings": {
-                "button_label_1": "Shop Now",
-                "button_link_1": "",
-                "button_bg_color": "#ffffff",
-                "button_text_color": "#0d1c29",
-                "button_label_2": "",
-                "button_link_2": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_PCdihR",
-            "title_pyPPW4",
-            "text_TWyhXW",
-            "buttons_CYWq9c"
-          ]
-        }
-      },
-      "block_order": [
-        "column_Rd8hAc",
-        "column_8Ch4UF"
-      ],
-      "disabled": true,
-      "name": "Columns",
-      "settings": {
-        "add_padding": true,
-        "media_ratio": "portrait"
-      }
-    },
-    "d2140650-9af9-4246-8dce-94740740313a": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "custom_liquid": "<div class=\"center page-width\">\n<h1 class=\"h3\">Essentials made from the softest<br> fibers on earth</h1> \n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 16,
-        "padding_bottom": 0
-      }
-    },
-    "16636186953571c8bf": {
-      "type": "multicolumn",
-      "blocks": {
-        "1663618695fc7e0630-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/womens.jpg",
-            "title": "Shop Womens",
-            "text": "",
-            "html": "",
-            "link_label": "",
-            "link": "shopify://collections/womens-shop-all"
-          }
-        },
-        "1663618695fc7e0630-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/wraps_7e3791f9-14f8-48be-a12b-434d0578471f.jpg",
-            "title": "Shop Wraps",
-            "text": "",
-            "html": "",
-            "link_label": "",
-            "link": "shopify://collections/the-signature-bleusalt-wrap"
-          }
-        },
-        "1663618695fc7e0630-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mens.jpg",
-            "title": "Shop Mens",
-            "text": "",
-            "html": "",
-            "link_label": "",
-            "link": "shopify://collections/mens-collection"
-          }
-        }
-      },
-      "block_order": [
-        "1663618695fc7e0630-0",
-        "1663618695fc7e0630-1",
-        "1663618695fc7e0630-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "btextimg": "three-cate",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "video_banner_qBwaKh": {
       "type": "video-banner",
       "blocks": {
@@ -546,61 +321,160 @@
         "video_overlay_link": "shopify://products/the-signature-wraps"
       }
     },
-    "1660227726ff0f6237": {
-      "type": "foursixty",
+    "columns_d3EcBp": {
+      "type": "columns",
       "blocks": {
-        "0bd959b1-a3c2-4f96-ad27-81efe57d1150": {
-          "type": "title",
+        "column_Rd8hAc": {
+          "type": "_column",
+          "name": "Column",
           "settings": {
-            "title": "Shop The Look"
-          }
+            "image": "shopify://shop_images/the-cindy-short-sleeve-top-navy.jpg",
+            "description": "Shop The Cindy Collection",
+            "add_text_shadow": true,
+            "image_overlay": "black",
+            "image_overlay_opacity": 20,
+            "desktop_content_alignment": "center",
+            "desktop_content_position": "middle-center",
+            "mobile_content_position": "middle-center"
+          },
+          "blocks": {
+            "text_M96eFC": {
+              "type": "text",
+              "name": "Text",
+              "disabled": true,
+              "settings": {
+                "text": "Text 1",
+                "color": "#ffffff",
+                "font_size": 16,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            },
+            "title_AtbfjG": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading": "The Cindy Collection",
+                "color": "#ffffff",
+                "font_size": 36,
+                "font_size_mobile": 34,
+                "heading_tag": "h2"
+              },
+              "blocks": {}
+            },
+            "text_HAERNN": {
+              "type": "text",
+              "name": "Text",
+              "disabled": true,
+              "settings": {
+                "text": "Text 2",
+                "color": "#ffffff",
+                "font_size": 16,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            },
+            "buttons_tYqgR9": {
+              "type": "buttons",
+              "name": "Buttons",
+              "settings": {
+                "button_label_1": "Shop Now",
+                "button_link_1": "shopify://collections/the-cindy-collection",
+                "button_bg_color": "#ffffff",
+                "button_text_color": "#0d1c29",
+                "button_label_2": "",
+                "button_link_2": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_M96eFC",
+            "title_AtbfjG",
+            "text_HAERNN",
+            "buttons_tYqgR9"
+          ]
         },
-        "88d72792-7b35-451c-bf9a-b7f887cde26f": {
-          "type": "paragraph",
-          "disabled": true,
+        "column_8Ch4UF": {
+          "type": "_column",
+          "name": "Column",
           "settings": {
-            "title": "<p>Click the photos below to shop the look! <a href=\"https://www.instagram.com/bleusalt/\">@bleusalt</a></p>"
-          }
-        },
-        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed": {
-          "type": "feed",
-          "settings": {
-            "feed_id": "bleusalt",
-            "total_images": 12,
-            "big_first_image": false,
-            "per_row": 5,
-            "image_margin": 4,
-            "feed_type": "slider"
-          }
-        },
-        "45d95e55-eabb-474a-81e3-9b60083b3f79": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link": "shopify://pages/shop-our-instagram",
-            "link_text": "Shop Our Instagram",
-            "button_style": "button--secondary"
-          }
+            "image": "shopify://shop_images/lyndies-spring-hero.jpg",
+            "description": "",
+            "add_text_shadow": true,
+            "image_overlay": "black",
+            "image_overlay_opacity": 20,
+            "desktop_content_alignment": "center",
+            "desktop_content_position": "middle-center",
+            "mobile_content_position": "middle-center"
+          },
+          "blocks": {
+            "text_PCdihR": {
+              "type": "text",
+              "name": "Text",
+              "disabled": true,
+              "settings": {
+                "text": "Text 1",
+                "color": "#ffffff",
+                "font_size": 22,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            },
+            "title_pyPPW4": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading": "Lyndie's Spring Edit",
+                "color": "#ffffff",
+                "font_size": 36,
+                "font_size_mobile": 34,
+                "heading_tag": "h2"
+              },
+              "blocks": {}
+            },
+            "text_TWyhXW": {
+              "type": "text",
+              "name": "Text",
+              "disabled": true,
+              "settings": {
+                "text": "Text 2",
+                "color": "#ffffff",
+                "font_size": 22,
+                "font_size_mobile": 14
+              },
+              "blocks": {}
+            },
+            "buttons_CYWq9c": {
+              "type": "buttons",
+              "name": "Buttons",
+              "settings": {
+                "button_label_1": "Shop Now",
+                "button_link_1": "shopify://collections/lyndies-spring-edit",
+                "button_bg_color": "#ffffff",
+                "button_text_color": "#0d1c29",
+                "button_label_2": "",
+                "button_link_2": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_PCdihR",
+            "title_pyPPW4",
+            "text_TWyhXW",
+            "buttons_CYWq9c"
+          ]
         }
       },
       "block_order": [
-        "0bd959b1-a3c2-4f96-ad27-81efe57d1150",
-        "88d72792-7b35-451c-bf9a-b7f887cde26f",
-        "da574bf2-ccf2-46f8-aeeb-0cc2fd0a36ed",
-        "45d95e55-eabb-474a-81e3-9b60083b3f79"
+        "column_Rd8hAc",
+        "column_8Ch4UF"
       ],
-      "disabled": true,
-      "custom_css": [
-        ".foursixty-title {font-size: 32px;}",
-        "@media screen and (max-width: 749px) {.section--template--18658023669873__1660227726ff0f6237 .fs-mobile .fs-entry-container {width: 44% !important; padding-top: 44% !important; } .foursixty-title {font-size: 20px; }}"
-      ],
+      "name": "Columns",
       "settings": {
-        "width": "page-width",
-        "padding_top": 25,
-        "padding_bottom": 45,
-        "margins": 14,
-        "border_top": true,
-        "text_align": "left"
+        "add_padding": true,
+        "media_ratio": "portrait"
       }
     },
     "1660226720e02964f9": {
@@ -697,6 +571,7 @@
         "buttons_Y43Y8W"
       ],
       "custom_css": [],
+      "name": "Vid - Materials",
       "settings": {
         "video": "shopify://files/videos/Materials edit 2-.mp4",
         "video_url": "",
@@ -794,15 +669,12 @@
     }
   },
   "order": [
-    "columns_d3EcBp",
-    "d2140650-9af9-4246-8dce-94740740313a",
-    "16636186953571c8bf",
     "video_banner_qBwaKh",
     "featured_collection",
     "16597180576b9dbb68",
     "1659735210e064d864",
     "video_banner_YmFe9m",
-    "1660227726ff0f6237",
+    "columns_d3EcBp",
     "1660226720e02964f9",
     "video_banner_KgKULU",
     "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
