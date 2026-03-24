@@ -48,7 +48,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "enable_swatch_grouping": false,
+            "enable_swatch_grouping": true,
             "classic_group_label": "Classics",
             "seasonal_group_label": "Seasonal",
             "seasonal_colors": "Bordeaux, Coco, Unbleached, Red Stripe, Stripe"
