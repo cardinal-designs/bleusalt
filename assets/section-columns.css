@@ -81,6 +81,14 @@
   left: 0;
 }
 
+.columns__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .columns__item-container {
   max-width: 400px;
   width: 100%;
