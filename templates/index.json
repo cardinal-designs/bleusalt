@@ -473,7 +473,7 @@
       ],
       "name": "Columns",
       "settings": {
-        "add_padding": true,
+        "add_padding": false,
         "media_ratio": "portrait"
       }
     },
