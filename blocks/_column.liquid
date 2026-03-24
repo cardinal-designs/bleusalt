@@ -37,6 +37,10 @@
     <div class="columns__overlay" style="background-color: {{ block.settings.image_overlay | handleize }};opacity: {{ block.settings.image_overlay_opacity }}"></div>
   {% endif %}
 
+  {% if block.settings.link != blank %}
+    <a class="columns__link" href="{{ block.settings.link }}"></a>
+  {% endif %}
+
   <div class="columns__item-container{% if block.settings.add_text_shadow %} text-shadow{% endif %}" style="text-align: {{ block.settings.desktop_content_alignment }};">
     {% content_for 'blocks' %}
   </div>
@@ -60,6 +64,11 @@
         "type": "text",
         "id": "description",
         "label": "SEO and ADA description"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
       },
       {
         "type": "checkbox",
