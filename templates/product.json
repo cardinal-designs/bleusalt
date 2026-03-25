@@ -95,12 +95,14 @@
         },
         "custom_liquid_fc3krr": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<hr>\n<p>As seen on.</p>"
           }
         },
         "foursixty_shoppable_social_ugc_custom_slider_aE7kpH": {
           "type": "shopify://apps/foursixty-shoppable-social-ugc/blocks/custom_slider/e2616dfe-fbb6-4e7d-874d-d250b973556d",
+          "disabled": true,
           "settings": {
             "foreground_color": "#ffffff",
             "background_color": "#000000",
