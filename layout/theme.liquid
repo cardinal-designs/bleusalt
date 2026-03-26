@@ -32,13 +32,8 @@
       </script>
 
       <!-- Triple Whale Begin -->
-      <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
-
-      <script>
-        /* >> TriplePixel :: start*/
-        ~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
-        /* << TriplePixel :: end*/
-      </script>
+      <link rel='dns-prefetch' href='https://triplewhale-pixel.web.app/'/>
+      <!-- Triple Whale pixel loaded at bottom of body to avoid blocking rendering -->
       <!-- Triple Whale End -->
 
       {%- if settings.favicon != blank -%}
@@ -474,13 +469,8 @@
       {%- endif -%}
 
       {% if settings.enable_klaviyo_onsite %}
-        <script>
-          window.klaviyoCompanyId = {{ settings.klaviyo_company_id | json }};
-          const klaviyoScript = document.createElement('script');
-          klaviyoScript.src = 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{ settings.klaviyo_company_id }}';
-          klaviyoScript.async = true;
-          document.body.appendChild(klaviyoScript);
-        </script>
+        <!-- Klaviyo loaded after first user interaction via third-party-lazy-loader -->
+        <script defer data-lazy-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{ settings.klaviyo_company_id }}"></script>
       {% endif %}
 
       {%- render 'pixels' -%}
@@ -490,7 +480,7 @@
 
       <script defer src="{{ 'main.js' | asset_url }}"></script>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
 
       <script>
@@ -548,5 +538,13 @@
       </script>
 
       <script src="{{ 'third-party-lazy-loader.js' | asset_url }}" defer></script>
+      <script src="{{ 'video-lazy-loader.js' | asset_url }}" defer></script>
+
+      <!-- Triple Whale Pixel (run after page paint, not in <head>) -->
+      <script>
+        /* >> TriplePixel :: start*/
+        ~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
+        /* << TriplePixel :: end*/
+      </script>
   </body>
 </html>

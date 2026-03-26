@@ -10,5 +10,5 @@
     endif
     -%}
     <div style="padding-top:{{ ratio }}%;" class="media {% if class != blank %}{{ class }}{% endif %}">
-       <video loop autoplay playsinline muted src="{{ video_url }}">
+       <video loop autoplay playsinline muted preload="none" data-src="{{ video_url }}" data-video>
     </div>
