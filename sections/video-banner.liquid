@@ -156,6 +156,13 @@
   id="Banner-{{ section.id }}"
   class="video-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}"
 >
+  {%- comment -%} LCP optimisation: eager-load images only for the first (hero) section {%- endcomment -%}
+  {%- assign banner_img_loading = 'lazy' -%}
+  {%- assign banner_img_priority = 'low' -%}
+  {%- if section.index == 1 -%}
+    {%- assign banner_img_loading = 'eager' -%}
+    {%- assign banner_img_priority = 'high' -%}
+  {%- endif -%}
   {% assign video = section.settings.video %}
   {%- if section.settings.video_url != blank or video != blank or section.settings.image != blank -%}
     <div class="small-hide">
@@ -168,7 +175,8 @@
               assign sizes = "100vw"
             -%}
             {{ section.settings.image | image_url: width: 1500 | image_tag:
-              loading: 'lazy',
+              loading: banner_img_loading,
+              fetchpriority: banner_img_priority,
               width: section.settings.image.width,
               height: image_height,
               sizes: sizes,
@@ -193,14 +201,15 @@
             aria-label="{{ section.settings.description }}"
             id="{{ video_id }}"
             class="banner__video"
-            preload="metadata"
+            preload="none"
             aria-hidden="true"
             data-autoplay=""
             muted=""
             loop=""
             playsinline=""
-            src="{{ section.settings.video_url }}#t=0.1"
+            data-src="{{ section.settings.video_url }}#t=0.1"
             data-expand="-10"
+            data-video
             width="100%"
           ></video>
         {% endif %}
@@ -218,7 +227,8 @@
         assign sizes = "100vw"
       -%}
       {{ section.settings.image_mobile | image_url: width: 600 | image_tag:
-        loading: 'lazy',
+        loading: banner_img_loading,
+        fetchpriority: banner_img_priority,
         width: section.settings.image_mobile.width,
         height: image_height_2,
         sizes: sizes,
@@ -249,14 +259,15 @@
           aria-label="{{ section.settings.description }}"
           id="{{ video_id }}"
           class="banner__video"
-          preload="metadata"
+          preload="none"
           aria-hidden="true"
           data-autoplay=""
           muted=""
           loop=""
           playsinline=""
-          src="{{ section.settings.video_url_mobile }}#t=0.1"
+          data-src="{{ section.settings.video_url_mobile }}#t=0.1"
           data-expand="-10"
+          data-video
           width="100%"
         ></video>
       {% endif %}

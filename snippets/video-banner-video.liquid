@@ -44,4 +44,8 @@
 
 {%- render 'image', image: image, classes: 'opacity-none', sizes: image_sizes, prioritize_loading: true -%}
 
-{{- video_layout | replace: '<img src', '<img data-src' -}}
+{{- video_layout
+  | replace: '<img src', '<img data-src'
+  | replace: '<source src=', '<source data-src='
+  | replace: '<video ', '<video data-video '
+-}}
