@@ -31,6 +31,16 @@
         };
       </script>
 
+      <script type="text/javascript">
+        (() => {window.nostojs=window.nostojs||(function(cb){(window.nostojs.q=window.nostojs.q||[]).push(cb);});})();
+      </script>
+      <script type="text/javascript">
+        nostojs(api => api.setAutoLoad(false));
+        nostojs(api => api.visit.setDoNotTrack(true));
+        nostojs(api => console.log(api.visit.isDoNotTrack()));
+      </script>
+      <script src="//connect.nosto.com/include/14073982" async></script>
+
       <!-- Triple Whale Begin -->
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
 
@@ -395,10 +405,6 @@
       {% if template contains 'product' and product.tags contains 'noindex' %}
         <meta name="robots" content="noindex, nofollow">
       {% endif %}
-      <script>
-        nostojs(api => api.visit.setDoNotTrack(true));
-        nostojs(api => console.log(api.visit.isDoNotTrack()));
-      </script>
     </head>
 
     <body class="gradient template--{{ template.name }} template--{{ template.suffix }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
