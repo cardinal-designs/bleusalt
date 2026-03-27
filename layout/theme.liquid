@@ -31,6 +31,16 @@
         };
       </script>
 
+      <script>
+        window.nostojs = window.nostojs || function(cb) {
+          (window.nostojs.q = window.nostojs.q || []).push(cb);
+        };
+
+        window.nostojs(function(api) {
+          api.visit.setDoNotTrack(false);
+        });
+      </script>
+
       <!-- Triple Whale Begin -->
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin/>
 
