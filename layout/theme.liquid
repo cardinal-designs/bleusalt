@@ -395,7 +395,10 @@
       {% if template contains 'product' and product.tags contains 'noindex' %}
         <meta name="robots" content="noindex, nofollow">
       {% endif %}
-
+      <script>
+        nostojs(api => api.visit.setDoNotTrack(true));
+        nostojs(api => console.log(api.visit.isDoNotTrack()));
+      </script>
     </head>
 
     <body class="gradient template--{{ template.name }} template--{{ template.suffix }} {% if page.handle contains 'guide' or page.handle contains 'size-chart' %}page--size-chart{% endif %}">
