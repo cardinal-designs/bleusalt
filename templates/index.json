@@ -167,7 +167,7 @@
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "",
-            "button_link_2": "shopify://collections/womens-best-sellers"
+            "button_link_2": ""
           }
         }
       },
@@ -197,7 +197,7 @@
         "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
-        "video_overlay_link": "shopify://collections/womens-new-arrivals"
+        "video_overlay_link": "shopify://products/the-mockneck-top"
       }
     },
     "1659735210e064d864": {
