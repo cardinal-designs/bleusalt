@@ -420,7 +420,7 @@
       {% section 'announcement-bar' %}
       {% section 'header' %}
 
-      <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      <main id="MainContent" class="content-for-layout focus-none{% if collection and collection.metafields.custom.nosto_merch == true %} nosto-category{% endif %}" role="main" tabindex="-1">
         {% if template == 'index' %}
           {% section 'collection-banner-womens' %}
         {% elsif template.name == 'collection' and collection.handle contains 'women' %}
