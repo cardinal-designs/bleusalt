@@ -9,6 +9,125 @@
  */
 {
   "sections": {
+    "video_banner_qBwaKh": {
+      "type": "video-banner",
+      "blocks": {
+        "text_nTbnGe": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Introducing",
+            "text_color": "#ffffff",
+            "text_size": 18,
+            "text_size_mobile": 14
+          }
+        },
+        "heading_iBximb": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Mock Neck Top",
+            "heading_color": "#ffffff",
+            "heading_size": 52,
+            "heading_size_mobile": 34,
+            "heading_tag": "h2"
+          }
+        },
+        "text_two_M4B8bJ": {
+          "type": "text-two",
+          "settings": {
+            "text": "Now in Navy",
+            "text_color": "#ffffff",
+            "text_size": 22,
+            "text_size_mobile": 14
+          }
+        },
+        "buttons_JHxG4f": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/the-mockneck-top",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "",
+            "button_link_2": "shopify://collections/womens-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "text_nTbnGe",
+        "heading_iBximb",
+        "text_two_M4B8bJ",
+        "buttons_JHxG4f"
+      ],
+      "custom_css": [],
+      "name": "Video - Short Sleeve Cindy",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/8fdd912d7dcc4069b683cf303b789fc0.mp4",
+        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/237cd88f459647678e7b2f731b2f8914.mp4",
+        "description": "The Mock Neck Top by Bleusalt",
+        "add_text_shadow": true,
+        "image_overlay": "black",
+        "image_overlay_opacity": 20,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_position": "middle-center",
+        "video_height_mobile": "100",
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": "shopify://products/the-mockneck-top"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "blocks": {
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
+          "type": "collection",
+          "settings": {
+            "heading": "Best Sellers",
+            "collection": "womens-best-sellers"
+          }
+        },
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
+          "type": "collection",
+          "settings": {
+            "heading": "New Arrivals",
+            "collection": "womens-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
+        "49238d89-463e-419a-8643-42f4463ad2dd"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
     "16597180576b9dbb68": {
       "type": "video-banner",
       "blocks": {
@@ -79,124 +198,6 @@
         "show_text_below": true,
         "button_overlay": true,
         "video_overlay_link": "/products/the-barbra-top-lite"
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "blocks": {
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
-          "type": "collection",
-          "settings": {
-            "heading": "Best Sellers",
-            "collection": "womens-best-sellers"
-          }
-        },
-        "49238d89-463e-419a-8643-42f4463ad2dd": {
-          "type": "collection",
-          "settings": {
-            "heading": "New Arrivals",
-            "collection": "womens-new-arrivals"
-          }
-        }
-      },
-      "block_order": [
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
-        "49238d89-463e-419a-8643-42f4463ad2dd"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": true,
-        "show_life_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "video_banner_qBwaKh": {
-      "type": "video-banner",
-      "blocks": {
-        "text_nTbnGe": {
-          "type": "text",
-          "settings": {
-            "text": "Introducing",
-            "text_color": "#ffffff",
-            "text_size": 18,
-            "text_size_mobile": 14
-          }
-        },
-        "heading_iBximb": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Short Sleeve Cindy Top",
-            "heading_color": "#ffffff",
-            "heading_size": 52,
-            "heading_size_mobile": 34,
-            "heading_tag": "h2"
-          }
-        },
-        "text_two_M4B8bJ": {
-          "type": "text-two",
-          "settings": {
-            "text": "An icon, reimagined.",
-            "text_color": "#ffffff",
-            "text_size": 22,
-            "text_size_mobile": 14
-          }
-        },
-        "buttons_JHxG4f": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/the-short-sleeve-cindy-top",
-            "button_bg_color": "#ffffff",
-            "button_text_color": "#0d1c29",
-            "button_label_2": "",
-            "button_link_2": "shopify://collections/womens-best-sellers"
-          }
-        }
-      },
-      "block_order": [
-        "text_nTbnGe",
-        "heading_iBximb",
-        "text_two_M4B8bJ",
-        "buttons_JHxG4f"
-      ],
-      "custom_css": [],
-      "name": "Video - Short Sleeve Cindy",
-      "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/2111dfd8c7494604ba764b1583bd2421.mp4",
-        "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/935b242d4f9a453ba28cd0dae5bec5f7.mp4",
-        "description": "The Short Sleeve Cindy Top by Bleusalt",
-        "add_text_shadow": true,
-        "image_overlay": "black",
-        "image_overlay_opacity": 20,
-        "video_height": "56.25",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "none",
-        "mobile_content_position": "middle-center",
-        "video_height_mobile": "100",
-        "show_text_below": true,
-        "button_overlay": true,
-        "video_overlay_link": "shopify://products/the-short-sleeve-cindy-top"
       }
     },
     "1659735210e064d864": {
@@ -670,9 +671,9 @@
     }
   },
   "order": [
-    "16597180576b9dbb68",
-    "featured_collection",
     "video_banner_qBwaKh",
+    "featured_collection",
+    "16597180576b9dbb68",
     "1659735210e064d864",
     "video_banner_YmFe9m",
     "columns_d3EcBp",
