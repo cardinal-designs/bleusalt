@@ -622,7 +622,9 @@
             Continue
           </button>
         </div>
+        {% comment %}
         <a href="/checkout" class="cart__cart-link center">Go to Full Cart</a>
+        {% endcomment %}
         {% if settings.cart_notice != blank %}
           <p class="cart__notice">{{ settings.cart_notice }}</p>
         {% endif %}
