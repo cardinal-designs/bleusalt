@@ -46,7 +46,7 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://products/the-mockneck-top",
-            "button_bg_color": "#FFFFFF",
+            "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "",
             "button_link_2": "shopify://collections/womens-best-sellers"
@@ -60,7 +60,7 @@
         "buttons_JHxG4f"
       ],
       "custom_css": [],
-      "name": "Video - Short Sleeve Cindy",
+      "name": "Video - Mock Neck",
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/8fdd912d7dcc4069b683cf303b789fc0.mp4",
         "video_url_mobile": "https://cdn.shopify.com/videos/c/o/v/237cd88f459647678e7b2f731b2f8914.mp4",
