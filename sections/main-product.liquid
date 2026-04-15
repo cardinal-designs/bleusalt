@@ -119,10 +119,7 @@
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
         <div id="GalleryViewer-{{ section.id }}" class="product-main-images">
-          <div
-            id="Slider-Gallery-{{ section.id }}"
-            class="product__media-list contains-media swiper"
-            data-json="{{- swiper_options -}}"
+          <div id="Slider-Gallery-{{ section.id }}" class="product__media-list contains-media swiper" data-json="{{- swiper_options -}}"
           >
             {%- comment -%} Mobile Images Slider {%- endcomment -%}
             <div class="product__gallery swiper-wrapper medium-up-hide">
