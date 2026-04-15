@@ -335,8 +335,8 @@
             "image_overlay": "black",
             "image_overlay_opacity": 20,
             "desktop_content_alignment": "center",
-            "desktop_content_position": "middle-center",
-            "mobile_content_position": "middle-center"
+            "desktop_content_position": "bottom-center",
+            "mobile_content_position": "bottom-center"
           },
           "blocks": {
             "text_M96eFC": {
@@ -407,8 +407,8 @@
             "image_overlay": "black",
             "image_overlay_opacity": 20,
             "desktop_content_alignment": "center",
-            "desktop_content_position": "middle-center",
-            "mobile_content_position": "middle-center"
+            "desktop_content_position": "bottom-center",
+            "mobile_content_position": "bottom-center"
           },
           "blocks": {
             "text_PCdihR": {
