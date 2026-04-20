@@ -51,18 +51,9 @@
         "top_sub_title": "",
         "top_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.top_content | metafield_tag }}",
         "paragraph_style_2": "100",
-        "top_quote_title": "",
-        "top_quote_conetnt": "",
-        "paragraph_style_3": "100",
-        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_top_content.value.bottom_title.value }}",
-        "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_top_content.value.bottom_content | metafield_tag }}",
-        "paragraph_style_4": "100",
-        "bottom_quote_title": "",
-        "bottom_quote_conetnt": "",
-        "paragraph_style_5": "100",
-        "bottom_image_caption": ""
+        "paragraph_style_4": "100"
       }
     },
     "alt_article_content_1_HJXPcX": {
@@ -76,18 +67,9 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
-        "top_quote_title": "",
-        "top_quote_conetnt": "",
-        "paragraph_style_3": "100",
-        "image_caption": "",
         "bottom_title": "",
-        "bottom_sub_title": "",
         "bottom_conetnt": "",
-        "paragraph_style_4": "100",
-        "bottom_quote_title": "",
-        "bottom_quote_conetnt": "",
-        "paragraph_style_5": "100",
-        "bottom_image_caption": ""
+        "paragraph_style_4": "100"
       }
     },
     "alt_article_divider_kYEKhk": {
@@ -110,18 +92,9 @@
         "top_sub_title": "",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "paragraph_style_2": "100",
-        "top_quote_title": "",
-        "top_quote_conetnt": "",
-        "paragraph_style_3": "100",
-        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
-        "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
-        "paragraph_style_4": "100",
-        "bottom_quote_title": "",
-        "bottom_quote_conetnt": "",
-        "paragraph_style_5": "100",
-        "bottom_image_caption": ""
+        "paragraph_style_4": "100"
       }
     },
     "alt_article_divider_eXM3Kd": {
@@ -144,33 +117,9 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
-        "top_quote_title": "",
-        "top_quote_conetnt": "",
-        "paragraph_style_3": "100",
-        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_heading.value }}",
-        "bottom_sub_title": "",
         "bottom_conetnt": "<p></p><p>{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_content | metafield_tag }}</p>",
-        "paragraph_style_4": "100",
-        "bottom_quote_title": "",
-        "bottom_quote_conetnt": "",
-        "paragraph_style_5": "100",
-        "bottom_image_caption": ""
-      }
-    },
-    "alt_article_content_3_BzTdde": {
-      "type": "alt-article-content-3",
-      "name": "Article Content 3",
-      "settings": {
-        "spacing": 50,
-        "show_divider": false,
-        "title": "{{ article.metafields.custom.article_week_schedule.value.title.value }}",
-        "content": "",
-        "paragraph_style_1": "100",
-        "sub_title": "",
-        "metafield_key": "custom.article_week_schedule",
-        "sub_text": "{{ article.metafields.custom.article_week_schedule.value.sub_text.value }}",
-        "image_caption": ""
+        "paragraph_style_4": "100"
       }
     },
     "alt_article_content_1_ykCAcf": {
@@ -185,18 +134,9 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
-        "top_quote_title": "",
-        "top_quote_conetnt": "",
-        "paragraph_style_3": "100",
-        "image_caption": "",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_title.value }}",
-        "bottom_sub_title": "",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_content | metafield_tag }}",
-        "paragraph_style_4": "100",
-        "bottom_quote_title": "",
-        "bottom_quote_conetnt": "",
-        "paragraph_style_5": "100",
-        "bottom_image_caption": ""
+        "paragraph_style_4": "100"
       }
     },
     "alt_article_content_1_NHYTfq": {
@@ -211,18 +151,9 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
-        "top_quote_title": "",
-        "top_quote_conetnt": "",
-        "paragraph_style_3": "100",
-        "image_caption": "",
         "bottom_title": "",
-        "bottom_sub_title": "",
         "bottom_conetnt": "",
-        "paragraph_style_4": "100",
-        "bottom_quote_title": "",
-        "bottom_quote_conetnt": "",
-        "paragraph_style_5": "100",
-        "bottom_image_caption": ""
+        "paragraph_style_4": "100"
       }
     },
     "alt_article_finale_dHyCKd": {
@@ -249,7 +180,6 @@
     "alt_article_content_1_D3gp3g",
     "alt_article_divider_eXM3Kd",
     "alt_article_content_1_PCkeUP",
-    "alt_article_content_3_BzTdde",
     "alt_article_content_1_ykCAcf",
     "alt_article_content_1_NHYTfq",
     "alt_article_finale_dHyCKd"
