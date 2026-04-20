@@ -88,7 +88,8 @@
         "bottom_quote_title": "",
         "bottom_quote_conetnt": "",
         "paragraph_style_5": "100",
-        "bottom_image_caption": ""
+        "bottom_image": "{{ article.metafields.custom.image_grid.value.bottom_image.value }}",
+        "bottom_image_caption": "{{ article.metafields.custom.image_grid.value.bottom_image_caption.value }}"
       }
     },
     "alt_article_divider_kYEKhk": {
