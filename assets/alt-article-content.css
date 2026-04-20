@@ -32,7 +32,8 @@
 
 .article-rte a {
     color: #1a1a1a;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .article-rte.paragraph-25 {
