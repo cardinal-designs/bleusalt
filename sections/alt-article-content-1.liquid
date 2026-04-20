@@ -29,9 +29,6 @@
         {% if section.settings.sub_text != blank %}
             <div class="article-rte paragraph-{{ section.settings.paragraph_style_1 }}">{{ section.settings.sub_text }}</div>
         {% endif %}
-        {% if section.settings.top_sub_title != blank %}
-            <h3>{{ section.settings.top_sub_title }}</h3>
-        {% endif %}
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte paragraph-{{ section.settings.paragraph_style_2 }}">{{ section.settings.top_conetnt }}</div>
         {% endif %}
@@ -140,11 +137,6 @@
                 }
             ],
             "default": "100"
-        },
-        {
-            "type": "text",
-            "id": "top_sub_title",
-            "label": "Top sub title"
         },
         {
             "type": "richtext",
