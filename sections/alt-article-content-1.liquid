@@ -35,26 +35,6 @@
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte paragraph-{{ section.settings.paragraph_style_2 }}">{{ section.settings.top_conetnt }}</div>
         {% endif %}
-        {% if section.settings.top_quote_title != blank %}
-            <div class="pullquote">{{ section.settings.top_quote_title }}</div>
-        {% endif %}
-        {% if section.settings.top_quote_conetnt != blank %}
-            <div class="article-rte paragraph-{{ section.settings.paragraph_style_3 }}">{{ section.settings.top_quote_conetnt }}</div>
-        {% endif %}
-        {% if section.settings.image != blank %}
-            <div class="article-image-block">
-                <div class="article-image-full">
-                    {%- render 'image',
-                    image: section.settings.image,
-                    sizes: '(min-width: 768px) 50vw, 100vw',
-                    prioritize_loading: true
-                    -%}
-                </div>
-                {% if section.settings.image_caption != blank %}
-                <div class="image-caption">{{ section.settings.image_caption }}</div>
-                {% endif %}
-            </div>
-        {% endif %}
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
         {% endif %}
@@ -174,50 +154,6 @@
                 }
             ],
             "default": "100"
-        },
-        {
-            "type": "text",
-            "id": "top_quote_title",
-            "label": "Top quote title"
-        },
-        {
-            "type": "richtext",
-            "id": "top_quote_conetnt",
-            "label": "Top quote content"
-        },
-        {
-            "type": "select",
-            "id": "paragraph_style_3",
-            "label": "paragraph split style",
-            "options": [
-                {
-                    "value": "33",
-                    "label": "33%"
-                },
-                {
-                    "value": "25",
-                    "label": "25%"
-                },
-                {
-                    "value": "50",
-                    "label": "50%"
-                },
-                {
-                    "value": "100",
-                    "label": "100%"
-                }
-            ],
-            "default": "100"
-        },
-        {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-        },
-        {
-            "type": "text",
-            "id": "image_caption",
-            "label": "Image caption"
         },
         {
             "type": "text",
