@@ -38,9 +38,6 @@
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
         {% endif %}
-        {% if section.settings.bottom_sub_title != blank %}
-            <h3>{{ section.settings.bottom_sub_title }}</h3>
-        {% endif %}
         {% if section.settings.bottom_conetnt != blank %}
             <div class="article-rte paragraph-{{ section.settings.paragraph_style_4 }}">{{ section.settings.bottom_conetnt }}</div>
         {% endif %}
@@ -138,11 +135,6 @@
             "type": "text",
             "id": "bottom_title",
             "label": "Bottom title"
-        },
-        {
-            "type": "text",
-            "id": "bottom_sub_title",
-            "label": "Bottom sub title"
         },
         {
             "type": "richtext",
