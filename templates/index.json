@@ -177,7 +177,6 @@
         "text_two_M4B8bJ",
         "buttons_JHxG4f"
       ],
-      "disabled": true,
       "custom_css": [],
       "name": "Video - Mock Neck",
       "settings": {
@@ -299,7 +298,6 @@
         "text_two_fQfDFw",
         "buttons_RNE36W"
       ],
-      "disabled": true,
       "custom_css": [],
       "name": "Video - Wraps",
       "settings": {
@@ -659,7 +657,6 @@
       "block_order": [
         "template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
