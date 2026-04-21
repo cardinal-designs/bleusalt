@@ -9,6 +9,126 @@
  */
 {
   "sections": {
+    "16597180576b9dbb68": {
+      "type": "video-banner",
+      "blocks": {
+        "text_f3gYBW": {
+          "type": "text",
+          "settings": {
+            "text": "Introducing",
+            "text_color": "#ffffff",
+            "text_size": 18,
+            "text_size_mobile": 14
+          }
+        },
+        "heading_9qBHw9": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Sleeveless Turtleneck Dress",
+            "heading_color": "#ffffff",
+            "heading_size": 52,
+            "heading_size_mobile": 34,
+            "heading_tag": "h2"
+          }
+        },
+        "text_two_NHhmBc": {
+          "type": "text-two",
+          "settings": {
+            "text": "Two Icons, One Silhouette",
+            "text_color": "#ffffff",
+            "text_size": 19,
+            "text_size_mobile": 14
+          }
+        },
+        "buttons_fCtqBt": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "/products/the-sleeveless-turtleneck-dress",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_f3gYBW",
+        "heading_9qBHw9",
+        "text_two_NHhmBc",
+        "buttons_fCtqBt"
+      ],
+      "custom_css": [],
+      "name": "Vid - SLTN Dress",
+      "settings": {
+        "video": "shopify://files/videos/Sleevless turtleneck Dress wide comp.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/The Sleeveless Turtleneck Dress mob comp.mp4",
+        "video_url_mobile": "",
+        "description": "The Sleeveless Turtleneck Dress by Bleusalt",
+        "add_text_shadow": true,
+        "image_overlay": "black",
+        "image_overlay_opacity": 30,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_position": "bottom-center",
+        "video_height_mobile": "125",
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": "/products/the-sleeveless-turtleneck-dress"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "blocks": {
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
+          "type": "collection",
+          "settings": {
+            "heading": "Best Sellers",
+            "collection": "womens-best-sellers"
+          }
+        },
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
+          "type": "collection",
+          "settings": {
+            "heading": "New Arrivals",
+            "collection": "womens-new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
+        "49238d89-463e-419a-8643-42f4463ad2dd"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
     "video_banner_qBwaKh": {
       "type": "video-banner",
       "blocks": {
@@ -80,126 +200,6 @@
         "show_text_below": true,
         "button_overlay": true,
         "video_overlay_link": "shopify://products/the-mockneck-top"
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "blocks": {
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
-          "type": "collection",
-          "settings": {
-            "heading": "Best Sellers",
-            "collection": "womens-best-sellers"
-          }
-        },
-        "49238d89-463e-419a-8643-42f4463ad2dd": {
-          "type": "collection",
-          "settings": {
-            "heading": "New Arrivals",
-            "collection": "womens-new-arrivals"
-          }
-        }
-      },
-      "block_order": [
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
-        "49238d89-463e-419a-8643-42f4463ad2dd"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": true,
-        "show_life_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "16597180576b9dbb68": {
-      "type": "video-banner",
-      "blocks": {
-        "text_f3gYBW": {
-          "type": "text",
-          "settings": {
-            "text": "Introducing",
-            "text_color": "#ffffff",
-            "text_size": 18,
-            "text_size_mobile": 14
-          }
-        },
-        "heading_9qBHw9": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Barbra Top Lite",
-            "heading_color": "#ffffff",
-            "heading_size": 52,
-            "heading_size_mobile": 34,
-            "heading_tag": "h2"
-          }
-        },
-        "text_two_NHhmBc": {
-          "type": "text-two",
-          "settings": {
-            "text": "The Iconic Barbra Top… Now in Lite",
-            "text_color": "#ffffff",
-            "text_size": 19,
-            "text_size_mobile": 14
-          }
-        },
-        "buttons_fCtqBt": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "/products/the-barbra-top-lite",
-            "button_bg_color": "#ffffff",
-            "button_text_color": "#0d1c29",
-            "button_label_2": "",
-            "button_link_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_f3gYBW",
-        "heading_9qBHw9",
-        "text_two_NHhmBc",
-        "buttons_fCtqBt"
-      ],
-      "custom_css": [],
-      "name": "Vid - Barbra Top Lite",
-      "settings": {
-        "video": "shopify://files/videos/Barbra Top Lite Banner_1.mp4",
-        "video_url": "",
-        "video_mobile": "shopify://files/videos/Barbra Top Lite (app banner).mp4",
-        "video_url_mobile": "",
-        "description": "The Barbra Top Lite by Bleusalt",
-        "add_text_shadow": true,
-        "image_overlay": "black",
-        "image_overlay_opacity": 30,
-        "video_height": "56.25",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "none",
-        "mobile_content_position": "bottom-center",
-        "video_height_mobile": "125",
-        "show_text_below": true,
-        "button_overlay": true,
-        "video_overlay_link": "/products/the-barbra-top-lite"
       }
     },
     "1659735210e064d864": {
@@ -673,9 +673,9 @@
     }
   },
   "order": [
-    "video_banner_qBwaKh",
-    "featured_collection",
     "16597180576b9dbb68",
+    "featured_collection",
+    "video_banner_qBwaKh",
     "1659735210e064d864",
     "video_banner_YmFe9m",
     "columns_d3EcBp",
