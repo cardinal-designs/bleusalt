@@ -177,6 +177,7 @@
         "text_two_M4B8bJ",
         "buttons_JHxG4f"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Video - Mock Neck",
       "settings": {
@@ -298,6 +299,7 @@
         "text_two_fQfDFw",
         "buttons_RNE36W"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Video - Wraps",
       "settings": {
