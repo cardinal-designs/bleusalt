@@ -645,31 +645,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "05cdb46b-48ec-4c49-9ab7-410d5ce62045": {
-      "type": "rich-text",
-      "blocks": {
-        "template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>At Bleusalt, we invite you to immerse yourself in a world of elevated luxury and elegance. Inspired by a lifestyle in and around the ocean, our brand encapsulates a blend of elegance and sophistication that echoes through every thread of our collection.</p><h2>Create a Capsule Wardrobe with Elevated Basics</h2><p>Elevate your look with Bleusalt's exclusive collection, designed to help you build a capsule wardrobe that exudes sophistication. Our brand embodies the essence of luxurious minimalism, focusing on a carefully-curated selection of versatile and timeless pieces.</p><h2>Women’s Clothing by Bleusalt</h2><p>Explore Bleusalt’s women’s clothing line for luxurious seasonless basics. Embrace versatile silhouettes and luxurious fabrics that redefine elevated everyday wear. Shop our collection of women’s clothing designed to elevate every look from the beach to the street or day to night. </p><h2>Men’s Clothing by Bleusalt</h2><p>Explore Bleusalt's men’s clothing line for a diverse array of versatile and sophisticated pieces tailored to the modern man. From impeccably designed classic tops to sleek and refined bottoms, each garment effortlessly strikes a harmonious balance between exceptional quality and timeless style.</p><h2>Unisex Clothing by Bleusalt</h2><p>Step into a world of refined unisex fashion with Bleusalt's distinctive collection. Our unisex clothing line transcends traditional boundaries, offering a range of impeccably crafted pieces that seamlessly exude quiet luxury. From elegant tops to versatile bottoms, each garment embodies the essence of refined living, celebrating a shared sophistication that speaks softly yet powerfully to all.</p><h2>Kids’ Clothing by Bleusalt</h2><p>Nurture the youngest members of your family's sense of style with Bleusalt's luxury kids’ clothing collection. Crafted with the same dedication to quality and refinement that defines our brand, our kids' line is the perfect introduction to the world of elevated elegance.</p><h2>Soft, Sustainable Clothing Rooted in Mindful Creation</h2><p>Our commitment to sustainability echoes through every thread. Each garment is proudly made in the USA from the softest fibers on Earth. This not only ensures a luxurious feel but also aligns with our dedication to environmentally-conscious practices.</p><h2>Shop Bleusalt</h2><p>Bleusalt is the perfect foundation for your style. Shop online or visit our flagship store in Malibu to experience Bleusalt firsthand.<br/></p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--14657444118641__05cdb46b-48ec-4c49-9ab7-410d5ce62045-text-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "btextimg": "",
-        "background_image_size": "cover",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 12,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -681,7 +656,6 @@
     "columns_d3EcBp",
     "1660226720e02964f9",
     "video_banner_KgKULU",
-    "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6",
-    "05cdb46b-48ec-4c49-9ab7-410d5ce62045"
+    "5e04b2e1-4fa0-45bd-a4cb-77f983867ff6"
   ]
 }
