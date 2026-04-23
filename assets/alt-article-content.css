@@ -16,7 +16,7 @@
 }
 
 .article-rte p,
-div.article-rte {
+.article-rte {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 17px;
     margin-bottom: 28px;
@@ -26,8 +26,14 @@ div.article-rte {
     margin-top: 0px;
 }
 
-div.article-rte {
+.article-rte {
     margin-bottom: 10px;
+}
+
+.article-rte a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .article-rte.paragraph-25 {

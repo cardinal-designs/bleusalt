@@ -35,12 +35,6 @@
         {% if section.settings.top_conetnt != blank %}
             <div class="article-rte paragraph-{{ section.settings.paragraph_style_2 }}">{{ section.settings.top_conetnt }}</div>
         {% endif %}
-        {% if section.settings.top_quote_title != blank %}
-            <div class="pullquote">{{ section.settings.top_quote_title }}</div>
-        {% endif %}
-        {% if section.settings.top_quote_conetnt != blank %}
-            <div class="article-rte paragraph-{{ section.settings.paragraph_style_3 }}">{{ section.settings.top_quote_conetnt }}</div>
-        {% endif %}
         {% if section.settings.image != blank %}
             <div class="article-image-block">
                 <div class="article-image-full">
@@ -50,26 +44,13 @@
                     prioritize_loading: true
                     -%}
                 </div>
-                {% if section.settings.image_caption != blank %}
-                <div class="image-caption">{{ section.settings.image_caption }}</div>
-                {% endif %}
             </div>
-            
         {% endif %}
         {% if section.settings.bottom_title != blank %}
             <h2>{{ section.settings.bottom_title }}</h2>
         {% endif %}
-        {% if section.settings.bottom_sub_title != blank %}
-            <h3>{{ section.settings.bottom_sub_title }}</h3>
-        {% endif %}
         {% if section.settings.bottom_conetnt != blank %}
             <div class="article-rte paragraph-{{ section.settings.paragraph_style_4 }}">{{ section.settings.bottom_conetnt }}</div>
-        {% endif %}
-        {% if section.settings.bottom_quote_title != blank %}
-            <div class="pullquote">{{ section.settings.bottom_quote_title }}</div>
-        {% endif %}
-        {% if section.settings.bottom_quote_conetnt != blank %}
-            <div class="article-rte paragraph-{{ section.settings.paragraph_style_5 }}">{{ section.settings.bottom_quote_conetnt }}</div>
         {% endif %}
         {% if section.settings.bottom_image != blank %}
             <div class="article-image-block">
@@ -80,11 +61,7 @@
                     prioritize_loading: true
                     -%}
                 </div>
-                {% if section.settings.bottom_image_caption != blank %}
-                <div class="image-caption">{{ section.settings.bottom_image_caption }}</div>
-                {% endif %}
-            </div>
-            
+            </div>            
         {% endif %}
     </div>
 </div>
@@ -177,58 +154,14 @@
             "default": "100"
         },
         {
-            "type": "text",
-            "id": "top_quote_title",
-            "label": "Top quote title"
-        },
-        {
-            "type": "richtext",
-            "id": "top_quote_conetnt",
-            "label": "Top quote content"
-        },
-        {
-            "type": "select",
-            "id": "paragraph_style_3",
-            "label": "paragraph split style",
-            "options": [
-                {
-                    "value": "33",
-                    "label": "33%"
-                },
-                {
-                    "value": "25",
-                    "label": "25%"
-                },
-                {
-                    "value": "50",
-                    "label": "50%"
-                },
-                {
-                    "value": "100",
-                    "label": "100%"
-                }
-            ],
-            "default": "100"
-        },
-        {
             "type": "image_picker",
             "id": "image",
-            "label": "Image"
-        },
-        {
-            "type": "text",
-            "id": "image_caption",
-            "label": "Image caption"
+            "label": "Top Image"
         },
         {
             "type": "text",
             "id": "bottom_title",
             "label": "Bottom title"
-        },
-        {
-            "type": "text",
-            "id": "bottom_sub_title",
-            "label": "Bottom sub title"
         },
         {
             "type": "richtext",
@@ -260,48 +193,9 @@
             "default": "100"
         },
         {
-            "type": "text",
-            "id": "bottom_quote_title",
-            "label": "Bottom quote title"
-        },
-        {
-            "type": "richtext",
-            "id": "bottom_quote_conetnt",
-            "label": "Bottom quote content"
-        },
-        {
-            "type": "select",
-            "id": "paragraph_style_5",
-            "label": "paragraph split style",
-            "options": [
-                {
-                    "value": "33",
-                    "label": "33%"
-                },
-                {
-                    "value": "25",
-                    "label": "25%"
-                },
-                {
-                    "value": "50",
-                    "label": "50%"
-                },
-                {
-                    "value": "100",
-                    "label": "100%"
-                }
-            ],
-            "default": "100"
-        },
-        {
             "type": "image_picker",
             "id": "bottom_image",
             "label": "Bottom image"
-        },
-        {
-            "type": "text",
-            "id": "bottom_image_caption",
-            "label": "Bottom image caption"
         }
     ],
     "presets": [
