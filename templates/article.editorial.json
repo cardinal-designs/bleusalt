@@ -95,9 +95,11 @@
         "top_sub_title": "",
         "top_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.top_content | metafield_tag }}",
         "paragraph_style_2": "100",
+        "image": "{{ article.metafields.custom.alt_article_content_part_2.value.top_image.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_title.value }}",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_content | metafield_tag }}",
-        "paragraph_style_4": "100"
+        "paragraph_style_4": "100",
+        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_2.value.bottom_image.value }}"
       }
     },
     "alt_article_divider_eXM3Kd": {
@@ -120,6 +122,7 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
+        "image": "{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_image.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_heading.value }}",
         "bottom_conetnt": "<p></p>{{ article.metafields.custom.alt_article_image_grid_2.value.bottom_content | metafield_tag }}",
         "paragraph_style_4": "100"
@@ -137,9 +140,11 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
+        "image": "{{ article.metafields.custom.alt_article_content_part_3.value.top_image.value }}",
         "bottom_title": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_title.value }}",
         "bottom_conetnt": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_content | metafield_tag }}",
-        "paragraph_style_4": "100"
+        "paragraph_style_4": "100",
+        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_3.value.bottom_image.value }}"
       }
     },
     "alt_article_content_1_NHYTfq": {
@@ -154,9 +159,11 @@
         "top_sub_title": "",
         "top_conetnt": "",
         "paragraph_style_2": "100",
+        "image": "{{ article.metafields.custom.alt_article_content_part_4.value.top_image.value }}",
         "bottom_title": "",
         "bottom_conetnt": "",
-        "paragraph_style_4": "100"
+        "paragraph_style_4": "100",
+        "bottom_image": "{{ article.metafields.custom.alt_article_content_part_4.value.bottom_image.value }}"
       }
     },
     "alt_article_finale_dHyCKd": {
