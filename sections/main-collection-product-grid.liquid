@@ -114,7 +114,8 @@
                 {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
                 {% if settings.nosto_skeleton == true %}
                   <li class="ns-skel-product grid__item">
-                    <div class="card-wrapper card card-product" data-id="{{ product.id }}">
+                    <div class="card-wrapper card card-product" data-id="{{ product.id }}" data-title="{{ product.title }}"
+      data-json='{{ product | json | escape }}'>
                       <div class="ns-skel-img color-background-2"></div>
                       <div class="ns-skel-details">
                         <div class="ns-skel-prodtitle"></div>
