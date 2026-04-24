@@ -79,30 +79,6 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "announcement_DQ4WrP": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "Last Day for Guaranteed Christmas Delivery is 12/22 via Overnight",
-              "link": "shopify://collections/the-bleusalt-collection"
-            }
-          },
-          "336f71c7-6dea-48b7-8135-be37d2e09472": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "Curate a Capsule & Unlock Savings the more Bleusalt you buy!",
-              "link": "shopify://collections/the-bleusalt-collection"
-            }
-          },
-          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "Holiday Returns through 1/10/26",
-              "link": "shopify://pages/help"
-            }
-          },
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c": {
             "type": "announcement",
             "settings": {
@@ -126,9 +102,6 @@
           }
         },
         "block_order": [
-          "announcement_DQ4WrP",
-          "336f71c7-6dea-48b7-8135-be37d2e09472",
-          "8268ed2e-0c8e-4b57-acdb-f5c8224aea0c",
           "290d6635-1df2-487f-ae04-fa1b2f2ce29c",
           "a98a1dcb-4ad5-41e7-ad3c-69f1e2b78327",
           "announcement-bar-0"
