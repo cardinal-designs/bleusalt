@@ -31,14 +31,6 @@
             "heading_size": "h1"
           }
         },
-        "text_qzDgC9": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Get a Free Scarf on the Bleusalt App!  Receive a Free<br/>signature Bleusalt scarf when you shop on the<br/>Bleusalt App.  Simply add your favorite scarf to your<br/>cart and check out with code: SCARFGIFT</p>",
-            "text_style": "body"
-          }
-        },
         "svg_zQAAqH": {
           "type": "svg",
           "settings": {
@@ -48,7 +40,6 @@
       },
       "block_order": [
         "heading_EGbFJk",
-        "text_qzDgC9",
         "svg_zQAAqH"
       ],
       "settings": {
