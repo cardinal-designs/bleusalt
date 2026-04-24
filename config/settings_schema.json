@@ -33,6 +33,17 @@
     ]
   },
   {
+    "name": "Collections",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "nosto_skeleton",
+        "label": "Nosto skeleton",
+        "default": false
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
