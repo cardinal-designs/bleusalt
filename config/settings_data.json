@@ -11,7 +11,7 @@
   "current": {
     "main_logo_image": "shopify://shop_images/site-logo.svg",
     "logo_image": "shopify://shop_images/bleusalt-site-logo-usa-black_971958f1-9ca0-4e77-b53b-56ba97aef361.svg",
-    "nosto_skeleton": true,
+    "nosto_skeleton": false,
     "colors_accent_1": "#0d1c29",
     "colors_text": "#0d1c29",
     "colors_outline_button_labels": "#0d1c29",
