@@ -112,55 +112,39 @@
               grid--{{ section.settings.columns_desktop }}-col-desktop">
               {%- for product in collection.products -%}
                 {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
-                {% if settings.nosto_skeleton == true %}
-                  <li class="ns-skel-product grid__item">
-                    <div class="card-wrapper card card-product" data-id="{{ product.id }}" data-title="{{ product.title }}"
-      data-json='{{ product | json | escape }}'>
-                      <div class="ns-skel-img color-background-2"></div>
-                      <div class="ns-skel-details">
-                        <div class="ns-skel-prodtitle"></div>
-                        <div class="ns-skel-price color-background-2"></div>
-                        <div class="ns-skel-color color-background-2"></div>
-                        <div class="ns-skel-swatches color-background-2"></div>
-                        <div class="ns-skel-reviews color-background-2"></div>
-                      </div>
-                    </div>
-                  </li>
-                {% else %}
-                  {%- liquid 
-                    assign lazy_load = false
-                    if forloop.index > 3
-                      assign lazy_load = true
-                    endif 
-                    if product.tags contains 'hidden' or product.type == 'hidden' or product.tags contains 'hide_from_collections' or product.tags contains "HIDDEN"
-                      continue
+                {%- liquid 
+                  assign lazy_load = false
+                  if forloop.index > 3
+                    assign lazy_load = true
+                  endif 
+                  if product.tags contains 'hidden' or product.type == 'hidden' or product.tags contains 'hide_from_collections' or product.tags contains "HIDDEN"
+                    continue
+                  endif
+                  assign = myIndex = myIndex | plus: 1
+                -%}
+                <li class="grid__item">
+                  {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_life_image : section.settings.show_life_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id,
+                    hasHover_image: true
+                  %}
+                </li>
+                {%- liquid 
+                  for block in section.blocks 
+                    assign block_position = block.settings.position | plus: 0
+                    if block_position == myIndex
+                      render 'card-marketing-tile', block: block, media_size: section.settings.image_ratio
+                      assign myIndex = myIndex | plus: 1
                     endif
-                    assign = myIndex = myIndex | plus: 1
-                  -%}
-                  <li class="grid__item">
-                    {% render 'card-product',
-                      card_product: product,
-                      media_aspect_ratio: section.settings.image_ratio,
-                      show_secondary_image: section.settings.show_secondary_image,
-                      show_life_image : section.settings.show_life_image,
-                      show_vendor: section.settings.show_vendor,
-                      show_rating: section.settings.show_rating,
-                      lazy_load: lazy_load,
-                      show_quick_add: section.settings.enable_quick_add,
-                      section_id: section.id,
-                      hasHover_image: true
-                    %}
-                  </li>
-                  {%- liquid 
-                    for block in section.blocks 
-                      assign block_position = block.settings.position | plus: 0
-                      if block_position == myIndex
-                        render 'card-marketing-tile', block: block, media_size: section.settings.image_ratio
-                        assign myIndex = myIndex | plus: 1
-                      endif
-                    endfor 
-                  -%}
-                {% endif %}
+                  endfor 
+                -%}
               {%- endfor -%}
             </ul>
     
