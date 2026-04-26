@@ -185,6 +185,7 @@
       "settings": {
         "image": "shopify://shop_images/wraps-hero_ef788acc-32ea-45d2-b874-fa693365dfce.jpg",
         "video_url": "",
+        "image_mobile": "shopify://shop_images/wraps-hero_ef788acc-32ea-45d2-b874-fa693365dfce.jpg",
         "video_url_mobile": "",
         "description": "Bleusalt Signature Wraps",
         "add_text_shadow": false,
