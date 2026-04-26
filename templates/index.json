@@ -9,54 +9,6 @@
  */
 {
   "sections": {
-    "featured_collection": {
-      "type": "featured-collection",
-      "blocks": {
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
-          "type": "collection",
-          "settings": {
-            "heading": "Best Sellers",
-            "collection": "womens-best-sellers"
-          }
-        },
-        "49238d89-463e-419a-8643-42f4463ad2dd": {
-          "type": "collection",
-          "settings": {
-            "heading": "New Arrivals",
-            "collection": "womens-new-arrivals"
-          }
-        }
-      },
-      "block_order": [
-        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
-        "49238d89-463e-419a-8643-42f4463ad2dd"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": true,
-        "show_life_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
     "video_banner_qBwaKh": {
       "type": "video-banner",
       "blocks": {
@@ -130,35 +82,35 @@
         "video_overlay_link": "shopify://products/the-mockneck-top"
       }
     },
-    "1659735210e064d864": {
+    "featured_collection": {
       "type": "featured-collection",
       "blocks": {
-        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f": {
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5": {
           "type": "collection",
           "settings": {
-            "heading": "Tops",
-            "collection": "womens-tops"
+            "heading": "Best Sellers",
+            "collection": "womens-best-sellers"
           }
         },
-        "e4d64483-b722-41bc-b780-ce75dc52abed": {
+        "49238d89-463e-419a-8643-42f4463ad2dd": {
           "type": "collection",
           "settings": {
-            "heading": "Bottoms",
-            "collection": "womens-bottoms"
+            "heading": "New Arrivals",
+            "collection": "womens-new-arrivals"
           }
         }
       },
       "block_order": [
-        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
-        "e4d64483-b722-41bc-b780-ce75dc52abed"
+        "52b80eaf-ade8-4b4f-879d-5b4e2651e4a5",
+        "49238d89-463e-419a-8643-42f4463ad2dd"
       ],
       "settings": {
         "title": "",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "bottoms-skimpy",
+        "collection": "",
         "products_to_show": 8,
         "columns_desktop": 3,
         "full_width": false,
@@ -170,11 +122,11 @@
         "show_secondary_image": true,
         "show_life_image": false,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 28,
         "padding_bottom": 36
       }
     },
@@ -231,9 +183,8 @@
       "custom_css": [],
       "name": "Video - Wraps",
       "settings": {
-        "video": "shopify://files/videos/1 Yard Wrap Web banner_wide.mp4",
+        "image": "shopify://shop_images/wraps-hero_ef788acc-32ea-45d2-b874-fa693365dfce.jpg",
         "video_url": "",
-        "video_mobile": "shopify://files/videos/1 Yard Wrap Web banner_mob.mp4",
         "video_url_mobile": "",
         "description": "Bleusalt Signature Wraps",
         "add_text_shadow": false,
@@ -249,6 +200,54 @@
         "show_text_below": true,
         "button_overlay": true,
         "video_overlay_link": "shopify://products/the-signature-wraps"
+      }
+    },
+    "1659735210e064d864": {
+      "type": "featured-collection",
+      "blocks": {
+        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f": {
+          "type": "collection",
+          "settings": {
+            "heading": "Tops",
+            "collection": "womens-tops"
+          }
+        },
+        "e4d64483-b722-41bc-b780-ce75dc52abed": {
+          "type": "collection",
+          "settings": {
+            "heading": "Bottoms",
+            "collection": "womens-bottoms"
+          }
+        }
+      },
+      "block_order": [
+        "d7e9953b-29b9-40ef-a7dc-5e77cfd8426f",
+        "e4d64483-b722-41bc-b780-ce75dc52abed"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bottoms-skimpy",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_life_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "16597180576b9dbb68": {
