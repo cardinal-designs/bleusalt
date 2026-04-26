@@ -303,9 +303,9 @@
       "custom_css": [],
       "name": "Vid - SLTN Dress",
       "settings": {
-        "video": "shopify://files/videos/the-sleeveless-turtleneck-dress-desktop.mp4",
+        "image": "shopify://shop_images/sleeveless-turtleneck.jpg",
         "video_url": "",
-        "video_mobile": "shopify://files/videos/the-sleeveless-turtleneck-dress-mobile.mp4",
+        "image_mobile": "shopify://shop_images/sleeveless-turtleneck.jpg",
         "video_url_mobile": "",
         "description": "The Sleeveless Turtleneck Dress by Bleusalt",
         "add_text_shadow": true,
