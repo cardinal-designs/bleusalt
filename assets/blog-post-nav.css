@@ -63,6 +63,7 @@
 
     .blog__post--nav-wrapper {
         padding: 0 20px;
+        gap: 10px
     }
 
     .blog__post--nav-item {
