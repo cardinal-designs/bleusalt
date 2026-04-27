@@ -55,4 +55,5 @@
 .blog__post--nav .back__link {
     text-decoration: underline;
     font-weight: 500;
+    color: currentColor;
 }
