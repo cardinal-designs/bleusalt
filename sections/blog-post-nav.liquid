@@ -27,7 +27,7 @@
 
             <div class="nav__preview">
                 {% if prev_article.image %}
-                <img src="{{ prev_article.image | image_url: width: 200 }}" alt="{{ prev_article.title }}">
+                {{ prev_article.image | image_url: width: 200 | image_tag: alt: prev_article.title }}
                 {% endif %}
                 <p>{{ prev_article.title }}</p>
             </div>
@@ -47,7 +47,7 @@
 
             <div class="nav__preview">
                 {% if next_article.image %}
-                <img src="{{ next_article.image | image_url: width: 200 }}" alt="{{ next_article.title }}">
+                {{ next_article.image | image_url: width: 200 | image_tag: alt: next_article.title }}
                 {% endif %}
                 <p>{{ next_article.title }}</p>
             </div>
