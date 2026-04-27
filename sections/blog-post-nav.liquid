@@ -1,5 +1,3 @@
-
-
 {% render 'hs-defer-css' with filename: 'blog-post-nav.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {% if article %}
@@ -21,7 +19,6 @@
 
   <div class="blog-post-nav">
     
-    <!-- LEFT: Previous -->
     <div class="blog-post-nav__item blog-post-nav__prev">
       {% if prev_article %}
         <a href="{{ prev_article.url }}" class="nav-link">
@@ -38,14 +35,12 @@
       {% endif %}
     </div>
 
-    <!-- CENTER: Back to Blog -->
     <div class="blog-post-nav__center">
       <a href="{{ blog.url }}" class="back-link">
         Back to The Edit
       </a>
     </div>
 
-    <!-- RIGHT: Next -->
     <div class="blog-post-nav__item blog-post-nav__next">
       {% if next_article %}
         <a href="{{ next_article.url }}" class="nav-link">
