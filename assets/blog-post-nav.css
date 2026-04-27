@@ -34,12 +34,16 @@
 
 .blog__post--nav .nav__preview {
     margin-top: 10px;
+    max-width: 150px;
+    position: relative;
 }
 
 .blog__post--nav .nav__preview img {
     width: 100%;
-    max-width: 150px;
-    display: block;
+    height: 100%;
+    object-position: center;
+    aspect-ratio: 1;
+    object-fit: contain;
 }
 
 .blog__post--nav .blog__post--nav-item p {
