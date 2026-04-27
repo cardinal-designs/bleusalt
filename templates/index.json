@@ -60,7 +60,7 @@
         "buttons_fCtqBt"
       ],
       "custom_css": [],
-      "name": "Vid - SLTN Dress",
+      "name": "Vid - Petal",
       "settings": {
         "video": "shopify://files/videos/Mock neck top Petal+Wrap WEB BANNER.mp4",
         "video_url": "",
@@ -69,7 +69,7 @@
         "description": "Spring Drop: The Petal Collection",
         "add_text_shadow": true,
         "image_overlay": "black",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 10,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
