@@ -75,7 +75,7 @@
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "none",
-        "mobile_content_position": "bottom-center",
+        "mobile_content_position": "middle-center",
         "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
