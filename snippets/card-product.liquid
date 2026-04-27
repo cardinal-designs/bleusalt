@@ -145,7 +145,7 @@
                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                   alt="{% if hover_image %}{{ hover_image.alt }}{% else %}{{ card_product.media[1].alt }}{% endif %}"
                   class="motion-reduce"
-                  loading="lazy"
+                  {% unless lazy_load == false %}loading="lazy"{% endunless %}
                   width="{% if hover_image %}{{ hover_image.width }}{% else %}{{ card_product.media[1].width }}{% endif %}"
                   height="{% if hover_image %}{{ hover_image.height }}{% else %}{{ card_product.media[1].height }}{% endif %}"
                 >
