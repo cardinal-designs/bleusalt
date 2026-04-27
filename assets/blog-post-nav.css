@@ -48,12 +48,12 @@
 }
 
 .blog__post--nav .blog__post--nav-item p {
-    font-size: 14px;
-    margin-top: 5px;
+    margin-top: 0;
+    font-family: Georgia, Times New Roman, serif;
 }
 
 .blog__post--nav .back__link {
     text-decoration: underline;
-    font-weight: 500;
     color: currentColor;
+    font-family: Georgia, Times New Roman, serif;
 }
