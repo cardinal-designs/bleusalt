@@ -23,7 +23,7 @@
     width: 40%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .blog__post--nav .nav__link {
@@ -58,7 +58,7 @@
 .blog__post--nav .back__link {
     text-decoration: underline;
     color: currentColor;
-    font-family: Georgia, Times New Roman, serif;
+    /* font-family: Georgia, Times New Roman, serif; */
 }
 
 @media (max-width: 749px) { 
