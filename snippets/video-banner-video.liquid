@@ -10,19 +10,32 @@
   @param {boolean} [playsinline] - Whether the video should play inline on mobile devices.
   @param {string} [aria_label] - The ARIA label for accessibility purposes.
   @param {boolean} [is_mobile] - Whether the video is for mobile devices.
+  @param {string} [prioritize_poster] - 'eager' for hero/first section, 'lazy' otherwise.
 
   @example
-  {%- render 'video-banner-video', video: video, video_id: 'video-banner', class: 'video-banner__video', autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', aria_label: 'Video Banner', is_mobile: false -%}
+  {%- render 'video-banner-video', video: video, video_id: 'video-banner', class: 'video-banner__video', autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', aria_label: 'Video Banner', is_mobile: false, prioritize_poster: 'eager' -%}
 {%- enddoc -%}
 
 {%- liquid
   assign preload = 'none'
 
   assign image = video.preview_image
-  assign image_sizes = '(min-width: 750px) 60vw, 0vw'
+
+  assign poster_loading = 'lazy'
+  assign poster_fetchpriority = 'low'
+  if prioritize_poster == 'eager'
+    assign poster_loading = 'eager'
+    assign poster_fetchpriority = 'high'
+  endif
 
   if is_mobile
-    assign image_sizes = '(min-width: 750px) 0vw, 60vw'
+    assign poster_sizes = '100vw'
+    assign poster_widths = '375, 550, 750'
+    assign poster_max_width = 750
+  else
+    assign poster_sizes = '100vw'
+    assign poster_widths = '375, 550, 750, 1100, 1500, 1780, 2000'
+    assign poster_max_width = 2000
   endif
 -%}
 
@@ -42,10 +55,21 @@
   -}}
 {%- endcapture -%}
 
-{%- render 'image', image: image, classes: 'opacity-none', sizes: image_sizes, prioritize_loading: true -%}
-
+{%- comment -%} Render deferred video first (sources rewritten to data-src so video-lazy-loader.js handles loading) {%- endcomment -%}
 {{- video_layout
   | replace: '<img src', '<img data-src'
   | replace: '<source src=', '<source data-src='
   | replace: '<video ', '<video data-video '
 -}}
+
+{%- comment -%} Render poster image after video so CSS sibling selector can hide it once video plays {%- endcomment -%}
+{%- if image -%}
+  {{- image | image_url: width: poster_max_width | image_tag:
+    class: 'banner__poster-image',
+    loading: poster_loading,
+    fetchpriority: poster_fetchpriority,
+    sizes: poster_sizes,
+    widths: poster_widths,
+    alt: aria_label
+  -}}
+{%- endif -%}
