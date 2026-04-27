@@ -42,7 +42,7 @@
     display: block;
 }
 
-.blog__post--nav .nav__preview p {
+.blog__post--nav .blog__post--nav-item p {
     font-size: 14px;
     margin-top: 5px;
 }
