@@ -177,6 +177,10 @@
         "by_line": "",
         "image_caption": ""
       }
+    },
+    "blog-post-nav": {
+      "type": "blog-post-nav",
+      "settings": {}
     }
   },
   "order": [
@@ -192,6 +196,7 @@
     "alt_article_content_1_PCkeUP",
     "alt_article_content_1_ykCAcf",
     "alt_article_content_1_NHYTfq",
-    "alt_article_finale_dHyCKd"
+    "alt_article_finale_dHyCKd",
+    "blog-post-nav"
   ]
 }
