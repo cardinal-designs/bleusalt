@@ -122,7 +122,7 @@
                   endif
                   assign = myIndex = myIndex | plus: 1
                 -%}
-                {% if settings.nosto_skeleton %}
+                {% comment %} {% if settings.nosto_skeleton %}
                   <div class="ns-skel-product grid__item">
                     <div class="ns-skel-img color-background-2"></div>
                     <div class="ns-skel-details">
@@ -133,7 +133,7 @@
                       <div class="ns-skel-reviews color-background-2"></div>
                     </div>
                   </div>
-                {% endif %}
+                {% endif %} {% endcomment %}
                 <li class="grid__item {% if settings.nosto_skeleton %}hidden{% endif %}">
                   {% render 'card-product',
                     card_product: product,
