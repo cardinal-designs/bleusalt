@@ -18,45 +18,43 @@
   {% assign next_article = articles[next_index] %}
 
   <div class="blog-post-nav">
-    
-    <div class="blog-post-nav__item blog-post-nav__prev">
-      {% if prev_article %}
-        <a href="{{ prev_article.url }}" class="nav-link">
-          <span class="nav-arrow">←</span>
-          <span class="nav-text">Previous</span>
+    <div class="">
+        <div class="blog-post-nav__item blog-post-nav__prev">
+        {% if prev_article %}
+            <a href="{{ prev_article.url }}" class="nav-link">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Previous</span>
 
-          <div class="nav-preview">
-            {% if prev_article.image %}
-              <img src="{{ prev_article.image | image_url: width: 200 }}" alt="{{ prev_article.title }}">
-            {% endif %}
-            <p>{{ prev_article.title }}</p>
-          </div>
+            <div class="nav-preview">
+                {% if prev_article.image %}
+                <img src="{{ prev_article.image | image_url: width: 200 }}" alt="{{ prev_article.title }}">
+                {% endif %}
+                <p>{{ prev_article.title }}</p>
+            </div>
+            </a>
+        {% endif %}
+        </div>
+        <div class="blog-post-nav__center">
+        <a href="{{ blog.url }}" class="back-link">
+            Back to The Edit
         </a>
-      {% endif %}
+        </div>
+        <div class="blog-post-nav__item blog-post-nav__next">
+        {% if next_article %}
+            <a href="{{ next_article.url }}" class="nav-link">
+            <span class="nav-text">Next</span>
+            <span class="nav-arrow">→</span>
+
+            <div class="nav-preview">
+                {% if next_article.image %}
+                <img src="{{ next_article.image | image_url: width: 200 }}" alt="{{ next_article.title }}">
+                {% endif %}
+                <p>{{ next_article.title }}</p>
+            </div>
+            </a>
+        {% endif %}
+        </div>
     </div>
-
-    <div class="blog-post-nav__center">
-      <a href="{{ blog.url }}" class="back-link">
-        Back to The Edit
-      </a>
-    </div>
-
-    <div class="blog-post-nav__item blog-post-nav__next">
-      {% if next_article %}
-        <a href="{{ next_article.url }}" class="nav-link">
-          <span class="nav-text">Next</span>
-          <span class="nav-arrow">→</span>
-
-          <div class="nav-preview">
-            {% if next_article.image %}
-              <img src="{{ next_article.image | image_url: width: 200 }}" alt="{{ next_article.title }}">
-            {% endif %}
-            <p>{{ next_article.title }}</p>
-          </div>
-        </a>
-      {% endif %}
-    </div>
-
   </div>
 
 {% endif %}
