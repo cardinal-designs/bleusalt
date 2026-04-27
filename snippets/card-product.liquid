@@ -67,18 +67,6 @@
       data-json='{{ card_product | json | escape }}'
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-      {% if settings.nosto_skeleton == true %}
-        <li class="ns-skel-product card__inner">
-            <div class="ns-skel-img color-background-2"></div>
-            <div class="ns-skel-details">
-              <div class="ns-skel-prodtitle"></div>
-              <div class="ns-skel-price color-background-2"></div>
-              <div class="ns-skel-color color-background-2"></div>
-              <div class="ns-skel-swatches color-background-2"></div>
-              <div class="ns-skel-reviews color-background-2"></div>
-            </div>
-        </li>
-      {% else %}
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
 
         {%- if card_product.featured_media -%}
@@ -301,7 +289,6 @@
        
   
       </div>
-    {% endif %}
     </div>
   </div>
 {%- else -%}
