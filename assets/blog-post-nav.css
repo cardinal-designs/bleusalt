@@ -16,32 +16,32 @@
   width: 40%;
 }
 
-.nav-link {
+.blog-post-nav .nav-link {
   text-decoration: none;
   color: inherit;
 }
 
-.nav-arrow {
+.blog-post-nav .nav-arrow {
   font-size: 18px;
   margin: 0 5px;
 }
 
-.nav-preview {
+.blog-post-nav .nav-preview {
   margin-top: 10px;
 }
 
-.nav-preview img {
+.blog-post-nav .nav-preview img {
   width: 100%;
   max-width: 150px;
   display: block;
 }
 
-.nav-preview p {
+.blog-post-nav .nav-preview p {
   font-size: 14px;
   margin-top: 5px;
 }
 
-.back-link {
+.blog-post-nav .back-link {
   text-decoration: underline;
   font-weight: 500;
 }
