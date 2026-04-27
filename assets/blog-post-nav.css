@@ -1,4 +1,4 @@
-.blog-post-nav {
+.blog__post--nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,41 +7,41 @@
   padding: 30px 0;
 }
 
-.blog-post-nav__item {
+.blog__post--nav-item {
   width: 30%;
 }
 
-.blog-post-nav__center {
+.blog__post--nav-center {
   text-align: center;
   width: 40%;
 }
 
-.blog-post-nav .nav-link {
+.blog__post--nav .nav-link {
   text-decoration: none;
   color: inherit;
 }
 
-.blog-post-nav .nav-arrow {
+.blog__post--nav .nav-arrow {
   font-size: 18px;
   margin: 0 5px;
 }
 
-.blog-post-nav .nav-preview {
+.blog__post--nav .nav-preview {
   margin-top: 10px;
 }
 
-.blog-post-nav .nav-preview img {
+.blog__post--nav .nav-preview img {
   width: 100%;
   max-width: 150px;
   display: block;
 }
 
-.blog-post-nav .nav-preview p {
+.blog__post--nav .nav-preview p {
   font-size: 14px;
   margin-top: 5px;
 }
 
-.blog-post-nav .back-link {
+.blog__post--nav .back-link {
   text-decoration: underline;
   font-weight: 500;
 }

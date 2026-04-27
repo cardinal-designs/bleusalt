@@ -17,9 +17,9 @@
   {% assign prev_article = articles[prev_index] %}
   {% assign next_article = articles[next_index] %}
 
-  <div class="blog-post-nav">
+  <div class="blog__post--nav">
     <div class="">
-        <div class="blog-post-nav__item blog-post-nav__prev">
+        <div class="blog__post--nav-item blog__post--nav-prev">
         {% if prev_article %}
             <a href="{{ prev_article.url }}" class="nav-link">
             <span class="nav-arrow">←</span>
@@ -34,12 +34,12 @@
             </a>
         {% endif %}
         </div>
-        <div class="blog-post-nav__center">
+        <div class="blog__post--nav-center">
         <a href="{{ blog.url }}" class="back-link">
             Back to The Edit
         </a>
         </div>
-        <div class="blog-post-nav__item blog-post-nav__next">
+        <div class="blog__post--nav-item blog__post--nav-next">
         {% if next_article %}
             <a href="{{ next_article.url }}" class="nav-link">
             <span class="nav-text">Next</span>
