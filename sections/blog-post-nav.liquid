@@ -1,11 +1,15 @@
-{% if blog and article %}
+
+
+{% render 'hs-defer-css' with filename: 'blog-post-nav.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+{% if article %}
 
   {% assign articles = blog.articles %}
   {% assign current_index = 0 %}
 
   {% for a in articles %}
     {% if a.id == article.id %}
-      {% assign current_index = forloop.index0 %}
+    {% assign current_index = forloop.index0 %}
     {% endif %}
   {% endfor %}
 
