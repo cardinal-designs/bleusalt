@@ -14,12 +14,12 @@
 }
 
 .blog__post--nav-item {
-    width: 30%;
+    width: auto;
 }
 
 .blog__post--nav-center {
     text-align: center;
-    width: 40%;
+    width: 30%;
 }
 
 .blog__post--nav .nav__link {
