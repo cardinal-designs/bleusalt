@@ -16,6 +16,7 @@
 .blog__post--nav-item {
     max-width: 150px;
     width: auto;
+    text-align: center;
 }
 
 .blog__post--nav-center {
