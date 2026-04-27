@@ -92,6 +92,9 @@
     {%- endif -%}
 
     <div class="product-grid-container" id="ProductGridContainer">      
+    </div>
+
+    <div id="grid-2">
       {%- paginate collection.products by products_per_page -%}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width small-full-width" id="product-grid" data-id="{{ section.id }}">
