@@ -22,35 +22,33 @@
         <div class="blog__post--nav-item blog__post--nav-prev">
         {% if prev_article %}
             <a href="{{ prev_article.url }}" class="nav__link">
-            <span class="nav__arrow">←</span>
-            <span class="nav-text">Previous</span>
-
-            <div class="nav__preview">
-                {% if prev_article.image %}
-                {{ prev_article.image | image_url: width: 200 | image_tag: alt: prev_article.title }}
-                {% endif %}
+                <span class="nav__arrow">←</span>
+                <span class="nav-text">Previous</span>
+                <div class="nav__preview">
+                    {% if prev_article.image %}
+                    {{ prev_article.image | image_url: width: 200 | image_tag: alt: prev_article.title }}
+                    {% endif %}
+                </div>
                 <p>{{ prev_article.title }}</p>
-            </div>
             </a>
         {% endif %}
         </div>
         <div class="blog__post--nav-center">
-        <a href="{{ blog.url }}" class="back__link">
-            Back to The Edit
-        </a>
+            <a href="{{ blog.url }}" class="back__link">
+                Back to The Edit
+            </a>
         </div>
         <div class="blog__post--nav-item blog__post--nav-next">
         {% if next_article %}
             <a href="{{ next_article.url }}" class="nav__link">
-            <span class="nav-text">Next</span>
-            <span class="nav__arrow">→</span>
-
-            <div class="nav__preview">
-                {% if next_article.image %}
-                {{ next_article.image | image_url: width: 200 | image_tag: alt: next_article.title }}
-                {% endif %}
+                <span class="nav-text">Next</span>
+                <span class="nav__arrow">→</span>
+                <div class="nav__preview">
+                    {% if next_article.image %}
+                    {{ next_article.image | image_url: width: 200 | image_tag: alt: next_article.title }}
+                    {% endif %}
+                </div>
                 <p>{{ next_article.title }}</p>
-            </div>
             </a>
         {% endif %}
         </div>
