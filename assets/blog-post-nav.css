@@ -61,7 +61,11 @@
 @media (max-width: 749px) { 
 
     .blog__post--nav-wrapper {
-        padding: 0 30px;
+        padding: 0 20px;
+    }
+
+    .blog__post--nav-item {
+        max-width: 30%;
     }
 
 }
