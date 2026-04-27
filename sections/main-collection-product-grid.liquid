@@ -83,13 +83,13 @@
   {%- endif -%}
 
   <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-    {% comment %} {% render 'hs-defer-css' with filename: 'component-facets.css', pages: 'collection,index,product' | split: ',', local: true %}
+    {% render 'hs-defer-css' with filename: 'component-facets.css', pages: 'collection,index,product' | split: ',', local: true %}
     <script defer src="{{ 'facets.min.js' | asset_url }}"></script>
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
         {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
       </aside>
-    {%- endif -%} {% endcomment %}
+    {%- endif -%}
 
     <div class="product-grid-container" id="ProductGridContainer">      
       {%- paginate collection.products by products_per_page -%}
@@ -122,20 +122,33 @@
                   endif
                   assign = myIndex = myIndex | plus: 1
                 -%}
-                <li class="grid__item">
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_life_image : section.settings.show_life_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id,
-                    hasHover_image: true
-                  %}
-                </li>
+                {% if settings.nosto_skeleton %}
+                  <div class="ns-skel-product grid__item">
+                    <div class="ns-skel-img color-background-2"></div>
+                    <div class="ns-skel-details">
+                      <div class="ns-skel-prodtitle"></div>
+                      <div class="ns-skel-price color-background-2"></div>
+                      <div class="ns-skel-color color-background-2"></div>
+                      <div class="ns-skel-swatches color-background-2"></div>
+                      <div class="ns-skel-reviews color-background-2"></div>
+                    </div>
+                  </div>
+                {% else %}
+                  <li class="grid__item">
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_life_image : section.settings.show_life_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id,
+                      hasHover_image: true
+                    %}
+                  </li>
+                {% endif %}
                 {%- liquid 
                   for block in section.blocks 
                     assign block_position = block.settings.position | plus: 0
