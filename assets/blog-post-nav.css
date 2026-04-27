@@ -57,3 +57,11 @@
     color: currentColor;
     font-family: Georgia, Times New Roman, serif;
 }
+
+@media (max-width: 749px) { 
+
+    .blog__post--nav-wrapper {
+        padding: 0 30px;
+    }
+
+}
