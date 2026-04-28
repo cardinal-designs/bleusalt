@@ -18,7 +18,7 @@
             "text": "Spring Drop:",
             "text_color": "#ffffff",
             "text_size": 18,
-            "text_size_mobile": 14
+            "text_size_mobile": 16
           }
         },
         "heading_9qBHw9": {
@@ -37,8 +37,8 @@
           "settings": {
             "text": "Two Icons, One Silhouette",
             "text_color": "#ffffff",
-            "text_size": 19,
-            "text_size_mobile": 14
+            "text_size": 18,
+            "text_size_mobile": 16
           }
         },
         "buttons_fCtqBt": {
@@ -75,7 +75,7 @@
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "none",
-        "mobile_content_position": "middle-center",
+        "mobile_content_position": "bottom-center",
         "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
@@ -140,7 +140,7 @@
             "text": "Introducing",
             "text_color": "#ffffff",
             "text_size": 18,
-            "text_size_mobile": 14
+            "text_size_mobile": 16
           }
         },
         "heading_iBximb": {
@@ -158,8 +158,8 @@
           "settings": {
             "text": "Now in Navy",
             "text_color": "#ffffff",
-            "text_size": 22,
-            "text_size_mobile": 14
+            "text_size": 18,
+            "text_size_mobile": 16
           }
         },
         "buttons_JHxG4f": {

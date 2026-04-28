@@ -1,0 +1,66 @@
+{% render 'hs-defer-css' with filename: 'blog-post-nav.css', pages: 'collection,index,product' | split: ',', local: true %}
+
+{% if article %}
+
+  {% assign articles = blog.articles %}
+  {% assign current_index = 0 %}
+
+  {% for a in articles %}
+    {% if a.id == article.id %}
+    {% assign current_index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign prev_index = current_index | minus: 1 %}
+  {% assign next_index = current_index | plus: 1 %}
+
+  {% assign prev_article = articles[prev_index] %}
+  {% assign next_article = articles[next_index] %}
+
+  <div class="blog__post--nav">
+    <div class="blog__post--nav-wrapper">
+        <div class="blog__post--nav-item blog__post--nav-prev">
+        {% if prev_article %}
+            <a href="{{ prev_article.url }}" class="nav__link">
+                <span class="nav__arrow">←</span>
+                <span class="nav-text">Previous</span>
+                <div class="nav__preview">
+                    {% if prev_article.image %}
+                    {{ prev_article.image | image_url: width: 200 | image_tag: alt: prev_article.title }}
+                    {% endif %}
+                </div>
+                <p>{{ prev_article.title }}</p>
+            </a>
+        {% endif %}
+        </div>
+        <div class="blog__post--nav-center">
+            <a href="{{ blog.url }}" class="back__link">
+                Back to The Edit
+            </a>
+        </div>
+        <div class="blog__post--nav-item blog__post--nav-next">
+        {% if next_article %}
+            <a href="{{ next_article.url }}" class="nav__link">
+                <span class="nav-text">Next</span>
+                <span class="nav__arrow">→</span>
+                <div class="nav__preview">
+                    {% if next_article.image %}
+                    {{ next_article.image | image_url: width: 200 | image_tag: alt: next_article.title }}
+                    {% endif %}
+                </div>
+                <p>{{ next_article.title }}</p>
+            </a>
+        {% endif %}
+        </div>
+    </div>
+  </div>
+
+{% endif %}
+
+
+{% schema %}
+{
+    "name": "Blog Post Naviagtion",
+    "tag": "section",
+}
+{% endschema %}
