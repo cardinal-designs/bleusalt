@@ -19,7 +19,7 @@
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
-    assign ratio = 8
+    assign ratio = 0.8
     assign selected_color = false
     if card_product.options contains 'Color'
       assign selected_color = card_product.options_by_name['Color'].selected_value
