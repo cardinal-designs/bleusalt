@@ -1,0 +1,18 @@
+{% render 'card-product',
+    card_product: product, 
+    media_aspect_ratio: 'portrait',
+    show_secondary_image: true,
+    show_life_image: true,
+    show_vendor: false,
+    show_rating: true,
+    lazy_load: false,
+    show_quick_add: true,
+    hasHover_image: true,
+    force_load: true
+    
+%}
+{% schema %}
+{
+    "name": "Product card"
+}
+{% endschema %}
