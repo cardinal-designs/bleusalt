@@ -21,6 +21,11 @@
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
+    assign ratio = 8
+    assign selected_color = false
+    if card_product.options contains 'Color'
+      assign selected_color = card_product.options_by_name['Color'].selected_value
+    endif
 
     assign badges = ''
     for tag in card_product.tags 
@@ -52,7 +57,7 @@
       data-id="{{ card_product.id }}"
       data-title="{{ card_product.title }}"
       data-json='{{ card_product | json | escape }}'
-      style="--ratio-percent: 125.0%;"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         
