@@ -71,7 +71,7 @@
 
         {%- if card_product.featured_media -%}
           <div class="card__media">
-            <div class="media media--transparent media--hover-effect">
+            <div class="media media--transparent media--hover-effect {% if force_load == true %}loaded{% endif %}">
               {%- assign main_image = card_product.featured_media -%}
 
               {% if show_life_image %}
