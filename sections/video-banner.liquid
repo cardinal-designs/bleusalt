@@ -181,7 +181,7 @@
   {%- if section.settings.video_mobile != blank and section.settings.image_mobile == blank -%}
     {%- assign hero_poster_mobile = section.settings.video_mobile.preview_image -%}
     {%- if hero_poster_mobile -%}
-      <link rel="preload" as="image" href="{{ hero_poster_mobile | image_url: width: 750 }}" imagesrcset="{{ hero_poster_mobile | image_url: width: 375 }} 375w, {{ hero_poster_mobile | image_url: width: 550 }} 550w, {{ hero_poster_mobile | image_url: width: 750 }} 750w" imagesizes="100vw" fetchpriority="high" media="(max-width: 749px)" alt="{{ section.settings.description }}">
+      <link rel="preload" as="image" href="{{ hero_poster_mobile | image_url: width: 750 }}" imagesrcset="{{ hero_poster_mobile | image_url: width: 375 }} 375w, {{ hero_poster_mobile | image_url: width: 550 }} 550w, {{ hero_poster_mobile | image_url: width: 750 }} 750w" imagesizes="100vw" fetchpriority="high" media="(max-width: 749px)" alt="{{ section.settings.description }}" alt="{{ section.settings.description }}">
     {%- endif -%}
   {%- elsif section.settings.image_mobile != blank -%}
     <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 750 }}" imagesrcset="{{ section.settings.image_mobile | image_url: width: 375 }} 375w, {{ section.settings.image_mobile | image_url: width: 550 }} 550w, {{ section.settings.image_mobile | image_url: width: 750 }} 750w" imagesizes="100vw" fetchpriority="high" media="(max-width: 749px)" alt="{{ section.settings.description }}">
