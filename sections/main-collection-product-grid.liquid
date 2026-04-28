@@ -123,8 +123,9 @@
                   endif
                   assign = myIndex = myIndex | plus: 1
                 -%}
+                <li class="grid__item">
                 {% if settings.nosto_skeleton %}
-                  <li class="ns-skel-product grid__item">
+                  <div class="ns-skel-product">
                     <div class="ns-skel-img color-background-2"> </div>
                     <div class="ns-skel-details">
                         <div class="ns-skel-prodtitle"></div>
@@ -133,10 +134,8 @@
                         <div class="ns-skel-swatches color-background-2"> </div>
                         <div class="ns-skel-reviews color-background-2"> </div>
                     </div>
-                    {% comment %} {% render 'skeleton-card' card_product: product %} {% endcomment %}
-                  </li>
+                  </div>
                 {% else %}
-                <li class="grid__item">
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -149,8 +148,8 @@
                     section_id: section.id,
                     hasHover_image: true
                   %}
-                </li>
                 {% endif %}
+                </li>
                 {%- liquid 
                   for block in section.blocks 
                     assign block_position = block.settings.position | plus: 0
