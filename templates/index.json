@@ -652,9 +652,9 @@
       "custom_css": [],
       "name": "Vid - Materials",
       "settings": {
-        "image": "shopify://shop_images/materials-video-cover.jpg",
+        "video": "shopify://files/videos/Materials edit 2-.mp4",
         "video_url": "",
-        "image_mobile": "shopify://shop_images/materials-video-cover-mobile.jpg",
+        "video_mobile": "shopify://files/videos/Materials edit 2-.mp4",
         "video_url_mobile": "",
         "description": "Bleusalt Materials Video",
         "add_text_shadow": true,
