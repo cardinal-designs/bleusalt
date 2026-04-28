@@ -150,7 +150,43 @@
       }
     }
   {% endif %}
+
+  .banner__media.media > img.banner__poster-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    opacity: 1;
+  }
+  .banner__media video[data-video] {
+    opacity: 0;
+  }
+  .banner__media video[data-video-ready] {
+    opacity: 1;
+  }
 {%- endstyle -%}
+
+{%- if section.index == 1 -%}
+  {%- if section.settings.video != blank and section.settings.image == blank -%}
+    {%- assign hero_poster = section.settings.video.preview_image -%}
+    {%- if hero_poster -%}
+      <link rel="preload" as="image" href="{{ hero_poster | image_url: width: 1500 }}" imagesrcset="{{ hero_poster | image_url: width: 375 }} 375w, {{ hero_poster | image_url: width: 750 }} 750w, {{ hero_poster | image_url: width: 1100 }} 1100w, {{ hero_poster | image_url: width: 1500 }} 1500w" imagesizes="100vw" fetchpriority="high" media="(min-width: 750px)">
+    {%- endif -%}
+  {%- elsif section.settings.image != blank -%}
+    <link rel="preload" as="image" href="{{ section.settings.image | image_url: width: 1500 }}" imagesrcset="{{ section.settings.image | image_url: width: 375 }} 375w, {{ section.settings.image | image_url: width: 750 }} 750w, {{ section.settings.image | image_url: width: 1100 }} 1100w, {{ section.settings.image | image_url: width: 1500 }} 1500w" imagesizes="100vw" fetchpriority="high" media="(min-width: 750px)">
+  {%- endif -%}
+  {%- if section.settings.video_mobile != blank and section.settings.image_mobile == blank -%}
+    {%- assign hero_poster_mobile = section.settings.video_mobile.preview_image -%}
+    {%- if hero_poster_mobile -%}
+      <link rel="preload" as="image" href="{{ hero_poster_mobile | image_url: width: 750 }}" imagesrcset="{{ hero_poster_mobile | image_url: width: 375 }} 375w, {{ hero_poster_mobile | image_url: width: 550 }} 550w, {{ hero_poster_mobile | image_url: width: 750 }} 750w" imagesizes="100vw" fetchpriority="high" media="(max-width: 749px)">
+    {%- endif -%}
+  {%- elsif section.settings.image_mobile != blank -%}
+    <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 750 }}" imagesrcset="{{ section.settings.image_mobile | image_url: width: 375 }} 375w, {{ section.settings.image_mobile | image_url: width: 550 }} 550w, {{ section.settings.image_mobile | image_url: width: 750 }} 750w" imagesizes="100vw" fetchpriority="high" media="(max-width: 749px)">
+  {%- endif -%}
+{%- endif -%}
 
 <video-banner
   id="Banner-{{ section.id }}"
@@ -194,7 +230,8 @@
             muted: true,
             playsinline: true,
             aria_label: section.settings.description,
-            is_mobile: false
+            is_mobile: false,
+            prioritize_poster: banner_img_loading
           -%}
         {% else %}
           <video
@@ -226,13 +263,13 @@
         assign image_height_2 = section.settings.image_mobile.width | divided_by: section.settings.image_mobile.aspect_ratio
         assign sizes = "100vw"
       -%}
-      {{ section.settings.image_mobile | image_url: width: 600 | image_tag:
+      {{ section.settings.image_mobile | image_url: width: 750 | image_tag:
         loading: banner_img_loading,
         fetchpriority: banner_img_priority,
         width: section.settings.image_mobile.width,
         height: image_height_2,
         sizes: sizes,
-        widths: '375, 550',
+        widths: '375, 550, 750',
         alt: section.settings.description | default: section.settings.image_mobile.alt
       }}
     </div>
@@ -252,7 +289,8 @@
           muted: true,
           playsinline: true,
           aria_label: section.settings.description,
-          is_mobile: true
+          is_mobile: true,
+          prioritize_poster: banner_img_loading
         -%}
       {% else %}
         <video

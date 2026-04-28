@@ -251,6 +251,79 @@
         "padding_bottom": 36
       }
     },
+    "video_banner_y3fQwf": {
+      "type": "video-banner",
+      "blocks": {
+        "text_p96GqK": {
+          "type": "text",
+          "settings": {
+            "text": "Our Best Selling",
+            "text_color": "#ffffff",
+            "text_size": 18,
+            "text_size_mobile": 16
+          }
+        },
+        "heading_QwXai9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Signature Wraps",
+            "heading_color": "#ffffff",
+            "heading_size": 52,
+            "heading_size_mobile": 34,
+            "heading_tag": "h2"
+          }
+        },
+        "text_two_jL6tC8": {
+          "type": "text-two",
+          "disabled": true,
+          "settings": {
+            "text": "Now in Navy",
+            "text_color": "#ffffff",
+            "text_size": 18,
+            "text_size_mobile": 16
+          }
+        },
+        "buttons_Td8Pff": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/the-signature-wraps",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#0d1c29",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_p96GqK",
+        "heading_QwXai9",
+        "text_two_jL6tC8",
+        "buttons_Td8Pff"
+      ],
+      "custom_css": [],
+      "name": "Video - Wraps",
+      "settings": {
+        "video": "shopify://files/videos/1 Yard Wrap Web banner_wide.mp4",
+        "video_url": "",
+        "video_mobile": "shopify://files/videos/1 Yard Wrap Web banner_mob.mp4",
+        "video_url_mobile": "",
+        "description": "Bleusalt Signature Wraps",
+        "add_text_shadow": false,
+        "image_overlay": "black",
+        "image_overlay_opacity": 20,
+        "video_height": "56.25",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "none",
+        "mobile_content_position": "middle-center",
+        "video_height_mobile": "100",
+        "show_text_below": true,
+        "button_overlay": true,
+        "video_overlay_link": "shopify://products/the-signature-wraps"
+      }
+    },
     "video_banner_YmFe9m": {
       "type": "video-banner",
       "blocks": {
@@ -259,8 +332,8 @@
           "settings": {
             "text": "Our Best Selling",
             "text_color": "#ffffff",
-            "text_size": 18,
-            "text_size_mobile": 16
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "heading_Ay7XUN": {
@@ -279,8 +352,8 @@
           "settings": {
             "text": "Now in Navy",
             "text_color": "#ffffff",
-            "text_size": 18,
-            "text_size_mobile": 16
+            "text_size": 22,
+            "text_size_mobile": 14
           }
         },
         "buttons_RNE36W": {
@@ -301,12 +374,13 @@
         "text_two_fQfDFw",
         "buttons_RNE36W"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Video - Wraps",
       "settings": {
-        "video": "shopify://files/videos/1 Yard Wrap Web banner_wide.mp4",
+        "image": "shopify://shop_images/wraps-hero_ef788acc-32ea-45d2-b874-fa693365dfce.jpg",
         "video_url": "",
-        "video_mobile": "shopify://files/videos/1 Yard Wrap Web banner_mob.mp4",
+        "image_mobile": "shopify://shop_images/wraps-hero_ef788acc-32ea-45d2-b874-fa693365dfce.jpg",
         "video_url_mobile": "",
         "description": "Bleusalt Signature Wraps",
         "add_text_shadow": false,
@@ -653,6 +727,7 @@
     "featured_collection",
     "video_banner_qBwaKh",
     "1659735210e064d864",
+    "video_banner_y3fQwf",
     "video_banner_YmFe9m",
     "columns_d3EcBp",
     "1660226720e02964f9",
