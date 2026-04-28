@@ -123,9 +123,19 @@
                   assign = myIndex = myIndex | plus: 1
                 -%}
                 {% if settings.nosto_skeleton %}
-                  <div class="ns-skel-product grid__item">
-                    {% render 'skeleton-card' card_product: product %}
-                  </div>
+                  <li class="ns-skel-product grid__item">
+                    <div class="ns-skel-product grid__item">
+            <div class="ns-skel-img color-background-2" />
+            <div class="ns-skel-details">
+                <div class="ns-skel-prodtitle" />
+                <div class="ns-skel-price color-background-2" />
+                <div class="ns-skel-color color-background-2" />
+                <div class="ns-skel-swatches color-background-2" />
+                <div class="ns-skel-reviews color-background-2" />
+            </div>
+        </div>
+                    {% comment %} {% render 'skeleton-card' card_product: product %} {% endcomment %}
+                  </li>
                 {% else %}
                 <li class="grid__item">
                   {% render 'card-product',
