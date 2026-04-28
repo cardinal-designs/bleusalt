@@ -17,7 +17,7 @@
     {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
-{% render 'hs-defer-css' with filename: 'component-rating.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% comment %} {% render 'hs-defer-css' with filename: 'component-rating.css', pages: 'collection,index,product' | split: ',', local: true %} {% endcomment %}
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
