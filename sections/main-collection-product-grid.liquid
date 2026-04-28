@@ -2,6 +2,7 @@
 {% render 'hs-defer-css' with filename: 'component-loading-overlay.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% render 'hs-defer-css' with filename: 'component-card.css', pages: 'collection,index,product' | split: ',', local: true %}
 {% render 'hs-defer-css' with filename: 'component-price.css', pages: 'collection,index,product' | split: ',', local: true %}
+{% render 'hs-defer-css' with filename: 'component-ns-skeleton-loader.css', pages: 'collection,index,product' | split: ',', local: true %}
 
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -124,13 +125,13 @@
                 -%}
                 {% if settings.nosto_skeleton %}
                   <li class="ns-skel-product grid__item">
-                    <div class="ns-skel-img color-background-2"></div>
+                    <div class="ns-skel-img color-background-2"> </div>
                     <div class="ns-skel-details">
                         <div class="ns-skel-prodtitle"></div>
-                        <div class="ns-skel-price color-background-2"></div>
-                        <div class="ns-skel-color color-background-2"></div>
-                        <div class="ns-skel-swatches color-background-2"></div>
-                        <div class="ns-skel-reviews color-background-2"></div>
+                        <div class="ns-skel-price color-background-2"> </div>
+                        <div class="ns-skel-color color-background-2"> </div>
+                        <div class="ns-skel-swatches color-background-2"> </div>
+                        <div class="ns-skel-reviews color-background-2"> </div>
                     </div>
                     {% comment %} {% render 'skeleton-card' card_product: product %} {% endcomment %}
                   </li>
