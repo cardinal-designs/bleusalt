@@ -17,8 +17,6 @@
     {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
-{% render 'hs-defer-css' with filename: 'component-rating.css', pages: 'collection,index,product' | split: ',', local: true %}
-
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 8
@@ -56,7 +54,6 @@
       {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
       data-id="{{ card_product.id }}"
       data-title="{{ card_product.title }}"
-      data-json='{{ card_product | json | escape }}'
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
