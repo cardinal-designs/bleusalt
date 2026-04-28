@@ -121,7 +121,7 @@
               {% endif %}
 
               {% if hover_image != blank and show_secondary_image %}
-              <div class="card__hover-image-1 card__hover-image media media--transparent" {% if matching_image %} data-hover-image="{{ hover_image }}"{% endif %} {% if force_load %}style="opacity: 1;"{% endif %}>
+              <div class="card__hover-image-1 card__hover-image media media--transparent {% if force_load == true %}loaded{% endif %}" {% if matching_image %} data-hover-image="{{ hover_image }}"{% endif %}>
                 <img
                   srcset="{%- if hover_image -%}
                     {%- if hover_image.width >= 165 -%}{{ hover_image | image_url: width: 165 }} 165w,{%- endif -%}
