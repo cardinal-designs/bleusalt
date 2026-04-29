@@ -304,9 +304,9 @@
       "custom_css": [],
       "name": "Video - Wraps",
       "settings": {
-        "video": "shopify://files/videos/1 Yard Wrap Web banner_wide.mp4",
+        "image": "shopify://shop_images/The_3_Yard_Wrap_Stone_-_The_Sleeveless_Turtleneck_Stone_-_The_Cindy_Pant_Stone_desktop.jpg",
         "video_url": "",
-        "video_mobile": "shopify://files/videos/1 Yard Wrap Web banner_mob.mp4",
+        "image_mobile": "shopify://shop_images/The_3_Yard_Wrap_Stone_-_The_Sleeveless_Turtleneck_Stone_-_The_Cindy_Pant_Stone_mobile.jpg",
         "video_url_mobile": "",
         "description": "Bleusalt Signature Wraps",
         "add_text_shadow": false,
