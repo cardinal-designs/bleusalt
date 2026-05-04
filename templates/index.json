@@ -14,6 +14,7 @@
       "blocks": {
         "text_f3gYBW": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Spring Drop:",
             "text_color": "#ffffff",
@@ -24,7 +25,7 @@
         "heading_9qBHw9": {
           "type": "heading",
           "settings": {
-            "heading": "The Petal Collection",
+            "heading": "A New Take on Our Best-Selling Crew:",
             "heading_color": "#ffffff",
             "heading_size": 52,
             "heading_size_mobile": 34,
@@ -33,9 +34,8 @@
         },
         "text_two_NHhmBc": {
           "type": "text-two",
-          "disabled": true,
           "settings": {
-            "text": "Two Icons, One Silhouette",
+            "text": "Meet the Elbow Sleeve Classic Crew",
             "text_color": "#ffffff",
             "text_size": 18,
             "text_size_mobile": 16
@@ -45,7 +45,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "/collections/petal",
+            "button_link_1": "/products/the-elbow-sleeve-classic-crew",
             "button_bg_color": "#ffffff",
             "button_text_color": "#0d1c29",
             "button_label_2": "",
@@ -60,13 +60,13 @@
         "buttons_fCtqBt"
       ],
       "custom_css": [],
-      "name": "Vid - Petal",
+      "name": "Vid - Elbow Crew",
       "settings": {
-        "video": "shopify://files/videos/Mock neck top Petal+Wrap WEB BANNER.mp4",
+        "video": "shopify://files/videos/The 3_4 Crew, Navy (web banner).mp4",
         "video_url": "",
-        "video_mobile": "shopify://files/videos/Mock neck top Petal+Wrap App Banner.mp4",
+        "video_mobile": "shopify://files/videos/The 3_4 Crew, Navy (App)-.mp4",
         "video_url_mobile": "",
-        "description": "Spring Drop: The Petal Collection",
+        "description": "Introducing: The Elbow Sleeve Classic Crew",
         "add_text_shadow": true,
         "image_overlay": "black",
         "image_overlay_opacity": 10,
@@ -79,7 +79,7 @@
         "video_height_mobile": "125",
         "show_text_below": true,
         "button_overlay": true,
-        "video_overlay_link": "/collections/petal"
+        "video_overlay_link": "/products/the-elbow-sleeve-classic-crew"
       }
     },
     "featured_collection": {
