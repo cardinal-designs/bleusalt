@@ -69,7 +69,7 @@
         "description": "Introducing: The Elbow Sleeve Classic Crew",
         "add_text_shadow": true,
         "image_overlay": "black",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 20,
         "video_height": "56.25",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
