@@ -361,7 +361,7 @@
       {% render 'hs-defer-css' with filename: 'quick-add.css', pages: 'collection,index,product' | split: ',', local: true %}
 
       {% unless template contains 'product' %}
-        <script defer src="{{ 'quick-add.min.js' | asset_url }}"></script>
+        <script defer src="{{ 'quick-add.js' | asset_url }}"></script>
       {% endunless %}
 
       {% render 'gsf-conversion-pixels' %}
@@ -475,7 +475,7 @@
       {% render 'hs-defer-css' with filename: 'swiper-bundle.min.css', pages: 'collection,index,product' | split: ',', local: true %}
 
       {%- if settings.predictive_search_enabled -%}
-        <script defer src="{{ 'predictive-search.min.js' | asset_url }}"></script>
+        <script defer src="{{ 'predictive-search.js' | asset_url }}"></script>
       {%- endif -%}
 
       {% if settings.enable_klaviyo_onsite %}

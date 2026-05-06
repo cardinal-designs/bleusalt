@@ -518,9 +518,9 @@
                     >
                     <label class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
                     <input type="hidden" name="options[prefix]" value="last">
-                    {% if settings.search_only_products or settings.search_only_products_and_pages %}
+                    {% comment %} {% if settings.search_only_products or settings.search_only_products_and_pages %}
                       <input name="type" type="hidden" value="product">
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                     <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                       <svg class="icon icon-search" aria-hidden="true" focusable="false"  >
                         <use href="#icon-search">

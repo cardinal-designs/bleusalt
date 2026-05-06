@@ -7,7 +7,7 @@ if (!customElements.get('quick-add')) {
       );
       
       this.card = this.closest('.card');
-      this.cardLink = this.card.querySelector('.card__heading.h4 a');
+      this.cardLink = this.card.querySelector('.card__heading a');
       this.productUrl = this.cardLink.getAttribute('data-product-url');
       this.json = JSON.parse(this.card.getAttribute('data-json'));
       this.variants = this.json.variants;
@@ -42,6 +42,7 @@ if (!customElements.get('quick-add')) {
       let foundOne = false;
       this.json.variants.forEach((variant) => {
         if(variant.options[this.colorIndex] === this.selectedColor.value && !foundOne) {
+          console.log(this.cardLink)
           this.cardLink.setAttribute('href',`${this.productUrl}?variant=${variant.id}`);
           this.changeImage(variant);
           foundOne = true;
@@ -52,6 +53,7 @@ if (!customElements.get('quick-add')) {
       this.card.querySelectorAll('.quick-add__button--color').forEach(
         (button) => button.removeAttribute('selected')
       )
+      console.log(event.target)
       event.target.setAttribute('selected',true);
       this.selectedColor = event.target;
       this.updateUrl();
@@ -80,8 +82,8 @@ if (!customElements.get('quick-add')) {
     }
     changeImage(variant) {
       const firstImage = this.card.querySelectorAll('.card__media img')[0];
-      
-      if(variant.featured_image) {
+
+      if(variant && variant.featured_image) {
         firstImage.setAttribute('src',variant.featured_image.src);
         firstImage.removeAttribute('srcset');
         return;
