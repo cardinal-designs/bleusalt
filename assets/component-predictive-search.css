@@ -109,6 +109,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .predictive-search-results__suggestions a mark {
   font-weight: 600;
   background-color: transparent;
+  color: currentColor;
 }
 
 .predictive-search__results-list {
