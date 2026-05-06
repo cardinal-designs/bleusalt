@@ -403,9 +403,9 @@
           "type": "_column",
           "name": "Column",
           "settings": {
-            "image": "shopify://shop_images/the-cindy-short-sleeve-top-navy.jpg",
-            "description": "Shop The Cindy Collection",
-            "link": "shopify://collections/the-cindy-collection",
+            "image": "shopify://shop_images/the-lite-colection-hero.jpg",
+            "description": "Shop The Lite Collection",
+            "link": "shopify://collections/bleusalt-lite",
             "add_text_shadow": true,
             "image_overlay": "black",
             "image_overlay_opacity": 20,
@@ -430,7 +430,7 @@
               "type": "title",
               "name": "Title",
               "settings": {
-                "heading": "The Cindy Collection",
+                "heading": "The Lite Collection",
                 "color": "#ffffff",
                 "font_size": 36,
                 "font_size_mobile": 34,
@@ -455,7 +455,7 @@
               "name": "Buttons",
               "settings": {
                 "button_label_1": "Shop Now",
-                "button_link_1": "shopify://collections/the-cindy-collection",
+                "button_link_1": "shopify://collections/bleusalt-lite",
                 "button_bg_color": "#ffffff",
                 "button_text_color": "#0d1c29",
                 "button_label_2": "",
