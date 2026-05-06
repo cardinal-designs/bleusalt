@@ -565,16 +565,6 @@
         "disabled": false,
         "settings": {}
       },
-      "6990797075511561578": {
-        "type": "shopify://apps/nosto/blocks/nosto-tagging-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": false,
-        "settings": {}
-      },
-      "10812935154079970445": {
-        "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
-        "disabled": false,
-        "settings": {}
-      },
       "11560147490181472608": {
         "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
         "disabled": false,
@@ -582,11 +572,6 @@
       },
       "10840395464443086010": {
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
-        "disabled": false,
-        "settings": {}
-      },
-      "2046743146925785077": {
-        "type": "shopify://apps/nosto/blocks/nosto-mc-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
         "disabled": false,
         "settings": {}
       },
@@ -624,6 +609,21 @@
       },
       "2153490007123654574": {
         "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": true,
+        "settings": {}
+      },
+      "6990797075511561578": {
+        "type": "shopify://apps/nosto/blocks/nosto-tagging-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+        "disabled": true,
+        "settings": {}
+      },
+      "10812935154079970445": {
+        "type": "shopify://apps/nosto/blocks/nosto-script-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
+        "disabled": true,
+        "settings": {}
+      },
+      "2046743146925785077": {
+        "type": "shopify://apps/nosto/blocks/nosto-mc-embed-block/a67c43f0-0fc3-4649-a7dc-65ac499cae31",
         "disabled": true,
         "settings": {}
       }
