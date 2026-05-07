@@ -2600,7 +2600,7 @@ details[open] .modal-overlay::after {
   position: absolute;
   content: '';
   background-color: rgb(var(--color-foreground), 0.5);
-  top: 100%;
+  top: 101%;
   left: 0;
   right: 0;
   height: 100vh;

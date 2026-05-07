@@ -1,7 +1,7 @@
 .predictive-search {
   display: none;
   position: absolute;
-  top: calc(100% + 0.1rem);
+  top: 100%;
   left: -0.1rem;
   background-color: rgb(var(--color-background));
   z-index: 3;
@@ -81,10 +81,12 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   /* display: none; */
 }
 
-.predictive-search-results__grid {
-  display: grid;
-  grid-template-columns: 25% 1fr;
-  gap: 40px;
+@media screen and (min-width: 769px) {
+  .predictive-search-results__grid {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 40px;
+  }
 }
 
 .predictive-search-results__suggestions {
@@ -123,6 +125,17 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .predictive-search__list-item {
   width: 100%;
   flex-basis: 20%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .predictive-search__results-list {
+    flex-wrap: wrap;
+  }
+
+  .predictive-search__list-item {
+    flex-basis: calc(50% - 8px);
+  }
 }
 
 .predictive-search__list-item:nth-last-child(2) {
@@ -205,6 +218,12 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   width: fit-content;
   margin: 1.5rem 0;
   gap: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .predictive-search__item--term {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 750px) {
