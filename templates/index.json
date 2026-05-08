@@ -475,9 +475,9 @@
           "type": "_column",
           "name": "Column",
           "settings": {
-            "image": "shopify://shop_images/lyndies-spring-hero.jpg",
-            "description": "Shop Lyndie's Spring Edit",
-            "link": "shopify://collections/lyndies-spring-edit",
+            "image": "shopify://shop_images/The-Short-Sleeve-Cindy-Top_-Petal---The-1-Yard-Wrap_-Petal-_3.jpg",
+            "description": "Shop Summer Essentials",
+            "link": "shopify://collections/summer-essentials",
             "add_text_shadow": true,
             "image_overlay": "black",
             "image_overlay_opacity": 20,
@@ -502,7 +502,7 @@
               "type": "title",
               "name": "Title",
               "settings": {
-                "heading": "Lyndie's Spring Edit",
+                "heading": "Summer Essentials",
                 "color": "#ffffff",
                 "font_size": 36,
                 "font_size_mobile": 34,
@@ -527,7 +527,7 @@
               "name": "Buttons",
               "settings": {
                 "button_label_1": "Shop Now",
-                "button_link_1": "shopify://collections/lyndies-spring-edit",
+                "button_link_1": "shopify://collections/summer-essentials",
                 "button_bg_color": "#ffffff",
                 "button_text_color": "#0d1c29",
                 "button_label_2": "",
