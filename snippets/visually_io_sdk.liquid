@@ -23,7 +23,7 @@
 	var product = {};
 	var variants = [];
 	{% for v in product.variants %}
-	variants.push({id:{{ v.id }},policy:"{{v.inventory_policy }}",price:{{v.price}},iq:{{ v.inventory_quantity }}});
+	variants.push({id:{{ v.id | json }},policy:"{{v.inventory_policy | json }}",price:{{v.price | default: 0 | json}},iq:{{ v.inventory_quantity | default: 0 | json }}});
 	{% endfor %}
 	product.variants = variants;
 	product.oos = !{{product.available}};
